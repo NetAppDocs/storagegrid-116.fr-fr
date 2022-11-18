@@ -1,0 +1,31 @@
+---
+permalink: sg5600/rebooting-controller-while-storagegrid-appliance-installer-is-running.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, reboot, restart 
+summary: 'Vous devrez peut-être redémarrer le contrôleur de calcul pendant que le programme d"installation de l"appliance StorageGRID est en cours d"exécution. Par exemple, vous devrez peut-être redémarrer le contrôleur si l"installation échoue.' 
+---
+= Redémarrez le contrôleur pendant que le programme d'installation de l'appliance StorageGRID est en cours d'exécution
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devrez peut-être redémarrer le contrôleur de calcul pendant que le programme d'installation de l'appliance StorageGRID est en cours d'exécution. Par exemple, vous devrez peut-être redémarrer le contrôleur si l'installation échoue.
+
+Cette procédure s'applique uniquement lorsque le contrôleur de calcul exécute le programme d'installation de l'appliance StorageGRID. Une fois l'installation terminée, cette étape ne fonctionne plus car le programme d'installation de l'appliance StorageGRID n'est plus disponible.
+
+.Étapes
+. Dans le programme d'installation de l'appliance StorageGRID, cliquez sur *Avancé* *redémarrer le contrôleur*, puis sélectionnez l'une des options suivantes :
++
+** Sélectionnez *Reboot dans StorageGRID* pour redémarrer le contrôleur avec le noeud qui rejoint la grille. Sélectionnez cette option si vous avez terminé de travailler en mode maintenance et que vous êtes prêt à rétablir le fonctionnement normal du nœud.
+** Sélectionnez *redémarrer en mode maintenance* pour redémarrer le contrôleur avec le nœud restant en mode de maintenance. (Cette option n'est disponible que lorsque le contrôleur est en mode de maintenance.) Sélectionnez cette option si des opérations de maintenance supplémentaires doivent être effectuées sur le nœud avant de rejoindre la grille.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Redémarrez le contrôleur en mode de maintenance]
+
++
+Le contrôleur est redémarré.
+
+
+
+

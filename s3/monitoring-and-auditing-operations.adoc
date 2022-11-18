@@ -1,0 +1,14 @@
+---
+permalink: s3/monitoring-and-auditing-operations.html 
+sidebar: sidebar 
+keywords: monitor operations, audit operations 
+summary: 'Vous pouvez surveiller les charges de travail et l"efficacité des opérations client en visualisant les tendances de transaction pour l"ensemble du grid ou pour des nœuds spécifiques. Vous pouvez utiliser des messages d"audit pour surveiller les opérations et les transactions des clients.' 
+---
+= Surveiller et auditer les opérations
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez surveiller les charges de travail et l'efficacité des opérations client en visualisant les tendances de transaction pour l'ensemble du grid ou pour des nœuds spécifiques. Vous pouvez utiliser des messages d'audit pour surveiller les opérations et les transactions des clients.

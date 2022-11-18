@@ -1,0 +1,102 @@
+---
+permalink: upgrade/how-your-system-is-affected-during-upgrade.html 
+sidebar: sidebar 
+keywords: upgrade, firmware, appliance, alert 
+summary: Vous devez comprendre en quoi votre système StorageGRID sera affecté lors de la mise à niveau. 
+---
+= Quel est l'impact de votre système pendant la mise à niveau
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez comprendre en quoi votre système StorageGRID sera affecté lors de la mise à niveau.
+
+
+
+== Les mises à niveau de StorageGRID ne générant pas de perturbation
+
+Le système StorageGRID peut ingérer et récupérer les données depuis les applications client tout au long du processus de mise à niveau. Les nœuds de grid sont mis hors service un par un lors de la mise à niveau. Il n'y a donc pas de temps lorsque tous les nœuds de grid sont indisponibles.
+
+Pour assurer une disponibilité continue, vérifiez que les objets sont stockés de manière redondante avec les règles ILM appropriées. Vous devez également vous assurer que tous les clients S3 ou Swift externes sont configurés pour envoyer des demandes à l'un des éléments suivants :
+
+* Terminal StorageGRID configuré comme groupe haute disponibilité
+* Équilibreur de charge tiers haute disponibilité
+* Plusieurs nœuds de passerelle pour chaque client
+* Plusieurs nœuds de stockage pour chaque client
+
+
+
+
+== Le micrologiciel de l'appliance est mis à niveau
+
+Lors de la mise à niveau vers StorageGRID 11.6 :
+
+* Tous les nœuds d'appliance StorageGRID sont automatiquement mis à niveau vers la version 3.6 du firmware du programme d'installation de l'appliance StorageGRID.
+* Les appliances SG6060 et SGF6024 sont automatiquement mises à niveau vers la version du firmware du BIOS 3B07.EX et BMC 3.93.07.
+* Les appareils SG100 et SG1000 sont automatiquement mis à niveau vers la version du micrologiciel BIOS 3B12.EC et la version 4.67.07 du micrologiciel BMC.
+
+
+
+
+== Il est possible que des alertes soient déclenchées
+
+Des alertes peuvent être déclenchées lorsque les services démarrent et s'arrêtent, et lorsque le système StorageGRID fonctionne comme un environnement de version mixte (certains nœuds de grid exécutant une version antérieure, alors que d'autres ont été mis à niveau vers une version plus récente). D'autres alertes peuvent être déclenchées une fois la mise à niveau terminée.
+
+Par exemple, l'alerte *Impossible de communiquer avec le nœud* lorsque les services sont arrêtés, ou l'alerte *Cassandra communication error* s'affiche lorsque certains nœuds ont été mis à niveau vers StorageGRID 11.6 mais que d'autres nœuds exécutent toujours StorageGRID 11.5. En général, ces alertes s'efface une fois la mise à niveau terminée.
+
+L'alerte *ILM placement inaccessible* peut être déclenchée lorsque les nœuds de stockage sont arrêtés lors de la mise à niveau vers StorageGRID 11.6. Cette alerte peut persister 1 jour après la fin de la mise à niveau.
+
+Si vous utilisez des valeurs personnalisées pour les filigranes du volume de stockage, l'alerte *dépassement de filigrane en lecture seule bas* peut être déclenchée une fois la mise à niveau terminée. Voir xref:../monitor/troubleshoot-low-watermark-alert.adoc[Dépanner les alertes de remplacement de filigrane en lecture seule faible] pour plus d'informations.
+
+Une fois la mise à niveau terminée, vous pouvez consulter les alertes relatives à la mise à niveau en sélectionnant *alertes récemment résolues* ou *alertes actuelles* dans le tableau de bord de Grid Manager.
+
+
+
+== De nombreuses notifications SNMP sont générées
+
+Notez que de nombreuses notifications SNMP peuvent être générées lorsque les nœuds de la grille sont arrêtés et redémarrés lors de la mise à niveau. Pour éviter des notifications excessives, décochez la case *Activer les notifications d'agent SNMP* (*CONFIGURATION* *surveillance* *agent SNMP*) pour désactiver les notifications SNMP avant de démarrer la mise à niveau. Ensuite, réactivez les notifications une fois la mise à niveau terminée.
+
+
+
+== Les modifications de configuration sont restreintes
+
+
+NOTE: La liste des modifications de configuration restreintes peut changer de version à version. Lors de la mise à niveau vers une autre version de StorageGRID, reportez-vous à la liste des instructions de mise à niveau appropriées.
+
+Jusqu'à la fin de la tâche *Activer la nouvelle fonction* :
+
+* Ne modifiez pas la configuration de la grille.
+* Ne modifiez pas la configuration du niveau d'audit et ne configurez pas de serveur syslog externe.
+* N'activez ni ne désactivez aucune nouvelle fonction.
+* Ne mettez pas à jour la configuration ILM. Sinon, vous risquez d'avoir un comportement ILM incohérent et inattendu.
+* N'appliquez pas de correctif ou ne restaurez pas un nœud de grille.
+* Vous ne pouvez pas gérer des groupes haute disponibilité, des interfaces VLAN ou des terminaux d'équilibrage de la charge pendant la mise à niveau vers StorageGRID 11.6.
+
+
+Jusqu'à la fin de la tâche *étapes de mise à niveau finale* :
+
+* Ne pas effectuer de procédure d'expansion.
+* Ne pas effectuer de procédure de mise hors service.
+
+
+
+
+== Vous ne pouvez ni afficher les détails des compartiments, ni gérer ces compartiments à partir du Gestionnaire des locataires
+
+Lors de la mise à niveau vers StorageGRID 11.6 (c'est-à-dire, même si le système fonctionne comme un environnement à version mixte), vous ne pouvez pas afficher les détails des compartiments ni gérer les compartiments à l'aide du gestionnaire des locataires. L'une des erreurs suivantes apparaît sur la page compartiments du Gestionnaire de locataires :
+
+* « Vous ne pouvez pas utiliser cette API pendant la mise à niveau vers 11.6. »
+* « Vous ne pouvez pas afficher les détails relatifs à la gestion des versions de compartiment dans le Gestionnaire de locataires pendant la mise à niveau vers la version 11.6. »
+
+
+Cette erreur se résout une fois la mise à niveau vers 11.6 terminée.
+
+Pendant la mise à niveau vers la version 11.6, utilisez les outils suivants pour afficher les détails du compartiment ou gérer les compartiments, au lieu d'utiliser le Gestionnaire de locataires :
+
+* Pour effectuer des opérations S3 standard sur un compartiment, utilisez l'API REST S3 ou l'API de gestion des locataires.
+* Pour exécuter des opérations personnalisées StorageGRID sur un compartiment (par exemple, affichage et modification du niveau de cohérence du compartiment, activation ou désactivation des mises à jour du dernier accès ou configuration de l'intégration de la recherche), utilisez l'API de gestion des locataires.
+
+
+Voir xref:../tenant/understanding-tenant-management-api.adoc[Compréhension de l'API de gestion des locataires] et xref:../s3/index.adoc[Utilisation de S3] pour obtenir des instructions.

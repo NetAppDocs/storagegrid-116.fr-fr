@@ -1,0 +1,30 @@
+---
+permalink: sg5700/automating-appliance-installation-and-configuration.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, automate, automating, automation, automatic, install, installation, configuration, configure 
+summary: 'Vous pouvez automatiser l"installation et la configuration de vos appliances et de l"ensemble du système StorageGRID.' 
+---
+= Automatisation de l'installation et de la configuration de l'appliance (SG5700)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez automatiser l'installation et la configuration de vos appliances et de l'ensemble du système StorageGRID.
+
+L'automatisation de l'installation et de la configuration peut être utile pour déployer plusieurs instances StorageGRID ou une instance StorageGRID complexe et de grande taille.
+
+Pour automatiser l'installation et la configuration, utilisez une ou plusieurs des options suivantes :
+
+* Créez un fichier JSON qui spécifie les paramètres de configuration de vos appliances. Téléchargez le fichier JSON à l'aide du programme d'installation de l'appliance StorageGRID.
++
+
+NOTE: Vous pouvez utiliser le même fichier pour configurer plusieurs appliances.
+
+* Utiliser StorageGRID``configure-sga.py`` Script Python pour automatiser la configuration de vos appliances.
+* Utilisez des scripts Python supplémentaires pour configurer d'autres composants de l'ensemble du système StorageGRID (la « grille »).
+
+
+
+NOTE: Vous pouvez utiliser directement les scripts Python d'automatisation StorageGRID, ou utiliser ces scripts en tant qu'exemples de l'utilisation de l'API REST d'installation de StorageGRID dans les outils de déploiement et de configuration que vous développez vous-même. Voir les informations sur xref:../maintain/downloading-and-extracting-storagegrid-installation-files.adoc[Téléchargement et extraction des fichiers d'installation de StorageGRID] Dans les instructions de récupération et de maintenance.

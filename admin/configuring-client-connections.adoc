@@ -1,0 +1,35 @@
+---
+permalink: admin/configuring-client-connections.html 
+sidebar: sidebar 
+keywords: s3 connection, swift connection, connect to storagegrid 
+summary: 'En tant qu"administrateur grid, vous gérez les options de configuration qui contrôlent la manière dont les locataires S3 et Swift peuvent connecter les applications client à votre système StorageGRID pour stocker et récupérer les données. Plusieurs options sont possibles pour répondre aux différents besoins des clients et des locataires.' 
+---
+= À propos des connexions des clients S3 et Swift
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En tant qu'administrateur grid, vous gérez les options de configuration qui contrôlent la manière dont les locataires S3 et Swift peuvent connecter les applications client à votre système StorageGRID pour stocker et récupérer les données. Plusieurs options sont possibles pour répondre aux différents besoins des clients et des locataires.
+
+Les applications client peuvent stocker ou récupérer des objets en se connectant à l'un des éléments suivants :
+
+* Le service Load Balancer sur les nœuds d'administration ou de passerelle, ou, le cas échéant, l'adresse IP virtuelle d'un groupe de nœuds d'administration ou de nœuds de passerelle haute disponibilité
+* Le service CLB sur les nœuds de passerelle ou, éventuellement, l'adresse IP virtuelle d'un groupe de nœuds de passerelle haute disponibilité
++
+
+NOTE: Le service CLB est obsolète. Les clients configurés avant la version de StorageGRID 11.3 peuvent continuer à utiliser le service CLB sur les nœuds de passerelle. Toutes les autres applications client qui dépendent de StorageGRID pour fournir un équilibrage de la charge doivent se connecter à l'aide du service Load Balancer.
+
+* Des nœuds de stockage, avec ou sans équilibreur de charge externe
+
+
+Vous pouvez choisir de configurer les fonctions suivantes sur votre système StorageGRID :
+
+* *Interfaces VLAN* : vous pouvez créer des interfaces VLAN (Virtual LAN) sur les nœuds d'administration et les nœuds de passerelle pour isoler et partitionner le trafic client et locataire afin d'assurer la sécurité, la flexibilité et les performances. Après avoir créé une interface VLAN, vous l'ajoutez à un groupe haute disponibilité (HA).
+* *Groupes haute disponibilité* : vous pouvez créer un groupe haute disponibilité des interfaces pour les nœuds de passerelle ou les nœuds d'administration pour créer une configuration de sauvegarde active/active, ou utiliser le DNS Round-Robin ou un équilibreur de charge tiers et plusieurs groupes haute disponibilité pour obtenir une configuration active/active. Les connexions des clients sont établies en utilisant les adresses IP virtuelles des groupes haute disponibilité.
+* *Load Balancer service* : vous pouvez permettre aux clients d'utiliser le service Load Balancer en créant des noeuds finaux load Balancer pour les connexions client. Lors de la création d'un noeud final d'équilibrage de charge, vous spécifiez un numéro de port, que le noeud final accepte les connexions HTTP ou HTTPS, le type de client (S3 ou Swift) qui utilisera le noeud final et le certificat à utiliser pour les connexions HTTPS (le cas échéant).
+* *Réseau client non fiable* : vous pouvez sécuriser le réseau client en le configurant comme non fiable. Lorsque le réseau client n'est pas fiable, les clients peuvent uniquement se connecter à l'aide de points finaux d'équilibreur de charge.
+
+
+Vous pouvez également activer l'utilisation du protocole HTTP pour les clients qui se connectent à StorageGRID directement aux nœuds de stockage ou à l'aide du service CLB (obsolète) et vous pouvez configurer les noms de domaine de points de terminaison de l'API S3 pour les clients S3.

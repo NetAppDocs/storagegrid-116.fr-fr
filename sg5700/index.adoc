@@ -1,0 +1,266 @@
+---
+permalink: sg5700/index.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, overview, models, features 
+summary: 'L"appliance SG5700 StorageGRID est une plateforme de calcul et de stockage intégrée qui fonctionne comme un nœud de stockage dans un grid StorageGRID. L"appliance peut être utilisée dans un environnement de grid hybride qui combine des nœuds de stockage d"appliance et des nœuds de stockage virtuels \(basés sur logiciel\).' 
+---
+= Présentation de l'appliance StorageGRID SG5700
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'appliance SG5700 StorageGRID est une plateforme de calcul et de stockage intégrée qui fonctionne comme un nœud de stockage dans un grid StorageGRID. L'appliance peut être utilisée dans un environnement de grid hybride qui combine des nœuds de stockage d'appliance et des nœuds de stockage virtuels (basés sur logiciel).
+
+L'appliance StorageGRID SG5700 Series présente plusieurs caractéristiques :
+
+* Intégrez les éléments de stockage et de calcul d'un nœud de stockage StorageGRID.
+* Incluez le programme d'installation de l'appliance StorageGRID pour simplifier le déploiement et la configuration des nœuds de stockage.
+* Inclut E-Series SANtricity System Manager pour la gestion et le contrôle du matériel.
+* Prenez en charge jusqu'à quatre connexions 10 GbE ou 25 GbE avec le réseau Grid et le réseau client StorageGRID.
+* Prise en charge des disques FDE (Full Disk Encryption) ou FIPS (Federal information Processing Standard). Lorsque ces disques sont utilisés avec la fonction de sécurité des disques dans SANtricity System Manager, l'accès non autorisé aux données n'est pas autorisé.
+
+
+L'appliance SG5700 est disponible en quatre modèles : SG5712 et 101X, SG5760 et 101X. Il n'y a pas de spécifications ni de différences fonctionnelles entre le SG5712 et le 101X, à l'exception de l'emplacement des ports d'interconnexion sur le contrôleur de stockage. De même, il n'y a pas de spécifications ni de différences fonctionnelles entre le SG5712 et le 101X, à l'exception de l'emplacement des ports d'interconnexion sur le contrôleur de stockage.
+
+Les modèles incluent les composants suivants :
+
+[cols="1a,2a,3a,4a,5a"]
+|===
+| Composant | SG5712 | LE X112X | SG5760 | LE MODÈLE DE LA SÉRIE XCOP60 
+
+
+ a| 
+Contrôleur de calcul
+ a| 
+Contrôleur E5700SG
+ a| 
+Contrôleur E5700SG
+ a| 
+Contrôleur E5700SG
+ a| 
+Contrôleur E5700SG
+
+
+
+ a| 
+Contrôleur de stockage
+ a| 
+Contrôleur E2800A
+ a| 
+Contrôleur E2800B
+ a| 
+Contrôleur E2800A
+ a| 
+Contrôleur E2800B
+
+
+
+ a| 
+Châssis
+ a| 
+Boîtier E-Series DE212C, boîtier de deux unités de rack (2U)
+ a| 
+Boîtier E-Series DE212C, boîtier de deux unités de rack (2U)
+ a| 
+Boîtier E-Series DE460C, boîtier 4U
+ a| 
+Boîtier E-Series DE460C, boîtier 4U
+
+
+
+ a| 
+Disques
+ a| 
+12 disques NL-SAS (3.5 pouces)
+ a| 
+12 disques NL-SAS (3.5 pouces)
+ a| 
+60 disques NL-SAS (3.5 pouces)
+ a| 
+60 disques NL-SAS (3.5 pouces)
+
+
+
+ a| 
+Alimentations et ventilateurs redondants
+ a| 
+Deux blocs d'alimentation
+ a| 
+Deux blocs d'alimentation
+ a| 
+Deux blocs d'alimentation et deux blocs d'alimentation
+ a| 
+Deux blocs d'alimentation et deux blocs d'alimentation
+
+|===
+La capacité de stockage brute maximale disponible dans l'appliance StorageGRID est fixe, en fonction du nombre de disques de chaque armoire. Vous ne pouvez pas étendre le stockage disponible en ajoutant un tiroir comportant des disques supplémentaires.
+
+
+
+== Modèle SG5712 et 5712X
+
+Les figures montrent l'avant et l'arrière du modèle SG5712 et de l'arrière, un boîtier 2U qui peut accueillir 12 disques.
+
+*SG5712 vue avant et arrière*
+
+image::../media/sg5712_front_and_back_views.gif[À l'avant et à l'arrière de l'appareil SG5712]
+
+Le SG5712 comprend deux contrôleurs et deux blocs d'alimentation.
+
+*Composants SG5712*
+
+image::../media/sg5712_with_callouts.gif[Contrôleurs et blocs d'alimentation de l'appliance SG5712]
+
+[cols="1a,2a"]
+|===
+| Légende | Description 
+
+
+ a| 
+1
+ a| 
+Contrôleur E2800A (contrôleur de stockage)
+
+
+
+ a| 
+2
+ a| 
+Contrôleur E5700SG (contrôleur de calcul)
+
+
+
+ a| 
+3
+ a| 
+Blocs d'alimentation
+
+|===
+*Vue avant et arrière de la caméra de bord du dispositif *
+
+image::../media/sg5712x_front_and_back_views.gif[À l'avant et à l'arrière de l'appareil X112X]
+
+Le modèle X112X est équipé de deux contrôleurs et de deux boîtiers de ventilateur d'alimentation.
+
+*Composants de la série * de la série *
+
+image::../media/sg5712x_with_callouts.gif[Contrôleurs et blocs d'alimentation de l'appareil bicomposant le X112X]
+
+[cols="1a,2a"]
+|===
+| Légende | Description 
+
+
+ a| 
+1
+ a| 
+Contrôleur E2800B (contrôleur de stockage)
+
+
+
+ a| 
+2
+ a| 
+Contrôleur E5700SG (contrôleur de calcul)
+
+
+
+ a| 
+3
+ a| 
+Blocs d'alimentation
+
+|===
+
+
+== Modèles SG5760 et B0060X
+
+Les figures montrent l'avant et l'arrière des modèles SG5760 et MX 60X, un boîtier 4U qui peut accueillir 60 disques dans 5 tiroirs.
+
+*Vue avant et arrière SG5760*
+
+image::../media/sg5760_front_and_back_views.gif[Avant et arrière de l'appliance SG5760]
+
+Le SG5760 inclut deux contrôleurs, deux blocs de ventilation et deux blocs d'alimentation.
+
+*Composants SG5760*
+
+image::../media/sg5760_with_callouts.gif[Contrôleurs,fan canisters,and power canisters in SG5760 appliance]
+
+[cols="1a,2a"]
+|===
+| Légende | Description 
+
+
+ a| 
+1
+ a| 
+Contrôleur E2800A (contrôleur de stockage)
+
+
+
+ a| 
+2
+ a| 
+Contrôleur E5700SG (contrôleur de calcul)
+
+
+
+ a| 
+3
+ a| 
+Cartouche de ventilateur (1 sur 2)
+
+
+
+ a| 
+4
+ a| 
+Boîtier de puissance (1 sur 2)
+
+|===
+*Vue avant et arrière de la caméra de bord de l'appareil *
+
+image::../media/sg5760x_front_and_back_views.gif[À l'avant et à l'arrière de l'appareil XCOP60X]
+
+Le modèle Sm60S comprend deux contrôleurs, deux boîtiers de ventilateur et deux blocs d'alimentation.
+
+*Composants de la série * de la série *
+
+image::../media/sg5760x_with_callouts.gif[Contrôleurs,fan canisters,and power canisters in SG5760X appliance]
+
+[cols="1a,2a"]
+|===
+| Légende | Description 
+
+
+ a| 
+1
+ a| 
+Contrôleur E2800B (contrôleur de stockage)
+
+
+
+ a| 
+2
+ a| 
+Contrôleur E5700SG (contrôleur de calcul)
+
+
+
+ a| 
+3
+ a| 
+Cartouche de ventilateur (1 sur 2)
+
+
+
+ a| 
+4
+ a| 
+Boîtier de puissance (1 sur 2)
+
+|===
+http://mysupport.netapp.com/info/web/ECMP1658252.html["Site de documentation sur les systèmes NetApp E-Series"^]

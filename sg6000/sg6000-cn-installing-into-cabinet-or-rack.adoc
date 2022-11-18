@@ -1,0 +1,44 @@
+---
+permalink: sg6000/sg6000-cn-installing-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, install, installing, installation, cabinet, rack, controller, sg6000-cn, rail, rails 
+summary: Vous devez installer un jeu de rails pour le contrôleur SG6000-CN dans votre armoire ou rack, puis faire glisser le contrôleur sur les rails. 
+---
+= SG6000-CN : à installer dans l'armoire ou le rack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez installer un jeu de rails pour le contrôleur SG6000-CN dans votre armoire ou rack, puis faire glisser le contrôleur sur les rails.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous avez passé en revue le document consignes de sécurité inclus dans la boîte et compris les précautions à prendre pour déplacer et installer le matériel.
+* Les instructions sont fournies avec le kit de rails.
+* Vous avez installé le tiroir contrôleur E2860 et ses disques ou le tiroir contrôleur EF570.
+
+
+.Étapes
+. Suivez attentivement les instructions du kit de rails pour installer les rails dans votre armoire ou rack.
+. Sur les deux rails installés dans l'armoire ou le rack, étendez les pièces mobiles des rails jusqu'à ce que vous entendiez un clic.
++
+image::../media/rails_extended_out.gif[Rails SG6000]
+
+. Insérez le contrôleur SG6000-CN dans les rails.
+. Faites glisser le contrôleur dans l'armoire ou le rack.
++
+Lorsque vous ne pouvez pas déplacer le contrôleur, tirez les loquets bleus des deux côtés du châssis pour faire glisser le contrôleur complètement vers l'intérieur.
+
++
+image::../media/sg6000_cn_rails_blue_button.gif[Rails coulissants SG6000]
+
++
+
+NOTE: Ne connectez pas le panneau avant tant que vous n'avez pas mis le contrôleur sous tension.
+
+. Serrez les vis imperdables du panneau avant du contrôleur pour fixer le contrôleur dans le rack.
++
+image::../media/sg6060_rack_retaining_screws.png[Vis de fixation du rack SG6060]
+
+

@@ -1,0 +1,14 @@
+---
+permalink: s3/index.html 
+sidebar: sidebar 
+keywords: about s3, s3 overview 
+summary: 'StorageGRID prend en charge l"API simple Storage Service \(S3\), implémentée en tant que ensemble de services web Representational State Transfer \(REST\). La prise en charge de l"API REST S3 vous permet de connecter les applications orientées services développées pour les services web S3 avec un stockage objet sur site qui utilise le système StorageGRID. Pour ce faire, des modifications mineures doivent être apportées à l"utilisation actuelle des appels de l"API REST S3 d"une application client.' 
+---
+= Utiliser S3 : présentation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+StorageGRID prend en charge l'API simple Storage Service (S3), qui est implémentée en tant que ensemble de services web REST (Representational State Transfer). La prise en charge de l'API REST S3 vous permet de connecter les applications orientées services développées pour les services web S3 avec un stockage objet sur site qui utilise le système StorageGRID. Pour ce faire, des modifications mineures doivent être apportées à l'utilisation actuelle des appels de l'API REST S3 d'une application client.

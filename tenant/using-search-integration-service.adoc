@@ -1,0 +1,36 @@
+---
+permalink: tenant/using-search-integration-service.html 
+sidebar: sidebar 
+keywords: how to use search integration service 
+summary: 'Le service d"intégration de la recherche est l"un des trois services de plate-forme StorageGRID. Vous pouvez activer ce service pour envoyer des métadonnées d"objet à un index de recherche de destination chaque fois qu"un objet est créé ou supprimé, ou que ses métadonnées ou balises sont mises à jour.' 
+---
+= Utilisez le service d'intégration de la recherche
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le service d'intégration de la recherche est l'un des trois services de plate-forme StorageGRID. Vous pouvez activer ce service pour envoyer des métadonnées d'objet à un index de recherche de destination chaque fois qu'un objet est créé ou supprimé, ou que ses métadonnées ou balises sont mises à jour.
+
+Vous pouvez configurer l'intégration de la recherche à l'aide du Gestionnaire de locataires pour appliquer un code XML de configuration StorageGRID personnalisé à un compartiment.
+
+
+NOTE: Comme le service d'intégration de recherche entraîne l'envoi des métadonnées d'objet vers une destination, son XML de configuration est appelé _metadata notification configuration XML_. Ce XML de configuration est différent de la configuration de _notification XML_ utilisée pour activer les notifications d'événements.
+
+Voir la xref:../s3/index.adoc[Instructions d'implémentation des applications client S3] Pour plus d'informations sur les opérations d'API REST personnalisées suivantes de StorageGRID S3 :
+
+* SUPPRIME la demande de configuration de notification des métadonnées de compartiment
+* LIRE la demande de configuration de notification des métadonnées de compartiment
+* PUT Bucket metadata notification configuration
+
+
+xref:configuration-xml-for-search-configuration.adoc[XML de configuration pour l'intégration de la recherche]
+
+xref:object-metadata-included-in-metadata-notifications.adoc[Métadonnées d'objet incluses dans les notifications de métadonnées]
+
+xref:json-generated-by-search-integration-service.adoc[JSON généré par le service d'intégration de la recherche]
+
+xref:configuring-search-integration-service.adoc[Configurez le service d'intégration de la recherche]
+
+xref:../s3/index.adoc[Utilisation de S3]

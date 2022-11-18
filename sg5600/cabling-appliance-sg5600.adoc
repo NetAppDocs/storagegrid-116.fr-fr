@@ -1,0 +1,209 @@
+---
+permalink: sg5600/cabling-appliance-sg5600.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, cabling, wiring, connecting, cable, wire, connect 
+summary: 'Vous devez connecter les deux contrôleurs entre eux avec des câbles d"interconnexion SAS, connecter les ports de gestion au réseau de gestion approprié, et connecter les ports 10 GbE du contrôleur E5600SG au réseau Grid et le réseau client facultatif pour StorageGRID.' 
+---
+= Appliance câble (SG5600)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez connecter les deux contrôleurs entre eux avec des câbles d'interconnexion SAS, connecter les ports de gestion au réseau de gestion approprié, et connecter les ports 10 GbE du contrôleur E5600SG au réseau Grid et le réseau client facultatif pour StorageGRID.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous avez des câbles Ethernet pour connecter les ports de gestion.
+* Vous disposez de câbles optiques pour connecter les quatre ports 10 GbE (ceux-ci ne sont pas fournis avec l'appliance).
+
+
+
+CAUTION: *Risque d'exposition au rayonnement laser* -- ne démontez pas et ne retirez aucune partie d'un émetteur-récepteur SFP. Vous pourriez être exposé à un rayonnement laser.
+
+Lors de la connexion des câbles, reportez-vous au diagramme suivant, qui montre le contrôleur E2700 en haut et le contrôleur E5600SG en bas. Le schéma représente le modèle SG5660. Les contrôleurs du modèle SG5612 sont côte à côte au lieu d'être empilés.
+
+image::../media/cabling_diagram.gif[Schémas de câblage]
+
+|===
+| Élément | Port | Type de port | Fonction 
+
+
+ a| 
+1
+ a| 
+Le port de gestion 1 du contrôleur E2700
+ a| 
+Ethernet 1 Gbit (RJ-45)
+ a| 
+Connecte le contrôleur E2700 au réseau sur lequel SANtricity Storage Manager est installé.
+
+
+
+ a| 
+2
+ a| 
+Le port de gestion 2 du contrôleur E2700
+ a| 
+Ethernet 1 Gbit (RJ-45)
+ a| 
+Connexion du contrôleur E2700 à un ordinateur portable de service lors de l'installation
+
+
+
+ a| 
+3
+ a| 
+Deux ports d'interconnexion SAS sur chaque contrôleur, étiquetés CH 1 et CH 2
+ a| 
+Contrôleur E2700 : mini-SAS-HD
+
+Contrôleur E5600SG : mini-SAS
+ a| 
+Connectez les deux contrôleurs les uns aux autres.
+
+
+
+ a| 
+4
+ a| 
+Port de gestion 1 sur le contrôleur E5600SG
+ a| 
+Ethernet 1 Gbit (RJ-45)
+ a| 
+Connecte le contrôleur E5600SG au réseau d'administration pour StorageGRID.
+
+
+
+ a| 
+5
+ a| 
+Port de gestion 2 sur le contrôleur E5600SG
+ a| 
+Ethernet 1 Gbit (RJ-45)
+ a| 
+* Peut être lié avec le port de gestion 1 si vous souhaitez établir une connexion redondante avec le réseau d'administration.
+* Peut être laissé sans fil et disponible pour un accès local temporaire (IP 169.254.0.1).
+* Peut être utilisé pour connecter le contrôleur E5600SG à un ordinateur portable de service pendant l'installation si les adresses IP attribuées par DHCP ne sont pas disponibles.
+
+
+
+
+ a| 
+6
+ a| 
+Quatre ports réseau sur le contrôleur E5600SG
+ a| 
+10 GbE (optique)
+ a| 
+Connectez le contrôleur E5600SG au réseau Grid et au réseau client (le cas échéant) pour StorageGRID. Les ports peuvent être liés ensemble pour fournir des chemins redondants au contrôleur.
+
+|===
+.Étapes
+. Connectez le contrôleur E2700 au contrôleur E5600SG à l'aide de deux câbles d'interconnexion SAS.
++
+|===
+| Connecter ce port... | Vers ce port... 
+
+
+ a| 
+Port d'interconnexion SAS 1 (étiqueté CH 1) sur le contrôleur E2700
+ a| 
+Port d'interconnexion SAS 1 (étiqueté CH 1) sur le contrôleur E5600SG
+
+
+
+ a| 
+Port d'interconnexion SAS 2 (étiqueté CH 2) sur le contrôleur E2700
+ a| 
+Port d'interconnexion SAS 2 (étiqueté CH 2) sur le contrôleur E5600SG
+
+|===
++
+Utilisez le connecteur carré (mini-SAS HD) du contrôleur E2700 et le connecteur rectangulaire (mini-SAS) du contrôleur E5600SG.
+
++
+
+IMPORTANT: Assurez-vous que les languettes de traction des connecteurs SAS se trouvent en bas, puis insérez chaque connecteur avec précaution jusqu'à ce qu'il s'enclenche. Ne pas pousser sur le connecteur s'il y a une résistance. Vérifiez la position de la languette de traction avant de continuer.
+
+. Connectez le contrôleur E2700 au réseau de gestion sur lequel le logiciel SANtricity Storage Manager est installé, à l'aide d'un câble Ethernet.
++
+|===
+| Connecter ce port... | Vers ce port... 
+
+
+ a| 
+Port 1 du contrôleur E2700 (port RJ-45 sur la gauche)
+ a| 
+Port de commutateur sur le réseau de gestion utilisé pour SANtricity Storage Manager
+
+
+
+ a| 
+Le port 2 du contrôleur E2700
+ a| 
+Faire réparer l'ordinateur portable, s'il n'utilise pas DHCP
+
+|===
+. Si vous prévoyez d'utiliser le réseau d'administration pour StorageGRID, connectez le contrôleur E5600SG à l'aide d'un câble Ethernet.
++
+|===
+| Connecter ce port... | Vers ce port... 
+
+
+ a| 
+Port 1 sur le contrôleur E5600SG (le port RJ-45 sur la gauche)
+ a| 
+Port de commutateur du réseau d'administration pour StorageGRID
+
+
+
+ a| 
+Port 2 du contrôleur E5600SG
+ a| 
+Faire réparer l'ordinateur portable, s'il n'utilise pas DHCP
+
+|===
+. Connectez les ports 10 GbE du contrôleur E5600SG aux commutateurs réseau appropriés à l'aide de câbles optiques et d'émetteurs-récepteurs SFP+.
++
+** Si vous prévoyez d'utiliser le mode de liaison de port fixe (par défaut), connectez les ports aux réseaux StorageGRID Grid et client, comme indiqué dans le tableau.
++
+|===
+| Port | Se connecte à... 
+
+
+ a| 
+Orifice 1
+ a| 
+Réseau client (facultatif)
+
+
+
+ a| 
+Orifice 2
+ a| 
+Réseau Grid
+
+
+
+ a| 
+Orifice 3
+ a| 
+Réseau client (facultatif)
+
+
+
+ a| 
+Orifice 4
+ a| 
+Réseau Grid
+
+|===
+** Si vous prévoyez d'utiliser le mode de liaison du port de l'agrégat, connectez un ou plusieurs ports réseau à un ou plusieurs commutateurs. Vous devez connecter au moins deux des quatre ports pour éviter d'avoir un point de défaillance unique. Si vous utilisez plusieurs switchs pour une liaison LACP unique, les switchs doivent prendre en charge MLAG ou équivalent.
+
+
+
+
+xref:port-bond-modes-for-e5600sg-controller-ports.adoc[Modes de liaison des ports pour les ports du contrôleur E5600SG]
+
+xref:accessing-storagegrid-appliance-installer-sg5600.adoc[Accédez au programme d'installation de l'appliance StorageGRID]

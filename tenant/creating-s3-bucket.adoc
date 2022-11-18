@@ -1,0 +1,92 @@
+---
+permalink: tenant/creating-s3-bucket.html 
+sidebar: sidebar 
+keywords: how to create S3 bucket 
+summary: 'Vous pouvez utiliser le Gestionnaire des locataires pour créer des compartiments S3 pour les données d"objet. Lorsque vous créez un compartiment, vous devez spécifier le nom et la région du compartiment. Si le paramètre global de verrouillage d"objet S3 est activé pour le système StorageGRID, vous pouvez activer le verrouillage d"objet S3 pour le compartiment.' 
+---
+= Créer un compartiment S3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le Gestionnaire des locataires pour créer des compartiments S3 pour les données d'objet. Lorsque vous créez un compartiment, vous devez spécifier son nom et sa région. Si le paramètre global de verrouillage d'objet S3 est activé pour le système StorageGRID, vous pouvez activer le verrouillage d'objet S3 pour le compartiment.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous êtes connecté au Gestionnaire de locataires à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous appartenez à un groupe d'utilisateurs possédant l'autorisation gérer toutes les rubriques ou accès racine. Ces autorisations remplacent les paramètres d'autorisations des stratégies de groupes ou de compartiments.
++
+
+NOTE: Les autorisations de définir ou de modifier les propriétés de verrouillage d'objet S3 des compartiments ou des objets peuvent être accordées par xref:../s3/bucket-and-group-access-policies.adoc[politique de compartiment ou règle de groupe].
+
+* Si vous prévoyez de créer un compartiment avec le verrouillage d'objet S3, vous avez activé le paramètre de verrouillage d'objet S3 global pour le système StorageGRID et vous avez examiné les exigences relatives aux compartiments et aux objets de verrouillage d'objet S3.
++
+xref:using-s3-object-lock.adoc[Utilisez le verrouillage d'objet S3]
+
+
+
+.Étapes
+. Sélectionnez *STOCKAGE (S3)* *seaux*.
+. Sélectionnez *Créer un compartiment*.
++
+image::../media/bucket_create_compliance_disabled.png[Conformité de l'option Créer un compartiment désactivée]
+
+. Entrer un nom unique pour le compartiment.
++
+
+IMPORTANT: Vous ne pouvez pas modifier le nom d'un compartiment après sa création.
+
++
+Les noms de compartiment doivent être conformes aux règles suivantes :
+
++
+** Il doit être unique sur chaque système StorageGRID (et pas seulement au sein du compte du locataire).
+** Doit être conforme DNS.
+** Doit contenir au moins 3 caractères et pas plus de 63 caractères.
+** Chaque étiquette doit commencer et se terminer par une lettre ou un chiffre en minuscules et ne peut utiliser que des lettres minuscules, des chiffres et des tirets.
+** Ne doit pas utiliser de périodes dans des demandes de type hébergement virtuel. Les périodes provoquera des problèmes avec la vérification du certificat générique du serveur.
+
+
++
+
+NOTE: Pour plus d'informations, reportez-vous à la section https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html["Documentation Amazon Web Services (AWS) sur les règles d'attribution de nom de compartiment"^].
+
+. Sélectionnez la région de ce compartiment.
++
+L'administrateur StorageGRID gère les régions disponibles. Ce compartiment peut affecter la règle de protection des données appliquée aux objets. Par défaut, tous les compartiments sont créés dans le `us-east-1` région.
+
++
+
+IMPORTANT: Vous ne pouvez pas modifier la région après avoir créé le compartiment.
+
+. Sélectionnez *Continuer*.
+. Activez éventuellement le contrôle de version d'objet pour le compartiment.
++
+Activez la gestion des versions d'objet si vous souhaitez stocker chaque version de chaque objet dans ce compartiment. Vous pouvez ensuite récupérer les versions précédentes d'un objet si nécessaire.
+
+. Si la section verrouillage d'objet S3 s'affiche, activez éventuellement le verrouillage d'objet S3 pour le compartiment.
++
+
+IMPORTANT: Vous ne pouvez pas activer ou désactiver le verrouillage d'objet S3 après la création du compartiment.
+
++
+La section verrouillage d'objet S3 s'affiche uniquement si le paramètre verrouillage d'objet S3 global est activé.
+
++
+Le verrouillage objet S3 doit être activé pour le compartiment avant qu'une application client S3 puisse spécifier des paramètres de conservation à une date et de conservation légale pour les objets ajoutés au compartiment.
+
++
+Si vous activez le verrouillage des objets S3 pour un compartiment, le contrôle de version des compartiments est automatiquement activé. Vous pouvez également xref:../s3/operations-on-buckets.adoc#using-s3-object-lock-default-bucket-retention[spécifiez un mode de conservation par défaut et la période de conservation par défaut pour le compartiment] qui sont appliquées à chaque objet ingéré dans le compartiment qui ne spécifie pas ses propres paramètres de conservation.
+
+. Sélectionnez *Créer un compartiment*.
++
+Le godet est créé et ajouté au tableau sur la page godets.
+
+
+
+xref:../ilm/index.adoc[Gestion des objets avec ILM]
+
+xref:understanding-tenant-management-api.adoc[Compréhension de l'API de gestion des locataires]
+
+xref:../s3/index.adoc[Utilisation de S3]

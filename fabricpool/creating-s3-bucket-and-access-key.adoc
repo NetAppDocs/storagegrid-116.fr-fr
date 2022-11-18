@@ -1,0 +1,91 @@
+---
+permalink: fabricpool/creating-s3-bucket-and-access-key.html 
+sidebar: sidebar 
+keywords: fabricPool, S3 bucket, bucket, access key, secret access key 
+summary: 'Avant d"utiliser StorageGRID avec un workload FabricPool, vous devez créer un compartiment S3 pour vos données FabricPool. Vous devez également obtenir une clé d"accès et une clé secrète pour le compte de locataire que vous utiliserez pour FabricPool.' 
+---
+= Créez un compartiment S3 et obtenez une clé d'accès
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'utiliser StorageGRID avec un workload FabricPool, vous devez créer un compartiment S3 pour vos données FabricPool. Vous devez également obtenir une clé d'accès et une clé secrète pour le compte de locataire que vous utiliserez pour FabricPool.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous avez créé un compte de locataire pour l'utilisation de FabricPool.
+
+
+Ces instructions expliquent comment utiliser le gestionnaire de locataires StorageGRID pour créer un compartiment et obtenir les clés d'accès. Vous pouvez également effectuer ces tâches à l'aide de l'API de gestion des locataires ou de l'API REST StorageGRID S3. Si vous utilisez ONTAP 9.10, vous pouvez également créer le compartiment à l'aide de l'assistant d'installation de FabricPool.
+
+Pour en savoir plus :
+
+* xref:../tenant/index.adoc[Utilisez un compte de locataire]
+* xref:../s3/index.adoc[Utilisation de S3]
+
+
+.Étapes
+. Connectez-vous au Gestionnaire de locataires.
++
+Vous pouvez effectuer l'une des opérations suivantes :
+
++
+** Dans la page comptes de tenant du Gestionnaire de grille, sélectionnez le lien *se connecter* pour le tenant et entrez vos informations d'identification.
+** Saisissez l'URL du compte de tenant dans un navigateur Web et saisissez vos informations d'identification.
+
+
+. Créez un compartiment S3 pour les données FabricPool.
++
+Vous devez créer un compartiment unique pour chaque cluster ONTAP que vous prévoyez d'utiliser.
+
++
+.. Sélectionnez *STOCKAGE (S3)* *seaux*.
+.. Sélectionnez *Créer un compartiment*.
+.. Entrez le nom du compartiment StorageGRID que vous utiliserez avec FabricPool. Par exemple : `fabricpool-bucket`.
++
+
+IMPORTANT: Vous ne pouvez pas modifier le nom d'un compartiment après sa création.
+
++
+Les noms de compartiment doivent être conformes aux règles suivantes :
+
++
+*** Il doit être unique sur chaque système StorageGRID (et pas seulement au sein du compte du locataire).
+*** Doit être conforme DNS.
+*** Doit contenir au moins 3 caractères et pas plus de 63 caractères.
+*** Peut être une série d'une ou plusieurs étiquettes, avec des étiquettes adjacentes séparées par un point. Chaque étiquette doit commencer et se terminer par une lettre ou un chiffre en minuscules et ne peut utiliser que des lettres minuscules, des chiffres et des tirets.
+*** Ne doit pas ressembler à une adresse IP au format texte.
+*** Ne doit pas utiliser de périodes dans des demandes de type hébergement virtuel. Les périodes provoquera des problèmes avec la vérification du certificat générique du serveur.
+
+
+.. Sélectionnez la région de ce compartiment.
++
+Par défaut, tous les compartiments sont créés dans le `us-east-1` région.
+
++
+image::../media/create_bucket_for_fabricpool.png[Créer un compartiment pour FabricPool]
+
+.. Sélectionnez *Créer un compartiment*.
+
+
++
+
+NOTE: Pour les compartiments FabricPool, le niveau de cohérence recommandé est « réAD-après-New-write ». Le niveau de cohérence « disponible » n'est pas recommandé. Voir xref:../tenant/changing-consistency-level.adoc[Modifiez le niveau de cohérence].
+
+. Créez une clé d'accès et une clé d'accès secrète.
++
+.. Sélectionnez *STOCKAGE (S3)* *Mes clés d'accès*.
+.. Sélectionnez *Créer clé*.
+.. Sélectionnez *Créer une clé d'accès*.
+.. Copiez l'ID de la clé d'accès et la clé secrète dans un emplacement sûr, ou sélectionnez *Download .csv* pour enregistrer un fichier de feuille de calcul contenant l'ID de la clé d'accès et la clé secrète d'accès.
++
+Ces valeurs seront saisies dans ONTAP lorsque vous configurez StorageGRID en tant que Tier cloud FabricPool.
+
++
+
+IMPORTANT: Si vous créez une nouvelle clé d'accès et une clé secrète à l'avenir, n'oubliez pas de mettre à jour immédiatement les valeurs correspondantes dans ONTAP pour vous assurer que ONTAP peut stocker et récupérer les données dans StorageGRID sans interruption.
+
+
+
+

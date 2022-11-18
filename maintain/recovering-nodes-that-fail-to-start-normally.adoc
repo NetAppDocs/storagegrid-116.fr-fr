@@ -1,0 +1,26 @@
+---
+permalink: maintain/recovering-nodes-that-fail-to-start-normally.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, node did not start, node fail to start 
+summary: 'Si un nœud StorageGRID ne rejoint pas la grille normalement et ne s"affiche pas comme récupérable, il peut être corrompu. Vous pouvez forcer le nœud en mode de récupération.' 
+---
+= Restaurez les nœuds qui ne démarrent pas normalement
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si un nœud StorageGRID ne rejoint pas la grille normalement et ne s'affiche pas comme récupérable, il peut être corrompu. Vous pouvez forcer le nœud en mode de récupération.
+
+Pour forcer le nœud en mode récupération :
+
+`sudo storagegrid node force-recovery _node-name_`
+
+
+TIP: Avant d'émettre cette commande, vérifiez que la configuration réseau du nœud est correcte. Il se peut qu'elle n'ait pas pu rejoindre la grille en raison de mappages d'interface réseau incorrects ou d'une adresse IP ou d'une passerelle réseau Grid incorrecte.
+
+
+IMPORTANT: Après avoir émis le `storagegrid node force-recovery _node-name_` vous devez effectuer des étapes de restauration supplémentaires pour _node-name_.
+
+xref:whats-next-performing-additional-recovery-steps-if-required.adoc[Qu'est-ce qui suit : effectuez d'autres étapes de restauration, le cas échéant]

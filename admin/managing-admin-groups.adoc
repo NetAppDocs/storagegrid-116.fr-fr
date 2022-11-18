@@ -1,0 +1,380 @@
+---
+permalink: admin/managing-admin-groups.html 
+sidebar: sidebar 
+keywords: what are admin groups, user permissions 
+summary: 'Vous pouvez créer des groupes d"administration pour gérer les autorisations de sécurité d"un ou plusieurs utilisateurs administrateurs. Les utilisateurs doivent appartenir à un groupe pour pouvoir accéder au système StorageGRID.' 
+---
+= Gérez les groupes d'administration
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez créer des groupes d'administration pour gérer les autorisations de sécurité d'un ou plusieurs utilisateurs administrateurs. Les utilisateurs doivent appartenir à un groupe pour pouvoir accéder au système StorageGRID.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous disposez d'autorisations d'accès spécifiques.
+* Si vous envisagez d'importer un groupe fédéré, vous avez configuré la fédération des identités et le groupe fédéré existe déjà dans le référentiel d'identité configuré.
+
+
+
+
+== Créer un groupe d'administration
+
+Les groupes Admin vous permettent de déterminer quels utilisateurs peuvent accéder aux fonctions et opérations du gestionnaire de grille et de l'API Grid Management.
+
+
+
+=== Accéder à l'assistant
+
+. Sélectionnez *CONFIGURATION* *contrôle d'accès* *groupes Admin*.
+. Sélectionnez *Créer groupe*.
+
+
+
+
+=== Choisissez un type de groupe
+
+Vous pouvez créer un groupe local ou importer un groupe fédéré.
+
+* Créez un groupe local si vous souhaitez attribuer des autorisations aux utilisateurs locaux.
+* Créez un groupe fédéré pour importer des utilisateurs à partir du référentiel d'identité.
+
+
+[role="tabbed-block"]
+====
+.Groupe local
+--
+. Sélectionnez *Groupe local*.
+. Saisissez un nom d'affichage pour le groupe, que vous pourrez mettre à jour ultérieurement si nécessaire. Par exemple, « Maintenance Users » ou « ILM Administrators ».
+. Saisissez un nom unique pour le groupe, que vous ne pourrez pas mettre à jour ultérieurement.
+. Sélectionnez *Continuer*.
+
+
+--
+.Groupe fédéré
+--
+. Sélectionnez *Groupe fédéré*.
+. Entrez le nom du groupe à importer, exactement tel qu'il apparaît dans le référentiel d'identité configuré.
++
+** Pour Active Directory et Azure, utilisez sAMAccountName.
+** Pour OpenLDAP, utilisez le CN (Common Name).
+** Pour un autre LDAP, utilisez le nom unique approprié pour le serveur LDAP.
+
+
+. Sélectionnez *Continuer*.
+
+
+--
+====
+
+
+=== Gérer les autorisations de groupe
+
+. Pour *mode d'accès*, sélectionnez si les utilisateurs du groupe peuvent modifier les paramètres et effectuer des opérations dans le gestionnaire de grille et l'API de gestion de grille ou s'ils ne peuvent afficher que les paramètres et les fonctionnalités.
++
+** *Lecture-écriture* (par défaut) : les utilisateurs peuvent modifier les paramètres et effectuer les opérations autorisées par leurs autorisations de gestion.
+** *Lecture seule* : les utilisateurs peuvent uniquement afficher les paramètres et les fonctionnalités. Ils ne peuvent pas apporter de modifications ni effectuer d'opérations dans Grid Manager ou Grid Management API. Les utilisateurs locaux en lecture seule peuvent modifier leurs propres mots de passe.
++
+
+NOTE: Si un utilisateur appartient à plusieurs groupes et qu'un groupe est défini sur *lecture seule*, l'utilisateur dispose d'un accès en lecture seule à tous les paramètres et fonctions sélectionnés.
+
+
+
+. Sélectionnez une ou plusieurs options  permissions.
++
+Vous devez attribuer au moins une autorisation à chaque groupe ; sinon, les utilisateurs appartenant au groupe ne pourront pas se connecter à StorageGRID.
+
+. Si vous créez un groupe local, sélectionnez *Continuer*. Si vous créez un groupe fédéré, sélectionnez *Créer groupe* et *Terminer*.
+
+
+
+
+=== Ajouter des utilisateurs (groupes locaux uniquement)
+
+. Vous pouvez également sélectionner un ou plusieurs utilisateurs locaux pour ce groupe.
++
+Si vous n'avez pas encore créé d'utilisateurs locaux, vous pouvez enregistrer le groupe sans ajouter d'utilisateurs. Vous pouvez ajouter ce groupe à l'utilisateur sur la page utilisateurs. Voirxref:managing-users.adoc[Gérer les utilisateurs] pour plus d'informations.
+
+. Sélectionnez *Créer groupe* et *Terminer*.
+
+
+
+
+== Afficher et modifier les groupes d'administration
+
+Vous pouvez afficher les détails des groupes existants, modifier un groupe ou dupliquer un groupe.
+
+* Pour afficher les informations de base de tous les groupes, consultez le tableau de la page groupes.
+* Pour afficher tous les détails d'un groupe spécifique ou pour modifier un groupe, utilisez le menu *actions* ou la page de détails.
++
+[cols="1a, 2a,2a"]
+|===
+| Tâche | Menu actions | Page de détails 
+
+
+ a| 
+Afficher les détails du groupe
+ a| 
+.. Cochez la case correspondant au groupe.
+.. Sélectionnez *actions* *Afficher les détails du groupe*.
+
+ a| 
+Sélectionnez le nom du groupe dans le tableau.
+
+
+
+ a| 
+Modifier le nom d'affichage (groupes locaux uniquement)
+ a| 
+.. Cochez la case correspondant au groupe.
+.. Sélectionnez *actions* *Modifier le nom du groupe*.
+.. Saisissez le nouveau nom.
+.. Sélectionnez *Enregistrer les modifications*.
+
+ a| 
+.. Sélectionnez le nom du groupe pour afficher les détails.
+.. Sélectionnez l'icône de modification image:../media/icon_edit_tm.png["Icône Modifier"].
+.. Saisissez le nouveau nom.
+.. Sélectionnez *Enregistrer les modifications*.
+
+
+
+
+ a| 
+Modifier le mode d'accès ou les autorisations
+ a| 
+.. Cochez la case correspondant au groupe.
+.. Sélectionnez *actions* *Afficher les détails du groupe*.
+.. Si vous le souhaitez, modifiez le mode d'accès du groupe.
+.. Sélectionner ou désélectionner les options éventuellement  permissions.
+.. Sélectionnez *Enregistrer les modifications*.
+
+ a| 
+.. Sélectionnez le nom du groupe pour afficher les détails.
+.. Si vous le souhaitez, modifiez le mode d'accès du groupe.
+.. Sélectionner ou désélectionner les options éventuellement  permissions.
+.. Sélectionnez *Enregistrer les modifications*.
+
+
+|===
+
+
+
+
+== Dupliquer un groupe
+
+. Cochez la case correspondant au groupe.
+. Sélectionnez *actions* *Dupliquer le groupe*.
+. Suivez l'assistant de duplication de groupe.
+
+
+
+
+== Supprimer un groupe
+
+Vous pouvez supprimer un groupe d'administration lorsque vous souhaitez supprimer le groupe du système et supprimer toutes les autorisations associées au groupe. La suppression d'un groupe admin supprime tous les utilisateurs du groupe, mais ne les supprime pas.
+
+. Dans la page groupes, cochez la case correspondant à chaque groupe que vous souhaitez supprimer.
+. Sélectionnez *actions* *Supprimer le groupe*.
+. Sélectionnez *Supprimer les groupes*.
+
+
+
+
+== Autorisations de groupe
+
+Lors de la création de groupes d'utilisateurs admin, vous sélectionnez une ou plusieurs autorisations pour contrôler l'accès à des fonctions spécifiques de Grid Manager. Vous pouvez ensuite affecter chaque utilisateur à un ou plusieurs de ces groupes d'administration pour déterminer les tâches que l'utilisateur peut effectuer.
+
+Vous devez affecter au moins une autorisation à chaque groupe ; sinon, les utilisateurs appartenant à ce groupe ne pourront pas se connecter au Grid Manager ou à l'API Grid Management.
+
+Par défaut, tout utilisateur appartenant à un groupe disposant d'au moins une autorisation peut effectuer les tâches suivantes :
+
+* Connectez-vous au Grid Manager
+* Afficher le tableau de bord
+* Affichez les pages nœuds
+* Surveiller la topologie de la grille
+* Afficher les alertes actuelles et résolues
+* Afficher les alarmes actuelles et historiques (système hérité)
+* Modifier son propre mot de passe (utilisateurs locaux uniquement)
+* Afficher certaines informations sur les pages Configuration et maintenance
+
+
+
+
+=== Interaction entre les autorisations et le mode d'accès
+
+Pour toutes les autorisations, le paramètre *mode d'accès* du groupe détermine si les utilisateurs peuvent modifier les paramètres et effectuer des opérations ou s'ils ne peuvent afficher que les paramètres et les fonctionnalités associés. Si un utilisateur appartient à plusieurs groupes et qu'un groupe est défini sur *lecture seule*, l'utilisateur dispose d'un accès en lecture seule à tous les paramètres et fonctions sélectionnés.
+
+Les sections suivantes décrivent les autorisations que vous pouvez attribuer lors de la création ou de la modification d'un groupe d'administration. Toute fonctionnalité qui n'est pas explicitement mentionnée requiert l'autorisation *accès racine*.
+
+
+
+=== Accès racine
+
+Cette autorisation donne accès à toutes les fonctions d'administration de la grille.
+
+
+
+=== Accuser réception d'alarmes (existantes)
+
+Cette autorisation permet d'accuser réception et de répondre aux alarmes (système hérité). Tous les utilisateurs connectés peuvent afficher les alarmes actuelles et historiques.
+
+Si vous souhaitez qu'un utilisateur surveille la topologie de la grille et accuse réception des alarmes uniquement, vous devez attribuer cette autorisation.
+
+
+
+=== Modifier le mot de passe root du locataire
+
+Cette autorisation donne accès à l'option *changer mot de passe root* de la page locataires, ce qui vous permet de contrôler qui peut modifier le mot de passe de l'utilisateur racine local du locataire. Cette autorisation est également utilisée pour migrer les clés S3 lorsque la fonctionnalité d'importation de clés S3 est activée. Les utilisateurs qui ne disposent pas de cette autorisation ne peuvent pas voir l'option *changer mot de passe racine*.
+
+
+NOTE: Pour accorder l'accès à la page locataires, qui contient l'option *changer mot de passe racine*, attribuez également l'autorisation *comptes locataire*.
+
+
+
+=== Configuration de la page de topologie grid
+
+Cette autorisation permet d'accéder aux onglets Configuration de la page *SUPPORT* *Outils* *topologie de grille*.
+
+
+
+=== ILM
+
+Cette autorisation permet d'accéder aux options de menu *ILM* suivantes :
+
+* Règles
+* Stratégies
+* Le code d'effacement
+* Régions
+* Pools de stockage
+
+
+
+NOTE: Les utilisateurs doivent disposer des autorisations *autre configuration de grille* et *Configuration de page de topologie de grille* pour gérer les classes de stockage.
+
+
+
+=== Maintenance
+
+Les utilisateurs doivent disposer de l'autorisation Maintenance pour utiliser les options suivantes :
+
+* *CONFIGURATION* *contrôle d'accès*:
++
+** Mots de passe de grille
+
+
+* *MAINTENANCE* *tâches*:
++
+** Désaffectation
+** De développement
+** Vérification de l'existence d'objet
+** Reprise après incident
+
+
+* *MAINTENANCE* *système* :
++
+** Package de restauration
+** Mise à jour logicielle
+
+
+* *SUPPORT* *Outils*:
++
+** Journaux
+
+
+
+
+Les utilisateurs qui ne disposent pas de l'autorisation Maintenance peuvent afficher, mais pas modifier, ces pages :
+
+* *MAINTENANCE* *réseau*:
++
+** Serveurs DNS
+** Réseau Grid
+** Serveurs NTP
+
+
+* *MAINTENANCE* *système* :
++
+** Licence
+
+
+* *CONFIGURATION* *sécurité*:
++
+** Certificats
+** Noms de domaine
+
+
+* *CONFIGURATION* *surveillance* :
++
+** Serveur d'audit et syslog
+
+
+
+
+
+
+=== Gérer les alertes
+
+Cette autorisation donne accès aux options de gestion des alertes. Les utilisateurs doivent disposer de cette autorisation pour gérer les silences, les notifications d'alerte et les règles d'alerte.
+
+
+
+=== Interrogation de metrics
+
+Cette autorisation permet d'accéder à la page *SUPPORT* *Outils* *métriques*. Cette autorisation permet également d'accéder à des requêtes de metrics Prometheus personnalisées à l'aide de la section *Metrics* de l'API Grid Management.
+
+
+
+=== Recherche de métadonnées d'objet
+
+Cette autorisation permet d'accéder à la page *ILM* *recherche de métadonnées objet*.
+
+
+
+=== Autre configuration de grille
+
+Cette autorisation donne accès à d'autres options de configuration de grille.
+
+
+IMPORTANT: Pour voir ces options supplémentaires, les utilisateurs doivent également disposer de l'autorisation *Grid topology page configuration*.
+
+* *ILM* :
++
+** Niveaux de stockage
+
+
+* *CONFIGURATION* *réseau* :
++
+** Coût des liens
+
+
+* *CONFIGURATION* *système* :
++
+** Options d'affichage
+** Options de grid
+** Options de stockage
+
+
+* *PRISE EN CHARGE* *alarmes (existantes)* :
++
+** Événements personnalisés
+** Alarmes globales
+** Configuration de la messagerie existante
+
+
+
+
+
+
+=== Administrateur de l'appliance de stockage
+
+Cette autorisation permet d'accéder à la gamme E-Series SANtricity System Manager sur les appliances de stockage via Grid Manager.
+
+
+
+=== Comptes de locataires
+
+Cette autorisation donne accès à la page locataires, où vous pouvez créer, modifier et supprimer des comptes de tenant. Cette autorisation permet également aux utilisateurs d'afficher les stratégies de classification de trafic existantes.

@@ -1,0 +1,41 @@
+---
+permalink: admin/how-load-balancing-works-load-balancer-service.html 
+sidebar: sidebar 
+keywords: load balancer service, how load balancing works 
+summary: 'Le service Load Balancer distribue les connexions réseau entrantes des applications client aux nœuds de stockage. Pour activer l"équilibrage de charge, vous devez configurer les noeuds finaux de l"équilibreur de charge à l"aide de Grid Manager.' 
+---
+= Fonctionnement de l'équilibrage de la charge : service Load Balancer
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le service Load Balancer distribue les connexions réseau entrantes des applications client aux nœuds de stockage. Pour activer l'équilibrage de charge, vous devez configurer les noeuds finaux de l'équilibreur de charge à l'aide de Grid Manager.
+
+Vous pouvez configurer les noeuds finaux de l'équilibreur de charge uniquement pour les nœuds d'administration ou les nœuds de passerelle, car ces types de nœuds contiennent le service Load Balancer. Vous ne pouvez pas configurer de noeuds finaux pour les noeuds de stockage ou les noeuds d'archivage.
+
+Chaque point final de l'équilibreur de charge spécifie un port, un protocole réseau (HTTP ou HTTPS), un type de client (S3 ou Swift) et un mode de liaison. Les terminaux HTTPS requièrent un certificat de serveur. Les modes de liaison vous permettent de limiter l'accessibilité des ports de point final à :
+
+* Adresses IP virtuelles (VIP) de groupes haute disponibilité (HA) spécifiques
+* Interfaces réseau spécifiques de nœuds d'administration et de passerelle spécifiques
+
+
+
+
+== Considérations relatives aux ports
+
+Les clients peuvent accéder à tous les terminaux que vous configurez sur n'importe quel nœud exécutant le service Load Balancer, à deux exceptions près : les ports 80 et 443 sont réservés aux nœuds d'administration. Les terminaux configurés sur ces ports prennent donc en charge les opérations d'équilibrage de la charge uniquement sur les nœuds de passerelle.
+
+Si vous avez mappé de nouveau des ports, vous ne pouvez pas utiliser les mêmes ports pour configurer les points finaux de l'équilibreur de charge. Vous pouvez créer des noeuds finaux à l'aide de ports remappés, mais ces noeuds finaux seront remappés vers les ports et le service CLB d'origine, et non le service Load Balancer. Suivez les étapes de la section xref:../maintain/removing-port-remaps.adoc[Supprimer les mappages de port].
+
+
+NOTE: Le service CLB est obsolète.
+
+
+
+== Disponibilité du processeur
+
+Le service Load Balancer sur chaque nœud d'administration et chaque nœud de passerelle fonctionne de manière indépendante lors du transfert du trafic S3 ou Swift vers les nœuds de stockage. Par le biais d'un processus de pondération, le service Load Balancer achemine davantage de requêtes vers des nœuds de stockage avec une disponibilité de processeur supérieure. Les informations de charge de l'UC du nœud sont mises à jour toutes les quelques minutes, mais la pondération peut être mise à jour plus fréquemment. Tous les nœuds de stockage se voient attribuer une valeur de poids de base minimale, même si un nœud indique une utilisation de 100 % ou ne parvient pas à signaler son utilisation.
+
+Dans certains cas, les informations relatives à la disponibilité du processeur sont limitées au site où se trouve le service Load Balancer.

@@ -1,0 +1,136 @@
+---
+permalink: monitor/viewing-current-alerts.html 
+sidebar: sidebar 
+keywords: how to view current alerts 
+summary: 'Lorsqu"une alerte est déclenchée, une icône d"alerte s"affiche sur le tableau de bord. Une icône d"alerte s"affiche également pour le nœud sur la page nœuds. Il est également possible d"envoyer une notification par e-mail, à moins que l"alerte n"ait été neutralisée.' 
+---
+= Afficher les alertes en cours
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsqu'une alerte est déclenchée, une icône d'alerte s'affiche sur le tableau de bord. Une icône d'alerte s'affiche également pour le nœud sur la page nœuds. Il est également possible d'envoyer une notification par e-mail, à moins que l'alerte n'ait été neutralisée.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous pouvez également regarder la vidéo : https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2680a74f-070c-41c2-bcd3-acc5013c9cdd["Vidéo : présentation des alertes"^].
++
+[link=https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2680a74f-070c-41c2-bcd3-acc5013c9cdd]
+image::../media/video-screenshot-alert-overview.png[Vidéo : présentation des alertes]
+
+
+
+.Étapes
+. Si une ou plusieurs alertes sont actives, procédez de l'une des façons suivantes :
++
+** Dans le panneau Santé du tableau de bord, cliquez sur l'icône d'alerte ou cliquez sur *alertes actuelles*. (Une icône d'alerte et le lien *alertes actuelles* n'apparaissent que si au moins une alerte est active.)
+** Sélectionnez *ALERTES* *courant*.
++
+La page alertes en cours s'affiche. Il répertorie toutes les alertes qui affectent actuellement votre système StorageGRID.
+
++
+image::../media/alerts_current_page.png[Page alertes en cours]
+
++
+Les alertes sont affichées par défaut comme suit :
+
+** Les alertes déclenchées les plus récemment sont affichées en premier.
+** Plusieurs alertes du même type sont affichées sous la forme d'un groupe.
+** Les alertes qui ont été désactivées ne sont pas affichées.
+** Pour une alerte spécifique sur un nœud spécifique, si les seuils sont atteints pour plus d'un niveau de gravité, seule l'alerte la plus grave est affichée. C'est-à-dire, si les seuils d'alerte sont atteints pour les niveaux de gravité mineur, majeur et critique, seule l'alerte critique s'affiche.
+
+
++
+La page alertes actuelle est actualisée toutes les deux minutes.
+
+. Vérifiez les informations du tableau.
++
+[cols="1a,3a"]
+|===
+| En-tête de colonne | Description 
+
+
+ a| 
+Nom
+ a| 
+Le nom de l'alerte et sa description.
+
+
+
+ a| 
+Gravité
+ a| 
+Gravité de l'alerte. Si plusieurs alertes sont regroupées, la ligne de titre indique le nombre d'instances de cette alerte à chaque gravité.
+
+** *Critique* image:../media/icon_alert_red_critical.png["Icône alerte rouge critique"]: Il existe une condition anormale qui a arrêté les opérations normales d'un nœud ou service StorageGRID. Vous devez immédiatement résoudre le problème sous-jacent. Une interruption du service et une perte de données peuvent se produire si le problème n'est pas résolu.
+** *Majeur* image:../media/icon_alert_orange_major.png["Icône alerte Orange majeur"]: Il existe une condition anormale affectant les opérations en cours ou approchant le seuil d'une alerte critique. Vous devez examiner les alertes majeures et résoudre tous les problèmes sous-jacents pour vérifier que leur condition anormale n'arrête pas le fonctionnement normal d'un nœud ou d'un service StorageGRID.
+** *Mineur* image:../media/icon_alert_yellow_minor.png["Icône alerte jaune mineure"]: Le système fonctionne normalement, mais il existe une condition anormale qui pourrait affecter la capacité du système à fonctionner s'il continue. Vous devez surveiller et résoudre les alertes mineures qui ne sont pas claires par elles-mêmes pour vous assurer qu'elles n'entraînent pas un problème plus grave.
+
+
+
+
+ a| 
+Temps déclenché
+ a| 
+Il y a combien de temps l'alerte a été déclenchée. Si plusieurs alertes sont regroupées, la ligne de titre affiche les heures de l'instance la plus récente de l'alerte (_le plus récent_) et de l'instance la plus ancienne de l'alerte (_le plus ancien_).
+
+
+
+ a| 
+Site/nœud
+ a| 
+Nom du site et du nœud où l'alerte se produit. Si plusieurs alertes sont regroupées, les noms de site et de nœud ne s'affichent pas dans la ligne de titre.
+
+
+
+ a| 
+État
+ a| 
+Indique si l'alerte est active ou a été neutralisée. Si plusieurs alertes sont regroupées et que *toutes les alertes* sont sélectionnées dans la liste déroulante, la ligne de titre indique le nombre d'instances de cette alerte actives et le nombre d'instances désactivées.
+
+
+
+ a| 
+Valeurs actuelles
+ a| 
+Valeur actuelle de la mesure qui a déclenché l'alerte. Pour certaines alertes, des valeurs supplémentaires sont affichées pour vous aider à comprendre et à examiner l'alerte. Par exemple, les valeurs affichées pour une alerte *stockage de données d'objet bas* comprennent le pourcentage d'espace disque utilisé, la quantité totale d'espace disque et la quantité d'espace disque utilisée.
+
+*Remarque :* si plusieurs alertes sont regroupées, les valeurs actuelles ne sont pas affichées dans la ligne de titre.
+
+|===
+. Pour développer et réduire des groupes d'alertes :
++
+** Pour afficher les alertes individuelles d'un groupe, cliquez sur le point d'arrêt image:../media/icon_alert_caret_down.png["icône de point d'arrêt"] dans l'en-tête ou cliquez sur le nom du groupe.
+** Pour masquer les alertes individuelles d'un groupe, cliquez sur le point d'insertion image:../media/icon_alert_caret_up.png["Icône attention"] dans l'en-tête ou cliquez sur le nom du groupe.
++
+image::../media/alerts_page_expanded_alert_group.png[Groupe d'alertes étendu de la page alertes]
+
+
+
+. Pour afficher des alertes individuelles au lieu de groupes d'alertes, décochez la case *alertes de groupe* en haut du tableau.
++
+image::../media/alerts_page_group_alerts_button.png[Bouton d'alertes de groupe]
+
+. Pour trier les alertes ou les groupes d'alertes, cliquez sur les flèches haut/bas image:../media/icon_alert_sort_column.png["Icône de flèches de tri"] dans chaque en-tête de colonne.
++
+** Lorsque *alertes de groupe* est sélectionné, les groupes d'alertes et les alertes individuelles de chaque groupe sont triés. Par exemple, vous pouvez trier les alertes d'un groupe par *heure déclenchée* pour trouver l'instance la plus récente d'une alerte spécifique.
+** Lorsque *alertes de groupe* n'est pas sélectionnée, la liste complète des alertes est triée. Par exemple, vous pouvez trier toutes les alertes par *nœud/site* pour voir toutes les alertes affectant un nœud spécifique.
+
+
+. Pour filtrer les alertes par état, utilisez le menu déroulant situé en haut du tableau.
++
+image::../media/alerts_page_active_drop_down.png[Liste déroulante d'état d'alerte]
+
++
+** Sélectionnez *toutes les alertes* pour afficher toutes les alertes en cours (alertes actives et désactivées).
+** Sélectionnez *actif* pour afficher uniquement les alertes en cours actives.
+** Sélectionnez *silencieux* pour afficher uniquement les alertes en cours qui ont été réduites au silence. Voir xref:silencing-alert-notifications.adoc[Notifications d'alerte de silence].
+
+
+. Pour afficher les détails d'une alerte spécifique, sélectionnez l'alerte dans le tableau.
++
+Une boîte de dialogue de l'alerte s'affiche. Voir xref:viewing-specific-alert.adoc[Afficher une alerte spécifique].
+
+

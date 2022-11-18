@@ -1,0 +1,14 @@
+---
+permalink: sg100-1000/configuring-bmc-interface-sg1000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, BMC, baseboard management controller, configure, setup, set up 
+summary: 'L"interface utilisateur du contrôleur de gestion de la carte mère \(BMC\) de l"appliance de services fournit des informations d"état sur le matériel et vous permet de configurer les paramètres SNMP et d"autres options pour l"appliance de services.' 
+---
+= Configuration de l'interface BMC (SG100 et SG1000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'interface utilisateur du contrôleur de gestion de la carte mère (BMC) de l'appliance de services fournit des informations d'état sur le matériel et vous permet de configurer les paramètres SNMP et d'autres options pour l'appliance de services.

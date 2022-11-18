@@ -1,0 +1,62 @@
+---
+permalink: sg5600/upgrading-santricity-os-on-e2700-controller-using-maintenance-mode.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, controller, e2700, storage controller, upgrade, upgrading, SANtricity OS, SANtricity, maintenance mode 
+summary: 'Si vous ne parvenez pas à mettre à niveau le logiciel SANtricity OS à l"aide du Gestionnaire de grille, utilisez la procédure du mode de maintenance pour appliquer la mise à niveau.' 
+---
+= Mettre à niveau le système d'exploitation SANtricity sur le contrôleur E2700 à l'aide du mode de maintenance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous ne parvenez pas à mettre à niveau le logiciel SANtricity OS à l'aide du Gestionnaire de grille, utilisez la procédure du mode de maintenance pour appliquer la mise à niveau.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous avez consulté la matrice d'interopérabilité (IMT) de NetApp afin de vérifier que la version de SANtricity OS que vous utilisez pour la mise à niveau est compatible avec votre appliance.
+* Vous devez placer le contrôleur E5600 dans xref:placing-appliance-into-maintenance-mode.adoc[mode maintenance] Si vous n'utilisez pas Grid Manager. Lorsque vous placez le contrôleur en mode de maintenance, la connexion au contrôleur E2700 est interrompue.
++
+
+NOTE: Dans de rares cas, le fait de placer une appliance StorageGRID en mode de maintenance peut rendre l'appliance indisponible pour l'accès à distance.
+
+
+
+Ne mettez pas à niveau le système d'exploitation SANtricity ou la NVSRAM du contrôleur E-Series sur plusieurs appliances StorageGRID à la fois.
+
+
+IMPORTANT: La mise à niveau de plusieurs appliances StorageGRID peut entraîner une indisponibilité des données, en fonction du modèle de déploiement et des règles ILM.
+
+.Étapes
+. Vérifiez que l'appareil est dans xref:placing-appliance-into-maintenance-mode.adoc[mode maintenance].
+. Depuis un ordinateur portable de service, accédez à SANtricity Storage Manager et connectez-vous.
+. Téléchargez le nouveau fichier du logiciel SANtricity OS et le fichier NVSRAM sur le client de gestion.
++
+
+IMPORTANT: La NVSRAM est spécifique à l'appliance StorageGRID. N'utilisez pas le téléchargement NVSRAM standard.
+
+. Suivez les instructions de mise à niveau du logiciel et du firmware des baies E2700 et E5600 SANtricity_ ou de l'aide en ligne de SANtricity Storage Manager et mettez à niveau le firmware, la NVSRAM ou les deux.
++
+
+IMPORTANT: Si vous devez mettre à niveau la NVSRAM du contrôleur E2700, vérifiez que le fichier SANtricity OS que vous avez téléchargé a été désigné comme compatible avec les appliances StorageGRID.
+
++
+
+NOTE: Activez immédiatement les fichiers de mise à niveau. Ne pas différer l'activation.
+
+. Si cette procédure s'est terminée avec succès et que vous disposez de procédures supplémentaires pour effectuer cette opération pendant que le nœud est en mode de maintenance, effectuez-les maintenant. Lorsque vous avez terminé, ou si vous avez rencontré des échecs et souhaitez recommencer, sélectionnez *Advanced* *Reboot Controller*, puis sélectionnez l'une des options suivantes :
++
+** Sélectionnez *redémarrer dans StorageGRID*
+** Sélectionnez *redémarrer en mode maintenance* pour redémarrer le contrôleur avec le nœud restant en mode de maintenance. Sélectionnez cette option si vous avez rencontré des échecs au cours de la procédure et souhaitez recommencer. Une fois le redémarrage du nœud en mode maintenance terminé, redémarrez à partir de l'étape appropriée de la procédure ayant échoué.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Redémarrez le contrôleur en mode de maintenance]
+
++
+L'appliance peut redémarrer et rejoindre la grille en 20 minutes. Pour confirmer que le redémarrage est terminé et que le nœud a rejoint la grille, retournez à la grille Manager. La page nœuds doit afficher un état normal (aucune icône à gauche du nom du nœud) pour le nœud d'appliance, indiquant qu'aucune alerte n'est active et que le nœud est connecté à la grille.
+
++
+image::../media/node_rejoin_grid_confirmation.png[Le nœud d'appliance a rejoint la grille]
+
+
+
+

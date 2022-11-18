@@ -1,0 +1,72 @@
+---
+permalink: sg6000/obtaining-additional-equipment-and-tools-sg6000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, additional, equipment, tools 
+summary: 'Avant d"installer l"appliance StorageGRID, vérifiez que vous disposez de tous les équipements et outils supplémentaires dont vous avez besoin.' 
+---
+= Obtenir des équipements et des outils supplémentaires (SG6000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'installer l'appliance StorageGRID, vérifiez que vous disposez de tous les équipements et outils supplémentaires dont vous avez besoin.
+
+Vous devez disposer de l'équipement supplémentaire suivant pour installer et configurer le matériel :
+
+* *Tournevis*
++
+image::../media/screwdrivers.gif[Deux tournevis]
+
++
+N° Phillips 2 tournevis
+
++
+Tournevis plat moyen
+
+* * Bracelet antistatique*
++
+image::../media/appliance_wriststrap.gif[Bracelet antistatique]
+
+* *Câbles optiques et émetteurs-récepteurs SFP*
++
+image::../media/fc_cable_and_sfp.gif[Câble optique et émetteur-récepteur SFP+]
+
++
+Vous avez besoin de l'une des options suivantes :
+
++
+** Un à quatre câbles TwinAx ou câbles optiques pour les ports 10/25 GbE que vous prévoyez d'utiliser sur le contrôleur SG6000-CN
+** Un à quatre émetteurs-récepteurs SFP+ pour les ports 10/25 GbE si vous utilisez des câbles optiques et une vitesse de liaison 10 GbE
+** Un à quatre émetteurs-récepteurs SFP28 pour les ports 10/25 GbE si vous utilisez des câbles optiques et une vitesse de liaison 25 GbE
+
+
+* *Câbles Ethernet RJ-45 (Cat5/Cat5e/Cat6)*
++
+image::../media/ethernet_cables.png[Câbles Ethernet]
+
+* *Ordinateur portable de service*
++
+image::../media/sam_management_client.gif[L'ordinateur portable de service]
+
++
+xref:../admin/web-browser-requirements.adoc[Navigateur Web pris en charge]
+
++
+Port 1 GbE (RJ-45)
+
+* *Outils en option*
++
+image::../media/optional_tools.gif[Perceuse électrique et lampe de poche]
+
++
+Perceuse électrique avec embout Phillips
+
++
+Lampe de poche
+
++
+Levage mécanisé pour les tiroirs de 60 disques
+
+

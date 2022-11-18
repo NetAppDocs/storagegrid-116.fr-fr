@@ -1,0 +1,14 @@
+---
+permalink: sg6000/configuring-storagegrid-connections.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, storagegrid connections, connections, configure, setup, set up 
+summary: 'Avant de déployer une appliance StorageGRID en tant que nœud de stockage dans un système StorageGRID, vous devez configurer les connexions entre l"appliance et les réseaux que vous prévoyez d"utiliser. Vous pouvez configurer la mise en réseau en accédant au programme d"installation de l"appliance StorageGRID, qui est préinstallé sur le contrôleur SG6000-CN \(le contrôleur de calcul\).' 
+---
+= Configuration des connexions StorageGRID (SG6000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de déployer une appliance StorageGRID en tant que nœud de stockage dans un système StorageGRID, vous devez configurer les connexions entre l'appliance et les réseaux que vous prévoyez d'utiliser. Vous pouvez configurer la mise en réseau en accédant au programme d'installation de l'appliance StorageGRID, qui est préinstallé sur le contrôleur SG6000-CN (le contrôleur de calcul).

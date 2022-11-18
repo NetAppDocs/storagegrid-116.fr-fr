@@ -1,0 +1,21 @@
+---
+permalink: ilm/using-storage-pool-as-temporary-location-deprecated.html 
+sidebar: sidebar 
+keywords: storage pool temporary location 
+summary: 'Lorsque vous créez une règle ILM avec un placement d"objets incluant un pool de stockage, vous êtes invité à spécifier un second pool de stockage à utiliser comme emplacement temporaire.' 
+---
+= Utiliser un pool de stockage comme emplacement temporaire (obsolète)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque vous créez une règle ILM avec un placement d'objets incluant un pool de stockage, vous êtes invité à spécifier un second pool de stockage à utiliser comme emplacement temporaire.
+
+Les sites temporaires sont obsolètes et seront supprimés dans une version ultérieure. Vous ne devez pas sélectionner un pool de stockage comme emplacement temporaire pour une nouvelle règle ILM.
+
+
+NOTE: Si vous sélectionnez le comportement d'entrée strict (étape 3 de l'assistant Créer une règle ILM), l'emplacement temporaire est ignoré.
+
+xref:data-protection-options-for-ingest.adoc[Options de protection des données pour l'ingestion]

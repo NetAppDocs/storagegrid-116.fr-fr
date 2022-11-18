@@ -1,0 +1,69 @@
+---
+permalink: primer/managing-tenants-and-client-connections.html 
+sidebar: sidebar 
+keywords: tenant, client, connect, connection 
+summary: 'En tant qu"administrateur du grid, vous créez et gérez les comptes de locataire utilisés par les clients S3 et Swift pour stocker et récupérer des objets, ainsi que les options de configuration qui contrôlent la connexion des clients à votre système StorageGRID.' 
+---
+= Gérez les locataires et les connexions clients
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En tant qu'administrateur du grid, vous créez et gérez les comptes de locataire utilisés par les clients S3 et Swift pour stocker et récupérer des objets, ainsi que les options de configuration qui contrôlent la connexion des clients à votre système StorageGRID.
+
+
+
+== Comptes de locataires
+
+Un compte de locataire vous permet d'indiquer qui peut utiliser votre système StorageGRID pour stocker et récupérer des objets, ainsi que les fonctionnalités qui y sont disponibles. Les comptes de locataires permettent aux applications client qui prennent en charge l'API REST S3 ou l'API REST Swift de stocker et récupérer des objets dans StorageGRID. Chaque compte de locataire utilise soit le protocole client S3, soit le protocole du client Swift.
+
+Vous devez créer au moins un compte de locataire pour chaque protocole client qui sera utilisé pour stocker des objets sur votre système StorageGRID. Vous pouvez également créer des comptes de tenant supplémentaires si vous souhaitez isoler les objets stockés sur votre système par des entités différentes. Chaque compte de locataire possède ses propres groupes et utilisateurs fédérés ou locaux, ainsi que ses propres compartiments (conteneurs pour Swift) et objets.
+
+Vous pouvez utiliser Grid Manager ou l'API Grid Management pour créer des comptes de tenant. Lors de la création d'un compte locataire, vous devez spécifier les informations suivantes :
+
+* Nom d'affichage du locataire (l'ID de compte du locataire est attribué automatiquement et ne peut pas être modifié).
+* Si le compte de locataire utilise S3 ou Swift.
+* Pour les comptes de locataire S3 : si le compte de locataire est autorisé à utiliser des services de plateforme. Si l'utilisation des services de plateforme est autorisée, la grille doit être configurée pour prendre en charge leur utilisation.
+* Éventuellement, un quota de stockage pour le compte du locataire, soit le nombre maximal de gigaoctets, téraoctets ou pétaoctets disponibles pour les objets du locataire. Le quota de stockage d'un locataire représente une quantité logique (taille d'objet), et non une quantité physique (taille sur disque).
+* Si la fédération des identités est activée pour le système StorageGRID, quel groupe fédéré a l'autorisation d'accès racine pour configurer le compte de tenant.
+* Si l'authentification unique (SSO) n'est pas utilisée pour le système StorageGRID, que le compte de tenant utilise son propre référentiel d'identité ou partage le référentiel d'identité de la grille et le mot de passe initial de l'utilisateur racine local du locataire.
+
+
+Si les comptes de locataires S3 doivent respecter les exigences réglementaires, les administrateurs du grid peuvent activer le paramètre global de verrouillage d'objet S3 pour le système StorageGRID. Lorsque le verrouillage objet S3 est activé pour le système, tous les comptes locataires S3 peuvent créer des compartiments avec le verrouillage objet S3 activé, puis spécifier les paramètres de conservation et de conservation légale pour les versions d'objet dans ce compartiment.
+
+Une fois le compte de locataire créé, les utilisateurs peuvent se connecter au Gestionnaire de tenant.
+
+
+
+== Connexions client aux nœuds StorageGRID
+
+Avant que les locataires ne puissent utiliser les clients S3 ou Swift pour stocker et récupérer les données dans StorageGRID, vous devez décider comment ces clients se connectent aux nœuds StorageGRID.
+
+Les applications client peuvent stocker ou récupérer des objets en se connectant à l'un des éléments suivants :
+
+* Service Load Balancer sur les nœuds d'administration ou les nœuds de passerelle. Il s'agit de la connexion recommandée.
+* Le service CLB sur les nœuds de passerelle.
++
+
+NOTE: Le service CLB est obsolète.
+
+* Des nœuds de stockage, avec ou sans équilibreur de charge externe.
+
+
+Lors de la configuration de StorageGRID afin que les clients puissent utiliser le service Load Balancer, effectuez les opérations suivantes :
+
+. Configuration des groupes haute disponibilité (HA) en option Si vous créez un groupe haute disponibilité, les interfaces de plusieurs nœuds d'administration et nœuds de passerelle sont placées dans une configuration de sauvegarde active/active. Les connexions client sont établies à l'aide de l'adresse IP virtuelle du groupe haute disponibilité.
+. Configurez les noeuds finaux pour le service Load Balancer. Le service Load Balancer sur les nœuds d'administration ou de passerelle distribue les connexions réseau entrantes des applications client aux nœuds de stockage. Lors de la création d'un noeud final d'équilibrage de charge, vous spécifiez un numéro de port, que le noeud final accepte les connexions HTTP ou HTTPS, le type de client (S3 ou Swift) qui utilisera le noeud final et le certificat à utiliser pour les connexions HTTPS (le cas échéant).
+. Spécifiez éventuellement que le réseau client d'un nœud n'est pas fiable pour s'assurer que toutes les connexions au réseau client du nœud se produisent sur les noeuds finaux de l'équilibreur de charge.
+
+
+.Informations associées
+* xref:../admin/index.adoc[Administrer StorageGRID]
+* xref:../tenant/index.adoc[Utilisez un compte de locataire]
+* xref:../s3/index.adoc[Utilisation de S3]
+* xref:../swift/index.adoc[Utiliser Swift]
+* xref:exploring-tenant-manager.adoc[Explorez le Gestionnaire de locataires]
+* xref:configuring-network-settings.adoc[Configurez les paramètres réseau]
+

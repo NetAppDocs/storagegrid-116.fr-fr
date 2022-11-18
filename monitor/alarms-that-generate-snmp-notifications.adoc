@@ -1,0 +1,525 @@
+---
+permalink: monitor/alarms-that-generate-snmp-notifications.html 
+sidebar: sidebar 
+keywords: alarms, monitor alarms, snmp notification, snmp 
+summary: Le tableau suivant répertorie les anciennes alarmes qui génèrent des notifications SNMP. Contrairement aux alertes, toutes les alarmes ne génèrent pas de notifications SNMP. Seules les alarmes répertoriées génèrent des notifications SNMP et uniquement à la gravité indiquée ou supérieure. 
+---
+= Alarmes générant des notifications SNMP (système hérité)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le tableau suivant répertorie les anciennes alarmes qui génèrent des notifications SNMP. Contrairement aux alertes, toutes les alarmes ne génèrent pas de notifications SNMP. Seules les alarmes répertoriées génèrent des notifications SNMP et uniquement à la gravité indiquée ou supérieure.
+
+
+NOTE: Bien que le système d'alarme existant continue d'être pris en charge, le système d'alerte offre des avantages significatifs et est plus facile à utiliser.
+
+[cols="1a,2a,1a"]
+|===
+| Code | Nom | Gravité 
+
+
+ a| 
+ACMS
+ a| 
+Services de métadonnées disponibles
+ a| 
+Primordial
+
+
+
+ a| 
+AITE
+ a| 
+État de récupération
+ a| 
+Mineur
+
+
+
+ a| 
+AITU
+ a| 
+État de récupération
+ a| 
+Majeur
+
+
+
+ a| 
+AMQS
+ a| 
+Messages d'audit en file d'attente
+ a| 
+Avertissement
+
+
+
+ a| 
+AOTE
+ a| 
+État du magasin
+ a| 
+Mineur
+
+
+
+ a| 
+AOTU
+ a| 
+État du magasin
+ a| 
+Majeur
+
+
+
+ a| 
+AROQ
+ a| 
+Objets mis en file d'attente
+ a| 
+Mineur
+
+
+
+ a| 
+ARRF
+ a| 
+Échecs de demande
+ a| 
+Majeur
+
+
+
+ a| 
+ARRV
+ a| 
+Échecs de vérification
+ a| 
+Majeur
+
+
+
+ a| 
+ARVF
+ a| 
+Échecs de stockage
+ a| 
+Majeur
+
+
+
+ a| 
+ASXP
+ a| 
+Partages d'audit
+ a| 
+Mineur
+
+
+
+ a| 
+AUMA
+ a| 
+Statut AMS
+ a| 
+Mineur
+
+
+
+ a| 
+AUXS
+ a| 
+Audit de l'état d'exportation
+ a| 
+Mineur
+
+
+
+ a| 
+POINT DE FIN
+ a| 
+Décalage
+ a| 
+Avertissement
+
+
+
+ a| 
+CAHP
+ a| 
+Pourcentage d'utilisation du tas Java
+ a| 
+Majeur
+
+
+
+ a| 
+CAQH
+ a| 
+Nombre de destinations disponibles
+ a| 
+Avertissement
+
+
+
+ a| 
+CASA
+ a| 
+État de la banque de données
+ a| 
+Majeur
+
+
+
+ a| 
+CDLP
+ a| 
+Espace utilisé pour les métadonnées (en %)
+ a| 
+Majeur
+
+
+
+ a| 
+CLBE
+ a| 
+Etat CLB
+ a| 
+Primordial
+
+
+
+ a| 
+DNST
+ a| 
+État DNS
+ a| 
+Primordial
+
+
+
+ a| 
+ECST
+ a| 
+État de vérification
+ a| 
+Majeur
+
+
+
+ a| 
+HSTE
+ a| 
+État HTTP
+ a| 
+Majeur
+
+
+
+ a| 
+HTA
+ a| 
+Démarrage automatique HTTP
+ a| 
+Avertissement
+
+
+
+ a| 
+PERDU
+ a| 
+Objets perdus
+ a| 
+Majeur
+
+
+
+ a| 
+MINQ
+ a| 
+Notifications par e-mail en file d'attente
+ a| 
+Avertissement
+
+
+
+ a| 
+MINUTES
+ a| 
+Statut des notifications par e-mail
+ a| 
+Mineur
+
+
+
+ a| 
+NANG
+ a| 
+Paramètre de négociation automatique du réseau
+ a| 
+Avertissement
+
+
+
+ a| 
+NUP
+ a| 
+Paramètre duplex réseau
+ a| 
+Mineur
+
+
+
+ a| 
+NLNK
+ a| 
+Détection de la liaison réseau
+ a| 
+Mineur
+
+
+
+ a| 
+NRER
+ a| 
+Erreurs de réception
+ a| 
+Avertissement
+
+
+
+ a| 
+NSPD
+ a| 
+Vitesse
+ a| 
+Avertissement
+
+
+
+ a| 
+NTRE
+ a| 
+Erreurs de transmission
+ a| 
+Avertissement
+
+
+
+ a| 
+NTFQ
+ a| 
+Décalage de fréquence NTP
+ a| 
+Mineur
+
+
+
+ a| 
+NTPL
+ a| 
+Verrouillage NTP
+ a| 
+Mineur
+
+
+
+ a| 
+NTOF
+ a| 
+Décalage horaire NTP
+ a| 
+Mineur
+
+
+
+ a| 
+NTSJ
+ a| 
+Jitter de la source horaire choisie
+ a| 
+Mineur
+
+
+
+ a| 
+NTSU
+ a| 
+État NTP
+ a| 
+Majeur
+
+
+
+ a| 
+OPST
+ a| 
+État général de l'alimentation
+ a| 
+Majeur
+
+
+
+ a| 
+ORSU
+ a| 
+État de la réplication sortante
+ a| 
+Avertissement
+
+
+
+ a| 
+PSAS
+ a| 
+État de l'alimentation Électrique A
+ a| 
+Majeur
+
+
+
+ a| 
+PSB
+ a| 
+État de l'alimentation B
+ a| 
+Majeur
+
+
+
+ a| 
+RTTD
+ a| 
+État de Tivoli Storage Manager
+ a| 
+Avertissement
+
+
+
+ a| 
+RTU
+ a| 
+Statut de Tivoli Storage Manager
+ a| 
+Majeur
+
+
+
+ a| 
+VICE-PRÉSIDENT SAVP
+ a| 
+Espace utilisable total (pourcentage)
+ a| 
+Avertissement
+
+
+
+ a| 
+SHLH
+ a| 
+Santé
+ a| 
+Avertissement
+
+
+
+ a| 
+SLSA
+ a| 
+Moyenne de charge CPU
+ a| 
+Avertissement
+
+
+
+ a| 
+SMTT
+ a| 
+Nombre total d'événements
+ a| 
+Avertissement
+
+
+
+ a| 
+SNST
+ a| 
+État
+ a| 
+
+
+
+ a| 
+SOSS
+ a| 
+État du système d'exploitation de stockage
+ a| 
+Avertissement
+
+
+
+ a| 
+SST
+ a| 
+État du stockage
+ a| 
+Avertissement
+
+
+
+ a| 
+VST
+ a| 
+État
+ a| 
+Avertissement
+
+
+
+ a| 
+TMEM
+ a| 
+Mémoire installée
+ a| 
+Mineur
+
+
+
+ a| 
+UMEM
+ a| 
+Mémoire disponible
+ a| 
+Mineur
+
+
+
+ a| 
+VMST
+ a| 
+État
+ a| 
+Mineur
+
+
+
+ a| 
+VPRI
+ a| 
+Priorité de vérification
+ a| 
+Avertissement
+
+
+
+ a| 
+VSTU
+ a| 
+État de vérification de l'objet
+ a| 
+Avertissement
+
+|===

@@ -1,0 +1,46 @@
+---
+permalink: sg100-1000/sg100-and-sg1000-applications.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, applications, how to use, services 
+summary: 'Vous pouvez configurer les appliances de services StorageGRID de différentes façons pour fournir des services de passerelle ainsi que la redondance de certains services d"administration de grille.' 
+---
+= Applications SG100 et SG1000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez configurer les appliances de services StorageGRID de différentes façons pour fournir des services de passerelle ainsi que la redondance de certains services d'administration de grille.
+
+Les appliances peuvent être déployées de plusieurs manières :
+
+* Ajouter à une nouvelle grille ou à une grille existante en tant que nœud de passerelle
+* Ajoutez à une nouvelle grille en tant que nœud d'administration principal ou non primaire, ou à une grille existante en tant que nœud d'administration non primaire
+* Fonctionnement en tant que nœud passerelle et nœud d'administration (principal ou non primaire) en même temps
+
+
+L'appliance facilite l'utilisation de groupes haute disponibilité (HA) et d'un équilibrage intelligent de la charge pour les connexions de chemin d'accès aux données S3 ou Swift.
+
+Les exemples suivants décrivent comment optimiser les capacités de l'appliance :
+
+* Utilisez deux appareils SG100 ou SG1000 pour fournir des services de passerelle en les configurant en tant que nœuds de passerelle.
++
+
+IMPORTANT: Ne déployez pas les appareils de service SG100 et SG1000 sur le même site. Cela peut entraîner des performances imprévisibles.
+
+* Utilisez deux appareils SG100 ou SG1000 pour assurer la redondance de certains services d'administration de réseau. Pour ce faire, configurez chaque appliance en tant que nœuds d'administration.
+* Utilisez deux appareils SG100 ou deux SG1000 pour fournir des services d'équilibrage de charge et de mise en forme du trafic hautement disponibles accessibles via une ou plusieurs adresses IP virtuelles. Pour ce faire, les appliances sont configurés comme des combinaisons de nœuds d'administration ou de nœuds de passerelle et vous ajoutez les deux nœuds au même groupe haute disponibilité.
++
+
+IMPORTANT: Si vous utilisez les nœuds d'administration et les nœuds de passerelle dans le même groupe haute disponibilité, les ports CLB (Connection Load Balancer) et les ports Admin Node Only ne basculent pas. Pour obtenir des instructions de configuration des groupes haute disponibilité, reportez-vous aux instructions d'administration de StorageGRID.
+
++
+
+NOTE: Le service CLB est obsolète.
+
+
+
+Lorsqu'il est utilisé avec des appliances de stockage StorageGRID, les appliances de services SG100 et SG1000 permettent de déployer des grilles d'appliance uniquement, sans dépendance vis-à-vis des hyperviseurs externes ou du matériel de calcul.
+
+xref:../admin/index.adoc[Administrer StorageGRID]

@@ -1,0 +1,35 @@
+---
+permalink: audit/metadata-update-messages.html 
+sidebar: sidebar 
+keywords: storagegrid, audit, message, Metadata update, S3 metadata update, SUPD 
+summary: 'Des messages d"audit sont générés lorsqu"un client S3 met à jour les métadonnées d"un objet.' 
+---
+= Messages de mise à jour des métadonnées
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Des messages d'audit sont générés lorsqu'un client S3 met à jour les métadonnées d'un objet.
+
+
+
+== Messages d'audit de la mise à jour des métadonnées S3
+
+|===
+| Code | Nom | Description | Tracé | Voir 
+
+
+ a| 
+SUPD
+ a| 
+Métadonnées S3 mises à jour
+ a| 
+Générées lorsqu'un client S3 met à jour les métadonnées d'un objet ingéré.
+ a| 
+CBID, S3KY, HTRH
+ a| 
+xref:supd-s3-metadata-updated.adoc[SUPD : métadonnées S3 mises à jour]
+
+|===

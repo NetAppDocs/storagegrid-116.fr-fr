@@ -1,0 +1,231 @@
+---
+permalink: sg5600/hardware-diagrams.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, diagrams, hardware, components, locations, component, diagram, location, figures, figure, connector 
+summary: 'Les modèles SG5612 et SG5660 de l"appliance StorageGRID incluent un contrôleur E2700 et un contrôleur E5600SG. Il est conseillé de consulter les diagrammes pour connaître les différences entre les modèles et les contrôleurs.' 
+---
+= Diagrammes matériels
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les modèles SG5612 et SG5660 de l'appliance StorageGRID incluent un contrôleur E2700 et un contrôleur E5600SG. Il est conseillé de consulter les diagrammes pour connaître les différences entre les modèles et les contrôleurs.
+
+
+
+== Modèle SG5612 2U : vue arrière du contrôleur E2700 et du contrôleur E5600SG
+
+image::../media/sg5612_2u_rear_view.gif[Vue arrière du SG5612 avec deux contrôleurs]
+
+|===
+| Légende | Description 
+
+
+ a| 
+1
+ a| 
+Contrôleur E2700
+
+
+
+ a| 
+2
+ a| 
+Contrôleur E5600SG
+
+|===
+
+
+== Modèle SG5660 4U : vue arrière du contrôleur E2700 et du contrôleur E5600SG
+
+Le contrôleur E2700 est supérieur au contrôleur E5600SG.
+
+image::../media/sg5660_4u_rear_view.gif[Vue arrière de l'appliance SG5660 avec deux contrôleurs]
+
+|===
+| Légende | Description 
+
+
+ a| 
+1
+ a| 
+Contrôleur E2700
+
+
+
+ a| 
+2
+ a| 
+Contrôleur E5600SG
+
+|===
+
+
+== Vue arrière du contrôleur E2700
+
+image::../media/sga_controller_2700_diagram_callouts.gif[Diagramme E2700]
+
+|===
+| Légende | Description 
+
+
+ a| 
+1
+ a| 
+Port de gestion 1 (connexion au réseau sur lequel SANtricity Storage Manager est installé)
+
+
+
+ a| 
+2
+ a| 
+Port de gestion 2 (utilisé lors de l'installation pour se connecter à un ordinateur portable).
+
+
+
+ a| 
+3
+ a| 
+Port d'interconnexion SAS 1
+
+
+
+ a| 
+4
+ a| 
+Port d'interconnexion SAS 2
+
+
+
+ a| 
+5
+ a| 
+Port de connexion série
+
+
+
+ a| 
+6
+ a| 
+Affichage à sept segments
+
+|===
+
+NOTE: Les deux ports SAS intitulés Drive extension (vert) à l'arrière du contrôleur E2700 ne sont pas utilisés. L'appliance StorageGRID ne prend pas en charge les tiroirs disques d'extension.
+
+
+
+== Vue arrière du contrôleur E5600SG
+
+image::../media/sga_controller_5600_diagram_callouts.gif[Diagramme E5600]
+
+|===
+| Légende | Description 
+
+
+ a| 
+1
+ a| 
+Port de gestion 1Connectez-vous au réseau d'administration pour StorageGRID.
+
+
+
+ a| 
+2
+ a| 
+Options du port de gestion 2 :
+
+* Lien avec le port de gestion 1 pour une connexion redondante au réseau d'administration pour StorageGRID.
+* Laissez sans fil et disponible pour l'accès local temporaire (IP 169.254.0.1).
+* Pendant l'installation, utilisez pour la configuration IP si les adresses IP attribuées par DHCP ne sont pas disponibles.
+
+
+
+
+ a| 
+3
+ a| 
+Port d'interconnexion SAS 1
+
+
+
+ a| 
+4
+ a| 
+Port d'interconnexion SAS 2
+
+
+
+ a| 
+5
+ a| 
+LED de panne et active pour le port réseau 10 GbE 1
+
+
+
+ a| 
+6
+ a| 
+LED de panne et active pour le port réseau 10 GbE 2
+
+
+
+ a| 
+7
+ a| 
+LED de panne et active pour le port réseau 10 GbE 3
+
+
+
+ a| 
+8
+ a| 
+LED de panne et active pour le port réseau 10 GbE 4
+
+
+
+ a| 
+9
+ a| 
+LED d'avertissement requise
+
+
+
+ a| 
+10
+ a| 
+Affichage à sept segments
+
+
+
+ a| 
+11
+ a| 
+Port réseau 10 GbE 1
+
+
+
+ a| 
+12
+ a| 
+Port réseau 10 GbE 2
+
+
+
+ a| 
+13
+ a| 
+Port réseau 10 GbE 3
+
+
+
+ a| 
+14
+ a| 
+Port réseau 10 GbE 4
+
+|===
+
+NOTE: La carte d'interface hôte (HIC) du contrôleur StorageGRID E5600SG ne prend en charge que les connexions Ethernet 10 Gb. Elle ne peut pas être utilisée pour les connexions iSCSI.

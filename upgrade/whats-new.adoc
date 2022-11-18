@@ -1,0 +1,313 @@
+---
+permalink: upgrade/whats-new.html 
+sidebar: sidebar 
+keywords: what is new in StorageGRID 11.6 
+summary: Cette version de StorageGRID présente les fonctions suivantes. 
+---
+= Nouveautés de StorageGRID 11.6
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cette version de StorageGRID présente les fonctions suivantes.
+
+
+
+== Amélioration de la facilité d'utilisation
+
+L'interface utilisateur de Grid Manager a été considérablement remaniée pour améliorer l'expérience utilisateur.
+
+* Une nouvelle barre latérale remplace les menus déroulants de l'ancienne interface utilisateur.
+* Plusieurs menus ont été réorganisés pour regrouper les options associées. Par exemple, le menu *CONFIGURATION* inclut une nouvelle section *sécurité* pour les certificats, le serveur de gestion des clés, les paramètres proxy et les options réseaux client non fiables.
+* Un champ *Search* de la barre d'en-tête vous permet de naviguer rapidement vers les pages Grid Manager.
+* Le tableau récapitulatif de la page *Nodes* fournit des informations de haut niveau pour tous les sites et nœuds, comme les données d'objet utilisées et les métadonnées d'objet utilisées, et inclut un nouveau champ de recherche. Des icônes d'alerte s'affichent à côté de n'importe quel nœud présentant des alertes actives.
+* De nouveaux assistants vous guident tout au long de configurations plus complexes, comme les flux de production des groupes d'administration, des utilisateurs d'administration, des locataires, des terminaux d'équilibrage de charge et des groupes haute disponibilité.
+* Toutes les pages de l'interface utilisateur ont été reconçues avec des polices, des styles de boutons et des formats de table mis à jour.
++
+
+NOTE: Sauf en cas de modification fonctionnelle, les captures d'écran du site Doc StorageGRID 11.6 n'ont pas été mises à jour pour refléter le nouveau style de page du gestionnaire de grille.
+
+
+
+Voir les éléments suivants :
+
+* xref:../admin/index.adoc[Administrer StorageGRID]
+* xref:../monitor/index.adoc[Surveiller et résoudre les problèmes]
+
+
+
+
+== Plusieurs interfaces VLAN
+
+Vous pouvez maintenant créer des interfaces LAN virtuelles (VLAN) pour les nœuds d'administration et les nœuds de passerelle. Vous pouvez utiliser des interfaces VLAN dans des groupes haute disponibilité et des terminaux d’équilibrage de charge pour isoler et partitionner le trafic client afin de garantir sécurité, flexibilité et performances.
+
+* Le nouvel assistant *Create a VLAN interface* vous guide tout au long du processus de saisie d'un ID VLAN et de sélection d'une interface parent sur un ou plusieurs nœuds. Une interface parent peut être le réseau Grid, le réseau client ou une interface de ligne réseau supplémentaire pour la machine virtuelle ou l'hôte sans système d'exploitation. Voir xref:../admin/configure-vlan-interfaces.html[Configurez les interfaces VLAN].
+* Vous pouvez désormais ajouter une jonction ou des interfaces d'accès supplémentaires à un nœud. Si vous ajoutez une interface de jonction, vous devez configurer une interface VLAN. Si vous ajoutez une interface d'accès, vous pouvez l'ajouter directement à un groupe haute disponibilité ; vous n'avez pas besoin de configurer une interface VLAN. Voir les éléments suivants :
++
+** *Linux (avant d'installer le nœud)* :  enhancements
+** *Linux (après l'installation du nœud)* : xref:../maintain/linux-adding-trunk-or-access-interfaces-to-node.adoc[Linux : ajoutez une jonction ou des interfaces d'accès à un nœud]
+** *VMware (après l'installation du noeud)* : xref:../vmware/collecting-information-about-your-deployment-environment.adoc[Collecte d'informations sur votre environnement de déploiement]
+
+
+
+
+
+
+== Peut utiliser Azure AD pour la fédération des identités
+
+Vous pouvez maintenant sélectionner Azure Active Directory (Azure AD) comme référentiel d'identité lors de la configuration de la fédération des identités pour Grid Manager ou le Gestionnaire de locataires. Voir xref:../admin/using-identity-federation.adoc[Utiliser la fédération des identités].
+
+
+
+== Peut utiliser Azure AD et PingFederate pour SSO
+
+Vous pouvez maintenant sélectionner Azure AD ou PingFederate comme type SSO lors de la configuration de Single Sign-on (SSO) pour votre grille. Vous pouvez ensuite utiliser le mode sandbox pour configurer et tester les applications d'entreprise Azure AD ou les connexions du fournisseur de services PingFederate à chaque noeud d'administration StorageGRID. Voir xref:../admin/configuring-sso.adoc[Configurer l'authentification unique].
+
+
+
+== Gestion centralisée des certificats
+
+* La nouvelle page certificats (*CONFIGURATION* *sécurité* *certificats*) regroupe les informations sur tous les certificats de sécurité StorageGRID à un seul emplacement. Vous pouvez gérer les certificats StorageGRID globaux, GRID CA et client à partir de la nouvelle page, ou afficher des informations sur d'autres certificats, tels que ceux utilisés pour les terminaux de l'équilibreur de charge, les locataires et la fédération d'identités. Voir xref:../admin/using-storagegrid-security-certificates.adoc[À propos des certificats de sécurité].
+* Dans le cadre de cette modification, les certificats globaux suivants ont été renommés :
++
+** Le *certificat de serveur d'interface de gestion* est maintenant le *certificat d'interface de gestion*.
+** Le certificat de serveur * de points de terminaison du service API de stockage d'objets* (également appelé certificat de serveur API de stockage) est désormais le certificat API *S3 et Swift*.
+** Les *certificats CA internes*, *certificat CA du système*, *certificat CA* et *certificat CA par défaut* sont maintenant systématiquement appelés le *certificat CA de grille*.
+
+
+
+
+
+
+== Autres améliorations de Grid Manager
+
+* *Mises à jour des groupes haute disponibilité (HA)*. Un assistant vous guide maintenant tout au long du processus de création d'un groupe haute disponibilité. Voir xref:../admin/configure-high-availability-group.html[Configurez les groupes haute disponibilité].
++
+** En plus de sélectionner des interfaces sur le réseau Grid (eth0) ou le réseau client (eth2), vous pouvez maintenant sélectionner des interfaces VLAN ou toute interface d'accès que vous avez ajoutée au nœud.
+** Vous pouvez maintenant spécifier un ordre de priorité pour les interfaces. Vous pouvez choisir l'interface principale et classer chaque interface de sauvegarde dans l'ordre indiqué.
+** Si des clients S3, Swift, administratifs ou locataires accèdent aux adresses VIP du groupe haute disponibilité à partir d'un autre sous-réseau, vous pouvez désormais fournir l'adresse IP de la passerelle.
+
+
+* *Mises à jour des noeuds finaux de l'équilibreur de charge*. Un nouvel assistant vous guide tout au long du processus de création d'un noeud final d'équilibreur de charge. Voir xref:../admin/configuring-load-balancer-endpoints.adoc[Configurer les terminaux de l'équilibreur de charge].
++
+** Vous sélectionnez maintenant le type de client (S3 ou Swift) lorsque vous créez le noeud final pour la première fois, au lieu d'ajouter ce détail après la création du noeud final.
+** Vous pouvez maintenant utiliser le certificat global *StorageGRID S3 et Swift* pour un noeud final d'équilibreur de charge au lieu de charger ou de générer un certificat distinct.
++
+
+NOTE: Ce certificat global était auparavant utilisé pour les connexions au service CLB obsolète et aux nœuds de stockage. Si vous souhaitez utiliser le certificat global pour un terminal d'équilibreur de charge, vous devez charger un certificat personnalisé sur la page de certificat de l'API S3 et Swift.
+
+
+
+
+
+
+
+== Nouvelles fonctionnalités de tenant Manager
+
+* *Nouvelle console expérimentale S3*. Disponible sous la forme d'un lien depuis la page « compartiments » du Gestionnaire des locataires, la nouvelle console S3 expérimentale permet aux utilisateurs locataires S3 d'afficher et de gérer les objets dans leurs compartiments. Voir xref:../tenant/use-s3-console.adoc[Utilisation de la console Experimental S3].
+
+
+
+IMPORTANT: La console expérimentale S3 n'a pas été entièrement testée et n'est pas destinée à la gestion en bloc d'objets ou à une utilisation dans un environnement de production. Les locataires ne doivent utiliser la console S3 que lorsqu'ils effectuent des fonctions sur un petit nombre d'objets ou lorsqu'ils utilisent des grilles de démonstration de faisabilité ou de non-production.
+
+* *Peut supprimer plusieurs compartiments S3*. Les utilisateurs locataires peuvent désormais supprimer plusieurs compartiments S3 à la fois. Chaque compartiment à supprimer doit être vide. Voir xref:../tenant/deleting-s3-bucket.adoc[Supprimez le compartiment S3].
+* *Mises à jour des droits d'accès aux comptes de tenant*. Les utilisateurs Admin qui appartiennent à un groupe avec l'autorisation de comptes de tenant peuvent maintenant afficher les stratégies de classification de trafic existantes. Auparavant, les utilisateurs devaient disposer d'une autorisation d'accès racine pour afficher ces mesures.
+
+
+
+
+== Nouveau processus de mise à niveau et de correctif
+
+* La page *mise à niveau* de StorageGRID a été redessinée (*MAINTENANCE* *système* *mise à jour de logiciel* *mise à niveau de StorageGRID*).
+* Une fois la mise à niveau vers StorageGRID 11.6 terminée, vous pouvez utiliser le gestionnaire de grille pour effectuer une mise à niveau vers une version ultérieure et appliquer simultanément un correctif pour cette version. La page de mise à niveau StorageGRID affiche le chemin de mise à niveau recommandé et se lie directement aux pages de téléchargement correctes.
+* Une nouvelle case à cocher *Rechercher les mises à jour logicielles* sur la page AutoSupport (*SUPPORT* *Outils* *AutoSupport*) vous permet de contrôler cette fonctionnalité. Vous pouvez désactiver la vérification des mises à jour logicielles disponibles si votre système ne dispose pas d'un accès WAN. Voir xref:../admin/configure-autosupport-grid-manager.adoc#disable-checks-for-software-updates[Configurer AutoSupport gt ; Désactiver recherche les mises à jour logicielles].
++
+
+NOTE: Pour la mise à niveau vers StorageGRID 11.6, vous pouvez éventuellement utiliser un script pour mettre à niveau et appliquer un correctif en même temps. Voir https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/StorageGRID/How_to_run_combined_major_upgrade_and_hotfix_script_for_StorageGRID["Base de connaissances NetApp : comment exécuter conjointement des mises à niveau majeures et un script de hot fix pour StorageGRID"^].
+
+* Vous pouvez interrompre la mise à niveau d'un système d'exploitation SANtricity et ignorer la mise à niveau de certains nœuds si vous souhaitez terminer la mise à niveau plus tard. Reportez-vous aux instructions relatives à votre dispositif de stockage :
++
+** xref:../sg5600/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5600.adoc[Mise à niveau de SANtricity OS sur des contrôleurs de stockage à l'aide de Grid Manager (SG5600)]
+** xref:../sg5700/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5700.adoc[Mise à niveau de SANtricity OS sur des contrôleurs de stockage à l'aide de Grid Manager (SG5700)]
+** xref:../sg6000/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6000.adoc[Mise à niveau du système d'exploitation SANtricity sur des contrôleurs de stockage à l'aide de Grid Manager (SG6000)]
+
+
+
+
+
+
+== Prise en charge du serveur syslog externe
+
+* Vous pouvez maintenant configurer un serveur syslog externe si vous souhaitez enregistrer et gérer des messages d'audit et un sous-ensemble de journaux StorageGRID à distance (*CONFIGURATION* *surveillance* *serveur d'audit et syslog*). Une fois qu'un serveur syslog externe est configuré, vous pouvez enregistrer des messages d'audit et certains fichiers journaux localement, à distance ou les deux. En configurant les destinations de vos informations d'audit, vous pouvez réduire le trafic réseau sur vos nœuds d'administration. Voir xref:../monitor/configure-audit-messages.adoc[Configurez les messages d'audit et les destinations des journaux].
+* En ce qui concerne cette fonctionnalité, les nouvelles cases à cocher de la page journaux (*SUPPORT* *Outils* *Logs*) vous permettent de spécifier les types de journaux que vous souhaitez collecter, tels que certains journaux d'application, les journaux d'audit, les journaux utilisés pour le débogage réseau et les journaux de base de données Prometheus. Voir xref:../monitor/collecting-log-files-and-system-data.adoc[Collecte de fichiers journaux et de données système].
+
+
+
+
+== S3 Select
+
+Vous pouvez désormais autoriser les locataires S3 à émettre des demandes SelectObjectContent à des objets individuels. S3 Select constitue un moyen efficace d'effectuer des recherches dans de vastes volumes de données sans avoir à déployer une base de données et les ressources associées pour activer les recherches. Il réduit également le coût et la latence liés à la récupération des données. Voir xref:../admin/manage-s3-select-for-tenant-accounts.adoc[Gérez S3 Select pour les comptes de locataires] et xref:../s3/use-s3-select.adoc[Utiliser S3 Select].
+
+Des graphiques Grafana pour les opérations S3 Select ont également été ajoutés. Voir xref:../monitor/reviewing-support-metrics.adoc[Examinez les metrics de support].
+
+
+
+== Période de conservation par défaut des compartiments avec le verrouillage d'objet S3
+
+Lorsque vous utilisez le verrouillage d'objet S3, vous pouvez maintenant spécifier une période de conservation par défaut pour le compartiment. La période de conservation par défaut s'applique à tout objet ajouté au compartiment qui ne dispose pas de ses propres paramètres de conservation. Voir xref:../s3/using-s3-object-lock.adoc[Utilisez le verrouillage d'objet S3].
+
+
+
+== Prise en charge de Google Cloud Platform
+
+Vous pouvez désormais utiliser Google Cloud Platform (GCP) comme terminal pour les pools de stockage cloud et le service de plateforme CloudMirror. Voir xref:../tenant/specifying-urn-for-platform-services-endpoint.adoc[Spécifiez l'URN d'un terminal de services de plateforme] et xref:../ilm/creating-cloud-storage-pool.adoc[Création d'un pool de stockage cloud].
+
+
+
+== Prise en charge du C2S AWS
+
+Vous pouvez désormais utiliser les terminaux AWS commercial Cloud Services (C2S) pour la réplication CloudMirror. Voir xref:../tenant/creating-platform-services-endpoint.adoc[Créer un terminal de services de plate-forme].
+
+
+
+== Modifications du protocole S3
+
+* *OBTENIR la prise en charge de l'objet ET DE LA TÊTE pour les objets multipart*. Auparavant, StorageGRID ne prenaient pas en charge `partNumber` Paramètre de demande dans DEMANDES OBJET GET ou objet TÊTE. Vous pouvez à présent émettre des demandes OBTENIR et D'EN-TÊTE pour récupérer une partie spécifique d'un objet partitionné. L'objet GET et HEAD prend également en charge le `x-amz-mp-parts-count` elément de réponse pour indiquer le nombre de pièces qu'un objet possède.
+* *Modifications au contrôle de cohérence "disponible"*. Le contrôle de cohérence « disponible » se comporte maintenant de la même manière que le niveau de cohérence « lecture après nouvelle écriture », mais il fournit une cohérence éventuelle pour LES opérations HEAD et GET. Le contrôle de cohérence « disponible » offre une disponibilité plus élevée pour LES opérations HEAD et GET que pour les opérations « lecture après nouvelle écriture » si les nœuds de stockage ne sont pas disponibles. Elle diffère des garanties de cohérence Amazon S3 pour LA TÊTE et LES opérations GET.
++
+xref:../s3/index.adoc[Utilisation de S3]
+
+
+
+
+
+== Amélioration des performances
+
+* *Les nœuds de stockage peuvent prendre en charge 2 milliards d'objets*. La structure de répertoire sous-jacente des nœuds de stockage a été optimisée pour améliorer l'évolutivité et la performance. Les nœuds de stockage utilisent désormais des sous-répertoires supplémentaires pour stocker jusqu'à deux milliards d'objets répliqués et optimiser la performance. Les sous-répertoires de nœud sont modifiés lorsque vous effectuez la mise à niveau vers StorageGRID 11.6, mais les objets existants ne sont pas redistribués dans les nouveaux répertoires.
+* *Les performances de suppression de type ILM ont augmenté pour les appareils hautes performances*. Les ressources et le débit utilisés pour effectuer des opérations de suppression ILM s'adaptent désormais à la taille et aux fonctionnalités de chaque nœud d'appliance StorageGRID. Pour les appliances SG5600, le débit est le même que pour StorageGRID 11.5. Pour les appliances SG5700, de petites améliorations ont été apportées aux performances de suppression du ILM. Pour les appliances SG6000, qui disposent de plus de RAM et de plus de processeurs, les suppressions ILM sont désormais traitées beaucoup plus rapidement. Les améliorations sont particulièrement notables sur les dispositifs SGF6024 100 % Flash.
+* *Filigranes de volume de stockage optimisés*. Dans les versions précédentes, les paramètres des trois filigranes du volume de stockage appliqués à chaque volume de stockage de chaque nœud de stockage. StorageGRID peut désormais optimiser ces filigranes pour chaque volume de stockage, en fonction de la taille du nœud de stockage et de la capacité relative du volume. Voir xref:../admin/what-storage-volume-watermarks-are.adoc[Que sont les filigranes du volume de stockage].
++
+Les filigranes optimisés sont automatiquement appliqués à tous les nouveaux systèmes StorageGRID 11.6 les plus mis à niveau. Les filigranes optimisés seront plus grands que les paramètres par défaut précédents.
+
++
+Si vous utilisez des filigranes personnalisés, l'alerte *dépassement de filigrane en lecture seule bas* peut être déclenchée après la mise à niveau. Cette alerte vous indique si vos paramètres de filigrane personnalisés sont trop petits. Voir xref:../monitor/troubleshoot-low-watermark-alert.adoc[Dépanner les alertes de remplacement de filigrane en lecture seule faible].
+
++
+Deux metrics ont été ajoutés à Prometheus :
+
++
+** `storagegrid_storage_volume_minimum_optimized_soft_readonly_watermark`
+** `storagegrid_storage_volume_maximum_optimized_soft_readonly_watermark`
+
+
+* *L'espace de métadonnées maximal autorisé a augmenté*. L'espace maximal des métadonnées autorisé pour les nœuds de stockage a été augmenté à 3.96 To (contre 2.64 To) pour les nœuds à capacité supérieure. Il s'agit de nœuds avec un espace réservé réel pour les métadonnées de plus de 4 To. Cette nouvelle valeur permet de stocker davantage de métadonnées d'objet sur certains nœuds de stockage et d'augmenter jusqu'à 50 % la capacité des métadonnées StorageGRID.
++
+
+NOTE: Si vous ne l'avez pas encore fait, et si vos nœuds de stockage disposent de suffisamment de RAM et d'espace sur le volume 0, vous pouvez xref:../upgrade/increasing-metadata-reserved-space-setting.adoc[Augmentez manuellement l'espace réservé aux métadonnées en configurant jusqu'à 8 To après l'installation ou la mise à niveau].
+
++
+** xref:../admin/managing-object-metadata-storage.adoc#allowed-metadata-space[Gérez le stockage de métadonnées d'objet ; espace autorisé pour les métadonnées]
+** xref:../upgrade/increasing-metadata-reserved-space-setting.adoc[Augmenter le paramètre espace réservé des métadonnées]
+
+
+
+
+
+
+== Améliorations apportées aux procédures de maintenance et aux outils de support
+
+* *Peut changer les mots de passe de la console de nœud*. Vous pouvez maintenant utiliser le gestionnaire de grille pour modifier les mots de passe de la console de nœud (*CONFIGURATION* *contrôle d'accès* *mots de passe de grille*). Ces mots de passe sont utilisés pour se connecter à un nœud en tant que “admin” à l'aide de SSH ou à l'utilisateur root sur une connexion VM/console physique. Voir xref:../admin/change-node-console-password.adoc[Changer les mots de passe de la console du nœud].
+* *Assistant de vérification de l'existence d'un nouvel objet*. Vous pouvez maintenant vérifier l'intégrité de l'objet à l'aide d'un assistant de vérification facile à utiliser de l'existence de l'objet (*MAINTENANCE* *tâches* *contrôle d'existence de l'objet*), qui remplace la procédure de vérification de premier plan. La nouvelle procédure prend un tiers du temps ou moins et peut vérifier plusieurs nœuds simultanément. Voir xref:../monitor/verifying-object-integrity.html[Vérifiez l'intégrité de l'objet].
+* * Tableau "délai estimé à l'achèvement" pour le rééquilibrage EC et les travaux de réparation EC*. Vous pouvez désormais afficher le temps d'achèvement estimé et le pourcentage d'achèvement d'une tâche de rééquilibrage EC ou de réparation EC en cours.
+* *Pourcentage estimé complet pour les réparations de données répliquées*. Vous pouvez maintenant ajouter le `show-replicated-repair-status` à la `repair-data` commande pour afficher un pourcentage d'achèvement estimé pour une réparation répliquée.
++
+
+IMPORTANT: Le `show-replicated-repair-status` Une option de présentation technique est disponible dans StorageGRID 11.6. Cette fonction est en cours de développement et la valeur renvoyée peut être incorrecte ou retardée. Pour déterminer si une réparation est terminée, continuer à utiliser *attente - tous*, *réparations tentées (XRPA*) et *période de balayage — estimé (XSCM)* comme décrit dans les procédures de récupération.
+
+* Les résultats de la page Diagnostics (*SUPPORT* *Outils* *Diagnostics*) sont désormais triés par gravité puis par ordre alphabétique.
+* Prometheus et Grafana ont été mis à jour vers les versions les plus récentes avec des interfaces et des graphiques modifiés. Dans le cadre de cette modification, les étiquettes de certains indicateurs ont été modifiées.
++
+** Si vous avez des requêtes personnalisées qui ont utilisé les étiquettes à partir de `node_network_up`, vous devez maintenant utiliser les étiquettes de `node_network_info` à la place.
+** Si vous avez également utilisé le nom de l'étiquette `interface` de n'importe lequel des `node_network` indicateurs, vous devez maintenant utiliser le `device` à la place, étiqueter.
+
+
+* Auparavant, les metrics de Prometheus étaient stockés sur les nœuds d'administration pendant 31 jours. Désormais, des metrics sont stockés jusqu'à ce que l'espace réservé aux données Prometheus soit plein, ce qui peut considérablement augmenter la durée de disponibilité des metrics historiques.
++
+Lorsque le `/var/local/mysql_ibdata/` le volume atteint la capacité maximale, les mesures les plus anciennes sont supprimées en premier.
+
+
+
+
+
+== Améliorations apportées à l'installation
+
+* Vous avez maintenant la possibilité d'utiliser Podman comme conteneur pendant l'installation de Red Hat Enterprise Linux. Auparavant, StorageGRID prenait uniquement en charge un conteneur Docker.
+* Les schémas API pour StorageGRID sont désormais inclus dans les archives d'installation des plateformes RedHat Enterprise Linux/CentOS, Ubuntu/Debian et VMware. Après avoir extrait l'archive, vous pouvez trouver les schémas dans le `/extras/api-schemas` dossier.
+* Le `BLOCK_DEVICE_RANGEDB` la clé du fichier de configuration de nœud pour les déploiements bare-metal doit maintenant contenir trois chiffres au lieu de deux. C'est plutôt `BLOCK_DEVICE_RANGEDB_nn`, vous devez spécifier `BLOCK_DEVICE_RANGEDB_nnn`.
++
+Pour assurer la compatibilité avec les déploiements existants, des clés à deux chiffres sont toujours prises en charge pour les nœuds mis à niveau.
+
+* Vous pouvez éventuellement ajouter une ou plusieurs instances de la nouvelle `INTERFACES_TARGET_nnnn` et au fichier de configuration des nœuds pour les déploiements bare-metal. Chaque clé fournit le nom et la description d'une interface physique sur l'hôte bare-Metal, qui s'affichera sur la page des interfaces VLAN et sur la page des groupes haute disponibilité.
++
+** xref:../rhel/creating-node-configuration-files.adoc[Créez des fichiers de configuration de nœuds pour les déploiements Red Hat Enterprise Linux ou CentOS]
+** xref:../ubuntu/creating-node-configuration-files.adoc[Créez des fichiers de configuration de nœuds pour les déploiements Ubuntu ou Debian]
+
+
+
+
+
+
+== Nouvelles alertes
+
+Les nouvelles alertes suivantes ont été ajoutées pour StorageGRID 11.6 :
+
+* Des journaux d'audit sont ajoutés à la file d'attente en mémoire
+* La corruption des tables Cassandra
+* Défaillance du rééquilibrage EC
+* Échec de réparation EC
+* Réparation EC bloquée
+* Expiration du certificat de serveur global pour les API S3 et Swift
+* Expiration du certificat d'autorité de certification syslog externe
+* Expiration du certificat du client syslog externe
+* Expiration du certificat du serveur syslog externe
+* Erreur de transfert du serveur syslog externe
+* Échec de la synchronisation de la fédération des identités pour un locataire
+* Activité de l'équilibreur de charge CLB hérité détectée
+* Des journaux sont ajoutés à la file d'attente sur disque
+* Remplacement du filigrane en lecture seule faible
+* Petit répertoire tmp espace libre
+* Échec de la vérification de l'existence de l'objet
+* La vérification de l'existence d'objet est bloquée
+* PLACEZ la taille de l'objet trop grande dans le S3
+
+
+Voir la xref:../monitor/alerts-reference.adoc[Référence des alertes].
+
+
+
+== Modifications apportées aux messages d'audit
+
+* Un nouveau champ *BUID* a été ajouté au message d'audit ORLM: Object Rules met. Le champ *BUID* affiche l'ID de compartiment utilisé pour les opérations internes. Le nouveau champ apparaît uniquement si l'état du message est PRGD.
+* Un nouveau champ *SGRP* a été ajouté aux messages d'audit suivants. Le champ *SGRP* est présent uniquement si un objet a été supprimé sur un site différent de celui où il a été ingéré.
++
+** IDEL : suppression initiée ILM
+** OVWR : remplacement d'objet
+** SDEL : SUPPRESSION S3
+** WDEL : SUPPRESSION rapide
+
+
+
+
+Voir xref:../audit/index.adoc[Examiner les journaux d'audit].
+
+
+
+== Modifications de la documentation StorageGRID
+
+L'apparence du site de documentation StorageGRID 11.6 a été modifiée et utilise désormais GitHub comme plateforme sous-jacente.
+
+NetApp apprécie les commentaires relatifs au contenu et encourage les utilisateurs à profiter de la nouvelle fonction « Request doc Changes » disponible sur chaque page de la documentation du produit. La plate-forme de documentation offre également une fonction intégrée de contribution de contenu pour les utilisateurs de GitHub.
+
+Consultez cette documentation et apportez-la votre contribution. Vous pouvez modifier, demander une modification ou simplement envoyer un commentaire.

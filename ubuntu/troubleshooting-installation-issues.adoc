@@ -1,0 +1,40 @@
+---
+permalink: ubuntu/troubleshooting-installation-issues.html 
+sidebar: sidebar 
+keywords: how to troubleshoot ubuntu or debian installation 
+summary: 'En cas de problème lors de l"installation de votre système StorageGRID, vous pouvez accéder aux fichiers journaux d"installation. Le support technique peut également avoir besoin d"utiliser les fichiers journaux d"installation pour résoudre les problèmes.' 
+---
+= Résoudre les problèmes d'installation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En cas de problème lors de l'installation de votre système StorageGRID, vous pouvez accéder aux fichiers journaux d'installation. Le support technique peut également avoir besoin d'utiliser les fichiers journaux d'installation pour résoudre les problèmes.
+
+Les fichiers journaux d'installation suivants sont disponibles à partir du conteneur qui exécute chaque nœud :
+
+* `/var/local/log/install.log` (disponible sur tous les nœuds de la grille)
+* `/var/local/log/gdu-server.log` (Trouvé sur le nœud d'administration principal)
+
+
+Les fichiers journaux d'installation suivants sont disponibles auprès de l'hôte :
+
+* `/var/log/storagegrid/daemon.log`
+* `/var/log/storagegrid/nodes/<node-name>.log`
+
+
+Pour savoir comment accéder aux fichiers journaux, reportez-vous aux instructions de surveillance et de dépannage de StorageGRID. Pour obtenir de l'aide sur le dépannage des problèmes d'installation de l'appareil, consultez les instructions d'installation et de maintenance de vos appareils. Si vous avez besoin d'aide supplémentaire, contactez le support technique.
+
+xref:../monitor/index.adoc[Surveiller et résoudre les problèmes]
+
+xref:../sg100-1000/index.adoc[Appareils de services SG100 et SG1000]
+
+xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
+
+xref:../sg5700/index.adoc[Appliances de stockage SG5700]
+
+xref:../sg5600/index.adoc[Appliances de stockage SG5600]
+
+https://mysupport.netapp.com/site/global/dashboard["Support NetApp"^]

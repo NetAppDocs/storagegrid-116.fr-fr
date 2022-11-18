@@ -1,0 +1,53 @@
+---
+permalink: primer/monitoring-and-managing-alerts.html 
+sidebar: sidebar 
+keywords: how to manage alerts 
+summary: 'Le système d"alerte offre une interface facile à utiliser pour détecter, évaluer et résoudre les problèmes susceptibles de se produire lors du fonctionnement de StorageGRID.' 
+---
+= Contrôle et gestion des alertes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le système d'alerte offre une interface facile à utiliser pour détecter, évaluer et résoudre les problèmes susceptibles de se produire lors du fonctionnement de StorageGRID.
+
+Le système d'alerte est conçu pour être votre outil principal de surveillance des problèmes susceptibles de survenir dans votre système StorageGRID.
+
+* Le système d'alerte est axé sur des problèmes exploitables dans le système. Des alertes sont déclenchées pour les événements qui nécessitent votre attention immédiate, et non pour les événements qui peuvent être ignorés en toute sécurité.
+* Les pages alertes actuelles et alertes résolues fournissent une interface conviviale pour afficher les problèmes actuels et historiques. Vous pouvez trier la liste par alerte individuelle et par groupe d'alertes. Par exemple, il peut être nécessaire de trier toutes les alertes par nœud/site pour afficher les alertes qui affectent un nœud spécifique. Vous pouvez également trier les alertes d'un groupe par heure déclenchée pour trouver l'instance la plus récente d'une alerte spécifique.
+* Plusieurs alertes du même type sont regroupées en un seul e-mail afin de réduire le nombre de notifications. De plus, plusieurs alertes du même type sont affichées sous forme de groupe dans les pages alertes et alertes résolues en cours. Vous pouvez développer et réduire les groupes d'alertes pour afficher ou masquer les alertes individuelles. Par exemple, si plusieurs nœuds indiquent l'alerte *Impossible de communiquer avec le nœud*, un seul e-mail est envoyé et l'alerte est affichée en tant que groupe sur la page alertes en cours.
++
+image::../media/alerts_current_page.png[Page alertes]
+
+* Les alertes utilisent des noms et des descriptions intuitifs pour vous aider à comprendre plus rapidement le problème. Les notifications d'alerte incluent des informations détaillées sur le nœud et le site concernés, la gravité de l'alerte, le moment où la règle d'alerte a été déclenchée et la valeur actuelle des mesures relatives à l'alerte.
+* Les notifications par e-mail d'alerte et les listes d'alertes figurant sur les pages alertes en cours et alertes résolues fournissent des actions recommandées pour résoudre une alerte. Ces actions recommandées incluent souvent des liens directs vers la documentation StorageGRID afin de trouver plus facilement des procédures de dépannage plus détaillées.
++
+image::../media/alerts_page_details_modal.png[Détails de la page d'alertes modal]
+
+
+
+
+NOTE: L'ancien système d'alarme est obsolète. L'interface utilisateur et les API du système d'alarme hérité seront supprimées dans une version ultérieure. Le système d'alerte offre des avantages significatifs et est plus simple à utiliser.
+
+
+
+== Gérer les alertes
+
+Tous les utilisateurs de StorageGRID peuvent afficher les alertes. Si vous disposez de l'autorisation accès racine ou gestion des alertes, vous pouvez également gérer les alertes, comme suit :
+
+* Si vous devez supprimer temporairement les notifications d'une alerte à un ou plusieurs niveaux de gravité, vous pouvez facilement désactiver une règle d'alerte spécifique pendant une durée spécifiée. Vous pouvez désactiver une règle d'alerte pour toute la grille, un seul site ou un seul nœud.
+* Vous pouvez modifier les règles d'alerte par défaut si nécessaire. Vous pouvez désactiver complètement une règle d'alerte ou modifier ses conditions et sa durée de déclenchement.
+* Vous pouvez créer des règles d'alerte personnalisées afin de cibler les conditions spécifiques qui sont pertinentes pour votre situation et de proposer vos propres actions recommandées. Pour définir les conditions d'une alerte personnalisée, vous créez des expressions à l'aide des metrics Prometheus disponibles dans la section Metrics de l'API de gestion du grid.
++
+Par exemple, cette expression déclenche une alerte si la quantité de RAM installée pour un nœud est inférieure à 24,000,000,000 octets (24 Go).
+
++
+[listing]
+----
+node_memory_MemTotal < 24000000000
+----
+
+
+xref:../monitor/index.adoc[Surveiller et résoudre les problèmes]

@@ -1,0 +1,112 @@
+---
+permalink: s3/using-s3-object-lock.html 
+sidebar: sidebar 
+keywords: using S3 object lock, object lock, S3 object 
+summary: 'Si le paramètre de verrouillage d"objet S3 global est activé pour votre système StorageGRID, vous pouvez créer des compartiments avec le verrouillage d"objet S3 activé, puis spécifier les paramètres de conservation à la date et de conservation légale pour chaque version d"objet que vous ajoutez à ce compartiment.' 
+---
+= Utilisez le verrouillage d'objet S3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si le paramètre global de verrouillage d'objet S3 est activé pour votre système StorageGRID, vous pouvez créer des compartiments avec le verrouillage d'objet S3 activé, puis spécifier des périodes de conservation par défaut pour chaque compartiment ou des paramètres de conservation à une date précise et de conservation légale pour chaque version d'objet que vous ajoutez à ce compartiment.
+
+S3 Object Lock vous permet de spécifier des paramètres de niveau objet pour empêcher la suppression ou l'écrasement d'objets pendant une durée déterminée ou indéfiniment.
+
+La fonctionnalité de verrouillage d'objet StorageGRID S3 fournit un mode de conservation unique équivalent au mode de conformité Amazon S3. Par défaut, une version d'objet protégé ne peut être écrasée ou supprimée par aucun utilisateur. La fonction de verrouillage d'objet StorageGRID S3 ne prend pas en charge un mode de gouvernance et n'autorise pas les utilisateurs disposant d'autorisations spéciales à contourner les paramètres de rétention ou à supprimer des objets protégés.
+
+
+
+== Activez le verrouillage objet S3 pour le compartiment
+
+Si le paramètre global de verrouillage d'objet S3 est activé pour votre système StorageGRID, vous pouvez activer le verrouillage d'objet S3 lorsque vous créez chaque compartiment. Vous pouvez utiliser l'une des méthodes suivantes :
+
+* Créez le compartiment à l'aide du Gestionnaire des locataires.
++
+xref:../tenant/index.adoc[Utilisez le compte du locataire]
+
+* Créer le compartiment à l'aide d'une demande PUT bucket avec le `x-amz-bucket-object-lock-enabled` en-tête de demande.
++
+xref:operations-on-buckets.adoc[Opérations sur les compartiments]
+
+
+
+Une fois le compartiment créé, vous ne pouvez pas ajouter ou désactiver le verrouillage d'objet S3. Le verrouillage objet S3 requiert la gestion des versions de compartiment, qui est activée automatiquement lors de la création du compartiment.
+
+Un compartiment avec l'option de verrouillage d'objet S3 activée peut contenir une combinaison d'objets avec et sans les paramètres de verrouillage d'objet S3. StorageGRID prend en charge les périodes de conservation par défaut pour les objets dans les compartiments de verrouillage d'objet S3 et prend en charge l'opération de compartiment DE configuration DE verrouillage d'objet. Le `s3:object-lock-remaining-retention-days` la touche condition de police définit les périodes de rétention minimum et maximum autorisées pour vos objets.
+
+
+
+== Détermination de l'activation du verrouillage d'objet S3 pour le compartiment
+
+Pour déterminer si le verrouillage d'objet S3 est activé, utilisez le xref:../s3/use-s3-object-lock-default-bucket-retention.adoc#get-object-lock-configuration[OBTENIR la configuration de verrouillage d'objet] demande.
+
+
+
+== Créez un objet avec les paramètres de verrouillage d'objet S3
+
+Pour spécifier les paramètres de verrouillage d'objet S3 lors de l'ajout d'une version d'objet dans un compartiment dont le verrouillage d'objet S3 est activé, exécutez un objet PUT, PLACER l'objet - copie ou lancez une demande de téléchargement de pièces multiples. Utiliser les en-têtes de demande suivants.
+
+
+NOTE: Vous devez activer le verrouillage d'objet S3 lorsque vous créez un compartiment. Vous ne pouvez pas ajouter ou désactiver le verrouillage d'objet S3 après la création d'un compartiment.
+
+* `x-amz-object-lock-mode`, Qui doit ÊTRE CONFORME (sensible à la casse).
++
+
+NOTE: Si vous spécifiez `x-amz-object-lock-mode`, vous devez également spécifier `x-amz-object-lock-retain-until-date`.
+
+* `x-amz-object-lock-retain-until-date`
++
+** La valeur conserver jusqu'à la date doit être au format `2020-08-10T21:46:00Z`. Les secondes fractionnaires sont autorisées, mais seuls 3 chiffres après la virgule sont conservés (précision des millisecondes). Les autres formats ISO 8601 ne sont pas autorisés.
+** La date de conservation doit être ultérieure.
+
+
+* `x-amz-object-lock-legal-hold`
++
+Si la conservation légale est ACTIVÉE (sensible à la casse), l'objet est placé sous une obligation légale. Si la mise en attente légale est désactivée, aucune mise en attente légale n'est mise. Toute autre valeur entraîne une erreur 400 Bad Request (InvalidArgument).
+
+
+
+Si vous utilisez l'un de ces en-têtes de demande, tenez compte des restrictions suivantes :
+
+* Le `Content-MD5` l'en-tête de demande est requis le cas échéant `x-amz-object-lock-*` L'en-tête de la demande est présent dans la demande D'objet PUT. `Content-MD5` N'est pas nécessaire pour PLACER l'objet - Copier ou lancer le téléchargement de pièces multiples.
+* Si le verrouillage d'objet S3 n'est pas activé dans le compartiment et qu'un `x-amz-object-lock-*` L'en-tête de la demande est présent, une erreur 400 Bad Request (InvalidRequest) est renvoyée.
+* La requête PUT Object prend en charge l'utilisation de `x-amz-storage-class: REDUCED_REDUNDANCY` Pour correspondre au comportement AWS. Cependant, lors de l'ingestion d'un objet dans un compartiment lorsque le verrouillage objet S3 est activé, StorageGRID effectue toujours une entrée à double validation.
+* Une réponse ultérieure DE la version D'objet GET ou HEAD inclura les en-têtes `x-amz-object-lock-mode`, `x-amz-object-lock-retain-until-date`, et `x-amz-object-lock-legal-hold`, si configuré et si l'expéditeur de la demande est correct `s3:Get*` autorisations.
+* Une demande ultérieure DE SUPPRESSION de la version d'objet ou DE SUPPRESSION des versions d'objets échoue si elle est antérieure à la date de conservation ou si une mise en attente légale est activée.
+
+
+
+
+== Mettre à jour les paramètres de verrouillage d'objet S3
+
+Si vous devez mettre à jour les paramètres de conservation légale ou de conservation d'une version d'objet existante, vous pouvez effectuer les opérations de sous-ressource d'objet suivantes :
+
+* `PUT Object legal-hold`
++
+Si la nouvelle valeur de conservation légale est ACTIVÉE, l'objet est placé sous une mise en attente légale. Si la valeur de retenue légale est OFF, la suspension légale est levée.
+
+* `PUT Object retention`
++
+** La valeur du mode doit être CONFORME (sensible à la casse).
+** La valeur conserver jusqu'à la date doit être au format `2020-08-10T21:46:00Z`. Les secondes fractionnaires sont autorisées, mais seuls 3 chiffres après la virgule sont conservés (précision des millisecondes). Les autres formats ISO 8601 ne sont pas autorisés.
+** Si une version d'objet possède une date de conservation existante, vous pouvez uniquement l'augmenter. La nouvelle valeur doit être future.
+
+
+
+
+xref:../ilm/index.adoc[Gestion des objets avec ILM]
+
+xref:../tenant/index.adoc[Utilisez le compte du locataire]
+
+xref:put-object.adoc[PLACER l'objet]
+
+xref:put-object-copy.adoc[PLACER l'objet - Copier]
+
+xref:initiate-multipart-upload.adoc[Lancer le téléchargement de pièces multiples]
+
+xref:object-versioning.adoc[Gestion des versions d'objet]
+
+https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html["Guide de l'utilisateur Amazon simple Storage Service : utilisation du verrouillage d'objets S3"^]

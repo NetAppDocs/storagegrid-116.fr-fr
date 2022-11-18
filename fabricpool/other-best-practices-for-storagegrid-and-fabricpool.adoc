@@ -1,0 +1,41 @@
+---
+permalink: fabricpool/other-best-practices-for-storagegrid-and-fabricpool.html 
+sidebar: sidebar 
+keywords: fabricPool, best practices, encryption, compressions, tiering, AFF, consistency 
+summary: 'Lorsque vous configurez un système StorageGRID pour une utilisation avec FabricPool, vous devez éviter de définir des options globales susceptibles d"affecter la façon dont vos données sont enregistrées.' 
+---
+= Autres meilleures pratiques pour StorageGRID et FabricPool
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque vous configurez un système StorageGRID pour une utilisation avec FabricPool, vous devez éviter de définir des options globales susceptibles d'affecter la façon dont vos données sont enregistrées.
+
+
+
+== Chiffrement d'objet
+
+Lors de la configuration de StorageGRID, vous pouvez éventuellement activer le paramètre global *cryptage d'objet stocké* si le chiffrement des données est requis pour d'autres clients StorageGRID (*CONFIGURATION* *système* *Options de grille*). Les données envoyées depuis FabricPool vers StorageGRID sont déjà chiffrées, ce qui signifie qu'il n'est pas nécessaire d'activer le paramètre StorageGRID. Les clés de chiffrement côté client sont la propriété de ONTAP.
+
+
+
+== Compression d'objet
+
+Lors de la configuration de StorageGRID, n'activez pas le paramètre global *Compresser objets enregistrés* (*CONFIGURATION* *système* *Options de grille*). Les données envoyées depuis FabricPool vers StorageGRID sont déjà compressées. L'activation de *Compress objets stockés* ne réduit pas davantage la taille d'un objet.
+
+
+
+== Niveau de cohérence
+
+Pour les compartiments FabricPool, le niveau de cohérence recommandé est « réAD-après-New-write ». Le niveau de cohérence « disponible » n'est pas recommandé. Voir xref:../tenant/changing-consistency-level.adoc[Modifiez le niveau de cohérence].
+
+
+
+== Hiérarchisation FabricPool
+
+Si le nœud StorageGRID utilise le stockage affecté à un système NetApp ONTAP, vérifiez que cette FabricPool règle n'est pas activée pour le volume. Par exemple, si un nœud StorageGRID s'exécute sur un hôte VMware, assurez-vous que la règle de hiérarchisation FabricPool n'est pas activée sur le volume qui sauvegarde le datastore pour le nœud StorageGRID. La désactivation du Tiering FabricPool pour les volumes utilisés avec des nœuds StorageGRID simplifie la résolution des problèmes et les opérations de stockage.
+
+
+IMPORTANT: N'utilisez jamais FabricPool pour transférer automatiquement toutes les données liées à StorageGRID vers StorageGRID. Le Tiering des données StorageGRID vers StorageGRID augmente la complexité opérationnelle et la résolution des problèmes.

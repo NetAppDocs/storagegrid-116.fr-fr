@@ -1,0 +1,14 @@
+---
+permalink: maintain/appliance-node-cloning.html 
+sidebar: sidebar 
+keywords: node cloning, clone node 
+summary: 'Vous pouvez cloner un nœud d"appliance dans StorageGRID pour utiliser une appliance plus récente ou des fonctionnalités améliorées. Le clonage transfère toutes les informations du nœud existant vers la nouvelle appliance, offre un processus de mise à niveau matérielle simple à réaliser, et offre une alternative aux opérations de déclassement et d"extension pour remplacer les appliances.' 
+---
+= Clonage de nœuds d'appliance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez cloner un nœud d'appliance dans StorageGRID pour utiliser une appliance plus récente ou des fonctionnalités améliorées. Le clonage transfère toutes les informations du nœud existant vers la nouvelle appliance, offre un processus de mise à niveau matérielle simple à réaliser, et offre une alternative aux opérations de déclassement et d'extension pour remplacer les appliances.

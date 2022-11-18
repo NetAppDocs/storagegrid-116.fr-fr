@@ -1,0 +1,83 @@
+---
+permalink: maintain/recovering-from-storage-node-failures.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, storage node failure 
+summary: 'La procédure de récupération d"un noeud de stockage défaillant dépend du type de panne et du type de noeud de stockage qui a échoué.' 
+---
+= Restaurez les données après une panne de nœud de stockage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La procédure de récupération d'un noeud de stockage défaillant dépend du type de panne et du type de noeud de stockage qui a échoué.
+
+Utilisez ce tableau pour sélectionner la procédure de restauration d'un noeud de stockage défaillant.
+
+[cols="1a,1a,1a"]
+|===
+| Problème | Action | Remarques 
+
+
+ a| 
+* Plusieurs nœuds de stockage ont échoué.
+* Un second nœud de stockage a échoué moins de 15 jours après une défaillance ou une restauration d'un nœud de stockage.
++
+Cela inclut le cas où un nœud de stockage tombe en panne pendant la restauration d'un autre nœud de stockage.
+
+
+ a| 
+Vous devez contacter le support technique.
+ a| 
+Si tous les nœuds de stockage défectueux se trouvent sur le même site, il peut être nécessaire d'effectuer une procédure de reprise sur site.
+
+L'assistance technique évaluera votre situation et élaborera un plan de reprise.
+
+xref:how-site-recovery-is-performed-by-technical-support.adoc[Comment la reprise sur site est effectuée par le support technique]
+
+La récupération de plusieurs nœuds de stockage (ou de plusieurs nœuds de stockage dans un délai de 15 jours) peut affecter l'intégrité de la base de données Cassandra, ce qui peut entraîner la perte de données.
+
+Le support technique peut déterminer quand il est possible de commencer la restauration d'un second nœud de stockage.
+
+*Remarque* : si plusieurs nœuds de stockage contenant le service ADC échouent sur un site, vous perdez toute demande de service de plate-forme en attente pour ce site.
+
+
+
+ a| 
+Un nœud de stockage a été hors ligne pendant plus de 15 jours.
+ a| 
+xref:recovering-storage-node-that-has-been-down-more-than-15-days.adoc[Panne d'un nœud de stockage de plus de 15 jours]
+ a| 
+Cette procédure est nécessaire pour assurer l'intégrité de la base de données Cassandra.
+
+
+
+ a| 
+Un nœud de stockage de l'appliance est défectueux.
+ a| 
+xref:recovering-storagegrid-appliance-storage-node.adoc[Restaurez le nœud de stockage de l'appliance]
+ a| 
+La procédure de restauration des nœuds de stockage de l'appliance est la même pour toutes les défaillances.
+
+
+
+ a| 
+Un ou plusieurs volumes de stockage sont en panne, mais le lecteur système est intact
+ a| 
+xref:recovering-from-storage-volume-failure-where-system-drive-is-intact.adoc[Restaurez le disque d'après la panne du volume de stockage là où le disque du système est intact]
+ a| 
+Cette procédure est utilisée pour les nœuds de stockage basés sur logiciel.
+
+
+
+ a| 
+Le lecteur système est défectueux.
+ a| 
+xref:recovering-from-system-drive-failure.adoc[Restaurez les données après une panne de disque système]
+ a| 
+La procédure de remplacement des nœuds dépend de la plateforme de déploiement et indique si des volumes de stockage sont également défectueux.
+
+|===
+
+NOTE: Certaines procédures de restauration StorageGRID utilisent Reaper pour traiter les réparations Cassandra. Les réparations sont effectuées automatiquement dès que les services connexes ou requis ont commencé. Vous remarquerez peut-être des résultats de script mentionnant « couche » ou « réparation Cassandra ». Si un message d'erreur indiquant que la réparation a échoué, exécutez la commande indiquée dans le message d'erreur.

@@ -1,0 +1,23 @@
+---
+permalink: sg5600/network-bond-modes-for-1-gbe-managment-ports.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, Network bond, Network bonding, Network bond mode, Network-bond mode, independent, active-backup, active backup, 1-gbe, 1 gbe, e5600sg 
+summary: 'Pour les deux ports de gestion 1 GbE du contrôleur E5600SG, vous pouvez choisir le mode de liaison réseau indépendant ou le mode de liaison réseau Active-Backup pour vous connecter au réseau d"administration facultatif.' 
+---
+= Modes de liaison réseau pour les ports de gestion 1 GbE
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour les deux ports de gestion 1 GbE du contrôleur E5600SG, vous pouvez choisir le mode de liaison réseau indépendant ou le mode de liaison réseau Active-Backup pour vous connecter au réseau d'administration facultatif.
+
+En mode indépendant, seul le port de gestion 1 est connecté au réseau d'administration. Ce mode ne fournit pas de chemin redondant. Le port de gestion 2 est laissé non câblé et disponible pour les connexions locales temporaires (utilisez l'adresse IP 169.254.0.1)
+
+En mode sauvegarde active, les ports de gestion 1 et 2 sont connectés au réseau Admin. Un seul port est actif à la fois. Si le port actif tombe en panne, son port de sauvegarde fournit automatiquement une connexion de basculement. Le fait de lier ces deux ports physiques à un port de gestion logique fournit un chemin redondant au réseau Admin.
+
+
+NOTE: Si vous devez établir une connexion locale temporaire au contrôleur E5600SG lorsque les ports de gestion 1 GbE sont configurés pour le mode sauvegarde active, retirez les câbles des deux ports de gestion, branchez votre câble temporaire sur le port de gestion 2 et accédez à l'appliance via l'adresse IP 169.254.0.1.
+
+image::../media/e5600sg_aggregate_ports_bonded.gif[Ports agrégés E5600SG Bonded]

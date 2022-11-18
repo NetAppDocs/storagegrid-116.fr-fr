@@ -1,0 +1,78 @@
+---
+permalink: sg5600/replacing-e5600sg-controller.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, hardware, Replacing, replace, E5600sg, controller, remove, removing, removal, install, installing, installation 
+summary: Il se peut que vous deviez remplacer le contrôleur E5600SG. 
+---
+= Remplacer le contrôleur E5600SG
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il se peut que vous deviez remplacer le contrôleur E5600SG.
+
+Vous devez avoir accès aux ressources suivantes :
+
+* Informations de remplacement du matériel E-Series sur le site de support NetApp, à la page +http://mysupport.netapp.com/["mysupport.netapp.com"^]
+* Documentation E5600 sur le site de support
+* L'appareil a été xref:placing-appliance-into-maintenance-mode.adoc[passage en mode maintenance].
+
+
+Si les deux contrôleurs fonctionnent suffisamment pour permettre un arrêt contrôlé, vous pouvez arrêter le contrôleur E5600SG en premier pour interrompre la connectivité vers le contrôleur E2700.
+
+
+NOTE: Si vous remplacez le contrôleur avant d'installer le logiciel StorageGRID, il se peut que vous ne puissiez pas accéder au programme d'installation de l'appliance StorageGRID immédiatement après avoir terminé cette procédure. Même si vous pouvez accéder au programme d'installation de l'appliance StorageGRID à partir d'autres hôtes du même sous-réseau que l'appliance, vous ne pouvez pas y accéder à partir d'hôtes situés sur d'autres sous-réseaux. Cette condition doit se résoudre dans les 15 minutes (lorsque les entrées du cache ARP pour le contrôleur d'origine sont écoulées), ou vous pouvez effacer immédiatement la condition en éliminant manuellement les anciennes entrées du cache ARP à partir du routeur ou de la passerelle local.
+
+.Étapes
+. Utilisez une protection antistatique.
+. Étiquetez chaque câble relié au contrôleur E5600SG pour pouvoir reconnecter les câbles correctement.
++
+
+IMPORTANT: Pour éviter de dégrader les performances, ne pas tordre, plier, pincer ou marcher sur les câbles. Ne pliez pas les câbles plus loin qu'un rayon de 5 cm (2 po).
+
+. Lorsque l'appliance est en mode maintenance, arrêtez le contrôleur E5600SG.
++
+.. Connectez-vous au nœud grid :
++
+... Saisissez la commande suivante : `ssh admin@_grid_node_IP_`
+... Entrez le mot de passe indiqué dans le `Passwords.txt` fichier.
+... Entrez la commande suivante pour passer à la racine : `su -`
+... Entrez le mot de passe indiqué dans le `Passwords.txt` fichier.
++
+Lorsque vous êtes connecté en tant que root, l'invite passe de `$` à `#`.
+
+
+
+.. Arrêtez le contrôleur E5600SG : +
+`*shutdown -h now*`
+
+
+. Mettez le boîtier hors tension et attendez l'arrêt de toutes les LED et de l'affichage à sept segments à l'arrière du contrôleur.
+. Déposer les câbles.
+. Retirez le contrôleur, comme décrit dans la documentation du contrôleur E5600SG.
+. Insérez le nouveau contrôleur, comme décrit dans la documentation du contrôleur E5600SG.
+. Remplacez tous les câbles.
+. Remettez le boîtier sous tension.
+. Surveiller les codes à sept segments.
++
+** Contrôleur E2700 :
++
+L'état final de la LED est `99`.
+
+** Contrôleur E5600SG :
++
+L'état final de la LED est `HA`.
+
+
+
+. Surveillez l'état du nœud de stockage de l'appliance dans Grid Manager.
++
+Vérifiez que les nœuds de stockage de l'appliance sont à nouveau à l'état attendu.
+
+
+
+https://mysupport.netapp.com/info/web/ECMP11751516.html["Procédures de remplacement du matériel NetApp E-Series et EF-Series"^]
+
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61893["Documentation NetApp : gamme E5600"^]

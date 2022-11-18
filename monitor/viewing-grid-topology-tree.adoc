@@ -1,0 +1,20 @@
+---
+permalink: monitor/viewing-grid-topology-tree.html 
+sidebar: sidebar 
+keywords: how to view the Grid Topology tree 
+summary: 'L"arborescence de la grille topologie permet d"accéder à des informations détaillées sur les éléments du système StorageGRID, notamment les sites, les nœuds de la grille, les services et les composants. Dans la plupart des cas, il vous suffit d"accéder à l"arborescence de la grille topologique lorsque vous y êtes invité ou lorsque vous collaborez avec le support technique.' 
+---
+= Afficher l'arborescence de la grille topologique
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'arborescence de la grille topologie permet d'accéder à des informations détaillées sur les éléments du système StorageGRID, notamment les sites, les nœuds de la grille, les services et les composants. Dans la plupart des cas, il vous suffit d'accéder à l'arborescence de la grille topologique lorsque vous y êtes invité ou lorsque vous collaborez avec le support technique.
+
+Pour accéder à l'arborescence de la topologie de grille, sélectionnez *SUPPORT* *Outils* *topologie de grille*.
+
+image::../media/grid_topology_tree.gif[Parties de l'arborescence de la topologie de grille]
+
+Pour développer ou réduire l'arborescence de la topologie de la grille, cliquez sur image:../media/nms_tree_expand.gif["icône signe plus"] ou image:../media/nms_tree_collapse.gif["icône signe moins"] au niveau site, nœud ou service. Pour développer ou réduire tous les éléments du site entier ou de chaque nœud, maintenez la touche *Ctrl* enfoncée et cliquez sur.

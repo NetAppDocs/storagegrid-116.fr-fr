@@ -1,0 +1,16 @@
+---
+permalink: admin/migrating-data-into-storagegrid.html 
+sidebar: sidebar 
+keywords: data migration, move data into storagegrid 
+summary: 'Vous pouvez migrer d"importants volumes de données vers le système StorageGRID tout en utilisant le système StorageGRID pour les opérations quotidiennes.' 
+---
+= Migrer les données vers StorageGRID
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez migrer d'importants volumes de données vers le système StorageGRID tout en utilisant le système StorageGRID pour les opérations quotidiennes.
+
+La section suivante est un guide pour comprendre et planifier la migration d'importants volumes de données vers le système StorageGRID. Ce n'est pas un guide général de la migration des données et n'inclut pas des étapes détaillées pour effectuer une migration. Suivez les instructions de cette section pour assurer une migration efficace des données dans le système StorageGRID sans perturber les opérations quotidiennes et que les données migrées sont correctement gérées par le système StorageGRID.

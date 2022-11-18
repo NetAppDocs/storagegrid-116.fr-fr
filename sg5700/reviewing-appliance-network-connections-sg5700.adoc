@@ -1,0 +1,128 @@
+---
+permalink: sg5700/reviewing-appliance-network-connections-sg5700.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, network connections, network connection, network, connection, grid, admin, client, management, SANtricity System Manager, SANtricity 
+summary: 'Avant d"installer l"appliance StorageGRID, vous devez savoir quels réseaux peuvent être connectés à l"appliance et comment les ports de chaque contrôleur sont utilisés.' 
+---
+= Examiner les connexions réseau de l'appliance (SG5700)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'installer l'appliance StorageGRID, vous devez savoir quels réseaux peuvent être connectés à l'appliance et comment les ports de chaque contrôleur sont utilisés.
+
+
+
+== Réseaux d'appliances StorageGRID
+
+Lorsque vous déployez une appliance StorageGRID en tant que nœud de stockage dans un grid StorageGRID, vous pouvez la connecter aux réseaux suivants :
+
+* *Réseau Grid pour StorageGRID* : le réseau Grid est utilisé pour tout le trafic StorageGRID interne. Il assure la connectivité entre tous les nœuds de la grille, sur tous les sites et sous-réseaux. Le réseau Grid est requis.
+* *Réseau d'administration pour StorageGRID* : le réseau d'administration est un réseau fermé utilisé pour l'administration et la maintenance du système. Le réseau Admin est généralement un réseau privé et n'a pas besoin d'être routable entre les sites. Le réseau d'administration est facultatif.
+* *Réseau client pour StorageGRID :* le réseau client est un réseau ouvert utilisé pour fournir un accès aux applications client, y compris S3 et Swift. Le réseau client fournit un accès au protocole client à la grille, de sorte que le réseau Grid puisse être isolé et sécurisé. Le réseau client est facultatif.
+* *Réseau de gestion pour SANtricity System Manager* (en option) : ce réseau permet d'accéder à SANtricity System Manager sur le contrôleur E2800, ce qui vous permet de contrôler et de gérer les composants matériels de l'appliance. Ce réseau de gestion peut être le même que le réseau d'administration pour StorageGRID, ou il peut s'agir d'un réseau de gestion indépendant.
++
+Si le réseau SANtricity System Manager facultatif n'est pas connecté, il se peut que vous ne puissiez pas utiliser certaines fonctions SANtricity.
+
+
+
+
+NOTE: Pour plus d'informations sur les réseaux StorageGRID, reportez-vous à la section _grille Primer_.
+
+
+
+== Connexions de l'appliance StorageGRID
+
+Lorsque vous installez une appliance StorageGRID, vous devez connecter les deux contrôleurs les uns aux autres et aux réseaux requis. La figure montre les deux contrôleurs SG5760, avec le contrôleur E2800 en haut et le contrôleur E5700SG en bas. Dans le SG5712, le contrôleur E2800 est à la gauche du contrôleur E5700SG.
+
+image::../media/sg5760_connections.gif[Connexions sur l'appliance SG5760]
+
+|===
+|  | Port | Type de port | Fonction 
+
+
+ a| 
+1
+ a| 
+Deux ports d'interconnexion sur chaque contrôleur
+ a| 
+SFP+ optique 16 Gbit/s FC
+ a| 
+Connectez les deux contrôleurs les uns aux autres.
+
+
+
+ a| 
+2
+ a| 
+Port de gestion 1 du contrôleur E2800
+ a| 
+1 GbE (RJ-45)
+ a| 
+Connexion au réseau sur lequel vous accédez à SANtricity System Manager. Vous pouvez utiliser le réseau d'administration pour StorageGRID ou un réseau de gestion indépendant.
+
+
+
+ a| 
+2
+ a| 
+Port de gestion 2 du contrôleur E2800
+ a| 
+1 GbE (RJ-45)
+ a| 
+Réservé au support technique.
+
+
+
+ a| 
+3
+ a| 
+Port de gestion 1 du contrôleur E5700SG
+ a| 
+1 GbE (RJ-45)
+ a| 
+Permet de connecter le contrôleur E5700SG au réseau d'administration pour StorageGRID.
+
+
+
+ a| 
+3
+ a| 
+Port de gestion 2 du contrôleur E5700SG
+ a| 
+1 GbE (RJ-45)
+ a| 
+* Peut être lié avec le port de gestion 1 si vous souhaitez établir une connexion redondante avec le réseau d'administration.
+* Peut être laissé sans fil et disponible pour un accès local temporaire (IP 169.254.0.1).
+* Pendant l'installation, peut être utilisé pour connecter le contrôleur E5700SG à un ordinateur portable de service si les adresses IP attribuées par DHCP ne sont pas disponibles.
+
+
+
+
+ a| 
+4
+ a| 
+Ports 10/25 GbE 1-4 sur le contrôleur E5700SG
+ a| 
+10 GbE ou 25 GbE
+
+*Remarque :* les émetteurs-récepteurs SFP+ inclus avec l'appareil prennent en charge les vitesses de liaison 10 GbE. Si vous souhaitez utiliser des vitesses de liaison 25 GbE pour les quatre ports réseau, vous devez fournir des émetteurs-récepteurs SFP28.
+ a| 
+Connectez-vous au réseau Grid et au réseau client pour StorageGRID. Reportez-vous à la section « connexions des ports 10/25 GbE du contrôleur E5700SG ».
+
+|===
+xref:gathering-installation-information-sg5700.adoc[Collecte d'informations sur l'installation (SG5700)]
+
+xref:cabling-appliance-sg5700.adoc[Appliance pour câble (SG5700)]
+
+xref:port-bond-modes-for-e5700sg-controller-ports.adoc[Modes de liaison des ports pour les ports du contrôleur E5700SG]
+
+xref:../network/index.adoc[Instructions de mise en réseau]
+
+xref:../vmware/index.adoc[Installez VMware]
+
+xref:../rhel/index.adoc[Installez Red Hat Enterprise Linux ou CentOS]
+
+xref:../ubuntu/index.adoc[Installez Ubuntu ou Debian]

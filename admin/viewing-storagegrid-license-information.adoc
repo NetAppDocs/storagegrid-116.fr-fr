@@ -1,0 +1,41 @@
+---
+permalink: admin/viewing-storagegrid-license-information.html 
+sidebar: sidebar 
+keywords: storagegrid license, view license, licensed capacity of grid 
+summary: Vous pouvez afficher les informations relatives aux licences de votre système StorageGRID, comme la capacité de stockage maximale de votre réseau, si nécessaire. 
+---
+= Afficher les informations de licence StorageGRID
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez afficher les informations relatives aux licences de votre système StorageGRID, comme la capacité de stockage maximale de votre réseau, si nécessaire.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+
+
+En cas de problème avec la licence logicielle de ce système StorageGRID, le panneau intégrité du tableau de bord inclut une icône d'état de la licence et un lien *Licence*. Le numéro indique le nombre de problèmes liés à la licence.
+
+image::../media/dashboard_health_panel_license_status.png[État de la licence du panneau d'intégrité du tableau de bord]
+
+Pour afficher la licence, effectuez l'une des opérations suivantes :
+
+* Dans le panneau Santé du tableau de bord, sélectionnez l'icône d'état de la licence ou le lien *Licence*. Ce lien apparaît uniquement en cas de problème avec la licence.
+* Sélectionnez *MAINTENANCE* *système* *Licence*.
+
+
+La page Licence s'affiche et fournit les informations suivantes en lecture seule sur la licence actuelle :
+
+* ID du système StorageGRID, qui est le numéro d'identification unique de cette installation StorageGRID
+* Numéro de série de la licence
+* Capacité de stockage sous licence de la grille
+* Date de fin de la licence logicielle
+* Date de fin du contrat de service de support
+* Contenu du fichier texte de licence
+
+
+
+NOTE: Pour les licences émises avant StorageGRID 10.3, la capacité de stockage sous licence n'est pas incluse dans le fichier de licence et un message « Voir contrat de licence » s'affiche au lieu d'une valeur.

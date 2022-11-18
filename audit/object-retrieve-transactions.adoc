@@ -1,0 +1,59 @@
+---
+permalink: audit/object-retrieve-transactions.html 
+sidebar: sidebar 
+keywords: storagegrid, audit, message, Object retrieve, messages, transaction, transactions, s3, swift, trace, SGET, WGET 
+summary: 'Vous pouvez identifier les transactions de récupération d"objets dans le journal d"audit en localisant les messages d"audit \(S3 et Swift\) spécifiques à l"API.' 
+---
+= Transactions de récupération d'objet
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez identifier les transactions de récupération d'objets dans le journal d'audit en localisant les messages d'audit spécifiques à l'API (S3 et Swift).
+
+Tous les messages d'audit générés lors d'une transaction de récupération ne sont pas répertoriés dans les tableaux suivants. Seuls les messages requis pour suivre la transaction de récupération sont inclus.
+
+
+
+== Messages d'audit de récupération S3
+
+[cols="1a,1a,2a,1a,1a"]
+|===
+| Code | Nom | Description | Tracé | Voir 
+
+
+ a| 
+SGET
+ a| 
+OBTENTION S3
+ a| 
+Demande de récupération d'un objet à partir d'un compartiment.
+ a| 
+CBID, S3BK, S3KY
+ a| 
+xref:sget-s3-get.adoc[SGET : OBTENEZ S3]
+
+|===
+
+
+== Messages d'audit de récupération Swift
+
+[cols="1a,1a,2a,1a,1a"]
+|===
+| Code | Nom | Description | Tracé | Voir 
+
+
+ a| 
+C'EST PARTI
+ a| 
+PROFITEZ-en rapidement
+ a| 
+Demande de récupération d'un objet à partir d'un conteneur.
+ a| 
+CBID, WCON, WOBJ
+ a| 
+xref:wget-swift-get.adoc[WGET: SWIFT GET]
+
+|===

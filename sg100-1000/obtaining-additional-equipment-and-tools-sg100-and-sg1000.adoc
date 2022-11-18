@@ -1,0 +1,132 @@
+---
+permalink: sg100-1000/obtaining-additional-equipment-and-tools-sg100-and-sg1000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, additional, equipment, tools 
+summary: 'Avant d"installer l"appliance StorageGRID, vérifiez que vous disposez de tous les équipements et outils supplémentaires dont vous avez besoin.' 
+---
+= Obtenir des équipements et des outils supplémentaires (SG100 et SG1000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'installer l'appliance StorageGRID, vérifiez que vous disposez de tous les équipements et outils supplémentaires dont vous avez besoin.
+
+Vous devez disposer de l'équipement supplémentaire suivant pour installer et configurer le matériel :
+
+* *Tournevis*
++
+image::../media/screwdrivers.gif[Deux tournevis]
+
++
+N° Phillips 2 tournevis
+
++
+Tournevis plat moyen
+
+* * Bracelet antistatique*
++
+image::../media/appliance_wriststrap.gif[Bracelet antistatique]
+
+* *Câbles optiques et émetteurs-récepteurs*
++
+image::../media/fc_cable_and_sfp.gif[Câble optique et émetteur-récepteur QSFP+]
+
++
+** Câble
++
+*** Twinax/cuivre (1 à 4)
++
+ou
+
+*** Fibre optique (1 à 4)
+
+
+** 1 à 4 de chacun de ces émetteurs-récepteurs/adaptateurs en fonction de la vitesse de liaison (les vitesses mixtes ne sont pas prises en charge)
++
+*** SG100 :
++
+|===
+| Vitesse de liaison (GbE) | Équipement requis 
+
+
+ a| 
+10
+ a| 
+Émetteur-récepteur SFP+
+
+
+
+ a| 
+25
+ a| 
+Émetteur-récepteur SFP28
+
+|===
+*** SG1000 :
++
+|===
+| Vitesse de liaison (GbE) | Équipement requis 
+
+
+ a| 
+10
+ a| 
+Adaptateur QSFP-to-SFP (QSA) et émetteur-récepteur SFP+
+
+
+
+ a| 
+25
+ a| 
+Adaptateur QSFP-to-SFP (QSA) et émetteur-récepteur SFP28
+
+
+
+ a| 
+40
+ a| 
+Émetteur-récepteur QSFP+
+
+
+
+ a| 
+100
+ a| 
+Emetteur-récepteur QFSP28
+
+|===
+
+
+
+
+* *Câbles Ethernet RJ-45 (Cat5/Cat5e/Cat6/Cat6a)*
++
+image::../media/ethernet_cables.png[Câble Ethernet]
+
+* *Ordinateur portable de service*
++
+image::../media/sam_management_client.gif[L'ordinateur portable de service]
+
++
+xref:../admin/web-browser-requirements.adoc[Navigateur Web pris en charge]
+
++
+Port 1 GbE (RJ-45)
+
++
+
+NOTE: Certains ports ne prennent pas en charge les débits Ethernet 10/100.
+
+* *Outils en option*
++
+image::../media/optional_tools.gif[Perceuse électrique et lampe de poche]
+
++
+Perceuse électrique avec embout Phillips
+
++
+Lampe de poche
+
+

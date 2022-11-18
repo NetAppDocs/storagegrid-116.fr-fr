@@ -1,0 +1,144 @@
+---
+section: sg100-1000
+title: Appareils de services SG100 et SG1000
+entries:
+- title: Présentation
+  pdf-filename: Appareils de services StorageGRID SG100 et SG1000
+  url: "/sg100-1000/index.html"
+- title: Applications SG100 et SG1000
+  url: "/sg100-1000/sg100-and-sg1000-applications.html"
+- title: Présentation de l'installation et du déploiement
+  url: "/sg100-1000/installation-and-deployment-overview.html"
+- title: Préparation de l'installation (SG100 et SG1000)
+  url: "/sg100-1000/preparing-for-installation-sg100-and-sg1000.html"
+  entries:
+  - title: Préparation du site (SG100 et SG1000)
+    url: "/sg100-1000/preparing-site-sg100-and-sg1000.html"
+  - title: Déballer les boîtes (SG100 et SG1000)
+    url: "/sg100-1000/unpacking-boxes-sg100-and-sg1000.html"
+  - title: Obtenir des équipements et des outils supplémentaires (SG100 et SG1000)
+    url: "/sg100-1000/obtaining-additional-equipment-and-tools-sg100-and-sg1000.html"
+  - title: Revoir les connexions réseau de l'appliance (SG100 et SG1000)
+    url: "/sg100-1000/reviewing-appliance-network-connections-sg100-and-sg1000.html"
+    entries:
+    - title: Modes de liaison de port pour les appareils SG100 et SG1000
+      url: "/sg100-1000/port-bond-modes-for-sg100-and-sg1000.html"
+      entries:
+      - title: Modes de liaison réseau
+        url: "/sg100-1000/network-bond-modes-sg100-and-sg1000.html"
+      - title: Modes de liaison réseau pour les ports de gestion
+        url: "/sg100-1000/network-bond-modes-for-management-ports-sg100-and-sg1000.html"
+  - title: Collecte des informations d'installation (SG100 et SG1000)
+    url: "/sg100-1000/gathering-installation-information-sg100-and-sg1000.html"
+- title: Installation du matériel (SG100 et SG1000)
+  entries:
+  - title: Enregistrez le matériel
+    url: "/sg100-1000/registering-hardware-sg100-and-sg1000.html"
+  - title: Installation de l'appliance dans l'armoire ou le rack (SG100 et SG1000)
+    url: "/sg100-1000/installing-appliance-in-cabinet-or-rack-sg100-and-sg1000.html"
+  - title: Cable appliance (SG100 et SG1000)
+    url: "/sg100-1000/cabling-appliance-sg100-and-sg1000.html"
+  - title: Branchement des câbles d'alimentation et application de l'alimentation
+      (SG100 et SG1000)
+    url: "/sg100-1000/connecting-power-cords-and-applying-power-sg100-and-sg1000.html"
+  - title: Afficher les indicateurs d'état sur les appareils SG100 et SG1000
+    url: "/sg100-1000/viewing-status-indicators-on-sg100-and-sg1000-appliances.html"
+- title: Configuration des connexions StorageGRID (SG100 et SG1000)
+  url: "/sg100-1000/configuring-storagegrid-connections-sg100-and-sg1000.html"
+  entries:
+  - title: Accédez au programme d'installation de l'appliance StorageGRID
+    url: "/sg100-1000/accessing-storagegrid-appliance-installer-sg100-and-sg1000.html"
+  - title: Vérifiez et mettez à niveau la version du programme d'installation de l'appliance
+      StorageGRID
+    url: "/sg100-1000/verifying-and-upgrading-storagegrid-appliance-installer-version.html"
+  - title: Configuration des liaisons réseau (SG100 et SG1000)
+    url: "/sg100-1000/configuring-network-links-sg100-and-sg1000.html"
+  - title: Configurez les adresses IP StorageGRID
+    url: "/sg100-1000/configuring-storagegrid-ip-addresses-sg100-and-sg1000.html"
+  - title: Vérifiez les connexions réseau
+    url: "/sg100-1000/verifying-network-connections.html"
+  - title: Vérifiez les connexions réseau au niveau des ports
+    url: "/sg100-1000/verifying-port-level-network-connections.html"
+- title: Configuration de l'interface BMC (SG100 et SG1000)
+  url: "/sg100-1000/configuring-bmc-interface-sg1000.html"
+  entries:
+  - title: Modifier le mot de passe racine de l'interface BMC
+    url: "/sg100-1000/changing-root-password-for-bmc-interface-sg1000.html"
+  - title: Définissez l'adresse IP du port de gestion BMC
+    url: "/sg100-1000/setting-ip-address-for-bmc-management-port-sg1000.html"
+  - title: Accéder à l'interface BMC
+    url: "/sg100-1000/accessing-bmc-interface-sg1000.html"
+  - title: Configurez les paramètres SNMP pour l'appliance de services
+    url: "/sg100-1000/configuring-snmp-settings-for-sg1000.html"
+  - title: Configurez les notifications par e-mail pour les alertes
+    url: "/sg100-1000/setting-up-email-notifications-for-alerts.html"
+- title: 'Facultatif : activez le chiffrement de nœud'
+  url: "/sg100-1000/optional-enabling-node-encryption.html"
+- title: Déployez le nœud d'appliance des services
+  url: "/sg100-1000/deploying-services-appliance-node.html"
+  entries:
+  - title: Déployez l'appliance de services en tant que nœud d'administration principal
+    url: "/sg100-1000/deploying-services-appliance-as-primary-admin-node.html"
+  - title: Déployez une appliance de services en tant que passerelle ou nœud d'administration
+      non primaire
+    url: "/sg100-1000/deploying-services-appliance-as-gateway-or-non-primary-admin-node.html"
+  - title: Installation de l'appareil des services du moniteur
+    url: "/sg100-1000/monitoring-services-appliance-installation.html"
+  - title: Automatisation de l'installation et de la configuration de l'appliance
+      (SG100 et SG1000)
+    url: "/sg100-1000/automating-appliance-installation-and-configuration.html"
+    entries:
+    - title: Automatisez la configuration de l'appliance avec le programme d'installation
+        de l'appliance StorageGRID
+      url: "/sg100-1000/automating-appliance-configuration-using-storagegrid-appliance-installer.html"
+    - title: Automatisez l'installation et la configuration des nœuds d'appliance
+        à l'aide du script configure-sga.py
+      url: "/sg100-1000/automating-installation-configuration-appliance-nodes-configure-sga-py-script.html"
+    - title: Automatisez la configuration de StorageGRID
+      url: "/sg100-1000/automating-configuration-of-storagegrid.html"
+  - title: Présentation de l'installation des API REST
+    url: "/sg100-1000/overview-of-installation-rest-apis.html"
+- title: Dépannage de l'installation du matériel (SG100 et SG1000)
+  url: "/sg100-1000/troubleshooting-hardware-installation-sg100-and-sg1000.html"
+  entries:
+  - title: Afficher les codes de démarrage de l'appareil
+    url: "/sg100-1000/viewing-boot-up-codes-for-appliance-sg100-and-sg1000.html"
+  - title: Afficher les codes d'erreur de l'appareil
+    url: "/sg100-1000/viewing-error-codes-for-sg1000-controller-sg100-and-sg1000.html"
+  - title: La configuration matérielle semble suspendue (SG100 et SG1000)
+    url: "/sg100-1000/hardware-setup-appears-to-hang-sg100-and-sg1000.html"
+  - title: Résolution des problèmes de connexion (SG100 et SG1000)
+    url: "/sg100-1000/troubleshooting-connection-issues-sg100-and-sg1000.html"
+  - title: Redémarrez l'appliance des services pendant que le programme d'installation
+      de l'appliance StorageGRID est en cours d'exécution
+    url: "/sg100-1000/rebooting-services-appliance-while-sg-appliance-installer-is-running-sg100-and-sg1000.html"
+- title: Entretenir l'appareil
+  url: "/sg100-1000/maintaining-services-appliance-sg100-and-sg1000.html"
+  entries:
+  - title: Mettez l'appareil en mode maintenance
+    url: "/sg100-1000/placing-appliance-into-maintenance-mode.html"
+  - title: Allumer et éteindre la LED d'identification du contrôleur
+    url: "/sg100-1000/turning-controller-identify-led-on-and-off.html"
+  - title: Localiser le contrôleur dans le data Center
+    url: "/sg100-1000/locating-controller-in-data-center.html"
+  - title: Arrêtez l'appareil
+    url: "/sg100-1000/shut-down-sg100-and-sg1000.html"
+  - title: Remplacez l'appareil de services
+    url: "/sg100-1000/replacing-services-appliance.html"
+  - title: Remplacez l'un des blocs d'alimentation de l'appliance de services, ou
+      les deux
+    url: "/sg100-1000/replacing-one-or-more-power-supplies-in-services-appliance.html"
+  - title: Remplacez le ventilateur de l'appliance de services
+    url: "/sg100-1000/replacing-fan-in-services-appliance.html"
+  - title: Remplacez le disque de l'appliance de services
+    url: "/sg100-1000/replacing-drive-in-services-appliance.html"
+  - title: Modifier la configuration de liaison de l'appliance de services
+    url: "/sg100-1000/changing-link-configuration-of-services-appliance.html"
+  - title: Modifier le paramètre MTU
+    url: "/sg100-1000/changing-mtu-setting.html"
+  - title: Vérifiez la configuration du serveur DNS
+    url: "/sg100-1000/checking-dns-server-configuration.html"
+  - title: Contrôle du cryptage des nœuds en mode maintenance (SG100 et SG1000)
+    url: "/sg100-1000/monitoring-node-encryption-in-maintenance-mode.html"
+  - title: Effacez la configuration du serveur de gestion des clés
+    url: "/sg100-1000/clearing-key-management-server-configuration.html"

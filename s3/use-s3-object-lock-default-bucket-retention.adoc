@@ -1,0 +1,113 @@
+---
+permalink: s3/use-s3-object-lock-default-bucket-retention.html 
+sidebar: sidebar 
+keywords: s3 object lock, default bucket retention 
+summary: Si le verrouillage objet S3 est activé pour un compartiment, vous pouvez spécifier un mode de conservation par défaut et une période de conservation par défaut qui est appliquée à chaque objet ajouté au compartiment. 
+---
+= Utilisez la conservation de compartiment par défaut avec le verrouillage d'objet S3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si le verrouillage objet S3 est activé pour un compartiment, vous pouvez spécifier un mode de conservation par défaut et une période de conservation par défaut qui est appliquée à chaque objet ajouté au compartiment.
+
+* Le verrouillage objet S3 peut être activé ou désactivé pour un compartiment lors de la création du compartiment.
+* Si le verrouillage objet S3 est activé pour un compartiment, vous pouvez configurer la conservation par défaut pour ce compartiment.
+* La configuration de conservation par défaut spécifie :
++
+** Mode de rétention par défaut : StorageGRID ne prend en charge que le mode de « CONFORMITÉ ».
+** Durée de conservation par défaut en jours ou années.
+
+
+
+
+
+
+== OBTENIR la configuration de verrouillage d'objet
+
+La demande GET Object Lock Configuration vous permet de déterminer si le verrouillage d'objet est activé pour un compartiment et, s'il est activé, de voir si un mode de rétention par défaut et une période de rétention sont configurés pour le compartiment.
+
+Lorsque de nouvelles versions d'objet sont ingérées sur le compartiment, le mode de conservation par défaut est appliqué si `x-amz-object-lock-mode` n'est pas spécifié. La période de rétention par défaut est utilisée pour calculer la date de conservation si `x-amz-object-lock-retain-until-date` n'est pas spécifié.
+
+Pour effectuer cette opération, vous devez disposer de l'autorisation s3:GetBucketObjectLockConfiguration, ou être root de compte.
+
+
+
+=== Exemple de demande
+
+[listing, subs="specialcharacters,quotes"]
+----
+GET /bucket?object-lock HTTP/1.1
+Host: _host_
+Accept-Encoding: identity
+User-Agent: aws-cli/1.18.106 Python/3.8.2 Linux/4.4.0-18362-Microsoft botocore/1.17.29
+x-amz-date: _date_
+x-amz-content-sha256: _authorization string_
+Authorization: _authorization string_
+----
+
+
+=== Exemple de réponse
+
+[listing]
+----
+HTTP/1.1 200 OK
+x-amz-id-2: iVmcB7OXXJRkRH1FiVq1151/T24gRfpwpuZrEG11Bb9ImOMAAe98oxSpXlknabA0LTvBYJpSIXk=
+x-amz-request-id: B34E94CACB2CEF6D
+Date: Fri, 04 Sep 2020 22:47:09 GMT
+Transfer-Encoding: chunked
+Server: AmazonS3
+
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectLockConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+    <ObjectLockEnabled>Enabled</ObjectLockEnabled>
+    <Rule>
+        <DefaultRetention>
+            <Mode>COMPLIANCE</Mode>
+            <Years>6</Years>
+        </DefaultRetention>
+    </Rule>
+</ObjectLockConfiguration>
+----
+
+
+== CONFIGURATION du verrouillage de l'objet
+
+La demande DE configuration DE verrouillage D'objet PUT vous permet de modifier le mode de conservation par défaut et la période de conservation par défaut pour un compartiment dont le verrouillage d'objet est activé. Vous pouvez également supprimer les paramètres de conservation par défaut configurés précédemment.
+
+Lorsque de nouvelles versions d'objet sont ingérées sur le compartiment, le mode de conservation par défaut est appliqué si `x-amz-object-lock-mode` n'est pas spécifié. La période de rétention par défaut est utilisée pour calculer la date de conservation si `x-amz-object-lock-retain-until-date` n'est pas spécifié.
+
+Si la période de conservation par défaut est modifiée après l'ingestion d'une version d'objet, la conservation à la date de la version de l'objet reste la même et n'est pas recalculée en utilisant la nouvelle période de conservation par défaut.
+
+Pour effectuer cette opération, vous devez disposer de l'autorisation s3:PutBuckObjectLockConfiguration, ou être root de compte.
+
+Le `Content-MD5` L'en-tête de demande doit être spécifié dans la demande PUT.
+
+
+
+=== Exemple de demande
+
+[listing, subs="specialcharacters,quotes"]
+----
+PUT /bucket?object-lock HTTP/1.1
+Accept-Encoding: identity
+Content-Length: 308
+Host: _host_
+Content-MD5: _request header_
+User-Agent: s3sign/1.0.0 requests/2.24.0 python/3.8.2
+X-Amz-Date: _date_
+X-Amz-Content-SHA256: _authorization string_
+Authorization: _authorization string_
+
+<ObjectLockConfiguration>
+    <ObjectLockEnabled>Enabled</ObjectLockEnabled>
+    <Rule>
+        <DefaultRetention>
+            <Mode>COMPLIANCE</Mode>
+            <Years>6</Years>
+        </DefaultRetention>
+    </Rule>
+</ObjectLockConfiguration>
+----

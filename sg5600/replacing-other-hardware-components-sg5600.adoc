@@ -1,0 +1,90 @@
+---
+permalink: sg5600/replacing-other-hardware-components-sg5600.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, Replacing, replace, hardware, components, remove, removing, removal, install, installing, installation, drive, fan, power supply, battery 
+summary: 'Vous devrez peut-être remplacer un lecteur, un ventilateur, un bloc d"alimentation ou une batterie de l"appareil StorageGRID.' 
+---
+= Remplacer les autres composants matériels
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devrez peut-être remplacer un lecteur, un ventilateur, un bloc d'alimentation ou une batterie de l'appareil StorageGRID.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous disposez de la procédure de remplacement du matériel E-Series.
+* L'appareil a été xref:placing-appliance-into-maintenance-mode.adoc[placé en mode maintenance] si la procédure de remplacement des composants requiert l'arrêt de l'appareil.
+
+
+Pour remplacer un lecteur, une cartouche de ventilateur d'alimentation, une cartouche de ventilateur, une cartouche d'alimentation, une batterie, Ou tiroir disque, consultez les procédures standard des baies de stockage E2700 et E5600. Concentrez-vous sur les instructions détaillées relatives au retrait et au remplacement du matériel lui-même ; de nombreuses procédures du gestionnaire de stockage SANtricity ne s'appliquent pas à une appliance.
+
+
+
+== Instructions de remplacement des composants SG5612
+
+|===
+| FRU | Voir 
+
+
+ a| 
+Lecteur
+ a| 
+Suivez les étapes de la procédure E-Series pour remplacer un disque des tiroirs E2600, E2700, E5400, E5500, E5600, 12 ou 24 disques.
+
+
+
+ a| 
+Absorbeur de ventilateur d'alimentation
+ a| 
+Suivez les étapes indiquées dans les instructions E-Series pour remplacer le réservoir d'un ventilateur défectueux dans le E5612 ou le tiroir du contrôleur E5624
+
+
+
+ a| 
+Batterie du contrôleur E2700 (nécessite le retrait du contrôleur)
+ a| 
+Suivez les étapes de la section xref:replacing-e2700-controller.adoc[Remplacement du contrôleur E2700], mais installer la nouvelle batterie dans le contrôleur existant.
+
+|===
+
+
+== Instructions de remplacement des composants de l'appliance SG5660
+
+|===
+| FRU | Voir 
+
+
+ a| 
+Lecteur
+ a| 
+Suivez les étapes des instructions E-Series pour remplacer un disque dans les tiroirs E2660, E2760, E5460, E5560 ou E5660.
+
+
+
+ a| 
+Réservoir d'alimentation
+ a| 
+Suivez les étapes indiquées dans les instructions E-Series pour remplacer une cartouche d'alimentation défectueuse dans le tiroir du contrôleur E5660
+
+
+
+ a| 
+Boîtier de ventilateur
+ a| 
+Suivez les étapes indiquées dans les instructions E-Series pour remplacer une cartouche de ventilateur défectueuse dans le tiroir du contrôleur E5660
+
+
+
+ a| 
+Batterie du contrôleur E2700 (nécessite le retrait du contrôleur)
+ a| 
+Suivez les étapes de la section xref:replacing-e2700-controller.adoc[Remplacement du contrôleur E2700], mais installer la nouvelle batterie dans le contrôleur existant.
+
+|===
+https://mysupport.netapp.com/info/web/ECMP11751516.html["Procédures de remplacement du matériel NetApp E-Series et EF-Series"^]
+
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61765["Documentation NetApp : gamme E2700"^]
+
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61893["Documentation NetApp : gamme E5600"^]

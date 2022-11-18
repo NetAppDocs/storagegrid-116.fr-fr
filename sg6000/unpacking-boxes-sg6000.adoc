@@ -1,0 +1,133 @@
+---
+permalink: sg6000/unpacking-boxes-sg6000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, install, installation, unpack, unbox, prepare, inventory, components, contents 
+summary: 'Avant d"installer l"appareil StorageGRID, déballez toutes les boîtes et comparez le contenu aux éléments du bordereau d"expédition.' 
+---
+= Déballer les boîtes (SG6000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'installer l'appareil StorageGRID, déballez toutes les boîtes et comparez le contenu aux éléments du bordereau d'expédition.
+
+
+
+== SG6060 et SG6060X
+
+* *Contrôleur SG6000-CN*
++
+image::../media/sg6000_cn_front_without_bezel.gif[Contrôleur SG6000-CN]
+
+* *Tiroir contrôleur E2860 sans disque installé*
++
+image::../media/de460c_table_size.gif[Appliance SG5760 4U]
+
+* *Deux cadres avant*
++
+image::../media/sg6000_front_bezels_for_table.gif[Encadrements avant]
+
+* *Deux kits de rails avec instructions*
++
+image::../media/rail_kit.gif[Kit de rails]
+
+* *60 disques (2 disques SSD et 58 disques NL-SAS)*
++
+image::../media/sg5760_drive.gif[Lecteur]
+
+* *Quatre poignées*
++
+image::../media/handles.gif[Poignées SG5760]
+
+* *Supports arrière et écrous de cage pour l'installation de rack à trous carrés*
++
+image::../media/back_brackets_table_size.gif[Supports arrière et écrous de cage pour SG5760]
+
+
+
+
+
+== SG6060 et SG6060X tiroir d'extension
+
+* *Tiroir d'extension sans disque installé*
++
+image::../media/de460c_table_size.gif[Appliance SG5760 4U]
+
+* *Cadre avant*
++
+image::../media/front_bezel_for_table_de460c.gif[Panneau avant DE460C]
+
+* *60 disques NL-SAS*
++
+image::../media/sg5760_drive.gif[Lecteur]
+
+* *Un kit de rails avec instructions*
++
+image::../media/rail_kit.gif[Kit de rails]
+
+* *Quatre poignées*
++
+image::../media/handles.gif[Poignées SG5760]
+
+* *Supports arrière et écrous de cage pour l'installation de rack à trous carrés*
++
+image::../media/back_brackets_table_size.gif[Supports arrière et écrous de cage pour SG5760]
+
+
+
+
+
+== SGF6024
+
+* *Contrôleur SG6000-CN*
++
+image::../media/sg6000_cn_front_without_bezel.gif[Contrôleur SG6000-CN]
+
+* *Baie Flash EF570 avec 24 disques SSD (Flash) installés*
++
+image::../media/de224c_with_drives.gif[Tiroir contrôleur EF570]
+
+* *Deux cadres avant*
++
+image::../media/sgf6024_front_bezels_for_table.png[Encadrements avant SG6024]
+
+* *Deux kits de rails avec instructions*
++
+image::../media/rail_kit.gif[Kit de rails]
+
+* *Têtes de gondole des étagères*
++
+image::../media/endcaps.png[Têtes de gondole]
+
+
+
+
+
+== Câbles et connecteurs
+
+Le produit de livraison du dispositif StorageGRID comprend les câbles et connecteurs suivants :
+
+* *Quatre cordons d'alimentation pour votre pays*
++
+image::../media/power_cords.gif[Cordons d'alimentation]
+
++
+Il se peut que votre armoire soit équipée de cordons d'alimentation spéciaux à la place des câbles d'alimentation fournis avec l'appliance.
+
+* *Câbles optiques et émetteurs-récepteurs SFP*
++
+image::../media/fc_cable_and_sfp.gif[Câbles optiques et SFP]
+
++
+Quatre câbles optiques pour les ports d'interconnexion FC
+
++
+Quatre émetteurs-récepteurs SFP+ prenant en charge le protocole FC 16 Gbit/s.
+
+* *Facultatif : deux câbles SAS pour la connexion de chaque tiroir d'extension SG6060 ou SG6060X*
++
+image::../media/sas_cable.gif[Câbles SAS]
+
+

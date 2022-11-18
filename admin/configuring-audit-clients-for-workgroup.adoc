@@ -1,0 +1,168 @@
+---
+permalink: admin/configuring-audit-clients-for-workgroup.html 
+sidebar: sidebar 
+keywords: audit client for workgroup 
+summary: 'Effectuez cette procédure pour chaque nœud d"administration d"un déploiement StorageGRID à partir duquel vous souhaitez récupérer des messages d"audit.' 
+---
+= Configurer les clients d'audit pour Workgroup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Effectuez cette procédure pour chaque nœud d'administration d'un déploiement StorageGRID à partir duquel vous souhaitez récupérer des messages d'audit.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous avez le `Passwords.txt` Fichier avec le mot de passe du compte root/admin (disponible dans LEDIT paquet).
+* Vous avez le `Configuration.txt` Fichier (disponible dans LEDIT paquet).
+
+
+L'exportation d'audit via CIFS/Samba a été obsolète et sera supprimée dans une future version de StorageGRID.
+
+.Étapes
+. Connectez-vous au nœud d'administration principal :
++
+.. Saisissez la commande suivante : `ssh admin@_primary_Admin_Node_IP_`
+.. Entrez le mot de passe indiqué dans le `Passwords.txt` fichier.
+.. Entrez la commande suivante pour passer à la racine : `su -`
+.. Entrez le mot de passe indiqué dans le `Passwords.txt` fichier.
++
+Lorsque vous êtes connecté en tant que root, l'invite passe de `$` à `#`.
+
+
+
+. Vérifiez que tous les services sont en cours d'exécution ou vérifiés : `storagegrid-status`
++
+Si tous les services ne sont pas en cours d'exécution ou vérifiés, résolvez les problèmes avant de continuer.
+
+. Revenez à la ligne de commande, appuyez sur *Ctrl*+*C*.
+. Démarrez l'utilitaire de configuration CIFS : `config_cifs.rb`
++
+[listing]
+----
+
+---------------------------------------------------------------------
+| Shares                 | Authentication         | Config          |
+---------------------------------------------------------------------
+| add-audit-share        | set-authentication     | validate-config |
+| enable-disable-share   | set-netbios-name       | help            |
+| add-user-to-share      | join-domain            | exit            |
+| remove-user-from-share | add-password-server    |                 |
+| modify-group           | remove-password-server |                 |
+|                        | add-wins-server        |                 |
+|                        | remove-wins-server     |                 |
+---------------------------------------------------------------------
+----
+. Définissez l'authentification pour le groupe de travail Windows :
++
+Si l'authentification a déjà été définie, un message d'avertissement s'affiche. Si l'authentification a déjà été définie, passez à l'étape suivante.
+
++
+.. Entrez : `set-authentication`
+.. Lorsque vous êtes invité à installer Windows Workgroup ou Active Directory, entrez : `workgroup`
+.. Lorsque vous y êtes invité, entrez le nom du groupe de travail : `_workgroup_name_`
+.. Lorsque vous y êtes invité, créez un nom NetBIOS significatif : `_netbios_name_`
++
+ou
+
++
+Appuyez sur *entrée* pour utiliser le nom d'hôte du noeud d'administration comme nom NetBIOS.
+
++
+Le script redémarre le serveur Samba et des modifications sont appliquées. Cela devrait prendre moins d'une minute. Une fois l'authentification définie, ajoutez un client d'audit.
+
+.. Lorsque vous y êtes invité, appuyez sur *entrée*.
++
+L'utilitaire de configuration CIFS s'affiche.
+
+
+
+. Ajouter un client d'audit :
++
+.. Entrez : `add-audit-share`
++
+
+NOTE: Le partage est automatiquement ajouté en lecture seule.
+
+.. Lorsque vous y êtes invité, ajoutez un utilisateur ou un groupe : `_user_`
+.. Lorsque vous y êtes invité, entrez le nom d'utilisateur de l'audit : `_audit_user_name_`
+.. Lorsque vous y êtes invité, entrez un mot de passe pour l'utilisateur d'audit : `_password_`
+.. Lorsque vous y êtes invité, saisissez à nouveau le même mot de passe pour le confirmer : `_password_`
+.. Lorsque vous y êtes invité, appuyez sur *entrée*.
++
+L'utilitaire de configuration CIFS s'affiche.
+
+
+
++
+
+NOTE: Il n'est pas nécessaire d'entrer un répertoire. Le nom du répertoire d'audit est prédéfini.
+
+. Si plusieurs utilisateurs ou groupes sont autorisés à accéder au partage d'audit, ajoutez-les :
++
+.. Entrez : `add-user-to-share`
++
+Une liste numérotée des partages activés s'affiche.
+
+.. Lorsque vous y êtes invité, entrez le numéro du partage audit-exportation : `_share_number_`
+.. Lorsque vous y êtes invité, ajoutez un utilisateur ou un groupe : `user`
++
+ou `group`
+
+.. Lorsque vous y êtes invité, entrez le nom de l'utilisateur ou du groupe d'audit : `_audit_user or audit_group_`
+.. Lorsque vous y êtes invité, appuyez sur *entrée*.
++
+L'utilitaire de configuration CIFS s'affiche.
+
+.. Répétez ces sous-étapes pour chaque utilisateur ou groupe supplémentaire ayant accès au partage d'audit.
+
+
+. Vérifiez éventuellement votre configuration : `validate-config`
++
+Les services sont vérifiés et affichés. Vous pouvez ignorer en toute sécurité les messages suivants :
+
++
+[listing]
+----
+Can't find include file /etc/samba/includes/cifs-interfaces.inc
+Can't find include file /etc/samba/includes/cifs-filesystem.inc
+Can't find include file /etc/samba/includes/cifs-custom-config.inc
+Can't find include file /etc/samba/includes/cifs-shares.inc
+rlimit_max: increasing rlimit_max (1024) to minimum Windows limit (16384)
+----
++
+.. Lorsque vous y êtes invité, appuyez sur *entrée*.
++
+La configuration du client d'audit s'affiche.
+
+.. Lorsque vous y êtes invité, appuyez sur *entrée*.
++
+L'utilitaire de configuration CIFS s'affiche.
+
+
+
+. Fermez l'utilitaire de configuration CIFS : `exit`
+. Démarrez le service Samba : `service smbd start`
+. Si le déploiement de StorageGRID est un site unique, passez à l'étape suivante.
++
+ou
+
++
+Si le déploiement de StorageGRID inclut des nœuds d'administration sur d'autres sites, activez ce partage d'audit comme requis :
+
++
+.. Connectez-vous à distance au nœud d'administration d'un site :
++
+... Saisissez la commande suivante : `ssh admin@_grid_node_IP_`
+... Entrez le mot de passe indiqué dans le `Passwords.txt` fichier.
+... Entrez la commande suivante pour passer à la racine : `su -`
+... Entrez le mot de passe indiqué dans le `Passwords.txt` fichier.
+
+
+.. Répétez les étapes pour configurer le partage d'audit pour chaque nœud d'administration supplémentaire.
+.. Fermez la connexion du shell sécurisé distant au nœud d'administration distant : `exit`
+
+
+. Déconnectez-vous du shell de commande : `exit`
+

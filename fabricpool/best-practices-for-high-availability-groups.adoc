@@ -1,0 +1,49 @@
+---
+permalink: fabricpool/best-practices-for-high-availability-groups.html 
+sidebar: sidebar 
+keywords: fabricPool, high availability group, HA group, active-active, active-backup, cloud tier, best practices 
+summary: 'Avant d"associer StorageGRID en tant que Tier cloud FabricPool, nous vous recommandons d"utiliser StorageGRID Grid Manager pour configurer un groupe haute disponibilité \(HA\).' 
+---
+= Meilleures pratiques pour les groupes à haute disponibilité
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'associer StorageGRID en tant que niveau cloud FabricPool, vous devez utiliser StorageGRID Grid Manager pour configurer un groupe haute disponibilité (HA).
+
+
+
+== Qu'est-ce qu'un groupe haute disponibilité ?
+
+Pour s'assurer que le service Load Balancer est toujours disponible pour gérer les données FabricPool, vous pouvez regrouper les interfaces réseau de plusieurs nœuds d'administration et de passerelle dans une seule entité, appelée groupe haute disponibilité. Si le nœud actif du groupe haute disponibilité tombe en panne, un autre nœud du groupe peut continuer à gérer le workload.
+
+Chaque groupe haute disponibilité fournit un accès hautement disponible aux services partagés sur les nœuds associés. Par exemple, un groupe haute disponibilité qui se compose d'interfaces uniquement sur les nœuds de passerelle ou sur les deux nœuds d'administration et de passerelle fournit un accès hautement disponible au service Load Balancer partagé.
+
+Pour créer un groupe haute disponibilité, effectuez la procédure suivante :
+
+. Sélectionnez les interfaces réseau pour un ou plusieurs nœuds d'administration ou de passerelle. Vous pouvez sélectionner l'interface réseau Grid (eth0), l'interface réseau client (eth2) ou une interface VLAN.
++
+
+IMPORTANT: Si vous envisagez d'utiliser une interface VLAN pour isoler le trafic FabricPool, un administrateur réseau doit d'abord configurer une interface de jonction et le VLAN correspondant. Chaque VLAN est identifié par un ID numérique ou une balise. Par exemple, votre réseau peut utiliser le VLAN 100 pour le trafic FabricPool.
+
+. Attribuez une ou plusieurs adresses IP virtuelles (VIP) au groupe. Les applications clients, telles que FabricPool, peuvent utiliser n'importe laquelle de ces adresses VIP pour se connecter à StorageGRID.
+. Spécifiez une interface à utiliser comme interface principale et déterminez l'ordre de priorité des interfaces de sauvegarde. L'interface principale est l'interface active, sauf en cas de défaillance.
+
+
+Si le groupe haute disponibilité comprend plusieurs interfaces et que l'interface principale échoue, les adresses VIP passent à la première interface de sauvegarde dans l'ordre de priorité. Si cette interface échoue, les adresses VIP passent à l'interface de sauvegarde suivante, etc. Ce processus de basculement ne prend généralement que quelques secondes et est suffisamment rapide pour que les applications clientes aient peu d'impact et peuvent compter sur des comportements de tentatives normales pour poursuivre le fonctionnement.
+
+Lorsque la panne est résolue et qu'une interface de priorité supérieure est à nouveau disponible, les adresses VIP sont automatiquement transférées vers l'interface de priorité la plus élevée disponible.
+
+
+
+== Bonnes pratiques pour les groupes à haute disponibilité (HA)
+
+Les bonnes pratiques de création d'un groupe StorageGRID HA pour FabricPool reposent sur le workload, comme suit :
+
+* Si vous envisagez d'utiliser FabricPool avec les données de charge de travail principale, vous devez créer un groupe haute disponibilité qui inclut au moins deux nœuds d'équilibrage de la charge afin d'éviter toute interruption de la récupération des données.
+* Si vous prévoyez d'utiliser la règle de Tiering de volume FabricPool snapshot uniquement ou des tiers de performance locaux non principaux (par exemple, emplacements de reprise après incident ou destinations NetApp SnapMirror®), vous pouvez configurer un groupe haute disponibilité avec un seul nœud.
+
+
+Ces instructions décrivent la configuration d'un groupe haute disponibilité pour Active-Backup HA (un nœud est actif et un nœud est une sauvegarde). Cependant, vous préférez peut-être utiliser DNS Round Robin ou Active-Active HA. Pour découvrir les avantages de ces autres configurations haute disponibilité, consultez xref:../admin/configuration-options-for-ha-groups.adoc[Options de configuration pour les groupes haute disponibilité].

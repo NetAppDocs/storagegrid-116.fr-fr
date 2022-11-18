@@ -1,0 +1,42 @@
+---
+permalink: sg5600/obtaining-additional-equipment-and-tools-sg5600.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, additional, equipment, tools 
+summary: 'Avant d"installer l"appliance SG5600, vérifiez que vous disposez de tous les équipements et outils supplémentaires dont vous avez besoin.' 
+---
+= Obtention d'équipements et d'outils supplémentaires (SG5600)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'installer l'appliance SG5600, vérifiez que vous disposez de tous les équipements et outils supplémentaires dont vous avez besoin.
+
+* *Tournevis*
++
+image::../media/appliance_screwdrivers.gif[Tournevis]
+
++
+N° Phillips 2 tournevis
+
++
+Tournevis plat de taille moyenne
+
+* * Bracelet antistatique*
++
+image::../media/appliance_wriststrap.gif[Bracelet antistatique]
+
+* *Câbles Ethernet*
++
+image::../media/appliance_ethernet_cables.gif[Câbles Ethernet]
+
+* *Commutateur Ethernet*
++
+image::../media/appliance_ethernet_switch_network_hub.gif[Concentrateur Ethernet]
+
+* *Ordinateur portable de service*xref:../admin/web-browser-requirements.adoc[Navigateur Web pris en charge]
++
+image::../media/appliance_laptop.gif[Station de gestion]
+
+

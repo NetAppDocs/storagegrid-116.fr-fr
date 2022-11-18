@@ -1,0 +1,84 @@
+---
+permalink: rhel/where-to-go-next.html 
+sidebar: sidebar 
+keywords: what to do after red hat linux centos installation 
+summary: 'Une fois l"installation terminée, vous devez effectuer une série d"étapes d"intégration et de configuration. Certaines étapes sont nécessaires ; d"autres sont facultatives.' 
+---
+= Par où aller plus loin
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Une fois l'installation terminée, vous devez effectuer une série d'étapes d'intégration et de configuration. Certaines étapes sont nécessaires ; d'autres sont facultatives.
+
+
+
+== Tâches requises
+
+* Créez un compte de locataire pour chaque protocole client (Swift ou S3) qui servira à stocker des objets sur votre système StorageGRID.
+* Contrôlez l'accès au système en configurant des groupes et des comptes utilisateur. Vous pouvez également configurer un référentiel d'identité fédéré (tel qu'Active Directory ou OpenLDAP) pour pouvoir importer des groupes et des utilisateurs d'administration. Vous pouvez également créer des groupes et des utilisateurs locaux.
+* Intégrez et testez les applications client de l'API S3 ou Swift que vous utiliserez pour charger des objets sur votre système StorageGRID.
+* Une fois prêt, configurez les règles de gestion du cycle de vie des informations (ILM) et les règles ILM que vous souhaitez utiliser pour protéger les données d'objets.
++
+
+NOTE: Lorsque vous installez StorageGRID, la règle ILM par défaut, règle de base 2 copies, est active. Cette politique inclut la règle ILM du stock (2 copies) et s'applique si aucune autre règle n'a été activée.
+
+* Si votre installation inclut des nœuds de stockage pour appliance, utilisez le logiciel SANtricity pour effectuer les tâches suivantes :
++
+** Connectez-vous à chaque appliance StorageGRID.
+** Vérifiez la réception des données AutoSupport.
+
+
+* Si votre système StorageGRID inclut des nœuds d'archivage, configurez la connexion du nœud d'archivage au système de stockage d'archivage externe cible.
+
+
+
+NOTE: Si des nœuds d'archivage utilisent Tivoli Storage Manager comme système de stockage d'archivage externe, vous devez également configurer Tivoli Storage Manager.
+
+* Examinez et respectez les directives de renforcement du système StorageGRID afin d'éliminer les risques de sécurité.
+* Configurez les notifications par e-mail pour les alertes système.
+
+
+
+
+== Tâches facultatives
+
+* Si vous souhaitez recevoir des notifications du système d'alarme (hérité), configurez des listes de diffusion et des notifications par e-mail pour les alarmes.
+* Mettez à jour les adresses IP du nœud de grille s'ils ont changé depuis que vous avez planifié votre déploiement et généré le progiciel de restauration. Reportez-vous aux informations sur la modification des adresses IP dans les instructions de récupération et de maintenance.
+* Configurer le chiffrement du stockage, si nécessaire.
+* Configurer la compression du stockage pour réduire la taille des objets stockés, si nécessaire.
+* Configurez l'accès client d'audit. Vous pouvez configurer l'accès au système à des fins d'audit via un partage de fichiers NFS ou CIFS. Voir les instructions d'administration de StorageGRID.
+
+
+
+NOTE: L'exportation d'audit via CIFS/Samba a été obsolète et sera supprimée dans une future version de StorageGRID.
+
+xref:../admin/index.adoc[Administrer StorageGRID]
+
+xref:../s3/index.adoc[Utilisation de S3]
+
+xref:../swift/index.adoc[Utiliser Swift]
+
+xref:../ilm/index.adoc[Gestion des objets avec ILM]
+
+xref:../monitor/index.adoc[Surveiller et résoudre les problèmes]
+
+xref:../maintain/index.adoc[Récupérer et entretenir]
+
+xref:../sg100-1000/index.adoc[Appareils de services SG100 et SG1000]
+
+xref:../sg5600/index.adoc[Appliances de stockage SG5600]
+
+xref:../sg5700/index.adoc[Appliances de stockage SG5700]
+
+xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
+
+xref:../release-notes/index.adoc[Notes de mise à jour]
+
+xref:../harden/index.adoc[Durcissement du système]
+
+xref:../audit/index.adoc[Examiner les journaux d'audit]
+
+xref:../upgrade/index.adoc[Mise à niveau du logiciel]

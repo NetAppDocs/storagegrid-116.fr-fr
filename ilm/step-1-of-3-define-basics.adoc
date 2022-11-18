@@ -1,0 +1,61 @@
+---
+permalink: ilm/step-1-of-3-define-basics.html 
+sidebar: sidebar 
+keywords: ILM rule step 1, define basics 
+summary: 'Étape 1 \(Define Basics\) de l’assistant Create ILM Rule (Créer une règle ILM) vous permet de définir les filtres de base et avancés de la règle.' 
+---
+= Étape 1 sur 3 : définir les bases
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'étape 1 (Define Basics) de l'assistant Create ILM Rule (Créer une règle ILM) vous permet de définir les filtres de base et avancés de la règle.
+
+Lors de l'évaluation d'un objet par rapport à une règle ILM, StorageGRID compare les métadonnées d'objet aux filtres de la règle. Si les métadonnées correspondent à tous les filtres, StorageGRID utilise la règle pour placer l'objet. Vous pouvez concevoir une règle à appliquer à tous les objets, ou spécifier des filtres de base, tels qu'un ou plusieurs comptes de locataire, noms de compartiment ou filtres avancés, tels que la taille de l'objet ou les métadonnées utilisateur.
+
+image::../media/ilm_create_ilm_rule_wizard_1.png[Créer une règle ILM étape 1 sur 3]
+
+.Étapes
+. Entrez un nom unique pour la règle dans le champ *Nom*.
++
+Vous devez entrer entre 1 et 64 caractères.
+
+. Vous pouvez également saisir une brève description de la règle dans le champ *Description*.
++
+Vous devez décrire le but ou la fonction de la règle afin de pouvoir reconnaître la règle ultérieurement.
+
++
+image::../media/ilm_rule_wizard_name_description.gif[Nom et description de la règle]
+
+. Vous pouvez également sélectionner un ou plusieurs comptes de locataires S3 ou Swift auxquels s'applique cette règle. Si cette règle s'applique à tous les locataires, laissez ce champ vide.
++
+Si vous ne disposez pas des droits d'accès racine ou aux comptes de tenant, vous ne pouvez pas sélectionner de locataires dans la liste. Entrez plutôt l'ID de tenant ou entrez plusieurs ID comme une chaîne délimitée par des virgules.
+
+. Vous pouvez également spécifier les compartiments S3 ou les conteneurs Swift auxquels s'applique cette règle.
++
+Si *correspond à tout* est sélectionné (par défaut), la règle s'applique à tous les compartiments S3 ou conteneurs Swift.
+
+. Vous pouvez également sélectionner *filtre avancé* pour spécifier des filtres supplémentaires.
++
+Si vous ne configurez pas le filtrage avancé, la règle s'applique à tous les objets qui correspondent aux filtres de base.
+
++
+Si cette règle crée des copies avec code d'effacement, ajoutez le filtre avancé *Object Size (MB)* et définissez-le sur *supérieur à 1*. Le filtre de taille garantit que les objets de 1 Mo ou plus petits ne sont pas codés d'effacement.
+
++
+
+IMPORTANT: Le codage d'effacement convient mieux aux objets de plus de 1 Mo. N'utilisez pas le code d'effacement pour des objets de moins de 200 Ko afin d'éviter toute surcharge liée à la gestion de fragments très petits codés d'effacement.
+
+. Sélectionnez *Suivant*.
++
+L'étape 2 (définir les Placements) s'affiche.
+
+
+
+.Informations associées
+* xref:what-ilm-rule-is.adoc[Définition d'une règle ILM]
+* xref:using-advanced-filters-in-ilm-rules.adoc[Utilisation de filtres avancés dans les règles ILM]
+* xref:step-2-of-3-define-placements.adoc[Étape 2 sur 3 : définir les placements]
+

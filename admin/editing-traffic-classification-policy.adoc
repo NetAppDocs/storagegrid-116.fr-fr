@@ -1,0 +1,49 @@
+---
+permalink: admin/editing-traffic-classification-policy.html 
+sidebar: sidebar 
+keywords: edit traffic classification policy 
+summary: Vous pouvez modifier une stratégie de classification de trafic pour modifier son nom ou sa description, ou pour créer, modifier ou supprimer des règles ou des limites de la stratégie. 
+---
+= Modifier une règle de classification de trafic
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez modifier une stratégie de classification de trafic pour modifier son nom ou sa description, ou pour créer, modifier ou supprimer des règles ou des limites de la stratégie.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous disposez de l'autorisation d'accès racine.
+
+
+.Étapes
+. Sélectionnez *CONFIGURATION* *réseau* *classification du trafic*.
++
+La page règles de classification du trafic s'affiche et les stratégies existantes sont répertoriées dans le tableau.
+
++
+image::../media/traffic_classification_policies_main_screen_w_examples.png[Exemples de politique de classification du trafic]
+
+. Sélectionnez le bouton radio à gauche de la police que vous souhaitez modifier.
+. Sélectionnez *Modifier*.
++
+La boîte de dialogue Modifier la stratégie de classification de trafic s'affiche.
+
++
+image::../media/traffic_classification_policy_edit.png[Modifier la règle de classification du trafic]
+
+. Créez, modifiez ou supprimez des règles et des limites de correspondance selon les besoins.
++
+.. Pour créer une règle ou une limite de correspondance, sélectionnez *Créer* et suivez les instructions pour créer une règle ou créer une limite.
+.. Pour modifier une règle ou une limite de correspondance, sélectionnez le bouton radio de la règle ou de la limite, sélectionnez *Modifier* dans la section *règles de mise en correspondance* ou *limites* et suivez les instructions pour créer une règle ou créer une limite.
+.. Pour supprimer une règle ou une limite correspondante, sélectionnez le bouton radio de la règle ou de la limite, puis sélectionnez *Supprimer*. Sélectionnez ensuite *OK* pour confirmer que vous souhaitez supprimer la règle ou la limite.
+
+
+. Lorsque vous avez terminé de créer ou de modifier une règle ou une limite, sélectionnez *appliquer*.
+. Lorsque vous avez terminé de modifier la stratégie, sélectionnez *Enregistrer*.
++
+Les modifications apportées à la stratégie sont enregistrées et le trafic réseau est désormais géré conformément aux règles de classification du trafic. Vous pouvez afficher les diagrammes de trafic et vérifier que les stratégies appliquent les limites de trafic auxquelles vous vous attendez.
+
+

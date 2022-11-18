@@ -1,0 +1,76 @@
+---
+permalink: fabricpool/index.html 
+sidebar: sidebar 
+keywords: how to configure storagegrid for fabricpool, using fabricpool with storagegrid, 
+summary: Si vous utilisez NetApp ONTAP, FabricPool vous pouvez effectuer le Tiering des données inactives ou inactives vers un système de stockage objet NetApp StorageGRID. 
+---
+= Configurer StorageGRID pour FabricPool : présentation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous utilisez NetApp ONTAP, FabricPool vous pouvez effectuer le Tiering des données inactives ou inactives vers un système de stockage objet NetApp StorageGRID.
+
+
+
+== À propos de ces instructions
+
+Suivez ces instructions pour :
+
+* Découvrez comment configurer un système de stockage objet StorageGRID utilisé avec FabricPool.
+* Découvrez comment obtenir les informations qu'il vous faut lorsque vous associez StorageGRID en tant que Tier cloud FabricPool à ONTAP.
+* Découvrez les bonnes pratiques de configuration de la règle StorageGRID de gestion du cycle de vie des informations (ILM), une politique de classification du trafic StorageGRID et d'autres options StorageGRID pour une charge de travail FabricPool.
+
+
+
+
+== Flux de travail de configuration
+
+image::../media/fabricpool_storagegrid_workflow.png[Flux de travail FabricPool StorageGRID]
+
+
+
+== Avant de commencer
+
+* Déterminez quelle règle de Tiering des volumes FabricPool vous utiliserez pour effectuer le Tiering des données ONTAP inactives vers StorageGRID.
+* Planifiez et installez un système StorageGRID pour répondre à vos besoins en capacité de stockage et en performances.
+* Familiarisez-vous avec le logiciel système StorageGRID, y compris le gestionnaire de grid et le gestionnaire de locataires.
+* Consultez les ressources supplémentaires suivantes, qui fournissent des informations détaillées sur l'utilisation et la configuration de FabricPool :
++
+** https://www.netapp.com/pdf.html?item=/media/17239-tr4598pdf.pdf["Tr-4598 : meilleures pratiques de FabricPool dans ONTAP 9.9.1"^]
+** https://docs.netapp.com/us-en/ontap/index.html["Documentation ONTAP 9"^]
+
+
+
+
+
+
+== Qu'est-ce que FabricPool ?
+
+FabricPool est une solution de stockage hybride ONTAP qui utilise un agrégat Flash haute performance comme Tier de performance et un magasin d'objets comme Tier cloud. Les données sont stockées sur le support de stockage primaire ou dans le datastore d'objets, selon qu'elles soient utilisées fréquemment. Les agrégats compatibles FabricPool vous permettent de réduire les coûts de stockage sans nuire aux performances, à l'efficacité ou à la protection.
+
+Aucune modification de l'architecture n'est requise. Vous pouvez continuer à gérer vos données et votre environnement applicatif à partir du système de stockage ONTAP central.
+
+
+
+== Qu'est-ce que StorageGRID ?
+
+StorageGRID est une architecture de stockage qui gère les données comme des objets, et non plus comme d'autres architectures de stockage, telles que le stockage de fichiers ou en blocs. Les objets sont conservés dans un seul conteneur (par exemple, un compartiment) et ne sont pas imbriqués dans un répertoire dans d'autres répertoires. Le stockage objet offre généralement des performances moins élevées que le stockage en mode bloc ou fichier, mais il présente aussi l'évolutivité la plus remarquable. Les compartiments StorageGRID peuvent contenir des pétaoctets de données et des milliards d'objets.
+
+
+
+== Pourquoi utiliser StorageGRID comme Tier cloud FabricPool ?
+
+FabricPool peut procéder au Tiering des données ONTAP vers plusieurs fournisseurs de magasins d'objets, y compris StorageGRID. Contrairement aux clouds publics qui peuvent fixer un nombre maximal d'opérations d'entrée/sortie par seconde (IOPS) pris en charge au niveau du compartiment ou du conteneur, les performances StorageGRID évoluent en fonction du nombre de nœuds qu'un système permet. En utilisant StorageGRID comme Tier cloud FabricPool, vous pouvez conserver vos données inactives dans votre propre cloud privé et bénéficier d'une performance optimale et d'un contrôle total sur vos données.
+
+En outre, vous n'avez pas besoin d'une licence FabricPool lorsque vous utilisez StorageGRID en tant que Tier cloud.
+
+
+
+== Est-il possible d'utiliser plusieurs clusters ONTAP avec StorageGRID ?
+
+Ces instructions expliquent comment connecter StorageGRID à un seul cluster ONTAP. Vous pouvez cependant connecter le même système StorageGRID à plusieurs clusters ONTAP.
+
+Vous devez utiliser un compartiment S3 différent pour chaque cluster afin de pouvoir effectuer le Tiering des données depuis plusieurs clusters ONTAP vers un seul système StorageGRID. Selon vos exigences, vous pouvez utiliser le même groupe haute disponibilité, le même point de terminaison d'équilibrage de charge et le même compte de locataire pour tous les clusters. Vous pouvez également configurer chacun de ces éléments pour chaque cluster.

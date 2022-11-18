@@ -1,0 +1,61 @@
+---
+permalink: sg5600/hardware-setup-progress-appears-to-hang.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, troubleshoot, troubleshooting, hardware, setup, hang, hangs, fails, failure, stop, terminate, terminates, stuck 
+summary: 'Il est possible que le programme d"installation de l"appliance StorageGRID ne soit pas disponible si des défaillances matérielles ou des erreurs de câblage empêchent le contrôleur E5600SG d"exécuter son processus de démarrage.' 
+---
+= La configuration du matériel semble s'suspendre (SG5600)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il est possible que le programme d'installation de l'appliance StorageGRID ne soit pas disponible si des défaillances matérielles ou des erreurs de câblage empêchent le contrôleur E5600SG d'exécuter son processus de démarrage.
+
+.Étapes
+. Vérifiez le voyant d'avertissement requis sur l'un des contrôleurs et recherchez un code d'erreur clignotant.
++
+Pendant la mise sous tension, les voyants action de service autorisée et action de service requise sont allumés pendant l'initialisation du matériel. La virgule supérieure du chiffre inférieur, appelée _diagnostic LED_, s'allume également. L'écran à sept segments s'exécute sur une séquence de codes communs aux deux contrôleurs. Ceci est normal et n'indique pas une erreur. Lorsque le matériel démarre correctement, les voyants d'action de service sont éteints et les écrans sont pilotés par le micrologiciel.
+
+. Examiner les codes sur l'affichage à sept segments du contrôleur E5600SG.
++
+
+NOTE: L'installation et le provisionnement prennent du temps. Certaines phases d'installation ne signalent pas les mises à jour du programme d'installation de l'appliance StorageGRID pendant plusieurs minutes.
+
++
+En cas d'erreur, l'affichage à sept segments clignote une séquence, telle QU'IL.
+
+. Pour comprendre la signification de ces codes, consultez les ressources suivantes :
++
+|===
+| Contrôleur | Référence 
+
+
+ a| 
+Contrôleur E5600SG
+ a| 
+** « Erreur : erreur lors de la synchronisation avec le logiciel SANtricity OS »
+** « Codes d'affichage sept segments du contrôleur E5600SG »
+
+
+
+
+ a| 
+Contrôleur E2700
+ a| 
+Documentation E-Series
+
+*Remarque :* les codes décrits pour le contrôleur E-Series E5600 ne s'appliquent pas au contrôleur E5600SG de l'appliance.
+
+|===
+. Si ce n'est pas le cas, contactez le support technique.
+
+
+xref:e5600sg-controller-seven-segment-display-codes.adoc[Codes d'affichage sept segments du contrôleur E5600SG]
+
+xref:he-error-error-synchronizing-with-santricity-os-software.adoc[Erreur : erreur de synchronisation avec le logiciel SANtricity OS]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2344477["Guide d'installation du tiroir contrôleur E2700 et des tiroirs disques associés"^]
+
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61765["Documentation NetApp : gamme E2700"^]

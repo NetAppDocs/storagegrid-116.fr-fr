@@ -1,0 +1,84 @@
+---
+permalink: tenant/creating-groups-for-s3-tenant.html 
+sidebar: sidebar 
+keywords: how to create S3 tenant groups 
+summary: 'Vous pouvez gérer les autorisations des groupes d"utilisateurs S3 en important des groupes fédérés ou en créant des groupes locaux.' 
+---
+= Créez des groupes pour un locataire S3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez gérer les autorisations des groupes d'utilisateurs S3 en important des groupes fédérés ou en créant des groupes locaux.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous devez être connecté au Gestionnaire de locataires à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous devez appartenir à un groupe d'utilisateurs qui dispose de l'autorisation accès racine. Voir xref:tenant-management-permissions.adoc[Autorisations de gestion des locataires].
+* Si vous envisagez d'importer un groupe fédéré, vous avez configuré la fédération des identités et le groupe fédéré existe déjà dans le référentiel d'identité configuré.
+
+
+Pour plus d'informations sur S3, reportez-vous à la section xref:../s3/index.adoc[Utilisation de S3].
+
+.Étapes
+. Sélectionnez *ACCESS MANAGEMENT* *Groups*.
++
+image::../media/tenant_add_groups_example.png[Capture d'écran affichant la page Access Control Groups]
+
+. Sélectionnez *Créer groupe*.
+. Sélectionnez l'onglet *Groupe local* pour créer un groupe local ou sélectionnez l'onglet *Groupe fédéré* pour importer un groupe à partir du référentiel d'identité configuré précédemment.
++
+Si l'authentification unique (SSO) est activée pour votre système StorageGRID, les utilisateurs appartenant à des groupes locaux ne pourront pas se connecter au Gestionnaire de locataires, bien qu'ils puissent utiliser les applications client pour gérer les ressources du locataire, en fonction des autorisations de groupe.
+
+. Entrez le nom du groupe.
++
+** *Groupe local* : saisissez à la fois un nom d'affichage et un nom unique. Vous pouvez modifier le nom d'affichage ultérieurement.
+** *Groupe fédéré* : saisissez le nom unique. Pour Active Directory, le nom unique est le nom associé à l' `sAMAccountName` attribut. Pour OpenLDAP, le nom unique est le nom associé à `uid` attribut.
+
+
+. Sélectionnez *Continuer*.
+. Sélectionnez un mode d'accès. Si un utilisateur appartient à plusieurs groupes et qu'un groupe est défini sur lecture seule, l'utilisateur dispose d'un accès en lecture seule à tous les paramètres et fonctions sélectionnés.
++
+** *Read-write* (valeur par défaut) : les utilisateurs peuvent se connecter au Gestionnaire de locataires et gérer la configuration du locataire.
+** *Lecture seule* : les utilisateurs peuvent uniquement afficher les paramètres et les fonctionnalités. Ils ne peuvent pas apporter de modifications ni effectuer d'opérations dans le Gestionnaire des locataires ou l'API de gestion des locataires. Les utilisateurs locaux en lecture seule peuvent modifier leurs propres mots de passe.
+
+
+. Sélectionnez les autorisations de groupe pour ce groupe.
++
+Reportez-vous aux informations sur les autorisations de gestion des locataires.
+
+. Sélectionnez *Continuer*.
+. Sélectionnez une stratégie de groupe pour déterminer quelles autorisations d'accès S3 seront attribuées aux membres de ce groupe.
++
+** *Pas d'accès S3* : par défaut. Les utilisateurs de ce groupe n'ont pas accès aux ressources S3, sauf si l'accès est accordé avec une règle de compartiment. Si vous sélectionnez cette option, seul l'utilisateur root peut accéder aux ressources S3 par défaut.
+** *Accès en lecture seule* : les utilisateurs de ce groupe ont accès en lecture seule aux ressources S3. Par exemple, les utilisateurs de ce groupe peuvent afficher la liste des objets et lire les données d'objet, les métadonnées et les balises. Lorsque vous sélectionnez cette option, la chaîne JSON pour une stratégie de groupe en lecture seule s'affiche dans la zone de texte. Vous ne pouvez pas modifier cette chaîne.
+** *Accès complet* : les utilisateurs de ce groupe ont accès aux ressources S3, y compris aux compartiments. Lorsque vous sélectionnez cette option, la chaîne JSON pour une stratégie de groupe à accès complet s'affiche dans la zone de texte. Vous ne pouvez pas modifier cette chaîne.
+** *Custom* : les utilisateurs du groupe disposent des autorisations que vous spécifiez dans la zone de texte. Pour plus d'informations sur les règles de groupe, notamment la syntaxe du langage et des exemples, reportez-vous aux instructions de mise en œuvre d'une application client S3.
+
+
+. Si vous avez sélectionné *personnalisé*, entrez la stratégie de groupe. Chaque stratégie de groupe a une taille limite de 5,120 octets. Vous devez entrer une chaîne au format JSON valide.
++
+Dans cet exemple, les membres du groupe sont uniquement autorisés à répertorier et accéder à un dossier correspondant à leur nom d'utilisateur (préfixe de clé) dans le champ spécifié. Notez que les autorisations d'accès à partir d'autres stratégies de groupes et de la règle de compartiment doivent être prises en compte lors de la détermination de la confidentialité de ces dossiers.
+
++
+image::../media/tenant_add_group_custom.png[Ajouter une règle de groupe personnalisée au groupe de locataires]
+
+. Sélectionnez le bouton qui s'affiche, selon que vous créez un groupe fédéré ou local :
++
+** Groupe fédéré : *Créer groupe*
+** Groupe local : *Continuer*
+
+
++
+Si vous créez un groupe local, STEP 4 (Ajouter des utilisateurs) apparaît après avoir sélectionné *Continuer*. Cette étape n'apparaît pas pour les groupes fédérés.
+
+. Cochez la case de chaque utilisateur que vous souhaitez ajouter au groupe, puis sélectionnez *Créer groupe*.
++
+Vous pouvez également enregistrer le groupe sans ajouter d'utilisateurs. Vous pouvez ajouter des utilisateurs au groupe ultérieurement ou sélectionner le groupe lorsque vous ajoutez de nouveaux utilisateurs.
+
+. Sélectionnez *Terminer*.
++
+Le groupe que vous avez créé apparaît dans la liste des groupes. L'application des modifications peut prendre jusqu'à 15 minutes à cause de la mise en cache.
+
+

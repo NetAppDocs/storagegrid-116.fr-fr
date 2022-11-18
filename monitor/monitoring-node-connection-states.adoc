@@ -1,0 +1,65 @@
+---
+permalink: monitor/monitoring-node-connection-states.html 
+sidebar: sidebar 
+keywords: monitor, monitoring node connection states, node connection states 
+summary: 'Si un ou plusieurs nœuds sont déconnectés de la grille, les opérations StorageGRID stratégiques peuvent être affectées. Vous devez contrôler l"état de connexion des nœuds et résoudre tout problème dans les plus brefs délais.' 
+---
+= Surveiller les États de connexion du nœud
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si un ou plusieurs nœuds sont déconnectés de la grille, les opérations StorageGRID stratégiques peuvent être affectées. Vous devez contrôler l'état de connexion des nœuds et résoudre tout problème dans les plus brefs délais.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+
+
+Les nœuds peuvent avoir l'un des trois États de connexion suivants :
+
+* *Non connecté - Inconnu* image:../media/icon_alarm_blue_unknown.png["icône bleue du point d'interrogation"]: Le nœud n'est pas connecté à la grille pour une raison inconnue. Par exemple, la connexion réseau entre les nœuds a été perdue ou l'alimentation est coupée. L'alerte *Impossible de communiquer avec le noeud* peut également être déclenchée. D'autres alertes peuvent également être actives. Cette situation exige une attention immédiate.
++
+
+NOTE: Un nœud peut apparaître comme inconnu lors des opérations d'arrêt géré. Dans ces cas, vous pouvez ignorer l'état Inconnu.
+
+* *Non connecté - Arrêt administratif* image:../media/icon_alarm_gray_administratively_down.png["icône questionmark grise"]: Le nœud n'est pas connecté à la grille pour une raison attendue. Par exemple, le nœud ou les services du nœud ont été normalement arrêtés, le nœud est en cours de redémarrage ou le logiciel est mis à niveau. Une ou plusieurs alertes peuvent également être actives.
+* * Connecté* image:../media/icon_alert_green_checkmark.png["icône d'alerte verte coche"]: Le nœud est connecté à la grille.
+
+
+.Étapes
+. Si une icône bleue ou grise apparaît dans le panneau Santé du tableau de bord, cliquez sur l'icône ou sur *Détails de la grille*. (Les icônes bleue ou grise et le lien *Grid details* apparaissent uniquement si au moins un nœud est déconnecté de la grille.)
++
+La page vue d'ensemble du premier nœud bleu de l'arborescence des nœuds s'affiche. S'il n'y a pas de nœuds bleus, la page vue d'ensemble du premier nœud gris de l'arborescence s'affiche.
+
++
+Dans l'exemple, le nœud de stockage nommé DC1-S3 possède une icône bleue. L'état de connexion * du panneau informations sur le nœud est *Inconnu* et l'alerte *Impossible de communiquer avec le noeud* est active. L'alerte indique qu'un ou plusieurs services ne répondent pas ou que le nœud ne peut pas être atteint.
+
++
+image::../media/node_connection_state_blue.png[État de connexion du nœud bleu]
+
+. Si un nœud dispose d'une icône bleue, effectuez la procédure suivante :
++
+.. Sélectionnez chaque alerte dans le tableau et suivez les actions recommandées.
++
+Par exemple, vous devrez peut-être redémarrer un service qui a arrêté ou redémarré l'hôte du nœud.
+
+.. Si vous ne pouvez pas remettre le nœud en ligne, contactez le support technique.
+
+
+. Si un nœud dispose d'une icône grise, effectuez la procédure suivante :
++
+Les nœuds gris sont attendus lors des procédures de maintenance et peuvent être associés à une ou plusieurs alertes. Selon le problème sous-jacent, ces nœuds « hors service administratif » sont souvent remis en ligne sans intervention.
+
++
+.. Passez en revue la section alertes et déterminez si des alertes affectent ce nœud.
+.. Si une ou plusieurs alertes sont actives, sélectionnez chaque alerte dans le tableau et suivez les actions recommandées.
+.. Si vous ne pouvez pas remettre le nœud en ligne, contactez le support technique.
+
+
+
+
+xref:alerts-reference.adoc[Référence des alertes]
+
+xref:../maintain/index.adoc[Récupérer et entretenir]

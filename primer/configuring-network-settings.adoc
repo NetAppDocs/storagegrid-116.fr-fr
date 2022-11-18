@@ -1,0 +1,71 @@
+---
+permalink: primer/configuring-network-settings.html 
+sidebar: sidebar 
+keywords: network settings, configure, configuring, configuration, domain name, virtual hosted-style requests 
+summary: Vous pouvez configurer différents paramètres réseau à partir du Gestionnaire de grille pour affiner le fonctionnement de votre système StorageGRID. 
+---
+= Configurez les paramètres réseau
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez configurer différents paramètres réseau à partir du Gestionnaire de grille pour affiner le fonctionnement de votre système StorageGRID.
+
+
+
+== Noms de domaine
+
+Si vous prévoyez de prendre en charge les demandes de type hébergement virtuel S3, vous devez configurer la liste des noms de domaine de terminaux auxquels les clients S3 se connectent. Voici quelques exemples `s3.example.com`, `s3.example.co.uk`, et `s3-east.example.com`.
+
+Les certificats de serveur configurés doivent correspondre aux noms de domaine de noeud final.
+
+
+
+== Groupes haute disponibilité
+
+Vous pouvez utiliser des groupes HA (haute disponibilité) pour assurer des connexions de données hautement disponibles pour les clients S3 et Swift, ou fournir des connexions extrêmement disponibles à Grid Manager et au tenant Manager.
+
+Lorsque vous créez un groupe haute disponibilité, vous sélectionnez une interface réseau pour un ou plusieurs nœuds. Chaque groupe HA permet d'accéder aux services partagés sur les nœuds sélectionnés.
+
+* Les groupes HAUTE DISPONIBILITÉ, qui incluent des interfaces sur les nœuds de passerelle et les nœuds d'administration ou les deux, fournissent des connexions de données hautement disponibles pour les clients S3 et Swift.
+* Les groupes HAUTE DISPONIBILITÉ qui incluent des interfaces sur les nœuds d'administration n'offrent que des connexions haute disponibilité vers Grid Manager et le Gestionnaire de locataires.
+
+
+Les interfaces peuvent appartenir au réseau Grid Network (eth0), au réseau client (eth2) ou à un réseau VLAN.
+
+Vous pouvez attribuer jusqu'à 10 adresses IP virtuelles (VIP) à chaque groupe haute disponibilité. Vous spécifiez une interface à utiliser comme interface principale et classez toutes les autres interfaces par ordre de priorité. L'interface principale est l'interface active, sauf en cas de défaillance. Si l'interface active échoue, les adresses VIP passent à la première interface de sauvegarde dans l'ordre de priorité. Si cette interface échoue, les adresses VIP passent à l'interface de sauvegarde suivante, etc.
+
+
+
+== Coûts des liens
+
+Vous pouvez ajuster les coûts de la liaison pour tenir compte de la latence entre les sites. Lorsqu'au moins deux sites de data Center existent, les coûts de liaison doivent donner la priorité au site du data Center qui doit fournir un service demandé.
+
+
+
+== Terminaux d'équilibrage de charge
+
+Vous pouvez utiliser un équilibreur de charge pour gérer les workloads d'ingestion et de récupération des clients S3 et Swift. L'équilibrage de la charge optimise la vitesse et la capacité de connexion en distribuant les charges de travail et les connexions entre plusieurs nœuds de stockage.
+
+Si vous souhaitez utiliser le service d'équilibrage de la charge StorageGRID, inclus dans les nœuds d'administration et les nœuds de passerelle, vous devez configurer un ou plusieurs terminaux d'équilibreur de charge. Chaque terminal définit un port de nœud de passerelle ou de nœud d'administration pour les requêtes S3 et Swift destinées aux nœuds de stockage.
+
+
+
+== Classification du trafic
+
+Vous pouvez créer des règles de classification du trafic pour identifier et gérer différents types de trafic réseau, y compris le trafic lié à des compartiments, locataires, sous-réseaux clients ou terminaux d'équilibrage de charge spécifiques. Ces règles peuvent vous aider à limiter le trafic et à surveiller le trafic.
+
+
+
+== Interfaces VLAN
+
+Vous pouvez créer des interfaces VLAN (Virtual LAN) pour isoler et partitionner le trafic pour plus de sécurité, de flexibilité et de performances. Chaque interface VLAN est associée à une ou plusieurs interfaces parents sur les nœuds d'administration et les nœuds de passerelle. Vous pouvez utiliser des interfaces VLAN dans des groupes haute disponibilité et dans des terminaux d'équilibrage de charge pour isoler le trafic client ou administratif par application ou locataire.
+
+Par exemple, votre réseau peut utiliser le VLAN 100 pour le trafic FabricPool et le VLAN 200 pour une application d'archivage.
+
+.Informations associées
+* xref:../admin/index.adoc[Administrer StorageGRID]
+* xref:managing-tenants-and-client-connections.adoc[Gérez les locataires et les connexions clients]
+

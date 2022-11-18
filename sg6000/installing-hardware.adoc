@@ -1,0 +1,14 @@
+---
+permalink: sg6000/installing-hardware.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, hardware, install, installing 
+summary: 'L"installation matérielle implique l"installation du contrôleur SG6000-CN et du contrôleur de stockage dans une armoire ou un rack, la connexion des câbles et l"alimentation.' 
+---
+= Installation du matériel (SG6000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'installation matérielle implique l'installation du contrôleur SG6000-CN et du contrôleur de stockage dans une armoire ou un rack, la connexion des câbles et l'alimentation.

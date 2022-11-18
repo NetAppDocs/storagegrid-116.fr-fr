@@ -1,0 +1,35 @@
+---
+permalink: sg6000/index.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, overview, models, features 
+summary: 'Les appliances StorageGRID SG6000 sont des plateformes de calcul et de stockage intégrées qui fonctionnent comme des nœuds de stockage dans un système StorageGRID. Ces appliances peuvent être utilisées dans un environnement de grid hybride qui combine des nœuds de stockage d"appliance et des nœuds de stockage virtuels \(basés sur logiciel\).' 
+---
+= Appareils SG6000: Présentation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les appliances StorageGRID SG6000 sont des plateformes de calcul et de stockage intégrées qui fonctionnent comme des nœuds de stockage dans un système StorageGRID. Ces appliances peuvent être utilisées dans un environnement de grid hybride qui combine des nœuds de stockage d'appliance et des nœuds de stockage virtuels (basés sur logiciel).
+
+Les appareils SG6000 offrent les fonctionnalités suivantes :
+
+* Disponible en trois modèles :
++
+** SG6060, qui inclut 60 disques, prend en charge les tiroirs d'extension et utilise des contrôleurs E2800A.
+** SG6060X, qui comprend 60 disques, prend en charge les tiroirs d'extension et utilise des contrôleurs E2800B.
++
+
+NOTE: Tandis que les modèles SG6060 et SG6060X ont les mêmes spécifications et fonctionnent, sauf pour l'emplacement des ports d'interconnexion sur les contrôleurs de stockage.
+
+** SGF6024, qui offre 24 disques SSD.
+
+
+* Intégrez les éléments de stockage et de calcul d'un nœud de stockage StorageGRID.
+* Incluez le programme d'installation de l'appliance StorageGRID pour simplifier le déploiement et la configuration des nœuds de stockage.
+* Incluez SANtricity System Manager pour gérer et contrôler les contrôleurs et disques de stockage.
+* Inclut un contrôleur de gestion de base (BMC) pour le contrôle et le diagnostic du matériel du contrôleur de calcul.
+* Prenez en charge jusqu'à quatre connexions 10 GbE ou 25 GbE avec le réseau Grid et le réseau client StorageGRID.
+* Prise en charge des disques FIPS (Federal information Processing Standard) Lorsque ces disques sont utilisés avec la fonction de sécurité des disques dans SANtricity System Manager, l'accès non autorisé aux données n'est pas autorisé.
+

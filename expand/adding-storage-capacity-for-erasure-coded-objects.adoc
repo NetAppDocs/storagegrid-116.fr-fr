@@ -1,0 +1,145 @@
+---
+permalink: expand/adding-storage-capacity-for-erasure-coded-objects.html 
+sidebar: sidebar 
+keywords: erasure coding, capacity, storage nodes, ec, expand, expansion 
+summary: 'Si votre règle ILM comprend une règle qui effectue des copies avec code d"effacement, vous devez prévoir où ajouter du stockage, et quand ajouter de la capacité de stockage. La quantité de stockage que vous ajoutez et la durée de l"ajout peuvent affecter la capacité de stockage utilisable de la grille.' 
+---
+= Ajoutez de la capacité de stockage pour les objets avec code d'effacement
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si votre règle ILM comprend une règle qui effectue des copies avec code d'effacement, vous devez prévoir où ajouter du stockage, et quand ajouter de la capacité de stockage. La quantité de stockage que vous ajoutez, et la durée de l'ajout peut affecter la capacité de stockage utilisable de la grille.
+
+La première étape de la planification d'une extension de stockage consiste à examiner les règles de la règle ILM qui créent des objets avec code d'effacement. Étant donné que StorageGRID crée des fragments _k+m_ pour chaque objet avec code d'effacement et stocke chaque fragment sur un nœud de stockage différent, vous devez vous assurer qu'au moins _k+m_ les nœuds de stockage disposent d'espace pour les nouvelles données avec code d'effacement après l'extension. Si le profil de code d'effacement assure la protection contre la perte du site, vous devez ajouter de l'espace de stockage à chaque site. Voir xref:../ilm/index.adoc[Gestion des objets avec ILM].
+
+Le nombre de nœuds à ajouter dépend également de la totalité des nœuds existants lors de l'extension.
+
+
+
+== Recommandations générales pour l'ajout de capacité de stockage pour les objets avec code d'effacement
+
+Pour éviter les calculs détaillés, vous pouvez ajouter deux nœuds de stockage par site lorsque les nœuds de stockage existants atteignent 70 % de capacité.
+
+Cette recommandation générale donne des résultats raisonnables dans le cadre d'un large éventail de schémas de codage d'effacement pour les grilles à site unique et pour les grilles où le codage d'effacement assure la protection de la perte au niveau du site.
+
+Pour mieux comprendre les facteurs qui conduisent à cette recommandation ou pour élaborer un plan plus précis pour votre site, passez en revue la section suivante. Pour obtenir une recommandation personnalisée optimisée pour votre situation, contactez votre ingénieur commercial NetApp.
+
+
+
+== Calcul du nombre de nœuds de stockage d'extension à ajouter pour les objets avec code d'effacement
+
+Pour optimiser la façon dont vous développez un déploiement qui stocke des objets avec code d'effacement, vous devez prendre en compte de nombreux facteurs :
+
+* Schéma de code d'effacement utilisé
+* Caractéristiques du pool de stockage utilisé pour le codage d'effacement, y compris le nombre de nœuds sur chaque site et la quantité d'espace libre sur chaque nœud
+* Indique si la grille a été développée précédemment (car la quantité d'espace libre par nœud de stockage peut ne pas être identique sur tous les nœuds)
+* La nature exacte de la règle ILM, par exemple si les règles ILM font des objets répliqués et des objets avec code d'effacement
+
+
+Voici quelques exemples d'exemples qui vous aideront à comprendre l'impact du schéma de code d'effacement, le nombre de nœuds du pool de stockage et la quantité d'espace libre sur chaque nœud.
+
+Des considérations similaires affectent les calculs d'une règle ILM qui stocke les données répliquées et codées par effacement, ainsi que les calculs d'une grille qui a été développée précédemment.
+
+
+IMPORTANT: Les exemples de cette section illustrent les meilleures pratiques en termes d'ajout de capacité de stockage à un système StorageGRID. Si vous ne pouvez pas ajouter le nombre de nœuds recommandé, vous devrez peut-être exécuter la procédure de rééquilibrage EC pour permettre le stockage d'autres objets avec code d'effacement. Voir xref:considerations-for-rebalancing-erasure-coded-data.adoc[Rééquilibrez les données codées d'effacement].
+
+
+
+== Exemple 1 : une grille à un site utilise un code d'effacement 2+1
+
+Cet exemple explique comment développer un grid simple qui n'inclut que trois nœuds de stockage.
+
+
+NOTE: Cet exemple utilise seulement trois nœuds de stockage pour plus de simplicité. Cependant, il n'est pas recommandé d'utiliser seulement trois nœuds de stockage : une grille de production réelle doit utiliser un minimum de _k+m_ + 1 nœuds de stockage pour la redondance, soit quatre nœuds de stockage (2+1+1) dans cet exemple.
+
+Supposons que :
+
+* Toutes les données sont stockées avec le schéma de code d'effacement 2+1. Grâce au schéma de code d'effacement 2+1, chaque objet est stocké sous la forme de trois fragments et chaque fragment est enregistré sur un nœud de stockage différent.
+* Vous avez un site avec trois nœuds de stockage. La capacité totale de chaque nœud de stockage est de 100 To.
+* Vous souhaitez étendre votre infrastructure en ajoutant des nœuds de stockage de 100 To.
+* Vous souhaitez éventuellement équilibrer les données avec code d'effacement entre les anciens et les nouveaux nœuds.
+
+
+Plusieurs options sont disponibles et dépendent de l'intégralité des nœuds de stockage lors de l'extension.
+
+* *Ajouter trois nœuds de stockage de 100 To lorsque les nœuds existants sont pleins à 100 %*
++
+Dans cet exemple, les nœuds existants sont remplis à 100 %. Comme il n'y a pas de capacité disponible, vous devez immédiatement ajouter trois nœuds pour continuer le codage d'effacement 2+1.
+
++
+Une fois l'extension terminée, lorsque les objets sont codés avec effacement, tous les fragments sont placés sur les nouveaux nœuds.
+
++
+image::../media/used_space_after_3_node_expansion.png[Espace utilisé après l'extension de 3 nœuds]
+
++
+
+NOTE: Cette extension ajoute _k+m_ noeuds. Il est recommandé d'ajouter quatre nœuds pour assurer la redondance. Si vous ajoutez uniquement _k+m_ extension nœuds de stockage lorsque les nœuds existants sont pleins à 100 %, tous les nouveaux objets sont stockés sur les nœuds d'extension. Si l'un des nouveaux nœuds n'est plus disponible, même temporairement, la StorageGRID ne peut pas répondre aux exigences du programme ILM.
+
+* *Ajouter deux nœuds de stockage de 100 To, lorsque les nœuds de stockage existants sont pleins à 67 %*
++
+Dans cet exemple, les nœuds existants sont remplis à 67 %. Étant donné que la capacité disponible est de 100 To sur les nœuds existants (33 To par nœud), il vous suffit d'ajouter deux nœuds si vous effectuez l'extension maintenant.
+
++
+L'ajout de 200 To de capacité supplémentaire vous permet de poursuivre le code d'effacement 2+1 et d'équilibrer éventuellement les données avec code d'effacement sur tous les nœuds.
+
++
+image::../media/node_expansion_example_67_percent.png[Exemple d'extension de nœud 1 67 %]
+
+* *Ajouter un nœud de stockage de 100 To lorsque les nœuds de stockage existants sont pleins à 33 %*
++
+Dans cet exemple, les nœuds existants sont remplis à 33 %. Étant donné que la capacité disponible est de 200 To sur les nœuds existants (67 To par nœud), il vous suffit d'ajouter un nœud si vous effectuez l'extension maintenant.
+
++
+L'ajout de 100 To de capacité supplémentaire vous permet de poursuivre le code d'effacement 2+1 et d'équilibrer éventuellement les données avec code d'effacement sur tous les nœuds.
+
++
+image::../media/node_expansion_example_33_percent.png[Exemple d'extension de nœud 1 33 %]
+
+
+
+
+
+== Exemple 2 : une grille à trois sites utilise un code d'effacement 6 + 3
+
+Cet exemple montre comment développer un plan d'extension pour une grille multisite comportant un schéma de code d'effacement avec un plus grand nombre de fragments. Malgré les différences entre ces exemples, le plan d'expansion recommandé est très similaire.
+
+Supposons que :
+
+* Toutes les données sont stockées avec le schéma de code d'effacement 6+3. Avec le schéma de code d'effacement 6+3, chaque objet est stocké sous la forme de 9 fragments et chaque fragment est enregistré sur un nœud de stockage différent.
+* Vous avez trois sites et chaque site dispose de quatre nœuds de stockage (12 nœuds au total). La capacité totale de chaque nœud est de 100 To.
+* Vous souhaitez étendre votre infrastructure en ajoutant des nœuds de stockage de 100 To.
+* Vous souhaitez éventuellement équilibrer les données avec code d'effacement entre les anciens et les nouveaux nœuds.
+
+
+Plusieurs options sont disponibles et dépendent de l'intégralité des nœuds de stockage lors de l'extension.
+
+* *Ajouter neuf nœuds de stockage de 100 To (trois par site), lorsque les nœuds existants sont pleins à 100 %*
++
+Dans cet exemple, les 12 nœuds existants sont pleins à 100 %. Comme il n'y a pas de capacité disponible, vous devez immédiatement ajouter neuf nœuds (900 To de capacité supplémentaire) pour continuer le codage d'effacement 6+3.
+
++
+Une fois l'extension terminée, lorsque les objets sont codés avec effacement, tous les fragments sont placés sur les nouveaux nœuds.
+
++
+
+NOTE: Cette extension ajoute _k+m_ noeuds. Il est recommandé d'ajouter 12 nœuds (quatre par site) pour assurer la redondance. Si vous ajoutez uniquement _k+m_ extension nœuds de stockage lorsque les nœuds existants sont pleins à 100 %, tous les nouveaux objets sont stockés sur les nœuds d'extension. Si l'un des nouveaux nœuds n'est plus disponible, même temporairement, la StorageGRID ne peut pas répondre aux exigences du programme ILM.
+
+* *Ajouter six nœuds de stockage de 100 To (deux par site), lorsque les nœuds existants sont pleins à 75 %*
++
+Dans cet exemple, les 12 nœuds existants sont pleins à 75 %. Puisqu'il y a 300 To de capacité libre (25 To par nœud), il n'est nécessaire d'ajouter six nœuds que si vous effectuez l'extension maintenant. Vous ajouterez deux nœuds à chacun des trois sites.
+
++
+L'ajout de 600 To de capacité de stockage permet de poursuivre le code d'effacement au niveau de 6+3 et d'équilibrer éventuellement les données avec code d'effacement sur tous les nœuds.
+
+* *Ajouter trois nœuds de stockage de 100 To (un par site), lorsque les nœuds existants sont pleins à 50 %*
++
+Dans cet exemple, les 12 nœuds existants sont pleins à 50 %. Puisqu'il y a 600 To de capacité libre (50 To par nœud), vous n'avez besoin d'ajouter que trois nœuds si vous effectuez l'extension maintenant. Vous ajouterez un nœud à chacun des trois sites.
+
++
+L'ajout de 300 To de capacité de stockage permet de poursuivre le code d'effacement au niveau de 6+3 et d'équilibrer éventuellement les données avec code d'effacement sur tous les nœuds.
+
+

@@ -1,0 +1,39 @@
+---
+permalink: maintain/starting-storagegrid-host-service.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, host service, start host service 
+summary: 'Pour démarrer vos nœuds StorageGRID et s"assurer qu"ils redémarrent après un redémarrage de l"hôte, vous devez activer et démarrer le service hôte StorageGRID.' 
+---
+= Démarrez le service d'hôte StorageGRID
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour démarrer vos nœuds StorageGRID et s'assurer qu'ils redémarrent après un redémarrage de l'hôte, vous devez activer et démarrer le service hôte StorageGRID.
+
+. Exécutez les commandes suivantes sur chaque hôte :
++
+[listing]
+----
+sudo systemctl enable storagegrid
+sudo systemctl start storagegrid
+----
+. Exécutez la commande suivante pour vérifier que le déploiement se déroule :
++
+`sudo storagegrid node status _node-name_`
+
++
+Pour tout nœud qui renvoie un état de non-exécution ou arrêté, exécutez la commande suivante :
+
++
+`sudo storagegrid node start _node-name_`
+
+. Si vous avez déjà activé et démarré le service hôte StorageGRID (ou si vous n'êtes pas sûr que le service a été activé et démarré), exécutez également la commande suivante :
++
+[listing]
+----
+sudo systemctl reload-or-restart storagegrid
+----
+

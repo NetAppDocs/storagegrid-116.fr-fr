@@ -1,0 +1,58 @@
+---
+permalink: admin/what-link-costs-are.html 
+sidebar: sidebar 
+keywords: what are link costs, site latency 
+summary: 'Les coûts de liaison vous permettent de définir la priorité du site de data Center qui fournit un service demandé lorsqu"au moins deux sites de data Center existent. Vous pouvez ajuster les coûts de liaison pour refléter la latence entre les sites.' 
+---
+= Quels sont les coûts de liaison
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les coûts de liaison vous permettent de définir la priorité du site de data Center qui fournit un service demandé lorsqu'au moins deux sites de data Center existent. Vous pouvez ajuster les coûts de liaison pour refléter la latence entre les sites.
+
+* Les coûts des liens permettent de classer par ordre de priorité la copie d'objet utilisée pour les récupérations d'objets.
+* Les coûts des liaisons sont utilisés par l'API de gestion du grid et l'API de gestion des locataires pour déterminer quels services StorageGRID internes utiliser.
+* Les coûts de liaison sont utilisés par le service CLB (Connection Load Balancer) obsolète sur les nœuds de passerelle pour diriger les connexions client. Voir xref:how-load-balancing-works-clb-service.adoc[Fonctionnement de l'équilibrage de charge - service CLB].
+
+
+Le schéma présente une grille de trois sites avec des coûts de liaison configurés entre les sites :
+
+image::../media/link_costs.gif[Schéma conceptuel des coûts de liaison entre les centres de données]
+
+* Le service CLB sur les nœuds de passerelle distribue également les connexions client à tous les nœuds de stockage du même site de data Center et à tous les sites de data Center dont le coût de liaison est de 0.
++
+Dans l'exemple, un nœud passerelle du site de data Center 1 (DC1) distribue également les connexions client aux nœuds de stockage du DC1 et aux nœuds de stockage du DC2. Un nœud de passerelle du DC3 envoie des connexions client uniquement aux nœuds de stockage du DC3.
+
+* Lors de la récupération d'un objet existant sous forme de plusieurs copies répliquées, StorageGRID récupère la copie au niveau du data Center présentant le coût de liaison le plus faible.
++
+Dans l'exemple, si une application client de DC2 récupère un objet stocké à la fois à DC1 et DC3, l'objet est récupéré de DC1, car le coût de liaison de DC1 à D2 est 0, ce qui est inférieur au coût de liaison de DC3 à DC2 (25).
+
+
+
+Les coûts de liaison sont des nombres relatifs arbitraires sans unité de mesure spécifique. Par exemple, un coût de lien de 50 est utilisé de manière moins préférentielle qu'un coût de lien de 25. Le tableau indique les coûts de liaison couramment utilisés.
+
+[cols="1a,1a,2a"]
+|===
+| Lien | Coût des liens | Remarques 
+
+
+ a| 
+Entre les sites de data centers physiques
+ a| 
+25 (par défaut)
+ a| 
+Data centers connectés par une liaison WAN.
+
+
+
+ a| 
+Entre des sites de data centers logiques au même emplacement physique
+ a| 
+0
+ a| 
+Data centers logiques dans le même bâtiment physique ou campus connecté par un réseau LAN.
+
+|===

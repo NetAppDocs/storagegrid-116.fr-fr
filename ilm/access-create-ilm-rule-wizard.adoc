@@ -1,0 +1,60 @@
+---
+permalink: ilm/access-create-ilm-rule-wizard.html 
+sidebar: sidebar 
+keywords: create ILM rule, information lifecycle rule 
+summary: 'L"assistant de création de règle ILM permet de créer une règle ILM.' 
+---
+= Accédez à l'assistant de création de règle ILM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les règles ILM permettent de gérer le placement des données d'objet au fil du temps. Pour créer une règle ILM, utilisez l'assistant de création de règle ILM.
+
+
+NOTE: Si vous créez la règle ILM par défaut d'une règle, utilisez la procédure suivante : xref:creating-default-ilm-rule.adoc[Créez une règle ILM par défaut].
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous disposez d'autorisations d'accès spécifiques.
+* Si vous souhaitez spécifier les comptes de tenant auxquels cette règle s'applique, vous disposez de l'autorisation comptes de tenant ou vous connaissez l'ID de compte de chaque compte.
+* Pour que la règle filtre les objets sur les métadonnées de l'heure du dernier accès, les mises à jour de l'heure du dernier accès doivent être activées par compartiment pour S3 ou par conteneur pour Swift.
+* Si vous créez des copies répliquées, vous avez configuré les pools de stockage ou les pools de stockage cloud que vous prévoyez d'utiliser. Voir xref:creating-storage-pool.adoc[Créer un pool de stockage] et xref:creating-cloud-storage-pool.adoc[Création d'un pool de stockage cloud].
+* Si vous créez des copies avec code d'effacement, vous avez configuré un profil de code d'effacement. Voir xref:creating-erasure-coding-profile.adoc[Créez un profil de code d'effacement].
+* Vous connaissez le xref:data-protection-options-for-ingest.adoc[options de protection des données pour l'ingestion].
+* Si vous devez créer une règle compatible pour une utilisation avec le verrouillage d'objet S3, vous connaissez le xref:requirements-for-s3-object-lock.adoc[Conditions requises pour le verrouillage d'objet S3].
+* Vous pouvez également regarder la vidéo : https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=beffbe9b-e95e-4a90-9560-acc5013c93d8["Vidéo : règles ILM de StorageGRID : mise en route"^].
++
+[link=https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=beffbe9b-e95e-4a90-9560-acc5013c93d8]
+image::../media/video-screenshot-ilm-rules.png[Vidéo : règles ILM de StorageGRID : mise en route]
+
+
+
+Lors de la création de règles ILM :
+
+* Comparez la topologie et les configurations de stockage du système StorageGRID.
+* Déterminez les types de copies d'objet à effectuer (répliquées ou avec code d'effacement) et le nombre de copies de chaque objet requis.
+* Déterminez les types de métadonnées d'objet utilisés dans les applications qui se connectent au système StorageGRID. Les règles ILM filtrent les objets en fonction de leurs métadonnées.
+* Réfléchissez à l'emplacement souhaité pour le stockage des copies d'objets au fil du temps.
+* Choisissez l'option de protection des données à l'entrée des données (équilibrée, stricte ou double allocation).
+
+
+.Étapes
+. Sélectionnez *ILM* *règles*.
++
+La page règles ILM apparaît, avec la règle de stock, faire 2 copies, sélectionnée.
+
++
+image::../media/ilm_create_ilm_rule.png[La page règles ILM]
+
++
+
+NOTE: La page règles ILM diffère légèrement si le paramètre global de verrouillage d'objet S3 a été activé pour le système StorageGRID. Le tableau récapitulatif comprend une colonne *compatible* et les détails de la règle sélectionnée incluent un champ *compatible*.
+
+. Sélectionnez *Créer*.
++
+L'étape 1 (définir les bases) de l'assistant Créer une règle ILM s'affiche. La page définir les bases permet de définir les objets auxquels la règle s'applique.
+
+

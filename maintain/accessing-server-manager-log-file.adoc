@@ -1,0 +1,18 @@
+---
+permalink: maintain/accessing-server-manager-log-file.html 
+sidebar: sidebar 
+keywords: storagegrid, server manager, log file 
+summary: 'Si un problème survient lors de l"utilisation de Server Manager, vérifiez son fichier journal.' 
+---
+= Accédez au fichier journal de Server Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si un problème survient lors de l'utilisation de Server Manager, vérifiez son fichier journal.
+
+Les messages d'erreur relatifs à Server Manager sont capturés dans le fichier journal de Server Manager, à l'adresse suivante : `/var/local/log/servermanager.log`
+
+Consultez ce fichier pour voir s'il contient des messages d'erreur relatifs aux échecs. Transmettez le problème au support technique si nécessaire. Il se peut que vous soyez invité à transférer les fichiers journaux au support technique.

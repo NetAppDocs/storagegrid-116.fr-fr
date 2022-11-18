@@ -1,0 +1,27 @@
+---
+permalink: admin/managing-load-balancing.html 
+sidebar: sidebar 
+keywords: manage load balancing, balance workload, client ingest, client retrieval, distribute connection 
+summary: 'Vous pouvez utiliser les fonctions d"équilibrage de charge StorageGRID pour gérer les workloads d"ingestion et de récupération à partir de clients S3 et Swift. L"équilibrage de la charge optimise la vitesse et la capacité de connexion en distribuant les charges de travail et les connexions entre plusieurs nœuds de stockage.' 
+---
+= Gérer l'équilibrage de charge : présentation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser les fonctions d'équilibrage de charge StorageGRID pour gérer les workloads d'ingestion et de récupération à partir de clients S3 et Swift. L'équilibrage de la charge optimise la vitesse et la capacité de connexion en distribuant les charges de travail et les connexions entre plusieurs nœuds de stockage.
+
+Vous pouvez équilibrer la charge des workloads clients de l'une des manières suivantes :
+
+* Utilisez le service Load Balancer, qui est installé sur les nœuds d'administration et les nœuds de passerelle. Le service Load Balancer assure l'équilibrage de la charge de couche 7 et effectue la résiliation TLS des requêtes client, inspecte les requêtes et établit de nouvelles connexions sécurisées vers les nœuds de stockage. Il s'agit du mécanisme d'équilibrage de charge recommandé.
++
+Voir xref:how-load-balancing-works-load-balancer-service.adoc[Fonctionnement de l'équilibrage de la charge : service Load Balancer].
+
+* Utilisez le service CLB (Connection Load Balancer) obsolète, qui est installé uniquement sur les nœuds de passerelle. Le service CLB assure l'équilibrage de charge de couche 4 et prend en charge les coûts de liaison.
++
+Voir xref:how-load-balancing-works-clb-service.adoc[Fonctionnement de l'équilibrage des charges - service CLB (obsolète)].
+
+* Intégrez un équilibreur de charge tiers. Pour plus d'informations, contactez votre ingénieur commercial NetApp.
+

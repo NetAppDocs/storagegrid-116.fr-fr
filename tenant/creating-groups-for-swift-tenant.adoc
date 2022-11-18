@@ -1,0 +1,77 @@
+---
+permalink: tenant/creating-groups-for-swift-tenant.html 
+sidebar: sidebar 
+keywords: how to create Swift tenant groups 
+summary: 'Vous pouvez gérer les autorisations d"accès pour un compte de locataire Swift en important des groupes fédérés ou en créant des groupes locaux. Au moins un groupe doit disposer de l"autorisation Administrateur Swift, qui est requise pour gérer les conteneurs et les objets d"un compte de locataire Swift.' 
+---
+= Créez des groupes pour un locataire Swift
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez gérer les autorisations d'accès pour un compte de locataire Swift en important des groupes fédérés ou en créant des groupes locaux. Au moins un groupe doit disposer de l'autorisation Administrateur Swift, qui est requise pour gérer les conteneurs et les objets d'un compte de locataire Swift.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous devez être connecté au Gestionnaire de locataires à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous devez appartenir à un groupe d'utilisateurs qui dispose de l'autorisation accès racine.
+* Si vous envisagez d'importer un groupe fédéré, vous avez configuré la fédération des identités et le groupe fédéré existe déjà dans le référentiel d'identité configuré.
+
+
+.Étapes
+. Sélectionnez *ACCESS MANAGEMENT* *Groups*.
++
+image::../media/tenant_add_groups_example.png[Capture d'écran affichant la page Access Control Groups]
+
+. Sélectionnez *Créer groupe*.
+. Sélectionnez l'onglet *Groupe local* pour créer un groupe local ou sélectionnez l'onglet *Groupe fédéré* pour importer un groupe à partir du référentiel d'identité configuré précédemment.
++
+Si l'authentification unique (SSO) est activée pour votre système StorageGRID, les utilisateurs appartenant à des groupes locaux ne pourront pas se connecter au Gestionnaire de locataires, bien qu'ils puissent utiliser les applications client pour gérer les ressources du locataire, en fonction des autorisations de groupe.
+
+. Entrez le nom du groupe.
++
+** *Groupe local* : saisissez à la fois un nom d'affichage et un nom unique. Vous pouvez modifier le nom d'affichage ultérieurement.
+** *Groupe fédéré* : saisissez le nom unique. Pour Active Directory, le nom unique est le nom associé à l' `sAMAccountName` attribut. Pour OpenLDAP, le nom unique est le nom associé à `uid` attribut.
+
+
+. Sélectionnez *Continuer*.
+. Sélectionnez un mode d'accès. Si un utilisateur appartient à plusieurs groupes et qu'un groupe est défini sur lecture seule, l'utilisateur dispose d'un accès en lecture seule à tous les paramètres et fonctions sélectionnés.
++
+** *Read-write* (valeur par défaut) : les utilisateurs peuvent se connecter au Gestionnaire de locataires et gérer la configuration du locataire.
+** *Lecture seule* : les utilisateurs peuvent uniquement afficher les paramètres et les fonctionnalités. Ils ne peuvent pas apporter de modifications ni effectuer d'opérations dans le Gestionnaire des locataires ou l'API de gestion des locataires. Les utilisateurs locaux en lecture seule peuvent modifier leurs propres mots de passe.
+
+
+. Définissez l'autorisation Groupe.
++
+** Cochez la case *accès racine* si les utilisateurs doivent se connecter au Gestionnaire de locataires ou à l'API de gestion des locataires. (Valeur par défaut)
+** Désélectionnez la case *accès racine* si les utilisateurs n'ont pas besoin d'accéder au Gestionnaire de locataires ou à l'API de gestion des locataires. Par exemple, désélectionnez la case à cocher pour les applications qui n'ont pas besoin d'accéder au locataire. Attribuez ensuite l'autorisation *Swift Administrator* pour permettre à ces utilisateurs de gérer des conteneurs et des objets.
+
+
+. Sélectionnez *Continuer*.
+. Cochez la case *Administrateur Swift* si l'utilisateur doit pouvoir utiliser l'API REST Swift.
++
+Les utilisateurs Swift doivent disposer de l'autorisation d'accès racine pour accéder au gestionnaire de locataires. Toutefois, l'autorisation accès racine ne permet pas aux utilisateurs de s'authentifier auprès de l'API REST Swift pour créer des conteneurs et ingérer des objets. Les utilisateurs doivent disposer de l'autorisation Administrateur Swift pour s'authentifier dans l'API REST de Swift.
+
+. Sélectionnez le bouton qui s'affiche, selon que vous créez un groupe fédéré ou local :
++
+** Groupe fédéré : *Créer groupe*
+** Groupe local : *Continuer*
++
+Si vous créez un groupe local, STEP 4 (Ajouter des utilisateurs) apparaît après avoir sélectionné *Continuer*. Cette étape n'apparaît pas pour les groupes fédérés.
+
+
+
+. Cochez la case de chaque utilisateur que vous souhaitez ajouter au groupe, puis sélectionnez *Créer groupe*.
++
+Vous pouvez également enregistrer le groupe sans ajouter d'utilisateurs. Vous pouvez ajouter des utilisateurs au groupe ultérieurement ou sélectionner le groupe lorsque vous créez de nouveaux utilisateurs.
+
+. Sélectionnez *Terminer*.
++
+Le groupe que vous avez créé apparaît dans la liste des groupes. L'application des modifications peut prendre jusqu'à 15 minutes à cause de la mise en cache.
+
+
+
+xref:tenant-management-permissions.adoc[Autorisations de gestion des locataires]
+
+xref:../swift/index.adoc[Utiliser Swift]

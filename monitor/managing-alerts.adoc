@@ -1,0 +1,48 @@
+---
+permalink: monitor/managing-alerts.html 
+sidebar: sidebar 
+keywords: alert rules, managing alerts, alerts, alert notifications. edit alert rules 
+summary: 'Les alertes vous permettent de surveiller différents événements et conditions au sein de votre système StorageGRID. Vous pouvez gérer les alertes en créant des alertes personnalisées, en modifiant ou en désactivant les alertes par défaut, en configurant des notifications par e-mail pour les alertes et en désactivant les notifications d"alertes.' 
+---
+= Gérer les alertes : présentation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les alertes vous permettent de surveiller différents événements et conditions au sein de votre système StorageGRID. Vous pouvez gérer les alertes en créant des alertes personnalisées, en modifiant ou en désactivant les alertes par défaut, en configurant des notifications par e-mail pour les alertes et en désactivant les notifications d'alertes.
+
+
+
+== À propos des alertes StorageGRID
+
+Le système d'alerte offre une interface facile à utiliser pour détecter, évaluer et résoudre les problèmes susceptibles de se produire lors du fonctionnement de StorageGRID.
+
+* Le système d'alerte est axé sur des problèmes exploitables dans le système. Des alertes sont déclenchées pour les événements qui nécessitent votre attention immédiate, et non pour les événements qui peuvent être ignorés en toute sécurité.
+* La page alertes en cours fournit une interface conviviale permettant d'afficher les problèmes actuels. Vous pouvez trier la liste par alerte individuelle et par groupe d'alertes. Par exemple, il peut être nécessaire de trier toutes les alertes par nœud/site pour afficher les alertes qui affectent un nœud spécifique. Vous pouvez également trier les alertes d'un groupe par heure déclenchée pour trouver l'instance la plus récente d'une alerte spécifique.
+* La page alertes résolues fournit des informations similaires à celles de la page alertes en cours, mais elle vous permet de rechercher et d'afficher l'historique des alertes qui ont été résolues, notamment lorsque l'alerte a été déclenchée et quand elle a été résolue.
+* Plusieurs alertes du même type sont regroupées en un seul e-mail afin de réduire le nombre de notifications. De plus, plusieurs alertes du même type sont affichées sous forme de groupe sur la page alertes. Vous pouvez développer et réduire les groupes d'alertes pour afficher ou masquer les alertes individuelles. Par exemple, si plusieurs nœuds indiquent l'alerte *Impossible de communiquer avec le nœud* en même temps, un seul e-mail est envoyé et l'alerte est affichée comme un groupe sur la page alertes.
+* Les alertes utilisent des noms et des descriptions intuitifs pour vous aider à comprendre rapidement le problème. Les notifications d'alerte incluent des informations détaillées sur le nœud et le site concernés, la gravité de l'alerte, le moment où la règle d'alerte a été déclenchée et la valeur actuelle des mesures relatives à l'alerte.
+* Les notifications par e-mail d'alerte et les listes d'alertes figurant sur les pages alertes en cours et alertes résolues fournissent des actions recommandées pour résoudre une alerte. Ces actions recommandées incluent souvent des liens directs vers le centre de documentation StorageGRID pour faciliter l'accès aux procédures de dépannage plus détaillées.
+* Si vous avez besoin de supprimer temporairement les notifications pour une alerte à un ou plusieurs niveaux de sévérité, vous pouvez facilement désactiver une règle d'alerte spécifique pendant une durée spécifiée et pour la grille dans son ensemble, un seul site ou un seul nœud. Vous pouvez également désactiver toutes les règles d'alerte, par exemple, lors d'une procédure de maintenance planifiée telle qu'une mise à niveau logicielle.
+* Vous pouvez modifier les règles d'alerte par défaut si nécessaire. Vous pouvez désactiver complètement une règle d'alerte ou modifier ses conditions et sa durée de déclenchement.
+* Vous pouvez créer des règles d'alerte personnalisées afin de cibler les conditions spécifiques qui sont pertinentes pour votre situation et de proposer vos propres actions recommandées. Pour définir les conditions d'une alerte personnalisée, vous créez des expressions à l'aide des metrics Prometheus disponibles dans la section Metrics de l'API de gestion du grid.
+
+
+
+
+== En savoir plus >>
+
+Pour en savoir plus, consultez ces vidéos :
+
+* https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2680a74f-070c-41c2-bcd3-acc5013c9cdd["Vidéo : présentation des alertes"^]
++
+[link=https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2680a74f-070c-41c2-bcd3-acc5013c9cdd]
+image::../media/video-screenshot-alert-overview.png[Vidéo : présentation des alertes]
+
+* https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b35ac3f2-957b-4e79-b82b-acc5013c98d0["Vidéo : utilisation des mesures pour créer des alertes personnalisées"^]
++
+image::../media/video-screenshot-alert-create-custom.png[lien-"https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b35ac3f2-957b-4e79-b82b-acc5013c98d0"[] alt=« vidéo : utilisation des mesures pour créer des alertes personnalisées »]
+
+

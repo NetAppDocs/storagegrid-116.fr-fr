@@ -1,0 +1,14 @@
+---
+permalink: sg5700/installing-hardware.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, hardware, install, installing 
+summary: 'L"installation matérielle implique l"installation de l"appliance dans une armoire ou un rack, la connexion des câbles et l"alimentation.' 
+---
+= Installation du matériel (SG5700)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'installation matérielle implique l'installation de l'appliance dans une armoire ou un rack, la connexion des câbles et l'alimentation.

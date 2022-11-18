@@ -1,0 +1,41 @@
+---
+permalink: admin/managing-untrusted-client-networks.html 
+sidebar: sidebar 
+keywords: untrusted client network 
+summary: Si vous utilisez un réseau client, vous pouvez protéger StorageGRID des attaques hostiles en acceptant le trafic client entrant uniquement sur les noeuds finaux configurés explicitement. 
+---
+= Gérer les réseaux clients non approuvés : présentation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous utilisez un réseau client, vous pouvez protéger StorageGRID des attaques hostiles en acceptant le trafic client entrant uniquement sur les noeuds finaux configurés explicitement.
+
+Par défaut, le réseau client sur chaque nœud de la grille est _Trusted_. Par défaut, StorageGRID approuve les connexions entrantes à chaque nœud de la grille sur tous les ports externes disponibles (voir les informations sur les communications externes dans le xref:../network/index.adoc[Instructions de mise en réseau]).
+
+Vous pouvez réduire la menace d'attaques hostiles sur votre système StorageGRID en spécifiant que le réseau client sur chaque nœud est _non fiable_. Si le réseau client d'un nœud n'est pas fiable, le nœud accepte uniquement les connexions entrantes sur les ports explicitement configurés en tant que points finaux d'équilibreur de charge. Voir xref:configuring-load-balancer-endpoints.adoc[Configurer les terminaux de l'équilibreur de charge].
+
+
+
+== Exemple 1 : le nœud de passerelle n'accepte que les requêtes HTTPS S3
+
+Supposons que vous souhaitiez qu'un nœud de passerelle refuse tout trafic entrant sur le réseau client, à l'exception des requêtes HTTPS S3. Vous devez effectuer les étapes générales suivantes :
+
+. À partir de la page des noeuds finaux Load Balancer, configurez un noeud final Load Balancer pour S3 sur HTTPS sur le port 443.
+. Dans la page réseaux clients non approuvés, spécifiez que le réseau client sur le nœud de passerelle n'est pas fiable.
+
+
+Après avoir enregistré votre configuration, tout le trafic entrant sur le réseau client du nœud passerelle est supprimé, sauf pour les requêtes HTTPS S3 sur le port 443 et les requêtes ICMP Echo (ping).
+
+
+
+== Exemple 2 : le nœud de stockage envoie des demandes de services de plateforme S3
+
+Supposons que vous souhaitiez activer le trafic de service de la plateforme S3 sortant à partir d'un nœud de stockage, mais que vous voulez empêcher toute connexion entrante à ce nœud de stockage sur le réseau client. Vous devez effectuer cette étape générale :
+
+* Dans la page réseaux clients non approuvés, indiquez que le réseau client sur le nœud de stockage n'est pas fiable.
+
+
+Après avoir enregistré votre configuration, le nœud de stockage n'accepte plus de trafic entrant sur le réseau client, mais continue d'autoriser les requêtes sortantes vers Amazon Web Services.

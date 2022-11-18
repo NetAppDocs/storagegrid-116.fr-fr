@@ -1,0 +1,14 @@
+---
+permalink: sg5600/maintaining-sg5600-appliance.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, maintain, maintaining, hardware, procedures, tasks 
+summary: 'Il peut être nécessaire de mettre à niveau le logiciel SANtricity OS du contrôleur E2700, de remplacer le contrôleur E2700 ou le contrôleur E5600SG ou de remplacer des composants spécifiques. Les procédures décrites dans cette section supposent que l"appliance a déjà été déployée en tant que nœud de stockage dans un système StorageGRID.' 
+---
+= Conservez l'appliance SG5600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il peut être nécessaire de mettre à niveau le logiciel SANtricity OS du contrôleur E2700, de remplacer le contrôleur E2700 ou le contrôleur E5600SG ou de remplacer des composants spécifiques. Les procédures décrites dans cette section supposent que l'appliance a déjà été déployée en tant que nœud de stockage dans un système StorageGRID.

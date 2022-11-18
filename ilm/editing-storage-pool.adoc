@@ -1,0 +1,44 @@
+---
+permalink: ilm/editing-storage-pool.html 
+sidebar: sidebar 
+keywords: edit storage pool 
+summary: Vous pouvez modifier un pool de stockage pour modifier son nom ou mettre à jour des sites et des notes de stockage. 
+---
+= Modifier le pool de stockage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez modifier un pool de stockage pour modifier son nom ou mettre à jour des sites et des notes de stockage.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous disposez d'autorisations d'accès spécifiques.
+* Vous avez passé en revue les instructions relatives à la création de pools de stockage.
+* Si vous prévoyez de modifier un pool de stockage utilisé par une règle de la règle ILM active, vous savez comment vos modifications affectent le placement des données d'objet.
+
+
+Si vous ajoutez une nouvelle qualité de stockage à un pool de stockage utilisé dans la règle ILM active, sachez que les nœuds de stockage de la nouvelle qualité ne sont pas automatiquement utilisés. Pour forcer StorageGRID à utiliser une nouvelle qualité de stockage, vous devez activer une nouvelle règle ILM après avoir enregistré le pool de stockage modifié.
+
+.Étapes
+. Sélectionnez *ILM* *Storage pools*.
++
+La page Storage pools s'affiche.
+
+. Sélectionnez le bouton radio du pool de stockage que vous souhaitez modifier.
++
+Vous ne pouvez pas modifier le pool de stockage tous les nœuds de stockage.
+
+. Sélectionnez *Modifier*.
+. Si nécessaire, modifiez le nom du pool de stockage.
+. Selon les besoins, sélectionnez d'autres sites et niveaux de stockage.
++
+
+NOTE: Vous n'avez pas la possibilité de modifier le site ou la qualité de stockage si le pool de stockage est utilisé dans un profil de code d'effacement, ce qui entraînerait la non-validité du schéma de code d'effacement. Par exemple, si un pool de stockage utilisé dans un profil de code d'effacement comprend actuellement une classe de stockage avec un seul site, il est impossible d'utiliser une classe de stockage avec deux sites, car cette modification invalid le schéma de code d'effacement.
+
+. Sélectionnez *Enregistrer*.
+
+
+Si vous avez ajouté une nouvelle classe de stockage à un pool de stockage utilisé dans la règle ILM active, activez une nouvelle règle ILM pour forcer StorageGRID à utiliser la nouvelle version du stockage. Par exemple, clonez votre règle ILM existante, puis activez le clone.

@@ -1,0 +1,45 @@
+---
+permalink: sg5600/optional-remapping-network-ports-for-appliance-sg5600-and-sg5700.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, remapping, remap, map, mapping, network, ports 
+summary: 'Il peut être nécessaire de remappage les ports internes du nœud de stockage de l"appliance sur différents ports externes. Par exemple, il peut être nécessaire de remappage les ports en raison d"un problème de pare-feu.' 
+---
+= Facultatif : remappage des ports réseau pour l'appliance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il peut être nécessaire de remappage les ports internes du nœud de stockage de l'appliance sur différents ports externes. Par exemple, il peut être nécessaire de remappage les ports en raison d'un problème de pare-feu.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous avez déjà accédé au programme d'installation de l'appliance StorageGRID.
+* Vous n'avez pas configuré et ne prévoyez pas de configurer les points finaux de l'équilibreur de charge.
++
+
+IMPORTANT: Si vous remappage un port, vous ne pouvez pas utiliser les mêmes ports pour configurer les terminaux d'équilibrage de charge. Si vous souhaitez configurer les points d'extrémité de l'équilibreur de charge et que des ports sont déjà mappés à nouveau, suivez les étapes de la section xref:../maintain/removing-port-remaps.adoc[Supprimer les mappages de port].
+
+
+
+.Étapes
+. Dans la barre de menus du programme d'installation de l'appliance StorageGRID, cliquez sur *configurer le réseau* *ports Remap*.
++
+La page Port de remise à neuf s'affiche.
+
+. Dans la liste déroulante *Network*, sélectionnez le réseau du port que vous souhaitez remappage : grid, Admin ou client.
+. Dans la liste déroulante *Protocol*, sélectionnez le protocole IP : TCP ou UDP.
+. Dans la zone de liste déroulante *Remap Direction*, sélectionnez la direction du trafic que vous souhaitez remappage pour ce port : entrant, sortant ou bidirectionnel.
+. Pour *Port d'origine*, entrez le numéro du port que vous souhaitez remappage.
+. Pour *mappé sur le port*, entrez le numéro du port que vous souhaitez utiliser à la place.
+. Cliquez sur *Ajouter règle*.
++
+Le nouveau mappage de port est ajouté à la table et le remappage est immédiatement pris en compte.
+
++
+image::../media/remap_ports.gif[Capture d'écran montrant l'option Remap ports dans le programme d'installation de l'appliance StorageGRID Webscale]
+
+. Pour supprimer un mappage de port, sélectionnez le bouton radio de la règle que vous souhaitez supprimer, puis cliquez sur *Supprimer la règle sélectionnée*.
+
+
+xref:../maintain/index.adoc[Récupérer et entretenir]

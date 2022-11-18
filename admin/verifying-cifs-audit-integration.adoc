@@ -1,0 +1,14 @@
+---
+permalink: admin/verifying-cifs-audit-integration.html 
+sidebar: sidebar 
+keywords: verify cifs, cift audit share 
+summary: 'Le partage d"audit est en lecture seule. Les fichiers journaux sont destinés à être lus par des applications informatiques et la vérification ne comprend pas l"ouverture d"un fichier. Il est considéré comme suffisant de vérifier que les fichiers journaux d"audit apparaissent dans une fenêtre de l"Explorateur Windows. Après vérification de la connexion, fermez toutes les fenêtres.' 
+---
+= Vérifier l'intégration de l'audit CIFS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le partage d'audit est en lecture seule. Les fichiers journaux sont destinés à être lus par des applications informatiques et la vérification ne comprend pas l'ouverture d'un fichier. Il est considéré comme suffisant de vérifier que les fichiers journaux d'audit apparaissent dans une fenêtre de l'Explorateur Windows. Après vérification de la connexion, fermez toutes les fenêtres.

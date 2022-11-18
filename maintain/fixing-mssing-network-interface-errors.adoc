@@ -1,0 +1,27 @@
+---
+permalink: maintain/fixing-mssing-network-interface-errors.html 
+sidebar: sidebar 
+keywords: storagegrid, network interface, network interface error 
+summary: 'Si le réseau hôte n"est pas configuré correctement ou si un nom est mal orthographié, une erreur se produit lorsque StorageGRID vérifie le mappage spécifié dans le fichier /etc/storagegrid/nodes/node-name\.conf.' 
+---
+= Corrigez les erreurs d'interface réseau manquantes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si le réseau hôte n'est pas configuré correctement ou si un nom est mal orthographié, une erreur se produit lorsque StorageGRID vérifie le mappage spécifié dans l' `/etc/storagegrid/nodes/_node-name_.conf` fichier.
+
+Une erreur ou un avertissement correspondant à ce modèle peut s'afficher :
+
+`Checking configuration file `/etc/storagegrid/nodes/_node-name_.conf` pour le noeud _node-name_...»
+`ERROR: _node-name_: GRID_NETWORK_TARGET = _host-interface-name_`` _node-name_: Interface '_host-interface-name_' n'existe pas
+
+L'erreur peut être signalée pour le réseau Grid, le réseau Admin ou le réseau client. Cette erreur signifie que le `/etc/storagegrid/nodes/_node-name_.conf` Le fichier mappe le réseau StorageGRID indiqué sur l'interface hôte nommée `_host-interface-name_`, mais il n'y a pas d'interface avec ce nom sur l'hôte actuel.
+
+Si vous recevez cette erreur, vérifiez que vous avez terminé les étapes de la section xref:deploying-new-linux-hosts.adoc[Déploiement de nouveaux hôtes Linux]. Utilisez les mêmes noms pour toutes les interfaces hôtes que ceux utilisés sur l'hôte d'origine.
+
+Si vous ne parvenez pas à nommer les interfaces hôtes pour qu'elles correspondent au fichier de configuration du nœud, vous pouvez modifier le fichier de configuration du nœud et modifier la valeur de GRID_NETWORK_TARGET, ADMIN_NETWORK_TARGET ou client_NETWORK_TARGET pour qu'elle corresponde à une interface hôte existante.
+
+Assurez-vous que l'interface hôte donne accès au port réseau physique ou au VLAN approprié et que l'interface ne fait pas directement référence à un périphérique de liaison ou de pont. Vous devez soit configurer un VLAN (soit une autre interface virtuelle) sur le périphérique de liaison de l'hôte, soit utiliser un pont et une paire Ethernet virtuelle (veth).

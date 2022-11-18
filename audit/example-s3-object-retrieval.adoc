@@ -1,0 +1,35 @@
+---
+permalink: audit/example-s3-object-retrieval.html 
+sidebar: sidebar 
+keywords: storagegrid, audit, example, S3, object retrieval 
+summary: 'Lorsqu"un client S3 récupère un objet à partir d"un nœud de stockage \(service LDR\), un message d"audit est généré et enregistré dans le journal d"audit.' 
+---
+= Exemple : récupération d'objets S3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsqu'un client S3 récupère un objet à partir d'un nœud de stockage (service LDR), un message d'audit est généré et enregistré dans le journal d'audit.
+
+Notez que tous les messages d'audit générés pendant une transaction ne sont pas répertoriés dans l'exemple ci-dessous. Seules les transactions liées à la transaction de récupération S3 (SGET) sont répertoriées.
+
+
+
+== SGET : OBTENEZ S3
+
+L'extraction d'objet commence lorsque le client envoie une requête GET Object à un service LDR. Le message contient le compartiment à partir duquel vous pouvez récupérer l'objet ainsi que la clé S3 de l'objet, qui permet d'identifier l'objet.
+
+[listing, subs="specialcharacters,quotes"]
+----
+2017-09-20T22:53:08.782605 [AUDT:[RSLT(FC32):SUCS][TIME(UI64):47807][SAIP(IPAD):"10.96.112.26"][S3AI(CSTR):"43979298178977966408"][SACC(CSTR):"s3-account-a"][S3AK(CSTR):"SGKHt7GzEcu0yXhFhT_rL5mep4nJt1w75GBh-O_FEw=="][SUSR(CSTR):"urn:sgws:identity::43979298178977966408:root"][SBAI(CSTR):"43979298178977966408"][SBAC(CSTR):"s3-account-a"]\[S3BK\(CSTR\):"bucket-anonymous"\]\[S3KY\(CSTR\):"Hello.txt"\][CBID(UI64):0x83D70C6F1F662B02][CSIZ(UI64):12][AVER(UI32):10][ATIM(UI64):1505947988782605]\[ATYP\(FC32\):SGET\][ANID(UI32):12272050][AMID(FC32):S3RQ][ATID(UI64):17742374343649889669]]
+----
+Si la règle de compartiment le permet, un client peut récupérer des objets de façon anonyme ou récupérer des objets à partir d'un compartiment qui est détenu par un autre compte de locataire. Le message d'audit contient des informations sur le compte du propriétaire du compartiment afin que vous puissiez suivre ces demandes anonymes et inter-comptes.
+
+Dans l'exemple suivant, le client envoie une requête GET Object pour un objet stocké dans un compartiment qu'il ne possède pas. Les valeurs de SBAI et SBAC enregistrent l'ID et le nom de compte du propriétaire du compartiment, qui diffèrent de l'ID et du nom du compte du locataire enregistré dans S3AI et SACC.
+
+[listing, subs="specialcharacters,quotes"]
+----
+2017-09-20T22:53:15.876415 [AUDT:[RSLT(FC32):SUCS][TIME(UI64):53244][SAIP(IPAD):"10.96.112.26"]\[S3AI\(CSTR\):"17915054115450519830"\]\[SACC\(CSTR\):"s3-account-b"\][S3AK(CSTR):"SGKHpoblWlP_kBkqSCbTi754Ls8lBUog67I2LlSiUg=="][SUSR(CSTR):"urn:sgws:identity::17915054115450519830:root"]\[SBAI\(CSTR\):"43979298178977966408"\]\[SBAC\(CSTR\):"s3-account-a"\][S3BK(CSTR):"bucket-anonymous"][S3KY(CSTR):"Hello.txt"][CBID(UI64):0x83D70C6F1F662B02][CSIZ(UI64):12][AVER(UI32):10][ATIM(UI64):1505947995876415][ATYP(FC32):SGET][ANID(UI32):12272050][AMID(FC32):S3RQ][ATID(UI64):6888780247515624902]]
+----

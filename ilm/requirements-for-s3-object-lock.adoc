@@ -1,0 +1,131 @@
+---
+permalink: ilm/requirements-for-s3-object-lock.html 
+sidebar: sidebar 
+keywords: requirements, s3 object lock 
+summary: 'Vous devez connaître les exigences relatives à l"activation du paramètre global de verrouillage d"objet S3, les exigences de création de règles ILM et de règles ILM conformes, et les restrictions StorageGRID placées sur des compartiments et des objets qui utilisent le verrouillage d"objet S3.' 
+---
+= Conditions requises pour le verrouillage d'objet S3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez connaître les exigences relatives à l'activation du paramètre global de verrouillage d'objet S3, les exigences de création de règles ILM et de règles ILM conformes, et les restrictions StorageGRID placées sur des compartiments et des objets qui utilisent le verrouillage d'objet S3.
+
+
+
+== Conditions requises pour l'utilisation du paramètre global de verrouillage d'objet S3
+
+* Vous devez activer le paramètre global de verrouillage d'objet S3 à l'aide de Grid Manager ou de l'API Grid Management avant qu'un locataire S3 puisse créer un compartiment avec le verrouillage d'objet S3 activé.
+* L'activation du paramètre global de verrouillage d'objet S3 permet à tous les comptes de locataires S3 de créer des compartiments avec le verrouillage d'objet S3 activé.
+* Une fois que vous avez activé le paramètre global de verrouillage d'objet S3, vous ne pouvez pas désactiver le paramètre.
+* Vous ne pouvez pas activer le verrouillage d'objet S3 global, à moins que la règle par défaut de la règle ILM active soit _conforme_ (c'est-à-dire que la règle par défaut doit respecter les exigences des compartiments avec le verrouillage d'objet S3 activé).
+* Lorsque le paramètre global de verrouillage de l'objet S3 est activé, vous ne pouvez pas créer de nouvelle règle ILM proposée ou activer une règle ILM existante, à moins que la règle par défaut de la règle ne soit conforme. Une fois le paramètre global S3 Object Lock activé, les pages ILM et ILM Rules indiquent les règles ILM compatibles.
++
+Dans l'exemple suivant, la page des règles ILM répertorie trois règles compatibles avec des compartiments dont le verrouillage objet S3 est activé.
+
++
+image::../media/compliance_fields_on_ilm_rules_page.png[Champs de conformité sur la page règles ILM]
+
+
+
+
+
+== Exigences relatives aux règles ILM conformes
+
+Si vous souhaitez activer le paramètre global de verrouillage d'objet S3, vous devez vous assurer que la règle par défaut de votre stratégie ILM active est conforme. Une règle conforme répond aux exigences des deux compartiments avec le verrouillage de l'objet S3 activé et les compartiments existants pour lesquels la conformité de l'ancienne génération est activée :
+
+* Les départements IT doivent créer au moins deux copies objet répliquées ou une copie avec code d'effacement.
+* Ces copies doivent exister sur les nœuds de stockage pendant toute la durée de chaque ligne dans les instructions de placement.
+* Les copies d'objet ne peuvent pas être enregistrées dans un pool de stockage cloud.
+* Les copies d'objet ne peuvent pas être enregistrées sur les nœuds d'archivage.
+* Au moins une ligne des instructions de placement doit commencer au jour 0, en utilisant *temps d'ingestion* comme heure de référence.
+* Au moins une ligne des instructions de placement doit être ""permanente".
+
+
+Par exemple, cette règle répond aux exigences des compartiments avec le verrouillage d'objet S3 activé. Il stocke deux copies d'objets répliquées de la durée d'ingestion (jour 0) à « permanente ». Les objets seront stockés sur les nœuds de stockage de deux data centers.
+
+image::../media/compliant_rule_two_copies_forever.png[Exemple de règle de conformité deux copies pour toujours]
+
+
+
+== Exigences relatives aux règles ILM actives et proposées
+
+Lorsque le paramètre global S3 Object Lock est activé, les règles ILM actives et proposées peuvent inclure des règles conformes et non conformes.
+
+* La règle par défaut de la politique ILM active ou proposée doit être conforme.
+* Les règles non conformes s'appliquent uniquement aux objets dans les compartiments dont le verrouillage d'objet S3 n'est pas activé ou dont la fonctionnalité de conformité héritée n'est pas activée.
+* Les règles conformes peuvent s'appliquer aux objets dans n'importe quel compartiment. Il n'est pas nécessaire d'activer le verrouillage objet S3 ou la conformité héritée.
+
+
+Une politique ILM conforme peut inclure ces trois règles :
+
+. Règle de conformité qui crée des copies avec code d'effacement des objets dans un compartiment spécifique lorsque le verrouillage objet S3 est activé. Les copies EC sont stockées sur les nœuds de stockage du premier jour vers toujours.
+. Une règle non conforme qui crée deux copies d'objets répliquées sur les nœuds de stockage pendant un an, puis déplace une copie d'objet vers les nœuds d'archivage et stocke cette copie indéfiniment. Cette règle s'applique uniquement aux compartiments dont le verrouillage d'objet S3 ou la conformité héritée n'est pas activée car elle stocke une seule copie d'objet à l'infini et utilise des nœuds d'archivage.
+. Règle par défaut conforme qui crée deux copies d'objets répliquées sur les nœuds de stockage du jour 0 à l'infini. Cette règle s'applique à tout objet dans un compartiment qui n'a pas été filtré par les deux premières règles.
+
+
+
+
+== Conditions requises pour les compartiments avec verrouillage objet S3 activé
+
+* Si le paramètre global de verrouillage objet S3 est activé pour le système StorageGRID, vous pouvez utiliser le gestionnaire de locataires, l'API de gestion des locataires ou l'API REST S3 pour créer des compartiments avec le verrouillage objet S3 activé.
++
+Dans cet exemple, le gestionnaire des locataires affiche un compartiment avec le verrouillage objet S3 activé.
+
++
+image::../media/compliant_bucket.png[Exemple de compartiment conforme]
+
+* Si vous prévoyez d'utiliser le verrouillage d'objet S3, vous devez activer le verrouillage d'objet S3 lors de la création du compartiment. Vous ne pouvez pas activer le verrouillage d'objet S3 pour un compartiment existant.
+* Le contrôle de version de compartiment est requis avec le verrouillage d'objet S3. Lorsque le verrouillage d'objet S3 est activé pour un compartiment, StorageGRID active automatiquement le contrôle de version pour ce compartiment.
+* Une fois que vous avez créé un compartiment avec le verrouillage d'objet S3 activé, vous ne pouvez pas désactiver le verrouillage d'objet S3 ou suspendre la gestion des versions pour ce compartiment.
+* Vous pouvez également configurer la conservation par défaut d'un compartiment. Lors du téléchargement d'une version d'objet, la conservation par défaut est appliquée à la version de l'objet. Vous pouvez remplacer la valeur par défaut du compartiment en spécifiant un mode de rétention et une date de conservation dans la demande de téléchargement d'une version d'objet.
+* La configuration du cycle de vie des compartiments est prise en charge pour les compartiments de cycle de vie des objets S3.
+* La réplication CloudMirror n'est pas prise en charge pour les compartiments avec le verrouillage objet S3 activé.
+
+
+
+
+== Exigences relatives aux objets dans les compartiments avec le verrouillage d'objet S3 activé
+
+* Pour protéger la version d'un objet, l'application client S3 doit configurer la conservation par défaut du compartiment ou spécifier les paramètres de conservation dans chaque demande de téléchargement.
+* Vous pouvez augmenter la valeur de conservation jusqu'à la date d'une version d'objet, mais vous ne pouvez jamais la diminuer.
+* Si vous êtes averti d'une action légale ou d'une enquête réglementaire en attente, vous pouvez conserver les informations pertinentes en plaçant une mise en garde légale sur une version d'objet. Lorsqu'une version d'objet est soumise à une conservation légale, cet objet ne peut pas être supprimé de StorageGRID, même si elle a atteint sa date de conservation. Dès que la mise en attente légale est levée, la version de l'objet peut être supprimée si la date de conservation a été atteinte.
+* Le verrouillage d'objet S3 requiert l'utilisation de compartiments avec version. Les paramètres de conservation s'appliquent aux versions d'objet individuelles. Une version d'objet peut avoir à la fois un paramètre de conservation à la date et un paramètre de conservation légal, l'un mais pas l'autre, ou l'autre. La spécification d'un paramètre de conservation à la date ou d'un paramètre de conservation légal pour un objet protège uniquement la version spécifiée dans la demande. Vous pouvez créer de nouvelles versions de l'objet, tandis que la version précédente de l'objet reste verrouillée.
+
+
+
+
+== Cycle de vie des objets dans des compartiments avec verrouillage objet S3 activé
+
+Chaque objet enregistré dans un compartiment avec l'option de verrouillage d'objet S3 passe en trois étapes :
+
+. *Entrée d'objet*
++
+** Lorsque vous ajoutez une version d'objet dans un compartiment lorsque le verrouillage objet S3 est activé, l'application client S3 peut utiliser les paramètres de conservation du compartiment par défaut ou spécifier des paramètres de conservation pour l'objet (conservation à la date, conservation légale ou les deux). StorageGRID génère ensuite les métadonnées de cet objet, qui incluent un identificateur d'objet unique (UUID) et la date et l'heure d'ingestion.
+** Lors de l'ingestion d'une version d'objet avec paramètres de conservation, les données et les métadonnées S3 définies par l'utilisateur ne peuvent pas être modifiées.
+** StorageGRID stocke les métadonnées objet indépendamment des données de l'objet. Elle conserve trois copies de toutes les métadonnées d'objet sur chaque site.
+
+
+. *Rétention d'objet*
++
+** Plusieurs copies de l'objet sont stockées par StorageGRID. Le nombre et le type exacts de copies ainsi que les emplacements de stockage sont déterminés par les règles conformes de la politique ILM active.
+
+
+. *Suppression d'objet*
++
+** Un objet peut être supprimé lorsque sa date de conservation est atteinte.
+** Impossible de supprimer un objet en attente légale.
+
+
+
+
+.Informations associées
+* xref:../tenant/index.adoc[Utilisez un compte de locataire]
+* xref:../s3/index.adoc[Utilisation de S3]
+* xref:managing-objects-with-s3-object-lock.adoc#comparing-s3-object-lock-to-legacy-compliance[Comparaison du verrouillage d'objet S3 à la conformité existante]
+* xref:example-7-compliant-ilm-policy-for-s3-object-lock.adoc[Exemple 7 : règle ILM conforme pour le verrouillage d'objet S3]
+* xref:../audit/index.adoc[Examiner les journaux d'audit]
+* xref:../s3/operations-on-buckets.adoc#using-s3-object-lock-default-bucket-retention[Utilisez la conservation de compartiment par défaut avec le verrouillage d'objet S3].
+

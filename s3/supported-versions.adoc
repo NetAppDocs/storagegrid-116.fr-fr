@@ -1,0 +1,39 @@
+---
+permalink: s3/supported-versions.html 
+sidebar: sidebar 
+keywords: supported versions, version support 
+summary: StorageGRID prend en charge les versions spécifiques suivantes de S3 et HTTP. 
+---
+= Versions prises en charge
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+StorageGRID prend en charge les versions spécifiques suivantes de S3 et HTTP.
+
+|===
+| Élément | Version 
+
+
+ a| 
+Spécification S3
+ a| 
+_Simple Storage Service API Reference_ 2006-03-01
+
+
+
+ a| 
+HTTP
+ a| 
+1.1
+
+Pour plus d'informations sur HTTP, consultez le document HTTP/1.1 (RFC 7230-35).
+
+*Remarque*: StorageGRID ne prend pas en charge HTTP/1.1 pipeline.
+
+|===
+https://datatracker.ietf.org/doc/html/rfc2616["IETF RFC 2616 : Protocole de transfert hypertexte (HTTP/1.1)"]
+
+http://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html["Documentation Amazon Web Services (AWS) : référence de l'API Amazon simple Storage Service"]

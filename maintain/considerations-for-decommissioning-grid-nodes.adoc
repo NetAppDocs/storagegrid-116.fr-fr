@@ -1,0 +1,31 @@
+---
+permalink: maintain/considerations-for-decommissioning-grid-nodes.html 
+sidebar: sidebar 
+keywords: storagegrid, decommission 
+summary: 'Avant de commencer cette procédure pour désaffecter un ou plusieurs nœuds, vous devez comprendre les implications que peut avoir la suppression de chaque type de nœud. Lors de la mise hors service d"un nœud, ses services sont désactivés et le nœud est automatiquement arrêté.' 
+---
+= Facteurs à prendre en compte lors de la mise hors service des nœuds
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de commencer cette procédure pour désaffecter un ou plusieurs nœuds, vous devez comprendre les implications que peut avoir la suppression de chaque type de nœud. Lors de la mise hors service d'un nœud, ses services sont désactivés et le nœud est automatiquement arrêté.
+
+Vous ne pouvez pas désaffecter un nœud si cela ne permet pas de conserver StorageGRID dans un état non valide. Les règles suivantes sont appliquées :
+
+* Vous ne pouvez pas désaffecter le nœud d'administration principal.
+* Vous ne pouvez pas désaffecter les nœuds d'archivage.
+* Vous ne pouvez pas désaffecter un nœud d'administration ou un nœud de passerelle si l'une de ses interfaces réseau fait partie d'un groupe haute disponibilité.
+* Vous ne pouvez pas mettre un noeud de stockage hors service si sa suppression affecterait le quorum ADC.
+* Vous ne pouvez pas désaffecter un nœud de stockage s'il est nécessaire pour la règle ILM active.
+* Vous ne devez pas désaffecter plus de 10 nœuds de stockage dans une procédure de nœud de mise hors service unique.
+* Vous ne pouvez pas désactiver un nœud connecté si votre grille inclut des nœuds déconnectés (nœuds dont l'état de santé est inconnu ou désactivé d'un point de vue administratif). Vous devez d'abord mettre hors service ou récupérer les nœuds déconnectés.
+* Si votre grille contient plusieurs nœuds déconnectés, le logiciel requiert que vous les désinsaffectez tous en même temps, ce qui augmente le risque de résultats inattendus.
+* Si un nœud déconnecté ne peut pas être supprimé (par exemple, un nœud de stockage requis pour le quorum ADC), aucun autre nœud déconnecté ne peut être supprimé.
+* Si vous souhaitez remplacer une ancienne appliance par une nouvelle, envisagez xref:appliance-node-cloning.adoc[clonage du nœud d'appliance] évite également de désaffecter l'ancien nœud et de ajouter le nouveau nœud dans une extension.
+
+
+
+IMPORTANT: Ne supprimez pas la machine virtuelle d'un nœud de la grille ou d'autres ressources tant que vous n'y êtes pas invité dans les procédures de mise hors service.

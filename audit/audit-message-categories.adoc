@@ -1,0 +1,14 @@
+---
+permalink: audit/audit-message-categories.html 
+sidebar: sidebar 
+keywords: storagegrid, audit, message, categories, category, group, groups, organization, class, classes 
+summary: 'Vous devez connaître les différentes catégories dans lesquelles les messages d"audit sont regroupés. Ces groupes sont organisés en fonction de la classe d"activité que le message représente.' 
+---
+= Catégories de messages d'audit
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez connaître les différentes catégories dans lesquelles les messages d'audit sont regroupés. Ces groupes sont organisés en fonction de la classe d'activité que le message représente.

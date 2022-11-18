@@ -1,0 +1,52 @@
+---
+permalink: ilm/renaming-erasure-coding-profile.html 
+sidebar: sidebar 
+keywords: rename erasure coding profile, ec profile 
+summary: 'Vous pouvez renommer un profil de code d"effacement pour le rendre plus évident que le profil.' 
+---
+= Renommer un profil de code d'effacement
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez renommer un profil de code d'effacement pour le rendre plus évident que le profil.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous disposez d'autorisations d'accès spécifiques.
+
+
+.Étapes
+. Sélectionnez *ILM* *codage d'effacement*.
++
+La page profils de code d'effacement s'affiche. Les boutons *Renommer* et *Désactiver* sont tous deux désactivés.
+
++
+image::../media/ec_profiles_rename_deactivate_disabled.png[Effacement des profils de codage Désactiver le renommage est désactivé]
+
+. Sélectionnez le profil à renommer.
++
+Les boutons *Renommer* et *Désactiver* sont activés.
+
+. Sélectionnez *Renommer*.
++
+La boîte de dialogue Renommer le profil EC s'affiche.
+
++
+image::../media/ec_profile_rename.png[Attribution d'un nouveau nom au profil de codage d'effacement]
+
+. Entrez un nom unique pour le profil de code d'effacement.
++
+Le nom du profil d'effacement Coding est ajouté au nom du pool de stockage dans l'instruction de placement pour une règle ILM.
+
++
+image::../media/storage_pool_and_erasure_coding_profile.png[Nom du pool de stockage et du profil EC]
+
++
+
+NOTE: Les noms de profils de codage d'effacement doivent être uniques. Une erreur de validation se produit si vous utilisez le nom d'un profil existant, même si ce profil a été désactivé.
+
+. Sélectionnez *Enregistrer*.
+

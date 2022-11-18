@@ -1,0 +1,69 @@
+---
+permalink: ilm/creating-and-assigning-storage-grades.html 
+sidebar: sidebar 
+keywords: what is a storage grade, create storage grade 
+summary: 'Les niveaux de stockage identifient le type de stockage utilisé par un nœud de stockage. Vous pouvez créer des classes de stockage si vous souhaitez que des règles ILM plagent certains objets sur certains nœuds de stockage plutôt que sur tous les nœuds du site. Vous pouvez, par exemple, stocker certains objets sur les nœuds de stockage les plus rapides, comme les appliances de stockage 100 % Flash StorageGRID.' 
+---
+= Créer et attribuer des notes de stockage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les niveaux de stockage identifient le type de stockage utilisé par un nœud de stockage. Vous pouvez créer des classes de stockage si vous souhaitez que des règles ILM plagent certains objets sur certains nœuds de stockage plutôt que sur tous les nœuds du site. Vous pouvez, par exemple, stocker certains objets sur les nœuds de stockage les plus rapides, comme les appliances de stockage 100 % Flash StorageGRID.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous disposez d'autorisations d'accès spécifiques.
+
+
+Si vous utilisez plusieurs types de stockage, vous pouvez éventuellement créer une note de stockage pour identifier chaque type. La création de nuances de stockage vous permet de sélectionner un type spécifique de nœud de stockage lors de la configuration de pools de stockage.
+
+Si la qualité de stockage n'est pas problématique (par exemple, tous les nœuds de stockage sont identiques), vous pouvez ignorer cette procédure et utiliser la qualité de stockage par défaut de tous les nœuds de stockage lors de la configuration des pools de stockage.
+
+Lorsque vous ajoutez un nouveau nœud de stockage dans une extension, celui-ci est ajouté à la classe de stockage par défaut de tous les nœuds de stockage. Par conséquent :
+
+* Si une règle ILM utilise un pool de stockage de cette catégorie pour tous les nœuds de stockage, le nouveau nœud peut être utilisé immédiatement après la fin de l'extension.
+* Si une règle ILM utilise un pool de stockage avec une note de stockage personnalisée, le nouveau nœud ne sera utilisé qu'après avoir attribué manuellement la note de stockage personnalisée au nœud, comme décrit ci-dessous.
+
+
+
+NOTE: Lorsque vous créez des notes de stockage, ne créez pas plus de notes que nécessaire. Par exemple, ne créez pas une note de stockage pour chaque nœud de stockage. Attribuez plutôt chaque catégorie de stockage à deux nœuds ou plus. Des types de stockage attribués à un seul nœud peuvent entraîner des backlog ILM si ce nœud est indisponible.
+
+.Étapes
+. Sélectionnez *ILM* *grades de stockage*.
+. Créer une note de stockage :
++
+.. Pour chaque note de stockage que vous devez définir, sélectionnez *Insérer* image:../media/icon_nms_insert.gif["insérer l'icône"] pour ajouter une ligne et saisir une étiquette pour la note de stockage.
++
+La note de stockage par défaut ne peut pas être modifiée. Il est réservé aux nouveaux nœuds de stockage ajoutés lors de l'extension d'un système StorageGRID.
+
++
+image::../media/editing_storage_grades.gif[Notes de stockage]
+
+.. Pour modifier une note de stockage existante, sélectionnez *Modifier* image:../media/icon_nms_edit.gif["icône modifier"] et modifiez l'étiquette si nécessaire.
++
+
+NOTE: Vous ne pouvez pas supprimer de notes de stockage.
+
+.. Sélectionnez *appliquer les modifications*.
++
+Ces classes de stockage sont désormais disponibles pour l'affectation aux nœuds de stockage.
+
+
+
+. Attribuer une note de stockage à un nœud de stockage :
++
+.. Pour le service LDR de chaque nœud de stockage, sélectionnez *Edit* image:../media/icon_nms_edit.gif["icône modifier"] et sélectionnez un grade de stockage dans la liste.
++
+image::../media/assigning_storage_grades_to_storage_nodes.gif[Notes de stockage]
+
++
+
+IMPORTANT: Attribuez une note de stockage à un nœud de stockage donné une seule fois. La récupération d'un nœud de stockage suite à une défaillance permet de conserver la qualité de stockage précédemment attribuée. Ne modifiez pas cette affectation après l'activation de la politique ILM. Si l'affectation est modifiée, les données sont stockées selon le nouveau niveau de stockage.
+
+.. Sélectionnez *appliquer les modifications*.
+
+
+

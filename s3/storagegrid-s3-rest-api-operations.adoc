@@ -1,0 +1,52 @@
+---
+permalink: s3/storagegrid-s3-rest-api-operations.html 
+sidebar: sidebar 
+keywords: S3 REST API, S3 operations 
+summary: 'Des opérations sont ajoutées à l"API REST S3 qui sont spécifiques à un système StorageGRID.' 
+---
+= Opérations des API REST StorageGRID S3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Des opérations sont ajoutées à l'API REST S3 qui sont spécifiques à un système StorageGRID.
+
+* xref:../s3/get-bucket-consistency-request.adoc[DEMANDE de cohérence des compartiments]
++
+La demande D'obtention de cohérence de godet vous permet de déterminer le niveau de cohérence appliqué à un compartiment particulier.
+
+* xref:../s3/put-bucket-consistency-request.adoc[PUT Bucket Consistency demandée]
++
+La demande de cohérence PUT bucket permet de spécifier le niveau de cohérence à appliquer aux opérations effectuées dans un compartiment.
+
+* xref:../s3/get-bucket-last-access-time-request.adoc[DEMANDE DE dernier accès au compartiment]
++
+La demande D'heure de dernier accès À GET Bucket vous permet de déterminer si les dernières mises à jour de temps d'accès sont activées ou désactivées pour les compartiments individuels.
+
+* xref:../s3/put-bucket-last-access-time-request.adoc[DEMANDE de temps de dernier accès au compartiment]
++
+La demande d'heure de dernier accès AU compartiment PERMET d'activer ou de désactiver les mises à jour des temps de dernier accès pour chaque compartiment. La désactivation des mises à jour du temps d'accès précédent améliore les performances. Il s'agit du paramètre par défaut pour tous les compartiments créés avec la version 10.3.0, ou ultérieure.
+
+* xref:../s3/delete-bucket-metadata-notification-configuration-request.adoc[SUPPRIME la demande de configuration de notification des métadonnées de compartiment]
++
+La demande de configuration DE notification DE métadonnées DELETE Bucket vous permet de désactiver le service d'intégration de recherche pour les compartiments individuels en supprimant le XML de configuration.
+
+* xref:../s3/get-bucket-metadata-notification-configuration-request.adoc[LIRE la demande de configuration de notification des métadonnées de compartiment]
++
+La demande de configuration DE notification DE métadonnées GET Bucket vous permet de récupérer le XML de configuration utilisé pour configurer l'intégration de la recherche pour chaque compartiment.
+
+* xref:../s3/put-bucket-metadata-notification-configuration-request.adoc[PUT Bucket metadata notification configuration]
++
+La demande de configuration DE notification DE métadonnées PUT compartiments vous permet d'activer le service d'intégration de la recherche pour chaque compartiment. Le XML de configuration de notification de métadonnées que vous fournissez dans le corps de la requête spécifie les objets dont les métadonnées sont envoyées à l'index de recherche de destination.
+
+* xref:../s3/get-storage-usage-request.adoc[DEMANDE d'utilisation du stockage]
++
+La demande GET Storage usage vous indique la quantité totale de stockage utilisée par un compte et pour chaque compartiment associé au compte.
+
+* xref:../s3/deprecated-bucket-requests-for-legacy-compliance.adoc[Demandes de compartiments obsolètes pour la conformité des anciennes]
++
+Vous devrez peut-être utiliser l'API REST StorageGRID S3 pour gérer les compartiments qui ont été créés à l'aide de la fonctionnalité de conformité héritée.
+
+

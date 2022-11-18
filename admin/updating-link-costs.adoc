@@ -1,0 +1,34 @@
+---
+permalink: admin/updating-link-costs.html 
+sidebar: sidebar 
+keywords: link costs, latency between sites 
+summary: Vous pouvez mettre à jour les coûts de liaison entre les sites de data Center afin de refléter la latence entre les sites. 
+---
+= Mettre à jour les coûts des liens
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez mettre à jour les coûts de liaison entre les sites de data Center afin de refléter la latence entre les sites.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous disposez de l'autorisation Configuration de la page de topologie de la grille.
+
+
+.Étapes
+. Sélectionnez *CONFIGURATION* *réseau* *coût de liaison*.
++
+image::../media/configuring_link_costs.png[Coût des liens]
+
+. Sélectionnez un site sous *Link Source* et entrez une valeur de coût comprise entre 0 et 100 sous *Link destination*.
++
+Vous ne pouvez pas modifier le coût du lien si la source est identique à la destination.
+
++
+Pour annuler les modifications, sélectionnez image:../media/nms_revert.gif["icône annuler"]*Retour*.
+
+. Sélectionnez *appliquer les modifications*.
+

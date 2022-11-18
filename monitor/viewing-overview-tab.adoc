@@ -1,0 +1,65 @@
+---
+permalink: monitor/viewing-overview-tab.html 
+sidebar: sidebar 
+keywords: overview tab 
+summary: 'L"onglet Présentation fournit des informations de base sur chaque nœud. Il affiche également toutes les alertes qui affectent actuellement le nœud.' 
+---
+= Afficher l'onglet vue d'ensemble
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'onglet Présentation fournit des informations de base sur chaque nœud. Il affiche également toutes les alertes qui affectent actuellement le nœud.
+
+L'onglet vue d'ensemble s'affiche pour tous les nœuds.
+
+
+
+== Informations sur le nœud
+
+La section informations sur le nœud de l'onglet vue d'ensemble répertorie les informations de base sur le nœud de la grille.
+
+image::../media/nodes_page_overview_tab.png[Onglet vue d'ensemble de la page noeuds]
+
+Les informations de présentation d'un nœud incluent les éléments suivants :
+
+* *Nom* : nom d'hôte attribué au nœud et affiché dans le Grid Manager.
+* *Type* : type de noeud -- noeud d'administration, noeud d'administration principal, noeud de stockage, noeud de passerelle ou noeud d'archivage.
+* *ID* : identificateur unique du noeud, qui est également appelé UUID.
+* *Etat de connexion* : l'un des trois États. L'icône de l'état le plus grave est affichée.
++
+** *Inconnu* image:../media/icon_alarm_blue_unknown.png["icône bleue du point d'interrogation"]: Le nœud n'est pas connecté à la grille pour une raison inconnue. Par exemple, la connexion réseau entre les nœuds a été perdue ou l'alimentation est coupée. L'alerte *Impossible de communiquer avec le noeud* peut également être déclenchée. D'autres alertes peuvent également être actives. Cette situation exige une attention immédiate.
++
+
+NOTE: Un nœud peut apparaître comme inconnu lors des opérations d'arrêt géré. Dans ces cas, vous pouvez ignorer l'état Inconnu.
+
+** * Arrêt administratif* image:../media/icon_alarm_gray_administratively_down.png["icône questionmark grise"]: Le nœud n'est pas connecté à la grille pour une raison attendue. Par exemple, le nœud ou les services du nœud ont été normalement arrêtés, le nœud est en cours de redémarrage ou le logiciel est mis à niveau. Une ou plusieurs alertes peuvent également être actives.
+** * Connecté* image:../media/icon_alert_green_checkmark.png["icône d'alerte verte coche"]: Le nœud est connecté à la grille.
+
+
+* *Stockage utilisé* : pour les nœuds de stockage uniquement.
++
+** *Données d'objet* : pourcentage de l'espace total utilisable pour les données d'objet qui ont été utilisées sur le nœud de stockage.
+** *Métadonnées d'objet* : pourcentage de l'espace total autorisé pour les métadonnées d'objet qui ont été utilisées sur le nœud de stockage.
+
+
+* *Version du logiciel* : la version de StorageGRID installée sur le nœud.
+* *Groupes HA* : pour les nœuds d'administration et de passerelle uniquement. Indique si une interface réseau sur le nœud est incluse dans un groupe haute disponibilité et si cette interface est l'interface principale.
+* *Adresses IP* : adresses IP du nœud. Cliquez sur *Afficher des adresses IP supplémentaires* pour afficher les adresses IPv4 et IPv6 du nœud ainsi que les mappages d'interface.
+
+
+
+
+== Alertes
+
+La section alertes de l'onglet vue d'ensemble répertorie toutes les alertes qui affectent actuellement ce nœud qui n'ont pas été réduites au silence. Cliquez sur le nom de l'alerte pour afficher des détails supplémentaires et les actions recommandées.
+
+image::../media/nodes_page_alerts_table.png[Tableau des alertes de la page nœuds]
+
+xref:monitoring-node-connection-states.adoc[Surveiller les États de connexion du nœud]
+
+xref:viewing-current-alerts.adoc[Afficher les alertes en cours]
+
+xref:viewing-specific-alert.adoc[Afficher une alerte spécifique]

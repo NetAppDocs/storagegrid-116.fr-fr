@@ -1,0 +1,47 @@
+---
+permalink: admin/manage-s3-select-for-tenant-accounts.html 
+sidebar: sidebar 
+keywords: s3 select, selectobjectcontent, best practices 
+summary: Vous pouvez autoriser certains locataires S3 à utiliser S3 Select pour émettre des demandes SelectObjectContent sur des objets individuels. 
+---
+= Gérez S3 Select pour les comptes de locataires
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez autoriser certains locataires S3 à utiliser S3 Select pour émettre des demandes SelectObjectContent sur des objets individuels.
+
+S3 Select constitue un moyen efficace d'effectuer des recherches dans de vastes volumes de données sans avoir à déployer une base de données et les ressources associées pour activer les recherches. Il réduit également le coût et la latence liés à la récupération des données.
+
+
+
+== Qu'est-ce que S3 Select ?
+
+S3 Select permet aux clients S3 d'utiliser les requêtes SelectObjectContent pour filtrer et récupérer uniquement les données nécessaires à partir d'un objet. L'implémentation d'StorageGRID de S3 Select inclut un sous-ensemble de commandes et de fonctionnalités S3 Select.
+
+
+
+== Considérations et configuration requise pour l'utilisation de S3 Select
+
+StorageGRID nécessite les éléments suivants pour les requêtes S3 Select :
+
+* L'objet que vous souhaitez interroger est au format CSV ou est un fichier compressé GZIP ou BZIP2 contenant un fichier au format CSV.
+* Les locataires doivent obtenir la possibilité S3 Select de l'administrateur du grid. Sélectionnez *Autoriser sélection S3* quand xref:creating-tenant-account.adoc[création d'un locataire] ou xref:editing-tenant-account.adoc[modification d'un locataire].
+* La requête SelectObjectContent doit être envoyée à un xref:configuring-load-balancer-endpoints.adoc[Terminal d'équilibrage de charge StorageGRID]. Les nœuds d'administration et de passerelle utilisés par le noeud final doivent être des nœuds d'appliance SG100 ou SG1000 ou des nœuds logiciels VMware.
+
+
+Notez les limites suivantes :
+
+* Les nœuds d'équilibrage de la charge sans système d'exploitation ne sont pas pris en charge.
+* Les requêtes ne peuvent pas être envoyées directement aux nœuds de stockage.
+* Les requêtes envoyées via le service CLB obsolète ne sont pas prises en charge.
+
+
+
+IMPORTANT: SelectObjectContent les demandes peuvent réduire les performances d'équilibrage de charge pour tous les clients S3 et tous les locataires. Activez cette fonctionnalité uniquement lorsque cela est nécessaire et uniquement pour les locataires de confiance.
+
+Voir la xref:../s3/use-s3-select.adoc[Instructions d'utilisation de S3 Select].
+
+Pour afficher xref:../monitor/reviewing-support-metrics.adoc[Graphiques Grafana] Pour les opérations S3 Select dans le temps, sélectionnez *SUPPORT* *Outils* *métriques* dans le gestionnaire de grille.

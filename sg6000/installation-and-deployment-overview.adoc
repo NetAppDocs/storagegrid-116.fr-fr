@@ -1,0 +1,117 @@
+---
+permalink: sg6000/installation-and-deployment-overview.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, Installation, deployment, Install, deploy, Installing, deploying 
+summary: 'Vous pouvez installer une ou plusieurs appliances de stockage StorageGRID lorsque vous déployez StorageGRID pour la première fois ou ajouter ultérieurement des nœuds de stockage dans le cadre d"une extension. Vous devrez peut-être également installer un nœud de stockage d"appliance dans le cadre d"une opération de restauration.' 
+---
+= Présentation de l'installation et du déploiement
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez installer une ou plusieurs appliances de stockage StorageGRID lorsque vous déployez StorageGRID pour la première fois ou ajouter ultérieurement des nœuds de stockage dans le cadre d'une extension. Vous devrez peut-être également installer un nœud de stockage d'appliance dans le cadre d'une opération de restauration.
+
+Votre système StorageGRID utilise la version requise du logiciel StorageGRID.
+
+|===
+| Appliance | Version StorageGRID requise 
+
+
+ a| 
+SG6060 et SG6060X sans tiroir d'extension
+ a| 
+11.1.1 ou ultérieure
+
+
+
+ a| 
+SG6060 et SG6060X avec tiroirs d'extension (un ou deux)
+ a| 
+11.3 ou ultérieure
+
+*Remarque :* si vous ajoutez des tiroirs d'extension après le déploiement initial, vous devez utiliser la version 11.4 ou ultérieure.
+
+
+
+ a| 
+SGF6024
+ a| 
+11.3 ou ultérieure
+
+|===
+
+
+== Tâches d'installation et de déploiement
+
+L'ajout d'une appliance de stockage StorageGRID à un système StorageGRID comprend quatre étapes principales :
+
+. Préparation de l'installation :
++
+** Préparation du site d'installation
+** Déballage des boîtes et vérification du contenu
+** Obtenir des équipements et des outils supplémentaires
+** Collecte des adresses IP et des informations réseau
+** Facultatif : configuration d'un serveur de gestion des clés externe (KMS) si vous prévoyez de crypter toutes les données de l'appliance. Pour plus d'informations sur la gestion externe des clés, reportez-vous aux instructions d'administration de StorageGRID.
+
+
+. Installation du matériel :
++
+** Enregistrement du matériel
+** Installation de l'appliance dans une armoire ou un rack
+** Installation des lecteurs
+** Installation de tiroirs d'extension en option (modèles SG6060 et SG6060X uniquement, maximum de deux tiroirs d'extension)
+** Câblage de l'appareil
+** Branchement des câbles d'alimentation et alimentation électrique
+** Affichage des codes d'état de démarrage
+
+
+. Configuration du matériel :
++
+** Accès à SANtricity System Manager pour configurer les paramètres de SANtricity System Manager
+** Accès au programme d'installation de l'appliance StorageGRID, définition d'une adresse IP statique pour le port de gestion 1 sur le contrôleur de stockage et configuration des paramètres de liaison et d'adresse IP réseau requis pour la connexion aux réseaux StorageGRID
+** Accès à l'interface du contrôleur de gestion de la carte mère (BMC) sur le contrôleur SG6000-CN
+** Facultatif : activation du chiffrement de nœud si vous prévoyez d'utiliser un KMS externe pour chiffrer les données de l'appliance.
+** Facultatif : modification du mode RAID.
+
+
+. Déploiement de l'appliance en tant que nœud de stockage :
++
+|===
+| Tâche | Instructions 
+
+
+ a| 
+Déploiement d'une appliance de nœud de stockage dans un nouveau système StorageGRID
+ a| 
+xref:deploying-appliance-storage-node.adoc[Déployez le nœud de stockage de l'appliance]
+
+
+
+ a| 
+Ajout d'un nœud de stockage d'appliance à un système StorageGRID existant
+ a| 
+Instructions d'extension d'un système StorageGRID
+
+
+
+ a| 
+Déploiement d'un nœud de stockage d'appliance dans le cadre d'une opération de restauration du nœud de stockage
+ a| 
+Instructions de récupération et de maintenance
+
+|===
+
+
+xref:preparing-for-installation.adoc[Préparation de l'installation (SG6000)]
+
+xref:installing-hardware.adoc[Installation du matériel (SG6000)]
+
+xref:configuring-hardware.adoc[Configuration du matériel (SG6000)]
+
+xref:../expand/index.adoc[Développez votre grille]
+
+xref:../maintain/index.adoc[Récupérer et entretenir]
+
+xref:../admin/index.adoc[Administrer StorageGRID]

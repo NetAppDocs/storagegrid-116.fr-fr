@@ -1,0 +1,83 @@
+---
+permalink: audit/object-ingest-transactions.html 
+sidebar: sidebar 
+keywords: storagegrid, audit, message, messages, transaction, transactions, Object ingest, S3 ingest, Swift ingest, S3, Swift, SPUT, ORLM, WPUT 
+summary: 'Vous pouvez identifier les transactions d"entrée des clients dans le journal d"audit en localisant les messages d"audit \(S3 ou Swift\) spécifiques aux API.' 
+---
+= Transactions d'ingestion d'objets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez identifier les transactions d'entrée de clients dans le journal d'audit en localisant les messages d'audit spécifiques aux API (S3 ou Swift).
+
+Tous les messages d'audit générés lors d'une transaction d'entrée ne sont pas répertoriés dans les tableaux suivants. Seuls les messages nécessaires au suivi de la transaction d'acquisition sont inclus.
+
+
+
+== Ingestion des messages d'audit S3
+
+|===
+| Code | Nom | Description | Tracé | Voir 
+
+
+ a| 
+SPUT
+ a| 
+Transaction PUT S3
+ a| 
+Une transaction d'entrée DE PUT S3 a été effectuée avec succès.
+ a| 
+CBID, S3BK, S3KY
+ a| 
+xref:sput-s3-put.adoc[SPUT : PUT S3]
+
+
+
+ a| 
+ORLM
+ a| 
+Règles d'objet respectées
+ a| 
+La politique ILM a été satisfaite pour cet objet.
+ a| 
+CBID
+ a| 
+xref:orlm-object-rules-met.adoc[ORLM : règles d'objet respectées]
+
+|===
+
+
+== Ingestion des messages d'audit Swift
+
+|===
+| Code | Nom | Description | Tracé | Voir 
+
+
+ a| 
+WPUT
+ a| 
+EFFECTUER la transaction Swift
+ a| 
+Une transaction d'entrée DE PUT Swift a été effectuée avec succès.
+ a| 
+CBID, WCON, WOBJ
+ a| 
+xref:wput-swift-put.adoc[WPUT : PUT SWIFT]
+
+
+
+ a| 
+ORLM
+ a| 
+Règles d'objet respectées
+ a| 
+La politique ILM a été satisfaite pour cet objet.
+ a| 
+CBID
+ a| 
+xref:orlm-object-rules-met.adoc[ORLM : règles d'objet respectées]
+
+|===

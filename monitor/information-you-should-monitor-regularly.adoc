@@ -1,0 +1,84 @@
+---
+permalink: monitor/information-you-should-monitor-regularly.html 
+sidebar: sidebar 
+keywords: monitor, monitoring, StorageGRID, 
+summary: 'StorageGRID est un système de stockage distribué, tolérant aux pannes et conçu pour continuer à fonctionner même en cas d"erreur, ou lorsque des nœuds ou des sites sont indisponibles. Vous devez surveiller de manière proactive l"état du système, les charges de travail et les statistiques d"utilisation afin de pouvoir prendre des mesures pour résoudre les problèmes potentiels avant qu"ils n"affectent l"efficacité ou la disponibilité du réseau.' 
+---
+= Informations à surveiller régulièrement
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+StorageGRID est un système de stockage distribué, tolérant aux pannes et conçu pour continuer à fonctionner même en cas d'erreur, ou lorsque des nœuds ou des sites sont indisponibles. Vous devez surveiller de manière proactive l'état du système, les workloads et les statistiques d'utilisation afin de pouvoir prendre les mesures nécessaires pour résoudre les problèmes potentiels avant qu'ils n'affectent l'efficacité ou la disponibilité du réseau.
+
+Un système occupé génère de grandes quantités d'informations. Cette section fournit des conseils sur les informations les plus importantes à surveiller de façon continue.
+
+[cols="2a,1a"]
+|===
+| Quoi surveiller | Fréquence 
+
+
+ a| 
+Le xref:monitoring-system-health.adoc[données d'état du système] Affiché sur le tableau de bord de Grid Manager. Notez que tout a changé depuis le jour précédent.
+ a| 
+Tous les jours
+
+
+
+ a| 
+Taux auquel xref:monitoring-storage-capacity.adoc[Capacité des objets et des métadonnées du nœud de stockage] est en cours de consommation
+ a| 
+Hebdomadaire
+
+
+
+ a| 
+xref:monitoring-information-lifecycle-management.adoc[Opérations de gestion du cycle de vie des informations]
+ a| 
+Hebdomadaire
+
+
+
+ a| 
+xref:monitoring-network-connections-and-performance.adoc[Connexions réseau et performances]
+ a| 
+Hebdomadaire
+
+
+
+ a| 
+xref:monitoring-node-level-resources.adoc[Ressources au niveau des nœuds]
+ a| 
+Hebdomadaire
+
+
+
+ a| 
+xref:monitoring-tenant-activity.adoc[Activité des locataires]
+ a| 
+Hebdomadaire
+
+
+
+ a| 
+xref:monitoring-archival-capacity.adoc[Capacité du système de stockage d'archives externe]
+ a| 
+Hebdomadaire
+
+
+
+ a| 
+xref:monitoring-load-balancing-operations.adoc[Opérations d'équilibrage de la charge]
+ a| 
+Après la configuration initiale et après toute modification de la configuration
+
+
+
+ a| 
+xref:applying-hotfixes-or-upgrading-software-if-necessary.adoc[Disponibilité des correctifs logiciels et des mises à niveau logicielles]
+ a| 
+Tous les mois
+
+|===

@@ -1,0 +1,27 @@
+---
+permalink: audit/management-audit-message.html 
+sidebar: sidebar 
+keywords: storagegrid, audit, message, management, user request, user requests 
+summary: 'La catégorie gestion consigne les requêtes utilisateur dans l"API de gestion.' 
+---
+= Message d'audit de gestion
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La catégorie gestion consigne les requêtes utilisateur dans l'API de gestion.
+
+|===
+| Code | Titre et description du message | Voir 
+
+
+ a| 
+MGAU
+ a| 
+Message d'audit de l'API de gestion : journal des demandes utilisateur.
+ a| 
+xref:mgau-management-audit-message.adoc[MGAU : message d'audit de gestion]
+
+|===

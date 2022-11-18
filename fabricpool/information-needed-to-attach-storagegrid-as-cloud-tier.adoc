@@ -1,0 +1,114 @@
+---
+permalink: fabricpool/information-needed-to-attach-storagegrid-as-cloud-tier.html 
+sidebar: sidebar 
+keywords: StorageGRID, fabricPool, ONTAP System Manager, ONTAP CLI, port, FQDN, object store name 
+summary: Avant de pouvoir associer StorageGRID en tant que Tier cloud pour FabricPool, vous devez effectuer certaines étapes de configuration dans StorageGRID et obtenir certaines valeurs. 
+---
+= Informations nécessaires pour rattacher StorageGRID à un niveau cloud
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de pouvoir associer StorageGRID en tant que Tier cloud pour FabricPool, vous devez effectuer certaines étapes de configuration dans StorageGRID et obtenir certaines valeurs.
+
+Le tableau suivant répertorie les informations que vous devez fournir à ONTAP lorsque vous associez StorageGRID en tant que Tier cloud pour FabricPool. Les rubriques de cette section expliquent comment utiliser StorageGRID Grid Manager et le Gestionnaire de locataires pour obtenir les informations dont vous avez besoin.
+
+
+NOTE: Les noms de champ exacts répertoriés et le processus que vous utilisez pour entrer les valeurs requises dans ONTAP dépendent de l'utilisation de l'interface de ligne de commande ONTAP (Storage Aggregate Object-store config create) ou de ONTAP System Manager (*Storage* *Aggregates Disks* *Cloud Tier*).
+
+Pour plus d'informations, reportez-vous aux sections suivantes :
+
+* https://www.netapp.com/pdf.html?item=/media/17239-tr4598pdf.pdf["Tr-4598 : meilleures pratiques de FabricPool dans ONTAP 9.9.1"^]
+* https://docs.netapp.com/us-en/ontap/index.html["Documentation ONTAP 9"^]
+
+
+[cols="1a,2a"]
+|===
+| Champ ONTAP | Description 
+
+
+ a| 
+Nom du magasin d'objets
+ a| 
+Tout nom unique et descriptif. Par exemple : `StorageGRID_Cloud_Tier`.
+
+
+
+ a| 
+Type de fournisseur
+ a| 
+StorageGRID (ONTAP System Manager) ou `SGWS` (INTERFACE DE LIGNE DE COMMANDES ONTAP).
+
+
+
+ a| 
+Port
+ a| 
+Port utilisé par FabricPool lorsqu'il se connecte à StorageGRID. Vous déterminez le numéro de port à utiliser lorsque vous définissez le noeud final de l'équilibreur de charge StorageGRID.
+
+xref:creating-load-balancer-endpoint-for-fabricpool.adoc[Créez un noeud final d'équilibrage de charge pour FabricPool]
+
+
+
+ a| 
+Nom du serveur
+ a| 
+Nom de domaine complet (FQDN) pour le noeud final de l'équilibreur de charge StorageGRID. Par exemple : `s3.storagegrid.company.com`.
+
+Notez ce qui suit :
+
+* Le nom de domaine que vous spécifiez ici doit correspondre au nom de domaine sur le certificat d'autorité de certification que vous téléchargez pour le noeud final de l'équilibreur de charge StorageGRID.
+* L'enregistrement DNS de ce nom de domaine doit correspondre à chaque adresse IP que vous utiliserez pour vous connecter à StorageGRID.
+
+
+xref:configuring-dns-for-storagegrid-ip-addresses.adoc[Configurez le serveur DNS pour les adresses IP StorageGRID]
+
+
+
+ a| 
+Nom du conteneur
+ a| 
+Nom du compartiment StorageGRID que vous utiliserez avec ce cluster ONTAP. Par exemple : `fabricpool-bucket`. Il est possible de créer ce compartiment dans le Gestionnaire de locataires ou, en commençant par ONTAP 9.10 System Manager, il est possible de créer le compartiment à l'aide de l'assistant d'installation de FabricPool.
+
+Notez ce qui suit :
+
+* Le nom de compartiment ne peut pas être modifié une fois la configuration créée.
+* Le contrôle de version du compartiment ne peut pas être activé.
+* Vous devez utiliser un compartiment différent pour chaque cluster ONTAP afin de transférer les données vers StorageGRID.
+
+
+xref:creating-s3-bucket-and-access-key.adoc[Créez un compartiment S3 et obtenez une clé d'accès]
+
+
+
+ a| 
+Clé d'accès et mot de passe secret
+ a| 
+La clé d'accès et la clé secrète d'accès pour le compte de locataire StorageGRID.
+
+Ces valeurs sont générées dans le Gestionnaire de locataires.
+
+xref:creating-s3-bucket-and-access-key.adoc[Créez un compartiment S3 et obtenez une clé d'accès]
+
+
+
+ a| 
+SSL
+ a| 
+Doit être activé.
+
+
+
+ a| 
+Certificat de magasin d'objets
+ a| 
+Le certificat de l'autorité de certification que vous avez téléchargé lorsque vous avez créé le noeud final de l'équilibreur de charge StorageGRID.
+
+*Remarque :* si une autorité de certification intermédiaire a émis le certificat StorageGRID, vous devez fournir le certificat CA intermédiaire. Si le certificat StorageGRID a été émis directement par l'autorité de certification racine, vous devez fournir le certificat d'autorité de certification racine.
+
+xref:creating-load-balancer-endpoint-for-fabricpool.adoc[Créez un noeud final d'équilibrage de charge pour FabricPool]
+
+|===
+Une fois les informations StorageGRID requises obtenues, il est possible d'accéder à ONTAP pour ajouter StorageGRID comme Tier cloud, ajouter le niveau cloud en tant qu'agrégat et définir des règles de Tiering des volumes.

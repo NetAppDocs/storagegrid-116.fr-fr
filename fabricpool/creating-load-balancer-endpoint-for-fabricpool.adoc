@@ -1,0 +1,92 @@
+---
+permalink: fabricpool/creating-load-balancer-endpoint-for-fabricpool.html 
+sidebar: sidebar 
+keywords: fabricPool, load balancer, endpoint, load balancing, create, creating, certificate 
+summary: 'Lors de la configuration de StorageGRID pour une utilisation avec FabricPool, vous devez configurer un noeud final de l"équilibreur de charge et télécharger le certificat de point final de l"équilibreur de charge, qui est utilisé pour sécuriser la connexion entre ONTAP et StorageGRID.' 
+---
+= Créez un noeud final d'équilibrage de charge pour FabricPool
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lors de la configuration de StorageGRID pour une utilisation avec FabricPool, vous devez configurer un noeud final de l'équilibreur de charge et télécharger le certificat de point final de l'équilibreur de charge, qui est utilisé pour sécuriser la connexion entre ONTAP et StorageGRID.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous disposez de l'autorisation d'accès racine.
+* Vous disposez des fichiers suivants :
++
+** Certificat de serveur : fichier de certificat de serveur personnalisé.
+** Clé privée de certificat de serveur : fichier de clé privée de certificat de serveur personnalisé.
+** CA Bundle : fichier facultatif unique contenant les certificats de chaque autorité de certification intermédiaire (CA). Le fichier doit contenir chacun des fichiers de certificat d'autorité de certification codés au PEM, concaténés dans l'ordre de la chaîne de certificats.
+
+
+
+
+Pour plus d'informations sur cette tâche, reportez-vous à la section xref:../admin/configuring-load-balancer-endpoints.adoc[Configurer les terminaux de l'équilibreur de charge].
+
+.Étapes
+. Sélectionnez *CONFIGURATION* *réseau* *points d'extrémité de l'équilibreur de charge*.
+. Sélectionnez *Créer*.
++
+image::../media/load_balancer_endpoint_create_http.png[Créer UN point final LB]
+
+. Saisissez les détails du point final.
++
+[cols="1a,2a"]
+|===
+| Champ | Description 
+
+
+ a| 
+Nom
+ a| 
+Un nom descriptif pour le noeud final
+
+
+
+ a| 
+Port
+ a| 
+Port StorageGRID que vous souhaitez utiliser pour l'équilibrage de charge. Ce champ est par défaut défini sur 10433, mais vous pouvez entrer tout port externe inutilisé. Si vous saisissez 80 ou 443, le noeud final est configuré uniquement sur les noeuds de passerelle, car ces ports sont réservés sur les noeuds d'administration.
+
+*Remarque :* les ports utilisés par d'autres services de réseau ne sont pas autorisés. Voir laxref:../network/network-port-reference.adoc[Référence du port réseau].
+
+Vous devez fournir ce même numéro de port à ONTAP lorsque vous associez StorageGRID en tant que Tier cloud FabricPool.
+
+
+
+ a| 
+Type de client
+ a| 
+Sélectionnez *S3*.
+
+
+
+ a| 
+Protocole réseau
+ a| 
+Sélectionnez *HTTPS*.
+
+*Remarque* : l'utilisation de *HTTP* est prise en charge mais non recommandée.
+
+|===
+. Sélectionnez *Continuer*.
+. Spécifiez le mode de liaison.
++
+Utilisez le paramètre *Global* (recommandé) ou limitez l'accessibilité de ce point final à l'un des paramètres suivants :
+
++
+** Interfaces réseau spécifiques de nœuds spécifiques.
+** Adresses IP virtuelles (VIP) haute disponibilité (HA) spécifiques. Utilisez cette sélection uniquement si vous avez besoin de niveaux d'isolation des charges de travail beaucoup plus élevés.
+
+
+. Sélectionnez *Continuer*.
+. Sélectionnez *Télécharger le certificat* (recommandé), puis naviguez jusqu'à votre certificat de serveur, votre clé privée de certificat et votre paquet CA facultatif.
+. Sélectionnez *Créer*.
+
+
+
+NOTE: Les modifications apportées à un certificat de point final peuvent prendre jusqu'à 15 minutes pour être appliquées à tous les nœuds.

@@ -1,0 +1,33 @@
+---
+permalink: sg6000/expansion-shelves-do-not-appear-in-appliance-installer.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance troubleshooting, Expansion, shelves, do not appear, Appliance Installer, missing, not shown 
+summary: 'Si vous avez installé des tiroirs d"extension pour le SG6060 ou le SG6060X et qu"ils n"apparaissent pas dans le programme d"installation de l"appliance StorageGRID, vérifiez que les tiroirs ont été entièrement installés et sous tension.' 
+---
+= Les tiroirs d'extension n'apparaissent pas dans le programme d'installation de l'appliance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous avez installé des tiroirs d'extension pour le SG6060 ou le SG6060X et qu'ils n'apparaissent pas dans le programme d'installation de l'appliance StorageGRID, vérifiez que les tiroirs ont été entièrement installés et sous tension.
+
+Vous pouvez vérifier que les tiroirs d'extension sont connectés à l'appliance en consultant les informations suivantes dans le programme d'installation de l'appliance StorageGRID :
+
+* La page *Home* contient un message sur les tiroirs d'extension.
++
+image::../media/expansion_shelf_home_page_msg.png[Message tiroirs d'extension]
+
+* La page *Advanced* *RAID mode* indique par nombre de disques si l'appliance inclut ou non des tiroirs d'extension. Par exemple, dans la capture d'écran suivante, deux disques SSD et 178 disques durs sont affichés. Un SG6060 avec deux tiroirs d'extension contient 180 disques au total.
+
+
+image::../media/expansion_shelves_shown_by_num_of_drives.png[Nombre de disques]
+
+Si les pages du programme d'installation de l'appliance StorageGRID n'indiquent pas la présence de tiroirs d'extension, suivez cette procédure.
+
+.Étapes
+. Vérifiez-le xref:sg6060-cabling-optional-expansion-shelves.adoc[tous les câbles requis ont été fermement connectés].
+. Vérifiez que vous avez xref:connecting-power-cords-and-applying-power-sg6000.adoc[mis sous tension les tiroirs d'extension].
+. Si vous avez besoin d'aide pour résoudre un problème, contactez le support technique.
+

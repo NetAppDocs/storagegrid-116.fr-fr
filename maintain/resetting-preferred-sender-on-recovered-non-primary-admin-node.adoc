@@ -1,0 +1,28 @@
+---
+permalink: maintain/resetting-preferred-sender-on-recovered-non-primary-admin-node.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, non-primary admin node, reset preferred sender, resetting preferred sender 
+summary: 'Si le nœud d"administration non primaire que vous êtes en cours de restauration est actuellement défini comme l"expéditeur préféré des notifications d"alerte, des notifications d"alarme et des messages AutoSupport, vous devez reconfigurer ce paramètre dans le système StorageGRID.' 
+---
+= Réinitialisez l'expéditeur préféré sur le nœud d'administration non primaire restauré
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si le nœud d'administration non primaire que vous êtes en cours de restauration est actuellement défini comme l'expéditeur préféré des notifications d'alerte, des notifications d'alarme et des messages AutoSupport, vous devez reconfigurer ce paramètre dans le système StorageGRID.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous devez disposer d'autorisations d'accès spécifiques.
+* Le nœud d'administration restauré doit être installé et en cours d'exécution.
+
+
+.Étapes
+. Sélectionnez *CONFIGURATION* *système* *Options d'affichage*.
+. Sélectionnez le noeud d'administration récupéré dans la liste déroulante *expéditeur préféré*.
+. Cliquez sur *appliquer les modifications*.
+
+
+xref:../admin/index.adoc[Administrer StorageGRID]

@@ -1,0 +1,212 @@
+---
+section: sg6000
+title: Dispositifs de stockage SG6000
+entries:
+- title: Présentation
+  pdf-filename: Dispositifs de stockage StorageGRID SG6000
+  url: "/sg6000/index.html"
+  entries:
+  - title: SG6060 et SG6060X Présentation
+    url: "/sg6000/sg6060-overview.html"
+  - title: Présentation du SGF6024
+    url: "/sg6000/sgf6024-overview.html"
+  - title: Contrôleurs des appareils SG6000
+    url: "/sg6000/controllers-in-sg6000-appliances.html"
+- title: Présentation de l'installation et du déploiement
+  url: "/sg6000/installation-and-deployment-overview.html"
+- title: Préparation de l'installation (SG6000)
+  url: "/sg6000/preparing-for-installation.html"
+  entries:
+  - title: Préparer le site (SG6000)
+    url: "/sg6000/preparing-site-sg6000.html"
+  - title: Déballer les boîtes (SG6000)
+    url: "/sg6000/unpacking-boxes-sg6000.html"
+  - title: Obtenir des équipements et des outils supplémentaires (SG6000)
+    url: "/sg6000/obtaining-additional-equipment-and-tools-sg6000.html"
+  - title: Vérifier les connexions réseau de l'appareil (SG6000)
+    url: "/sg6000/reviewing-appliance-network-connections-sg6000.html"
+    entries:
+    - title: Modes de liaison des ports pour le contrôleur SG6000-CN
+      url: "/sg6000/port-bond-modes-for-sg6000-cn-controller.html"
+      entries:
+      - title: Modes de liaison réseau pour les ports 10/25 GbE
+        url: "/sg6000/network-bond-modes-for-10-25-gbe-ports.html"
+      - title: Modes de liaison réseau pour les ports de gestion 1 GbE
+        url: "/sg6000/network-bond-modes-for-1-gbe-management-ports.html"
+  - title: Collecte des informations d'installation (SG6000)
+    url: "/sg6000/gathering-installation-information-sg6000.html"
+- title: Installation du matériel (SG6000)
+  url: "/sg6000/installing-hardware.html"
+  entries:
+  - title: Enregistrez le matériel
+    url: "/sg6000/registering-hardware.html"
+  - title: 'SG6060 et SG6060X : installez les tiroirs de 60 disques dans l''armoire
+      ou le rack'
+    url: "/sg6000/sg6060-installing-60-drive-shelves-into-cabinet-or-rack.html"
+  - title: 'SG6060 et SG6060X : installation des disques'
+    url: "/sg6000/sg6060-installing-drives.html"
+  - title: 'SGF6024 : installez les tiroirs de 24 disques dans l''armoire ou le rack'
+    url: "/sg6000/sgf6024-installing-24-drive-shelves-into-cabinet-or-rack.html"
+  - title: 'SG6000-CN : à installer dans l''armoire ou le rack'
+    url: "/sg6000/sg6000-cn-installing-into-cabinet-or-rack.html"
+  - title: Cable appliance (SG6000)
+    url: "/sg6000/cabling-appliance-sg6000.html"
+  - title: 'SG6060 et SG6060X : câblage des tiroirs d''extension en option'
+    url: "/sg6000/sg6060-cabling-optional-expansion-shelves.html"
+  - title: Branchement des câbles d'alimentation et alimentation (SG6000)
+    url: "/sg6000/connecting-power-cords-and-applying-power-sg6000.html"
+  - title: Afficher les indicateurs d'état et les boutons sur le contrôleur SG6000-CN
+    url: "/sg6000/viewing-status-indicators-and-buttons-on-sg6000-cn-controller.html"
+  - title: Afficher les codes d'état de démarrage des contrôleurs de stockage SG6000
+      et SG6060X
+    url: "/sg6000/viewing-boot-up-status-codes-for-sg6000-storage-controllers.html"
+- title: Configuration du matériel (SG6000)
+  url: "/sg6000/configuring-hardware.html"
+  entries:
+  - title: Configuration des connexions StorageGRID (SG6000)
+    url: "/sg6000/configuring-storagegrid-connections.html"
+    entries:
+    - title: Accédez au programme d'installation de l'appliance StorageGRID
+      url: "/sg6000/accessing-storagegrid-appliance-installer-sg6000.html"
+    - title: Vérifiez et mettez à niveau la version du programme d'installation de
+        l'appliance StorageGRID
+      url: "/sg6000/verifying-and-upgrading-storagegrid-appliance-installer-version.html"
+    - title: Configuration des liens réseau (SG6000)
+      url: "/sg6000/configuring-network-links-sg6000.html"
+    - title: Configurez les adresses IP StorageGRID
+      url: "/sg6000/configuring-storagegrid-ip-addresses-sg6000.html"
+    - title: Vérifiez les connexions réseau
+      url: "/sg6000/verifying-network-connections.html"
+    - title: Vérifiez les connexions réseau au niveau des ports
+      url: "/sg6000/verifying-port-level-network-connections.html"
+  - title: Accès et configuration de SANtricity System Manager (SG6000)
+    url: "/sg6000/accessing-and-configuring-santricity-system-manager.html"
+    entries:
+    - title: Configuration et accès à SANtricity System Manager
+      url: "/sg6000/setting-up-and-accessing-santricity-system-manager.html"
+    - title: Révision de l'état du matériel dans SANtricity System Manager
+      url: "/sg6000/reviewing-hardware-status-in-santricity-system-manager.html"
+    - title: Définissez les adresses IP des contrôleurs de stockage à l'aide du programme
+        d'installation de l'appliance StorageGRID
+      url: "/sg6000/setting-ip-addresses-for-storage-controllers-using-storagegrid-appliance-installer.html"
+  - title: Configurer l'interface BMC (SG6000)
+    url: "/sg6000/configuring-bmc-interface-sg6000.html"
+    entries:
+    - title: Modifier le mot de passe racine de l'interface BMC
+      url: "/sg6000/changing-root-password-for-bmc-interface-sg6000.html"
+    - title: Définissez l'adresse IP du port de gestion BMC
+      url: "/sg6000/setting-ip-address-for-bmc-management-port-sg6000.html"
+    - title: Accéder à l'interface BMC
+      url: "/sg6000/accessing-bmc-interface-sg6000.html"
+    - title: Configurez les paramètres SNMP pour le contrôleur SG6000-CN
+      url: "/sg6000/configuring-snmp-settings-for-sg6000-cn-controller.html"
+    - title: Configurez les notifications par e-mail pour les alertes
+      url: "/sg6000/setting-up-email-notifications-for-alerts.html"
+  - title: 'Facultatif : activez le chiffrement de nœud'
+    url: "/sg6000/optional-enabling-node-encryption.html"
+  - title: 'Facultatif : modification du mode RAID (SG6000 uniquement)'
+    url: "/sg6000/optional-changing-raid-mode-sg6000-only.html"
+  - title: 'Facultatif : remappage des ports réseau pour l''appliance'
+    url: "/sg6000/optional-remapping-network-ports-for-appliance-sg6000.html"
+- title: Déployez le nœud de stockage de l'appliance
+  url: "/sg6000/deploying-appliance-storage-node.html"
+- title: Surveiller l'installation de l'appliance de stockage
+  url: "/sg6000/monitoring-storage-appliance-installation.html"
+- title: Automatisation de l'installation et de la configuration de l'appliance (SG6000)
+  url: "/sg6000/automating-appliance-installation-and-configuration.html"
+  entries:
+  - title: Automatisez la configuration de l'appliance avec le programme d'installation
+      de l'appliance StorageGRID
+    url: "/sg6000/automating-appliance-configuration-using-storagegrid-appliance-installer.html"
+  - title: Automatisez l'installation et la configuration des nœuds d'appliance à
+      l'aide du script configure-sga.py
+    url: "/sg6000/automating-installation-configuration-appliance-nodes-configure-sga-py-script.html"
+  - title: Automatisez la configuration de StorageGRID
+    url: "/sg6000/automating-configuration-of-storagegrid.html"
+- title: Présentation de l'installation des API REST
+  url: "/sg6000/overview-of-installation-rest-apis.html"
+- title: Dépannage de l'installation du matériel (SG6000)
+  url: "/sg6000/troubleshooting-hardware-installation.html"
+  entries:
+  - title: Afficher les codes de démarrage du contrôleur SG6000-CN
+    url: "/sg6000/viewing-boot-up-codes-for-sg6000-cn-controller.html"
+  - title: Afficher les codes d'erreur du contrôleur SG6000-CN
+    url: "/sg6000/viewing-error-codes-for-sg6000-cn-controller.html"
+  - title: La configuration du matériel semble être suspendue
+    url: "/sg6000/hardware-setup-appears-to-hang.html"
+  - title: Résolution des problèmes de connexion (SG6000)
+    url: "/sg6000/troubleshooting-connection-issues.html"
+    entries:
+    - title: Connexion à l'appareil impossible
+      url: "/sg6000/unable-to-connect-to-appliance.html"
+    - title: Les tiroirs d'extension n'apparaissent pas dans le programme d'installation
+        de l'appliance
+      url: "/sg6000/expansion-shelves-do-not-appear-in-appliance-installer.html"
+  - title: Redémarrez le contrôleur SG6000-CN pendant que le programme d'installation
+      de l'appliance StorageGRID est en cours d'exécution
+    url: "/sg6000/rebooting-sg6000-cn-controller-while-storagegrid-appliance-installer-is-running.html"
+- title: Entretenir l'appareil SG6000
+  url: "/sg6000/maintaining-sg6000-appliance.html"
+  entries:
+  - title: Mettez l'appareil en mode maintenance
+    url: "/sg6000/placing-appliance-into-maintenance-mode.html"
+  - title: Mettez à niveau votre système d'exploitation SANtricity sur les contrôleurs
+      de stockage
+    url: "/sg6000/upgrading-santricity-os-on-storage-controllers.html"
+    entries:
+    - title: Mettez à niveau le système d'exploitation SANtricity sur les contrôleurs
+        de stockage à l'aide de Grid Manager
+      url: "/sg6000/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6000.html"
+    - title: Mettre à niveau le système d'exploitation SANtricity sur les contrôleurs
+        de stockage à l'aide du mode de maintenance
+      url: "/sg6000/upgrading-santricity-os-on-storage-controllers-using-maintenance-mode-sg6000.html"
+  - title: Mise à niveau du firmware des disques à l'aide de SANtricity System Manager
+    url: "/sg6000/upgrading-drive-firmware-using-santricity-system-manager.html"
+  - title: Ajoutez un tiroir d'extension à SG6060 déployé
+    url: "/sg6000/adding-expansion-shelf-to-deployed-sg6060.html"
+  - title: Allumer et éteindre la LED d'identification du contrôleur
+    url: "/sg6000/turning-controller-identify-led-on-and-off.html"
+  - title: Localiser le contrôleur dans le data Center
+    url: "/sg6000/locating-controller-in-data-center.html"
+  - title: Remplacement du contrôleur de stockage
+    url: "/sg6000/replacing-storage-controller-sg6000.html"
+  - title: Remplacement des composants matériels dans le tiroir de contrôleur de stockage
+    url: "/sg6000/replacing-hardware-components-in-storage-controller-shelf.html"
+  - title: Remplacement des composants matériels dans un tiroir d'extension de 60
+      disques en option
+    url: "/sg6000/replacing-hardware-components-in-optional-60-drive-expansion-shelf.html"
+  - title: Arrêtez le contrôleur SG6000-CN
+    url: "/sg6000/shutting-down-sg6000-cn-controller.html"
+  - title: Mettez le contrôleur SG6000-CN sous tension et vérifiez son fonctionnement
+    url: "/sg6000/powering-on-sg6000-cn-controller-and-verifying-operation.html"
+  - title: Remplacer le contrôleur SG6000-CN
+    url: "/sg6000/replacing-sg6000-cn-controller.html"
+  - title: Remplacez une ou les deux alimentations du contrôleur SG6000-CN
+    url: "/sg6000/replacing-one-or-both-power-supplies-in-sg6000-cn-controller.html"
+  - title: Retirez le contrôleur SG6000-CN de l'armoire ou du rack
+    url: "/sg6000/removing-sg6000-cn-controller-from-cabinet-or-rack.html"
+  - title: Réinstallez le contrôleur SG6000-CN dans l'armoire ou le rack
+    url: "/sg6000/reinstalling-sg6000-cn-controller-into-cabinet-or-rack.html"
+  - title: Déposer le couvercle du contrôleur SG6000-CN
+    url: "/sg6000/removing-sg6000-cn-controller-cover.html"
+  - title: Réinstallez le couvercle du contrôleur SG6000-CN
+    url: "/sg6000/reinstalling-sg6000-cn-controller-cover.html"
+  - title: Remplacez la carte HBA Fibre Channel dans le contrôleur SG6000-CN
+    url: "/sg6000/replacing-fibre-channel-hba-in-sg6000-cn-controller.html"
+    entries:
+    - title: Vérifiez que la carte HBA Fibre Channel doit être remplacée
+      url: "/sg6000/verifying-fibre-channel-hba-to-replace.html"
+    - title: Retirez l'adaptateur HBA Fibre Channel
+      url: "/sg6000/removing-fibre-channel-hba.html"
+    - title: Réinstallez l'adaptateur HBA Fibre Channel
+      url: "/sg6000/reinstalling-fibre-channel-hba.html"
+  - title: Modifier la configuration de la liaison du contrôleur SG6000-CN
+    url: "/sg6000/changing-link-configuration-of-sg6000-cn-controller.html"
+  - title: Modifier le paramètre MTU
+    url: "/sg6000/changing-mtu-setting.html"
+  - title: Vérifiez la configuration du serveur DNS
+    url: "/sg6000/checking-dns-server-configuration.html"
+  - title: Contrôle du chiffrement du nœud en mode maintenance (SG6000)
+    url: "/sg6000/monitoring-node-encryption-in-maintenance-mode.html"
+  - title: Effacez la configuration du serveur de gestion des clés
+    url: "/sg6000/clearing-key-management-server-configuration.html"

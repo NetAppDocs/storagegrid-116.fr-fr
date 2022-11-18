@@ -1,0 +1,121 @@
+---
+permalink: sg6000/preparing-site-sg6000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, install, installation, site prep, site preparating, preparing site, site requirements, requirements, site, dimensions, weight, weights, temperature, humidity, altitude, airflow, heat, wiring, power, grounding, facility 
+summary: 'Avant d"installer l"appliance, assurez-vous que le site et l"armoire ou le rack que vous souhaitez utiliser correspondent aux spécifications d"une appliance StorageGRID.' 
+---
+= Préparer le site (SG6000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'installer l'appliance, assurez-vous que le site et l'armoire ou le rack que vous souhaitez utiliser correspondent aux spécifications d'une appliance StorageGRID.
+
+.Étapes
+. Vérifier que le site répond aux exigences en matière de température, d'humidité, d'altitude, de débit d'air, de dissipation thermique, câblage, alimentation et mise à la terre. Consultez le document NetApp Hardware Universe pour plus d'informations.
+. Vérifiez que votre emplacement fournit une alimentation 240 V CA pour le SG6060 ou 120 V CA pour le SGF6024.
+. Procurez-vous une armoire ou un rack de 19 pouces (48.3 cm) pour installer les étagères de cette taille (sans câbles) :
++
+|===
+| Type d'étagère | Hauteur | Largeur | Profondeur | Poids maximum 
+
+
+ a| 
+*Tiroir contrôleur E2860* pour SG6060
+ a| 
+6.87 po
+
+(17.46 cm)
+ a| 
+17.66 po
+
+(44.86 cm)
+ a| 
+38.25 po
+
+(97.16 cm)
+ a| 
+250 lb
+
+(113 kg)
+
+
+
+ a| 
+*Tiroir d'extension en option* pour SG6060 (un ou deux)
+ a| 
+6.87 po
+
+(17.46 cm)
+ a| 
+17.66 po
+
+(44.86 cm)
+ a| 
+38.25 po
+
+(97.16 cm)
+ a| 
+250 lb
+
+(113 kg)
+
+
+
+ a| 
+*Tiroir contrôleur EF570* pour SGF6024
+ a| 
+3.35 po
+
+(8.50 cm)
+ a| 
+17.66 po
+
+(44.86 cm)
+ a| 
+19.00 po
+
+(48.26 cm)
+ a| 
+51.74 lb
+
+(23.47 kg)
+
+
+
+ a| 
+*Contrôleur SG6000-CN* pour chaque appareil
+ a| 
+1.70 po
+
+(4.32 cm)
+ a| 
+17.32 po
+
+(44.0 cm)
+ a| 
+32.0 po
+
+(81.3 cm)
+ a| 
+39 lb
+
+(17.7 kg)
+
+|===
+. Choisissez où vous allez installer l'appareil.
++
+
+CAUTION: Lors de l'installation du tiroir contrôleur E2860 ou des tiroirs d'extension en option, installez le matériel en bas jusqu'en haut du rack ou de l'armoire afin d'éviter tout basculement de l'équipement. Pour que l'équipement le plus lourd se trouve au bas de l'armoire ou du rack, installez le contrôleur SG6000-CN au-dessus du tiroir du contrôleur E2860 et des tiroirs d'extension.
+
++
+
+IMPORTANT: Avant de valider l'installation, vérifiez que les câbles optiques de 0,5 m fournis avec l'appliance ou les câbles que vous fournissez sont suffisamment longs pour la disposition prévue.
+
+
+
+https://hwu.netapp.com["NetApp Hardware Universe"^]
+
+https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^]

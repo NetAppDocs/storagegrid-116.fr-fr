@@ -1,0 +1,74 @@
+---
+permalink: ilm/step-3-of-3-define-ingest-behavior.html 
+sidebar: sidebar 
+keywords: ilm rule step 3, define ingest behavior 
+summary: 'Étape 3 \(Define ind Behavior\) de l"assistant de création de règles ILM permet de choisir le mode de protection des objets filtrés par cette règle lors de leur ingestion.' 
+---
+= Étape 3 sur 3 : définir le comportement d'entrée
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'étape 3 (définir le comportement d'entrée) de l'assistant de création de règles ILM permet de choisir le mode de protection des objets filtrés par cette règle lors de leur ingestion.
+
+StorageGRID peut effectuer des copies intermédiaires et mettre en file d'attente les objets pour l'évaluation ILM, ou effectuer des copies pour répondre immédiatement aux instructions de placement de la règle.
+
+image::../media/define_ingest_behavior_for_ilm_rule.png[Créer la règle ILM étape 3 sur 3]
+
+.Étapes
+. Sélectionnez l'option de protection des données à utiliser lors de l'ingestion des objets :
++
+[cols="1a,2a"]
+|===
+| Option | Description 
+
+
+ a| 
+Stricte
+ a| 
+Utilise toujours les placements de cette règle lors de l'entrée. L'entrée échoue lorsque les placements de cette règle ne sont pas possibles.
+
+
+
+ a| 
+Équilibré
+ a| 
+Efficacité ILM optimale. Tente les placements de cette règle lors de l'entrée. Crée des copies intermédiaires lorsqu'elles ne sont pas possibles.
+
+
+
+ a| 
+Double allocation
+ a| 
+Crée des copies intermédiaires lors de l'entrée et applique ultérieurement les placements de cette règle.
+
+|===
++
+Balance offre une combinaison de sécurité et d'efficacité des données adaptée dans la plupart des cas. En règle générale, une double validation est utilisée pour répondre à des exigences spécifiques.
+
++
+Voir xref:data-protection-options-for-ingest.adoc[Options de protection des données pour l'ingestion] et xref:advantages-disadvantages-of-ingest-options.adoc[Avantages, inconvénients et limites des options de protection des données] pour en savoir plus.
+
++
+[NOTE]
+====
+Un message d'erreur s'affiche si vous sélectionnez l'option stricte ou équilibrée et que la règle utilise l'un de ces placements :
+
+** Un pool de stockage cloud dès le premier jour
+** Un nœud d'archivage au jour 0
+** Un pool de stockage dans le cloud ou un nœud d'archivage lorsque la règle utilise une heure de création définie par l'utilisateur comme heure de référence
+
+
+====
+. Sélectionnez *Enregistrer*.
++
+La règle ILM est enregistrée. La règle ne devient pas active tant qu'elle n'est pas ajoutée à une politique ILM et que cette règle est activée.
+
+
+
+.Informations associées
+* xref:example-5-ilm-rules-and-policy-for-strict-ingest-behavior.adoc[Exemple 5 : règles et règles ILM pour un comportement d'ingestion strict]
+* xref:creating-ilm-policy.adoc[Création d'une règle ILM]
+

@@ -1,0 +1,33 @@
+---
+permalink: upgrade/troubleshooting-user-interface-issues.html 
+sidebar: sidebar 
+keywords: grid manager, tenant manager, error, browser 
+summary: 'Après la mise à niveau vers une nouvelle version du logiciel StorageGRID, des problèmes peuvent s"afficher avec le gestionnaire Grid ou le gestionnaire de locataires.' 
+---
+= Résolution des problèmes liés à l'interface utilisateur
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Après la mise à niveau vers une nouvelle version du logiciel StorageGRID, des problèmes peuvent s'afficher avec le gestionnaire Grid ou le gestionnaire de locataires.
+
+
+
+== L'interface Web ne répond pas comme prévu
+
+Le gestionnaire de grid ou le gestionnaire de locataires peut ne pas répondre comme prévu après la mise à niveau du logiciel StorageGRID.
+
+Si vous rencontrez des problèmes avec l'interface Web :
+
+* Assurez-vous d'utiliser un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
++
+
+NOTE: La prise en charge des navigateurs a généralement été modifiée pour chaque version de StorageGRID.
+
+* Effacez le cache de votre navigateur Web.
++
+L'effacement du cache supprime les ressources obsolètes utilisées par la version précédente du logiciel StorageGRID et permet à l'interface utilisateur de fonctionner de nouveau correctement. Pour obtenir des instructions, reportez-vous à la documentation de votre navigateur Web.
+
+

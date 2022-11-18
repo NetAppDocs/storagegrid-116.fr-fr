@@ -1,0 +1,57 @@
+---
+permalink: monitor/applying-hotfixes-or-upgrading-software-if-necessary.html 
+sidebar: sidebar 
+keywords: how to apply software upgrade, how to apply hotfix 
+summary: 'Si un correctif ou une nouvelle version du logiciel StorageGRID est disponible, vous devez déterminer si la mise à jour est adaptée à votre système et l"installer si nécessaire.' 
+---
+= Application des correctifs ou des mises à niveau logicielles si nécessaire
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si un correctif ou une nouvelle version du logiciel StorageGRID est disponible, vous devez déterminer si la mise à jour est adaptée à votre système et l'installer si nécessaire.
+
+Les correctifs StorageGRID contiennent des modifications logicielles qui sont disponibles en dehors d'une version de fonctionnalité ou de correctif. Les mêmes modifications seront incluses dans une prochaine version.
+
+.Étapes
+. Accédez à la page de téléchargements NetApp pour StorageGRID.
++
+https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["Téléchargement NetApp : StorageGRID"^]
+
+. Sélectionnez la flèche vers le bas du champ *Type/Sélectionner version* pour afficher la liste des mises à jour disponibles au téléchargement :
++
+** *Versions du logiciel StorageGRID* : 11._x.y_
+** *Correctifs StorageGRID*: 11._x. .yz_
+
+
+. Vérifiez les modifications qui sont incluses dans la mise à jour :
++
+.. Sélectionnez la version dans le menu déroulant et cliquez sur *Go*.
+.. Connectez-vous en utilisant le nom d'utilisateur et le mot de passe de votre compte NetApp.
+.. Lisez le contrat de licence de l'utilisateur final, cochez la case, puis sélectionnez *accepter continuer*.
++
+La page des téléchargements de la version sélectionnée s'affiche.
+
+
+
+. Découvrez les changements inclus dans la version du logiciel ou le correctif.
++
+** Pour une nouvelle version du logiciel, consultez la rubrique « Nouveautés » dans les instructions de mise à niveau de StorageGRID.
+** Pour un correctif, téléchargez le fichier README pour un résumé des modifications incluses dans le correctif.
+
+
+. Si vous décidez qu'une mise à jour logicielle est nécessaire, suivez les instructions avant de continuer.
++
+** Pour obtenir une nouvelle version du logiciel, suivez attentivement les instructions de mise à niveau de StorageGRID.
+** Pour un correctif, recherchez la procédure de correctif dans les instructions de récupération et de maintenance
+
+
+
+
+*Informations connexes*
+
+xref:../upgrade/index.adoc[Mise à niveau du logiciel]
+
+xref:../maintain/index.adoc[Récupérer et entretenir]

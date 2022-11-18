@@ -1,0 +1,26 @@
+---
+permalink: admin/how-load-balancing-works-clb-service.html 
+sidebar: sidebar 
+keywords: clb service, connection load balancer 
+summary: 'Le service Connection Load Balancer \(CLB\) sur les nœuds de passerelle est obsolète. Le service Load Balancer est désormais le mécanisme d"équilibrage de charge recommandé.' 
+---
+= Fonctionnement de l'équilibrage des charges - service CLB (obsolète)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le service Connection Load Balancer (CLB) sur les nœuds de passerelle est obsolète. Le service Load Balancer est désormais le mécanisme d'équilibrage de charge recommandé.
+
+Le service CLB utilise l'équilibrage de charge de couche 4 pour distribuer les connexions réseau TCP entrantes des applications clientes vers le nœud de stockage optimal en fonction de la disponibilité, de la charge système et du coût de liaison configuré par l'administrateur. Lorsque le nœud de stockage optimal est choisi, le service CLB établit une connexion réseau bidirectionnelle et transfère le trafic vers et depuis le nœud choisi. Le CLB ne prend pas en compte la configuration du réseau Grid lors de la direction des connexions réseau entrantes.
+
+Pour afficher des informations sur le service CLB, sélectionnez *SUPPORT* *Outils* *topologie de grille*, puis développez un nœud de passerelle jusqu'à ce que vous puissiez sélectionner *CLB* et les options ci-dessous.
+
+image::../media/gateway_node.gif[Nœud de passerelle d'API dans l'arborescence de la topologie de grille]
+
+Si vous choisissez d'utiliser le service CLB, vous devriez envisager de configurer les coûts de liaison pour votre système StorageGRID.
+
+* xref:what-link-costs-are.adoc[Quels sont les coûts de liaison]
+* xref:updating-link-costs.adoc[Mettre à jour les coûts des liens]
+

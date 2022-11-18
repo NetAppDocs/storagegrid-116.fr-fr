@@ -1,0 +1,22 @@
+---
+permalink: sg5600/configuring-email-and-snmp-trap-alert-notifications.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, email, notifications, alerts, alert, set up, setup, configure, configuration, snmp, traps 
+summary: 'SANtricity Storage Manager peut vous informer lorsque l"état de l"appliance ou de l"un de ses composants est modifié. Il s"agit d"une notification d"alerte. Vous pouvez recevoir des notifications d"alertes par deux méthodes différentes : les alertes par e-mail et les interruptions SNMP. Vous devez configurer les notifications d"alerte que vous souhaitez recevoir.' 
+---
+= Configurez les notifications d'alerte par e-mail et d'interruption SNMP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SANtricity Storage Manager peut vous informer lorsque l'état de l'appliance ou de l'un de ses composants est modifié. Il s'agit d'une notification d'alerte. Vous pouvez recevoir des notifications d'alertes par deux méthodes différentes : les alertes par e-mail et les interruptions SNMP. Vous devez configurer les notifications d'alerte que vous souhaitez recevoir.
+
+.Étapes
+. Dans la fenêtre gestion de l'entreprise du Gestionnaire de stockage SANtricity, sélectionnez l'onglet *périphériques*, puis sélectionnez un nœud.
+. Sélectionnez *Modifier* *configurer alertes*.
+. Sélectionnez l'onglet *E-mail* pour configurer les notifications d'alerte par e-mail.
+. Sélectionnez l'onglet *SNMP* pour configurer les notifications d'alerte d'interruption SNMP.
+. Si nécessaire, utilisez l'aide en ligne de SANtricity Storage Manager pour accomplir la tâche.
+

@@ -1,0 +1,48 @@
+---
+permalink: upgrade/troubleshooting-upgrade-issues.html 
+sidebar: sidebar 
+keywords: upgrade, troubleshoot, troubleshooting, errors, upgrade precheck 
+summary: 'Si la mise à niveau ne s"effectue pas correctement, vous pouvez résoudre le problème vous-même. Si vous ne parvenez pas à résoudre un problème, vous devez collecter les informations requises avant de contacter le support technique.' 
+---
+= La mise à niveau n'est pas terminée
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si la mise à niveau ne s'effectue pas correctement, vous pouvez résoudre le problème vous-même. Si vous ne parvenez pas à résoudre un problème, vous devez collecter les informations requises avant de contacter le support technique.
+
+Les sections suivantes décrivent comment effectuer une restauration à partir de situations où la mise à niveau a partiellement échoué. Si vous ne parvenez pas à résoudre un problème de mise à niveau, contactez le support technique.
+
+
+
+== Erreurs de contrôle préalable de mise à niveau
+
+Pour détecter et résoudre les problèmes, vous pouvez exécuter manuellement les contrôles préalables à la mise à niveau avant de démarrer la mise à niveau réelle. La plupart des erreurs de précontrôle fournissent des informations sur la façon de résoudre le problème. Si vous avez besoin d'aide, contactez le support technique.
+
+
+
+== Défaillances de provisionnement
+
+Si le processus de provisionnement automatique échoue, contactez le support technique.
+
+
+
+== Le nœud de la grille tombe en panne ou ne parvient pas à démarrer
+
+Si un nœud de la grille tombe en panne lors du processus de mise à niveau ou ne parvient pas à démarrer avec succès une fois la mise à niveau terminée, contactez le support technique pour rechercher et corriger les problèmes sous-jacents.
+
+
+
+== L'ingestion ou la récupération des données est interrompue
+
+En cas d'interruption inattendue de l'entrée ou de la récupération des données lorsque vous ne mettez pas à niveau un nœud de la grille, contactez le support technique.
+
+
+
+== Erreurs de mise à niveau de base de données
+
+Si la mise à niveau de la base de données échoue avec une erreur, essayez à nouveau la mise à niveau. En cas d'échec à nouveau, contactez le support technique.
+
+xref:checking-systems-condition-before-upgrading-software.adoc[Vérification de l'état du système avant la mise à niveau du logiciel]

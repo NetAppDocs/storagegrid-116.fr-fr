@@ -1,0 +1,44 @@
+---
+permalink: maintain/updating-subnets-for-grid-network.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, subnet, grid network, update subnets 
+summary: 'StorageGRID conserve une liste des sous-réseaux réseau utilisés pour communiquer entre les nœuds de la grille sur le réseau \(eth0\). Ces entrées incluent les sous-réseaux utilisés pour le réseau Grid par chaque site du système StorageGRID, ainsi que tous les sous-réseaux utilisés pour les serveurs NTP, DNS, LDAP ou autres serveurs externes accessibles via la passerelle réseau Grid. Lorsque vous ajoutez des nœuds de grille ou un nouveau site dans une extension, vous devrez peut-être mettre à jour ou ajouter des sous-réseaux au réseau Grid.' 
+---
+= Mise à jour des sous-réseaux pour le réseau Grid
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+StorageGRID conserve une liste des sous-réseaux réseau utilisés pour communiquer entre les nœuds de la grille sur le réseau Grid (eth0). Ces entrées incluent les sous-réseaux utilisés pour le réseau Grid par chaque site du système StorageGRID, ainsi que tous les sous-réseaux utilisés pour les serveurs NTP, DNS, LDAP ou autres serveurs externes accessibles via la passerelle réseau Grid. Lorsque vous ajoutez des nœuds de grille ou un nouveau site dans une extension, vous devrez peut-être mettre à jour ou ajouter des sous-réseaux au réseau Grid.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous devez disposer de l'autorisation Maintenance ou accès racine.
+* Vous devez disposer de la phrase secrète pour le provisionnement.
+* Vous devez avoir les adresses réseau, en notation CIDR, des sous-réseaux que vous souhaitez configurer.
+
+
+Si vous effectuez une activité d'extension incluant l'ajout d'un nouveau sous-réseau, vous devez ajouter le nouveau sous-réseau Grid avant de lancer la procédure d'extension.
+
+.Étapes
+. Sélectionnez *MAINTENANCE* > *réseau* > *réseau Grid*.
++
+image::../media/maintenance_grid_networks_page.gif[Cette image est expliquée par le texte qui l'entoure.]
+
+. Dans la liste des sous-réseaux, cliquez sur le signe plus pour ajouter un nouveau sous-réseau en notation CIDR.
++
+Par exemple, entrez `10.96.104.0/22`.
+
+. Saisissez le mot de passe de provisionnement, puis cliquez sur *Enregistrer*.
++
+Les sous-réseaux que vous avez spécifiés sont automatiquement configurés pour votre système StorageGRID.
+
+. Téléchargez un nouveau package de récupération depuis Grid Manager.
++
+.. Sélectionnez *MAINTENANCE* > *système* > *progiciel de récupération*.
+.. Saisissez la phrase secrète pour le provisionnement.
+
+
+

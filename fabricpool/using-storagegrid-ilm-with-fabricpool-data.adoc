@@ -1,0 +1,199 @@
+---
+permalink: fabricpool/using-storagegrid-ilm-with-fabricpool-data.html 
+sidebar: sidebar 
+keywords: FabricPool, requirements, ILM, information lifecycle management, ILM rule, ILM rules, ILM policy, erasure-coding, replication, cloud storage pool, glacier 
+summary: 'Si vous utilisez FabricPool pour hiérarchiser les données vers StorageGRID, vous devez connaître les exigences de création des règles de gestion du cycle de vie des informations StorageGRID \(ILM\) et une politique ILM de gestion des données FabricPool. Vous devez veiller à ce que les règles ILM applicables aux données FabricPool ne soient pas perturbatrices.' 
+---
+= Utilisez la solution de gestion du cycle de vie des informations StorageGRID avec les données FabricPool
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous utilisez FabricPool pour hiérarchiser les données vers StorageGRID, vous devez connaître les exigences de création des règles StorageGRID de gestion du cycle de vie des informations (ILM) et une règle ILM de gestion des données FabricPool. Vous devez veiller à ce que les règles ILM applicables aux données FabricPool ne soient pas perturbatrices.
+
+
+IMPORTANT: FabricPool ne connaît pas les règles ou les règles ILM de StorageGRID. La perte des données peut se produire si la règle ILM de StorageGRID est mal configurée. Voir xref:../ilm/index.adoc[Gestion des objets avec ILM] Pour obtenir des instructions détaillées relatives à l'ILM.
+
+Ces recommandations vous permettent de vérifier que vos règles ILM et votre politique ILM conviennent pour les données FabricPool et les exigences de votre entreprise. Si vous utilisez déjà la solution ILM de StorageGRID, vous devrez peut-être mettre à jour votre politique ILM active pour respecter ces directives.
+
+* Vous pouvez utiliser toutes les combinaisons de réplication et de règles de code d'effacement pour protéger les données de Tier cloud.
++
+Il est recommandé d'utiliser un code d'effacement 2+1 sur un site pour une protection des données économique. Le code d'effacement consomme plus de ressources de processeur, mais sa capacité de stockage est bien inférieure à la réplication. Les schémas 4+1 et 6+1 utilisent moins de capacité que le schéma 2+1. Toutefois, les schémas 4+1 et 6+1 sont moins flexibles si vous avez besoin d'ajouter des nœuds de stockage lors de l'extension de grid. Pour plus de détails, voir xref:../expand/adding-storage-capacity-for-erasure-coded-objects.adoc[Ajoutez de la capacité de stockage pour les objets avec code d'effacement].
+
+* Chaque règle appliquée aux données FabricPool doit au moins deux copies répliquées grâce au code d'effacement.
++
+
+IMPORTANT: La règle ILM de création d'une seule copie répliquée pendant toute période met les données à risque de perte permanente. Si une seule copie répliquée d'un objet existe, cet objet est perdu en cas de défaillance ou d'erreur importante d'un noeud de stockage. De plus, lors des procédures de maintenance telles que les mises à niveau, l'accès à l'objet est temporairement perdu.
+
+* N'utilisez pas de règle ILM pour supprimer ou expirer les données de niveau cloud FabricPool. Définissez la période de conservation de chaque règle ILM sur « Forever » afin d'assurer la suppression des objets FabricPool par StorageGRID ILM.
+* Ne créez pas de règles pour déplacer les données FabricPool de Tier cloud depuis le compartiment vers un autre emplacement. Vous ne pouvez pas utiliser les règles ILM pour archiver les données FabricPool sur bande à l'aide d'un nœud d'archivage ou utiliser un pool de stockage cloud pour les déplacer FabricPool vers un autre magasin d'objets.
++
+
+NOTE: L'utilisation de pools de stockage cloud avec FabricPool n'est pas prise en charge en raison de la latence ajoutée pour extraire un objet de la cible du pool de stockage cloud.
+
+* Depuis ONTAP 9.8, vous pouvez créer des balises d'objet pour classer et trier les données hiérarchisées pour simplifier la gestion. Par exemple, vous pouvez définir des balises uniquement sur les volumes FabricPool reliés à StorageGRID. Ensuite, lorsque vous créez des règles ILM dans StorageGRID, vous pouvez utiliser le filtre avancé balise d'objet pour sélectionner et placer ces données.
+
+
+
+
+== Exemple de règle ILM pour les données FabricPool
+
+Utilisez cet exemple simple de règle comme point de départ pour vos propres règles et règles ILM.
+
+Nous partons du principe que vous concevez les règles ILM et une règle ILM pour un système StorageGRID qui possède quatre nœuds de stockage dans un data Center unique à Denver, Colorado. Les données FabricPool dans cet exemple utilisent un compartiment nommé `fabricpool-bucket`.
+
+
+CAUTION: Les règles et règles ILM suivantes ne sont que des exemples. Les règles ILM sont nombreuses. Avant d'activer une nouvelle stratégie, simulez la stratégie proposée pour confirmer qu'elle fonctionnera comme destinée à protéger le contenu contre la perte. Pour en savoir plus, voir xref:../ilm/index.adoc[Gestion des objets avec ILM].
+
+.Étapes
+. Créez un pool de stockage nommé *DEN*. Sélectionnez le site Denver.
+. Créez un profil de code d'effacement nommé *2 plus 1*. Sélectionnez le schéma de code d'effacement 2+1 et le pool de stockage *DEN*.
+. Créez une règle ILM qui s'applique uniquement aux données dans `fabricpool-bucket`. Dans cet exemple de règle, des copies avec code d'effacement sont créées.
++
+[cols="1a,2a"]
+|===
+| Définition de règle | Exemple de valeur 
+
+
+ a| 
+Nom de la règle
+ a| 
+2 et 1 code d'effacement pour données FabricPool
+
+
+
+ a| 
+Nom du compartiment
+ a| 
+`fabricpool-bucket`
+
+Vous pouvez également filtrer le compte de tenant FabricPool.
+
+
+
+ a| 
+Filtrage avancé
+ a| 
+Taille de l'objet (Mo) supérieure à 0.2 Mo.
+
+*Remarque :* FabricPool écrit uniquement des objets de 4 Mo, mais vous devez ajouter un filtre de taille d'objet car cette règle utilise le codage d'effacement.
+
+
+
+ a| 
+Heure de référence
+ a| 
+Temps d'ingestion
+
+
+
+ a| 
+Positionnement
+ a| 
+À partir du jour 0 magasin pour toujours
+
+
+
+ a| 
+Type
+ a| 
+Code d'effacement
+
+
+
+ a| 
+Emplacement
+ a| 
+DEN (2 plus 1)
+
+
+
+ a| 
+Comportement d'ingestion
+ a| 
+Équilibré
+
+|===
+. Créez une règle ILM pour créer deux copies répliquées de tout objet ne correspondant pas à la première règle. Ne sélectionnez pas de filtre de base (compte de locataire ou nom de compartiment) ni de filtres avancés.
++
+[cols="1a,2a"]
+|===
+| Définition de règle | Exemple de valeur 
+
+
+ a| 
+Nom de la règle
+ a| 
+Deux copies répliquées
+
+
+
+ a| 
+Nom du compartiment
+ a| 
+_aucun_
+
+
+
+ a| 
+Filtrage avancé
+ a| 
+_aucun_
+
+
+
+ a| 
+Heure de référence
+ a| 
+Temps d'ingestion
+
+
+
+ a| 
+Positionnement
+ a| 
+À partir du jour 0 magasin pour toujours
+
+
+
+ a| 
+Type
+ a| 
+Copies Snapshot
+
+
+
+ a| 
+Emplacement
+ a| 
+DEN
+
+
+
+ a| 
+Copies
+ a| 
+2
+
+
+
+ a| 
+Comportement d'ingestion
+ a| 
+Équilibré
+
+|===
+. Création d'une règle ILM proposée et sélection des deux règles Comme la règle de réplication n'utilise aucun filtre, elle peut être la règle par défaut (dernière) de la règle.
+. Ingestion des objets de test dans la grille.
+. Simuler la règle avec les objets de test pour vérifier le comportement.
+. Activer la règle.
+
+
+Lorsque cette règle est activée, StorageGRID place les données d'objet comme suit :
+
+* Les données sont hiérarchisées à partir du système FabricPool In `fabricpool-bucket` le code d'effacement sera appliqué à l'aide du schéma de code d'effacement 2+1. Deux fragments de données et un fragment de parité seront placés sur trois nœuds de stockage différents.
+* Tous les objets dans tous les autres compartiments sont répliqués. Deux copies sont créées et placées sur deux nœuds de stockage différents.
+* Les copies répliquées et avec code d'effacement sont conservées dans StorageGRID jusqu'à leur suppression par le client S3. StorageGRID ILM ne supprimera jamais ces éléments.
+

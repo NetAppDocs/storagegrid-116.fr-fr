@@ -1,0 +1,164 @@
+---
+permalink: ilm/s3-authentication-details-for-cloud-storage-pool.html 
+sidebar: sidebar 
+keywords: cloud storage pool authentication, anonymous authentication, access key, secret access key 
+summary: 'Lorsque vous créez un pool de stockage cloud pour S3, vous devez sélectionner le type d"authentification requis pour le terminal Cloud Storage Pool. Vous pouvez spécifier Anonyme ou entrer un ID de clé d"accès et une clé d"accès secrète.' 
+---
+= S3 : spécification des détails d'authentification pour un pool de stockage cloud
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque vous créez un pool de stockage cloud pour S3, vous devez sélectionner le type d'authentification requis pour le terminal Cloud Storage Pool. Vous pouvez spécifier Anonyme ou entrer un ID de clé d'accès et une clé d'accès secrète.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous avez saisi les informations de base pour le pool de stockage cloud et spécifié *Amazon S3* comme type de fournisseur.
++
+image::../media/cloud_storage_pool_create_s3.png[Création du pool de stockage cloud S3]
+
+* Si vous utilisez l'authentification par clé d'accès, vous connaissez l'ID de clé d'accès et la clé d'accès secrète pour le compartiment S3 externe.
+
+
+.Étapes
+. Dans la section *Service Endpoint*, fournissez les informations suivantes :
++
+.. Sélectionnez le protocole à utiliser lors de la connexion au pool de stockage cloud.
++
+Le protocole par défaut est HTTPS.
+
+.. Entrez le nom d'hôte ou l'adresse IP du serveur du pool de stockage cloud.
++
+Par exemple :
+
++
+`s3-_aws-region_.amazonaws.com`
+
++
+
+NOTE: Ne pas inclure le nom de compartiment dans ce champ. Vous incluez le nom du compartiment dans le champ *godet ou conteneur*.
+
+.. Spécifiez éventuellement le port à utiliser lors de la connexion au Cloud Storage Pool.
++
+Laissez ce champ vide pour utiliser le port par défaut : port 443 pour HTTPS ou port 80 pour HTTP.
+
+.. Sélectionnez le style d'URL du compartiment de pool de stockage cloud :
++
+[cols="1a,2a"]
+|===
+| Option | Description 
+
+
+ a| 
+Hébergement virtuel
+ a| 
+Utilisez une URL de type hébergement virtuel pour accéder au compartiment. Les URL de type hébergement virtuel incluent le nom de compartiment dans le nom de domaine, par exemple `+https://bucket-name.s3.company.com/key-name+`.
+
+
+
+ a| 
+Style de trajectoire
+ a| 
+Utilisez une URL de style de chemin d'accès pour accéder au compartiment. Les URL de style chemin d'accès incluent le nom du compartiment à la fin, par exemple `+https://s3.company.com/bucket-name/key-name+`.
+
+*Note:* l'URL de style de chemin d'accès est obsolète.
+
+
+
+ a| 
+Détection automatique
+ a| 
+Essayez de détecter automatiquement le style d'URL à utiliser, en fonction des informations fournies. Par exemple, si vous spécifiez une adresse IP, StorageGRID utilise une URL de style de chemin d'accès. Sélectionnez cette option uniquement si vous ne savez pas quel style spécifique utiliser.
+
+|===
+
+
+. Dans la section *Authentication*, sélectionnez le type d'authentification requis pour le terminal Cloud Storage Pool.
++
+[cols="1a,2a"]
+|===
+| Option | Description 
+
+
+ a| 
+Clé d'accès
+ a| 
+Un ID de clé d'accès et une clé d'accès secrète sont nécessaires pour accéder au compartiment de pool de stockage cloud.
+
+
+
+ a| 
+Anonyme
+ a| 
+Tout le monde a accès au compartiment Cloud Storage Pool. Un ID de clé d'accès et une clé d'accès secrète ne sont pas nécessaires.
+
+
+
+ a| 
+CAP (portail d'accès C2S)
+ a| 
+Utilisé uniquement pour C2S S3. Accédez à xref:c2s-s3-authentication-details-for-cloud-storage-pool.adoc[C2S S3 : spécification des détails d'authentification pour un pool de stockage cloud].
+
+|===
+. Si vous avez sélectionné clé d'accès, saisissez les informations suivantes :
++
+[cols="1a,2a"]
+|===
+| Option | Description 
+
+
+ a| 
+ID de clé d'accès
+ a| 
+ID de clé d'accès du compte propriétaire du compartiment externe.
+
+
+
+ a| 
+Clé d'accès secrète
+ a| 
+La clé d'accès secrète associée.
+
+|===
+. Dans la section Server Verification, sélectionnez la méthode à utiliser pour valider le certificat pour les connexions TLS au Cloud Storage Pool :
++
+[cols="1a,2a"]
+|===
+| Option | Description 
+
+
+ a| 
+Utiliser le certificat CA du système d'exploitation
+ a| 
+Utilisez les certificats d'autorité de certification de la grille installés par défaut sur le système d'exploitation pour sécuriser les connexions.
+
+
+
+ a| 
+Utiliser un certificat d'autorité de certification personnalisé
+ a| 
+Utilisez un certificat d'autorité de certification personnalisé. Sélectionnez *Sélectionner nouveau* et téléchargez le certificat d'autorité de certification codé PEM.
+
+
+
+ a| 
+Ne vérifiez pas le certificat
+ a| 
+Le certificat utilisé pour la connexion TLS n'est pas vérifié.
+
+|===
+. Sélectionnez *Enregistrer*.
+
+
+Lorsque vous enregistrez un pool de stockage cloud, StorageGRID effectue les opérations suivantes :
+
+* Valide la présence du compartiment et du point de terminaison de service et qu'ils peuvent être atteints à l'aide des identifiants que vous avez spécifiés.
+* Écrit un fichier de marqueur dans le compartiment pour identifier le compartiment comme pool de stockage cloud. Ne supprimez jamais ce fichier nommé `x-ntap-sgws-cloud-pool-uuid`.
+
+
+Si la validation du pool de stockage cloud échoue, un message d'erreur s'affiche indiquant pourquoi la validation a échoué. Par exemple, une erreur peut être signalée en cas d'erreur de certificat ou si le compartiment spécifié n'existe pas déjà.
+
+image::../media/cloud_storage_pool_create_error.gif[Erreur de création du pool de stockage cloud]
+
+Reportez-vous aux instructions pour xref:troubleshooting-cloud-storage-pools.adoc[Résolution des problèmes avec les pools de stockage cloud], Résolvez le problème, puis réessayez d'enregistrer le pool de stockage cloud.

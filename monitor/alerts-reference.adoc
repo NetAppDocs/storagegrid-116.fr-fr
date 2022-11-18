@@ -1,0 +1,1740 @@
+---
+permalink: monitor/alerts-reference.html 
+sidebar: sidebar 
+keywords: alerts reference 
+summary: 'Le tableau suivant répertorie toutes les alertes StorageGRID par défaut. Si nécessaire, vous pouvez créer des règles d"alerte personnalisées en fonction de votre approche de gestion du système.' 
+---
+= Référence des alertes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le tableau suivant répertorie toutes les alertes StorageGRID par défaut. Si nécessaire, vous pouvez créer des règles d'alerte personnalisées en fonction de votre approche de gestion du système.
+
+Voir les informations sur xref:commonly-used-prometheus-metrics.adoc[Metrics Prometheus couramment utilisés] pour en savoir plus sur les mesures utilisées dans certaines de ces alertes.
+
+[cols="1a,2a"]
+|===
+| Nom de l'alerte | Description et actions recommandées 
+
+
+ a| 
+Batterie de l'appareil expirée
+ a| 
+La batterie du contrôleur de stockage de l'appareil a expiré.
+
+. Remplacer la batterie. Les étapes à suivre pour retirer et remplacer une batterie sont incluses dans la procédure de remplacement d'un contrôleur de stockage. Reportez-vous aux instructions relatives à votre dispositif de stockage :
++
+** xref:../sg5600/index.adoc[Appliances de stockage SG5600]
+** xref:../sg5700/index.adoc[Appliances de stockage SG5700]
+** xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
+
+
+. Si cette alerte persiste, contactez le support technique.
+
+
+
+
+ a| 
+La batterie de l'appareil est défectueuse
+ a| 
+La batterie du contrôleur de stockage de l'appareil est défectueuse.
+
+. Remplacer la batterie. Les étapes à suivre pour retirer et remplacer une batterie sont incluses dans la procédure de remplacement d'un contrôleur de stockage. Reportez-vous aux instructions relatives à votre dispositif de stockage :
++
+** xref:../sg5600/index.adoc[Appliances de stockage SG5600]
+** xref:../sg5700/index.adoc[Appliances de stockage SG5700]
+** xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
+
+
+. Si cette alerte persiste, contactez le support technique.
+
+
+
+
+ a| 
+La capacité de la batterie de l'appareil est insuffisante
+ a| 
+La capacité de la batterie du contrôleur de stockage de l'appareil est insuffisante.
+
+. Remplacer la batterie. Les étapes à suivre pour retirer et remplacer une batterie sont incluses dans la procédure de remplacement d'un contrôleur de stockage. Reportez-vous aux instructions relatives à votre dispositif de stockage :
++
+** xref:../sg5600/index.adoc[Appliances de stockage SG5600]
+** xref:../sg5700/index.adoc[Appliances de stockage SG5700]
+** xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
+
+
+. Si cette alerte persiste, contactez le support technique.
+
+
+
+
+ a| 
+La batterie de l'appareil est presque déchargée
+ a| 
+La batterie du contrôleur de stockage de l'appliance arrive à expiration.
+
+. Remplacez la batterie bientôt. Les étapes à suivre pour retirer et remplacer une batterie sont incluses dans la procédure de remplacement d'un contrôleur de stockage. Reportez-vous aux instructions relatives à votre dispositif de stockage :
++
+** xref:../sg5600/index.adoc[Appliances de stockage SG5600]
+** xref:../sg5700/index.adoc[Appliances de stockage SG5700]
+** xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
+
+
+. Si cette alerte persiste, contactez le support technique.
+
+
+
+
+ a| 
+Batterie de l'appareil retirée
+ a| 
+La batterie du contrôleur de stockage de l'appareil est manquante.
+
+. Installer une batterie. Les étapes à suivre pour retirer et remplacer une batterie sont incluses dans la procédure de remplacement d'un contrôleur de stockage. Reportez-vous aux instructions relatives à votre dispositif de stockage :
++
+** xref:../sg5600/index.adoc[Appliances de stockage SG5600]
+** xref:../sg5700/index.adoc[Appliances de stockage SG5700]
+** xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
+
+
+. Si cette alerte persiste, contactez le support technique.
+
+
+
+
+ a| 
+Batterie de l'appareil trop chaude
+ a| 
+La batterie du contrôleur de stockage de l'appareil est en surchauffe.
+
+. Déterminez s'il y a une autre alerte affectant ce nœud. Cette alerte est peut-être résolue lorsque vous résolvez l'autre alerte.
+. Rechercher les causes possibles de l'augmentation de la température, comme une panne du ventilateur ou du système CVC.
+. Si cette alerte persiste, contactez le support technique.
+
+
+
+
+ a| 
+Erreur de communication du BMC de l'appliance
+ a| 
+La communication avec le contrôleur de gestion de la carte mère (BMC) a été perdue.
+
+. Vérifiez que le contrôleur BMC fonctionne normalement. Sélectionnez *NOEUDS*, puis sélectionnez l'onglet *matériel* pour le noeud de l'appliance. Recherchez le champ IP BMC du contrôleur de calcul et recherchez cette adresse IP.
+. Essayez de restaurer les communications BMC en plaçant le nœud en mode de maintenance, puis en mettant l'appliance hors tension puis sous tension. Reportez-vous aux instructions relatives à votre appareil :
++
+** xref:../sg100-1000/index.adoc[Appareils de services SG100 et SG1000]
+** xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
+
+
+. Si cette alerte persiste, contactez le support technique.
+
+
+
+
+ a| 
+Échec du périphérique de sauvegarde du cache de l'appliance
+ a| 
+Échec d'un périphérique de sauvegarde de cache persistant.
+
+. Déterminez s'il y a une autre alerte affectant ce nœud. Cette alerte est peut-être résolue lorsque vous résolvez l'autre alerte.
+. Contactez l'assistance technique.
+
+
+
+
+ a| 
+Capacité insuffisante du périphérique de sauvegarde en cache de l'appliance
+ a| 
+La capacité du périphérique de sauvegarde du cache est insuffisante.
+
+Contactez l'assistance technique.
+
+
+
+ a| 
+Dispositif de sauvegarde cache de l'appliance protégé en écriture
+ a| 
+Un périphérique de sauvegarde de cache est protégé en écriture.
+
+Contactez l'assistance technique.
+
+
+
+ a| 
+La taille de la mémoire cache de l'appliance ne correspond pas
+ a| 
+Le cache des deux contrôleurs de l'appliance est de différentes tailles.
+
+Contactez l'assistance technique.
+
+
+
+ a| 
+La température du châssis du contrôleur de calcul de l'appliance est trop élevée
+ a| 
+La température du contrôleur de calcul d'une appliance StorageGRID a dépassé le seuil nominal.
+
+. Vérifier les composants matériels pour rechercher les conditions de surchauffe et suivre les actions recommandées :
++
+** Si vous disposez d'un SG100, SG1000 ou SG6000, utilisez le BMC.
+** Si vous disposez d'une appliance SG5600 ou SG5700, utilisez SANtricity System Manager.
+
+
+. Si nécessaire, remplacer l'organe. Reportez-vous aux instructions relatives à votre appareil :
++
+** xref:../sg100-1000/index.adoc[Appareils de services SG100 et SG1000]
+** xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
+** xref:../sg5700/index.adoc[Appliances de stockage SG5700]
+** xref:../sg5600/index.adoc[Appliances de stockage SG5600]
+
+
+
+
+
+
+ a| 
+Température trop élevée du processeur du contrôleur de calcul de l'appliance
+ a| 
+La température du processeur dans le contrôleur de calcul d'une appliance StorageGRID a dépassé le seuil nominal.
+
+. Vérifier les composants matériels pour rechercher les conditions de surchauffe et suivre les actions recommandées :
++
+** Si vous disposez d'un SG100, SG1000 ou SG6000, utilisez le BMC.
+** Si vous disposez d'une appliance SG5600 ou SG5700, utilisez SANtricity System Manager.
+
+
+. Si nécessaire, remplacer l'organe. Reportez-vous aux instructions relatives à votre appareil :
++
+** xref:../sg100-1000/index.adoc[Appareils de services SG100 et SG1000]
+** xref:../sg5600/index.adoc[Appliances de stockage SG5600]
+** xref:../sg5700/index.adoc[Appliances de stockage SG5700]
+** xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
+
+
+
+
+
+
+ a| 
+Le contrôleur de calcul de l'appliance doit faire attention
+ a| 
+Une défaillance matérielle a été détectée dans le contrôleur de calcul d'une appliance StorageGRID.
+
+. Rechercher des erreurs sur les composants matériels et suivre les actions recommandées :
++
+** Si vous disposez d'un SG100, SG1000 ou SG6000, utilisez le BMC.
+** Si vous disposez d'une appliance SG5600 ou SG5700, utilisez SANtricity System Manager.
+
+
+. Si nécessaire, remplacer l'organe. Reportez-vous aux instructions relatives à votre appareil :
++
+** xref:../sg100-1000/index.adoc[Appareils de services SG100 et SG1000]
+** xref:../sg5600/index.adoc[Appliances de stockage SG5600]
+** xref:../sg5700/index.adoc[Appliances de stockage SG5700]
+** xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
+
+
+
+
+
+
+ a| 
+L'alimentation A du contrôleur de calcul de l'appliance présente un problème
+ a| 
+L'alimentation A du contrôleur de calcul présente un problème. Cette alerte peut indiquer qu'elle est défectueuse ou qu'elle rencontre un problème de puissance.
+
+. Rechercher des erreurs sur les composants matériels et suivre les actions recommandées :
++
+** Si vous disposez d'un SG100, SG1000 ou SG6000, utilisez le BMC.
+** Si vous disposez d'une appliance SG5600 ou SG5700, utilisez SANtricity System Manager.
+
+
+. Si nécessaire, remplacer l'organe. Reportez-vous aux instructions relatives à votre appareil :
++
+** xref:../sg100-1000/index.adoc[Appareils de services SG100 et SG1000]
+** xref:../sg5600/index.adoc[Appliances de stockage SG5600]
+** xref:../sg5700/index.adoc[Appliances de stockage SG5700]
+** xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
+
+
+
+
+
+
+ a| 
+L'alimentation B du contrôleur de calcul de l'appliance présente un problème
+ a| 
+L'alimentation B du contrôleur de calcul présente un problème.
+
+Cette alerte peut indiquer que le bloc d'alimentation est défectueux ou qu'il présente un problème d'alimentation.
+
+. Rechercher des erreurs sur les composants matériels et suivre les actions recommandées :
++
+** Si vous disposez d'un SG100, SG1000 ou SG6000, utilisez le BMC.
+** Si vous disposez d'une appliance SG5600 ou SG5700, utilisez SANtricity System Manager.
+
+
+. Si nécessaire, remplacer l'organe. Reportez-vous aux instructions relatives à votre appareil :
++
+** xref:../sg100-1000/index.adoc[Appareils de services SG100 et SG1000]
+** xref:../sg5600/index.adoc[Appliances de stockage SG5600]
+** xref:../sg5700/index.adoc[Appliances de stockage SG5700]
+** xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
+
+
+
+
+
+
+ a| 
+Service de surveillance du matériel de calcul de l'appliance bloqué
+ a| 
+Le service qui surveille l'état du matériel de stockage a cessé de générer des rapports de données.
+
+. Vérifiez l'état du service eos-System-status dans le système d'exploitation de base.
+. Si le service est arrêté ou en état d'erreur, redémarrez-le.
+. Si cette alerte persiste, contactez le support technique.
+
+
+
+
+ a| 
+Panne Fibre Channel de l'appliance détectée
+ a| 
+Un problème de liaison Fibre Channel a été détecté entre le contrôleur de stockage de l'appliance et le contrôleur de calcul.
+
+Cette alerte peut indiquer un problème de connexion Fibre Channel entre les contrôleurs de stockage et de calcul de l'appliance.
+
+. Recherchez des erreurs sur les composants matériels (*NOEUDS* *_appliance node_* *Hardware*). Si le statut de l'un des composants n'est pas « nominal », procédez comme suit :
++
+.. Vérifiez que les câbles Fibre Channel entre les contrôleurs sont correctement connectés.
+.. Assurez-vous que les câbles Fibre Channel sont exempts de plis excessifs.
+.. Vérifiez que les modules SFP+ sont correctement installés.
++
+*Remarque :* si ce problème persiste, le système StorageGRID risque de mettre la connexion problématique hors ligne automatiquement.
+
+
+
+. Au besoin, remplacer les composants. Reportez-vous aux instructions relatives à votre appareil :
++
+** xref:../sg5700/index.adoc[Appliances de stockage SG5700]
+** xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
+
+
+
+
+
+
+ a| 
+Défaillance du port HBA Fibre Channel de l'appliance
+ a| 
+Un port HBA Fibre Channel est défectueux ou est défectueux.
+
+Contactez l'assistance technique.
+
+
+
+ a| 
+Flash cache de l'appliance ne sont pas optimaux
+ a| 
+Les disques utilisés pour la mise en cache SSD ne sont pas optimaux.
+
+. Remplacez les disques SSD cache. Reportez-vous aux instructions relatives à votre appareil :
++
+** xref:../sg5600/index.adoc[Appliances de stockage SG5600]
+** xref:../sg5700/index.adoc[Appliances de stockage SG5700]
+** xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
+
+
+. Si cette alerte persiste, contactez le support technique.
+
+
+
+
+ a| 
+Interconnexion de l'appareil/boîtier de la batterie retiré
+ a| 
+Le boîtier d'interconnexion/de batterie est manquant.
+
+. Remplacer la batterie. Les étapes à suivre pour retirer et remplacer une batterie sont incluses dans la procédure de remplacement d'un contrôleur de stockage. Reportez-vous aux instructions relatives à votre dispositif de stockage.
++
+** xref:../sg5600/index.adoc[Appliances de stockage SG5600]
+** xref:../sg5700/index.adoc[Appliances de stockage SG5700]
+** xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
+
+
+. Si cette alerte persiste, contactez le support technique.
+
+
+
+
+ a| 
+Port d'appliance LACP manquant
+ a| 
+Aucun port d'une appliance StorageGRID ne participe au lien LACP.
+
+. Vérifier la configuration du commutateur. Assurez-vous que l'interface est configurée dans le groupe d'agrégation de liens approprié.
+. Si cette alerte persiste, contactez le support technique.
+
+
+
+
+ a| 
+L'alimentation générale de l'appareil est dégradée
+ a| 
+La puissance d'un dispositif StorageGRID s'est déviée de la tension de fonctionnement recommandée.
+
+. Vérifier l'état des blocs d'alimentation A et B pour déterminer quelle alimentation fonctionne normalement et suivre les actions recommandées :
++
+** Si vous disposez d'un SG100, SG1000 ou SG6000, utilisez le BMC.
+** Si vous disposez d'une appliance SG5600 ou SG5700, utilisez SANtricity System Manager.
+
+
+. Si nécessaire, remplacer l'organe. Reportez-vous aux instructions relatives à votre appareil :
++
+** xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
+** xref:../sg5700/index.adoc[Appliances de stockage SG5700]
+** xref:../sg5600/index.adoc[Appliances de stockage SG5600]
+** xref:../sg100-1000/index.adoc[Appareils de services SG100 et SG1000]
+
+
+
+
+
+
+ a| 
+Défaillance Du contrôleur de stockage De l'appliance
+ a| 
+Le contrôleur de stockage A d'une appliance StorageGRID est en panne.
+
+. Utilisez SANtricity System Manager pour vérifier les composants matériels et suivez les actions recommandées.
+. Si nécessaire, remplacer l'organe. Reportez-vous aux instructions relatives à votre appareil :
++
+** xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
+** xref:../sg5700/index.adoc[Appliances de stockage SG5700]
+** xref:../sg5600/index.adoc[Appliances de stockage SG5600]
+
+
+
+
+
+
+ a| 
+Défaillance du contrôleur B de stockage de l'appliance
+ a| 
+Le contrôleur de stockage B d'une appliance StorageGRID est en panne.
+
+. Utilisez SANtricity System Manager pour vérifier les composants matériels et suivez les actions recommandées.
+. Si nécessaire, remplacer l'organe. Reportez-vous aux instructions relatives à votre appareil :
++
+** xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
+** xref:../sg5700/index.adoc[Appliances de stockage SG5700]
+** xref:../sg5600/index.adoc[Appliances de stockage SG5600]
+
+
+
+
+
+
+ a| 
+Panne de disque du contrôleur de stockage de l'appliance
+ a| 
+Un ou plusieurs disques d'une appliance StorageGRID sont défectueux ou non optimaux.
+
+. Utilisez SANtricity System Manager pour vérifier les composants matériels et suivez les actions recommandées.
+. Si nécessaire, remplacer l'organe. Reportez-vous aux instructions relatives à votre appareil :
++
+** xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
+** xref:../sg5700/index.adoc[Appliances de stockage SG5700]
+** xref:../sg5600/index.adoc[Appliances de stockage SG5600]
+
+
+
+
+
+
+ a| 
+Problème matériel du contrôleur de stockage de l'appliance
+ a| 
+Le logiciel SANtricity signale les besoins d'attention d'un composant d'une appliance StorageGRID.
+
+. Utilisez SANtricity System Manager pour vérifier les composants matériels et suivez les actions recommandées.
+. Si nécessaire, remplacer l'organe. Reportez-vous aux instructions relatives à votre appareil :
++
+** xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
+** xref:../sg5700/index.adoc[Appliances de stockage SG5700]
+** xref:../sg5600/index.adoc[Appliances de stockage SG5600]
+
+
+
+
+
+
+ a| 
+Panne de l'alimentation Du contrôleur de stockage de l'appliance
+ a| 
+L'alimentation A d'un dispositif StorageGRID s'est déviée de la tension de fonctionnement recommandée.
+
+. Utilisez SANtricity System Manager pour vérifier les composants matériels et suivez les actions recommandées.
+. Si nécessaire, remplacer l'organe. Reportez-vous aux instructions relatives à votre appareil :
++
+** xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
+** xref:../sg5700/index.adoc[Appliances de stockage SG5700]
+** xref:../sg5600/index.adoc[Appliances de stockage SG5600]
+
+
+
+
+
+
+ a| 
+Panne de l'alimentation B du contrôleur de stockage de l'appliance
+ a| 
+L'alimentation B d'un dispositif StorageGRID s'est déviée de la tension de fonctionnement recommandée.
+
+. Utilisez SANtricity System Manager pour vérifier les composants matériels et suivez les actions recommandées.
+. Si nécessaire, remplacer l'organe. Reportez-vous aux instructions relatives à votre appareil :
++
+** xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
+** xref:../sg5700/index.adoc[Appliances de stockage SG5700]
+** xref:../sg5600/index.adoc[Appliances de stockage SG5600]
+
+
+
+
+
+
+ a| 
+Entretien du moniteur matériel de stockage de l'appliance bloqué
+ a| 
+Le service qui surveille l'état du matériel de stockage a cessé de générer des rapports de données.
+
+. Vérifiez l'état du service eos-System-status dans le système d'exploitation de base.
+. Si le service est arrêté ou en état d'erreur, redémarrez-le.
+. Si cette alerte persiste, contactez le support technique.
+
+
+
+
+ a| 
+Dégradation des tiroirs de stockage de l'appliance
+ a| 
+L'état de l'un des composants du tiroir de stockage d'une appliance de stockage est dégradé.
+
+. Utilisez SANtricity System Manager pour vérifier les composants matériels et suivez les actions recommandées.
+. Si nécessaire, remplacer l'organe. Reportez-vous aux instructions relatives à votre appareil :
++
+** xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
+** xref:../sg5700/index.adoc[Appliances de stockage SG5700]
+** xref:../sg5600/index.adoc[Appliances de stockage SG5600]
+
+
+
+
+
+
+ a| 
+Température de l'appareil dépassée
+ a| 
+La température nominale ou maximale du contrôleur de stockage de l'appareil a été dépassée.
+
+. Déterminez s'il y a une autre alerte affectant ce nœud. Cette alerte est peut-être résolue lorsque vous résolvez l'autre alerte.
+. Rechercher les causes possibles de l'augmentation de la température, comme une panne du ventilateur ou du système CVC.
+. Si cette alerte persiste, contactez le support technique.
+
+
+
+
+ a| 
+Capteur de température de l'appareil retiré
+ a| 
+Un capteur de température a été déposé. Contactez l'assistance technique.
+
+
+
+ a| 
+Erreur du compacteur automatique Cassandra
+ a| 
+Le compacteur automatique Cassandra a rencontré une erreur.
+
+Il existe sur tous les nœuds de stockage un compacteur automatique Cassandra et gère la taille de la base de données Cassandra pour le remplacement et la suppression des charges de travail lourdes. Même si ce problème persiste, certaines charges de travail connaissent une consommation de métadonnées élevée et inattendue.
+
+. Déterminez s'il y a une autre alerte affectant ce nœud. Cette alerte est peut-être résolue lorsque vous résolvez l'autre alerte.
+. Contactez l'assistance technique.
+
+
+
+
+ a| 
+Des journaux d'audit sont ajoutés à la file d'attente en mémoire
+ a| 
+Le nœud ne peut pas envoyer de journaux au serveur syslog local et la file d'attente in-memory est en cours de remplissage.
+
+. Assurez-vous que le service rsyslog est exécuté sur le nœud.
+. Si nécessaire, redémarrez le service rsyslog sur le nœud à l'aide de la commande `service rsyslog restart`.
+. Si le service rsyslog ne peut pas être redémarré et que vous n'enregistrez pas les messages d'audit sur les nœuds Admin, contactez le support technique. Les journaux d'audit seront perdus si ce problème n'est pas corrigé.
+
+
+
+
+ a| 
+Indicateurs du compacteur automatique Cassandra obsolètes
+ a| 
+Les mesures qui décrivent le compacteur automatique Cassandra sont obsolètes.
+
+Il existe sur tous les nœuds de stockage un compacteur automatique Cassandra et gère la taille de la base de données Cassandra pour le remplacement et la suppression des charges de travail lourdes. Même si cette alerte est conservée, certaines charges de travail subiront une consommation élevée des métadonnées inattendue.
+
+. Déterminez s'il y a une autre alerte affectant ce nœud. Cette alerte est peut-être résolue lorsque vous résolvez l'autre alerte.
+. Contactez l'assistance technique.
+
+
+
+
+ a| 
+Erreur de communication Cassandra
+ a| 
+Les nœuds qui exécutent le service Cassandra rencontrent des problèmes.
+
+Cette alerte indique qu'un élément interfère avec les communications nœud à nœud. Un problème réseau peut se présenter ou le service Cassandra est peut-être arrêté sur un ou plusieurs nœuds de stockage.
+
+. Déterminez s'il existe une autre alerte affectant un ou plusieurs nœuds de stockage. Cette alerte est peut-être résolue lorsque vous résolvez l'autre alerte.
+. Recherchez un problème réseau affectant un ou plusieurs nœuds de stockage.
+. Sélectionnez *SUPPORT* > *Outils* > *topologie de grille*.
+. Pour chaque noeud de stockage de votre système, sélectionnez *SSM* *Services*. Assurez-vous que le service Cassandra est « en cours d'exécution ».
+. Si Cassandra n'est pas en cours d'exécution, suivez les étapes pour xref:../maintain/starting-or-restarting-service.adoc[démarrage ou redémarrage d'un service].
+. Si toutes les instances du service Cassandra sont en cours d'exécution et que l'alerte n'est pas résolue, contactez le support technique.
+
+
+
+
+ a| 
+Compression Cassandra surchargée
+ a| 
+Le processus de compactage Cassandra est surchargé.
+
+Si le processus de compaction est surchargé, les performances de lecture peuvent être dégradées et la mémoire RAM peut être utilisée. Le service Cassandra peut également ne plus répondre ou tomber en panne.
+
+. Redémarrez le service Cassandra en suivant les étapes de xref:../maintain/starting-or-restarting-service.adoc[redémarrer un service].
+. Si cette alerte persiste, contactez le support technique.
+
+
+
+
+ a| 
+Les metrics de réparation de Cassandra sont obsolètes
+ a| 
+Les mesures qui décrivent les tâches de réparation de Cassandra sont obsolètes. Si cette condition persiste pendant plus de 48 heures, les requêtes client, telles que les listes de compartiments, peuvent afficher les données supprimées.
+
+. Redémarrez le nœud. Dans Grid Manager, accédez à *NODES*, sélectionnez le nœud, puis sélectionnez l'onglet tâches.
+. Si cette alerte persiste, contactez le support technique.
+
+
+
+
+ a| 
+La progression de la réparation de Cassandra est lente
+ a| 
+La progression des réparations des bases de données Cassandra est lente.
+
+Lorsque les réparations des bases de données sont lentes, les opérations de cohérence des données de Cassandra s'en trouvent ralenties. Si cette condition persiste pendant plus de 48 heures, les requêtes client, telles que les listes de compartiments, peuvent afficher les données supprimées.
+
+. Vérifiez que tous les nœuds de stockage sont en ligne et qu'il n'y a pas d'alerte liée à la mise en réseau.
+. Surveillez cette alerte pendant 2 jours maximum pour voir si le problème est résolu par lui-même.
+. Si les réparations de la base de données continuent à se poursuivre lentement, contacter le support technique.
+
+
+
+
+ a| 
+Le service de réparation Cassandra n'est pas disponible
+ a| 
+Le service de réparation Cassandra n'est pas disponible.
+
+Le service de réparation Cassandra existe sur tous les nœuds de stockage et fournit des fonctions de réparation critiques pour la base de données Cassandra. Si cette condition persiste pendant plus de 48 heures, les requêtes client, telles que les listes de compartiments, peuvent afficher les données supprimées.
+
+. Sélectionnez *SUPPORT* > *Outils* > *topologie de grille*.
+. Pour chaque noeud de stockage de votre système, sélectionnez *SSM* *Services*. Vérifiez que le service Cassandra Reaper est en cours d'exécution.
+. Si Cassandra Reaper n'est pas en cours d'exécution, suivez les étapes pour xref:../maintain/starting-or-restarting-service.adoc[démarrage ou redémarrage d'un service].
+. Si toutes les instances du service Cassandra Reaper sont en cours d'exécution et que l'alerte n'est pas résolue, contactez le support technique.
+
+
+
+
+ a| 
+La corruption des tables Cassandra
+ a| 
+Cassandra a détecté une corruption de table.
+
+Cassandra redémarre automatiquement si elle détecte une corruption de la table.
+
+Contactez l'assistance technique.
+
+
+
+ a| 
+Erreur de connectivité de Cloud Storage Pool
+ a| 
+Le contrôle de l'état des pools de stockage cloud a détecté une ou plusieurs nouvelles erreurs.
+
+. Accédez à la section Cloud Storage pools de la page Storage pools.
+. Consultez la colonne dernière erreur pour déterminer quel pool de stockage cloud a une erreur.
+. Reportez-vous aux instructions pour xref:../ilm/index.adoc[gestion des objets avec gestion du cycle de vie des informations].
+
+
+
+
+ a| 
+Bail DHCP expiré
+ a| 
+Le bail DHCP sur une interface réseau a expiré. Si le bail DHCP a expiré, suivez les actions recommandées :
+
+. Assurez-vous que la connectivité est présente entre ce nœud et le serveur DHCP de l'interface affectée.
+. Assurez-vous que des adresses IP sont disponibles pour être affectées dans le sous-réseau affecté sur le serveur DHCP.
+. Assurez-vous qu'il existe une réservation permanente pour l'adresse IP configurée dans le serveur DHCP. Vous pouvez également utiliser l'outil StorageGRID change IP pour attribuer une adresse IP statique en dehors du pool d'adresses DHCP. Voir la xref:../maintain/index.adoc[instructions de récupération et de maintenance].
+
+
+
+
+ a| 
+La location DHCP expire bientôt
+ a| 
+Le bail DHCP sur une interface réseau expire bientôt.
+
+Pour éviter que le bail DHCP arrive à expiration, suivez les actions recommandées :
+
+. Assurez-vous que la connectivité est présente entre ce nœud et le serveur DHCP de l'interface affectée.
+. Assurez-vous que des adresses IP sont disponibles pour être affectées dans le sous-réseau affecté sur le serveur DHCP.
+. Assurez-vous qu'il existe une réservation permanente pour l'adresse IP configurée dans le serveur DHCP. Vous pouvez également utiliser l'outil StorageGRID change IP pour attribuer une adresse IP statique en dehors du pool d'adresses DHCP. Voir la xref:../maintain/index.adoc[instructions de récupération et de maintenance].
+
+
+
+
+ a| 
+Serveur DHCP indisponible
+ a| 
+Le serveur DHCP n'est pas disponible.
+
+Le nœud StorageGRID ne peut pas contacter votre serveur DHCP. Le bail DHCP de l'adresse IP du nœud ne peut pas être validé.
+
+. Assurez-vous que la connectivité est présente entre ce nœud et le serveur DHCP de l'interface affectée.
+. Assurez-vous que des adresses IP sont disponibles pour être affectées dans le sous-réseau affecté sur le serveur DHCP.
+. Assurez-vous qu'il existe une réservation permanente pour l'adresse IP configurée dans le serveur DHCP. Vous pouvez également utiliser l'outil StorageGRID change IP pour attribuer une adresse IP statique en dehors du pool d'adresses DHCP. Voir la xref:../maintain/index.adoc[instructions de récupération et de maintenance].
+
+
+
+
+ a| 
+Les E/S du disque sont très lentes
+ a| 
+Des E/S de disque très lentes peuvent affecter les performances du StorageGRID.
+
+. Si le problème est lié à un nœud d'appliance de stockage, utilisez SANtricity System Manager pour rechercher des disques défectueux, des disques avec erreurs prévues ou des réparations de disques en cours. Vérifiez également l'état des liaisons Fibre Channel ou SAS entre le calcul de l'appliance et les contrôleurs de stockage pour voir si des liaisons sont en panne ou si les taux d'erreur sont excessifs.
+. Vérifiez le système de stockage qui héberge les volumes de ce nœud pour déterminer, et corriger, la cause première des opérations d'E/S lentes
+. Si cette alerte persiste, contactez le support technique.
+
+
+*Remarque :* les nœuds affectés peuvent désactiver les services et redémarrer eux-mêmes pour éviter d'affecter les performances globales de la grille. Lorsque la condition à l'origine est éliminée et que ces nœuds détectent les performances d'E/S standard, ils retournent automatiquement leur service complet.
+
+
+
+ a| 
+Défaillance du rééquilibrage EC
+ a| 
+Le travail de rééquilibrage des données codées d'effacement entre les nœuds de stockage a échoué ou a été interrompu par l'utilisateur.
+
+. Assurez-vous que tous les nœuds de stockage du site rééquilibrés sont en ligne et disponibles.
+. Assurez-vous qu'aucune défaillance de volume ne se produit sur le site à rééquilibré. Si tel est le cas, mettez fin à la tâche EC Rerééquilibrage afin que vous puissiez exécuter une tâche de réparation.
++
+`'rebalance-data terminate --job-id <ID>'`
+
+. S'assurer qu'il n'y a aucune défaillance de service sur le site à rééquilibré. Si un service n'est pas en cours d'exécution, suivez les étapes de démarrage ou de redémarrage d'un service dans les instructions de récupération et de maintenance.
+. Après avoir résolu des problèmes, redémarrez le travail en exécutant la commande suivante sur le nœud d'administration principal :
++
+`'rebalance-data start --job-id <ID>'`
+
+. Si vous ne parvenez pas à résoudre le problème, contactez le support technique.
+
+
+
+
+ a| 
+Échec de réparation EC
+ a| 
+Une tâche de réparation des données codées d'effacement a échoué ou a été arrêtée.
+
+. Assurez-vous que les nœuds ou volumes de stockage disponibles sont suffisants pour remplacer le nœud ou le volume de stockage défectueux.
+. Assurez-vous que suffisamment de nœuds de stockage sont disponibles pour répondre à la règle ILM active.
+. Assurez-vous qu'il n'y a aucun problème de connectivité réseau.
+. Après avoir résolu des problèmes, redémarrez le travail en exécutant la commande suivante sur le nœud d'administration principal :
++
+`'repair-data start-ec-node-repair --repair-id <ID>'`
+
+. Si vous ne parvenez pas à résoudre le problème, contactez le support technique.
+
+
+
+
+ a| 
+Réparation EC bloquée
+ a| 
+Une tâche de réparation des données avec code d'effacement est interrompue.
+
+. Assurez-vous que les nœuds ou volumes de stockage disponibles sont suffisants pour remplacer le nœud ou le volume de stockage défectueux.
+. Assurez-vous qu'il n'y a aucun problème de connectivité réseau.
+. Une fois les problèmes résolus, vérifiez si l'alerte est résolue. Pour afficher un rapport plus détaillé sur la progression de la réparation, exécutez la commande suivante sur le nœud d'administration principal :
++
+`'repair-data show-ec-repair-status --repair-id <ID>'`
+
+. Si vous ne parvenez pas à résoudre le problème, contactez le support technique.
+
+
+
+
+ a| 
+Échec de la notification par e-mail
+ a| 
+Impossible d'envoyer la notification par e-mail pour une alerte.
+
+Cette alerte est déclenchée lorsqu'une notification par e-mail d'alerte échoue ou qu'un e-mail de test (envoyé à partir de la page *ALERTES* *Configuration de l'e-mail*) ne peut pas être envoyé.
+
+. Connectez-vous à Grid Manager à partir du nœud d'administration répertorié dans la colonne *site/nœud* de l'alerte.
+. Accédez à la page *ALERTES* *Configuration de la messagerie*, vérifiez les paramètres et modifiez-les si nécessaire.
+. Cliquez sur *Envoyer E-mail de test* et vérifiez la boîte de réception d'un destinataire de test pour l'e-mail. Une nouvelle instance de cette alerte peut être déclenchée si l'e-mail de test ne peut pas être envoyé.
+. Si l'e-mail de test n'a pas pu être envoyé, vérifiez que votre serveur de messagerie est en ligne.
+. Si le serveur fonctionne, sélectionnez *SUPPORT* *Outils* *Logs*, puis collectez le journal du noeud Admin. Spécifiez une période qui est 15 minutes avant et après l'heure de l'alerte.
+. Extrayez l'archive téléchargée et examinez le contenu de `prometheus.log` `(_/GID<gid><time_stamp>/<site_node>/<time_stamp>/metrics/prometheus.log)`.
+. Si vous ne parvenez pas à résoudre le problème, contactez le support technique.
+
+
+
+
+ a| 
+Expiration des certificats client configurés sur la page certificats
+ a| 
+Un ou plusieurs certificats client configurés sur la page certificats sont sur le point d'expirer.
+
+. Dans le Gestionnaire de grille, sélectionnez *CONFIGURATION* *sécurité* *certificats*, puis sélectionnez l'onglet *client*.
+. Sélectionnez un certificat qui expirera bientôt.
+. Sélectionnez *attacher un nouveau certificat* à xref:../admin/configuring-administrator-client-certificates.adoc[télécharger ou générer un nouveau certificat].
+. Répétez ces étapes pour chaque certificat qui expirera bientôt.
+
+
+
+
+ a| 
+Expiration du certificat de point final de l'équilibreur de charge
+ a| 
+Un ou plusieurs certificats de noeud final de l'équilibreur de charge vont expirer.
+
+. Sélectionnez *CONFIGURATION* *réseau* *points d'extrémité de l'équilibreur de charge*.
+. Sélectionnez un noeud final dont le certificat expirera bientôt.
+. Sélectionnez *Edit Endpoint* pour télécharger ou générer un nouveau certificat.
+. Répétez ces étapes pour chaque noeud final dont le certificat a expiré ou celui qui expirera bientôt.
+
+
+Pour plus d'informations sur la gestion des noeuds finaux de l'équilibreur de charge, reportez-vous à la section xref:../admin/index.adoc[Instructions d'administration de StorageGRID].
+
+
+
+ a| 
+Expiration du certificat de serveur pour l'interface de gestion
+ a| 
+Le certificat de serveur utilisé pour l'interface de gestion est sur le point d'expirer.
+
+. Sélectionnez *CONFIGURATION* *sécurité* *certificats*.
+. Dans l'onglet *Global*, sélectionnez *Management interface certificate*.
+. xref:../admin/configuring-custom-server-certificate-for-grid-manager-tenant-manager.adoc#add-a-custom-management-interface-certificate[Télécharger un nouveau certificat d'interface de gestion.]
+
+
+
+
+ a| 
+Expiration du certificat de serveur global pour les API S3 et Swift
+ a| 
+Le certificat de serveur utilisé pour accéder aux noeuds finaux de l'API de stockage est sur le point d'expirer.
+
+. Sélectionnez *CONFIGURATION* *sécurité* *certificats*.
+. Dans l'onglet *Global*, sélectionnez *S3 et certificat API Swift*.
+. xref:../admin/configuring-custom-server-certificate-for-storage-node-or-clb.adoc#add-a-custom-s3-and-swift-api-certificate[Téléchargez un nouveau certificat API S3 et Swift.]
+
+
+
+
+ a| 
+Expiration du certificat d'autorité de certification syslog externe
+ a| 
+Le certificat d'autorité de certification (CA) utilisé pour signer le certificat de serveur syslog externe est sur le point d'expirer.
+
+. Mettez à jour le certificat de l'autorité de certification sur le serveur syslog externe.
+. Obtenir une copie du certificat CA mis à jour.
+. Dans Grid Manager, accédez à *CONFIGURATION* *Monitoring* *Audit et syslog Server*.
+. Sélectionnez *Modifier le serveur syslog externe*.
+. Sélectionnez *Parcourir* pour télécharger le nouveau certificat.
+. Suivez l'assistant de configuration pour enregistrer le nouveau certificat et la nouvelle clé.
+
+
+
+
+ a| 
+Expiration du certificat du client syslog externe
+ a| 
+Le certificat client d'un serveur syslog externe est sur le point d'expirer.
+
+. Dans Grid Manager, accédez à *CONFIGURATION* *Monitoring* *Audit et syslog Server*.
+. Sélectionnez *Modifier le serveur syslog externe*.
+. Sélectionnez *Parcourir* pour télécharger le nouveau certificat.
+. Sélectionnez *Parcourir* pour télécharger la nouvelle clé privée.
+. Suivez l'assistant de configuration pour enregistrer le nouveau certificat et la nouvelle clé.
+
+
+
+
+ a| 
+Expiration du certificat du serveur syslog externe
+ a| 
+Le certificat de serveur présenté par le serveur syslog externe arrive à expiration.
+
+. Mettez à jour le certificat du serveur sur le serveur syslog externe.
+. Si vous avez déjà utilisé l'API Grid Manager pour fournir un certificat de serveur pour la validation du certificat, téléchargez le certificat de serveur mis à jour à l'aide de l'API.
+
+
+
+
+ a| 
+Erreur de transfert du serveur syslog externe
+ a| 
+Le nœud ne peut pas transférer les journaux vers le serveur syslog externe.
+
+. Dans Grid Manager, accédez à *CONFIGURATION* *Monitoring* *Audit et syslog Server*.
+. Sélectionnez *Modifier le serveur syslog externe*.
+. Passez à l'assistant de configuration jusqu'à ce que vous puissiez sélectionner *Envoyer les messages de test*.
+. Sélectionnez *Envoyer les messages de test* pour déterminer pourquoi les journaux ne peuvent pas être transmis au serveur syslog externe.
+. Résoudre tous les problèmes signalés.
+
+
+
+
+ a| 
+Non-concordance de MTU du réseau de grid
+ a| 
+Le paramètre MTU (maximum transmission Unit, MTU) pour l'interface réseau Grid (eth0) diffère considérablement sur les nœuds de la grille.
+
+Les différences dans les paramètres MTU peuvent indiquer que certains réseaux eth0, mais pas tous, sont configurés pour les trames jumbo. Une différence de taille de MTU supérieure à 1000 peut entraîner des problèmes de performances du réseau.
+
+Reportez-vous aux instructions relatives à l'alerte de non-concordance de MTU du réseau Grid dans xref:troubleshooting-network-hardware-and-platform-issues.adoc[Résolution des problèmes de réseau, de matériel et de plateforme].
+
+
+
+ a| 
+Utilisation du segment de mémoire Java élevée
+ a| 
+Un pourcentage élevé d'espace de tas Java est utilisé.
+
+Si le segment de mémoire Java devient plein, les services de métadonnées peuvent devenir indisponibles et les requêtes client peuvent échouer.
+
+. Examinez l'activité ILM sur le tableau de bord. Cette alerte peut être résoudre elle-même lorsque la charge de travail ILM diminue.
+. Déterminez s'il y a une autre alerte affectant ce nœud. Cette alerte est peut-être résolue lorsque vous résolvez l'autre alerte.
+. Si cette alerte persiste, contactez le support technique.
+
+
+
+
+ a| 
+Latence élevée pour les requêtes de métadonnées
+ a| 
+La durée moyenne des requêtes de métadonnées Cassandra est trop longue.
+
+Une augmentation de la latence d'interrogation peut être provoquée par une modification matérielle, telle que le remplacement d'un disque, une modification de charge de travail, telle qu'une augmentation soudaine des ingles, ou un changement de réseau, comme un problème de communication entre les nœuds et les sites.
+
+. Déterminez s'il y a eu des modifications matérielles, de charge de travail ou de réseau en fonction de l'augmentation de la latence de la requête.
+. Si vous ne parvenez pas à résoudre le problème, contactez le support technique.
+
+
+
+
+ a| 
+Échec de synchronisation de la fédération d'identités
+ a| 
+Impossible de synchroniser des groupes fédérés et des utilisateurs à partir du référentiel d'identité.
+
+. Vérifiez que le serveur LDAP configuré est en ligne et disponible.
+. Vérifiez les paramètres de la page Fédération des identités. Confirmer que toutes les valeurs sont actuelles. Voir xref:../admin/using-identity-federation.adoc[Utiliser la fédération des identités] Dans les instructions d'administration de StorageGRID.
+. Cliquez sur *Tester la connexion* pour valider les paramètres du serveur LDAP.
+. Si vous ne pouvez pas résoudre le problème, contactez le support technique.
+
+
+
+
+ a| 
+Échec de la synchronisation de la fédération des identités pour un locataire
+ a| 
+Impossible de synchroniser les groupes fédérés et les utilisateurs à partir du référentiel d'identité configuré par un locataire.
+
+. Connectez-vous au Gestionnaire de locataires.
+. Vérifiez que le serveur LDAP configuré par le locataire est en ligne et disponible.
+. Vérifiez les paramètres de la page Fédération des identités. Confirmer que toutes les valeurs sont actuelles. Voir xref:../tenant/using-identity-federation.adoc[Utiliser la fédération des identités] dans les instructions d'utilisation d'un compte locataire.
+. Cliquez sur *Tester la connexion* pour valider les paramètres du serveur LDAP.
+. Si vous ne pouvez pas résoudre le problème, contactez le support technique.
+
+
+
+
+ a| 
+Placement ILM impossible à atteindre
+ a| 
+Une instruction de placement dans une règle ILM ne peut pas être obtenue pour certains objets.
+
+Cette alerte indique qu'un nœud requis par une instruction de placement est indisponible ou qu'une règle ILM est mal configurée. Par exemple, une règle peut indiquer plus de copies répliquées qu'il n'y a de nœuds de stockage.
+
+. Assurez-vous que tous les nœuds sont en ligne.
+. Si tous les nœuds sont en ligne, vérifiez les instructions de placement dans toutes les règles ILM utilisées par la politique ILM active. Vérifiez qu'il existe des instructions valides pour tous les objets. Voir la xref:../ilm/index.adoc[instructions de gestion des objets avec gestion du cycle de vie des informations].
+. Si nécessaire, mettez à jour les paramètres des règles et activez une nouvelle stratégie.
++
+*Remarque:* il peut prendre jusqu'à 1 jour pour que l'alerte soit claire.
+
+. Si le problème persiste, contactez le support technique.
+
+
+*Remarque :* cette alerte peut apparaître pendant une mise à niveau et peut persister 1 jour après la fin de la mise à niveau. Lorsque cette alerte est déclenchée par une mise à niveau, elle s'efface par elle-même.
+
+
+
+ a| 
+Analyse ILM trop longue
+ a| 
+La durée nécessaire pour analyser, évaluer les objets et appliquer la ILM est trop longue.
+
+Si le temps estimé pour effectuer une analyse ILM complète de tous les objets est trop long (voir *période d'analyse - estimée* sur le tableau de bord), la politique ILM active peut ne pas être appliquée aux objets récemment ingérés. Il est possible que les modifications de la politique ILM ne soient pas appliquées aux objets existants.
+
+. Déterminez s'il y a une autre alerte affectant ce nœud. Cette alerte est peut-être résolue lorsque vous résolvez l'autre alerte.
+. Vérifiez que tous les nœuds de stockage sont en ligne.
+. Réduire temporairement le trafic client. Par exemple, dans Grid Manager, sélectionnez *CONFIGURATION* *réseau* *classification du trafic* et créez une stratégie qui limite la bande passante ou le nombre de requêtes.
+. Si les E/S du disque ou le CPU sont surchargés, essayez de réduire la charge ou d'augmenter la ressource.
+. Si nécessaire, mettez à jour les règles ILM pour utiliser le placement synchrone (par défaut pour les règles créées après StorageGRID 11.3).
+. Si cette alerte persiste, contactez le support technique.
+
+
+xref:../admin/index.adoc[Administrer StorageGRID]
+
+
+
+ a| 
+Taux d'analyse ILM faible
+ a| 
+La vitesse d'analyse ILM est définie sur moins de 100 objets/seconde.
+
+Cette alerte indique qu'un utilisateur a modifié la vitesse d'analyse ILM pour votre système à moins de 100 objets/seconde (par défaut : 400 objets/seconde). Il se peut que la politique ILM active ne soit pas appliquée aux objets récemment ingérées. Les modifications ultérieures de la politique ILM ne seront pas appliquées aux objets existants.
+
+. Déterminez si une modification temporaire a été apportée à la fréquence d'analyse ILM dans le cadre d'une enquête de soutien en cours.
+. Contactez l'assistance technique.
+
+
+
+IMPORTANT: Ne modifiez jamais le taux d'analyse ILM sans contacter le support technique.
+
+
+
+ a| 
+Expiration du certificat CA KMS
+ a| 
+Le certificat de l'autorité de certification (CA) utilisé pour signer le certificat du serveur de gestion des clés (KMS) est sur le point d'expirer.
+
+. À l'aide du logiciel KMS, mettez à jour le certificat CA du serveur de gestion des clés.
+. Dans Grid Manager, sélectionnez *CONFIGURATION* *sécurité* *serveur de gestion des clés*.
+. Sélectionnez le KMS qui a un avertissement d'état de certificat.
+. Sélectionnez *Modifier*.
+. Sélectionnez *Suivant* pour passer à l'étape 2 (Télécharger le certificat du serveur).
+. Sélectionnez *Parcourir* pour télécharger le nouveau certificat.
+. Sélectionnez *Enregistrer*.
+
+
+xref:../admin/index.adoc[Administrer StorageGRID]
+
+
+
+ a| 
+Expiration du certificat client KMS
+ a| 
+Le certificat client d'un serveur de gestion des clés est sur le point d'expirer.
+
+. Dans Grid Manager, sélectionnez *CONFIGURATION* *sécurité* *serveur de gestion des clés*.
+. Sélectionnez le KMS qui a un avertissement d'état de certificat.
+. Sélectionnez *Modifier*.
+. Sélectionnez *Suivant* pour passer à l'étape 3 (Téléchargement de certificats client).
+. Sélectionnez *Parcourir* pour télécharger le nouveau certificat.
+. Sélectionnez *Parcourir* pour télécharger la nouvelle clé privée.
+. Sélectionnez *Enregistrer*.
+
+
+xref:../admin/index.adoc[Administrer StorageGRID]
+
+
+
+ a| 
+Echec du chargement de la configuration DES KMS
+ a| 
+La configuration du serveur de gestion des clés existe mais n'a pas pu être chargée.
+
+. Déterminez s'il y a une autre alerte affectant ce nœud. Cette alerte est peut-être résolue lorsque vous résolvez l'autre alerte.
+. Si cette alerte persiste, contactez le support technique.
+
+
+
+
+ a| 
+Erreur de connectivité KMS
+ a| 
+Un nœud d'appliance n'a pas pu se connecter au serveur de gestion des clés de son site.
+
+. Dans Grid Manager, sélectionnez *CONFIGURATION* *sécurité* *serveur de gestion des clés*.
+. Vérifiez que les entrées de port et de nom d'hôte sont correctes.
+. Vérifiez que le certificat du serveur, le certificat client et la clé privée du certificat client sont corrects et n'ont pas expiré.
+. Assurez-vous que les paramètres de pare-feu permettent au nœud de l'appliance de communiquer avec le KMS spécifié.
+. Corrigez tout problème de réseau ou DNS.
+. Si vous avez besoin d'aide ou si cette alerte persiste, contactez le support technique.
+
+
+
+
+ a| 
+Nom de la clé de cryptage KMS introuvable
+ a| 
+Le serveur de gestion des clés configuré ne dispose pas d'une clé de chiffrement correspondant au nom fourni.
+
+. Vérifiez que le KMS attribué au site utilise le nom correct pour la clé de chiffrement et toutes les versions antérieures.
+. Si vous avez besoin d'aide ou si cette alerte persiste, contactez le support technique.
+
+
+
+
+ a| 
+Echec de la rotation de la clé de chiffrement KMS
+ a| 
+Tous les volumes de l'appliance ont été décryptés, mais un ou plusieurs volumes n'ont pas pu tourner vers la dernière clé.contactez le support technique.
+
+
+
+ a| 
+LES KMS ne sont pas configurés
+ a| 
+Aucun serveur de gestion des clés n'existe pour ce site.
+
+. Dans Grid Manager, sélectionnez *CONFIGURATION* *sécurité* *serveur de gestion des clés*.
+. Ajoutez un KMS pour ce site ou ajoutez un KMS par défaut.
+
+
+xref:../admin/index.adoc[Administrer StorageGRID]
+
+
+
+ a| 
+La clé KMS n'a pas réussi à décrypter un volume d'appliance
+ a| 
+Impossible de décrypter un ou plusieurs volumes sur une appliance dont le chiffrement de nœud est activé avec la clé KMS actuelle.
+
+. Déterminez s'il y a une autre alerte affectant ce nœud. Cette alerte est peut-être résolue lorsque vous résolvez l'autre alerte.
+. Assurez-vous que le serveur de gestion des clés (KMS) dispose de la clé de chiffrement configurée et des versions précédentes de clés.
+. Si vous avez besoin d'aide ou si cette alerte persiste, contactez le support technique.
+
+
+
+
+ a| 
+Expiration du certificat du serveur KMS
+ a| 
+Le certificat de serveur utilisé par le serveur de gestion des clés (KMS) est sur le point d'expirer.
+
+. À l'aide du logiciel KMS, mettez à jour le certificat du serveur pour le serveur de gestion des clés.
+. Si vous avez besoin d'aide ou si cette alerte persiste, contactez le support technique.
+
+
+xref:../admin/index.adoc[Administrer StorageGRID]
+
+
+
+ a| 
+Grande file d'attente d'audit
+ a| 
+La file d'attente des messages d'audit est pleine.
+
+. Vérifier la charge sur le système--s'il y a eu un nombre important de transactions, l'alerte doit se résoudre au fil du temps et vous pouvez ignorer l'alerte.
+. Si l'alerte persiste et augmente la gravité, affichez un graphique de la taille de la file d'attente. Si ce chiffre augmente régulièrement au fil des heures ou des jours, la charge d'audit a probablement dépassé la capacité d'audit du système.
+. Réduisez le taux de fonctionnement du client ou diminuez le nombre de messages d'audit consignés en modifiant le niveau d'audit pour les écritures client et les lectures client sur erreur ou sur Désactivé (*CONFIGURATION* *surveillance* *Audit et serveur syslog*).
+
+
+xref:../audit/index.adoc[Examiner les journaux d'audit]
+
+
+
+ a| 
+Activité de l'équilibreur de charge CLB hérité détectée
+ a| 
+Certains clients peuvent se connecter au service d'équilibreur de charge CLB obsolète à l'aide du certificat API S3 et Swift par défaut.
+
+. Pour simplifier les mises à niveau futures, installez un certificat d'API S3 et Swift personnalisé dans l'onglet *Global* de la page *Certificates*. Assurez-vous ensuite que tous les clients S3 ou Swift qui se connectent à la CLB héritée disposent du nouveau certificat.
+. Créez un ou plusieurs terminaux d'équilibrage de charge. Dirigez ensuite tous les clients S3 et Swift existants vers ces terminaux. Contactez le support technique si vous avez besoin de remappage le port client.
+
+
+Une autre activité peut déclencher cette alerte, y compris des analyses des ports. Pour déterminer si le service CLB obsolète est en cours d'utilisation, consultez la `storagegrid_private_clb_http_connection_established_successful` Metrics Prometheus.
+
+Si nécessaire, désactivez cette règle d'alerte si le service CLB n'est plus utilisé.
+
+
+
+ a| 
+Des journaux sont ajoutés à la file d'attente sur disque
+ a| 
+Le nœud ne peut pas transférer les journaux vers le serveur syslog externe et la file d'attente sur disque est en cours de chargement.
+
+. Dans Grid Manager, accédez à *CONFIGURATION* *Monitoring* *Audit et syslog Server*.
+. Sélectionnez *Modifier le serveur syslog externe*.
+. Passez à l'assistant de configuration jusqu'à ce que vous puissiez sélectionner *Envoyer les messages de test*.
+. Sélectionnez *Envoyer les messages de test* pour déterminer pourquoi les journaux ne peuvent pas être transmis au serveur syslog externe.
+. Résoudre tous les problèmes signalés.
+
+
+
+
+ a| 
+Capacité du disque du journal d'audit faible
+ a| 
+L'espace disponible pour les journaux d'audit est faible.
+
+. Surveillez cette alerte pour voir si le problème résout par lui-même et que l'espace disque devient disponible à nouveau.
+. Contactez le support technique si l'espace disponible continue de diminuer.
+
+
+
+
+ a| 
+Mémoire de nœud faible disponibilité
+ a| 
+La quantité de RAM disponible sur un nœud est faible.
+
+Une faible quantité de RAM disponible peut indiquer une modification de la charge de travail ou une fuite de mémoire avec un ou plusieurs nœuds.
+
+. Surveillez cette alerte pour voir si le problème résout seul.
+. Si la mémoire disponible tombe en dessous du seuil d'alerte majeur, contactez le support technique.
+
+
+
+
+ a| 
+Faible espace libre pour le pool de stockage
+ a| 
+L'espace disponible pour stocker les données d'objet dans un pool de stockage est faible.
+
+. Sélectionnez *ILM* *Storage pools*.
+. Sélectionnez le pool de stockage répertorié dans l'alerte, puis sélectionnez *Afficher les détails*.
+. Déterminez les endroits où la capacité de stockage supplémentaire est requise. Vous pouvez ajouter des nœuds de stockage à chaque site du pool de stockage ou ajouter des volumes de stockage (LUN) à un ou plusieurs nœuds de stockage existants.
+. Exécutez une procédure d'extension pour augmenter la capacité de stockage.
+
+
+xref:../expand/index.adoc[Développez votre grille]
+
+
+
+ a| 
+Mémoire insuffisante sur les nœuds installés
+ a| 
+La quantité de mémoire installée sur un nœud est faible.
+
+Augmentez la quantité de RAM disponible pour la machine virtuelle ou l'hôte Linux. Vérifiez la valeur de seuil de l'alerte majeure pour déterminer la configuration minimale par défaut requise pour un nœud StorageGRID. Reportez-vous aux instructions d'installation de votre plate-forme :
+
+* xref:../rhel/index.adoc[Installez Red Hat Enterprise Linux ou CentOS]
+* xref:../ubuntu/index.adoc[Installez Ubuntu ou Debian]
+* xref:../vmware/index.adoc[Installez VMware]
+
+
+
+
+ a| 
+Faibles capacités de stockage de métadonnées
+ a| 
+L'espace disponible pour le stockage des métadonnées d'objet est faible.
+
+*Alerte critique*
+
+. Arrêtez d'ingérer des objets.
+. Ajoutez immédiatement des nœuds de stockage dans une procédure d'extension.
+
+
+*Alerte majeure*
+
+Ajoutez immédiatement des nœuds de stockage dans une procédure d'extension.
+
+*Alerte mineure*
+
+. Surveillez la vitesse d'utilisation de l'espace des métadonnées de l'objet. Sélectionnez *NODES* *_Storage Node_* *Storage* et affichez le graphique stockage utilisé - Object Metadata.
+. Ajout de nœuds de stockage dans un xref:../expand/index.adoc[procédure d'expansion] dès que possible.
+
+
+Une fois que de nouveaux nœuds de stockage sont ajoutés, le système rééquilibre automatiquement les métadonnées d'objet sur tous les nœuds de stockage. L'alarme est supprimée.
+
+Reportez-vous aux instructions relatives à l'alerte de stockage de métadonnées faible dans xref:troubleshooting-metadata-issues.adoc[Diagnostiquez les problèmes liés aux métadonnées].
+
+
+
+ a| 
+Capacité disque de metrics faible
+ a| 
+L'espace disponible pour la base de données de metrics est faible.
+
+. Surveillez cette alerte pour voir si le problème résout par lui-même et que l'espace disque devient disponible à nouveau.
+. Contactez le support technique si l'espace disponible continue de diminuer.
+
+
+
+
+ a| 
+Faible stockage des données objet
+ a| 
+L'espace disponible pour le stockage des données d'objet est faible.
+
+Effectuer une procédure d'extension. Vous pouvez ajouter des volumes de stockage (LUN) à des nœuds de stockage existants ou ajouter de nouveaux nœuds de stockage.
+
+xref:troubleshooting-low-object-data-storage-alert.adoc[Dépanner l'alerte de stockage de données d'objet faible]
+
+xref:../expand/index.adoc[Développez votre grille]
+
+
+
+ a| 
+Remplacement du filigrane en lecture seule faible
+ a| 
+Le remplacement du filigrane en lecture seule progressif du volume de stockage est inférieur au seuil minimal optimisé pour un nœud de stockage.
+
+Pour savoir comment résoudre cette alerte, rendez-vous sur xref:../monitor/troubleshoot-low-watermark-alert.html[Dépanner les alertes de remplacement de filigrane en lecture seule faible].
+
+
+
+ a| 
+Capacité du disque racine faible
+ a| 
+L'espace disponible pour le disque racine est faible.
+
+. Surveillez cette alerte pour voir si le problème résout par lui-même et que l'espace disque devient disponible à nouveau.
+. Contactez le support technique si l'espace disponible continue de diminuer.
+
+
+
+
+ a| 
+Faible capacité des données système
+ a| 
+Espace disponible pour les données du système StorageGRID sur le `/var/local` le système de fichiers est faible.
+
+. Surveillez cette alerte pour voir si le problème résout par lui-même et que l'espace disque devient disponible à nouveau.
+. Contactez le support technique si l'espace disponible continue de diminuer.
+
+
+
+
+ a| 
+Petit répertoire tmp espace libre
+ a| 
+L'espace disponible dans le répertoire /tmp est faible.
+
+. Surveillez cette alerte pour voir si le problème résout par lui-même et que l'espace disque devient disponible à nouveau.
+. Contactez le support technique si l'espace disponible continue de diminuer.
+
+
+
+
+ a| 
+Erreur de connectivité réseau du nœud
+ a| 
+Des erreurs se sont produites lors du transfert des données entre les nœuds.
+
+Les erreurs de connectivité réseau peuvent s'effacer sans intervention manuelle. Contactez le support technique si les erreurs ne sont pas corrigées.
+
+Voir les instructions relatives à l'alarme d'erreur de réception réseau (NRER) dans xref:troubleshooting-network-hardware-and-platform-issues.adoc[Résolution des problèmes de réseau, de matériel et de plateforme].
+
+
+
+ a| 
+Erreur de trame de réception du réseau du nœud
+ a| 
+Un pourcentage élevé des trames réseau reçues par un nœud a rencontré des erreurs.
+
+Cette alerte peut indiquer un problème matériel, tel qu'un câble défectueux ou un émetteur-récepteur défectueux à l'une des extrémités de la connexion Ethernet.
+
+. Si vous utilisez une appliance, essayez de remplacer chaque émetteur-récepteur SFP+ ou SFP28 et chaque câble, un à la fois, afin de voir si l'alerte disparaît.
+. Si cette alerte persiste, contactez le support technique.
+
+
+
+
+ a| 
+Nœud non synchronisé avec le serveur NTP
+ a| 
+L'heure du nœud n'est pas synchronisée avec le serveur NTP (Network Time Protocol).
+
+. Vérifiez que vous avez spécifié au moins quatre serveurs NTP externes, chacun fournissant une référence Strum 3 ou supérieure.
+. Vérifier que tous les serveurs NTP fonctionnent normalement.
+. Vérifiez les connexions aux serveurs NTP. Assurez-vous qu'ils ne sont pas bloqués par un pare-feu.
+
+
+
+
+ a| 
+Nœud non verrouillé avec le serveur NTP
+ a| 
+Le nœud n'est pas verrouillé sur un serveur NTP (Network Time Protocol).
+
+. Vérifiez que vous avez spécifié au moins quatre serveurs NTP externes, chacun fournissant une référence Strum 3 ou supérieure.
+. Vérifier que tous les serveurs NTP fonctionnent normalement.
+. Vérifiez les connexions aux serveurs NTP. Assurez-vous qu'ils ne sont pas bloqués par un pare-feu.
+
+
+
+
+ a| 
+Le réseau de nœuds de l'appliance n'est pas défaillant
+ a| 
+Un ou plusieurs périphériques réseau sont en panne ou déconnectés. Cette alerte indique qu'une interface réseau (eth) pour un nœud installé sur une machine virtuelle ou un hôte Linux n'est pas accessible.
+
+Contactez l'assistance technique.
+
+
+
+ a| 
+Échec de la vérification de l'existence de l'objet
+ a| 
+Le travail de vérification de l'existence de l'objet a échoué.
+
+. Sélectionnez *VÉRIFICATION d'existence d'objet DE MAINTENANCE*.
+. Notez le message d'erreur. Effectuez les actions correctives appropriées :
++
+*Échec de démarrage*, *connexion perdue*, *erreur inconnue*
+
++
+.. Assurez-vous que les nœuds de stockage et les volumes inclus dans le travail sont en ligne et disponibles.
+.. Assurez-vous qu'il n'y a pas de défaillance du service ou du volume sur les nœuds de stockage. Si un service n'est pas en cours d'exécution, démarrez ou redémarrez-le. Voir la xref:../maintain/index.adoc[instructions de récupération et de maintenance].
+.. Assurez-vous que le contrôle de cohérence sélectionné peut être satisfait.
+.. Après avoir résolu les problèmes, sélectionnez *Réessayer*. Le travail reprend à partir du dernier état valide.
+
+
++
+*Erreur de stockage critique dans le volume*
+
++
+.. Récupérer le volume défaillant. Voir la xref:../maintain/index.adoc[instructions de récupération et de maintenance].
+.. Sélectionnez *Réessayer*.
+.. Une fois le travail terminé, créez un autre travail pour les volumes restants sur le nœud afin de rechercher d'autres erreurs.
+
+
+. Si vous ne parvenez pas à résoudre ce problème, contactez le support technique.
+
+
+
+
+ a| 
+La vérification de l'existence d'objet est bloquée
+ a| 
+Le travail de vérification de l'existence de l'objet est bloqué.
+
+Le travail de vérification de l'existence de l'objet ne peut pas continuer. Un ou plusieurs nœuds de stockage ou volumes inclus dans le travail sont hors ligne ou ne répondent plus, ou le contrôle de cohérence sélectionné ne peut plus être satisfait, car un trop grand nombre de nœuds sont en panne ou indisponibles.
+
+. Assurez-vous que tous les nœuds de stockage et les volumes vérifiés sont en ligne et disponibles (sélectionnez *NOEUDS*).
+. Assurez-vous que suffisamment de nœuds de stockage sont en ligne et disponibles pour permettre au nœud coordinateur actuel de lire les métadonnées d'objet à l'aide du contrôle de cohérence sélectionné. Si nécessaire, démarrer ou redémarrer un service. Voir la xref:../maintain/index.adoc[instructions de récupération et de maintenance].
++
+Lorsque vous résolvez les étapes 1 et 2, le travail démarre automatiquement là où il s'était arrêté.
+
+. Si le contrôle de cohérence sélectionné ne peut pas être satisfait, annulez le travail et démarrez un autre travail à l'aide d'un contrôle de cohérence inférieur.
+. Si vous ne parvenez pas à résoudre ce problème, contactez le support technique.
+
+
+
+
+ a| 
+Objets perdus
+ a| 
+Un ou plusieurs objets ont été perdus de la grille.
+
+Cette alerte peut indiquer que des données ont été définitivement perdues et ne peuvent pas être récupérées.
+
+. Examiner immédiatement cette alerte. Vous devrez peut-être prendre des mesures pour éviter d'autres pertes de données. Vous pouvez également restaurer un objet perdu si vous prenez une action d'invite.
++
+xref:troubleshooting-lost-and-missing-object-data.adoc[Dépanner les données d'objet perdues ou manquantes]
+
+. Lorsque le problème sous-jacent est résolu, réinitialiser le compteur :
++
+.. Sélectionnez *SUPPORT* > *Outils* > *topologie de grille*.
+.. Pour le nœud de stockage qui a déclenché l'alerte, sélectionnez *_site_* *_grid node_* *LDR* *Data Store* *Configuration* *main*.
+.. Sélectionnez *Réinitialiser le nombre d'objets perdus* et cliquez sur *appliquer les modifications*.
+
+
+
+
+
+
+ a| 
+Services de plateforme non disponibles
+ a| 
+Trop peu de nœuds de stockage avec le service RSM sont en cours d'exécution ou disponibles sur un site.
+
+Assurez-vous que la majorité des nœuds de stockage disposant du service RSM sur le site affecté sont en cours d'exécution et qu'ils ne sont pas en état d'erreur.
+
+Voir « Dépannage des services de plate-forme » dans le xref:../admin/index.adoc[Instructions d'administration de StorageGRID].
+
+
+
+ a| 
+PLACEZ la taille de l'objet trop grande dans le S3
+ a| 
+Un client S3 tente d'effectuer une opération PUT Object qui dépasse les limites de taille S3.
+
+. Utilisez l'ID du locataire indiqué dans les détails de l'alerte pour identifier le compte du locataire.
+. Accédez à *support* *Outils* *Logs*, puis collectez les journaux d'application pour le nœud de stockage indiqués dans les détails de l'alerte. Spécifiez une période qui est 15 minutes avant et après l'heure de l'alerte.
+. Extrayez l'archive téléchargée et naviguez jusqu'à l'emplacement de `bycast.log` (`/GID<grid_id>_<time_stamp>/<site_node>/<time_stamp>/grid/bycast.log`).
+. Rechercher le contenu de `bycast.log` pour `"method=PUT"` Et identifier l'adresse IP du client S3 en consultant le `clientIP` légale.
+. Informez tous les utilisateurs client que la taille maximale de l'objet PUT est de 5 Gio.
+. Utilisez les téléchargements partitionnés pour des objets supérieurs à 5 Gio.
+
+
+
+
+ a| 
+Interruption de la liaison de l'appliance de services sur le port réseau d'administration 1
+ a| 
+Le port réseau Admin 1 de l'appliance est arrêté ou déconnecté.
+
+. Vérifiez le câble et la connexion physique au port réseau Admin 1.
+. Résoudre tout problème de connexion. Consultez les instructions d'installation et de maintenance du matériel de votre appareil.
+. Si ce port est déconnecté à cet effet, désactivez cette règle. Dans le Gestionnaire de grille, sélectionnez *ALERTES* *règles*, sélectionnez la règle et cliquez sur *Modifier la règle*. Décochez ensuite la case *Enabled*.
++
+** xref:../sg100-1000/index.adoc[Appareils de services SG100 et SG1000]
+** xref:disabling-alert-rules.adoc[Désactiver les règles d'alerte]
+
+
+
+
+
+
+ a| 
+Liaison de l'appliance de services sur le réseau d'administration (ou le réseau client)
+ a| 
+L'interface de l'appliance vers le réseau Admin (eth1) ou le réseau client (eth2) est désactivée ou déconnectée.
+
+. Vérifiez les câbles, les SFP et les connexions physiques au réseau StorageGRID.
+. Résoudre tout problème de connexion. Consultez les instructions d'installation et de maintenance du matériel de votre appareil.
+. Si ce port est déconnecté à cet effet, désactivez cette règle. Dans le Gestionnaire de grille, sélectionnez *ALERTES* *règles*, sélectionnez la règle et cliquez sur *Modifier la règle*. Décochez ensuite la case *Enabled*.
++
+** xref:../sg100-1000/index.adoc[Appareils de services SG100 et SG1000]
+** xref:disabling-alert-rules.adoc[Désactiver les règles d'alerte]
+
+
+
+
+
+
+ a| 
+La liaison de l'appliance de services est inactive sur les ports réseau 1, 2, 3 ou 4
+ a| 
+Les ports réseau 1, 2, 3 ou 4 de l'appareil sont en panne ou déconnectés.
+
+. Vérifiez les câbles, les SFP et les connexions physiques au réseau StorageGRID.
+. Résoudre tout problème de connexion. Consultez les instructions d'installation et de maintenance du matériel de votre appareil.
+. Si ce port est déconnecté à cet effet, désactivez cette règle. Dans le Gestionnaire de grille, sélectionnez *ALERTES* *règles*, sélectionnez la règle et cliquez sur *Modifier la règle*. Décochez ensuite la case *Enabled*.
++
+** xref:../sg100-1000/index.adoc[Appareils de services SG100 et SG1000]
+** xref:disabling-alert-rules.adoc[Désactiver les règles d'alerte]
+
+
+
+
+
+
+ a| 
+Dégradation de la connectivité du stockage de l'appliance de services
+ a| 
+L'un des deux disques SSD d'une appliance de services est en panne ou hors synchronisation avec l'autre.
+
+Le fonctionnement de l'appareil n'est pas affecté, mais vous devez résoudre immédiatement le problème. En cas de défaillance des deux disques, l'appliance ne fonctionnera plus.
+
+. Dans Grid Manager, sélectionnez *NOEUDS* ***_services appliance_, puis sélectionnez l'onglet **matériel*.
+. Consultez le message dans le champ *Storage RAID mode*.
+. Si le message affiche la progression d'une opération de resynchronisation, attendez la fin de l'opération, puis confirmez que l'alerte a été résolue. Un message de resynchronisation indique que le disque SSD a été remplacé récemment ou qu'il est en cours de resynchronisation pour une autre raison.
+. Si le message indique qu'un des disques SSD est défectueux, remplacez le disque défectueux dans les plus brefs délais.
++
+Pour obtenir des instructions sur le remplacement d'un lecteur d'un appareil de services, reportez-vous au guide d'installation et de maintenance des appareils SG100 et SG1000.
+
++
+xref:../sg100-1000/index.adoc[Appareils de services SG100 et SG1000]
+
+
+
+
+
+ a| 
+Liaison du dispositif de stockage inactive sur le port réseau d'administration 1
+ a| 
+Le port réseau Admin 1 de l'appliance est arrêté ou déconnecté.
+
+. Vérifiez le câble et la connexion physique au port réseau Admin 1.
+. Résoudre tout problème de connexion. Consultez les instructions d'installation et de maintenance du matériel de votre appareil.
+. Si ce port est déconnecté à cet effet, désactivez cette règle. Dans le Gestionnaire de grille, sélectionnez *ALERTES* *règles*, sélectionnez la règle et cliquez sur *Modifier la règle*. Décochez ensuite la case *Enabled*.
++
+** xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
+** xref:../sg5700/index.adoc[Appliances de stockage SG5700]
+** xref:../sg5600/index.adoc[Appliances de stockage SG5600]
+** xref:disabling-alert-rules.adoc[Désactiver les règles d'alerte]
+
+
+
+
+
+
+ a| 
+Lien du dispositif de stockage indisponible sur le réseau d'administration (ou le réseau client)
+ a| 
+L'interface de l'appliance vers le réseau Admin (eth1) ou le réseau client (eth2) est désactivée ou déconnectée.
+
+. Vérifiez les câbles, les SFP et les connexions physiques au réseau StorageGRID.
+. Résoudre tout problème de connexion. Consultez les instructions d'installation et de maintenance du matériel de votre appareil.
+. Si ce port est déconnecté à cet effet, désactivez cette règle. Dans le Gestionnaire de grille, sélectionnez *ALERTES* *règles*, sélectionnez la règle et cliquez sur *Modifier la règle*. Décochez ensuite la case *Enabled*.
++
+** xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
+** xref:../sg5700/index.adoc[Appliances de stockage SG5700]
+** xref:../sg5600/index.adoc[Appliances de stockage SG5600]
+** xref:disabling-alert-rules.adoc[Désactiver les règles d'alerte]
+
+
+
+
+
+
+ a| 
+La liaison du dispositif de stockage est inactive sur les ports réseau 1, 2, 3 ou 4
+ a| 
+Les ports réseau 1, 2, 3 ou 4 de l'appareil sont en panne ou déconnectés.
+
+. Vérifiez les câbles, les SFP et les connexions physiques au réseau StorageGRID.
+. Résoudre tout problème de connexion. Consultez les instructions d'installation et de maintenance du matériel de votre appareil.
+. Si ce port est déconnecté à cet effet, désactivez cette règle. Dans le Gestionnaire de grille, sélectionnez *ALERTES* *règles*, sélectionnez la règle et cliquez sur *Modifier la règle*. Décochez ensuite la case *Enabled*.
++
+** xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
+** xref:../sg5700/index.adoc[Appliances de stockage SG5700]
+** xref:../sg5600/index.adoc[Appliances de stockage SG5600]
+** xref:disabling-alert-rules.adoc[Désactiver les règles d'alerte]
+
+
+
+
+
+
+ a| 
+Dégradation de la connectivité du stockage de l'appliance de stockage
+ a| 
+Un problème se produit au niveau d'une ou plusieurs connexions entre le contrôleur de calcul et le contrôleur de stockage.
+
+. Accédez à l'appareil pour vérifier les voyants des ports.
+. Si les voyants d'un port sont éteints, vérifiez que le câble est correctement branché. Au besoin, remplacez le câble.
+. Attendez jusqu'à cinq minutes.
++
+*Remarque :* si un second câble doit être remplacé, ne le débranchez pas pendant au moins 5 minutes. Dans le cas contraire, le volume root peut devenir en lecture seule, ce qui nécessite un redémarrage matériel.
+
+. Dans Grid Manager, sélectionnez *NODES*. Sélectionnez ensuite l'onglet matériel du nœud qui a rencontré le problème. Vérifiez que la condition d'alerte a résolu.
+
+
+
+
+ a| 
+Périphérique de stockage inaccessible
+ a| 
+Impossible d'accéder à un périphérique de stockage.
+
+Cette alerte indique qu'un volume ne peut pas être monté ou accédé en raison d'un problème avec un périphérique de stockage sous-jacent.
+
+. Vérifiez l'état de tous les périphériques de stockage utilisés pour le nœud :
++
+** Si le nœud est installé sur une machine virtuelle ou un hôte Linux, suivez les instructions de votre système d'exploitation pour exécuter des diagnostics matériels ou effectuer une vérification du système de fichiers.
++
+*** xref:../rhel/index.adoc[Installez Red Hat Enterprise Linux ou CentOS]
+*** xref:../ubuntu/index.adoc[Installez Ubuntu ou Debian]
+*** xref:../vmware/index.adoc[Installez VMware]
+
+
+** Si le nœud est installé sur une appliance SG100, SG1000 ou SG6000, utilisez le contrôleur BMC.
+** Si le nœud est installé sur une appliance SG5600 ou SG5700, utilisez SANtricity System Manager.
+
+
+. Si nécessaire, remplacer l'organe. Reportez-vous aux instructions relatives à votre appareil :
++
+** xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
+** xref:../sg5700/index.adoc[Appliances de stockage SG5700]
+** xref:../sg5600/index.adoc[Appliances de stockage SG5600]
+
+
+
+
+
+
+ a| 
+Utilisation élevée du quota par les locataires
+ a| 
+Un pourcentage élevé d'espace quota est utilisé. Si un locataire dépasse son quota, les nouvelles ingaux sont rejetées.
+
+*Remarque :* cette règle d'alerte est désactivée par défaut car elle peut générer beaucoup de notifications.
+
+. Dans Grid Manager, sélectionnez *TENANTS*.
+. Trier la table par *quota Utilization*.
+. Sélectionnez un locataire dont l'utilisation des quotas est proche de 100 %.
+. Effectuez l'une des opérations suivantes ou les deux :
++
+** Sélectionnez *Modifier* pour augmenter le quota de stockage du locataire.
+** Informez le locataire que son taux d'utilisation des quotas est élevé.
+
+
+
+
+
+
+ a| 
+Impossible de communiquer avec le nœud
+ a| 
+Un ou plusieurs services ne répondent pas, ou le nœud ne peut pas être atteint.
+
+Cette alerte indique qu'un nœud est déconnecté pour une raison inconnue. Par exemple, un service du nœud peut être arrêté, ou le nœud a perdu sa connexion réseau en raison d'une panne de courant ou d'une panne imprévue.
+
+Surveillez cette alerte pour voir si le problème résout seul. Si le problème persiste :
+
+. Déterminez s'il y a une autre alerte affectant ce nœud. Cette alerte est peut-être résolue lorsque vous résolvez l'autre alerte.
+. Vérifiez que tous les services de ce nœud sont en cours d'exécution. Si un service est arrêté, essayez de le démarrer. Voir la xref:../maintain/index.adoc[instructions de récupération et de maintenance].
+. Vérifiez que l'hôte du nœud est sous tension. Si ce n'est pas le cas, démarrez l'hôte.
++
+*Remarque :* si plusieurs hôtes sont hors tension, reportez-vous à la xref:../maintain/index.adoc[instructions de récupération et de maintenance].
+
+. Déterminez s'il y a un problème de connectivité réseau entre ce nœud et le nœud d'administration.
+. Si vous ne parvenez pas à résoudre l'alerte, contactez le support technique.
+
+
+
+
+ a| 
+Redémarrage de nœud inattendu
+ a| 
+Un nœud a été redémarré de manière inattendue au cours des 24 dernières heures.
+
+. Contrôle de cette alerte. L'alerte sera effacée après 24 heures. En revanche, si le nœud redémarre de nouveau de façon inattendue, cette alerte est déclenchée à nouveau.
+. Si vous ne parvenez pas à résoudre l'alerte, il se peut qu'il y ait une panne matérielle. Contactez l'assistance technique.
+
+
+
+
+ a| 
+Objet corrompu non identifié détecté
+ a| 
+Un fichier a été trouvé dans le stockage objet répliqué qui n'a pas pu être identifié en tant qu'objet répliqué.
+
+. Déterminez s'il y a des problèmes avec le stockage sous-jacent sur un nœud de stockage. Par exemple, exécutez des diagnostics matériels ou effectuez une vérification du système de fichiers.
+. Après avoir résolu des problèmes de stockage, xref:verifying-object-integrity.adoc[exécutez la vérification de l'existence d'objet] Pour déterminer si des copies répliquées, telles que définies par votre règle ILM, sont manquantes.
+. Contrôle de cette alerte. L'alerte s'efface après 24 heures, mais se déclenchera à nouveau si le problème n'a pas été résolu.
+. Si vous ne parvenez pas à résoudre l'alerte, contactez le support technique.
+
+
+|===

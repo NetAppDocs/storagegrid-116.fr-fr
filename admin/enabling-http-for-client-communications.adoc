@@ -1,0 +1,43 @@
+---
+permalink: admin/enabling-http-for-client-communications.html 
+sidebar: sidebar 
+keywords: enable http, clb connections, storage node connections 
+summary: 'Par défaut, les applications clientes utilisent le protocole réseau HTTPS pour toutes les connexions aux nœuds de stockage ou au service CLB obsolète sur les nœuds de passerelle. Vous pouvez éventuellement activer HTTP pour ces connexions, par exemple lors du test d"une grille autre que la production.' 
+---
+= Activez HTTP pour les communications client
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Par défaut, les applications clientes utilisent le protocole réseau HTTPS pour toutes les connexions aux nœuds de stockage ou au service CLB obsolète sur les nœuds de passerelle. Vous pouvez éventuellement activer HTTP pour ces connexions, par exemple lors du test d'une grille autre que la production.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous disposez d'autorisations d'accès spécifiques.
+
+
+Cette tâche doit être effectuée uniquement si les clients S3 et Swift doivent établir des connexions HTTP directement vers les nœuds de stockage ou vers le service CLB obsolète sur les nœuds de passerelle.
+
+Il n'est pas nécessaire d'effectuer cette tâche pour les clients qui utilisent uniquement des connexions HTTPS ou pour les clients qui se connectent au service Load Balancer (parce que vous pouvez configurer chaque noeud final Load Balancer pour utiliser HTTP ou HTTPS). Pour plus d'informations, reportez-vous aux informations sur la configuration des noeuds finaux de l'équilibreur de charge.
+
+Voir xref:summary-ip-addresses-and-ports-for-client-connections.adoc[Résumé : adresses IP et ports pour les connexions client] Pour découvrir les ports que les clients S3 et Swift utilisent lors de la connexion aux nœuds de stockage ou au service CLB obsolète via HTTP ou HTTPS
+
+
+IMPORTANT: Soyez prudent lorsque vous activez HTTP pour une grille de production car les requêtes seront envoyées de manière non chiffrée.
+
+.Étapes
+. Sélectionnez *CONFIGURATION* *système* *Options de grille*.
+. Dans la section Options réseau, cochez la case *Activer la connexion HTTP*.
++
+image::../media/http_enabled.png[Activez la connexion HTTP]
+
+. Sélectionnez *Enregistrer*.
+
+
+.Informations associées
+* xref:configuring-load-balancer-endpoints.adoc[Configurer les terminaux de l'équilibreur de charge]
+* xref:../s3/index.adoc[Utilisation de S3]
+* xref:../swift/index.adoc[Utiliser Swift]
+

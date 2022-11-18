@@ -1,0 +1,25 @@
+---
+permalink: admin/determining-ilm-policy-for-migrated-data.html 
+sidebar: sidebar 
+keywords: determing ilm policy, ilm for migrated data 
+summary: 'La règle ILM du système StorageGRID détermine le nombre de copies effectuées, l"emplacement des copies stockées et la durée de conservation de ces copies. Une règle ILM comprend un ensemble de règles ILM décrit la procédure de filtrage des objets et de gestion des données d"objet au fil du temps.' 
+---
+= Détermination de la règle ILM pour les données migrées
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La règle ILM du système StorageGRID détermine le nombre de copies effectuées, l'emplacement des copies stockées et la durée de conservation de ces copies. Une règle ILM comprend un ensemble de règles ILM décrit la procédure de filtrage des objets et de gestion des données d'objet au fil du temps.
+
+Selon l'utilisation des données migrées et vos exigences concernant les données migrées, vous pouvez définir des règles ILM uniques pour les données migrées qui ne sont pas les règles ILM utilisées pour les opérations quotidiennes. Par exemple, si la gestion quotidienne des données implique différentes exigences réglementaires que les données incluses dans la migration, il est possible de vouloir créer un nombre différent de copies des données migrées sur un niveau de stockage différent.
+
+Vous pouvez configurer des règles qui s'appliquent exclusivement aux données migrées si une distinction unique entre les données migrées et les données objet enregistrées au quotidien.
+
+Si vous faites la distinction de manière fiable entre les types de données en utilisant l'un des critères de métadonnées, ce critère vous permet de définir une règle ILM qui ne s'applique qu'aux données migrées.
+
+Avant de commencer la migration des données, veillez à bien comprendre la règle ILM du système StorageGRID et la manière dont elle s'applique aux données migrées, et à effectuer et tester toutes les modifications apportées à la règle ILM. Voir xref:../ilm/index.adoc[Gestion des objets avec ILM].
+
+
+CAUTION: Une règle ILM incorrecte peut entraîner une perte de données irrécupérable. Examinez attentivement toutes les modifications apportées à une stratégie ILM avant de l'activer pour vous assurer que celle-ci fonctionne comme prévu.

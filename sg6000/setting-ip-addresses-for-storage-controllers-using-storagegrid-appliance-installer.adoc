@@ -1,0 +1,73 @@
+---
+permalink: sg6000/setting-ip-addresses-for-storage-controllers-using-storagegrid-appliance-installer.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, storage controller, controller, configure, setup, set up, IP, IP address, management port, Appliance Installer 
+summary: 'Le port de gestion 1 de chaque contrôleur de stockage connecte l"appliance au réseau de gestion pour SANtricity System Manager. Si vous ne pouvez pas accéder à SANtricity System Manager à partir du programme d"installation de l"appliance StorageGRID, vous devez définir une adresse IP statique pour chaque contrôleur de stockage afin d"éviter de perdre votre connexion de gestion au matériel et le firmware du contrôleur dans le tiroir contrôleur.' 
+---
+= Définissez les adresses IP des contrôleurs de stockage à l'aide du programme d'installation de l'appliance StorageGRID
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le port de gestion 1 de chaque contrôleur de stockage connecte l'appliance au réseau de gestion pour SANtricity System Manager. Si vous ne pouvez pas accéder à SANtricity System Manager à partir du programme d'installation de l'appliance StorageGRID, vous devez définir une adresse IP statique pour chaque contrôleur de stockage afin d'éviter de perdre votre connexion de gestion au matériel et le firmware du contrôleur dans le tiroir contrôleur.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous utilisez n'importe quel client de gestion pouvant vous connecter au réseau d'administration StorageGRID ou vous disposez d'un ordinateur portable de service.
+* L'ordinateur portable client ou de service dispose d'un navigateur Web pris en charge.
+
+
+Les adresses attribuées par DHCP peuvent être modifiées à tout moment. Attribuez des adresses IP statiques aux contrôleurs pour garantir une accessibilité cohérente.
+
+
+NOTE: Suivez cette procédure uniquement si vous n'avez pas accès à SANtricity System Manager à partir du programme d'installation de l'appliance StorageGRID (*Advanced* *SANtricity System Manager*) ou du gestionnaire de grille (*NODES* *SANtricity System Manager*).
+
+.Étapes
+. Dans le client, entrez l'URL du programme d'installation de l'appliance StorageGRID : +
+`*https://_Appliance_Controller_IP_:8443*`
++
+Pour `_Appliance_Controller_IP_`, Utilisez l'adresse IP du serveur sur tout réseau StorageGRID.
+
++
+La page d'accueil du programme d'installation de l'appliance StorageGRID s'affiche.
+
+. Sélectionnez *configurer matériel* *contrôleur de stockage Configuration réseau*.
++
+La page Configuration réseau du contrôleur de stockage s'affiche.
+
+. Selon la configuration de votre réseau, sélectionnez *Enabled* pour IPv4, IPv6 ou les deux.
+. Notez l'adresse IPv4 qui s'affiche automatiquement.
++
+DHCP est la méthode par défaut d'assignation d'une adresse IP au port de gestion du contrôleur de stockage.
+
++
+
+NOTE: L'affichage des valeurs DHCP peut prendre quelques minutes.
+
++
+image::../media/storage_controller_network_config_ipv4.gif[IPv4 de configuration réseau du contrôleur de stockage]
+
+. Vous pouvez également définir une adresse IP statique pour le port de gestion du contrôleur de stockage.
++
+
+NOTE: Vous devez attribuer une adresse IP statique au port de gestion ou attribuer un bail permanent à l'adresse sur le serveur DHCP.
+
++
+.. Sélectionnez *statique*.
+.. Saisissez l'adresse IPv4 à l'aide de la notation CIDR.
+.. Saisissez la passerelle par défaut.
++
+image::../media/storage_controller_ipv4_and_def_gateway.gif[Configuration réseau du contrôleur de stockage IPv4 et passerelle par défaut]
+
+.. Cliquez sur *Enregistrer*.
++
+L'application de vos modifications peut prendre quelques minutes.
+
++
+Lorsque vous vous connectez à SANtricity System Manager, vous utiliserez la nouvelle adresse IP statique comme URL : +
+`*https://_Storage_Controller_IP_*`
+
+
+
+

@@ -1,0 +1,114 @@
+---
+permalink: monitor/viewing-resolved-alerts.html 
+sidebar: sidebar 
+keywords: how to view resolved alerts 
+summary: 'Vous pouvez rechercher et afficher l"historique des alertes qui ont été résolues.' 
+---
+= Afficher les alertes résolues
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez rechercher et afficher l'historique des alertes qui ont été résolues.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+
+
+.Étapes
+. Pour afficher les alertes résolues, effectuez l'une des opérations suivantes :
++
+** Dans le panneau Santé du tableau de bord, cliquez sur *alertes récemment résolues*.
++
+Le lien *alertes récemment résolues* n'apparaît que si une ou plusieurs alertes ont été déclenchées au cours de la semaine dernière et sont maintenant résolues.
+
+** Sélectionnez *ALERTES* *résolues*. La page alertes résolues s'affiche. Par défaut, les alertes résolues déclenchées au cours de la dernière semaine sont affichées, les alertes déclenchées les plus récemment étant affichées en premier. Les alertes de cette page étaient précédemment affichées sur la page alertes en cours ou dans un e-mail de notification.
++
+image::../media/alerts_resolved_page.png[Page alertes résolues]
+
+
+
+. Vérifiez les informations du tableau.
++
+|===
+| En-tête de colonne | Description 
+
+
+ a| 
+Nom
+ a| 
+Le nom de l'alerte et sa description.
+
+
+
+ a| 
+Gravité
+ a| 
+Gravité de l'alerte.
+
+** *Critique* image:../media/icon_alert_red_critical.png["Icône alerte rouge critique"]: Il existe une condition anormale qui a arrêté les opérations normales d'un nœud ou service StorageGRID. Vous devez immédiatement résoudre le problème sous-jacent. Une interruption du service et une perte de données peuvent se produire si le problème n'est pas résolu.
+** *Majeur* image:../media/icon_alert_orange_major.png["Icône alerte Orange majeur"]: Il existe une condition anormale affectant les opérations en cours ou approchant le seuil d'une alerte critique. Vous devez examiner les alertes majeures et résoudre tous les problèmes sous-jacents pour vérifier que leur condition anormale n'arrête pas le fonctionnement normal d'un nœud ou d'un service StorageGRID.
+** *Mineur* image:../media/icon_alert_yellow_minor.png["Icône alerte jaune mineure"]: Le système fonctionne normalement, mais il existe une condition anormale qui pourrait affecter la capacité du système à fonctionner s'il continue. Vous devez surveiller et résoudre les alertes mineures qui ne sont pas claires par elles-mêmes pour vous assurer qu'elles n'entraînent pas un problème plus grave.
+
+
+
+
+ a| 
+Temps déclenché
+ a| 
+Il y a combien de temps l'alerte a été déclenchée.
+
+
+
+ a| 
+Heure de résolution
+ a| 
+Il y a combien de temps l'alerte a été résolue.
+
+
+
+ a| 
+Site/nœud
+ a| 
+Nom du site et du nœud sur lequel l'alerte s'est produite.
+
+
+
+ a| 
+Valeurs déclenchées
+ a| 
+Valeur de la mesure à l'origine du déclenchement de l'alerte. Pour certaines alertes, des valeurs supplémentaires sont affichées pour vous aider à comprendre et à examiner l'alerte. Par exemple, les valeurs affichées pour une alerte *stockage de données d'objet bas* comprennent le pourcentage d'espace disque utilisé, la quantité totale d'espace disque et la quantité d'espace disque utilisée.
+
+|===
+. Pour trier la liste complète des alertes résolues, cliquez sur les flèches haut/bas image:../media/icon_alert_sort_column.png["Icône de flèches de tri"] dans chaque en-tête de colonne.
++
+Par exemple, vous pouvez trier les alertes résolues par *site/nœud* pour voir les alertes qui ont affecté un nœud spécifique.
+
+. Vous pouvez également filtrer la liste des alertes résolues à l'aide des menus déroulants situés en haut du tableau.
++
+.. Sélectionnez une période dans le menu déroulant *déclenché* pour afficher les alertes résolues en fonction de la durée de déclenchement.
++
+Vous pouvez rechercher des alertes qui ont été déclenchées dans les périodes suivantes :
+
++
+*** Dernière heure
+*** Dernier jour
+*** Dernière semaine (vue par défaut)
+*** Le mois dernier
+*** Tout temps
+*** Personnalisé (vous permet de spécifier la date de début et la date de fin de la période)
+
+
+.. Sélectionnez un ou plusieurs niveaux de gravité dans le menu déroulant *gravité* pour filtrer les alertes résolues d'une gravité spécifique.
+.. Sélectionnez une ou plusieurs règles d'alerte par défaut ou personnalisées dans le menu déroulant *règle d'alerte* pour filtrer les alertes résolues associées à une règle d'alerte spécifique.
+.. Sélectionnez un ou plusieurs nœuds dans le menu déroulant *Node* pour filtrer les alertes résolues liées à un nœud spécifique.
+.. Cliquez sur *Rechercher*.
+
+
+. Pour afficher les détails d'une alerte résolue spécifique, sélectionnez l'alerte dans le tableau.
++
+Une boîte de dialogue de l'alerte s'affiche. Voir xref:viewing-specific-alert.adoc[Afficher une alerte spécifique].
+
+

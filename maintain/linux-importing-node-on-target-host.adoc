@@ -1,0 +1,53 @@
+---
+permalink: maintain/linux-importing-node-on-target-host.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, linux, import node, importing node, target host 
+summary: 'Après avoir exporté le nœud depuis l"hôte source, vous importez et validez le nœud sur l"hôte Linux cible. La validation confirme que le nœud a accès aux mêmes périphériques d"interface réseau et de stockage bloc que sur l"hôte source.' 
+---
+= Linux : nœud d'importation sur l'hôte cible
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Après avoir exporté le nœud depuis l'hôte source, vous importez et validez le nœud sur l'hôte Linux cible. La validation confirme que le nœud a accès aux mêmes périphériques d'interface réseau et de stockage bloc que sur l'hôte source.
+
+Exécutez la commande suivante sur l'hôte Linux cible.
+
+. Importez le nœud sur l'hôte cible.
++
+[listing]
+----
+sudo storagegrid node import /dev/mapper/sgws-dc1-s3-var-local
+----
++
+`Finished importing node DC1-S3 from /dev/mapper/sgws-dc1-s3-var-local.`
+
++
+`You should run 'storagegrid node validate DC1-S3'`
+
+. Valider la configuration de nœud sur le nouvel hôte.
++
+[listing]
+----
+sudo storagegrid node validate DC1-S3
+----
++
+`+Confirming existence of node DC1-S3... PASSED+`
+
++
+`+Checking configuration file /etc/storagegrid/nodes/DC1-S3.conf for node DC1-S3... PASSED+`
+
++
+`+Checking for duplication of unique values... PASSED+`
+
+. Si des erreurs de validation se produisent, traitez-les avant de démarrer le nœud migré.
++
+Pour plus d'informations sur le dépannage, reportez-vous aux instructions d'installation de StorageGRID pour votre système d'exploitation Linux.
+
+
+
+xref:../rhel/index.adoc[Installez Red Hat Enterprise Linux ou CentOS]
+
+xref:../ubuntu/index.adoc[Installez Ubuntu ou Debian]

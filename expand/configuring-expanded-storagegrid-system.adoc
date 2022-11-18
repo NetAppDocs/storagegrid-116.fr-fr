@@ -1,0 +1,82 @@
+---
+permalink: expand/configuring-expanded-storagegrid-system.html 
+sidebar: sidebar 
+keywords: expansion, configuration 
+summary: 'Une fois l"extension terminée, vous devez effectuer d"autres étapes d"intégration et de configuration.' 
+---
+= Étapes de configuration après l'extension
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Une fois l'extension terminée, vous devez effectuer d'autres étapes d'intégration et de configuration.
+
+Vous devez effectuer les tâches de configuration répertoriées ci-dessous pour les nœuds de la grille que vous ajoutez dans votre extension. Certaines tâches peuvent être facultatives, en fonction des options sélectionnées lors de l'installation et de l'administration de votre système et de la façon dont vous souhaitez configurer les nœuds de grille ajoutés lors de l'extension.
+
+.Étapes
+. Si vous avez ajouté un nœud de stockage, effectuez les tâches de configuration suivantes :
++
+.. Vérifiez les pools de stockage utilisés dans vos règles ILM pour vous assurer que le nouveau stockage sera utilisé. Voir xref:../ilm/index.adoc[Gestion des objets avec ILM].
++
+*** Si vous avez ajouté un site, créez un pool de stockage pour le site et mettez à jour les règles ILM pour utiliser le nouveau pool de stockage.
+*** Si vous avez ajouté un nœud de stockage à un site existant, vérifiez que le nouveau nœud utilise la classe de stockage appropriée.
++
+
+NOTE: Par défaut, un nouveau nœud de stockage est affecté à la qualité de stockage tous les nœuds de stockage et ajouté aux pools de stockage qui utilisent cette qualité pour le site. Si vous souhaitez qu'un nouveau nœud utilise une note de stockage personnalisée, vous devez l'affecter manuellement à la note personnalisée (*ILM* *classes de stockage*).
+
+
+
+.. Vérifiez que le nœud de stockage capture des objets. Voir xref:verifying-storage-node-is-active.adoc[Vérifiez que le nœud de stockage est actif].
+.. Rééquilibrez les données codées d'effacement (uniquement si vous n'avez pas pu ajouter le nombre recommandé de nœuds de stockage). Voirxref:rebalancing-erasure-coded-data-after-adding-storage-nodes.adoc[Rééquilibrent les données codées après l'ajout de nœuds de stockage].
+
+
+. Si vous avez ajouté un nœud de passerelle, effectuez la tâche de configuration suivante :
++
+** Si des groupes haute disponibilité sont utilisés pour les connexions client, ajoutez le nœud de passerelle à un groupe haute disponibilité (HA). Sélectionnez *CONFIGURATION* *réseau* *groupes haute disponibilité* pour consulter la liste des groupes haute disponibilité existants et ajouter le nouveau nœud. Voir xref:../admin/index.adoc[Administrer StorageGRID].
+
+
+. Si vous avez ajouté un nœud d'administration, effectuez les tâches de configuration suivantes :
++
+.. Si l'authentification unique est activée pour votre système StorageGRID, créez une confiance en tiers pour le nouveau nœud d'administration. Vous ne pouvez pas vous connecter au nœud tant que vous n'avez pas créé cette confiance de partie de confiance. Voirxref:../admin/configuring-sso.adoc[Configurer l'authentification unique].
+.. Si vous prévoyez d'utiliser le service Load Balancer sur les nœuds d'administration, ajoutez le nouveau nœud d'administration à un groupe haute disponibilité (HA). Sélectionnez *CONFIGURATION* *réseau* *groupes haute disponibilité* pour consulter la liste des groupes haute disponibilité existants et ajouter le nouveau nœud. Voir xref:../admin/index.adoc[Administrer StorageGRID].
+.. Vous pouvez également copier la base de données du nœud d'administration principal vers le nœud d'administration d'extension si vous souhaitez préserver la cohérence des informations d'audit et d'attribut sur chaque nœud d'administration. Voir xref:copying-admin-node-database.adoc[Copiez la base de données du nœud d'administration].
+.. Si vous souhaitez conserver la cohérence des metrics historiques sur chaque nœud d'administration, vous pouvez également copier la base de données Prometheus du nœud d'administration principal vers le nœud d'administration d'extension. Voir xref:copying-prometheus-metrics.adoc[Copie des metrics Prometheus].
+.. Si vous souhaitez conserver la cohérence des informations du journal historique sur chaque nœud d'administration, copiez les journaux d'audit existants du nœud d'administration principal vers le nœud d'administration d'extension. Voir xref:copying-audit-logs.adoc[Copie des journaux d'audit].
+.. Vous pouvez également configurer l'accès au système à des fins d'audit via un partage de fichiers NFS ou CIFS. Voir xref:../admin/index.adoc[Administrer StorageGRID].
++
+
+NOTE: L'exportation d'audit via CIFS/Samba a été obsolète et sera supprimée dans une future version de StorageGRID.
+
+.. Vous pouvez également modifier l'expéditeur préféré pour les notifications. Vous pouvez faire du nœud d'administration d'extension l'expéditeur préféré. Sinon, un nœud d'administration existant configuré comme expéditeur préféré continue à envoyer des notifications, notamment des messages AutoSupport, des notifications SNMP, des e-mails d'alerte et des e-mails d'alarme (système existant). Voir xref:../admin/index.adoc[Administrer StorageGRID].
+
+
+. Si vous avez ajouté un noeud d'archivage, effectuez les tâches de configuration suivantes.
++
+.. Configurez la connexion du nœud d'archivage au système de stockage d'archivage externe cible. Lorsque vous terminez l'extension, les nœuds d'archivage sont en état d'alarme jusqu'à ce que vous configuriez les informations de connexion via le composant *ARC* *Target*. Voir xref:../admin/index.adoc[Administrer StorageGRID].
+.. Mettre à jour la politique ILM pour archiver les données d'objet via le nouveau nœud d'archivage. Voir xref:../ilm/index.adoc[Gestion des objets avec ILM].
+.. Configurez des alarmes personnalisées pour les attributs utilisés pour surveiller la vitesse et l'efficacité de la récupération des données d'objet à partir des nœuds d'archivage. Voir xref:../admin/index.adoc[Administrer StorageGRID].
+
+
+. Pour vérifier si des nœuds d'extension ont été ajoutés avec un réseau client non fiable ou pour modifier si le réseau client d'un nœud n'est pas fiable ou approuvé, accédez à *CONFIGURATION* *réseau* *réseau client non fiable*.
++
+Si le réseau client sur le nœud d'extension n'est pas fiable, les connexions au nœud sur le réseau client doivent être effectuées à l'aide d'un noeud final d'équilibreur de charge. Voir xref:../admin/index.adoc[Administrer StorageGRID].
+
+. Configuration du DNS (Domain Name System).
++
+Si vous avez spécifié des paramètres DNS séparément pour chaque nœud de grid, vous devez ajouter des paramètres DNS personnalisés par nœud pour les nouveaux nœuds. Voir xref:../maintain/modifying-dns-configuration-for-single-grid-node.adoc[Modifiez la configuration DNS pour un nœud de grid unique].
+
++
+La meilleure pratique consiste à ce que la liste des serveurs DNS dans le grid contienne certains serveurs DNS accessibles localement à partir de chaque site. Si vous venez d'ajouter un nouveau site, ajoutez de nouveaux serveurs DNS pour le site à la configuration DNS à l'échelle de la grille.
+
++
+
+IMPORTANT: Fournir deux à six adresses IPv4 pour les serveurs DNS. Vous devez sélectionner des serveurs DNS auxquels chaque site peut accéder localement en cas d'isatterissage du réseau. Cela permet de s'assurer qu'un site isatterri continue d'avoir accès au service DNS. Après avoir configuré la liste des serveurs DNS au niveau de la grille, vous pouvez personnaliser davantage la liste des serveurs DNS pour chaque nœud. Pour plus de détails, voir xref:../maintain/modifying-dns-configuration-for-single-grid-node.adoc[Modifiez la configuration DNS pour un nœud de grid unique]..
+
+. Si vous avez ajouté un nouveau site, confirmez que les serveurs NTP (Network Time Protocol) sont accessibles à partir de ce site. Voir xref:../maintain/configuring-ntp-servers.adoc[Configurer des serveurs NTP].
++
+
+IMPORTANT: Assurez-vous qu'au moins deux nœuds de chaque site peuvent accéder à au moins quatre sources NTP externes. Si un seul nœud d'un site peut atteindre les sources NTP, des problèmes de synchronisation surviennent en cas de panne de ce nœud. En outre, la désignation de deux nœuds par site en tant que sources NTP principales assure une synchronisation précise si un site est isolé du reste de la grille.
+
+

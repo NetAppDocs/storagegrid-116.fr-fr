@@ -1,0 +1,101 @@
+---
+permalink: audit/using-audit-explain-tool.html 
+sidebar: sidebar 
+keywords: storagegrid, audit, tool, audit-explain, audit explain, translate audit messages, translate messages, translate audit message, translate message 
+summary: 'Vous pouvez utiliser l"outil d"explication d"audit pour traduire les messages d"audit du journal d"audit dans un format facile à lire.' 
+---
+= Utiliser l'outil d'explication d'audit
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `audit-explain` outil permettant de traduire les messages d'audit du journal d'audit dans un format facile à lire.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous devez disposer d'autorisations d'accès spécifiques.
+* Vous devez avoir le `Passwords.txt` fichier.
+* Vous devez connaître l'adresse IP du nœud d'administration principal.
+
+
+Le `audit-explain` Disponible sur le nœud d'administration principal, cet outil fournit des résumés simplifiés des messages d'audit dans un journal d'audit.
+
+
+IMPORTANT: Le `audit-explain` l'outil est principalement destiné au support technique lors des opérations de dépannage. En cours de traitement `audit-explain` Les requêtes peuvent consommer une très grande quantité d'énergie dans le processeur, ce qui peut affecter les opérations de StorageGRID.
+
+Cet exemple montre une sortie type de l' `audit-explain` outil. Ces quatre messages d'audit SPUT ont été générés lorsque le locataire S3 avec l'ID de compte 92484777680322627870 a UTILISÉ les demandes S3 POUR créer un compartiment nommé « bucket1 » et ajouter trois objets dans ce compartiment.
+
+[listing]
+----
+SPUT S3 PUT bucket bucket1 account:92484777680322627870 usec:124673
+SPUT S3 PUT object bucket1/part1.txt tenant:92484777680322627870  cbid:9DCB157394F99FE5 usec:101485
+SPUT S3 PUT object bucket1/part2.txt tenant:92484777680322627870  cbid:3CFBB07AB3D32CA9 usec:102804
+SPUT S3 PUT object bucket1/part3.txt tenant:92484777680322627870  cbid:5373D73831ECC743 usec:93874
+----
+Le `audit-explain` l'outil peut traiter des journaux d'audit simples ou compressés. Par exemple :
+
+[listing]
+----
+audit-explain audit.log
+----
+[listing]
+----
+audit-explain 2019-08-12.txt.gz
+----
+Le `audit-explain` l'outil peut également traiter plusieurs fichiers en même temps. Par exemple :
+
+[listing]
+----
+audit-explain audit.log 2019-08-12.txt.gz 2019-08-13.txt.gz
+----
+[listing]
+----
+audit-explain /var/local/audit/export/*
+----
+Enfin, le `audit-explain` l'outil peut accepter les entrées d'un tuyau, ce qui vous permet de filtrer et de prétraiter l'entrée à l'aide de l' `grep` commande ou autre moyen. Par exemple :
+
+[listing]
+----
+grep SPUT audit.log | audit-explain
+----
+[listing]
+----
+grep bucket-name audit.log | audit-explain
+----
+Puisque les journaux d'audit peuvent être très volumineux et lents à analyser, vous pouvez gagner du temps en filtrant les pièces que vous voulez regarder et exécuter `audit-explain` sur les pièces, au lieu du fichier entier.
+
+
+NOTE: Le `audit-explain` l'outil n'accepte pas les fichiers compressés comme entrée de canalisation. Pour traiter des fichiers compressés, indiquez leurs noms de fichier comme arguments de ligne de commande ou utilisez le `zcat` outil de décompression des fichiers en premier. Par exemple :
+
+[listing]
+----
+zcat audit.log.gz | audit-explain
+----
+Utilisez le `help (-h)` pour voir les options disponibles. Par exemple :
+
+[listing]
+----
+ $ audit-explain -h
+----
+.Étapes
+. Connectez-vous au nœud d'administration principal :
++
+.. Saisissez la commande suivante : `ssh admin@_primary_Admin_Node_IP_`
+.. Entrez le mot de passe indiqué dans le `Passwords.txt` fichier.
+
+
+. Entrez la commande suivante, où `/var/local/audit/export/audit.log` représente le nom et l'emplacement du ou des fichiers à analyser :
++
+`$ audit-explain /var/local/audit/export/audit.log`
+
++
+Le `audit-explain` l'outil imprime les interprétations lisibles par l'homme de tous les messages du ou des fichiers spécifiés.
+
++
+
+NOTE: Pour réduire la longueur des lignes et faciliter leur lisibilité, les horodatages ne sont pas affichés par défaut. Si vous voulez voir les horodatages, utilisez l'horodatage (`-t`) option.
+
+
+
+xref:sput-s3-put.adoc[SPUT : PUT S3]

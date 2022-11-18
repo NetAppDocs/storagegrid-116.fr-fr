@@ -1,0 +1,45 @@
+---
+permalink: maintain/powering-on-grid-nodes.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, start nodes 
+summary: Suivez cette séquence pour démarrer les nœuds de la grille après un arrêt complet. 
+---
+= Démarrer les nœuds grid
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Suivez cette séquence pour démarrer les nœuds de la grille après un arrêt complet.
+
+.Ce dont vous avez besoin, 8217;ll
+
+CAUTION: Si l'ensemble du grid a été arrêté pendant plus de 15 jours, vous devez contacter le support technique avant de démarrer un nœud de grid. N'essayez pas les procédures de récupération qui reconstruisent les données Cassandra. Cela peut entraîner une perte de données.
+
+Si possible, mettez les nœuds grid sous tension dans l'ordre suivant :
+
+* Mettez d'abord les nœuds d'administration sous tension.
+* Appliquer l'alimentation aux nœuds de passerelle en dernier.
+
+
+
+NOTE: Si un hôte inclut plusieurs nœuds grid, les nœuds sont reconnectés automatiquement lorsque vous mettez l'hôte sous tension.
+
+.Étapes
+. Mettez les hôtes sous tension pour le nœud d'administration principal et tous les nœuds d'administration non primaires.
++
+
+NOTE: Vous ne pourrez pas vous connecter aux nœuds d'administration tant que les nœuds de stockage n'ont pas été redémarrés.
+
+. Mettez les hôtes sous tension pour tous les nœuds d'archivage et les nœuds de stockage.
++
+Vous pouvez mettre ces nœuds sous tension dans n'importe quel ordre.
+
+. Mettez les hôtes sous tension pour tous les nœuds de passerelle.
+. Connectez-vous au Grid Manager.
+. Sélectionnez *NODES* et surveillez l'état des nœuds de la grille. Vérifiez qu'il n'y a pas d'icône d'alerte en regard des noms de nœud.
++
+image::../media/nodes_page_all_nodes_green.png[Nœuds page tous les nœuds vert]
+
+

@@ -1,0 +1,24 @@
+---
+permalink: maintain/restoring-existing-nodes.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, restore node to host 
+summary: 'Pour restaurer un nœud de grille défaillant vers un nouvel hôte Linux, restaurez le fichier de configuration de nœud à l"aide des commandes appropriées.' 
+---
+= Restaurez les nœuds de la grille sur l'hôte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour restaurer un nœud de grille défaillant vers un nouvel hôte Linux, restaurez le fichier de configuration de nœud à l'aide des commandes appropriées.
+
+Lors d'une nouvelle installation, vous créez un fichier de configuration de nœud pour chaque nœud de grille à installer sur un hôte. Lors de la restauration d'un nœud de grille sur un hôte de remplacement, vous restaurez ou remplacez le fichier de configuration de nœud pour les nœuds de grille défaillants.
+
+Si des volumes de stockage en blocs ont été préservés à partir de l'hôte précédent, vous devrez peut-être effectuer des procédures de restauration supplémentaires. Les commandes de cette section vous aident à déterminer les procédures supplémentaires requises.
+
+.Étapes
+* xref:restoring-and-validating-grid-nodes.adoc[Restaurez et validez les nœuds de la grille]
+* xref:starting-storagegrid-host-service.adoc[Démarrez le service d'hôte StorageGRID]
+* xref:recovering-nodes-that-fail-to-start-normally.adoc[Restaurez les nœuds qui ne démarrent pas normalement]
+

@@ -1,0 +1,44 @@
+---
+permalink: tenant/use-s3-console.html 
+sidebar: sidebar 
+keywords: how to use s3 console 
+summary: 'Vous pouvez utiliser la console S3 pour afficher les objets d"un compartiment S3.' 
+---
+= Utilisation de la console Experimental S3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser la console S3 pour afficher les objets d'un compartiment S3.
+
+Vous pouvez également utiliser la console S3 pour :
+
+* Ajouter et supprimer des objets, des versions d'objet et des dossiers
+* Renommez les objets
+* Déplacer et copier des objets entre des compartiments et des dossiers
+* Gérer les balises d'objet
+* Afficher les métadonnées d'objet
+* Télécharger des objets
+
+
+
+NOTE: La console S3 n'a pas été complètement testée et est marquée comme « expérimentale ». Il n'est pas destiné à la gestion en bloc des objets ou à une utilisation dans un environnement de production. Les locataires ne doivent utiliser la console S3 que lors de l'exécution de fonctions sur un petit nombre d'objets, par exemple lors du chargement d'objets pour simuler une nouvelle règle ILM, pour résoudre les problèmes d'ingestion ou via des grilles de validation technique ou non-production.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous êtes connecté au Gestionnaire de locataires à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous disposez de l'autorisation gérer vos propres informations d'identification S3.
+* Vous avez créé un compartiment.
+* Vous connaissez l'ID de clé d'accès de l'utilisateur et la clé d'accès secrète. Si vous le souhaitez, vous avez un `.csv` fichier contenant ces informations. Voir la xref:creating-your-own-s3-access-keys.adoc[instructions pour la création de clés d'accès].
+
+
+.Étapes
+. Sélectionnez *godets*.
+. Sélectionnez image:../media/s3_console_link.png["Lien vers la console S3"]. Vous pouvez également accéder à ce lien à partir de la page des détails du compartiment.
+. Sur la page de connexion de la console Experimental S3, collez l'ID de clé d'accès et la clé secrète dans les champs. Sinon, sélectionnez *Télécharger les touches d'accès* et sélectionnez votre `.csv` fichier.
+. Sélectionnez *connexion*.
+. Gérez les objets selon vos besoins.
+
+
+image::../media/s3_console_example.png[Exemple de console S3]

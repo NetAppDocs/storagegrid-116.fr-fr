@@ -1,0 +1,119 @@
+---
+permalink: sg100-1000/viewing-status-indicators-on-sg100-and-sg1000-appliances.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, status, indicators, lights, leds, light, led, switch , button, power, reset, identify, alarm, ssd, indicator, boot codes, boot, code, start, startup, start up, start-up, progress 
+summary: 'L"appliance comprend des indicateurs qui vous aident à déterminer l"état du contrôleur de l"appliance et des deux disques SSD.' 
+---
+= Afficher les indicateurs d'état sur les appareils SG100 et SG1000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'appliance comprend des indicateurs qui vous aident à déterminer l'état du contrôleur de l'appliance et des deux disques SSD.
+
+
+
+== Voyants et boutons de l'appareil
+
+image::../media/sg6000_cn_front_indicators.gif[Clignotants avant - SG1000]
+
+|===
+|  | Afficher | État 
+
+
+ a| 
+1
+ a| 
+Bouton d'alimentation
+ a| 
+* Bleu : l'appareil est sous tension.
+* Éteint : l'appareil est hors tension.
+
+
+
+
+ a| 
+2
+ a| 
+Bouton de réinitialisation
+ a| 
+Utilisez ce bouton pour effectuer une réinitialisation matérielle du contrôleur.
+
+
+
+ a| 
+3
+ a| 
+Bouton identifier
+ a| 
+Ce bouton peut être configuré pour clignoter, allumé (continu) ou éteint.
+
+* Bleu clignotant : identifie l'appliance dans l'armoire ou le rack.
+* Bleu, fixe : identifie l'appliance dans l'armoire ou le rack.
+* Éteint : l'appareil n'est pas visuellement identifiable dans l'armoire ou le rack.
+
+
+
+
+ a| 
+4
+ a| 
+Voyant d'alarme
+ a| 
+* Orange, fixe : une erreur s'est produite.
++
+*Remarque :* pour afficher les codes de démarrage et d'erreur, vous devez accéder à l'interface BMC.
+
+* OFF : aucune erreur n'est présente.
+
+
+|===
+
+
+== Codes de démarrage généraux
+
+Lors du démarrage ou après une réinitialisation matérielle de l'appareil, les événements suivants se produisent :
+
+. Le contrôleur BMC (Baseboard Management Controller) consigne les codes de la séquence de démarrage, y compris les erreurs qui se produisent.
+. Le bouton d'alimentation s'allume.
+. Si des erreurs se produisent au démarrage, le voyant d'alarme s'allume.
++
+Pour afficher les codes de démarrage et d'erreur, vous devez accéder à l'interface BMC.
+
+
+
+
+
+== Indicateurs SSD
+
+image::../media/ssd_indicators.png[Indicateurs SSD]
+
+|===
+| LED | Afficher | État 
+
+
+ a| 
+1
+ a| 
+État/défaut du lecteur
+ a| 
+* Bleu (continu) : le lecteur est en ligne
+* Orange (clignotant) : échec du lecteur
+* OFF : l'emplacement est vide
+
+
+
+
+ a| 
+2
+ a| 
+Entraînement actif
+ a| 
+Bleu (clignotant) : accès au lecteur
+
+|===
+xref:troubleshooting-hardware-installation-sg100-and-sg1000.adoc[Dépannage de l'installation du matériel (SG100 et SG1000)]
+
+xref:configuring-bmc-interface-sg1000.adoc[Configuration de l'interface BMC (SG100 et SG1000)]

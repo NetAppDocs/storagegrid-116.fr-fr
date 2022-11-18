@@ -1,0 +1,76 @@
+---
+permalink: maintain/linux-exporting-node-from-source-host.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, linux, export node, linux source host 
+summary: 'Arrêtez le nœud de la grille et exportez-le depuis l"hôte Linux source.' 
+---
+= Linux : nœud d'exportation depuis l'hôte source
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Arrêtez le nœud de la grille et exportez-le depuis l'hôte Linux source.
+
+Exécutez la commande suivante sur l'hôte Linux source.
+
+. Obtenez l'état de tous les nœuds en cours d'exécution sur l'hôte source.
++
+[listing]
+----
+sudo storagegrid node status all
+----
++
+`Name Config-State Run-State`
+
++
+`DC1-ADM1 Configured Running`
+
++
+`DC1-ARC1 Configured Running`
+
++
+`DC1-GW1 Configured Running`
+
++
+`DC1-S1 Configured Running`
+
++
+`DC1-S2 Configured Running`
+
++
+`DC1-S3 Configured Running`
+
+. Identifiez le nom du nœud que vous souhaitez migrer et arrêtez-le si son état d'exécution est `Running`.
++
+[listing]
+----
+sudo storagegrid node stop DC1-S3
+----
++
+`Stopping node DC1-S3`
+
++
+`Waiting up to 630 seconds for node shutdown`
+
+. Exportez le nœud depuis l'hôte source.
++
+[listing]
+----
+sudo storagegrid node export DC1-S3
+----
++
+`Finished exporting node DC1-S3 to /dev/mapper/sgws-dc1-s3-var-local.`
+
++
+`Use 'storagegrid node import /dev/mapper/sgws-dc1-s3-var-local' if you`
+
++
+`want to import it again.`
+
+. Prenez note du `import command suggested in the output of the `export` commande.
++
+Vous allez exécuter cette commande sur l'hôte cible à l'étape suivante.
+
+

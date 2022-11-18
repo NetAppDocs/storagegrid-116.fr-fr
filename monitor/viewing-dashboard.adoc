@@ -1,0 +1,125 @@
+---
+permalink: monitor/viewing-dashboard.html 
+sidebar: sidebar 
+keywords: how to view the dashboard 
+summary: 'Lorsque vous vous connectez à Grid Manager pour la première fois, vous pouvez utiliser le tableau de bord pour surveiller en un coup d"œil les activités du système. Le tableau de bord inclut des informations sur l"état du système, les mesures d"utilisation, les tendances et les graphiques opérationnels.' 
+---
+= Afficher le tableau de bord
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque vous vous connectez à Grid Manager pour la première fois, vous pouvez utiliser le tableau de bord pour surveiller en un coup d'œil les activités du système. Le tableau de bord inclut des informations sur l'état du système, les mesures d'utilisation, les tendances et les graphiques opérationnels.
+
+image::../media/grid_manager_dashboard.png[Tableau de bord de Grid Manager]
+
+
+
+== Champ de recherche
+
+Le champ *Search* de la barre d'en-tête vous permet de naviguer rapidement vers une page ou une entrée de barre latérale spécifique dans Grid Manager. Par exemple, vous pouvez entrer *key* pour accéder à la page Key Management Server.
+
+
+
+== Panneau Santé
+
+|===
+| Description | Afficher les détails supplémentaires | En savoir plus >> 
+
+
+ a| 
+Récapitule l'état de santé du système. Une coche verte indique qu'il n'y a pas d'alerte en cours et que tous les nœuds de la grille sont connectés. Toute autre icône indique qu'au moins un nœud est en cours d'alerte ou déconnecté.
+ a| 
+Un ou plusieurs des liens suivants peuvent s'afficher :
+
+* *Détails de la grille* : apparaît si des nœuds sont déconnectés (état de connexion inconnu ou administratif). Cliquez sur le lien ou cliquez sur l'icône bleue ou grise pour déterminer le ou les nœuds concernés.
+* *Alertes actuelles* : s'affiche si des alertes sont actuellement actives. Cliquez sur le lien ou cliquez sur *critique*, *majeur* ou *mineur* pour voir les détails sur la page *ALERTES* *courant*.
+* *Alertes récemment résolues*: Apparaît si les alertes déclenchées la semaine dernière sont maintenant résolues. Cliquez sur le lien pour voir les détails sur la page *ALERTES* *résolues*.
+* *Alarmes héritées* : s'affiche si des alarmes (système hérité) sont actuellement actives. Cliquez sur le lien pour afficher les détails de la page *SUPPORT* *alarmes (Legacy)* *alarmes actuelles*.
+* *Licence* : s'affiche en cas de problème avec la licence logicielle de ce système StorageGRID. Cliquez sur le lien pour voir les détails sur la page *MAINTENANCE* *système* *Licence*.
+
+ a| 
+* xref:monitoring-node-connection-states.adoc[Surveiller les États de connexion du nœud]
+* xref:viewing-current-alerts.adoc[Afficher les alertes en cours]
+* xref:viewing-resolved-alerts.adoc[Afficher les alertes résolues]
+* xref:viewing-legacy-alarms.adoc[Afficher les anciennes alarmes]
+* xref:../admin/index.adoc[Administrer StorageGRID]
+
+
+|===
+
+
+== Panneau stockage disponible
+
+|===
+| Description | Afficher les détails supplémentaires | En savoir plus >> 
+
+
+ a| 
+Affiche la capacité de stockage disponible et utilisée dans toute la grille, sans compter les supports d'archivage.
+
+Le graphique global présente les totaux à l'échelle de la grille. S'il s'agit d'une grille multisite, des graphiques supplémentaires apparaissent pour chaque site de centre de données.
+
+Vous pouvez utiliser ces informations pour comparer le stockage utilisé avec le stockage disponible. Si vous disposez d'une grille multisite, vous pouvez déterminer quel site consomme plus de stockage.
+ a| 
+* Pour afficher la capacité, placez le curseur sur les sections capacité disponible et capacité utilisée du graphique.
+* Pour afficher les tendances de capacité sur une plage de dates, cliquez sur l'icône du graphique image:../media/icon_chart_new_for_11_5.png["Icône de graphique"] pour la grille globale ou pour un site de data center.
+* Pour afficher les détails, sélectionnez *NOEUDS*. Ensuite, affichez l'onglet stockage de la grille entière, d'un site entier ou d'un nœud de stockage unique.
+
+ a| 
+* xref:viewing-storage-tab.adoc[Afficher l'onglet stockage]
+* xref:monitoring-storage-capacity.adoc[Surveiller la capacité de stockage]
+
+
+|===
+
+
+== Panneau gestion du cycle de vie des informations (ILM)
+
+|===
+| Description | Afficher les détails supplémentaires | En savoir plus >> 
+
+
+ a| 
+Affiche les opérations ILM actuelles et les files d'attente ILM de votre système. Vous pouvez utiliser ces informations pour surveiller la charge de travail de votre système.
+
+* *Attente - client* : nombre total d'objets en attente d'évaluation ILM à partir des opérations client (par exemple, ingestion).
+* *Attente - taux d'évaluation* : taux actuel auquel les objets sont évalués par rapport à la politique ILM de la grille.
+* *Période d'acquisition - estimé* : temps estimé pour effectuer une analyse ILM complète de tous les objets. *Note:* Une analyse complète ne garantit pas que ILM a été appliquée à tous les objets.
+
+ a| 
+* Pour afficher les détails, sélectionnez *NOEUDS*. Affichez ensuite l'onglet ILM de la grille complète, un site entier ou un nœud de stockage unique.
+* Pour afficher les règles ILM existantes, sélectionnez *ILM* *règles*.
+* Pour afficher les règles ILM existantes, sélectionnez *ILM* *Policies*.
+
+ a| 
+* xref:viewing-ilm-tab.adoc[Afficher l'onglet ILM]
+* xref:../admin/index.adoc[Administrer StorageGRID].
+
+
+|===
+
+
+== Panneau Protocol Operations
+
+|===
+| Description | Afficher les détails supplémentaires | En savoir plus >> 
+
+
+ a| 
+Affiche le nombre d'opérations spécifiques au protocole (S3 et Swift) effectuées par votre système.
+
+Vous pouvez utiliser ces informations pour surveiller les charges de travail et l'efficacité de votre système. La moyenne des débits de protocole est calculée au cours des deux dernières minutes.
+ a| 
+* Pour afficher les détails, sélectionnez *NOEUDS*. Ensuite, affichez l'onglet objets de la grille entière, d'un site entier ou d'un nœud de stockage unique.
+* Pour afficher les tendances sur une plage de dates, cliquez sur l'icône graphique image:../media/icon_chart_new_for_11_5.png["Icône de graphique"] À droite du débit du protocole S3 ou Swift.
+
+ a| 
+* xref:viewing-objects-tab.adoc[Afficher l'onglet objets]
+* xref:../s3/index.adoc[Utilisation de S3]
+* xref:../swift/index.adoc[Utiliser Swift]
+
+
+|===

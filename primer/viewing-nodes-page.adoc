@@ -1,0 +1,217 @@
+---
+permalink: primer/viewing-nodes-page.html 
+sidebar: sidebar 
+keywords: nodes page, connection state, unknown, administratively down, critical, major, minor, icon 
+summary: 'Lorsque vous avez besoin d"informations plus détaillées sur votre système StorageGRID que celles fournies par le tableau de bord, vous pouvez utiliser la page nœuds pour afficher les mesures de la grille dans sa totalité, sur chaque site de la grille et sur chaque nœud d"un site.' 
+---
+= Afficher la page nœuds
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque vous avez besoin d'informations plus détaillées sur votre système StorageGRID que celles fournies par le tableau de bord, vous pouvez utiliser la page nœuds pour afficher les mesures de la grille dans sa totalité, sur chaque site de la grille et sur chaque nœud d'un site.
+
+image::../media/nodes_table.png[Menu noeuds]
+
+Le tableau nœuds répertorie tous les sites et nœuds de votre système StorageGRID. Des informations récapitulatives s'affichent pour chaque nœud. Si une alerte de nœud est active, une icône s'affiche en regard du nom du nœud. Si le nœud est connecté et ne dispose d'aucune alerte active, aucune icône n'est affichée.
+
+
+
+== Icônes d'état de connexion
+
+* *Non connecté - Inconnu* image:../media/icon_alarm_blue_unknown.png["icône bleue du point d'interrogation"]: Le nœud n'est pas connecté à la grille pour une raison inconnue. Par exemple, la connexion réseau entre les nœuds a été perdue ou l'alimentation est coupée. L'alerte *Impossible de communiquer avec le noeud* peut également être déclenchée. D'autres alertes peuvent également être actives. Cette situation exige une attention immédiate.
++
+
+NOTE: Un nœud peut apparaître comme inconnu lors des opérations d'arrêt géré. Dans ces cas, vous pouvez ignorer l'état Inconnu.
+
+* *Non connecté - Arrêt administratif* image:../media/icon_alarm_gray_administratively_down.png["icône questionmark grise"]: Le nœud n'est pas connecté à la grille pour une raison attendue. Par exemple, le nœud ou les services du nœud ont été normalement arrêtés, le nœud est en cours de redémarrage ou le logiciel est mis à niveau. Une ou plusieurs alertes peuvent également être actives.
+
+
+Si un noeud est déconnecté de la grille, il peut y avoir une alerte sous-jacente, mais seule l'icône « non connecté » s'affiche. Pour afficher les alertes actives d'un nœud, sélectionnez le nœud.
+
+
+
+== Icônes d'alerte
+
+Si une alerte est active pour un nœud, l'une des icônes suivantes s'affiche à côté du nom du nœud :
+
+* *Critique* image:../media/icon_alert_red_critical.png["Icône alerte rouge critique"]: Il existe une condition anormale qui a arrêté les opérations normales d'un nœud ou service StorageGRID. Vous devez immédiatement résoudre le problème sous-jacent. Une interruption du service et une perte de données peuvent se produire si le problème n'est pas résolu.
+* *Majeur* image:../media/icon_alert_orange_major.png["Icône alerte Orange majeur"]: Il existe une condition anormale affectant les opérations en cours ou approchant le seuil d'une alerte critique. Vous devez examiner les alertes majeures et résoudre tous les problèmes sous-jacents pour vérifier que leur condition anormale n'arrête pas le fonctionnement normal d'un nœud ou d'un service StorageGRID.
+* *Mineur* image:../media/icon_alert_yellow_minor.png["Icône alerte jaune mineure"]: Le système fonctionne normalement, mais il existe une condition anormale qui pourrait affecter la capacité du système à fonctionner s'il continue. Vous devez surveiller et résoudre les alertes mineures qui ne sont pas claires par elles-mêmes pour vous assurer qu'elles n'entraînent pas un problème plus grave.
+
+
+
+
+== Détails d'un système, site ou nœud
+
+Pour afficher les informations disponibles, sélectionnez le nom de la grille, du site ou du nœud comme suit :
+
+* Sélectionnez le nom de la grille pour afficher un récapitulatif des agrégats des statistiques de l'ensemble du système StorageGRID. (La capture d'écran montre un système nommé StorageGRID Deployment.)
+* Sélectionnez un site de data Center spécifique pour afficher un résumé global des statistiques pour tous les nœuds de ce site.
+* Sélectionnez un nœud spécifique pour afficher des informations détaillées sur ce nœud.
+
+
+
+
+== Onglets de la page nœuds
+
+Les onglets en haut de la page nœuds sont basés sur ce que vous sélectionnez dans l'arborescence à gauche.
+
+[cols="1a,2a,1a"]
+|===
+| Nom de l'onglet | Description | Inclus pour 
+
+
+ a| 
+Présentation
+ a| 
+* Fournit des informations de base sur chaque nœud.
+* Affiche toutes les alertes actives qui affectent le nœud.
+
+ a| 
+Tous les nœuds
+
+
+
+ a| 
+Sous-jacent
+ a| 
+* Affiche l'utilisation du processeur et de la mémoire pour chaque nœud
+* Pour les nœuds d'appliance, fournit des informations supplémentaires sur le matériel.
+
+ a| 
+Tous les nœuds
+
+
+
+ a| 
+Le réseau
+ a| 
+Affiche un graphique indiquant le trafic réseau reçu et envoyé via les interfaces réseau. La vue d'un seul nœud affiche des informations supplémentaires pour le nœud.
+ a| 
+Tous les nœuds, chaque site et la grille entière
+
+
+
+ a| 
+Stockage
+ a| 
+* Le fournit des détails sur les unités de disque et les volumes de chaque nœud.
+* Pour les nœuds de stockage, chaque site et la grille complète, inclut des graphiques présentant le stockage des données d'objet et le stockage des métadonnées utilisé au fil du temps.
+
+ a| 
+Tous les nœuds, chaque site et la grille entière
+
+
+
+ a| 
+Objets
+ a| 
+* Fournit des informations sur les taux d'ingestion et de récupération S3 et Swift.
+* Pour les nœuds de stockage, fournit le nombre d'objets et des informations sur les requêtes du magasin de métadonnées et la vérification en arrière-plan.
+
+ a| 
+Nœuds de stockage, chaque site et la grille entière
+
+
+
+ a| 
+ILM
+ a| 
+La section fournit des informations sur les opérations de gestion du cycle de vie de l'information (ILM).
+
+* Pour les nœuds de stockage, fournit des informations détaillées sur l'évaluation ILM et la vérification en arrière-plan des objets avec code d'effacement.
+* La grille complète de chaque site est illustrée sous la forme d'un graphique de la file d'attente ILM au fil du temps.
+* Pour l'intégralité de la grille, fournit une estimation du temps nécessaire à l'analyse ILM complète de tous les objets.
+
+ a| 
+Nœuds de stockage, chaque site et la grille entière
+
+
+
+ a| 
+Équilibrage de la charge
+ a| 
+Inclut les graphiques de performance et de diagnostic associés au service Load Balancer.
+
+* Pour chaque site, fournit un résumé global des statistiques pour tous les nœuds de ce site.
+* Pour l'ensemble de la grille, fournit un résumé global des statistiques pour tous les sites.
+
+ a| 
+Nœuds d'administration et nœuds de passerelle, chaque site et l'ensemble de la grille
+
+
+
+ a| 
+Services de plateforme
+ a| 
+Fournit des informations sur les opérations de service de la plateforme S3 sur un site.
+ a| 
+Chaque site
+
+
+
+ a| 
+SANtricity System Manager
+ a| 
+Permet d'accéder à SANtricity System Manager. Depuis SANtricity System Manager, vous pouvez examiner les informations de diagnostic matériel et d'environnement du contrôleur de stockage, ainsi que les problèmes liés aux disques.
+ a| 
+Nœuds d'appliance de stockage
+
+*Remarque* : l'onglet Gestionnaire système SANtricity ne s'affiche pas si le micrologiciel du contrôleur de l'appliance de stockage est antérieur à 8.70 (11.70).
+
+|===
+
+
+== Metrics Prometheus
+
+Le service Prometheus sur les nœuds d'administration recueille les metrics de série chronologique des services sur tous les nœuds.
+
+Les metrics collectées par Prometheus sont utilisés à plusieurs endroits dans Grid Manager :
+
+* *Page noeuds* : les graphiques et graphiques des onglets disponibles sur la page noeuds utilisent l'outil de visualisation Grafana pour afficher les metrics de séries chronologiques recueillies par Prometheus. Grafana affiche les données de séries chronologiques aux formats graphique et graphique, tandis que Prometheus sert de source de données back-end.
++
+image::../media/nodes_page_network_traffic_graph.png[Graphique Prometheus]
+
+* *Alertes* : les alertes sont déclenchées à des niveaux de gravité spécifiques lorsque les conditions de règle d'alerte qui utilisent des metrics Prometheus sont définies comme vraies.
+* *Grid Management API* : vous pouvez utiliser des metrics Prometheus dans des règles d'alerte personnalisées ou avec des outils d'automatisation externes pour surveiller votre système StorageGRID. La liste complète des metrics de Prometheus est disponible via l'API Grid Management. (En haut du Gestionnaire de grille, sélectionnez l'icône d'aide et sélectionnez *Documentation API* *metrics*.) Bien que plus d'un millier de mesures soient disponibles, seul un nombre relativement faible est requis pour surveiller les opérations StorageGRID les plus stratégiques.
++
+
+NOTE: Les indicateurs qui incluent _private_ dans leurs noms sont destinés à un usage interne uniquement et peuvent être modifiés sans préavis entre les versions de StorageGRID.
+
+* La page *SUPPORT* *Outils* *Diagnostics* et la page *SUPPORT* *Outils* *mesures* : ces pages, qui sont principalement destinées à être utilisées par le support technique, fournissent un certain nombre d'outils et de graphiques qui utilisent les valeurs des mesures Prometheus.
++
+
+NOTE: Certaines fonctions et options de menu de la page métriques sont intentionnellement non fonctionnelles et peuvent faire l'objet de modifications.
+
+
+
+
+
+== Attributs des StorageGRID
+
+Attributs valeurs et États du rapport pour la plupart des fonctions du système StorageGRID. Des valeurs d'attribut sont disponibles pour chaque nœud de grille, chaque site et la grille entière.
+
+Les attributs StorageGRID sont utilisés à plusieurs endroits du Gestionnaire de grille :
+
+* *Page noeuds* : la plupart des valeurs affichées sur la page noeuds sont des attributs StorageGRID. (Les metrics de Prometheus sont également affichés sur les pages nœuds.)
+* *Alarmes* : lorsque les attributs atteignent des valeurs de seuil définies, les alarmes StorageGRID (système hérité) sont déclenchées à des niveaux de gravité spécifiques.
+* *Grid Topology Tree* : les valeurs des attributs sont affichées dans l'arborescence de la grille topologie (*SUPPORT* *Tools* *Grid topology*).
+* *Evénements* : les événements système se produisent lorsque certains attributs enregistrent une condition d'erreur ou de panne pour un nœud, y compris des erreurs telles que des erreurs réseau.
+
+
+
+
+=== Valeurs d'attribut
+
+Les attributs sont rapportés sur la base du meilleur effort et sont approximativement corrects. Les mises à jour d'attributs peuvent être perdues dans certains cas, comme la panne d'un service ou la panne et la reconstruction d'un nœud de la grille.
+
+En outre, les retards de propagation peuvent ralentir le reporting des attributs. Les valeurs mises à jour pour la plupart des attributs sont envoyées au système StorageGRID à intervalles fixes. Plusieurs minutes peuvent être nécessaires avant qu'une mise à jour soit visible dans le système et deux attributs qui changent plus ou moins simultanément peuvent être signalés à des moments légèrement différents.
+
+.Informations associées
+* xref:../monitor/index.adoc[Surveiller et résoudre les problèmes]
+* xref:monitoring-and-managing-alerts.adoc[Contrôle et gestion des alertes]
+* xref:using-storagegrid-support-options.adoc[Utilisez les options de prise en charge de StorageGRID]
+

@@ -1,0 +1,76 @@
+---
+permalink: admin/configuring-s3-api-endpoint-domain-names.html 
+sidebar: sidebar 
+keywords: s3 api, endpoint domain names, virtual hosted-style requests 
+summary: Pour prendre en charge les demandes de type hébergement virtuel S3, vous devez utiliser Grid Manager pour configurer la liste des noms de domaine de points de terminaison auxquels les clients S3 se connectent. 
+---
+= Configurez les noms de domaine de terminaux API S3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour prendre en charge les demandes de type hébergement virtuel S3, vous devez utiliser Grid Manager pour configurer la liste des noms de domaine de points de terminaison auxquels les clients S3 se connectent.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous disposez d'autorisations d'accès spécifiques.
+* Vous avez confirmé qu'une mise à niveau de la grille n'est pas en cours.
++
+
+CAUTION: Ne modifiez pas la configuration du nom de domaine lorsqu'une mise à niveau de la grille est en cours.
+
+
+
+Pour permettre aux clients d'utiliser les noms de domaine de terminaux S3, vous devez effectuer toutes les opérations suivantes :
+
+* Utilisez le Gestionnaire de grille pour ajouter les noms de domaine de points de terminaison S3 au système StorageGRID.
+* Vérifiez que le certificat utilisé par le client pour les connexions HTTPS à StorageGRID est signé pour tous les noms de domaine requis par le client.
++
+Par exemple, si le noeud final est `s3.company.com`, Vous devez vous assurer que le certificat utilisé pour les connexions HTTPS inclut le `s3.company.com` Nom de l'alternative (SAN) de l'objet générique du noeud final et du noeud final : `*.s3.company.com`.
+
+* Configurez le serveur DNS utilisé par le client. Inclure les enregistrements DNS pour les adresses IP utilisées par les clients pour établir des connexions et s'assurer que les enregistrements référencent tous les noms de domaine de point final requis, y compris les noms de caractères génériques.
++
+
+NOTE: Les clients peuvent se connecter à StorageGRID à l'aide de l'adresse IP d'un nœud de passerelle, d'un nœud d'administration ou d'un nœud de stockage, ou en se connectant à l'adresse IP virtuelle d'un groupe haute disponibilité. Vous devez comprendre comment les applications client se connectent à la grille pour inclure les adresses IP correctes dans les enregistrements DNS.
+
+
+
+Les clients qui utilisent des connexions HTTPS (recommandées) au grid peuvent utiliser l'un des certificats suivants :
+
+* Les clients qui se connectent à un noeud final d'équilibreur de charge peuvent utiliser un certificat personnalisé pour ce noeud final. Chaque noeud final de l'équilibreur de charge peut être configuré pour reconnaître différents noms de domaine de point final.
+* Les clients qui se connectent à un terminal d'équilibreur de charge, directement à un nœud de stockage ou directement au service CLB obsolète sur un nœud de passerelle peuvent personnaliser le certificat API S3 et Swift global pour inclure tous les noms de domaine de terminal requis.
+
+
+.Étapes
+. Sélectionnez *CONFIGURATION* *réseau* *noms de domaine*.
++
+La page noms de domaine de point final s'affiche.
+
++
+image::../media/configure_endpoint_domain_names.png[Capture d'écran de la boîte de dialogue noms de domaine de point final]
+
+. Entrez la liste des noms de domaine de points de terminaison de l'API S3 dans les champs *Endpoint*. Utilisez le image:../media/icon_plus_sign_black_on_white_old.png["icône signe plus"] pour ajouter des champs supplémentaires.
++
+Si cette liste est vide, la prise en charge des demandes de type hébergement virtuel S3 est désactivée.
+
+. Sélectionnez *Enregistrer*.
+. Assurez-vous que les certificats de serveur utilisés par les clients correspondent aux noms de domaine de noeud final requis.
++
+** Si les clients se connectent à un noeud final de l'équilibreur de charge qui utilise son propre certificat, mettez à jour le certificat associé au noeud final.
+** Si les clients se connectent à un terminal d'équilibreur de charge utilisant le certificat API global S3 et Swift, directement aux nœuds de stockage ou au service CLB sur les nœuds de passerelle, mettez à jour le certificat API S3 et Swift global.
+
+
+. Ajoutez les enregistrements DNS requis pour vous assurer que les demandes de nom de domaine de point final peuvent être résolues.
+
+
+Maintenant, lorsque les clients utilisent le noeud final `bucket.s3.company.com`, Le serveur DNS résout le noeud final correct et le certificat authentifie le noeud final comme prévu.
+
+.Informations associées
+* xref:../s3/index.adoc[Utilisation de S3]
+* xref:viewing-ip-addresses.adoc[Afficher les adresses IP]
+* xref:configure-high-availability-group.adoc[Configurez les groupes haute disponibilité]
+* xref:configuring-custom-server-certificate-for-storage-node-or-clb.adoc[Configurez les certificats API S3 et Swift]
+* xref:configuring-load-balancer-endpoints.adoc[Configurer les terminaux de l'équilibreur de charge]
+

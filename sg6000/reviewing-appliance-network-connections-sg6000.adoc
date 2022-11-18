@@ -1,0 +1,40 @@
+---
+permalink: sg6000/reviewing-appliance-network-connections-sg6000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, network connections, network connection, network, connection, grid, admin, client, bmc, management, SANtricity System Manager, SANtricity 
+summary: 'Avant d"installer l"appliance StorageGRID, vous devez savoir quels réseaux peuvent être connectés à l"appliance.' 
+---
+= Vérifier les connexions réseau de l'appareil (SG6000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'installer l'appliance StorageGRID, vous devez savoir quels réseaux peuvent être connectés à l'appliance.
+
+Lorsque vous déployez une appliance StorageGRID en tant que nœud de stockage dans un système StorageGRID, vous pouvez la connecter aux réseaux suivants :
+
+* *Réseau Grid pour StorageGRID* : le réseau Grid est utilisé pour tout le trafic StorageGRID interne. Il assure la connectivité entre tous les nœuds de la grille, sur tous les sites et sous-réseaux. Le réseau Grid est requis.
+* *Réseau d'administration pour StorageGRID* : le réseau d'administration est un réseau fermé utilisé pour l'administration et la maintenance du système. Le réseau Admin est généralement un réseau privé et n'a pas besoin d'être routable entre les sites. Le réseau d'administration est facultatif.
+* *Réseau client pour StorageGRID :* le réseau client est un réseau ouvert utilisé pour fournir un accès aux applications client, y compris S3 et Swift. Le réseau client fournit un accès au protocole client à la grille, de sorte que le réseau Grid puisse être isolé et sécurisé. Le réseau client est facultatif.
+* *Réseau de gestion pour SANtricity System Manager* (facultatif) : ce réseau permet d'accéder à SANtricity System Manager sur le contrôleur de stockage, ce qui vous permet de contrôler et de gérer les composants matériels du tiroir de contrôleur de stockage. Ce réseau de gestion peut être le même que le réseau d'administration pour StorageGRID, ou il peut s'agir d'un réseau de gestion indépendant.
++
+Si le réseau SANtricity System Manager facultatif n'est pas connecté, il se peut que vous ne puissiez pas utiliser certaines fonctions SANtricity.
+
+* *Réseau de gestion BMC pour le contrôleur SG6000-CN* (en option) : ce réseau permet d'accéder au contrôleur de gestion de la carte de base du SG6000-CN, ce qui vous permet de surveiller et de gérer les composants matériels du contrôleur SG6000-CN. Ce réseau de gestion peut être le même que le réseau d'administration pour StorageGRID, ou il peut s'agir d'un réseau de gestion indépendant.
++
+Si le réseau de gestion BMC facultatif n'est pas connecté, certaines procédures de support et de maintenance seront plus difficiles à réaliser. Vous pouvez ne pas connecter le réseau de gestion BMC, sauf si nécessaire à des fins de support.
+
+
+
+
+NOTE: Pour plus d'informations sur les réseaux StorageGRID, reportez-vous à la section _grille Primer_.
+
+xref:gathering-installation-information-sg6000.adoc[Collecte des informations d'installation (SG6000)]
+
+xref:cabling-appliance-sg6000.adoc[Cable appliance (SG6000)]
+
+xref:port-bond-modes-for-sg6000-cn-controller.adoc[Modes de liaison des ports pour le contrôleur SG6000-CN]
+
+xref:../network/index.adoc[Instructions réseau]

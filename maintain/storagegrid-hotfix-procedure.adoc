@@ -1,0 +1,16 @@
+---
+permalink: maintain/storagegrid-hotfix-procedure.html 
+sidebar: sidebar 
+keywords: apply hotfix, install hotfix 
+summary: Vous devrez peut-être appliquer un correctif à votre système StorageGRID si des problèmes liés au logiciel sont détectés et résolus entre les versions de fonctionnalités. 
+---
+= Procédure de correctif StorageGRID
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devrez peut-être appliquer un correctif à votre système StorageGRID si des problèmes liés au logiciel sont détectés et résolus entre les versions de fonctionnalités.
+
+Les correctifs StorageGRID contiennent des modifications logicielles qui sont disponibles en dehors d'une version de fonctionnalité ou de correctif. Les mêmes modifications seront incluses dans une prochaine version. En outre, chaque version de correctif contient une synthèse de tous les correctifs précédents au sein de la fonction ou de la version de correctif.

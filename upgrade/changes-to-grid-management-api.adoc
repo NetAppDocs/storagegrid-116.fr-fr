@@ -1,0 +1,88 @@
+---
+permalink: upgrade/changes-to-grid-management-api.html 
+sidebar: sidebar 
+keywords: grid management api, api, api version, swagger, rest api 
+summary: 'StorageGRID 11.6 utilise la version 3 de l"API de gestion du grid. La version 3 dégénère la version 2 ; cependant, les versions 1 et 2 sont toujours prises en charge.' 
+---
+= Modifications apportées à l'API de gestion du grid
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+StorageGRID 11.6 utilise la version 3 de l'API de gestion du grid. La version 3 dégénère la version 2 ; cependant, les versions 1 et 2 sont toujours prises en charge.
+
+
+IMPORTANT: Vous pouvez continuer à utiliser les versions 1 et 2 de l'API de gestion avec StorageGRID 11.6. Toutefois, la prise en charge de ces versions de l'API sera supprimée dans une prochaine version de StorageGRID. Après la mise à niveau vers StorageGRID 11.6, les API v1 et v2 peuvent être désactivées à l'aide du système `PUT /grid/config/management` API.
+
+Pour en savoir plus, rendez-vous sur xref:../admin/using-grid-management-api.adoc[Utilisez l'API de gestion du grid].
+
+
+
+== Peut accéder aux documents swagger pour des opérations d'API privées
+
+Vous pouvez maintenant accéder aux documents swagger pour l'API privée à partir de Grid Manager. Pour voir les opérations disponibles, sélectionnez l'icône d'aide de Grid Manager et sélectionnez *Documentation API*. Sélectionnez ensuite *accéder à la documentation API privée* dans la page API de gestion StorageGRID.
+
+Les API privées StorageGRID sont susceptibles d'être modifiées sans préavis. Les terminaux privés StorageGRID ignorent également la version API de la demande.
+
+
+
+== Les API basées sur l'alarme sont obsolètes
+
+La version 11.6 dégénère toutes les API basées sur les alarmes. Les API suivantes sont affectées par cette modification :
+
+* `GET /grid/alarms`: Totalement obsolète
+* `GET /grid/health/topology`: Totalement obsolète
+* `GET /grid/health`: Le `alarm-counts` la section de la réponse est obsolète
+
+
+
+
+== Peut importer des clés d'accès S3
+
+Vous pouvez désormais utiliser l'API de gestion du grid pour importer les clés d'accès S3 pour les utilisateurs locataires. Par exemple, vous pouvez migrer les clés d'accès d'un autre fournisseur S3 vers StorageGRID ou utiliser cette fonctionnalité pour conserver les mêmes identifiants utilisateur entre les grilles.
+
+
+IMPORTANT: Lorsque cette fonctionnalité est activée, tout utilisateur de Grid Manager disposant de l'autorisation Modifier le mot de passe racine du locataire dispose d'un accès complet aux données du locataire. Désactivez cette fonctionnalité immédiatement après utilisation pour protéger les données des locataires.
+
+
+
+== Nouvelles opérations de compte
+
+Trois nouveaux `grid/account` Les opérations d'API ont été ajoutées :
+
+* `POST /grid​/account-enable-s3-key-import`: Cette demande active la fonction Import S3 Credentials. Vous devez disposer de l'autorisation d'accès racine pour activer cette fonction.
+* `POST /grid​/accounts​/{id}​/users​/{user_id}​/s3-access-keys`: Cette demande importe les identifiants S3 pour un utilisateur donné dans un compte tenant. Vous devez disposer de l'autorisation accès racine ou Modifier le mot de passe racine du locataire, et vous devez connaître l'ID utilisateur et l'ID du compte locataire.
+* `POST /grid​/account-disable-s3-key-import`: Cette demande désactive la fonction Import S3 Credentials. Vous devez disposer de l'autorisation d'accès racine pour désactiver cette fonction.
+
+
+
+
+== Méthode DE CORRECTIF obsolète
+
+La méthode DU CORRECTIF est maintenant obsolète et sera supprimée dans une version ultérieure. Si nécessaire, effectuez une opération PUT pour remplacer une ressource au lieu d'utiliser une opération PATCH pour modifier la ressource.
+
+
+
+== Ajout à la grille/journaux/collecte de terminal
+
+Quatre valeurs booléennes ont été ajoutées au `grid/logs/collect` point final :
+
+* `applicationLogs`: Journaux spécifiques à l'application que le support technique utilise le plus fréquemment pour le dépannage. Les journaux collectés sont un sous-ensemble des journaux d'application disponibles. La valeur par défaut est `true`.
+* `auditLogs`: Journaux contenant les messages d'audit générés pendant le fonctionnement normal du système. La valeur par défaut est `true`.
+* `networkTrace`: Journaux utilisés pour le débogage réseau. La valeur par défaut est `false`.
+* `prometheusDatabase`: Indicateurs de séries chronologiques des services sur tous les nœuds. La valeur par défaut est `false`.
+
+
+
+
+== Nouveau terminal ​node-details /grid​/Service-id
+
+La nouvelle `​/grid​/service-ids` Endpoint fournit un mappage des UUID de nœud avec les noms de nœud, les ID de service et les types de service associés.
+
+
+
+== Peut récupérer les mots de passe de la console du nœud de la grille
+
+Vous pouvez maintenant utiliser `POST ​/grid​/node-console-passwords` pour récupérer la liste des nœuds de la grille et leurs mots de passe de console associés.

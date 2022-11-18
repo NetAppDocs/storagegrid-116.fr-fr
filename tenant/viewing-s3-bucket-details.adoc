@@ -1,0 +1,55 @@
+---
+permalink: tenant/viewing-s3-bucket-details.html 
+sidebar: sidebar 
+keywords: how to view s3 bucket details 
+summary: Vous pouvez afficher la liste des compartiments et des paramètres de compartiment dans votre compte de locataire. 
+---
+= Affichez les détails du compartiment S3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez afficher la liste des compartiments et des paramètres de compartiment dans votre compte de locataire.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous devez être connecté au Gestionnaire de locataires à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+
+
+.Étapes
+. Sélectionnez *STOCKAGE (S3)* *seaux*.
++
+La page rubriques s'affiche et répertorie toutes les rubriques du compte locataire.
+
++
+image::../media/buckets_table.png[Tableau des compartiments]
+
+. Passer en revue les informations relatives à chaque godet.
++
+Si nécessaire, vous pouvez trier les informations par colonne, ou vous pouvez avancer et revenir à la liste.
+
++
+** Nom : nom unique du compartiment, qui ne peut pas être modifié.
+** Verrouillage de l'objet S3 : indique si le verrouillage de l'objet S3 est activé pour ce compartiment.
++
+Cette colonne n'est pas affichée si le paramètre de verrouillage d'objet S3 global est désactivé. Cette colonne affiche également des informations pour tous les compartiments conformes existants.
+
+** Région : région du godet, qui ne peut pas être modifiée.
+** Nombre d'objets : nombre d'objets dans ce compartiment.
+** Espace utilisé : taille logique de tous les objets de ce compartiment. La taille logique n'inclut pas l'espace réel requis pour les copies répliquées ou avec code d'effacement, ni pour les métadonnées d'objet.
+** Date de création : date et heure de création du compartiment.
+
+
++
+
+IMPORTANT: Les valeurs nombre d'objets et espace utilisé affichées sont des estimations. Ces estimations sont affectées par le moment de l'ingestion, la connectivité réseau et l'état des nœuds. Si la gestion des versions des compartiments est activée, les versions des objets supprimés sont incluses dans le nombre d'objets.
+
+. Pour afficher et gérer les paramètres d'un compartiment, sélectionnez le nom du compartiment.
++
+La page des détails du compartiment vous permet d'afficher et de modifier les paramètres des options du compartiment, de l'accès au compartiment, et xref:what-platform-services-are.adoc[services de plateforme].
+
++
+image::../media/bucket_details_page.png[Page des détails du compartiment]
+
+

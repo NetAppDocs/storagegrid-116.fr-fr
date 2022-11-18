@@ -1,0 +1,33 @@
+---
+permalink: expand/adding-grid-nodes-to-add-capabilities.html 
+sidebar: sidebar 
+keywords: grid nodes, expand, expansion, site, add 
+summary: Vous pouvez ajouter de la redondance ou des fonctionnalités supplémentaires à un système StorageGRID en ajoutant de nouveaux nœuds grid à des sites existants. 
+---
+= Ajoutez des nœuds grid pour ajouter des fonctionnalités à votre système
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez ajouter de la redondance ou des fonctionnalités supplémentaires à un système StorageGRID en ajoutant de nouveaux nœuds grid à des sites existants.
+
+Par exemple, vous pouvez choisir d'ajouter des nœuds de passerelle supplémentaires pour prendre en charge la création de groupes haute disponibilité de nœuds de passerelle. Vous pouvez également ajouter un nœud d'administration sur un site distant pour permettre la surveillance à l'aide d'un nœud local.
+
+Vous pouvez ajouter un ou plusieurs des types de nœuds suivants à un ou plusieurs sites existants au cours d'une seule opération d'extension :
+
+* Nœuds d'administration non primaires
+* Nœuds de stockage
+* Nœuds de passerelle
+* Nœuds d'archivage
+
+
+Lorsque vous préparez l'ajout de nœuds grid, tenez compte des limites suivantes :
+
+* Le nœud d'administration principal est déployé lors de l'installation initiale. Vous ne pouvez pas ajouter un nœud d'administration principal pendant une extension.
+* Vous pouvez ajouter des nœuds de stockage et d'autres types de nœuds dans la même extension.
+* Lorsque vous ajoutez des nœuds de stockage, vous devez planifier soigneusement le nombre et l'emplacement des nouveaux nœuds. Voir xref:../expand/guidelines-for-adding-object-capacity.adoc[Instructions d'ajout de capacité d'objet].
+* Si vous ajoutez des nœuds d'archivage, notez que chaque nœud d'archivage prend uniquement en charge la bande via le middleware Tivoli Storage Manager (TSM).
+* Si l'option *Nouveau réseau client de nœud par défaut* est définie sur *non fiable* sur la page réseaux clients non approuvés, les applications client qui se connectent aux nœuds d'extension à l'aide du réseau client doivent se connecter à l'aide d'un port de point de terminaison d'équilibreur de charge (*CONFIGURATION* *réseau* *réseaux client non fiables*). Reportez-vous aux instructions pour xref:../admin/index.adoc[Administration d'StorageGRID] pour modifier le paramètre du nouveau nœud et pour configurer les noeuds finaux de l'équilibreur de charge.
+

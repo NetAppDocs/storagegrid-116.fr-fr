@@ -1,0 +1,40 @@
+---
+permalink: sg6000/configuring-snmp-settings-for-sg6000-cn-controller.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, SNMP, configure, setup, set up, sg6000-cn 
+summary: 'Si vous connaissez bien la configuration de SNMP pour le matériel, vous pouvez utiliser l"interface BMC pour configurer les paramètres SNMP pour le contrôleur SG6000-CN. Vous pouvez fournir des chaînes de communauté sécurisées, activer le Trap SNMP et spécifier jusqu"à cinq destinations SNMP.' 
+---
+= Configurez les paramètres SNMP pour le contrôleur SG6000-CN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous connaissez bien la configuration de SNMP pour le matériel, vous pouvez utiliser l'interface BMC pour configurer les paramètres SNMP pour le contrôleur SG6000-CN. Vous pouvez fournir des chaînes de communauté sécurisées, activer le Trap SNMP et spécifier jusqu'à cinq destinations SNMP.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous savez comment accéder au tableau de bord BMC.
+* Vous avez de l'expérience dans la configuration des paramètres SNMP pour les équipements SNMPv1-v2c.
+
+
+
+NOTE: Les paramètres BMC définis par cette procédure ne peuvent pas être conservés si le SG6000-CN échoue et doit être remplacé. Assurez-vous d'avoir un enregistrement de tous les paramètres que vous avez appliqués afin de pouvoir les réappliquer facilement après un remplacement de matériel si nécessaire.
+
+.Étapes
+. Dans le tableau de bord BMC, sélectionnez *Paramètres* *Paramètres SNMP*.
+. Sur la page Paramètres SNMP, sélectionnez *Activer SNMP V1/V2*, puis fournissez une chaîne de communauté en lecture seule et une chaîne de communauté en lecture-écriture.
++
+La chaîne de communauté en lecture seule est comme un ID utilisateur ou un mot de passe. Vous devez modifier cette valeur pour empêcher les intrus d'obtenir des informations sur la configuration de votre réseau. La chaîne de communauté lecture-écriture protège le périphérique contre les modifications non autorisées.
+
+. Vous pouvez également sélectionner *Activer le recouvrement* et saisir les informations requises.
++
+
+IMPORTANT: Entrez l'adresse IP de destination pour chaque interruption SNMP utilisant une adresse IP. Les noms de domaine complets ne sont pas pris en charge.
+
++
+Activez les interruptions si vous souhaitez que le contrôleur SG6000-CN envoie des notifications immédiates à une console SNMP lorsqu'il est dans un état inhabituel. Des interruptions peuvent indiquer que le matériel est défaillant au niveau de divers composants ou que les seuils de température sont dépassés.
+
+. Vous pouvez également cliquer sur *Envoyer piège de test* pour tester vos paramètres.
+. Si les paramètres sont corrects, cliquez sur *Enregistrer*.
+

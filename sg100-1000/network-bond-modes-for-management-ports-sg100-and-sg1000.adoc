@@ -1,0 +1,47 @@
+---
+permalink: sg100-1000/network-bond-modes-for-management-ports-sg100-and-sg1000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, Network bond, Network bonding, Network bond mode, Network-bond mode, independent, active-backup, active backup, management, management port, management ports 
+summary: 'Pour les deux ports de gestion 1 GbE de l"appliance de services, vous pouvez choisir le mode de liaison réseau indépendante ou le mode de liaison réseau Active-Backup pour vous connecter au réseau d"administration facultatif.' 
+---
+= Modes de liaison réseau pour les ports de gestion
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour les deux ports de gestion 1 GbE de l'appliance de services, vous pouvez choisir le mode de liaison réseau indépendante ou le mode de liaison réseau Active-Backup pour vous connecter au réseau d'administration facultatif.
+
+*Ports de gestion réseau SG100*
+
+image::../media/sg100_bonded_management_ports.png[ports de gestion liés sg100]
+
+*Ports de gestion réseau SG1000*
+
+image::../media/sg1000_bonded_management_ports.png[Ports de gestion réseau SG1000]
+
+En mode indépendant, seul le port de gestion de gauche est connecté au réseau Admin. Ce mode ne fournit pas de chemin redondant. Le port de gestion de droite n'est pas connecté et disponible pour les connexions locales temporaires (utilise l'adresse IP 169.254.0.1)
+
+En mode sauvegarde active, les deux ports de gestion sont connectés au réseau Admin. Un seul port est actif à la fois. Si le port actif tombe en panne, son port de sauvegarde fournit automatiquement une connexion de basculement. Le fait de lier ces deux ports physiques à un port de gestion logique fournit un chemin redondant au réseau Admin.
+
+
+NOTE: Si vous devez établir une connexion locale temporaire avec l'appliance de services lorsque les ports de gestion 1 GbE sont configurés pour le mode sauvegarde active, retirez les câbles des deux ports de gestion, branchez votre câble temporaire sur le port de gestion de droite et accédez à l'appliance à l'aide de l'adresse IP 169.254.0.1.
+
+|===
+| Légende | Mode de liaison réseau 
+
+
+ a| 
+A
+ a| 
+Mode de sauvegarde active/active. Les deux ports de gestion sont liés à un port de gestion logique connecté au réseau d'administration.
+
+
+
+ a| 
+JE
+ a| 
+Mode indépendant. Le port de gauche est connecté au réseau Admin. Le port de droite est disponible pour les connexions locales temporaires (adresse IP 169.254.0.1).
+
+|===

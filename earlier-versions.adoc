@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: earlier-versions.html 
+keywords: storagegrid, earlier version, documentation, doc site, 11.5, 11.4, 11.3, 11.2 
+summary: Ici, vous trouverez de la documentation sur les versions précédentes du logiciel NetApp StorageGRID. 
+---
+= Versions antérieures de la documentation NetApp StorageGRID
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Pour consulter la documentation des versions antérieures du logiciel NetApp StorageGRID, cliquez ici :
+
+* https://docs.netapp.com/sgws-115/index.jsp["Centre de documentation StorageGRID 11.5"^]
+* https://docs.netapp.com/sgws-114/index.jsp["Centre de documentation StorageGRID 11.4"^]
+* https://docs.netapp.com/sgws-113/index.jsp["Centre de documentation StorageGRID 11.3"^]
+* https://docs.netapp.com/sgws-112/index.jsp["Centre de documentation StorageGRID 11.2"^]
+

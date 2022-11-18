@@ -1,0 +1,62 @@
+---
+permalink: sg5700/reviewing-hardware-status-in-santricity-system-manager.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, SANtricity System Manager, SANtricity, System Manager, hardware, status, diagnostic, environment drives, drive, temperature 
+summary: 'Vous pouvez utiliser SANtricity System Manager pour surveiller et gérer chaque composant matériel du tiroir de contrôleur de stockage, et pour examiner les informations de diagnostic et d"environnement sur le matériel, comme la température des composants et les problèmes liés aux disques.' 
+---
+= Révision de l'état du matériel dans SANtricity System Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser SANtricity System Manager pour surveiller et gérer chaque composant matériel du tiroir de contrôleur de stockage, et pour examiner les informations de diagnostic et d'environnement sur le matériel, comme la température des composants et les problèmes liés aux disques.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous utilisez un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Pour accéder à SANtricity System Manager via Grid Manager, vous devez disposer de l'autorisation Administrateur de l'appliance de stockage ou de l'autorisation accès racine.
+* Pour accéder à SANtricity System Manager à l'aide du programme d'installation de l'appliance StorageGRID, vous devez disposer du nom d'utilisateur et du mot de passe de l'administrateur SANtricity System Manager.
+* Pour accéder directement à SANtricity System Manager via un navigateur Web, vous devez disposer du nom d'utilisateur et du mot de passe de l'administrateur SANtricity System Manager.
+
+
+
+NOTE: Vous devez disposer du micrologiciel SANtricity 8.70 (11.70) ou supérieur pour accéder au Gestionnaire système SANtricity à l'aide du Gestionnaire de grille ou du programme d'installation de l'appliance StorageGRID.
+
+
+IMPORTANT: L'accès à SANtricity System Manager à partir de Grid Manager ou du programme d'installation de l'appliance n'est généralement destiné qu'au contrôle de votre matériel et à la configuration des baies E-Series AutoSupport. De nombreuses fonctionnalités et opérations dans SANtricity System Manager, telles que la mise à niveau du firmware, ne s'appliquent pas à la surveillance de votre appliance StorageGRID. Pour éviter tout problème, suivez toujours les instructions d'installation et de maintenance du matériel de votre appareil.
+
+.Étapes
+. Accédez à SANtricity System Manager.
++
+xref:setting-up-and-accessing-santricity-system-manager.adoc[Configuration et accès à SANtricity System Manager]
+
+. Entrez le nom d'utilisateur et le mot de passe de l'administrateur si nécessaire.
+. Cliquez sur *Annuler* pour fermer l'assistant de configuration et afficher la page d'accueil de SANtricity System Manager.
++
+La page d'accueil de SANtricity System Manager s'affiche. Dans SANtricity System Manager, le tiroir contrôleur est appelé baie de stockage.
+
++
+image::../media/sam_home_page.gif[Capture d'écran de la page d'accueil de SANtricity System Manager]
+
+. Consultez les informations affichées pour le matériel de l'appareil et vérifiez que tous les composants matériels ont un état optimal.
++
+.. Cliquez sur l'onglet *matériel*.
+.. Cliquez sur *Afficher le verso de la tablette*.
++
+image::../media/sam_hardware_controllers_a_and_b.gif[Onglet Hardware Status dans SANtricity System Manager]
+
++
+À l'arrière, il est possible de voir les deux contrôleurs de stockage, la batterie de chaque contrôleur de stockage, les deux blocs d'alimentation, les deux blocs de ventilation et les tiroirs d'extension (le cas échéant). Vous pouvez également afficher la température des composants.
+
+.. Pour afficher les paramètres de chaque contrôleur de stockage, sélectionnez le contrôleur et sélectionnez *Afficher les paramètres* dans le menu contextuel.
+.. Pour afficher les paramètres des autres composants à l'arrière du tiroir, sélectionnez le composant à afficher.
+.. Cliquez sur *Afficher le recto de la tablette*, puis sélectionnez le composant que vous souhaitez afficher.
++
+Depuis l'avant du tiroir, vous pouvez afficher les disques et les tiroirs disques du tiroir contrôleur de stockage ou des tiroirs d'extension (le cas échéant).
+
+
+
+
+
+Si l'état d'un composant nécessite une intervention, suivez les étapes du gourou de la restauration pour résoudre le problème ou contacter le support technique.

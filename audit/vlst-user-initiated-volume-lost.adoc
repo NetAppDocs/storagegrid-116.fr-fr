@@ -1,0 +1,63 @@
+---
+permalink: audit/vlst-user-initiated-volume-lost.html 
+sidebar: sidebar 
+keywords: storagegrid, audit, message, VLST, User Initiated Volume Lost 
+summary: Ce message est émis chaque fois que la commande /proc/CMSI/Volume_Lost est exécutée. 
+---
+= VLST : perte du volume généré par l'utilisateur
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ce message est émis chaque fois que le `/proc/CMSI/Volume_Lost` la commande est exécutée.
+
+|===
+| Code | Champ | Description 
+
+
+ a| 
+VOL
+ a| 
+Identificateur de volume inférieur
+ a| 
+L'extrémité inférieure de la plage de volumes affectés ou un seul volume.
+
+
+
+ a| 
+LU
+ a| 
+Identificateur de volume supérieur
+ a| 
+L'extrémité supérieure de la plage de volume affectée. Égal à VOLL si un seul volume.
+
+
+
+ a| 
+NON
+ a| 
+ID de nœud source
+ a| 
+ID de nœud sur lequel les emplacements ont été perdus.
+
+
+
+ a| 
+LTYP
+ a| 
+Type d'emplacement
+ a| 
+'CLDI' (en ligne) ou 'CLNL' (Nearline). Si ce n'est pas le cas, la valeur par défaut est « CLDI ».
+
+
+
+ a| 
+RSLT
+ a| 
+Résultat
+ a| 
+Toujours 'AUCUN'. RSLT est un champ de message obligatoire, mais n'est pas pertinent pour ce message. 'AUCUN' est utilisé plutôt que 'UCS' pour que ce message ne soit pas filtré.
+
+|===

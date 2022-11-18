@@ -1,0 +1,65 @@
+---
+permalink: sg6000/monitoring-node-encryption-in-maintenance-mode.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, kms, key management server, monitor, monitoring, status, encryption 
+summary: 'Si vous avez activé le chiffrement de nœud pour l"appliance lors de l"installation, vous pouvez surveiller l"état du chiffrement de nœud de chaque nœud d"appliance, y compris les informations relatives à l"état de chiffrement de nœud et au serveur de gestion des clés \(KMS\).' 
+---
+= Contrôle du chiffrement du nœud en mode maintenance (SG6000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous avez activé le chiffrement des nœuds pour l'appliance lors de l'installation, vous pouvez surveiller l'état du chiffrement des nœuds de chaque nœud d'appliance, notamment les informations détaillées sur l'état de chiffrement des nœuds et le serveur de gestion des clés (KMS).
+
+.Ce dont vous avez besoin, 8217;ll
+* Le chiffrement des nœuds doit avoir été activé pour l'appliance pendant l'installation. Vous ne pouvez pas activer le chiffrement de nœud après l'installation de l'appliance.
+* Vous avez xref:placing-appliance-into-maintenance-mode.adoc[placez l'appareil en mode maintenance].
+
+
+.Étapes
+. Dans le programme d'installation de l'appliance StorageGRID, sélectionnez *configurer le matériel* *cryptage de nœud*.
++
+image::../media/fde_monitor_in_maint_mode.png[CONFIGURATION DE l'effacement DES KMS]
+
++
+La page Node Encryption comprend les trois sections suivantes :
+
++
+** L'état du chiffrement indique si le chiffrement de nœud est activé ou désactivé pour l'appliance.
+** Détails du serveur de gestion des clés affiche des informations sur le KMS utilisé pour crypter l'appliance. Vous pouvez développer les sections de certificat du serveur et du client pour afficher les détails et l'état du certificat.
++
+*** Pour résoudre les problèmes avec les certificats eux-mêmes, tels que le renouvellement des certificats expirés, consultez les informations sur KMS dans les instructions d'administration de StorageGRID.
+*** En cas de problèmes inattendus lors de la connexion aux hôtes KMS, vérifiez que les serveurs DNS (Domain Name System) sont corrects et que la mise en réseau de l'appliance est correctement configurée.
++
+xref:checking-dns-server-configuration.adoc[Vérifiez la configuration du serveur DNS]
+
+*** Si vous ne parvenez pas à résoudre les problèmes liés à votre certificat, contactez le support technique.
+
+
+** Clear KMS Key désactive le chiffrement des nœuds pour l'appliance, supprime l'association entre l'appliance et le serveur de gestion des clés qui a été configuré pour le site StorageGRID et supprime toutes les données de l'appliance. Vous devez xref:clearing-key-management-server-configuration.adoc[Effacez la clé KMS] Avant de pouvoir installer l'appliance sur un autre système StorageGRID.
++
+
+IMPORTANT: L'effacement de la configuration KMS supprime les données de l'appliance, ce qui les rend définitivement inaccessibles. Ces données ne peuvent pas être récupérées.
+
+
+
+. Une fois que vous avez terminé de vérifier l'état du chiffrement de nœud, redémarrez le nœud. Dans le programme d'installation de l'appliance StorageGRID, sélectionnez *Advanced* *Reboot Controller*, puis sélectionnez l'une des options suivantes :
++
+** Sélectionnez *Reboot dans StorageGRID* pour redémarrer le contrôleur avec le noeud qui rejoint la grille. Sélectionnez cette option si vous avez terminé de travailler en mode maintenance et que vous êtes prêt à rétablir le fonctionnement normal du nœud.
+** Sélectionnez *redémarrer en mode maintenance* pour redémarrer le contrôleur avec le nœud restant en mode de maintenance. (Cette option n'est disponible que lorsque le contrôleur est en mode de maintenance.) Sélectionnez cette option si des opérations de maintenance supplémentaires doivent être effectuées sur le nœud avant de rejoindre la grille.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Redémarrez le contrôleur en mode de maintenance]
+
++
+L'appliance peut redémarrer et rejoindre la grille en 20 minutes. Pour confirmer que le redémarrage est terminé et que le nœud a rejoint la grille, retournez à la grille Manager. La page *NODES* doit afficher un état normal (aucune icône) pour le nœud de l'appliance, indiquant qu'aucune alerte n'est active et que le nœud est connecté à la grille.
+
++
+image::../media/nodes_menu.png[Le nœud d'appliance a rejoint la grille]
+
+
+
+
+
+xref:../admin/index.adoc[Administrer StorageGRID]

@@ -1,0 +1,253 @@
+---
+permalink: monitor/comparing-alerts-and-alarms.html 
+sidebar: sidebar 
+keywords: how to compare alerts and alarms 
+summary: 'Il existe un certain nombre de similitudes entre le système d"alerte et le système d"alarme existant, mais le système d"alerte offre des avantages significatifs et est plus facile à utiliser.' 
+---
+= Comparez les alertes et les alarmes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il existe un certain nombre de similitudes entre le système d'alerte et le système d'alarme existant, mais le système d'alerte offre des avantages significatifs et est plus facile à utiliser.
+
+Reportez-vous au tableau suivant pour savoir comment effectuer des opérations similaires.
+
+[cols="1a,1a,1a"]
+|===
+|  | Alertes | Alarmes (système hérité) 
+
+
+ a| 
+Comment puis-je voir quelles alertes ou alarmes sont actives ?
+ a| 
+* Sélectionnez le lien *alertes actuelles* dans le tableau de bord.
+* Sélectionnez l'alerte sur la page *NODES* *Overview*.
+* Sélectionnez *ALERTES* *courant*.
+
+
+xref:viewing-current-alerts.adoc[Afficher les alertes en cours]
+ a| 
+Sélectionnez *SUPPORT* *alarmes (hérité)* *alarmes actuelles*.
+
+xref:managing-alarms.adoc[Gestion des alarmes (système hérité)]
+
+
+
+ a| 
+Quelle est la cause du déclenchement d'une alerte ou d'une alarme ?
+ a| 
+Les alertes sont déclenchées lorsqu'une expression Prometheus dans une règle d'alerte est évaluée comme TRUE pour une condition de déclenchement et une durée spécifiques.
+
+xref:view-alert-rules.adoc[Afficher les règles d'alerte]
+ a| 
+Les alarmes sont déclenchées lorsqu'un attribut StorageGRID atteint une valeur de seuil.
+
+xref:managing-alarms.adoc[Gestion des alarmes (système hérité)]
+
+
+
+ a| 
+Si une alerte ou une alarme est déclenchée, comment résoudre le problème sous-jacent ?
+ a| 
+Les actions recommandées pour une alerte sont incluses dans les notifications par e-mail et sont disponibles dans les pages alertes du Gestionnaire de grille.
+
+Si nécessaire, des informations supplémentaires sont fournies dans la documentation StorageGRID.
+
+xref:alerts-reference.adoc[Référence des alertes]
+ a| 
+Pour en savoir plus sur une alarme, sélectionnez le nom de l'attribut ou recherchez un code d'alarme dans la documentation StorageGRID.
+
+xref:alarms-reference.adoc[Référence des alarmes (système hérité)]
+
+
+
+ a| 
+Où puis-je voir une liste d'alertes ou d'alarmes qui ont été résolues ?
+ a| 
+Sélectionnez *ALERTES* *résolues*.
+
+xref:viewing-resolved-alerts.adoc[Afficher les alertes résolues]
+ a| 
+Sélectionnez *SUPPORT* *alarmes (hérité)* *alarmes historiques*.
+
+xref:managing-alarms.adoc[Gestion des alarmes (système hérité)]
+
+
+
+ a| 
+Où puis-je gérer les paramètres ?
+ a| 
+Sélectionnez *ALERTES* *règles*.
+
+xref:managing-alerts.adoc[Gérer les alertes]
+ a| 
+Sélectionnez *SUPPORT*. Utilisez ensuite les options de la section *alarmes (hérité)* du menu.
+
+xref:managing-alarms.adoc[Gestion des alarmes (système hérité)]
+
+
+
+ a| 
+Quelles autorisations de groupe d'utilisateurs ai-je besoin ?
+ a| 
+* Toute personne qui peut se connecter au Grid Manager peut afficher les alertes actuelles et résolues.
+* Vous devez disposer de l'autorisation gérer les alertes pour gérer les silences, les notifications d'alerte et les règles d'alerte.
+
+
+xref:../admin/index.adoc[Administrer StorageGRID]
+ a| 
+* Toute personne qui peut se connecter à Grid Manager peut afficher les alarmes héritées.
+* Vous devez disposer de l'autorisation accuser réception d'alarmes pour accuser réception d'alarmes.
+* Vous devez disposer d'autorisations Grid Topology page Configuration et d'autres autorisations Grid Configuration pour gérer les alarmes globales et les notifications par e-mail.
+
+
+xref:../admin/index.adoc[Administrer StorageGRID]
+
+
+
+ a| 
+Comment puis-je gérer les notifications par e-mail ?
+ a| 
+Sélectionnez *ALERTES* *Configuration de la messagerie*.
+
+*Remarque :* puisque les alarmes et les alertes sont des systèmes indépendants, la configuration des e-mails utilisée pour les notifications d'alarme et de AutoSupport n'est pas utilisée pour les notifications d'alerte. Cependant, vous pouvez utiliser le même serveur de messagerie pour toutes les notifications.
+
+xref:email-alert-notifications.adoc[Configurez les notifications par e-mail pour les alertes]
+ a| 
+Sélectionnez *SUPPORT* *alarmes (hérité)* *Configuration des e-mails existants*.
+
+xref:managing-alarms.adoc[Gestion des alarmes (système hérité)]
+
+
+
+ a| 
+Comment gérer les notifications SNMP ?
+ a| 
+Sélectionnez *CONFIGURATION* *surveillance* *agent SNMP*.
+
+xref:using-snmp-monitoring.adoc[Utiliser la surveillance SNMP]
+ a| 
+Sélectionnez *CONFIGURATION* *surveillance* *agent SNMP*.
+
+xref:using-snmp-monitoring.adoc[Utiliser la surveillance SNMP]
+
+*Remarque* : les notifications SNMP ne sont pas envoyées pour chaque gravité d'alarme ou d'alarme.
+
+xref:alarms-that-generate-snmp-notifications.adoc[Alarmes générant des notifications SNMP (système hérité)]
+
+
+
+ a| 
+Comment puis-je contrôler qui reçoit les notifications ?
+ a| 
+. Sélectionnez *ALERTES* *Configuration de la messagerie*.
+. Dans la section *destinataires*, entrez une adresse e-mail pour chaque liste d'e-mails ou personne qui doit recevoir un e-mail lorsqu'une alerte se produit.
+
+
+xref:email-alert-notifications.adoc[Configurez les notifications par e-mail pour les alertes]
+ a| 
+. Sélectionnez *SUPPORT* *alarmes (hérité)* *Configuration des e-mails existants*.
+. Création d'une liste de diffusion.
+. Sélectionnez *Notifications*.
+. Sélectionnez la liste de diffusion.
+
+
+xref:managing-alarms.adoc[Gestion des alarmes (système hérité)]
+
+
+
+ a| 
+Quels nœuds d'administration envoient des notifications ?
+ a| 
+Un seul nœud d'administration (l'« expéditeur préféré »).
+
+xref:../admin/index.adoc[Administrer StorageGRID]
+ a| 
+Un seul nœud d'administration (l'« expéditeur préféré »).
+
+xref:../admin/index.adoc[Administrer StorageGRID]
+
+
+
+ a| 
+Comment supprimer certaines notifications ?
+ a| 
+. Sélectionnez *ALERTES* *silences*.
+. Sélectionnez la règle d'alerte que vous souhaitez désactiver.
+. Spécifiez une durée pour le silence.
+. Sélectionnez la gravité de l'alerte que vous souhaitez désactiver.
+. Sélectionnez cette option pour appliquer le silence à la grille entière, à un seul site ou à un seul nœud.
+
+
+*Remarque* : si vous avez activé l'agent SNMP, les silences suppriment également les interruptions SNMP et informe.
+
+xref:silencing-alert-notifications.adoc[Notifications d'alerte de silence]
+ a| 
+. Sélectionnez *SUPPORT* *alarmes (hérité)* *Configuration des e-mails existants*.
+. Sélectionnez *Notifications*.
+. Sélectionnez une liste de diffusion et sélectionnez *Supprimer*.
+
+
+xref:managing-alarms.adoc[Gestion des alarmes (système hérité)]
+
+
+
+ a| 
+Comment supprimer toutes les notifications ?
+ a| 
+Sélectionnez *ALERTES* *silences*.sélectionnez ensuite *toutes les règles*.
+
+*Remarque* : si vous avez activé l'agent SNMP, les silences suppriment également les interruptions SNMP et informe.
+
+xref:silencing-alert-notifications.adoc[Notifications d'alerte de silence]
+ a| 
+. Sélectionnez *CONFIGURATION* *système* *Options d'affichage*.
+. Cochez la case *notification Supprimer tout*.
+
+
+*Remarque* : la suppression des notifications par e-mail dans tout le système supprime également les e-mails AutoSupport déclenchés par des événements.
+
+xref:managing-alarms.adoc[Gestion des alarmes (système hérité)]
+
+
+
+ a| 
+Comment personnaliser les conditions et les déclencheurs ?
+ a| 
+. Sélectionnez *ALERTES* *règles*.
+. Sélectionnez une règle par défaut à modifier ou sélectionnez *Créer une règle personnalisée*.
+
+
+xref:editing-alert-rules.adoc[Modifiez les règles d'alerte]
+
+xref:creating-custom-alert-rules.adoc[Création de règles d'alerte personnalisées]
+ a| 
+. Sélectionnez *SUPPORT* *alarmes (hérité)* *alarmes globales*.
+. Créez une alarme personnalisée globale pour remplacer une alarme par défaut ou pour surveiller un attribut qui n'a pas d'alarme par défaut.
+
+
+xref:managing-alarms.adoc[Gestion des alarmes (système hérité)]
+
+
+
+ a| 
+Comment désactiver une alerte ou une alarme individuelle ?
+ a| 
+. Sélectionnez *ALERTES* *règles*.
+. Sélectionnez la règle et sélectionnez *Modifier la règle*.
+. Décochez la case *Enabled*.
+
+
+xref:disabling-alert-rules.adoc[Désactiver les règles d'alerte]
+ a| 
+. Sélectionnez *SUPPORT* *alarmes (hérité)* *alarmes globales*.
+. Sélectionnez la règle et sélectionnez l'icône Modifier.
+. Décochez la case *Enabled*.
+
+
+xref:managing-alarms.adoc[Gestion des alarmes (système hérité)]
+
+|===

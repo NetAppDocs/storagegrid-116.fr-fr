@@ -1,0 +1,24 @@
+---
+permalink: sg5600/storagegrid-appliance-features.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, features 
+summary: 'L"appliance StorageGRID SG5600 offre une solution de stockage intégrée pour créer un nouveau système StorageGRID ou étendre la capacité d"un système existant.' 
+---
+= Fonctionnalités de l'appliance StorageGRID
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'appliance StorageGRID SG5600 offre une solution de stockage intégrée pour créer un nouveau système StorageGRID ou étendre la capacité d'un système existant.
+
+L'appliance StorageGRID offre les fonctionnalités suivantes :
+
+* Combine les éléments de calcul et de stockage du nœud de stockage StorageGRID en une seule solution intégrée efficace
+* Simplifie l'installation et la configuration d'un nœud de stockage, en automatisant la plupart du processus requis
+* Propose une solution de stockage haute densité avec deux options de boîtier : une unité 2U et une baie 4U
+* Utilise des interfaces IP 10 GbE directement vers le nœud de stockage, sans nécessiter d'interfaces de stockage intermédiaires telles que FC ou iSCSI
+* Peut être utilisé dans un environnement de grid hybride qui utilise des appliances StorageGRID et des nœuds de stockage virtuels (basés sur logiciel)
+* Inclut un stockage préconfiguré et est fourni avec le programme d'installation de l'appliance StorageGRID (sur le contrôleur E5600SG) pour un déploiement et une intégration de logiciels prêts à l'emploi
+

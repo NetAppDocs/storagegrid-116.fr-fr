@@ -1,0 +1,30 @@
+---
+permalink: ilm/using-multiple-storage-pools-for-cross-site-replication.html 
+sidebar: sidebar 
+keywords: site-loss protection, cross-site replication, storage pools 
+summary: 'Si votre déploiement StorageGRID inclut plusieurs sites, vous pouvez activer la protection contre la perte de site en créant un pool de stockage pour chaque site et en spécifiant les deux pools de stockage dans les instructions de placement de la règle. Par exemple, si vous configurez une règle ILM pour effectuer deux copies répliquées et spécifier des pools de stockage sur deux sites, une copie de chaque objet sera placée sur chaque site. Si vous configurez une règle pour faire deux copies et spécifier trois pools de stockage, les copies sont distribuées pour équilibrer l"utilisation des disques entre les pools de stockage, tout en vous assurant que les deux copies sont stockées sur différents sites.' 
+---
+= Utilisation de plusieurs pools de stockage pour la réplication intersites
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si votre déploiement StorageGRID inclut plusieurs sites, vous pouvez activer la protection contre la perte de site en créant un pool de stockage pour chaque site et en spécifiant les deux pools de stockage dans les instructions de placement de la règle. Par exemple, si vous configurez une règle ILM pour effectuer deux copies répliquées et spécifier des pools de stockage sur deux sites, une copie de chaque objet sera placée sur chaque site. Si vous configurez une règle pour faire deux copies et spécifier trois pools de stockage, les copies sont distribuées pour équilibrer l'utilisation des disques entre les pools de stockage, tout en vous assurant que les deux copies sont stockées sur différents sites.
+
+L'exemple suivant illustre ce qui peut se produire si une règle ILM place les copies d'objet répliquées dans un pool de stockage unique contenant des nœuds de stockage provenant de deux sites. Étant donné que le système utilise les nœuds disponibles dans le pool de stockage lorsqu'il place les copies répliquées, il peut placer toutes les copies de certains objets au sein d'un seul site. Dans cet exemple, le système a stocké deux copies de l'objet AAA sur les nœuds de stockage du site 1 et deux copies de l'objet CCC sur les nœuds de stockage du site 2. Seul l'objet BBB est protégé si l'un des sites tombe en panne ou devient inaccessible.
+
+image::../media/ilm_replication_make_2_copies_1_pool_2_sites.png[Créer une règle de 2 copies sur deux sites, mais un seul pool de stockage]
+
+Cet exemple montre en revanche comment les objets sont stockés lorsque vous utilisez plusieurs pools de stockage. Dans l'exemple, la règle ILM indique que deux copies répliquées de chaque objet doivent être créées, et que ces copies sont distribuées sur deux pools de stockage. Chaque pool de stockage contient tous les nœuds de stockage sur un site. Étant donné que une copie de chaque objet est stockée sur chaque site, les données d'objet sont protégées contre les pannes au niveau du site ou de ce site, sans aucune accessibilité.
+
+image::../media/ilm_replication_make_2_copies_2_pools_2_sites.png[Créer une règle de 2 copies sur deux sites et deux pools de stockage]
+
+Lorsque vous utilisez plusieurs pools de stockage, gardez les règles suivantes à l'esprit :
+
+* Si vous créez n copies, vous devez ajouter n pools de stockage ou plus. Par exemple, si une règle est configurée pour faire trois copies, vous devez spécifier trois pools de stockage ou plus.
+* Si le nombre de copies équivaut au nombre de pools de stockage, une copie de l'objet est stockée dans chaque pool de stockage.
+* Si le nombre de copies est inférieur au nombre de pools de stockage, le système distribue les copies pour maintenir l'utilisation du disque entre les pools équilibrés et pour s'assurer que deux copies ou plus ne sont pas stockées dans le même pool de stockage.
+* Si les pools de stockage se chevauchent (contiennent les mêmes nœuds de stockage), toutes les copies de l'objet peuvent être enregistrées sur un seul site. Vous devez vous assurer que les pools de stockage sélectionnés ne contiennent pas les mêmes nœuds de stockage.
+

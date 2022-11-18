@@ -1,0 +1,60 @@
+---
+permalink: harden/other-hardening-guidelines.html 
+sidebar: sidebar 
+keywords: Hardening guidelines, security 
+summary: 'Outre les directives de renforcement des réseaux et nœuds StorageGRID, vous devez suivre les instructions de renforcement correspondant à d"autres domaines du système StorageGRID.' 
+---
+= Autres directives de durcissement
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Outre les directives de renforcement des réseaux et nœuds StorageGRID, vous devez suivre les instructions de renforcement correspondant à d'autres domaines du système StorageGRID.
+
+
+
+== Journaux et messages d'audit
+
+Protégez toujours les journaux StorageGRID et la sortie des messages d'audit de manière sécurisée. Les journaux et les messages d'audit StorageGRID fournissent des informations précieuses du point de vue du support et de la disponibilité du système. En outre, les informations figurant dans les journaux StorageGRID et dans les résultats des messages d'audit sont généralement sensibles.
+
+Configurez StorageGRID pour envoyer des événements de sécurité à un serveur syslog externe. Si vous utilisez syslog export, sélectionnez TLS et RELP/TLS pour les protocoles de transport.
+
+Pour plus d'informations sur les journaux StorageGRID, reportez-vous aux instructions de surveillance et de dépannage. Pour plus d'informations sur les messages d'audit StorageGRID, reportez-vous aux instructions relatives aux messages d'audit.
+
+
+
+== NetApp AutoSupport
+
+La fonction AutoSupport de StorageGRID vous permet de surveiller de manière proactive l'état de votre système et d'envoyer automatiquement des messages et des détails au support technique NetApp, à l'équipe de support interne de votre entreprise ou à un partenaire de support. Par défaut, les messages AutoSupport envoyés au support technique NetApp sont activés lorsque StorageGRID est configuré pour la première fois.
+
+La fonction AutoSupport peut être désactivée. Cependant, NetApp recommande de l'activer, car AutoSupport accélère l'identification et la résolution des problèmes sur le système StorageGRID.
+
+AutoSupport prend en charge les protocoles de transport HTTPS, HTTP et SMTP. En raison des nature sensibles des messages AutoSupport, NetApp recommande fortement d'utiliser HTTPS comme protocole de transport par défaut pour l'envoi des messages AutoSupport au support NetApp.
+
+Vous pouvez également configurer un proxy d'administration pour plus de contrôle sur les communications AutoSupport depuis les nœuds d'administration vers le support technique de NetApp. Reportez-vous aux étapes de création d'un proxy d'administration dans les instructions d'administration de StorageGRID.
+
+
+
+== Partage de ressources interorigine (CORS)
+
+Vous pouvez configurer le partage de ressources inter-origine (CORS) pour un compartiment S3 si vous souhaitez que ce compartiment et les objets de ce compartiment soient accessibles aux applications Web dans d'autres domaines. En général, n'activez pas le CORS à moins qu'il ne soit nécessaire. Si CORS est requis, limitez-le aux origines de confiance.
+
+Consultez les étapes de configuration du partage de ressources d'origine croisée (CORS) dans les instructions d'utilisation des comptes de tenant.
+
+
+
+== Dispositifs de sécurité externes
+
+Une solution de renforcement complète doit traiter des mécanismes de sécurité en dehors de StorageGRID. L'utilisation de dispositifs d'infrastructure supplémentaires pour filtrer et limiter l'accès à StorageGRID constitue un moyen efficace d'établir et de maintenir un niveau de sécurité strict. Ces systèmes de sécurité externes comprennent des pare-feu, des systèmes de prévention des intrusions (IDS) et d'autres dispositifs de sécurité.
+
+Un équilibreur de charge tiers est recommandé pour le trafic client non fiable. L'équilibrage de la charge fourni par des tiers offre un meilleur contrôle et des couches de protection supplémentaires contre les attaques.
+
+xref:../monitor/index.adoc[Surveiller et résoudre les problèmes]
+
+xref:../audit/index.adoc[Examiner les journaux d'audit]
+
+xref:../tenant/index.adoc[Utilisez le compte du locataire]
+
+xref:../admin/index.adoc[Administrer StorageGRID]

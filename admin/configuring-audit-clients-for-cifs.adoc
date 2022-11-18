@@ -1,0 +1,17 @@
+---
+permalink: admin/configuring-audit-clients-for-cifs.html 
+sidebar: sidebar 
+keywords: audit client for cifs 
+summary: 'La procédure utilisée pour configurer un client d"audit dépend de la méthode d"authentification : Windows Workgroup ou Windows Active Directory \(AD\). Lorsqu"il est ajouté, le partage d"audit est automatiquement activé en tant que partage en lecture seule.' 
+---
+= Configurer des clients d'audit pour CIFS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La procédure utilisée pour configurer un client d'audit dépend de la méthode d'authentification Windows Workgroup ou Windows Active Directory (AD). Lorsqu'il est ajouté, le partage d'audit est automatiquement activé en tant que partage en lecture seule.
+
+
+NOTE: L'exportation d'audit via CIFS/Samba a été obsolète et sera supprimée dans une future version de StorageGRID.

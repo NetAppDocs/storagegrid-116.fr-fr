@@ -1,0 +1,14 @@
+---
+permalink: sg6000/replacing-fibre-channel-hba-in-sg6000-cn-controller.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, Replacing, replace, sg6000-cn, hba, host bus adapter, fibre channel, fiber channel 
+summary: 'Vous devrez peut-être remplacer l"adaptateur de bus hôte Fibre Channel \(HBA\) du contrôleur SG6000-CN si ce dernier ne fonctionne pas de manière optimale ou s"il est défectueux.' 
+---
+= Remplacez la carte HBA Fibre Channel dans le contrôleur SG6000-CN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devrez peut-être remplacer l'adaptateur de bus hôte Fibre Channel (HBA) dans le contrôleur SG6000-CN s'il ne fonctionne pas de manière optimale ou s'il est défectueux.

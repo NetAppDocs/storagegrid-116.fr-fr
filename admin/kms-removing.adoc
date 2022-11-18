@@ -1,0 +1,45 @@
+---
+permalink: admin/kms-removing.html 
+sidebar: sidebar 
+keywords: remove kms, remove key management server 
+summary: Dans certains cas, vous pouvez supprimer un serveur de gestion des clés. Par exemple, vous pouvez vouloir supprimer un KMS spécifique au site si vous avez désactivé le site. 
+---
+= Suppression d'un serveur de gestion des clés (KMS)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dans certains cas, vous pouvez supprimer un serveur de gestion des clés. Par exemple, vous pouvez vouloir supprimer un KMS spécifique au site si vous avez désactivé le site.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous avez passé en revue le xref:kms-considerations-and-requirements.adoc[considérations et conditions requises pour l'utilisation d'un serveur de gestion des clés].
+* Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous disposez de l'autorisation d'accès racine.
+
+
+Vous pouvez supprimer un KMS dans les cas suivants :
+
+* Vous pouvez supprimer un KMS spécifique au site si le site a été désactivé ou si le site ne contient aucun nœud d'appliance lorsque le chiffrement de nœud est activé.
+* Vous pouvez supprimer le KMS par défaut si un KMS spécifique au site existe déjà pour chaque site sur lequel des nœuds d'appliance sont activés pour que le chiffrement des nœuds soit activé.
+
+
+.Étapes
+. Sélectionnez *CONFIGURATION* *sécurité* *serveur de gestion des clés*.
++
+La page Key Management Server s'affiche et affiche tous les serveurs de gestion des clés qui ont été configurés.
+
++
+image::../media/kms_configuration_details_table.png[Tableau KMS des détails de configuration DES KMS]
+
+. Sélectionnez le bouton radio du KMS que vous souhaitez supprimer, puis sélectionnez *Supprimer*.
+. Passez en revue les éléments à prendre en compte dans la boîte de dialogue d'avertissement.
++
+image::../media/kms_remove_warning.png[Avertissement de suppression DE KM]
+
+. Sélectionnez *OK*.
++
+La configuration KMS est supprimée.
+
+

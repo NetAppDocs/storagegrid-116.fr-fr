@@ -1,0 +1,125 @@
+---
+permalink: sg6000/sgf6024-overview.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, overview, models, features 
+summary: Le StorageGRIDSGF6024 inclut un contrôleur de calcul et un tiroir de contrôleur de stockage hébergeant 24 disques SSD. 
+---
+= Présentation du SGF6024
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le StorageGRIDSGF6024 inclut un contrôleur de calcul et un tiroir de contrôleur de stockage hébergeant 24 disques SSD.
+
+
+
+== Composants du SGF6024
+
+L'appareil SGF6024 comprend les composants suivants :
+
+|===
+| Composant | Description 
+
+
+ a| 
+Contrôleur de calcul
+ a| 
+Contrôleur SG6000-CN, serveur à un rack (1U) qui comprend :
+
+* 40 cœurs (80 threads)
+* 192 GO DE RAM
+* Jusqu'à 4 × 25 Gbit/s de bande passante Ethernet agrégée
+* 4 interconnexion Fibre Channel (FC) 16 Gbit/s
+* Le contrôleur de gestion de la carte mère (BMC) simplifie la gestion du matériel
+* Blocs d'alimentation redondants
+
+
+
+
+ a| 
+Baie Flash (tiroir contrôleur)
+ a| 
+Baie Flash E-Series EF570 (également appelée tiroir contrôleur), tiroir 2U qui inclut :
+
+* Deux contrôleurs EF570 (configuration duplex) E-Series prennent en charge le basculement du contrôleur de stockage
+* 24 disques SSD (également appelés disques SSD ou Flash)
+* Alimentations et ventilateurs redondants
+
+
+|===
+
+
+== Schémas SGF6024
+
+Cette figure illustre la façade du système SGF6024, qui comprend un contrôleur de calcul 1U et un boîtier 2U contenant deux contrôleurs de stockage et 24 disques Flash.
+
+image::../media/sgf6024_front_view_with_and_without_bezels.png[SG6024 vues de face]
+
+|===
+| Légende | Description 
+
+
+ a| 
+1
+ a| 
+Contrôleur de calcul SG6000-CN avec cadre avant
+
+
+
+ a| 
+2
+ a| 
+Baie Flash EF570 avec panneau avant
+
+
+
+ a| 
+3
+ a| 
+Contrôleur de calcul SG6000-CN avec cadre avant retiré
+
+
+
+ a| 
+4
+ a| 
+Baie Flash EF570 avec panneau avant retiré
+
+|===
+Cette figure illustre l'arrière du SGF6024, y compris les contrôleurs de calcul et de stockage, les ventilateurs et les alimentations.
+
+image::../media/sgf6024_rear_view.gif[SG6024 arrière]
+
+|===
+| Légende | Description 
+
+
+ a| 
+1
+ a| 
+Alimentation (1 sur 2) pour contrôleur de calcul SG6000-CN
+
+
+
+ a| 
+2
+ a| 
+Connecteurs pour contrôleur de calcul SG6000-CN
+
+
+
+ a| 
+3
+ a| 
+Bloc d'alimentation (1 sur 2) pour la baie Flash EF570
+
+
+
+ a| 
+4
+ a| 
+Contrôleur de stockage E-Series EF570 (1 sur 2) et connecteurs
+
+|===

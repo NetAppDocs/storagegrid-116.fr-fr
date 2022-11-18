@@ -1,0 +1,14 @@
+---
+permalink: sg6000/troubleshooting-hardware-installation.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, troubleshoot, troubleshooting, hardware, install, installation 
+summary: 'Si vous rencontrez des problèmes lors de l"installation, il peut s"avérer utile de consulter les informations de dépannage relatives à la configuration du matériel et aux problèmes de connectivité.' 
+---
+= Dépannage de l'installation du matériel (SG6000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous rencontrez des problèmes lors de l'installation, il peut s'avérer utile de consulter les informations de dépannage relatives à la configuration du matériel et aux problèmes de connectivité.

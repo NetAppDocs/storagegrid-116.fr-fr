@@ -1,0 +1,143 @@
+---
+permalink: ilm/managing-objects-with-s3-object-lock.html 
+sidebar: sidebar 
+keywords: s3 object lock, manage objects with object lock 
+summary: 'En tant qu"administrateur de la grille, vous pouvez activer la fonction de verrouillage des objets S3 pour votre système StorageGRID et mettre en œuvre une règle ILM conforme pour vous assurer que les objets des compartiments S3 spécifiques ne sont pas supprimés ou remplacés pour une durée spécifiée.' 
+---
+= Gestion des objets avec le verrouillage d'objets S3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En tant qu'administrateur de la grille, vous pouvez activer la fonction de verrouillage des objets S3 pour votre système StorageGRID et mettre en œuvre une règle ILM conforme pour vous assurer que les objets des compartiments S3 spécifiques ne sont pas supprimés ou remplacés pour une durée spécifiée.
+
+
+
+== Qu'est-ce que le verrouillage objet S3 ?
+
+La fonctionnalité de verrouillage objet StorageGRID S3 est une solution de protection des objets équivalente au verrouillage objet S3 dans Amazon simple Storage Service (Amazon S3).
+
+Comme illustré dans la figure, lorsque le paramètre global de verrouillage d'objet S3 est activé pour un système StorageGRID, un compte de locataire S3 peut créer des compartiments avec ou sans verrouillage d'objet S3 activé. Si un compartiment est doté du verrouillage objet S3 activé, les applications client S3 peuvent éventuellement spécifier des paramètres de conservation pour toute version d'objet dans ce compartiment. Des paramètres de conservation doivent être spécifiés pour être protégés par le verrouillage d'objet S3. En outre, chaque compartiment sur lequel le verrouillage d'objet S3 est activé peut avoir la possibilité de disposer d'un mode de conservation et d'une période de conservation par défaut, qui s'appliquent si des objets sont ajoutés au compartiment sans leurs propres paramètres de conservation.
+
+image::../media/s3_object_lock_architecture.png[Architecture de verrouillage d'objet S3]
+
+La fonctionnalité de verrouillage d'objet StorageGRID S3 fournit un mode de conservation unique équivalent au mode de conformité Amazon S3. Par défaut, une version d'objet protégé ne peut être écrasée ou supprimée par aucun utilisateur. La fonction de verrouillage d'objet StorageGRID S3 ne prend pas en charge un mode de gouvernance et n'autorise pas les utilisateurs disposant d'autorisations spéciales à contourner les paramètres de rétention ou à supprimer des objets protégés.
+
+Si un compartiment est doté de l'option de verrouillage des objets S3, l'application client S3 peut spécifier la ou les deux paramètres de conservation de niveau objet suivants lors de la création ou de la mise à jour d'un objet :
+
+* *Conserver-jusqu'à-date* : si la date-à-jour d'une version d'objet est à l'avenir, l'objet peut être récupéré, mais ne peut pas être modifié ou supprimé. Si nécessaire, la date de conservation d'un objet peut être augmentée, mais cette date ne peut pas être réduite.
+* *Mise en garde légale* : l'application d'une mise en garde légale à une version d'objet verrouille immédiatement cet objet. Par exemple, vous devrez peut-être mettre une obligation légale sur un objet lié à une enquête ou à un litige juridique. Une obligation légale n'a pas de date d'expiration, mais reste en place jusqu'à ce qu'elle soit explicitement supprimée. Les dispositions légales sont indépendantes de la date de conservation.
+
+
+Pour plus d'informations sur les paramètres de conservation des objets, reportez-vous à la section xref:../s3/using-s3-object-lock.adoc[Utilisez le verrouillage d'objet S3].
+
+Pour plus d'informations sur les paramètres de conservation des compartiments par défaut, accédez à xref:../s3/use-s3-object-lock-default-bucket-retention.adoc[Utilisez la conservation de compartiment par défaut avec le verrouillage d'objet S3].
+
+
+
+== Comparaison du verrouillage d'objet S3 à la conformité existante
+
+Le verrouillage d'objet S3 remplace la fonctionnalité de conformité disponible dans les versions précédentes de StorageGRID. La fonctionnalité de verrouillage d'objet S3 conforme aux exigences Amazon S3 représente la fonctionnalité propriétaire de conformité StorageGRID, appelée désormais « conformité héritée ».
+
+Si vous avez précédemment activé le paramètre de conformité globale, le paramètre global de verrouillage d'objet S3 a été activé automatiquement. Les locataires ne peuvent plus créer de compartiments avec la conformité activée. Toutefois, si nécessaire, les locataires peuvent continuer à utiliser et à gérer n'importe quelle version existante de conformité, notamment effectuer les tâches suivantes :
+
+* Ingestion de nouveaux objets dans un compartiment pour lequel la conformité d'ancienne génération est activée.
+* Augmentation de la période de conservation d'un compartiment existant pour lequel la conformité des données héritées est activée.
+* Modification du paramètre de suppression automatique pour un compartiment existant sur lequel la conformité héritée est activée.
+* Placer la conservation légale sur un compartiment existant pour lequel la conformité héritée est activée.
+* Levée d'une suspension légale.
+
+
+Voir https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/StorageGRID/How_to_manage_legacy_Compliant_buckets_in_StorageGRID_11.5["Base de connaissances NetApp : comment gérer des compartiments conformes aux ancienne génération dans StorageGRID 11.5"^] pour obtenir des instructions.
+
+Si vous avez utilisé la fonctionnalité de conformité héritée dans une version précédente de StorageGRID, reportez-vous au tableau suivant pour savoir comment la comparer à la fonctionnalité de verrouillage d'objet S3 dans StorageGRID.
+
+[cols="1a,1a,1a"]
+|===
+|  | Verrouillage objet S3 (nouveau) | Conformité (existant) 
+
+
+ a| 
+Comment cette fonctionnalité est-elle activée dans le monde entier ?
+ a| 
+Dans Grid Manager, sélectionnez *CONFIGURATION* *système* *verrouillage objet S3*.
+ a| 
+N'est plus pris en charge.
+
+*Remarque :* si vous avez activé le paramètre de conformité globale à l'aide d'une version précédente de StorageGRID, le paramètre verrouillage d'objet S3 est activé dans StorageGRID 11.6. Vous pouvez continuer à utiliser StorageGRID pour gérer les paramètres des compartiments conformes existants. Cependant, vous ne pouvez pas créer de compartiments conformes.
+
+
+
+ a| 
+Comment la fonctionnalité est-elle activée pour un compartiment ?
+ a| 
+Les utilisateurs doivent activer le verrouillage objet S3 lors de la création d'un compartiment à l'aide du gestionnaire de locataires, de l'API de gestion des locataires ou de l'API REST S3.
+ a| 
+Les utilisateurs ne peuvent plus créer de compartiments avec la conformité activée. Toutefois, ils peuvent continuer à ajouter de nouveaux objets aux compartiments conformes existants.
+
+
+
+ a| 
+Le contrôle de version des compartiments est-il pris en
+ a| 
+Oui. Le contrôle de version des compartiments est requis et activé automatiquement lorsque le verrouillage des objets S3 est activé pour le compartiment.
+ a| 
+Non La fonction de conformité héritée n'autorise pas la gestion des versions de compartiment.
+
+
+
+ a| 
+Comment la conservation d'objets est-elle définie ?
+ a| 
+Les utilisateurs peuvent définir une date de conservation pour chaque version d'objet.
+ a| 
+Les utilisateurs doivent définir une période de conservation pour l'intégralité du compartiment. La période de conservation s'applique à tous les objets du compartiment.
+
+
+
+ a| 
+Un compartiment peut-il disposer de paramètres par défaut pour la conservation des données et la conservation à des fins juridiques ?
+ a| 
+Oui. Les compartiments StorageGRID sur lesquels le verrouillage d'objet S3 est activé peuvent disposer d'une période de conservation par défaut qui s'applique aux versions d'objet dont les paramètres de conservation ne sont pas définis lors de l'ingestion.
+ a| 
+Oui.
+
+
+
+ a| 
+La période de conservation peut-elle être modifiée ?
+ a| 
+La date de conservation pour une version d'objet peut être augmentée mais jamais réduite.
+ a| 
+La période de rétention du godet peut être augmentée, mais jamais réduite.
+
+
+
+ a| 
+Où est contrôlé la suspension légale ?
+ a| 
+Les utilisateurs peuvent placer une conservation légale ou lever une conservation légale pour toute version d'objet dans le compartiment.
+ a| 
+Une retenue légale est placée sur le godet et affecte tous les objets du godet.
+
+
+
+ a| 
+Quand les objets peuvent-ils être supprimés ?
+ a| 
+Une version d'objet peut être supprimée après avoir atteint la date de conservation, en supposant que l'objet n'est pas en attente légale.
+ a| 
+Un objet peut être supprimé après l'expiration de la période de conservation, en supposant que le compartiment n'est pas en conservation légale. Les objets peuvent être supprimés automatiquement ou manuellement.
+
+
+
+ a| 
+La configuration du cycle de vie des compartiments est-elle prise en
+ a| 
+Oui.
+ a| 
+Non
+
+|===

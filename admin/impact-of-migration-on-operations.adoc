@@ -1,0 +1,22 @@
+---
+permalink: admin/impact-of-migration-on-operations.html 
+sidebar: sidebar 
+keywords: how data migration affects operations 
+summary: 'Le système StorageGRID permet un fonctionnement efficace du stockage objet et de la récupération. Il offre une excellente protection contre la perte de données grâce à la création transparente de copies redondantes des données d"objet et des métadonnées.' 
+---
+= Impact de la migration sur les opérations
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le système StorageGRID permet un fonctionnement efficace du stockage objet et de la récupération. Il offre une excellente protection contre la perte de données grâce à la création transparente de copies redondantes des données d'objet et des métadonnées.
+
+Toutefois, la migration des données doit être gérée avec soin conformément aux instructions de ce chapitre pour éviter tout impact sur les opérations quotidiennes des systèmes ou, dans des cas extrêmes, placer les données en cas de perte en cas de défaillance du système StorageGRID.
+
+La migration de volumes importants de données impose une charge supplémentaire au système. Lorsque le système StorageGRID est lourdement chargé, il répond plus lentement aux demandes de stockage et de récupération d'objets. Cela peut interférer avec les demandes de stockage et de récupération qui font partie intégrante des opérations quotidiennes. La migration peut également entraîner d'autres problèmes opérationnels. Par exemple, lorsqu'un nœud de stockage arrive à saturation de la capacité, la charge intermittente importante due à l'ingestion par lots peut faire basculer le nœud de stockage entre la lecture seule et la lecture-écriture, générant des notifications.
+
+Si le chargement persiste, les files d'attente peuvent développer différentes opérations que le système StorageGRID doit exécuter pour assurer la redondance complète des données d'objet et des métadonnées.
+
+La migration des données doit être gérée avec soin conformément aux directives présentées dans ce document afin de garantir un fonctionnement sûr et efficace du système StorageGRID pendant la migration. Lors de la migration des données, ingestion d'objets par lots ou ingestion continue. Ensuite, surveillez en continu le système StorageGRID pour vous assurer que les différentes valeurs d'attribut ne sont pas dépassées.

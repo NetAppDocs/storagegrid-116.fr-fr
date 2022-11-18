@@ -1,0 +1,46 @@
+---
+permalink: maintain/recovering-storagegrid-appliance-storage-node.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, appliance storage node failure 
+summary: 'La procédure de restauration d"un nœud de stockage de l"appliance StorageGRID défaillant est identique, que vous soyez en train de récupérer à partir de la perte du disque système ou de la perte de volumes de stockage uniquement.' 
+---
+= Restaurez le nœud de stockage de l'appliance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La procédure de restauration d'un nœud de stockage de l'appliance StorageGRID défaillant est identique, que vous soyez en train de récupérer à partir de la perte du disque système ou de la perte de volumes de stockage uniquement.
+
+Vous devez préparer l'appliance et réinstaller le logiciel, configurer le nœud pour qu'il rerejoint la grille, reformater le stockage et restaurer les données de l'objet.
+
+image::../media/overview_sga_recovery.gif[Diagramme de présentation de la restauration de l'appliance StorageGRID]
+
+
+CAUTION: Si plusieurs nœuds de stockage ont échoué (ou sont hors ligne), contactez le support technique. Ne pas effectuer la procédure de récupération suivante. Des données peuvent être perdues.
+
+
+CAUTION: S'il s'agit de la défaillance du deuxième nœud de stockage dans les 15 jours qui suivent la défaillance ou la restauration d'un nœud de stockage, contactez le support technique. Reconstruire Cassandra sur deux nœuds de stockage ou plus en un délai de 15 jours peut entraîner une perte de données.
+
+
+NOTE: Si plusieurs nœuds de stockage d'un site ont échoué, une procédure de restauration de site peut être nécessaire. Contactez l'assistance technique.
+
+xref:how-site-recovery-is-performed-by-technical-support.adoc[Comment la reprise sur site est effectuée par le support technique]
+
+
+IMPORTANT: Si les règles ILM sont configurées pour ne stocker qu'une seule copie répliquée, et si cette copie existe sur un volume de stockage défaillant, vous ne pourrez pas restaurer l'objet.
+
+
+NOTE: Si vous rencontrez une alarme Services : Etat - Cassandra (SVST) pendant la récupération, reportez-vous aux instructions de surveillance et de dépannage pour récupérer de l'alarme en reconstruisant Cassandra. Après la reconstruction de Cassandra, les alarmes doivent être désactivées. Si les alarmes ne sont pas claires, contactez le support technique.
+
+
+NOTE: Pour les procédures de maintenance du matériel, telles que les instructions pour remplacer un contrôleur ou réinstaller SANtricity OS, consultez les instructions d'installation et de maintenance de votre dispositif de stockage.
+
+xref:../monitor/index.adoc[Surveiller et résoudre les problèmes]
+
+xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
+
+xref:../sg5700/index.adoc[Appliances de stockage SG5700]
+
+xref:../sg5600/index.adoc[Appliances de stockage SG5600]

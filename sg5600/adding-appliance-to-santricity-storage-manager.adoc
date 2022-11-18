@@ -1,0 +1,47 @@
+---
+permalink: sg5600/adding-appliance-to-santricity-storage-manager.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, Adding, add, appliance, SANtricity Storage Manager, SANtricity 
+summary: 'Vous connectez le contrôleur E2700 de l"appliance à SANtricity Storage Manager, puis ajoutez l"appliance en tant que baie de stockage.' 
+---
+= Ajoutez l'appliance à SANtricity Storage Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous connectez le contrôleur E2700 de l'appliance à SANtricity Storage Manager, puis ajoutez l'appliance en tant que baie de stockage.
+
+Vous utilisez un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+
+Pour obtenir des instructions détaillées, consultez la documentation du gestionnaire de stockage SANtricity.
+
+.Étapes
+. Ouvrez un navigateur Web et entrez l'adresse IP comme URL pour SANtricity Storage Manager : +
+`*https://_E2700_Controller_IP_*`
++
+La page de connexion de SANtricity Storage Manager s'affiche.
+
+. Sur la page *Sélectionner une méthode d'ajout*, sélectionnez *Manuel*, puis cliquez sur *OK*.
+. Sélectionnez *Modifier* *Ajouter une matrice de stockage*.
++
+La page Ajouter une nouvelle matrice de stockage - Manuel s'affiche.
+
++
+image::../media/sanricity_add_new_storage_array_out_of_band.gif[Page Ajouter une nouvelle baie de stockage SANtricity]
+
+. Dans la zone *gestion hors bande*, entrez l'une des valeurs suivantes :
++
+** *Utilisant DHCP:* adresse IP attribuée par le serveur DHCP au port de gestion 1 du contrôleur E2700
+** *Pas utiliser DHCP:* `192.168.128.101`
++
+
+NOTE: Un seul contrôleur de l'appliance est connecté à SANtricity Storage Manager. Il vous suffit donc d'entrer une adresse IP.
+
+
+
+. Cliquez sur *Ajouter*.
+
+
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61197["Documentation NetApp : responsable du stockage SANtricity"^]

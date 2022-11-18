@@ -1,0 +1,37 @@
+---
+permalink: admin/configuring-stored-object-encryption.html 
+sidebar: sidebar 
+keywords: stored object encryption, grid options, encrypt 
+summary: 'Vous pouvez crypter les objets stockés si vous souhaitez vous assurer que les données ne peuvent pas être récupérées sous une forme lisible si un magasin d"objets est compromis. Par défaut, les objets ne sont pas chiffrés.' 
+---
+= Configurez le chiffrement des objets stockés
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez crypter les objets stockés si vous souhaitez vous assurer que les données ne peuvent pas être récupérées sous une forme lisible si un magasin d'objets est compromis. Par défaut, les objets ne sont pas chiffrés.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous disposez d'autorisations d'accès spécifiques.
+
+
+Le chiffrement d'objets stocké permet le chiffrement de toutes les données d'objet à leur entrée via S3 ou Swift. Lorsque vous activez le paramètre, tous les objets récemment acquis sont chiffrés, mais aucun changement n'est apporté aux objets stockés existants. Si vous désactivez le chiffrement, les objets chiffrés restent chiffrés, mais les objets récemment ingérées ne sont pas chiffrés.
+
+
+NOTE: Si vous modifiez ce paramètre, il faudra environ une minute pour appliquer le nouveau paramètre. La valeur configurée est mise en cache pour les performances et l'évolutivité.
+
+Les objets stockés peuvent être cryptés à l'aide de l'algorithme de cryptage AES-128 ou AES-256.
+
+Le paramètre de chiffrement d'objet stocké s'applique uniquement aux objets S3 qui n'ont pas été chiffrés par chiffrement au niveau du compartiment ou de l'objet.
+
+.Étapes
+. Sélectionnez *CONFIGURATION* *système* *Options de grille*.
+. Dans la section Options d'objet stocké, définissez le chiffrement d'objet stocké sur *None* (par défaut), *AES-128* ou *AES-256*.
++
+image::../media/stored_object_encryption.png[Chiffrement d'objet stocké]
+
+. Sélectionnez *Enregistrer*.
+

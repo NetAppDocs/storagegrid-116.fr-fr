@@ -1,0 +1,59 @@
+---
+permalink: ilm/what-ilm-policy-is.html 
+sidebar: sidebar 
+keywords: what is information lifecycle management policy, ilm policy 
+summary: 'Une règle de gestion du cycle de vie des informations \(ILM\) est un ensemble ordonné de règles ILM permettant de déterminer la façon dont le système StorageGRID gère les données d"objet au fil du temps.' 
+---
+= Définition d'une règle ILM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Une règle de gestion du cycle de vie des informations (ILM) est un ensemble ordonné de règles ILM qui détermine la façon dont le système StorageGRID gère les données d'objet au fil du temps.
+
+
+
+== Comment une règle ILM évalue-t-elle les objets ?
+
+La règle ILM active pour votre système StorageGRID permet de contrôler le placement, la durée et la protection des données de tous les objets.
+
+Lorsque des clients enregistrent des objets dans StorageGRID, les objets sont évalués en fonction du jeu ordonné de règles ILM de la politique active, comme suit :
+
+. Si les filtres de la première règle de la règle correspondent à un objet, celui-ci est ingéré conformément au comportement d'ingestion de cette règle et stocké conformément aux instructions de placement de cette règle.
+. Si les filtres de la première règle ne correspondent pas à l'objet, celui-ci est évalué par rapport à chaque règle ultérieure de la stratégie jusqu'à ce qu'une correspondance soit effectuée.
+. Si aucune règle ne correspond à un objet, les instructions de comportement d'ingestion et de placement de la règle par défaut de cette règle sont appliquées. La règle par défaut est la dernière règle d'une stratégie. La règle par défaut doit s'appliquer à tous les locataires, tous les compartiments et toutes les versions d'objet et ne peut pas utiliser de filtres avancés.
+
+
+
+
+== Exemple de règle ILM
+
+Cet exemple de politique ILM utilise trois règles ILM.
+
+image::../media/policy_for_two_tenants.png[Exemple de règle pour deux locataires]
+
+Dans cet exemple, la règle 1 correspond à tous les objets appartenant au locataire A. Ces objets sont stockés sous forme de trois copies répliquées sur trois sites. Les objets appartenant à d'autres locataires ne sont pas mis en correspondance par la règle 1, ils sont donc évalués par rapport à la règle 2.
+
+La règle 2 correspond à tous les objets d'autres locataires, mais uniquement s'ils sont supérieurs à 1 Mo. Ces objets plus volumineux sont stockés au moyen d'un code d'effacement de 6+3 sur trois sites. La règle 2 ne correspond pas aux objets de 1 Mo ou plus petits, de sorte que ces objets sont évalués par rapport à la règle 3.
+
+La règle 3 est la dernière et la règle par défaut de la stratégie, et elle n'utilise pas de filtres. La règle 3 effectue deux copies répliquées de tous les objets qui ne correspondent pas à la règle 1 ou à la règle 2 (les objets n'appartenant pas au locataire A dont la taille est inférieure ou égale à 1 Mo).
+
+image::../media/ilm_policy_and_rules.png[Règles et règles ILM]
+
+
+
+== Quelles sont les politiques proposées, actives et historiques?
+
+Chaque système StorageGRID doit disposer d'une règle ILM active. Un système StorageGRID peut également avoir une proposition de règle ILM et tout nombre de règles historiques.
+
+Lorsque vous créez une règle ILM, vous créez une proposition de règle en sélectionnant une ou plusieurs règles ILM et en les organisant dans un ordre spécifique. Après avoir simulé la stratégie proposée pour confirmer son comportement, vous l'activez pour créer la stratégie active.
+
+Lorsque vous activez une nouvelle règle ILM, StorageGRID utilise cette règle pour gérer tous les objets, y compris les objets existants et les objets récemment ingérées. Les objets existants peuvent être déplacés vers de nouveaux emplacements lorsque les règles ILM de la nouvelle règle sont mises en œuvre.
+
+L'activation de la stratégie proposée fait de la stratégie précédemment active une stratégie historique. Les règles ILM historiques ne peuvent pas être supprimées.
+
+image::../media/ilm_policies_proposed_active_historical.png[Image conceptuelle pour les règles ILM]
+
+xref:creating-ilm-policy.adoc[Création d'une règle ILM]

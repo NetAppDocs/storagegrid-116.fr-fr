@@ -1,0 +1,90 @@
+---
+permalink: sg6000/replacing-sg6000-cn-controller.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, Replacing, replace, sg6000-cn, controller, remove, removing, removal, install, installing, installation 
+summary: 'Vous devrez peut-être remplacer le contrôleur SG6000-CN s"il ne fonctionne pas de manière optimale ou s"il est défectueux.' 
+---
+= Remplacer le contrôleur SG6000-CN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devrez peut-être remplacer le contrôleur SG6000-CN s'il ne fonctionne pas de manière optimale ou s'il est défectueux.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous disposez d'un contrôleur de remplacement avec la même référence que le contrôleur que vous remplacez.
+* Vous avez des étiquettes pour identifier chaque câble connecté au contrôleur.
+* Vous avez trouvé le contrôleur à remplacer dans le data Center.
++
+xref:locating-controller-in-data-center.adoc[Localiser le contrôleur dans le data Center]
+
+
+
+Le nœud de stockage de l'appliance ne sera pas accessible lors du remplacement du contrôleur SG6000-CN. Si le contrôleur SG6000-CN fonctionne suffisamment, vous pouvez effectuer un arrêt contrôlé au début de cette procédure.
+
+
+NOTE: Si vous remplacez le contrôleur avant d'installer le logiciel StorageGRID, il se peut que vous ne puissiez pas accéder au programme d'installation de l'appliance StorageGRID immédiatement après avoir terminé cette procédure. Même si vous pouvez accéder au programme d'installation de l'appliance StorageGRID à partir d'autres hôtes du même sous-réseau que l'appliance, vous ne pouvez pas y accéder à partir d'hôtes situés sur d'autres sous-réseaux. Cette condition doit se résoudre dans les 15 minutes (lorsque les entrées du cache ARP pour le contrôleur d'origine sont écoulées), ou vous pouvez effacer immédiatement la condition en éliminant manuellement les anciennes entrées du cache ARP à partir du routeur ou de la passerelle local.
+
+.Étapes
+. Si le contrôleur SG6000-CN fonctionne suffisamment pour permettre un arrêt contrôlé, arrêtez le contrôleur SG6000-CN.
++
+xref:shutting-down-sg6000-cn-controller.adoc[Arrêtez le contrôleur SG6000-CN]
+
+. Utilisez l'une des deux méthodes pour vérifier que l'alimentation du contrôleur SG6000-CN est éteinte :
++
+** Le voyant d'alimentation situé à l'avant du contrôleur est éteint.
+** La page Power Control de l'interface BMC indique que le contrôleur est éteint.
+
+
+. Si les réseaux StorageGRID connectés au contrôleur utilisent des serveurs DHCP, mettez à jour les paramètres DNS/réseau et d'adresse IP.
++
+.. Repérez l'étiquette d'adresse MAC située à l'avant du contrôleur SG6000-CN et déterminez l'adresse MAC du port réseau Admin.
++
+
+NOTE: L'étiquette d'adresse MAC répertorie l'adresse MAC du port de gestion BMC. + pour déterminer l'adresse MAC du port réseau Admin, vous devez ajouter *2* au numéro hexadécimal sur l'étiquette. Par exemple, si l'adresse MAC de l'étiquette se termine par *09*, l'adresse MAC du port d'administration se terminera par *0B*. Si l'adresse MAC de l'étiquette se termine dans *(_y_)FF*, l'adresse MAC du port d'administration se terminera dans *(_y_+1)01*. Vous pouvez facilement effectuer ce calcul en ouvrant Calculator sous Windows, en le définissant en mode programmateur, en sélectionnant Hex, en saisissant l'adresse MAC, puis en tapant *+ 2 =*.
+
+.. Demandez à votre administrateur réseau d'associer le DNS/réseau et l'adresse IP du contrôleur que vous avez supprimé à l'adresse MAC du contrôleur de remplacement.
++
+
+IMPORTANT: Vous devez vous assurer que toutes les adresses IP du contrôleur d'origine ont été mises à jour avant d'appliquer l'alimentation au contrôleur de remplacement. Dans le cas contraire, le contrôleur obtiendra de nouvelles adresses IP DHCP lors de son démarrage et risque de ne pas pouvoir se reconnecter à StorageGRID. Cette étape s'applique à tous les réseaux StorageGRID reliés au contrôleur.
+
++
+
+NOTE: Si le contrôleur d'origine utilise une adresse IP statique, le nouveau contrôleur adopte automatiquement les adresses IP du contrôleur que vous avez supprimé.
+
+
+
+. Retirez et remplacez le contrôleur SG6000-CN :
++
+.. Etiqueter les câbles, puis débrancher les câbles et les émetteurs-récepteurs SFP+ ou SFP28.
++
+
+IMPORTANT: Pour éviter de dégrader les performances, ne pas tordre, plier, pincer ou marcher sur les câbles.
+
+.. Retirez le contrôleur défectueux de l'armoire ou du rack.
+.. Installez le contrôleur de remplacement dans l'armoire ou le rack.
+.. Remplacez les câbles et les émetteurs-récepteurs SFP+ ou SFP28.
+.. Mettez le contrôleur sous tension et surveillez les LED du contrôleur et les codes de démarrage.
+
+
+. Vérifiez que le nœud de stockage de l'appliance apparaît dans Grid Manager et qu'aucune alarme ne s'affiche.
+. Dans Grid Manager, sélectionnez *NODES* et vérifiez que l'adresse IP du contrôleur de nœud est correcte.
++
+Si l'adresse IP du contrôleur de nœud n'est pas valide ou ne se trouve pas dans la plage prévue, reconfigurez l'adresse IP comme indiqué dans les instructions de reprise et de maintenance.
+
++
+
+NOTE: Si vous avez appliqué une personnalisation supplémentaire au cours de l'installation d'origine, telle que la définition de destinations de déroutement SNMP ou de notifications par e-mail, vous devez enregistrer et valider la configuration et la réappliquer si nécessaire.
+
++
+xref:../maintain/index.adoc[Récupérer et entretenir]
+
+
+
+xref:sg6000-cn-installing-into-cabinet-or-rack.adoc[SG6000-CN : à installer dans l'armoire ou le rack]
+
+xref:viewing-status-indicators-and-buttons-on-sg6000-cn-controller.adoc[Afficher les indicateurs d'état et les boutons sur le contrôleur SG6000-CN]
+
+xref:viewing-boot-up-codes-for-sg6000-cn-controller.adoc[Afficher les codes de démarrage du contrôleur SG6000-CN]

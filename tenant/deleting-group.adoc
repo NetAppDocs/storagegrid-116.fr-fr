@@ -1,0 +1,35 @@
+---
+permalink: tenant/deleting-group.html 
+sidebar: sidebar 
+keywords: how to delete tenant group 
+summary: Vous pouvez supprimer un groupe du système. Les utilisateurs appartenant uniquement à ce groupe ne pourront plus se connecter au Gestionnaire de locataires ni utiliser le compte de tenant. 
+---
+= Supprimer le groupe
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez supprimer un groupe du système. Les utilisateurs appartenant uniquement à ce groupe ne pourront plus se connecter au Gestionnaire de locataires ni utiliser le compte de tenant.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous devez être connecté au Gestionnaire de locataires à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous devez appartenir à un groupe d'utilisateurs qui dispose de l'autorisation accès racine. Voir xref:tenant-management-permissions.adoc[Autorisations de gestion des locataires].
+
+
+.Étapes
+. Sélectionnez *ACCESS MANAGEMENT* *Groups*.
++
+image::../media/tenant_add_groups_example.png[Capture d'écran de la page Access Control Groups]
+
+. Cochez les cases des groupes que vous souhaitez supprimer.
+. Sélectionnez *actions* *Supprimer le groupe*.
++
+Un message de confirmation s'affiche.
+
+. Sélectionnez *Supprimer le groupe* pour confirmer la suppression des groupes indiqués dans le message de confirmation.
++
+Un message de confirmation s'affiche dans le coin supérieur droit de la page. L'application des modifications peut prendre jusqu'à 15 minutes à cause de la mise en cache.
+
+

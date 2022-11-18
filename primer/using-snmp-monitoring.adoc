@@ -1,0 +1,39 @@
+---
+permalink: primer/using-snmp-monitoring.html 
+sidebar: sidebar 
+keywords: snmp, simple network management protocol, agent, trap, inform, mib 
+summary: 'Si vous souhaitez surveiller StorageGRID à l"aide du protocole simple de gestion de réseau \(SNMP\), vous pouvez utiliser le gestionnaire de grille pour configurer l"agent SNMP.' 
+---
+= Utiliser la surveillance SNMP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous souhaitez surveiller StorageGRID à l'aide du protocole SNMP (simple Network Management Protocol), vous pouvez utiliser le gestionnaire de grille pour configurer l'agent SNMP.
+
+Chaque nœud StorageGRID exécute un agent SNMP, ou un démon, qui fournit une base d'informations de gestion (MIB). La MIB StorageGRID contient des définitions de tableau et de notification pour les alertes et les alarmes. Chaque nœud StorageGRID supporte également un sous-ensemble d'objets MIB-II.
+
+Au départ, le protocole SNMP est désactivé sur tous les nœuds. Lorsque vous configurez l'agent SNMP, tous les nœuds StorageGRID reçoivent la même configuration.
+
+L'agent SNMP StorageGRID prend en charge les trois versions du protocole SNMP. L'agent fournit un accès MIB en lecture seule pour les requêtes et il peut envoyer deux types de notifications événementielle à un système de gestion :
+
+* *Les traps* sont des notifications envoyées par l'agent SNMP qui ne nécessitent pas d'accusé de réception par le système de gestion. Les interruptions servent à signaler au système de gestion qu'une alerte s'est produite au sein de StorageGRID, par exemple. Les traps sont pris en charge dans les trois versions de SNMP.
+* *Inform* sont similaires aux pièges, mais ils exigent une reconnaissance du système de gestion. Si l'agent SNMP ne reçoit pas d'accusé de réception dans un certain temps, il renvoie l'information jusqu'à ce qu'un accusé de réception soit reçu ou que la valeur de nouvelle tentative maximale ait été atteinte. Les informations sont prises en charge dans SNMPv2c et SNMPv3.
+
+
+Les notifications d'interruption et d'information sont envoyées dans les cas suivants :
+
+* Une alerte par défaut ou personnalisée est déclenchée à tout niveau de gravité. Pour supprimer les notifications SNMP pour une alerte, vous devez configurer un silence pour l'alerte. Les notifications d'alerte sont envoyées par n'importe quel nœud d'administration configuré pour être l'expéditeur préféré.
+* Certaines alarmes (système hérité) sont déclenchées à des niveaux de gravité spécifiés ou plus.
++
+
+NOTE: Les notifications SNMP ne sont pas envoyées pour chaque alarme ou chaque gravité d'alarme.
+
+
+
+*Informations connexes*
+
+* xref:../monitor/index.adoc[Surveiller et résoudre les problèmes]
+

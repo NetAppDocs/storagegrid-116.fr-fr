@@ -1,0 +1,63 @@
+---
+permalink: tenant/configuring-cross-origin-resource-sharing-cors.html 
+sidebar: sidebar 
+keywords: how to configure cross-origin resource sharing, cors 
+summary: 'Vous pouvez configurer le partage de ressources inter-origine \(CORS\) pour un compartiment S3 si vous souhaitez que ce compartiment et les objets de ce compartiment soient accessibles aux applications Web dans d"autres domaines.' 
+---
+= Configurer le partage de ressources inter-origine (CORS)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez configurer le partage de ressources inter-origine (CORS) pour un compartiment S3 si vous souhaitez que ce compartiment et les objets de ce compartiment soient accessibles aux applications Web dans d'autres domaines.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous devez être connecté au Gestionnaire de locataires à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous devez appartenir à un groupe d'utilisateurs possédant l'autorisation gérer toutes les rubriques ou accès racine. Ces autorisations remplacent les paramètres d'autorisations des stratégies de groupes ou de compartiments.
+
+
+Le partage de ressources d'origine croisée (CORS) est un mécanisme de sécurité qui permet aux applications Web clientes d'un domaine d'accéder aux ressources d'un domaine différent. Supposons par exemple que vous utilisez un compartiment S3 nommé `Images` pour stocker des graphiques. En configurant CORS pour l' `Images` le champ permet d'afficher les images de ce compartiment sur le site web `http://www.example.com`.
+
+.Étapes
+. Utilisez un éditeur de texte pour créer le XML requis pour activer CORS.
++
+Cet exemple montre le code XML utilisé pour activer le code commande pour un compartiment S3. Ce XML permet à n'importe quel domaine d'envoyer des requêtes GET au compartiment, mais il n'autorise que le `+http://www.example.com+` Domaine pour envoyer des demandes POST et DE SUPPRESSION. Tous les en-têtes de demande sont autorisés.
+
++
+[listing]
+----
+<CORSConfiguration
+    xmlns="http://s3.amazonaws.com/doc/2020-10-22/">
+    <CORSRule>
+        <AllowedOrigin>*</AllowedOrigin>
+        <AllowedMethod>GET</AllowedMethod>
+        <AllowedHeader>*</AllowedHeader>
+    </CORSRule>
+    <CORSRule>
+        <AllowedOrigin>http://www.example.com</AllowedOrigin>
+        <AllowedMethod>GET</AllowedMethod>
+        <AllowedMethod>POST</AllowedMethod>
+        <AllowedMethod>DELETE</AllowedMethod>
+        <AllowedHeader>*</AllowedHeader>
+    </CORSRule>
+</CORSConfiguration>
+----
++
+Pour plus d'informations sur le XML de configuration CORS, voir http://docs.aws.amazon.com/AmazonS3/latest/dev/Welcome.html["Documentation Amazon Web Services (AWS) : guide du développeur Amazon simple Storage Service"^].
+
+. Dans le Gestionnaire de locataires, sélectionnez *STORAGE (S3)* *seaux*.
+. Sélectionnez le nom du compartiment dans la liste.
++
+La page des détails du compartiment s'affiche.
+
+. Sélectionnez *accès au compartiment* *partage de ressources d'origine croisée (CORS)*.
+. Cochez la case *Activer CORS*.
+. Collez le code XML de configuration CORS dans la zone de texte, puis sélectionnez *Enregistrer les modifications*.
++
+image::../media/cors_configuration_xml.png[Capture d'écran montrant le code XML de configuration COR]
+
+. Pour modifier le paramètre CORS pour le compartiment, mettez à jour le code XML de configuration CORS dans la zone de texte ou sélectionnez *Clear* pour recommencer. Sélectionnez ensuite *Enregistrer les modifications*.
+. Pour désactiver CORS pour le compartiment, décochez la case *Activer CORS*, puis sélectionnez *Enregistrer les modifications*.
+

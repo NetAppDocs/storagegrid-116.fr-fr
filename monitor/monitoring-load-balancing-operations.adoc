@@ -1,0 +1,78 @@
+---
+permalink: monitor/monitoring-load-balancing-operations.html 
+sidebar: sidebar 
+keywords: load balancing, monitoring 
+summary: 'Si vous utilisez un équilibreur de charge pour gérer les connexions client à StorageGRID, vous devez surveiller les opérations d"équilibrage de charge après avoir configuré le système initialement et après avoir effectué des modifications de configuration ou effectué une extension.' 
+---
+= Surveiller les opérations d'équilibrage de charge
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous utilisez un équilibreur de charge pour gérer les connexions client à StorageGRID, vous devez surveiller les opérations d'équilibrage de charge après avoir configuré le système initialement et après avoir effectué des modifications de configuration ou effectué une extension.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous devez disposer d'autorisations d'accès spécifiques.
+
+
+Vous pouvez utiliser le service Load Balancer sur les nœuds d'administration ou les nœuds de passerelle, un équilibreur de charge tiers externe ou le service CLB sur les nœuds de passerelle pour distribuer les requêtes client sur plusieurs nœuds de stockage.
+
+
+NOTE: Le service CLB est obsolète.
+
+Une fois l'équilibrage de la charge configuré, vérifiez que les opérations d'ingestion et de récupération des objets sont réparties de manière homogène entre les nœuds de stockage. La répartition homogène des demandes permet à StorageGRID de rester réactif aux demandes des clients sous charge et de maintenir les performances des clients.
+
+Si vous avez configuré un groupe haute disponibilité de nœuds de passerelle ou de nœuds d'administration en mode de sauvegarde active/active, seul un nœud du groupe distribue activement les requêtes client.
+
+Reportez-vous à la section sur la configuration des connexions client dans les instructions d'administration de StorageGRID.
+
+.Étapes
+. Si les clients S3 ou Swift se connectent à l'aide du service Load Balancer, vérifiez que les nœuds d'administration ou les nœuds de passerelle distribuent le trafic activement, comme indiqué :
++
+.. Sélectionnez *NOEUDS*.
+.. Sélectionnez un nœud de passerelle ou un nœud d'administration.
+.. Dans l'onglet *Présentation*, vérifiez si une interface de nœud se trouve dans un groupe HA et si l'interface de nœud a le rôle maître.
++
+Les nœuds ayant le rôle Master et les nœuds qui ne se trouvent pas dans un groupe haute disponibilité doivent être activement répartis les demandes vers les clients.
+
+.. Pour chaque nœud qui doit distribuer activement les demandes client, sélectionnez l'onglet *Load Balancer*.
+.. Consultez le graphique du trafic des demandes d'équilibrage de charge pour la dernière semaine afin de vous assurer que le nœud distribue activement les demandes.
++
+Les nœuds d'un groupe haute disponibilité à sauvegarde active peuvent parfois prendre le rôle de sauvegarde. Pendant ce temps, les nœuds ne distribuent pas les requêtes client.
+
+.. Consultez le graphique du taux de demande entrant de Load Balancer pour la dernière semaine afin de vérifier le débit d'objet du nœud.
+.. Répétez cette procédure pour chaque nœud d'administration ou de passerelle du système StorageGRID.
+.. Vous pouvez également utiliser les stratégies de classification du trafic pour afficher une ventilation plus détaillée du trafic servi par le service Load Balancer.
+
+
+. Si les clients S3 ou Swift se connectent à l'aide du service CLB (obsolète), effectuez les vérifications suivantes :
++
+.. Sélectionnez *NOEUDS*.
+.. Sélectionnez un nœud de passerelle.
+.. Dans l'onglet *Présentation*, vérifiez si une interface de nœud se trouve dans un groupe HA et si l'interface de nœud a le rôle Master.
++
+Les nœuds ayant le rôle Master et les nœuds qui ne se trouvent pas dans un groupe haute disponibilité doivent être activement répartis les demandes vers les clients.
+
+.. Pour chaque noeud de passerelle qui doit être en train de distribuer activement les demandes client, sélectionnez *SUPPORT* *Outils* *topologie de grille*.
+.. Sélectionnez *_Gateway Node_* *CLB* *HTTP* *Présentation* *main*.
+.. Vérifiez le nombre de *sessions entrantes - établies* pour vérifier que le nœud de passerelle a traité activement les demandes.
+
+
+. Vérifiez que ces demandes sont réparties de manière homogène vers les nœuds de stockage.
++
+.. Sélectionnez *_Storage Node_* *LDR* *HTTP*.
+.. Examiner le nombre de *sessions entrantes actuellement établies*.
+.. Répétez l'opération pour chaque nœud de stockage de la grille.
++
+Le nombre de sessions doit être approximativement égal sur tous les nœuds de stockage.
+
+
+
+
+
+xref:../admin/index.adoc[Administrer StorageGRID]
+
+xref:viewing-load-balancer-tab.adoc[Affichez l'onglet Load Balancer]

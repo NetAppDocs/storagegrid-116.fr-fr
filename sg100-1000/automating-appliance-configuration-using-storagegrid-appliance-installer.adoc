@@ -1,0 +1,102 @@
+---
+permalink: sg100-1000/automating-appliance-configuration-using-storagegrid-appliance-installer.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, automate, automating, automation, automatic, configuration, configure, appliance installer 
+summary: 'Vous pouvez automatiser la configuration d"une appliance à l"aide d"un fichier JSON qui contient les informations de configuration. Vous téléchargez le fichier à l"aide du programme d"installation de l"appliance StorageGRID.' 
+---
+= Automatisez la configuration de l'appliance avec le programme d'installation de l'appliance StorageGRID
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez automatiser la configuration d'une appliance à l'aide d'un fichier JSON qui contient les informations de configuration. Vous téléchargez le fichier à l'aide du programme d'installation de l'appliance StorageGRID.
+
+.Ce dont vous avez besoin, 8217;ll
+* Votre appareil doit être équipé du dernier micrologiciel compatible avec StorageGRID 11.5 ou une version ultérieure.
+* Vous devez être connecté au programme d'installation de l'appliance StorageGRID sur l'appliance que vous configurez à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+
+
+Vous pouvez automatiser les tâches de configuration de l'appliance, telles que la configuration des éléments suivants :
+
+* Réseau Grid, réseau d'administration et adresses IP du réseau client
+* Interface BMC
+* Liens réseau
++
+** Mode de liaison du port
+** Mode de liaison réseau
+** Vitesse de liaison
+
+
+
+
+La configuration de votre appliance à l'aide d'un fichier JSON téléchargé est souvent plus efficace que la configuration manuelle à l'aide de plusieurs pages du programme d'installation de l'appliance StorageGRID, en particulier si vous devez configurer de nombreux nœuds. Vous devez appliquer le fichier de configuration pour chaque nœud un par un.
+
+
+NOTE: Les utilisateurs expérimentés qui souhaitent automatiser à la fois l'installation et la configuration de leurs appliances peuvent xref:automating-installation-configuration-appliance-nodes-configure-sga-py-script.adoc[utilisez le script configure-sga.py].
+
+.Étapes
+. Générez le fichier JSON à l'aide de l'un des éléments suivants :
++
+** Le https://configbuilder.netapp.com/["Application ConfigBuilder"^].
+** Le xref:automating-installation-configuration-appliance-nodes-configure-sga-py-script.adoc[configure-sga.py script de configuration de l'appliance]. Vous pouvez télécharger le script depuis le programme d'installation de l'appliance StorageGRID (*aide* *script de configuration de l'appliance*).
++
+Les noms de nœud dans le fichier JSON doivent respecter les exigences suivantes :
+
++
+*** Doit être un nom d'hôte valide contenant au moins 1 et pas plus de 32 caractères
+*** Vous pouvez utiliser des lettres, des chiffres et des tirets
+*** Impossible de commencer ou de terminer par un tiret
+*** Ne peut contenir que des chiffres
++
+
+IMPORTANT: Assurez-vous que les noms des nœuds (noms de niveau supérieur) du fichier JSON sont uniques ou que vous ne pouvez pas configurer plusieurs nœuds à l'aide du fichier JSON.
+
+
+
+
+
+. Sélectionnez *Advanced* *Update Appliance Configuration*.
++
+La page mise à jour de la configuration de l'appliance s'affiche.
+
++
+image::../media/update_appliance_configuration.png[Mettez à jour la page de configuration de l'appliance]
+
+. Sélectionnez le fichier JSON avec la configuration que vous souhaitez charger.
++
+.. Sélectionnez *Parcourir*.
+.. Localisez et sélectionnez le fichier.
+.. Sélectionnez *Ouvrir*.
++
+Le fichier est téléchargé et validé. Une fois le processus de validation terminé, le nom du fichier s'affiche à côté d'une coche verte.
+
++
+
+IMPORTANT: Vous risquez de perdre la connexion à l'appliance si la configuration du fichier JSON contient des sections « LINK_config », « réseaux » ou les deux. Si vous n'êtes pas reconnecté dans un délai d'une minute, entrez à nouveau l'URL de l'appliance en utilisant l'une des autres adresses IP attribuées à l'appliance.
+
++
+image::../media/update_appliance_configuration_valid_json.png[Mettez à jour la configuration de l'appliance JSON chargée]
+
++
+La liste déroulante *Nom de nœud* contient les noms de nœud de niveau supérieur définis dans le fichier JSON.
+
++
+
+NOTE: Si le fichier n'est pas valide, le nom du fichier s'affiche en rouge et un message d'erreur s'affiche dans une bannière jaune. Le fichier non valide n'est pas appliqué à l'appliance. Vous pouvez utiliser ConfigBuilder pour vérifier que vous disposez d'un fichier JSON valide.
+
+
+
+. Sélectionnez un noeud dans la liste déroulante *Nom de noeud*.
++
+Le bouton *Apply JSON configuration* est activé.
+
++
+image::../media/update_appliance_configuration_apply_button_enabled.png[Bouton mettre à jour la configuration de l'appliance appliquer activé]
+
+. Sélectionnez *appliquer la configuration JSON*.
++
+La configuration est appliquée au nœud sélectionné.
+
+

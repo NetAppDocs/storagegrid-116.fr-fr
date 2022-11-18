@@ -1,0 +1,79 @@
+---
+permalink: monitor/monitoring-network-connections-and-performance.html 
+sidebar: sidebar 
+keywords: monitoring, monitoring network connections, network, network performance 
+summary: 'Les nœuds de la grille doivent pouvoir communiquer les uns avec les autres pour permettre le fonctionnement de la grille. L"intégrité du réseau entre les nœuds et les sites, et la bande passante réseau entre les sites, sont essentielles à l"efficacité des opérations.' 
+---
+= Contrôle des connexions réseau et des performances
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les nœuds de la grille doivent pouvoir communiquer les uns avec les autres pour permettre le fonctionnement de la grille. L'intégrité du réseau entre les nœuds et les sites, et la bande passante réseau entre les sites, sont essentielles à l'efficacité des opérations.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous devez disposer d'autorisations d'accès spécifiques.
+
+
+La connectivité réseau et la bande passante sont d'autant plus importantes si votre stratégie de gestion du cycle de vie des informations (ILM) copie les objets répliqués entre des sites ou stocke des objets avec code d'effacement au moyen d'un système qui assure la protection contre la perte de site. Si le réseau entre les sites n'est pas disponible, que la latence du réseau est trop élevée ou que la bande passante du réseau est insuffisante, certaines règles ILM risquent de ne pas pouvoir placer les objets là où prévu. Cela peut entraîner des défaillances d'entrée (lorsque l'option d'ingestion est stricte pour les règles ILM) ou simplement une mauvaise performance d'entrée et des arriérés ILM.
+
+Grid Manager surveille la connectivité et les performances du réseau afin de résoudre tous les problèmes rapidement.
+
+Envisagez également de créer des règles de classification du trafic réseau pour fournir des fonctionnalités de surveillance et de limitation du trafic lié à des locataires, des compartiments, des sous-réseaux ou des terminaux d'équilibrage de la charge spécifiques. Voir la xref:../admin/index.adoc[Instructions d'administration de StorageGRID].
+
+.Étapes
+. Sélectionnez *NOEUDS*.
++
+La page nœuds s'affiche. Chaque nœud de la grille est répertorié au format de tableau.
+
++
+image::../media/nodes_menu.png[Menu noeuds]
+
+. Sélectionnez le nom de la grille, un site de centre de données spécifique ou un nœud de grille, puis sélectionnez l'onglet *réseau*.
++
+Le graphique trafic réseau fournit un récapitulatif du trafic réseau global pour la grille dans son ensemble, le site du centre de données ou le nœud.
+
++
+image::../media/nodes_page_network_traffic_graph.png[Courbes de trafic réseau de la page noeuds]
+
++
+.. Si vous avez sélectionné un nœud de grille, faites défiler vers le bas pour consulter la section *interfaces réseau* de la page.
++
+image::../media/nodes_page_network_interfaces.png[Nœuds page interfaces réseau]
+
+.. Pour les nœuds de grille, faites défiler vers le bas pour consulter la section *communication réseau* de la page.
++
+Les tableaux de réception et de transmission indiquent le nombre d'octets et de paquets reçus et envoyés sur chaque réseau ainsi que d'autres mesures de réception et de transmission.
+
++
+image::../media/nodes_page_network_communication.png[Nœuds page réseau Comm]
+
+
+
+. Utilisez les indicateurs associés à vos stratégies de classification de trafic pour surveiller le trafic réseau.
++
+.. Sélectionnez *CONFIGURATION* *réseau* *classification du trafic*.
++
+La page règles de classification du trafic s'affiche et les stratégies existantes sont répertoriées dans le tableau.
+
++
+image::../media/traffic_classification_policies_main_screen_w_examples.png[Politique de trafic pour un exemple de graphique]
+
+.. Pour afficher les graphiques présentant les mesures de réseau associées à une stratégie, sélectionnez le bouton radio à gauche de la stratégie, puis cliquez sur *métriques*.
+.. Consultez les graphiques pour comprendre le trafic réseau associé à la stratégie.
++
+Si une politique de classification du trafic est conçue pour limiter le trafic réseau, analysez la fréquence à laquelle le trafic est limité et déterminez si la politique continue de répondre à vos besoins. De temps en temps, ajustez chaque règle de classification de trafic selon les besoins.
+
++
+Pour créer, modifier ou supprimer des stratégies de classification de trafic, reportez-vous à la section xref:../admin/index.adoc[Instructions d'administration de StorageGRID].
+
+
+
+
+
+xref:viewing-network-tab.adoc[Afficher l'onglet réseau]
+
+xref:monitoring-node-connection-states.adoc[Surveiller les États de connexion du nœud]

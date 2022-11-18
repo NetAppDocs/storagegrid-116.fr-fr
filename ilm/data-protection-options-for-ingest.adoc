@@ -1,0 +1,69 @@
+---
+permalink: ilm/data-protection-options-for-ingest.html 
+sidebar: sidebar 
+keywords: ingest options, balanced ingest, strict ingest, dual-commit ingest 
+summary: 'Lorsque vous créez une règle ILM, vous choisissez l"une des trois options de protection des objets à l"entrée : double allocation, équilibrage ou stricte. Selon votre choix, StorageGRID effectue des copies intermédiaires et met les objets en file d"attente pour l"évaluation ILM. De plus, il utilise un placement synchrone et effectue immédiatement des copies pour répondre aux besoins de la solution ILM.' 
+---
+= Options de protection des données pour l'ingestion
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque vous créez une règle ILM, vous choisissez l'une des trois options de protection des objets à l'entrée : double allocation, équilibrage ou stricte. Selon votre choix, StorageGRID effectue des copies intermédiaires et met les objets en file d'attente pour l'évaluation ILM. De plus, il utilise un placement synchrone et effectue immédiatement des copies pour répondre aux besoins de la solution ILM.
+
+
+
+== Organigramme des trois options d'acquisition
+
+L'organigramme indique ce qui se passe lorsque les objets sont mis en correspondance par une règle ILM qui utilise chacune des trois options d'ingestion.
+
+image::../media/ingest_object_lifecycle.png[Schéma illustrant la manière dont l'ingestion d'objet a lieu pour chaque option de protection des données]
+
+
+
+== Double allocation
+
+Lorsque vous sélectionnez l'option Dual commit, StorageGRID effectue immédiatement des copies d'objet provisoires sur deux nœuds de stockage différents et renvoie un message « acquisition réussie » au client. L'objet est placé dans la file d'attente pour l'évaluation ILM et les copies correspondant aux instructions de placement de la règle sont créées ultérieurement.
+
+
+
+=== Quand utiliser l'option Double validation
+
+Utilisez l'option Dual commit dans l'un des cas suivants :
+
+* Vous utilisez des règles ILM multisites et la latence d'ingestion du client est votre élément principal. Lorsque vous utilisez la double allocation, vous devez vous assurer que votre grid peut effectuer les tâches supplémentaires de création et de suppression des copies à double allocation s'il ne satisfait pas la solution ILM. Détails :
++
+** La charge sur la grille doit être suffisamment faible pour éviter un backlog ILM.
+** La grille doit disposer de ressources matérielles excessives (IOPS, processeur, mémoire, bande passante réseau, etc.).
+
+
+* Vous utilisez des règles ILM multisites et la connexion WAN entre les sites présente généralement une latence élevée ou une bande passante limitée. Dans ce scénario, l'utilisation de l'option de double engagement permet d'éviter les délais d'attente du client. Avant de choisir l'option Dual commit, il est recommandé de tester l'application cliente avec des charges de travail réalistes.
+
+
+
+
+== Stricte
+
+Lorsque vous sélectionnez une option stricte, StorageGRID utilise le placement synchrone pour l'ingestion et immédiatement toutes les copies d'objet spécifiées dans les instructions de placement de la règle. L'ingestion a échoué si StorageGRID ne peut pas créer toutes les copies, par exemple, car un emplacement de stockage requis est temporairement indisponible. Le client doit recommencer l'opération.
+
+
+
+=== Quand utiliser l'option stricte
+
+Utilisez l'option stricte si vous devez respecter des exigences opérationnelles ou réglementaires pour stocker immédiatement les objets aux emplacements définis dans la règle ILM. Par exemple, pour répondre à une exigence réglementaire, vous devez utiliser l'option stricte et un filtre avancé de contrainte d'emplacement pour garantir que les objets ne sont jamais stockés dans certains data centers.
+
+xref:example-5-ilm-rules-and-policy-for-strict-ingest-behavior.adoc[Exemple 5 : règles et règles ILM pour un comportement d'ingestion strict]
+
+
+
+== Équilibré
+
+Lorsque vous sélectionnez l'option équilibrée, StorageGRID utilise également le placement synchrone lors de l'ingestion et immédiatement toutes les copies spécifiées dans les instructions de placement de la règle. Contrairement à l'option la plus stricte, StorageGRID ne peut pas faire immédiatement toutes les copies, utilise la fonction de double validation.
+
+
+
+=== Quand utiliser l'option équilibrée
+
+Utilisez l'option équilibrée afin de bénéficier de la meilleure combinaison possible de protection des données, de performances de grid et d'ingestion. Balance est l'option par défaut dans l'assistant de règles ILM.

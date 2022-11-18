@@ -1,0 +1,52 @@
+---
+permalink: admin/specifying-node-client-network-is-untrusted.html 
+sidebar: sidebar 
+keywords: how to specify if client network is untrusted, what is untrusted client network 
+summary: Si vous utilisez un réseau client, vous pouvez spécifier si le réseau client de chaque nœud est approuvé ou non. Vous pouvez également spécifier le paramètre par défaut pour les nouveaux nœuds ajoutés dans une extension. 
+---
+= Le réseau client du nœud spécifié n'est pas fiable
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous utilisez un réseau client, vous pouvez spécifier si le réseau client de chaque nœud est fiable ou non fiable. Vous pouvez également spécifier le paramètre par défaut pour les nouveaux nœuds ajoutés dans une extension.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous disposez de l'autorisation d'accès racine.
+* Si vous souhaitez qu'un nœud d'administration ou un nœud de passerelle accepte le trafic entrant uniquement sur des noeuds finaux configurés explicitement, vous avez défini les noeuds finaux de l'équilibreur de charge.
++
+
+NOTE: Les connexions client existantes peuvent échouer si les points de terminaison de l'équilibreur de charge n'ont pas été configurés.
+
+
+
+.Étapes
+. Sélectionnez *CONFIGURATION* *sécurité* *réseaux client non fiables*.
++
+La page réseaux clients non fiables répertorie tous les nœuds de votre système StorageGRID. La colonne motif indisponible comprend une entrée si le réseau client du nœud doit être approuvé.
+
++
+image::../media/untrusted_client_networks_page.png[Réseaux clients non fiables]
+
+. Dans la section *Set New Node Default* (définir nouveau nœud par défaut*), indiquez le paramètre par défaut à utiliser lorsque de nouveaux nœuds sont ajoutés à la grille dans une procédure d'extension.
++
+** *Trusted*: Lorsqu'un noeud est ajouté dans une extension, son réseau client est fiable.
+** *Non fiable* : lorsqu'un nœud est ajouté dans une extension, son réseau client n'est pas fiable. Si nécessaire, vous pouvez revenir à cette page pour modifier le paramètre d'un nouveau nœud spécifique.
+
+
++
+
+NOTE: Ce paramètre n'affecte pas les nœuds existants du système StorageGRID.
+
+. Dans la section *Sélectionner des nœuds réseau client non approuvés*, sélectionnez les nœuds qui doivent autoriser les connexions client uniquement sur les noeuds finaux de l'équilibreur de charge configurés explicitement.
++
+Vous pouvez sélectionner ou désélectionner la case à cocher du titre pour sélectionner ou désélectionner tous les nœuds.
+
+. Sélectionnez *Enregistrer*.
++
+Les nouvelles règles de pare-feu sont immédiatement ajoutées et appliquées. Les connexions client existantes peuvent échouer si les points de terminaison de l'équilibreur de charge n'ont pas été configurés.
+
+

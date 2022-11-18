@@ -1,0 +1,33 @@
+---
+permalink: upgrade/impact-of-upgrade-on-groups-and-user-accounts.html 
+sidebar: sidebar 
+keywords: upgrade, permissions 
+summary: 'Vous devez comprendre l"impact de la mise à niveau StorageGRID, afin de pouvoir mettre à jour les groupes et les comptes utilisateur de manière appropriée une fois la mise à niveau terminée.' 
+---
+= Impact d'une mise à niveau sur les groupes et les comptes d'utilisateurs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez comprendre l'impact de la mise à niveau StorageGRID, afin de pouvoir mettre à jour les groupes et les comptes utilisateur de manière appropriée une fois la mise à niveau terminée.
+
+
+
+== Modification des autorisations et des options de groupe
+
+Après la mise à niveau vers StorageGRID 11.6, sélectionnez éventuellement les nouvelles autorisations et options mises à jour ou suivantes (*CONFIGURATION* *contrôle d'accès* *groupes d'administration*).
+
+[cols="1a,2a"]
+|===
+| Autorisation ou option | Description 
+
+
+ a| 
+Comptes de locataires
+ a| 
+En plus de permettre aux utilisateurs de créer, modifier et supprimer des comptes de tenant, cette autorisation permet désormais aux utilisateurs admin d'afficher les stratégies de classification de trafic existantes (*CONFIGURATION* *réseau* *classification de trafic*).
+
+|===
+Voir xref:../admin/managing-admin-groups.adoc[Gérez les groupes d'administration].

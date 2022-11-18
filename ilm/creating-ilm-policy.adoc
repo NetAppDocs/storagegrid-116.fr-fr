@@ -1,0 +1,29 @@
+---
+permalink: ilm/creating-ilm-policy.html 
+sidebar: sidebar 
+keywords: create ILM policy, information lifecycle policy considerations 
+summary: 'Lorsque vous créez une règle ILM, vous commencez par sélectionner et organiser les règles ILM. Ensuite, vous vérifiez le comportement de votre stratégie proposée en la simulant contre des objets précédemment ingérés. Lorsque vous êtes satisfait du fait que la stratégie proposée fonctionne comme prévu, vous pouvez l"activer pour créer la stratégie active.' 
+---
+= Création de la règle ILM : présentation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque vous créez une règle ILM, vous commencez par sélectionner et organiser les règles ILM. Ensuite, vous vérifiez le comportement de votre stratégie proposée en la simulant contre des objets précédemment ingérés. Lorsque vous êtes satisfait du fait que la stratégie proposée fonctionne comme prévu, vous pouvez l'activer pour créer la stratégie active.
+
+
+CAUTION: Une règle ILM mal configurée peut entraîner une perte de données irrécupérable. Avant d'activer une politique ILM, examinez attentivement la politique ILM et ses règles ILM, puis simulez la politique ILM. Vérifiez toujours que la politique ILM fonctionne comme prévu.
+
+
+
+== Facteurs à prendre en compte lors de la création d'une règle ILM
+
+* Vous pouvez utiliser la règle intégrée du système, la règle de base 2 copies, dans les systèmes de test uniquement. La règle de création de 2 copies de cette règle utilise le pool de stockage tous les nœuds de stockage, qui contient tous les sites. Si votre système StorageGRID dispose de plusieurs sites, il est possible de placer deux copies d'un objet sur le même site.
+* Lors de la conception d'une nouvelle politique, tenez compte de tous les différents types d'objets pouvant être ingérés dans votre grille. Assurez-vous que la stratégie inclut des règles pour correspondre et placer ces objets selon les besoins.
+* Privilégiez la simplicité des règles ILM. Cela permet d'éviter les situations dangereuses dans lesquelles les données d'objet ne sont pas protégées comme prévu lorsque des modifications sont apportées au système StorageGRID au fil du temps.
+* Assurez-vous que les règles de la police sont dans le bon ordre. Lorsque la stratégie est activée, les objets nouveaux et existants sont évalués par les règles dans l'ordre indiqué, à partir du haut. Par exemple, si la première règle d'une règle correspond à un objet, cette règle ne sera pas évaluée par une autre règle.
+* La dernière règle de chaque politique ILM est la règle ILM par défaut, qui ne peut utiliser aucun filtre. Si un objet n'a pas été mis en correspondance par une autre règle, la règle par défaut contrôle l'emplacement de cet objet et la durée de conservation.
+* Avant d'activer une nouvelle stratégie, vérifiez les modifications apportées par la stratégie au placement des objets existants. La modification de l'emplacement d'un objet existant peut entraîner des problèmes de ressources temporaires lorsque les nouveaux placements sont évalués et implémentés.
+

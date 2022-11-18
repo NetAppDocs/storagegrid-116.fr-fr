@@ -1,0 +1,64 @@
+---
+permalink: sg5600/configuring-autosupport.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, configure, configuring, set up, setup, autosupport, auto support 
+summary: 'L"outil AutoSupport collecte les données dans un bundle de support client à partir de l"appliance et les envoie automatiquement au support technique. La configuration de AutoSupport aide le support technique à distance pour le dépannage et l"analyse des problèmes.' 
+---
+= Configurez AutoSupport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'outil AutoSupport collecte les données dans un bundle de support client à partir de l'appliance et les envoie automatiquement au support technique. La configuration de AutoSupport aide le support technique à distance pour le dépannage et l'analyse des problèmes.
+
+.Ce dont vous avez besoin, 8217;ll
+* La fonctionnalité AutoSupport doit être activée et activée sur l'appliance.
++
+La fonction AutoSupport est activée et désactivée globalement sur une station de gestion du stockage.
+
+* Le moniteur d'événements Storage Manager doit être exécuté sur au moins un ordinateur ayant accès à l'appareil et, de préférence, sur un ordinateur ou plus.
+
+
+Toutes les données sont compressées dans un seul format de fichier d'archive compressé (.7z) à l'emplacement spécifié.
+
+AutoSupport fournit les types de messages suivants :
+
+|===
+| Types de message | Description 
+
+
+ a| 
+Messages d'événement
+ a| 
+* Envoyé lorsqu'un événement d'assistance sur l'appliance gérée se produit
+* Incluez des informations de configuration du système et de diagnostic
+
+
+
+
+ a| 
+Messages quotidiens
+ a| 
+* Envoyé une fois par jour pendant un intervalle de temps configurable par l'utilisateur à l'heure locale de l'appareil
+* Incluez les journaux d'événements système actuels et les données de performances
+
+
+
+
+ a| 
+Messages hebdomadaires
+ a| 
+* Envoyé une fois par semaine pendant un intervalle de temps configurable par l'utilisateur à l'heure locale de l'appareil
+* Inclut des informations sur la configuration et l'état du système
+
+
+|===
+.Étapes
+. Dans la fenêtre gestion de l'entreprise du Gestionnaire de stockage SANtricity, sélectionnez l'onglet *périphériques*, puis sélectionnez *matrices de stockage découvertes*.
+. Sélectionnez *Outils* *AutoSupport* *Configuration*.
+. Si nécessaire, utilisez l'aide en ligne de SANtricity Storage Manager pour accomplir la tâche.
+
+
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61197["Documentation NetApp : responsable du stockage SANtricity"^]

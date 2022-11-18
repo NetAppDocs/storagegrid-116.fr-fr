@@ -1,0 +1,21 @@
+---
+permalink: admin/configuring-audit-client-access.html 
+sidebar: sidebar 
+keywords: audit client, ams, audit management service 
+summary: 'Le nœud d"administration, via le service Audit Management System \(AMS\), consigne tous les événements système vérifiés dans un fichier journal disponible via le partage d"audit, qui est ajouté à chaque nœud d"administration lors de l"installation. Pour faciliter l"accès aux journaux d"audit, vous pouvez configurer l"accès des clients aux partages d"audit pour CIFS et NFS.' 
+---
+= Configurez l'accès client d'audit
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le nœud d'administration, via le service AMS (Audit Management System), consigne tous les événements système vérifiés dans un fichier journal disponible via le partage d'audit, qui est ajouté à chaque nœud d'administration lors de l'installation. Pour faciliter l'accès aux journaux d'audit, vous pouvez configurer l'accès des clients aux partages d'audit pour CIFS et NFS.
+
+Le système StorageGRID utilise une reconnaissance positive pour éviter toute perte de messages d'audit avant qu'ils ne soient écrits dans le fichier journal. Un message reste placé dans la file d'attente d'un service jusqu'à ce que le service AMS ou un service de relais d'audit intermédiaire en ait reconnu le contrôle.
+
+Pour plus d'informations, voir xref:../audit/index.adoc[Examiner les journaux d'audit].
+
+
+NOTE: L'exportation d'audit via CIFS/Samba a été obsolète et sera supprimée dans une future version de StorageGRID. Si vous avez la possibilité d'utiliser CIFS ou NFS, choisissez NFS.

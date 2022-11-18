@@ -1,0 +1,33 @@
+---
+permalink: sg6000/hardware-setup-appears-to-hang.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, troubleshoot, troubleshooting, hardware, setup, hang, hangs, fails, failure, stop, terminate, terminates, stuck 
+summary: 'Il est possible que le programme d"installation de l"appliance StorageGRID ne soit pas disponible si des défaillances matérielles ou des erreurs de câblage empêchent les contrôleurs de stockage ou le contrôleur SG6000-CN de terminer leur traitement de démarrage.' 
+---
+= La configuration matérielle semble suspendue (SG6000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il est possible que le programme d'installation de l'appliance StorageGRID ne soit pas disponible si des défaillances matérielles ou des erreurs de câblage empêchent les contrôleurs de stockage ou le contrôleur SG6000-CN de terminer leur traitement de démarrage.
+
+.Étapes
+. Pour les contrôleurs de stockage, surveiller les codes sur les affichages à sept segments.
++
+Pendant l'initialisation du matériel pendant la mise sous tension, les deux affichages à sept segments affichent une séquence de codes. Lorsque le matériel démarre correctement, les deux affichages à sept segments s'affichent `99`.
+
+. Examinez les voyants du contrôleur SG6000-CN ainsi que les codes d'erreur et de démarrage affichés dans le contrôleur BMC.
+. Si vous avez besoin d'aide pour résoudre un problème, contactez le support technique.
+
+
+xref:viewing-boot-up-status-codes-for-sg6000-storage-controllers.adoc[Afficher les codes d'état de démarrage des contrôleurs de stockage SG6000]
+
+https://library.netapp.com/ecmdocs/ECMLP2588751/html/frameset.html["Guide de surveillance des systèmes E5700 et E2800"^]
+
+xref:viewing-status-indicators-and-buttons-on-sg6000-cn-controller.adoc[Afficher les indicateurs d'état et les boutons sur le contrôleur SG6000-CN]
+
+xref:viewing-boot-up-codes-for-sg6000-cn-controller.adoc[Afficher les codes de démarrage du contrôleur SG6000-CN]
+
+xref:viewing-error-codes-for-sg6000-cn-controller.adoc[Afficher les codes d'erreur du contrôleur SG6000-CN]

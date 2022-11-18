@@ -1,0 +1,42 @@
+---
+permalink: sg5600/verifying-receipt-of-autosupport.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, verify, verification, verifying, confirm, confirmation, confirming, autosupport, auto-support, status 
+summary: 'Vérifiez que le support technique reçoit vos messages AutoSupport. L"état de AutoSupport pour vos systèmes est disponible sur le portail Active IQ. La vérification de la réception de ces messages garantit que le support technique dispose de vos informations si vous avez besoin d"aide.' 
+---
+= Vérifier la réception de AutoSupport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vérifiez que le support technique reçoit vos messages AutoSupport. L'état de AutoSupport pour vos systèmes est disponible sur le portail Active IQ. La vérification de la réception de ces messages garantit que le support technique dispose de vos informations si vous avez besoin d'aide.
+
+AutoSupport peut afficher l'un des États suivants :
+
+* *LE*
++
+Si l'état EST ACTIVÉ, le support technique reçoit actuellement des messages AutoSupport du système.
+
+* *OFF*
++
+Le statut OFF vous suggère que vous avez peut-être désactivé AutoSupport, car le support technique n'a pas reçu de journal hebdomadaire du système au cours des 15 derniers jours. Vous pouvez également avoir modifié votre environnement ou votre configuration (par exemple).
+
+* *REFUSER*
++
+Un statut DE REFUS signifie que vous avez informé le support technique que vous n'activez pas AutoSupport.
+
+
+
+Dès que le support technique reçoit un journal hebdomadaire du système, le statut AutoSupport passe à ACTIVÉ.
+
+.Étapes
+. Accédez au site de support NetApp à l'adresse http://mysupport.netapp.com/["mysupport.netapp.com"^], Et connectez-vous au portail Active IQ.
+. Si le statut AutoSupport est désactivé et que vous pensez qu'il est incorrect, procédez comme suit :
++
+.. Vérifiez la configuration de votre système pour vous assurer que vous avez activé AutoSupport.
+.. Vérifiez votre environnement réseau et votre configuration pour vous assurer que le système peut envoyer des messages au support technique.
+
+
+

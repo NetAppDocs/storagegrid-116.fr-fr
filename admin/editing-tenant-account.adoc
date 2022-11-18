@@ -1,0 +1,67 @@
+---
+permalink: admin/editing-tenant-account.html 
+sidebar: sidebar 
+keywords: edit tenant account, change tenant name, allow platform services, tenant quota 
+summary: 'Vous pouvez modifier un compte de tenant pour modifier le nom d"affichage, modifier le paramètre du référentiel d"identité, autoriser ou interdire les services de plate-forme, ou entrer un quota de stockage.' 
+---
+= Modifiez le compte de tenant
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez modifier un compte de tenant pour modifier le nom d'affichage, modifier le paramètre du référentiel d'identité, autoriser ou interdire les services de plate-forme, ou entrer un quota de stockage.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous disposez d'autorisations d'accès spécifiques.
+
+
+.Étapes
+. Sélectionnez *LOCATAIRES*.
++
+image::../media/tenant_accounts_page.png[Page comptes de tenant]
+
+. Sélectionnez le compte de locataire à modifier.
++
+Utilisez la zone de recherche pour rechercher un compte de locataire par nom ou ID de locataire.
+
+. Dans la liste déroulante actions, sélectionnez *Modifier*.
++
+Cet exemple concerne une grille qui n'utilise pas SSO (Single Sign-on). Ce compte de tenant n'a pas configuré son propre référentiel d'identité.
+
++
+image::../media/edit_tenant_account.png[Modifier le compte de tenant]
+
+. Modifiez les valeurs de ces champs comme requis :
++
+** *Nom*
+** *Description*
+** *Type de client*
+** *Quota de stockage*
+
+
+. Sélectionnez *Continuer*.
+. Sélectionner ou désélectionner les autorisations pour le compte de tenant.
++
+** Si vous désactivez *Platform Services* pour un locataire qui les utilise déjà, les services qu'ils ont configurés pour leurs compartiments S3 cessent de fonctionner. Aucun message d'erreur n'est envoyé au locataire. Par exemple, si le locataire a configuré la réplication CloudMirror pour un compartiment S3, il peut toujours stocker les objets dans le compartiment, mais les copies de ces objets ne sont plus effectuées dans le compartiment S3 externe qu'ils ont configuré en tant que terminal.
+** Modifiez le paramètre de la case à cocher *utilise son propre référentiel d'identité* pour déterminer si le compte de tenant utilisera son propre référentiel d'identité ou le référentiel d'identité qui a été configuré pour le gestionnaire de grille.
++
+Si la case à cocher *utilise son propre référentiel d'identité* est :
+
++
+*** Désactivé et coché, le locataire a déjà activé son propre référentiel d'identité. Un locataire doit désactiver son référentiel d'identité avant de pouvoir utiliser le référentiel d'identité configuré pour Grid Manager.
+*** Désactivé et décoché, la fonctionnalité SSO est activée pour le système StorageGRID. Le locataire doit utiliser le référentiel d'identité qui a été configuré pour Grid Manager.
+
+
+** Activez ou désactivez *S3 Select* selon les besoins. Voir xref:manage-s3-select-for-tenant-accounts.adoc[Gérez S3 Select pour les comptes de locataires].
+
+
+. Sélectionnez *Enregistrer*.
+
+
+.Informations associées
+* xref:manage-platform-services-for-tenants.adoc[Gestion des services de plateforme pour les comptes de locataires S3]
+* xref:../tenant/index.adoc[Utilisez un compte de locataire]
+

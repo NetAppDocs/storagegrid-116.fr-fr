@@ -1,0 +1,39 @@
+---
+permalink: tenant/editing-group-name.html 
+sidebar: sidebar 
+keywords: how to edit tenant group name 
+summary: 'Vous pouvez modifier le nom d"affichage d"un groupe. Vous ne pouvez pas modifier le nom unique d"un groupe.' 
+---
+= Modifier le nom du groupe
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez modifier le nom d'affichage d'un groupe. Vous ne pouvez pas modifier le nom unique d'un groupe.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous devez être connecté au Gestionnaire de locataires à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous devez appartenir à un groupe d'utilisateurs qui dispose de l'autorisation accès racine. Voir xref:tenant-management-permissions.adoc[Autorisations de gestion des locataires].
+
+
+.Étapes
+. Sélectionnez *ACCESS MANAGEMENT* *Groups*.
+. Cochez la case du groupe dont vous souhaitez modifier le nom d'affichage.
+. Sélectionnez *actions* *Modifier le nom du groupe*.
++
+La boîte de dialogue Modifier le nom du groupe s'affiche.
+
++
+image::../media/edit_group_name.png[Modifier le nom du groupe]
+
+. Si vous modifiez un groupe local, mettez à jour le nom d'affichage selon vos besoins.
++
+Vous ne pouvez pas modifier le nom unique d'un groupe. Vous ne pouvez pas modifier le nom d'affichage d'un groupe fédéré.
+
+. Sélectionnez *Enregistrer les modifications*.
++
+Un message de confirmation s'affiche dans le coin supérieur droit de la page. L'application des modifications peut prendre jusqu'à 15 minutes à cause de la mise en cache.
+
+

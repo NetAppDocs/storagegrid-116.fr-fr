@@ -1,0 +1,89 @@
+---
+permalink: sg6000/viewing-status-indicators-and-buttons-on-sg6000-cn-controller.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, status, indicators, lights, leds, light, led, switch , button, power, reset, identify, alarm, indicator, boot codes, boot, code, start, startup, start up, start-up, progress, sg6000-cn 
+summary: 'Le contrôleur SG6000-CN comprend des indicateurs qui vous aident à déterminer l"état du contrôleur, y compris les voyants et boutons suivants.' 
+---
+= Afficher les indicateurs d'état et les boutons sur le contrôleur SG6000-CN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le contrôleur SG6000-CN comprend des indicateurs qui vous aident à déterminer l'état du contrôleur, y compris les voyants et boutons suivants.
+
+image::../media/sg6000_cn_front_indicators.gif[Clignotants avant - SG6000-CN]
+
+[cols="1a,2a,3a"]
+|===
+|  | Afficher | Description 
+
+
+ a| 
+1
+ a| 
+Bouton d'alimentation
+ a| 
+* Bleu : le contrôleur est sous tension.
+* OFF : le contrôleur est hors tension.
+
+
+
+
+ a| 
+2
+ a| 
+Bouton de réinitialisation
+ a| 
+_Aucun indicateur_
+
+Utilisez ce bouton pour effectuer une réinitialisation matérielle du contrôleur.
+
+
+
+ a| 
+3
+ a| 
+Bouton identifier
+ a| 
+* Bleu clignotant ou fixe : identifie le contrôleur dans l'armoire ou le rack.
+* OFF : le contrôleur n'est pas visuellement identifiable dans l'armoire ou le rack.
+
+
+Ce bouton peut être configuré pour clignoter, allumé (continu) ou éteint.
+
+
+
+ a| 
+4
+ a| 
+Voyant d'alarme
+ a| 
+* Orange : une erreur s'est produite.
++
+*Remarque :* pour afficher les codes de démarrage et d'erreur, vous devez accéder à l'interface BMC.
+
+* OFF : aucune erreur n'est présente.
+
+
+|===
+
+
+== Codes de démarrage généraux
+
+Lors du démarrage ou après une réinitialisation matérielle du contrôleur SG6000-CN, les événements suivants se produisent :
+
+. Le contrôleur BMC (Baseboard Management Controller) consigne les codes de la séquence de démarrage, y compris les erreurs qui se produisent.
+. Le bouton d'alimentation s'allume.
+. Si des erreurs se produisent au démarrage, le voyant d'alarme s'allume.
++
+Pour afficher les codes de démarrage et d'erreur, vous devez accéder à l'interface BMC.
+
+
+
+xref:troubleshooting-hardware-installation.adoc[Dépannage de l'installation du matériel (SG6000)]
+
+xref:configuring-bmc-interface-sg6000.adoc[Configurer l'interface BMC (SG6000)]
+
+xref:powering-on-sg6000-cn-controller-and-verifying-operation.adoc[Mettez le contrôleur SG6000-CN sous tension et vérifiez son fonctionnement]

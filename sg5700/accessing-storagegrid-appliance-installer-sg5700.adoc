@@ -1,0 +1,93 @@
+---
+permalink: sg5700/accessing-storagegrid-appliance-installer-sg5700.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, appliance installer, installer, access, accessing, start, starting 
+summary: 'Vous devez accéder au programme d"installation de l"appliance StorageGRID pour configurer les connexions entre l"appliance et les trois réseaux StorageGRID : le réseau Grid, le réseau d"administration \(facultatif\) et le réseau client \(facultatif\).' 
+---
+= Accédez au programme d'installation de l'appliance StorageGRID
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez accéder au programme d'installation de l'appliance StorageGRID pour configurer les connexions entre l'appliance et les trois réseaux StorageGRID : le réseau Grid, le réseau d'administration (facultatif) et le réseau client (facultatif).
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous utilisez un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* L'appliance est connectée à tous les réseaux StorageGRID que vous souhaitez utiliser.
+* Sur ces réseaux, vous connaissez l'adresse IP, la passerelle et le sous-réseau du dispositif.
+* Vous avez configuré les commutateurs réseau que vous prévoyez d'utiliser.
+
+
+Lorsque vous accédez pour la première fois au programme d'installation de l'appliance StorageGRID, vous pouvez utiliser l'adresse IP attribuée par DHCP pour le réseau Admin (en supposant que l'appliance est connectée au réseau Admin) ou l'adresse IP attribuée par DHCP pour le réseau Grid. L'utilisation de l'adresse IP du réseau d'administration est recommandée. Sinon, si vous accédez au programme d'installation de l'appliance StorageGRID à l'aide de l'adresse DHCP pour le réseau Grid, vous risquez de perdre la connexion avec le programme d'installation de l'appliance StorageGRID lorsque vous modifiez les paramètres de liaison et lorsque vous saisissez une adresse IP statique.
+
+.Étapes
+. Obtenez l'adresse DHCP de l'appliance sur le réseau Admin (s'il est connecté) ou sur le réseau Grid (si le réseau Admin n'est pas connecté).
++
+Vous pouvez effectuer l'une des opérations suivantes :
+
++
+** Regardez l'affichage à sept segments sur le contrôleur E5700SG. Si les ports 1 et 10/25-GbE 2 et 4 du contrôleur E5700SG sont connectés à des réseaux avec des serveurs DHCP, le contrôleur tente d'obtenir des adresses IP attribuées de manière dynamique lors de la mise sous tension du boîtier. Une fois le processus de mise sous tension terminé, l'affichage à sept segments indique *HO*, suivi d'une séquence répétée de deux nombres.
++
+[listing]
+----
+HO -- IP address for Admin Network -- IP address for Grid Network HO
+----
++
+Dans l'ordre :
+
++
+*** Le premier jeu de chiffres est l'adresse DHCP du nœud de stockage de l'appliance sur le réseau Admin, s'il est connecté. Cette adresse IP est attribuée au port de gestion 1 du contrôleur E5700SG.
+*** Le second jeu de chiffres correspond à l'adresse DHCP du nœud de stockage de l'appliance sur le réseau Grid. Cette adresse IP est attribuée aux ports 10/25-GbE 2 et 4 lorsque vous mettez l'appliance sous tension pour la première fois.
++
+
+NOTE: Si une adresse IP n'a pas pu être attribuée à l'aide de DHCP, 0.0.0.0 s'affiche.
+
+
+
+** Indiquez l'adresse MAC du port de gestion 1 à votre administrateur réseau afin qu'il puisse rechercher l'adresse DHCP de ce port sur le réseau Admin. L'adresse MAC est imprimée sur une étiquette située sur le contrôleur E5700SG, à côté du port.
+
+
+. Si vous avez pu obtenir l'une ou l'autre des adresses DHCP :
++
+.. Ouvrez un navigateur Web sur l'ordinateur portable de service.
+.. Entrez l'URL suivante pour le programme d'installation de l'appliance StorageGRID : +
+`*https://_E5700SG_Controller_IP_:8443*`
++
+Pour `_E5700SG_Controller_IP_`, Utilisez l'adresse DHCP du contrôleur (utilisez l'adresse IP du réseau Admin si vous l'avez).
+
+.. Si vous êtes invité à recevoir une alerte de sécurité, affichez et installez le certificat à l'aide de l'assistant d'installation du navigateur.
++
+L'alerte n'apparaît pas la prochaine fois que vous accédez à cette URL.
+
++
+La page d'accueil du programme d'installation de l'appliance StorageGRID s'affiche. Les informations et les messages affichés lorsque vous accédez pour la première fois à cette page dépendent de la manière dont votre appareil est actuellement connecté aux réseaux StorageGRID. Des messages d'erreur peuvent s'afficher et seront résolus dans les étapes suivantes.
+
++
+image::../media/appliance_installer_home_5700_5600.png[Capture d'écran de la partie supérieure de la page d'accueil du programme d'installation de l'appliance StorageGRID Webscale]
+
+
+
+. Si le contrôleur E5700SG n'a pas pu obtenir d'adresse IP à l'aide de DHCP :
++
+.. Connectez l'ordinateur portable de service au port de gestion 2 du contrôleur E5700SG à l'aide d'un câble Ethernet.
++
+image::../media/e5700sg_mgmt_port_2.gif[Emplacement du port de gestion 2 sur le contrôleur E5700SG]
+
+.. Ouvrez un navigateur Web sur l'ordinateur portable de service.
+.. Entrez l'URL suivante pour le programme d'installation de l'appliance StorageGRID : +
+`*\https://169.254.0.1:8443*`
++
+La page d'accueil du programme d'installation de l'appliance StorageGRID s'affiche. Les informations et les messages affichés lorsque vous accédez pour la première fois à cette page dépendent de la façon dont votre appareil est connecté.
+
++
+
+NOTE: Si vous ne pouvez pas accéder à la page d'accueil via une connexion lien-local, configurez l'adresse IP de l'ordinateur portable de service comme `169.254.0.2`, et réessayez.
+
+
+
+. Vérifiez les messages affichés sur la page d'accueil et configurez la configuration de liaison et la configuration IP, selon les besoins.
+
+
+xref:../admin/web-browser-requirements.adoc[Navigateurs Web pris en charge]

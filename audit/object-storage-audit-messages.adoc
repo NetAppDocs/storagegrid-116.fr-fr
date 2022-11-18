@@ -1,0 +1,135 @@
+---
+permalink: audit/object-storage-audit-messages.html 
+sidebar: sidebar 
+keywords: storagegrid, audit, object storage, object management, object retrieval, node transfer, verification, APCT, ARCB, ARCE, ARCT, AREM, ASCE, ASCT, ATCE, AVCC, CBSE, CBRE, SCMT, SREM 
+summary: 'Vous devez connaître les messages d"audit appartenant à la catégorie d"audit du stockage objet. Ce sont des événements liés au stockage et à la gestion des objets dans le système StorageGRID. Il s"agit notamment du stockage objet et des récupérations, des transferts entre nœuds grid et nœuds.' 
+---
+= Messages d'audit du stockage objet
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez connaître les messages d'audit appartenant à la catégorie d'audit du stockage objet. Ce sont des événements liés au stockage et à la gestion des objets dans le système StorageGRID. Il s'agit notamment du stockage objet et des récupérations, des transferts entre nœuds grid et nœuds.
+
+|===
+| Code | Description | Voir 
+
+
+ a| 
+APCT
+ a| 
+Suppression d'archivage à partir du Tier cloud : les données d'objet archivé sont supprimées d'un système de stockage d'archivage externe qui se connecte au StorageGRID via l'API S3.
+ a| 
+xref:apct-archive-purge-from-cloud-tier.adoc[APCT : archive Purge à partir du Tier cloud]
+
+
+
+ a| 
+ARCB
+ a| 
+Début de la récupération de l'objet d'archive : le service ARC lance la récupération des données d'objet à partir du système de stockage d'archives externe.
+ a| 
+xref:arcb-archive-object-retrieve-begin.adoc[ARCB : début de la récupération de l'objet d'archive]
+
+
+
+ a| 
+ARCE
+ a| 
+Fin de la récupération de l'objet d'archive : les données de l'objet ont été extraites d'un système de stockage d'archives externe et le service ARC signale l'état de l'opération de récupération.
+ a| 
+xref:arce-archive-object-retrieve-end.adoc[ARCE : fin de la récupération de l'objet d'archive]
+
+
+
+ a| 
+ARCT
+ a| 
+Archivage à partir du Tier cloud : les données d'objet archivé sont récupérées depuis un système de stockage d'archivage externe qui se connecte à StorageGRID via l'API S3.
+ a| 
+xref:arct-archive-retrieve-from-cloud-tier.adoc[ARCT : récupération d'archives depuis Cloud-Tier]
+
+
+
+ a| 
+AREM
+ a| 
+Suppression de l'objet d'archive : un bloc de contenu a été supprimé avec succès ou sans succès du système de stockage d'archives externe.
+ a| 
+xref:arem-archive-object-remove.adoc[AREM : suppression de l'objet d'archive]
+
+
+
+ a| 
+ASCE
+ a| 
+Fin du magasin d'objets d'archivage : un bloc de contenu a été écrit dans le système de stockage d'archives externe et le service ARC signale l'état de l'opération d'écriture.
+ a| 
+xref:asce-archive-object-store-end.adoc[ASCE : fin du magasin d'objets d'archivage]
+
+
+
+ a| 
+ASCT
+ a| 
+Tier dans le stockage d'archives : les données d'objet sont stockées dans un système de stockage d'archives externe qui se connecte à StorageGRID via l'API S3.
+ a| 
+xref:asct-archive-store-cloud-tier.adoc[ASCT : magasin d'archives, niveau du cloud]
+
+
+
+ a| 
+ATCE
+ a| 
+Début de l'archive du magasin d'objets : l'écriture d'un bloc de contenu sur un stockage d'archivage externe a commencé.
+ a| 
+xref:atce-archive-object-store-begin.adoc[ATCE : début du magasin d'objets d'archivage]
+
+
+
+ a| 
+AVCC
+ a| 
+Archive Valider la configuration du Tier cloud : les paramètres du compte et des compartiments fournis ont été validés avec succès ou non.
+ a| 
+xref:avcc-archive-validate-cloud-tier-configuration.adoc[AVCC : validation de la configuration du Tier cloud]
+
+
+
+ a| 
+CBSE
+ a| 
+Objet Envoyer fin : l'entité source a terminé une opération de transfert des données nœud-grille vers nœud-grille.
+ a| 
+xref:cbse-object-send-end.adoc[CBSE : fin de l'envoi de l'objet]
+
+
+
+ a| 
+CBRE
+ a| 
+Fin de réception de l'objet : l'entité de destination a terminé une opération de transfert des données nœud-grille vers nœud-grille.
+ a| 
+xref:cbre-object-receive-end.adoc[CBRE : fin de la réception de l'objet]
+
+
+
+ a| 
+BALAYAGE
+ a| 
+Validation d'un magasin d'objets : un bloc de contenu a été entièrement stocké et vérifié, et peut désormais être demandé.
+ a| 
+xref:scmt-object-store-commit.adoc[SCMT : validation du magasin d'objets]
+
+
+
+ a| 
+SREM
+ a| 
+Suppression du magasin d'objets : un bloc de contenu a été supprimé d'un nœud de grille et ne peut plus être demandé directement.
+ a| 
+xref:srem-object-store-remove.adoc[SREM : Suppression du magasin d'objets]
+
+|===

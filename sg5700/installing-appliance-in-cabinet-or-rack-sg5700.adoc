@@ -1,0 +1,67 @@
+---
+permalink: sg5700/installing-appliance-in-cabinet-or-rack-sg5700.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, install, installing, installation, cabinet, rack, rail, rails 
+summary: 'Vous devez installer des rails dans votre armoire ou rack, puis faire glisser l"appareil sur les rails. Si vous disposez d"un SG5760, vous devez également installer les disques après avoir installé l"appliance.' 
+---
+= Installation de l'appliance dans l'armoire ou en rack (SG5700)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez installer des rails dans votre armoire ou rack, puis faire glisser l'appareil sur les rails. Si vous disposez d'un SG5760, vous devez également installer les disques après avoir installé l'appliance.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous avez passé en revue le document consignes de sécurité inclus dans la boîte et compris les précautions à prendre pour déplacer et installer le matériel.
+* Les instructions sont fournies avec le kit de rails.
+* Vous disposez du _instructions d'installation et de configuration_ pour l'appareil.
+
+
+
+CAUTION: Installez le matériel depuis le bas du rack ou de l'armoire, ou montez le rack pour éviter que l'équipement ne bascule.
+
+
+CAUTION: Le SG5712 pèse environ 29 kg (64 lb) lorsqu'il est entièrement chargé avec des disques. Deux personnes ou un dispositif de levage mécanisé sont nécessaires pour déplacer le SG5712 en toute sécurité.
+
+
+CAUTION: Le SG5760 pèse environ 60 kg (132 lb) et n'a pas de disque installé. Quatre personnes ou un dispositif de levage mécanisé sont nécessaires pour déplacer en toute sécurité un SG5760 vide.
+
+
+CAUTION: Pour éviter d'endommager le matériel, ne déplacez jamais un SG5760 si des lecteurs sont installés. Vous devez retirer tous les disques avant de déplacer le tiroir.
+
+.Étapes
+. Suivez attentivement les instructions du kit de rails pour installer les rails dans votre armoire ou rack.
+. Si vous avez un SG5760, suivez ces étapes pour préparer le déplacement de l'appareil.
++
+.. Retirez la boîte d'emballage extérieure. Pliez ensuite les rabats du boîtier intérieur.
+.. Si vous soulevez le SG5760 à la main, fixez les quatre poignées sur les côtés du châssis.
++
+Vous retirez ces poignées lorsque vous faites glisser l'appareil sur les rails.
+
+
+
+. Reportez-vous aux instructions _installation and Setup_ et faites glisser l'appareil dans l'armoire ou le rack.
+. Reportez-vous aux _instructions d'installation et de configuration_ et fixez l'appareil à l'armoire ou au rack.
++
+Si vous avez SG5760, fixez l'appliance à l'arrière du rack ou de l'armoire à l'aide des supports arrière. Utilisez les écrous de la cage si votre rack ou votre armoire a des trous carrés.
+
+. Si vous avez SG5760, installez 12 disques dans chacun des 5 tiroirs.
++
+Vous devez installer les 60 disques pour assurer le bon fonctionnement.
+
++
+.. Placez le bracelet antistatique et retirez les lecteurs de leur emballage.
+.. Relâchez les leviers du tiroir d'entraînement supérieur et faites glisser le tiroir vers l'extérieur à l'aide des leviers.
+.. Relevez la poignée du lecteur à la verticale et alignez les boutons du lecteur avec les encoches du tiroir.
++
+image::../media/appliance_drive_insertion.gif[Installez le lecteur dans l'appliance à 60 disques]
+
+.. Appuyez doucement sur le haut du lecteur, faites pivoter la poignée du lecteur vers le bas jusqu'à ce qu'il s'enclenche.
+.. Après avoir installé les 12 premiers lecteurs, faites glisser le tiroir vers l'intérieur en poussant sur le centre et en fermant doucement les deux leviers.
+.. Répétez ces étapes pour les quatre autres tiroirs.
+
+
+. Fixez le cadre avant.
+

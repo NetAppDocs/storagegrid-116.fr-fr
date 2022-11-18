@@ -1,0 +1,23 @@
+---
+permalink: maintain/recovering-from-system-drive-failure.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, system drive failure 
+summary: 'Si le lecteur système d"un nœud de stockage logiciel est défectueux, le nœud de stockage n"est pas disponible pour le système StorageGRID. Vous devez effectuer un ensemble spécifique de tâches pour effectuer une restauration en cas de panne de disque système.' 
+---
+= Restaurez les données après une panne de disque système
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si le lecteur système d'un nœud de stockage logiciel est défectueux, le nœud de stockage n'est pas disponible pour le système StorageGRID. Vous devez effectuer un ensemble spécifique de tâches pour effectuer une restauration en cas de panne de disque système.
+
+Utilisez cette procédure pour effectuer une restauration après une panne de lecteur système sur un nœud de stockage logiciel. Cette procédure comprend les étapes à suivre si un volume de stockage également a échoué ou ne peut pas être remonté.
+
+
+NOTE: Cette procédure s'applique uniquement aux nœuds de stockage basés sur logiciel. Vous devez suivre une procédure différente pour restaurer un nœud de stockage d'appliance.
+
+xref:recovering-storagegrid-appliance-storage-node.adoc[Restaurez le nœud de stockage de l'appliance]
+
+image::../media/storage_node_recovery_system_drive.gif[Étapes de restauration pour le lecteur système défectueux sur le nœud de stockage logiciel]

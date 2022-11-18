@@ -1,0 +1,208 @@
+---
+permalink: audit/system-audit-messages.html 
+sidebar: sidebar 
+keywords: storagegrid, audit, message, messages, system, ECOC, ETAF, GNRG, GNUR, GTED, GTST, GTSU, IDEL, LKCU, LLST, OLST, ORLM, SADD, SADE, SVRF, SVRU, SYSD, SYST, SYSU, VLST 
+summary: 'Vous devez connaître les messages d"audit appartenant à la catégorie d"audit système. Ce sont des événements liés au système d"audit lui-même, aux États des nœuds grid, à l"activité des tâches à l"échelle du système \(tâches grid\) et aux opérations de sauvegarde de service, pour vous permettre de résoudre les problèmes potentiels.' 
+---
+= Messages d'audit système
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez connaître les messages d'audit appartenant à la catégorie d'audit système. Il s'agit d'événements liés au système d'audit lui-même, à l'état des nœuds grid, à l'activité des tâches à l'échelle du système (tâches grid) et aux opérations de sauvegarde de service, pour que vous puissiez résoudre les problèmes potentiels.
+
+|===
+| Code | Titre et description du message | Voir 
+
+
+ a| 
+ECMC
+ a| 
+Fragment de données avec code d'effacement manquant : indique qu'un fragment de données avec code d'effacement manquant a été détecté.
+ a| 
+xref:ecmc-missing-erasure-coded-data-fragment.adoc[ECMC : fragment de données codé d'effacement manquant]
+
+
+
+ a| 
+ECOC
+ a| 
+Fragment de données codé d'effacement corrompu : indique qu'un fragment de données codé d'effacement corrompu a été détecté.
+ a| 
+xref:ecoc-corrupt-erasure-coded-data-fragment.adoc[ECOC : fragment de données codé d'effacement corrompu]
+
+
+
+ a| 
+EN
+ a| 
+Échec de l'authentification de sécurité : une tentative de connexion à l'aide du protocole TLS (transport Layer Security) a échoué.
+ a| 
+xref:etaf-security-authentication-failed.adoc[ETAF : échec de l'authentification de sécurité]
+
+
+
+ a| 
+GNRG
+ a| 
+Enregistrement GNDS : service mis à jour ou enregistré des informations sur lui-même dans le système StorageGRID.
+ a| 
+xref:gnrg-gnds-registration.adoc[GNRG : enregistrement GNDS]
+
+
+
+ a| 
+GNUR
+ a| 
+Annulation de l'enregistrement du GNDS : un service s'est désinscrit du système StorageGRID.
+ a| 
+xref:gnur-gnds-unregistration.adoc[GNUR : non-inscription du GNDS]
+
+
+
+ a| 
+GTED
+ a| 
+Tâche de grille terminée : le service CMN a terminé le traitement de la tâche de grille.
+ a| 
+xref:gted-grid-task-ended.adoc[GTED : tâche de grille terminée]
+
+
+
+ a| 
+GTST
+ a| 
+Tâche de grille démarrée : le service CMN a commencé à traiter la tâche de grille.
+ a| 
+xref:gtst-grid-task-started.adoc[GTST : tâche de grille démarrée]
+
+
+
+ a| 
+GTSU
+ a| 
+Tâche de grille soumise : une tâche de grille a été envoyée au service CMN.
+ a| 
+xref:gtsu-grid-task-submitted.adoc[GTSU : tâche de grille soumise]
+
+
+
+ a| 
+IDEL
+ a| 
+Suppression initiée de l'ILM : ce message d'audit est généré lorsque l'ILM démarre le processus de suppression d'un objet.
+ a| 
+xref:idel-ilm-initiated-delete.adoc[IDEL : suppression initiée ILM]
+
+
+
+ a| 
+LKCU
+ a| 
+Nettoyage d'objet écrasé. Ce message d'audit est généré lorsqu'un objet écrasé est automatiquement supprimé pour libérer de l'espace de stockage.
+ a| 
+xref:lkcu-overwritten-object-cleanup.adoc[LKCU : nettoyage d'objet écrasé]
+
+
+
+ a| 
+LLST
+ a| 
+Emplacement perdu : ce message d'audit est généré en cas de perte d'un emplacement.
+ a| 
+xref:llst-location-lost.adoc[LLST : emplacement perdu]
+
+
+
+ a| 
+OLST
+ a| 
+Objet perdu : un objet demandé ne peut pas se trouver dans le système StorageGRID.
+ a| 
+xref:olst-system-detected-lost-object.adoc[OLST : le système a détecté un objet perdu]
+
+
+
+ a| 
+ORLM
+ a| 
+Règles d'objet respectées : les données d'objet sont stockées comme spécifié par les règles ILM.
+ a| 
+xref:orlm-object-rules-met.adoc[ORLM : règles d'objet respectées]
+
+
+
+ a| 
+AJOUTER
+ a| 
+Désactivation de l'audit de sécurité : l'enregistrement des messages d'audit a été désactivé.
+ a| 
+xref:sadd-security-audit-disable.adoc[SADD : désactivation de l'audit de sécurité]
+
+
+
+ a| 
+SADE
+ a| 
+Activation de l'audit de sécurité : la journalisation des messages d'audit a été restaurée.
+ a| 
+xref:sade-security-audit-enable.adoc[SADE : activation de l'audit de sécurité]
+
+
+
+ a| 
+SVRF
+ a| 
+Échec de la vérification du magasin d'objets : échec de la vérification d'un bloc de contenu.
+ a| 
+xref:svrf-object-store-verify-fail.adoc[SVRF : échec de la vérification du magasin d'objets]
+
+
+
+ a| 
+SVRU
+ a| 
+Vérification du magasin d'objets Inconnu : données d'objet inattendues détectées dans le magasin d'objets.
+ a| 
+xref:svru-object-store-verify-unknown.adoc[SVRU : Vérification du magasin d'objets inconnue]
+
+
+
+ a| 
+SYSD
+ a| 
+Arrêt du nœud : un arrêt a été demandé.
+ a| 
+xref:sysd-node-stop.adoc[SYSD : arrêt du nœud]
+
+
+
+ a| 
+SYST
+ a| 
+Arrêt du nœud : un service a démarré un arrêt normal.
+ a| 
+xref:syst-node-stopping.adoc[SYST : arrêt du nœud]
+
+
+
+ a| 
+SYSU
+ a| 
+Node Start : service démarré, la nature de l'arrêt précédent est indiquée dans le message.
+ a| 
+xref:sysu-node-start.adoc[SYSU : démarrage du nœud]
+
+
+
+ a| 
+VLST
+ a| 
+Volume lancé par l'utilisateur perdu : le `/proc/CMSI/Volume_Lost` la commande a été exécutée.
+ a| 
+xref:vlst-user-initiated-volume-lost.adoc[VLST : perte du volume généré par l'utilisateur]
+
+|===
+xref:lkcu-overwritten-object-cleanup.adoc[LKCU : nettoyage d'objet écrasé]

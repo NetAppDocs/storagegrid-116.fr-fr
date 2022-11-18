@@ -1,0 +1,43 @@
+---
+permalink: sg100-1000/unpacking-boxes-sg100-and-sg1000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, install, installation, unpack, unbox, prepare, inventory, components, contents 
+summary: 'Avant d"installer l"appareil StorageGRID, déballez toutes les boîtes et comparez le contenu aux éléments du bordereau d"expédition.' 
+---
+= Déballer les boîtes (SG100 et SG1000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'installer l'appareil StorageGRID, déballez toutes les boîtes et comparez le contenu aux éléments du bordereau d'expédition.
+
+
+
+== Matériel de l'appliance
+
+* *SG100 ou SG1000*
++
+image::../media/sg6000_cn_front_without_bezel.gif[Disques frontaux SG 100 ou appareil de services SG1000]
+
+* *Kit de rails avec instructions*
++
+image::../media/rail_kit.gif[Kit de rails]
+
+
+
+
+
+== Cordons d'alimentation
+
+Le produit d'expédition de l'appliance StorageGRID inclut les cordons d'alimentation suivants :
+
+* *Deux cordons d'alimentation pour votre pays*
++
+image::../media/power_cords.gif[Cordons d'alimentation]
+
++
+Il se peut que votre armoire soit équipée de cordons d'alimentation spéciaux à la place des câbles d'alimentation fournis avec l'appliance.
+
+

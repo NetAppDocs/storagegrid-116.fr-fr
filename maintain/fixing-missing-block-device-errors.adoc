@@ -1,0 +1,42 @@
+---
+permalink: maintain/fixing-missing-block-device-errors.html 
+sidebar: sidebar 
+keywords: storagegrid, missing block device, block device error 
+summary: 'Le système vérifie que chaque nœud récupéré est associé à un fichier spécial de périphérique de bloc valide ou à un lien logiciel valide vers un fichier spécial de périphérique de bloc. Si StorageGRID trouve un mappage non valide dans le `/etc/storagegrid/nodes/_node-name_.conf` fichier, une erreur de périphérique de bloc manquant s"affiche.' 
+---
+= Corrigez les erreurs de périphérique de bloc manquantes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le système vérifie que chaque nœud récupéré est associé à un fichier spécial de périphérique de bloc valide ou à un lien logiciel valide vers un fichier spécial de périphérique de bloc. Si StorageGRID trouve un mappage non valide dans le `/etc/storagegrid/nodes/_node-name_.conf` fichier, une erreur de périphérique de bloc manquant s'affiche.
+
+Si vous observez une erreur correspondant à ce modèle :
+
+`Checking configuration file /etc/storagegrid/nodes/_node-name_.conf for node _node-name_...`
+`ERROR: _node-name_: BLOCK_DEVICE_PURPOSE = _path-name_`` _node-name_: _path-name_ n'existe pas
+
+Cela signifie que `/etc/storagegrid/nodes/_node-name_.conf` Mappe le périphérique de bloc utilisé par _node-name_ DANS LE BUT d'accéder au nom de chemin donné dans le système de fichiers Linux, mais il n'existe pas de fichier spécial de périphérique de bloc valide, ou de lien logiciel vers un fichier spécial de périphérique de bloc, à cet emplacement.
+
+Vérifiez que vous avez terminé les étapes de la section xref:deploying-new-linux-hosts.adoc[Déploiement de nouveaux hôtes Linux]. Utilisez les mêmes noms de périphériques persistants pour tous les périphériques de bloc que ceux utilisés sur l'hôte d'origine.
+
+Si vous ne parvenez pas à restaurer ou recréer le fichier spécial de l'unité de bloc manquante, vous pouvez allouer un nouveau périphérique de bloc de la taille et de la catégorie de stockage appropriées et modifier le fichier de configuration de nœud pour modifier la valeur de BLOCK_DEVICE_PURPOSE pour qu'il pointe vers le nouveau fichier spécial de l'unité de bloc.
+
+Déterminez la taille et la catégorie de stockage appropriées à partir des tables de la section "exigences de stockage" des instructions d'installation de votre système d'exploitation Linux. Consultez les recommandations de la section « Configuration du stockage hôte » avant de procéder au remplacement du périphérique de bloc.
+
+
+IMPORTANT: Si vous devez fournir une nouvelle unité de stockage bloc pour l'une des variables de fichier de configuration commençant par `BLOCK_DEVICE_` comme le périphérique de bloc d'origine a été perdu avec l'hôte défaillant, assurez-vous que le nouveau périphérique de bloc n'est pas formaté avant de tenter d'autres procédures de récupération. Le nouveau périphérique de bloc n'est pas formaté si vous utilisez un stockage partagé et que vous avez créé un nouveau volume. Si vous n'êtes pas certain, exécutez la commande suivante sur tout nouveau fichier spécial de périphérique de stockage en mode bloc.
+
+AVERTISSEMENT :
+
+Exécutez la commande suivante uniquement pour les nouveaux périphériques de stockage en mode bloc. N'exécutez pas cette commande si vous pensez que le stockage bloc contient toujours des données valides pour le nœud en cours de restauration, car les données du périphérique seront perdues.
+
+[listing]
+----
+sudo dd if=/dev/zero of=/dev/mapper/my-block-device-name bs=1G count=1
+----
+xref:../rhel/index.adoc[Installez Red Hat Enterprise Linux ou CentOS]
+
+xref:../ubuntu/index.adoc[Installez Ubuntu ou Debian]

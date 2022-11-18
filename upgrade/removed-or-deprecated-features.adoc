@@ -1,0 +1,48 @@
+---
+permalink: upgrade/removed-or-deprecated-features.html 
+sidebar: sidebar 
+keywords: features, removed, deprecated 
+summary: Certaines fonctionnalités ont été supprimées ou obsolètes dans cette version. Consultez ces éléments pour savoir si vous devez mettre à jour les applications client ou modifier votre configuration avant de procéder à la mise à niveau. 
+---
+= Fonctions supprimées ou obsolètes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Certaines fonctionnalités ont été supprimées ou obsolètes dans cette version. Consultez ces éléments pour savoir si vous devez mettre à jour les applications client ou modifier votre configuration avant de procéder à la mise à niveau.
+
+
+
+== Système d'alarme et API basées sur les alarmes obsolètes
+
+À partir de la version 11.6 de StorageGRID, l'ancien système d'alarme est obsolète. L'interface utilisateur et les API du système d'alarme hérité seront supprimées dans une version ultérieure.
+
+
+IMPORTANT: Si vous utilisez toujours des alarmes héritées, planifiez une transition complète vers le système d'alerte après la mise à niveau vers StorageGRID 11.6. Voir xref:../monitor/managing-alerts-and-alarms.adoc[Gestion des alertes et des alarmes : présentation] pour en savoir plus sur les alertes.
+
+La version 11.6 dégénère toutes les API basées sur les alarmes. Les API suivantes sont affectées par cette modification :
+
+* `GET /grid/alarms`: Totalement obsolète
+* `GET /grid/health/topology`: Totalement obsolète
+* `GET /grid/health`: Le `alarm-counts` la section de la réponse est obsolète
+
+
+
+
+== Les versions ultérieures ne prendront pas en charge une taille d'objet maximale de 5 Tio pour L'objet PUT
+
+Dans les futures versions d'StorageGRID, la taille maximale d'une opération d'objet PUT unique est de 5 Gio, au lieu de 5 Tio. Vous pouvez utiliser le téléchargement partitionné pour les objets supérieurs à 5 Gio, jusqu'à un maximum de 5 Tio (5,497,558,138,880 octets).
+
+Pour vous aider à migrer vos clients vers des tailles d'objet PUT plus petites, l'alerte *S3 PUT Object size trop grande* est déclenchée dans StorageGRID 11.6 si un client S3 tente de télécharger un objet supérieur à 5 Gio.
+
+
+
+== Fonction NAS Bridge obsolète
+
+Auparavant, la fonction NAS Bridge n'avait pas accès à la version StorageGRID 11.4. La fonctionnalité NAS Bridge reste limitée et est obsolète à partir de la version StorageGRID 11.6.
+
+NAS Bridge 11.4 reste la version finale et continuera d'être compatible avec StorageGRID 11.6. Vérifiez le https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] Pour une compatibilité continue entre NAS Bridge 11.4 et les versions StorageGRID.
+
+Consultez le site de support NetApp pour le https://mysupport.netapp.com/site/info/version-support["Calendrier de prise en charge de NAS Bridge"^].

@@ -1,0 +1,16 @@
+---
+permalink: maintain/powering-off-and-on-all-nodes-in-grid.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, power nodes, power on nodes, power off nodes, power down nodes 
+summary: 'Vous devrez peut-être arrêter l"intégralité de votre système StorageGRID, par exemple si vous déplacez un data Center. Ces étapes fournissent une vue d"ensemble de haut niveau de la séquence recommandée pour effectuer un arrêt et un démarrage contrôlés.' 
+---
+= Mettez hors tension et sur tous les nœuds du grid
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devrez peut-être arrêter l'intégralité de votre système StorageGRID, par exemple si vous déplacez un data Center. Ces étapes fournissent une vue d'ensemble de haut niveau de la séquence recommandée pour effectuer un arrêt et un démarrage contrôlés.
+
+Lorsque vous mettez tous les nœuds hors tension d'un site ou d'un grid, vous ne pourrez pas accéder aux objets ingérés pendant que les nœuds de stockage sont hors ligne.

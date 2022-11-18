@@ -1,0 +1,14 @@
+---
+permalink: audit/audit-file-and-message-formats.html 
+sidebar: sidebar 
+keywords: storagegrid, audit, log file formats, log formats, message formats, log file format, log format ,message format 
+summary: 'Les journaux d"audit permettent de collecter les informations sur votre système et de résoudre les problèmes. Vous devez comprendre le format du fichier journal d"audit et le format général utilisé pour les messages d"audit.' 
+---
+= Formats du fichier journal d'audit et des messages
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les journaux d'audit permettent de collecter les informations sur votre système et de résoudre les problèmes. Vous devez comprendre le format du fichier journal d'audit et le format général utilisé pour les messages d'audit.

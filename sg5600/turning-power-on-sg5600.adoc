@@ -1,0 +1,46 @@
+---
+permalink: sg5600/turning-power-on-sg5600.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, power on, power, start 
+summary: La mise sous tension du boîtier fournit la mise sous tension des deux contrôleurs. 
+---
+= Mise sous tension (SG5600)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La mise sous tension du boîtier fournit la mise sous tension des deux contrôleurs.
+
+.Étapes
+. Mettez les deux commutateurs d'alimentation sous tension à l'arrière du boîtier.
++
+Pendant l'alimentation, les LED des contrôleurs s'allument et s'éteignent par intermittence.
+
++
+Le processus de mise sous tension peut prendre jusqu'à dix minutes. Les contrôleurs redémarrent plusieurs fois au cours de la séquence de démarrage initiale, ce qui entraîne une augmentation ou une descente des ventilateurs et la mise à clignoter des LED.
+
+. Vérifiez le voyant d'alimentation et les LED Host Link Active de chaque contrôleur pour vérifier que l'alimentation a été mise sous tension.
+. Attendez que tous les disques affichent une LED verte persistante indiquant qu'ils sont connectés.
+. Vérifiez s'il y a des LED vertes à l'avant et à l'arrière de l'armoire.
++
+Si vous voyez des voyants orange, notez leur emplacement.
+
+. Regardez l'écran à sept segments du contrôleur E5600SG.
++
+Cet écran affiche *HO*, suivi d'une séquence répétée de deux chiffres.
+
++
+[listing]
+----
+HO -- IP address for Admin Network -- IP address for Grid Network HO
+----
++
+Dans la séquence, le premier jeu de chiffres est l'adresse IP attribuée par DHCP pour le port de gestion 1 du contrôleur. Cette adresse est utilisée pour connecter le contrôleur au réseau Admin pour StorageGRID. Le second jeu de chiffres est l'adresse IP attribuée par DHCP utilisée pour connecter l'appareil au réseau de grille pour StorageGRID.
+
++
+
+NOTE: Si une adresse IP n'a pas pu être attribuée à l'aide de DHCP, 0.0.0.0 s'affiche.
+
+

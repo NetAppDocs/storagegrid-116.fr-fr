@@ -1,0 +1,35 @@
+---
+permalink: primer/reviewing-audit-messages.html 
+sidebar: sidebar 
+keywords: audit message 
+summary: 'Les messages d"audit vous permettent de mieux comprendre le fonctionnement détaillé de votre système StorageGRID. Vous pouvez utiliser les journaux d"audit pour résoudre les problèmes et évaluer les performances.' 
+---
+= Examiner les messages d'audit
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les messages d'audit vous permettent de mieux comprendre le fonctionnement détaillé de votre système StorageGRID. Vous pouvez utiliser les journaux d'audit pour résoudre les problèmes et évaluer les performances.
+
+Pendant le fonctionnement normal du système, tous les services StorageGRID génèrent des messages d'audit comme suit :
+
+* Les messages d'audit système sont liés au système d'audit lui-même, à l'état du nœud de la grille, à l'activité des tâches à l'échelle du système et aux opérations de sauvegarde du service.
+* Les messages d'audit du stockage objet sont liés au stockage et à la gestion des objets dans StorageGRID, notamment le stockage objet et les récupérations, les transferts entre nœuds de grille et nœuds de grille, et les vérifications.
+* Les messages d'audit de lecture et d'écriture du client sont consignés lorsqu'une application client S3 ou Swift demande de créer, de modifier ou de récupérer un objet.
+* Les messages d'audit de gestion consigne les demandes des utilisateurs vers l'API de gestion.
+
+
+Chaque nœud d'administration stocke les messages d'audit dans des fichiers texte. Le partage d'audit contient le fichier actif (audit.log) ainsi que les journaux d'audit compressés des jours précédents. De plus, chaque nœud de votre grille stocke une quantité limitée de messages d'audit dans un fichier journal local (localaudit.log).
+
+Pour faciliter l'accès aux journaux d'audit, vous pouvez configurer l'accès des clients au partage d'audit pour NFS et CIFS (le protocole CIFS est obsolète). Vous pouvez également accéder aux fichiers journaux d'audit directement à partir de la ligne de commande du nœud d'administration.
+
+Vous pouvez également envoyer des informations d'audit stockées sur des nœuds d'administration et des nœuds locaux à un serveur syslog externe. L'utilisation d'un serveur syslog externe peut faciliter la gestion de vos informations d'audit et réduire le trafic réseau. Voir xref:../monitor/configure-audit-messages.adoc[Configurez les messages d'audit et les destinations des journaux] pour en savoir plus.
+
+Pour plus de détails sur le fichier journal d'audit, le format des messages d'audit, les types de messages d'audit et les outils disponibles pour analyser les messages d'audit, reportez-vous au xref:../audit/index.adoc[instructions pour les messages d'audit]. Pour savoir comment configurer l'accès client d'audit, reportez-vous à la section xref:../admin/configuring-audit-client-access.adoc[Configurez l'accès client d'audit].
+
+.Informations associées
+* xref:../audit/index.adoc[Examiner les journaux d'audit]
+* xref:../admin/index.adoc[Administrer StorageGRID]
+

@@ -1,0 +1,21 @@
+---
+permalink: maintain/using-donotstart-file.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, donotstart, do not start, donotstart file, do not start file 
+summary: Si vous effectuez diverses procédures de maintenance ou de configuration sous la direction du support technique, il se peut que vous soyez invité à utiliser un fichier DoNotStart pour empêcher les services de démarrer lorsque Server Manager est démarré ou redémarré. 
+---
+= Utilisez un fichier DoNotStart
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous effectuez diverses procédures de maintenance ou de configuration sous la direction du support technique, il se peut que vous soyez invité à utiliser un fichier DoNotStart pour empêcher les services de démarrer lorsque Server Manager est démarré ou redémarré.
+
+
+IMPORTANT: Vous ne devez ajouter ou supprimer un fichier DoNotStart que si le support technique vous a demandé de le faire.
+
+Pour empêcher le démarrage d'un service, placez un fichier DoNotStart dans le répertoire du service que vous souhaitez empêcher de démarrer. Au démarrage, Server Manager recherche le fichier DoNotStart. Si le fichier est présent, le service (et les services qui en dépendent) ne peut pas démarrer. Lorsque le fichier DoNotStart est supprimé, le service précédemment arrêté démarre au prochain démarrage ou redémarrage de Server Manager. Les services ne sont pas automatiquement démarrés lorsque le fichier DoNotStart est supprimé.
+
+Le moyen le plus efficace d'empêcher le redémarrage de tous les services est d'empêcher le démarrage du service NTP. Tous les services dépendent du service NTP et ne peuvent pas s'exécuter si le service NTP n'est pas en cours d'exécution.

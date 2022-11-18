@@ -1,0 +1,16 @@
+---
+permalink: s3/separation-of-http-connection-pools-for-read-and-write-operations.html 
+sidebar: sidebar 
+keywords: separate http connection pools read write 
+summary: 'Vous pouvez utiliser des pools séparés de connexions HTTP pour les opérations en lecture et écriture, et contrôler la proportion que vous souhaitez utiliser pour chacun d"eux. Le recours à des pools séparés de connexions HTTP vous permet de contrôler les transactions et d"équilibrer la charge plus efficacement.' 
+---
+= Séparation des pools de connexions HTTP pour les opérations de lecture et d'écriture
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser des pools séparés de connexions HTTP pour les opérations en lecture et écriture, et contrôler la proportion que vous souhaitez utiliser pour chacun d'eux. Le recours à des pools séparés de connexions HTTP vous permet de contrôler les transactions et d'équilibrer la charge plus efficacement.
+
+Les applications client peuvent créer des chargements qui sont dominants par la récupération (lecture) ou dominants par le stockage (écriture). Grâce à des pools séparés de connexions HTTP pour les transactions en lecture et écriture, vous pouvez ajuster la quantité de chaque pool à dédier pour les transactions en lecture ou en écriture.

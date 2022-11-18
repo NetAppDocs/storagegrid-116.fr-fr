@@ -1,0 +1,37 @@
+---
+permalink: sg5600/connecting-ac-power-cords-sg5600.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, wire, wiring, cabling, cable, Connecting, connect, power cords, power, ac, ac power 
+summary: 'Vous devez connecter les cordons d"alimentation CA à la source d"alimentation externe et au connecteur d"alimentation CA de chaque contrôleur. Une fois les cordons d"alimentation connectés, vous pouvez mettre le système sous tension.' 
+---
+= Branchement des câbles d'alimentation CA (SG5600)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez connecter les cordons d'alimentation CA à la source d'alimentation externe et au connecteur d'alimentation CA de chaque contrôleur. Une fois les cordons d'alimentation connectés, vous pouvez mettre le système sous tension.
+
+Les deux interrupteurs doivent être éteints avant de brancher l'appareil.
+
+
+CAUTION: *Risque d'électrocution* -- avant de brancher les cordons d'alimentation, assurez-vous que les deux interrupteurs de l'appareil sont éteints.
+
+.Description de la tâche
+* Vous devez utiliser des sources d'alimentation distinctes pour chaque bloc d'alimentation.
++
+La connexion à des sources d'alimentation indépendantes maintient la redondance de l'alimentation.
+
+* Vous pouvez utiliser les cordons d'alimentation fournis avec le contrôleur avec des prises standard utilisées dans le pays de destination, telles que les prises murales d'une alimentation sans interruption (UPS).
++
+Cependant, ces cordons d'alimentation ne sont pas conçus pour être utilisés dans la plupart des armoires conformes à la norme EIA.
+
+
+
+.Étapes
+. Eteindre les interrupteurs d'alimentation de l'armoire ou du châssis.
+. Eteindre les interrupteurs de l'alimentation en panne des contrôleurs.
+. Branchez les câbles d'alimentation principaux de l'armoire aux sources d'alimentation externes.
+. Branchez les câbles d'alimentation au connecteur d'alimentation CA de chaque contrôleur.
+

@@ -1,0 +1,197 @@
+---
+permalink: admin/summary-ip-addresses-and-ports-for-client-connections.html 
+sidebar: sidebar 
+keywords: ip addresses for client, how to connect to storagegrid, ports, vip 
+summary: 'Les applications client peuvent se connecter à StorageGRID en utilisant l"adresse IP d"un nœud de grid et le numéro de port d"un service sur ce nœud. Si les groupes haute disponibilité \(HA\) sont configurés, les applications client peuvent se connecter en utilisant l"adresse IP virtuelle du groupe haute disponibilité.' 
+---
+= Résumé : adresses IP et ports pour les connexions client
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les applications client peuvent se connecter à StorageGRID en utilisant l'adresse IP d'un nœud de grid et le numéro de port d'un service sur ce nœud. Si des groupes de haute disponibilité sont configurés, les applications client peuvent se connecter en utilisant l'adresse IP virtuelle du groupe de haute disponibilité.
+
+Ce tableau récapitule les différentes façons dont les clients peuvent se connecter à StorageGRID ainsi que les adresses IP et les ports utilisés pour chaque type de connexion. Ces instructions décrivent la recherche de ces informations dans le grid Manager si les terminaux d'équilibrage de la charge et les groupes haute disponibilité sont déjà configurés.
+
+[cols="1a,1a,1a,1a"]
+|===
+| Là où la connexion est établie | Service auquel le client se connecte | Adresse IP | Port 
+
+
+ a| 
+Groupe HAUTE DISPONIBILITÉ
+ a| 
+Équilibreur de charge
+ a| 
+Adresse IP virtuelle d'un groupe haute disponibilité
+ a| 
+* Port du terminal de l'équilibreur de charge
+
+
+
+
+ a| 
+Groupe HAUTE DISPONIBILITÉ
+ a| 
+CLB
+
+*Note:* le service CLB est obsolète.
+ a| 
+Adresse IP virtuelle d'un groupe haute disponibilité
+ a| 
+Ports S3 par défaut :
+
+* HTTPS: 8082
+* HTTP : 8084
+
+
+Ports Swift par défaut :
+
+* HTTPS:8083
+* HTTP : 8085
+
+
+
+
+ a| 
+Nœud d'administration
+ a| 
+Équilibreur de charge
+ a| 
+Adresse IP du nœud d'administration
+ a| 
+* Port du terminal de l'équilibreur de charge
+
+
+
+
+ a| 
+Nœud de passerelle
+ a| 
+Équilibreur de charge
+ a| 
+Adresse IP du nœud de passerelle
+ a| 
+* Port du terminal de l'équilibreur de charge
+
+
+
+
+ a| 
+Nœud de passerelle
+ a| 
+CLB
+
+*Note:* le service CLB est obsolète.
+ a| 
+Adresse IP du nœud de passerelle
+
+*Remarque :* par défaut, les ports HTTP pour CLB et LDR ne sont pas activés.
+ a| 
+Ports S3 par défaut :
+
+* HTTPS: 8082
+* HTTP : 8084
+
+
+Ports Swift par défaut :
+
+* HTTPS:8083
+* HTTP : 8085
+
+
+
+
+ a| 
+Nœud de stockage
+ a| 
+LDR
+ a| 
+Adresse IP du nœud de stockage
+ a| 
+Ports S3 par défaut :
+
+* HTTPS: 18082
+* HTTP : 18084
+
+
+Ports Swift par défaut :
+
+* HTTPS: 18083
+* HTTP : 18085
+
+
+|===
+Pour connecter un client S3 au terminal Load Balancer d'un groupe HA de nœuds de passerelle, utilisez une URL structurée comme illustré ci-dessous :
+
+* `https://_VIP-of-HA-group:LB-endpoint-port_`
+
+
+Par exemple, si l'adresse IP virtuelle du groupe HA est 192.0.2.5 et le numéro de port d'un terminal S3 Load Balancer est 10443, un client S3 peut utiliser l'URL suivante pour vous connecter à StorageGRID :
+
+* `\https://192.0.2.5:10443`
+
+
+Pour connecter un client Swift au point de terminaison Load Balancer d'un groupe HA de nœuds de passerelle, utilisez une URL structurée comme indiqué ci-dessous :
+
+* `https://_VIP-of-HA-group:LB-endpoint-port_`
+
+
+Par exemple, si l'adresse IP virtuelle du groupe HA est 192.0.2.6 et que le numéro de port d'un noeud final Swift Load Balancer est 10444, un client Swift peut utiliser l'URL suivante pour se connecter à StorageGRID :
+
+* `\https://192.0.2.6:10444`
+
+
+Il est possible de configurer un nom DNS pour l'adresse IP que les clients utilisent pour se connecter à StorageGRID. Contactez votre administrateur réseau local.
+
+.Étapes
+. Connectez-vous au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+. Pour trouver l'adresse IP d'un nœud de grille :
++
+.. Sélectionnez *NOEUDS*.
+.. Sélectionnez le nœud d'administration, le nœud de passerelle ou le nœud de stockage auquel vous souhaitez vous connecter.
+.. Sélectionnez l'onglet *Aperçu*.
+.. Dans la section informations sur le nœud, notez les adresses IP du nœud.
+.. Sélectionnez *Afficher plus* pour afficher les adresses IPv6 et les mappages d'interface.
++
+Vous pouvez établir des connexions entre les applications client et n'importe quelle adresse IP de la liste :
+
++
+*** *Eth0:* réseau de grille
+*** *Eth1:* réseau d'administration (facultatif)
+*** *Eth2:* réseau client (facultatif)
++
+
+NOTE: Si vous affichez un nœud d'administration ou un nœud de passerelle et qu'il s'agit du nœud actif dans un groupe haute disponibilité, l'adresse IP virtuelle du groupe haute disponibilité est affichée sur eth2.
+
+
+
+
+
+. Pour trouver l'adresse IP virtuelle d'un groupe haute disponibilité :
++
+.. Sélectionnez *CONFIGURATION* *réseau* *groupes haute disponibilité*.
+.. Dans le tableau, noter l'adresse IP virtuelle du groupe haute disponibilité.
+
+
+. Pour trouver le numéro de port d'un noeud final Load Balancer :
++
+.. Sélectionnez *CONFIGURATION* *réseau* *points d'extrémité de l'équilibreur de charge*.
++
+La page Load Balancer Endpoints s'affiche et affiche la liste des noeuds finaux qui ont déjà été configurés.
+
+.. Sélectionnez un noeud final et sélectionnez *Modifier le noeud final*.
++
+La fenêtre Modifier le point final s'ouvre et affiche des informations supplémentaires sur le point final.
+
+.. Vérifiez que le noeud final que vous avez sélectionné est configuré pour une utilisation avec le protocole correct (S3 ou Swift), puis sélectionnez *Annuler*.
+.. Notez le numéro de port du noeud final que vous souhaitez utiliser pour une connexion client.
++
+
+NOTE: Si le numéro de port est 80 ou 443, le noeud final est configuré uniquement sur les noeuds de passerelle, car ces ports sont réservés sur les noeuds d'administration. Tous les autres ports sont configurés sur les nœuds de passerelle et sur les nœuds d'administration.
+
+
+
+

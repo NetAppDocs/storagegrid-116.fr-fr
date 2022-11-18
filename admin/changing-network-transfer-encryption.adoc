@@ -1,0 +1,30 @@
+---
+permalink: admin/changing-network-transfer-encryption.html 
+sidebar: sidebar 
+keywords: network transfer encryption, TLS algorithm 
+summary: 'Le système StorageGRID utilise transport Layer Security \(TLS\) pour protéger le trafic de contrôle interne entre les nœuds de la grille. L"option Network Transfer Encryption définit l"algorithme utilisé par TLS pour chiffrer le trafic de contrôle entre les nœuds de la grille. Ce paramètre n"affecte pas le chiffrement des données.' 
+---
+= Modifiez le chiffrement du transfert réseau
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le système StorageGRID utilise TLS (transport Layer Security) pour protéger le trafic de contrôle interne entre les nœuds de la grille. L'option Network Transfer Encryption définit l'algorithme utilisé par TLS pour chiffrer le trafic de contrôle entre les nœuds de la grille. Ce paramètre n'affecte pas le chiffrement des données.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous disposez d'autorisations d'accès spécifiques.
+
+
+Par défaut, le chiffrement de transfert réseau utilise l'algorithme AES256-SHA. Le trafic de contrôle peut également être crypté à l'aide de l'algorithme AES128-SHA.
+
+.Étapes
+. Sélectionnez *CONFIGURATION* *système* *Options de grille*.
+. Dans la section Options réseau, définissez cryptage de transfert réseau sur *AES128-SHA* ou *AES256-SHA* (par défaut).
++
+image::../media/network_transfer_encryption.png[Chiffrement réseau de la configuration de la grille]
+
+. Sélectionnez *Enregistrer*.
+

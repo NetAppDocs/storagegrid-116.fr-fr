@@ -1,0 +1,53 @@
+---
+permalink: admin/selecting-preferred-sender.html 
+sidebar: sidebar 
+keywords: preferred sender, admin nodes, primary admin node 
+summary: 'Si votre déploiement StorageGRID inclut plusieurs nœuds d"administration, vous pouvez sélectionner le nœud d"administration qui doit être l"expéditeur préféré des notifications. Par défaut, le nœud d"administration principal est sélectionné, mais n"importe quel nœud d"administration peut être l"expéditeur préféré.' 
+---
+= Sélectionnez un expéditeur préféré
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si votre déploiement StorageGRID inclut plusieurs nœuds d'administration, vous pouvez sélectionner le nœud d'administration qui doit être l'expéditeur préféré des notifications. Par défaut, le nœud d'administration principal est sélectionné, mais n'importe quel nœud d'administration peut être l'expéditeur préféré.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous disposez d'autorisations d'accès spécifiques.
+
+
+La page *CONFIGURATION* *système* *Options d'affichage* indique quel nœud d'administration est actuellement sélectionné comme expéditeur préféré. Le nœud d'administration principal est sélectionné par défaut.
+
+Dans des conditions normales de fonctionnement du système, seul l'expéditeur préféré envoie les notifications suivantes :
+
+* Messages AutoSupport
+* Notifications SNMP
+* E-mails d'alerte
+* E-mails d'alarme (système hérité)
+
+
+Cependant, tous les autres nœuds d'administration (expéditeurs de secours) surveillent l'expéditeur préféré. Si un problème est détecté, un expéditeur en attente peut également envoyer ces notifications.
+
+Dans les cas suivants, l'expéditeur préféré et l'expéditeur de secours peuvent envoyer des notifications :
+
+* Si les nœuds d'administration deviennent « en attente » les uns des autres, l'expéditeur préféré et les expéditeurs de secours tenteront d'envoyer des notifications, et plusieurs copies de notifications peuvent être reçues.
+* Lorsqu'un expéditeur en veille détecte des problèmes avec l'expéditeur préféré et commence à envoyer des notifications, il est possible que l'expéditeur préféré puisse récupérer sa capacité à envoyer des notifications. Dans ce cas, des notifications en double peuvent être envoyées. L'expéditeur en attente interrompt l'envoi des notifications lorsqu'il ne détecte plus d'erreurs sur l'expéditeur préféré.
+
+
+
+NOTE: Lorsque vous testez les notifications d'alarme et les messages AutoSupport, tous les nœuds Admin envoient l'e-mail de test. Lorsque vous testez les notifications d'alertes, vous devez vous connecter à chaque nœud d'administration pour vérifier la connectivité.
+
+.Étapes
+. Sélectionnez *CONFIGURATION* *système* *Options d'affichage*.
+. Dans le menu Options d'affichage, sélectionnez *Options*.
+. Sélectionnez le noeud d'administration que vous souhaitez définir comme expéditeur préféré dans la liste déroulante.
++
+image::../media/display_options_preferred_sender.gif[Afficher la page Options]
+
+. Sélectionnez *appliquer les modifications*.
++
+Le nœud d'administration est défini comme l'expéditeur préféré des notifications.
+
+

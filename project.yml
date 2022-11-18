@@ -1,0 +1,144 @@
+---
+settings:
+  name: StorageGRID
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+    lipi_enabled: false
+  langs: fr-fr,us-en,ja-jp,zh-cn,zh-tw,ko-kr,de-de
+sidebar:
+  entries:
+  - title: StorageGRID 11.6 Docs
+    url: "/index.html"
+  - section: release-notes
+  - title: Commencez
+    entries:
+    - section: primer
+    - section: network
+  - title: Installer et entretenir le matériel de l'appareil
+    entries:
+    - section: sg100-1000
+    - section: sg6000
+    - section: sg5700
+    - section: sg5600
+  - title: Installez et mettez à niveau le logiciel
+    entries:
+    - section: upgrade
+    - section: rhel
+    - section: ubuntu
+    - section: vmware
+  - title: Administrer le système
+    entries:
+    - section: admin
+    - section: ilm
+    - section: harden
+    - section: fabricpool
+  - title: Utiliser StorageGRID
+    entries:
+    - section: tenant
+    - section: s3
+    - section: swift
+  - title: Contrôler et gérer StorageGRID
+    entries:
+    - section: monitor
+    - section: expand
+    - section: maintain
+    - section: audit
+  - title: Activez StorageGRID
+    url: "/storagegrid-enable.html"
+  - title: Versions antérieures
+    url: "/earlier-versions.html"
+  - title: Mentions légales
+    url: "/legal-notices.html"
+homepage:
+  tiles:
+  - title: Commencez
+    links:
+    - title: Notes de mise à jour
+      url: "/release-notes/index.html"
+    - title: Quoi de neuf
+      url: "/upgrade/whats-new.html"
+    - title: Primaire de grille
+      url: "/primer/index.html"
+    - title: Instructions réseau
+      url: "/network/index.html"
+  - title: Installer le matériel de maintenance
+    links:
+    - title: Appareils de services SG100 et SG1000
+      url: "/sg100-1000/index.html"
+    - title: Dispositifs de stockage SG6000
+      url: "/sg6000/index.html"
+    - title: Appliances de stockage SG5700
+      url: "/sg5700/index.html"
+    - title: Appliances de stockage SG5600
+      url: "/sg5600/index.html"
+  - title: Installez le logiciel de mise à niveau
+    links:
+    - title: Installez Red Hat Enterprise Linux ou CentOS
+      url: "/rhel/index.html"
+    - title: Installez Ubuntu ou Debian
+      url: "/ubuntu/index.html"
+    - title: Installez VMware
+      url: "/vmware/index.html"
+    - title: Mise à niveau du logiciel
+      url: "/upgrade/index.html"
+  - title: Configurer la grille
+    links:
+    - title: Administrer StorageGRID
+      url: "/admin/index.html"
+    - title: Gestion des objets avec ILM
+      url: "/ilm/index.html"
+    - title: Durcissement du système
+      url: "/harden/index.html"
+    - title: Configuration de StorageGRID pour FabricPool
+      url: "/fabricpool/index.html"
+  - title: Gérer les objets
+    links:
+    - title: Utilisez un compte de locataire
+      url: "/tenant/index.html"
+    - title: Utilisation de S3
+      url: "/s3/index.html"
+    - title: Utiliser Swift
+      url: "/swift/index.html"
+  - title: Surveillez la maintenance
+    links:
+    - title: Surveiller la résolution des problèmes
+      url: "/monitor/index.html"
+    - title: Développez votre grille
+      url: "/expand/index.html"
+    - title: Restaurez la maintenance
+      url: "/maintain/index.html"
+    - title: Examiner les journaux d'audit
+      url: "/audit/index.html"
+  - title: Didacticiels de démonstration
+    links:
+    - title: Découvrez comment activer StorageGRID
+      url: https://docs.netapp.com/us-en/storagegrid-enable/index.html
+    - title: Vidéothèque StorageGRID
+      url: https://www.youtube.com/playlist?list=PLdXI3bZJEw7nh2wGRA65iulXhtXwLiqrY
+    - title: Services de formation NetApp
+      url: https://www.netapp.com/support-and-training/netapp-university/
+  - title: Ressources supplémentaires
+    links:
+    - title: Page de support StorageGRID
+      url: https://mysupport.netapp.com/site/products/all/details/5d9f1107e01d9c0001ee50f6/downloads-tab
+    - title: Matrice d'interopérabilité NetApp (IMT)
+      url: https://mysupport.netapp.com/matrix
+    - title: Base de connaissances StorageGRID
+      url: https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/StorageGRID
+    - title: Blog NetApp
+      url: https://netapp.com/blog/
+    - title: Communauté NetApp
+      url: https://community.netapp.com/
+  - title: Versions antérieures
+    links:
+    - title: Documentation sur StorageGRID 11.5
+      url: https://docs.netapp.com/sgws-115/index.jsp
+    - title: Documentation sur StorageGRID 11.4
+      url: https://docs.netapp.com/sgws-114/index.jsp
+    - title: Documentation sur StorageGRID 11.3
+      url: https://docs.netapp.com/sgws-113/index.jsp
+    - title: Documentation sur StorageGRID 11.2
+      url: https://docs.netapp.com/sgws-112/index.jsp

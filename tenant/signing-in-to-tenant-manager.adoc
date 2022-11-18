@@ -1,0 +1,101 @@
+---
+permalink: tenant/signing-in-to-tenant-manager.html 
+sidebar: sidebar 
+keywords: how to sign in to tenant manager 
+summary: 'Pour accéder au Gestionnaire de locataires, entrez l"URL du locataire dans la barre d"adresse d"un navigateur Web pris en charge.' 
+---
+= Connectez-vous au Gestionnaire de locataires
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour accéder au Gestionnaire de locataires, entrez l'URL du locataire dans la barre d'adresse d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous devez disposer de vos identifiants de connexion.
+* Vous devez disposer d'une URL pour accéder au Gestionnaire de locataires, telle que fournie par votre administrateur de grid. L'URL se présente comme l'un de ces exemples :
++
+[listing]
+----
+https://FQDN_or_Admin_Node_IP/
+----
++
+[listing]
+----
+https://FQDN_or_Admin_Node_IP:port/
+----
++
+[listing]
+----
+https://FQDN_or_Admin_Node_IP/?accountId=20-digit-account-id
+----
++
+[listing]
+----
+https://FQDN_or_Admin_Node_IP:port/?accountId=20-digit-account-id
+----
++
+L'URL contient toujours le nom de domaine complet (FQDN) ou l'adresse IP utilisée pour accéder à un nœud d'administration, et peut également inclure un numéro de port, l'ID de compte de locataire à 20 chiffres, ou les deux.
+
+* Si l'URL n'inclut pas l'ID de compte à 20 chiffres du locataire, vous devez avoir cet ID de compte.
+* Vous devez utiliser un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Les cookies doivent être activés dans votre navigateur Web.
+* Vous devez disposer d'autorisations d'accès spécifiques.
+
+
+.Étapes
+. Lancez un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+. Dans la barre d'adresse du navigateur, entrez l'URL d'accès au Gestionnaire de locataires.
+. Si vous êtes invité à recevoir une alerte de sécurité, installez le certificat à l'aide de l'assistant d'installation du navigateur.
+. Connectez-vous au Gestionnaire de locataires.
++
+L'écran de connexion que vous voyez dépend de l'URL que vous avez saisie et de l'utilisation de SSO (Single Sign-on) par votre organisation. Vous verrez l'un des écrans suivants :
+
++
+** Page de connexion de Grid Manager. Cliquez sur le lien *tenant Login* dans le coin supérieur droit.
++
+image::../media/tenant_login_link.gif[Lien de connexion de locataire sur la page de connexion de Grid Manager]
+
+** Page de connexion du Gestionnaire de locataires. Le champ *ID de compte* peut déjà être complété, comme indiqué ci-dessous.
++
+image::../media/tenant_user_sign_in.gif[Page de connexion du gestionnaire de locataires]
+
++
+... Si l'ID de compte à 20 chiffres du locataire ne s'affiche pas, sélectionnez le nom du compte du locataire s'il apparaît dans la liste des comptes récents ou saisissez l'ID du compte.
+... Saisissez votre nom d'utilisateur et votre mot de passe.
+... Cliquez sur *connexion*.
++
+Le tableau de bord de tenant Manager s'affiche.
+
+
+
+** La page SSO de votre entreprise, si SSO est activé sur le grid. Par exemple :
++
+image::../media/sso_organization_page.gif[Exemple d'organisation page de connexion pour SSO]
+
++
+Entrez vos informations d'identification SSO standard, puis cliquez sur *connexion*.
+
+** Page de connexion SSO du Gestionnaire de locataires.
++
+image::../media/sign_in_sso.gif[Connexion à un compte de locataire si SSO est activé]
+
++
+... Si l'ID de compte à 20 chiffres du locataire ne s'affiche pas, sélectionnez le nom du compte du locataire s'il apparaît dans la liste des comptes récents ou saisissez l'ID du compte.
+... Cliquez sur *connexion*.
+... Connectez-vous à l'aide de vos identifiants SSO standard sur la page de connexion SSO de votre entreprise.
++
+Le tableau de bord de tenant Manager s'affiche.
+
+
+
+
+
+. Si vous avez reçu un mot de passe initial de quelqu'un d'autre, modifiez votre mot de passe pour sécuriser votre compte. Sélectionnez *_username_* *Modifier le mot de passe*.
++
+
+NOTE: Si l'authentification SSO est activée pour le système StorageGRID, vous ne pouvez pas modifier votre mot de passe à partir du Gestionnaire de locataires.
+
+

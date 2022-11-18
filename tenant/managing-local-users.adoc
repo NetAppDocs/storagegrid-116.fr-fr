@@ -1,0 +1,142 @@
+---
+permalink: tenant/managing-local-users.html 
+sidebar: sidebar 
+keywords: StorageGRID, tenant, tenant manager, users, local users, managing local users, users page, access users page, accessing users page 
+summary: 'Vous pouvez créer des utilisateurs locaux et les affecter à des groupes locaux pour déterminer les fonctions auxquelles ces utilisateurs peuvent accéder. Le Gestionnaire de locataires comprend un utilisateur local prédéfini, nommé « root ». Bien que vous puissiez ajouter et supprimer des utilisateurs locaux, vous ne pouvez pas supprimer l"utilisateur racine.' 
+---
+= Gérez les utilisateurs locaux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez créer des utilisateurs locaux et les affecter à des groupes locaux pour déterminer les fonctions auxquelles ces utilisateurs peuvent accéder. Le Gestionnaire de locataires comprend un utilisateur local prédéfini, nommé « root ». Bien que vous puissiez ajouter et supprimer des utilisateurs locaux, vous ne pouvez pas supprimer l'utilisateur racine.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous devez être connecté au Gestionnaire de locataires à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous devez appartenir à un groupe d'utilisateurs en lecture/écriture doté de l'autorisation accès racine. Voir xref:tenant-management-permissions.adoc[Autorisations de gestion des locataires].
+
+
+
+NOTE: Si l'authentification unique est activée pour votre système StorageGRID, les utilisateurs locaux ne pourront pas se connecter au gestionnaire de locataires ou à l'API de gestion des locataires, même s'ils peuvent utiliser les applications client S3 ou Swift pour accéder aux ressources du locataire en fonction des autorisations de groupe.
+
+
+
+== Accéder à la page utilisateurs
+
+Sélectionnez *ACCESS MANAGEMENT* *Users*.
+
+image::../media/tenant_users_list.png[Liste des utilisateurs locataires]
+
+
+
+== Créez des utilisateurs locaux
+
+Vous pouvez créer des utilisateurs locaux et les attribuer à un ou plusieurs groupes locaux pour contrôler leurs autorisations d'accès.
+
+Les utilisateurs S3 qui n'appartiennent à aucun groupe ne disposent d'autorisations de gestion ni de règles de groupe S3 qui leur sont appliquées. Il est possible que les utilisateurs bénéficient d'un accès par compartiment S3 accordé via une règle de compartiment.
+
+Les utilisateurs Swift n'appartenant à aucun groupe ne disposent d'autorisations de gestion ni d'un accès au conteneur Swift.
+
+.Étapes
+. Sélectionnez *Créer utilisateur*.
+. Renseignez les champs suivants.
++
+** *Nom complet* : le nom complet de cet utilisateur, par exemple le prénom et le nom de famille d'une personne ou le nom d'une application.
+** *Nom d'utilisateur*: Le nom que cet utilisateur utilisera pour se connecter. Les noms d'utilisateur doivent être uniques et ne peuvent pas être modifiés.
+** *Mot de passe* : mot de passe utilisé lorsque l'utilisateur ouvre une session.
+** *Confirmer le mot de passe* : saisissez le même mot de passe que celui que vous avez saisi dans le champ Mot de passe.
+** *Refuser l'accès*: Si vous sélectionnez *Oui*, cet utilisateur ne peut pas se connecter au compte de tenant, même si l'utilisateur peut toujours appartenir à un ou plusieurs groupes.
++
+Par exemple, vous pouvez utiliser cette fonction pour suspendre temporairement la connexion d'un utilisateur.
+
+
+
+. Sélectionnez *Continuer*.
+. Attribuez l'utilisateur à un ou plusieurs groupes locaux.
++
+Les utilisateurs qui n'appartiennent à aucun groupe ne disposent d'aucune autorisation de gestion. Les autorisations sont cumulatives. Les utilisateurs disposent de toutes les autorisations pour tous les groupes auxquels ils appartiennent.
+
+. Sélectionnez *Créer utilisateur*.
++
+L'application des modifications peut prendre jusqu'à 15 minutes à cause de la mise en cache.
+
+
+
+
+
+== Modifier les détails de l'utilisateur
+
+Lorsque vous modifiez les détails d'un utilisateur, vous pouvez modifier le nom complet et le mot de passe de l'utilisateur, ajouter l'utilisateur à différents groupes et empêcher l'utilisateur d'accéder au locataire.
+
+.Étapes
+. Dans la liste utilisateurs, sélectionnez le nom de l'utilisateur dont vous souhaitez afficher ou modifier les détails.
++
+Vous pouvez également cocher la case de l'utilisateur, puis sélectionner *actions* *Afficher les détails de l'utilisateur*.
+
+. Apportez les modifications nécessaires aux paramètres utilisateur.
++
+.. Modifiez le nom complet de l'utilisateur selon vos besoins en sélectionnant le nom complet ou l'icône de modification image:../media/icon_edit_tm.png["Icône Modifier"] Dans la section vue d'ensemble.
++
+Vous ne pouvez pas modifier le nom d'utilisateur.
+
+.. Dans l'onglet *Mot de passe*, modifiez le mot de passe de l'utilisateur si nécessaire.
+.. Dans l'onglet *Access*, permettez à l'utilisateur de se connecter (sélectionnez *non*) ou d'empêcher l'utilisateur de se connecter (sélectionnez *Oui*) selon les besoins.
+.. Dans l'onglet *groupes*, ajoutez l'utilisateur aux groupes ou supprimez l'utilisateur des groupes si nécessaire.
+.. Si nécessaire pour chaque section, sélectionnez *Enregistrer les modifications*.
++
+L'application des modifications peut prendre jusqu'à 15 minutes à cause de la mise en cache.
+
+
+
+
+
+
+
+== Utilisateurs locaux en double
+
+Vous pouvez dupliquer un utilisateur local pour créer un nouvel utilisateur plus rapidement.
+
+.Étapes
+. Dans la liste utilisateurs, sélectionnez l'utilisateur que vous souhaitez dupliquer.
+. Sélectionnez *Dupliquer l'utilisateur*.
+. Modifiez les champs suivants pour le nouvel utilisateur.
++
+** *Nom complet* : le nom complet de cet utilisateur, par exemple le prénom et le nom de famille d'une personne ou le nom d'une application.
+** *Nom d'utilisateur*: Le nom que cet utilisateur utilisera pour se connecter. Les noms d'utilisateur doivent être uniques et ne peuvent pas être modifiés.
+** *Mot de passe* : mot de passe utilisé lorsque l'utilisateur ouvre une session.
+** *Confirmer le mot de passe* : saisissez le même mot de passe que celui que vous avez saisi dans le champ Mot de passe.
+** *Refuser l'accès*: Si vous sélectionnez *Oui*, cet utilisateur ne peut pas se connecter au compte de tenant, même si l'utilisateur peut toujours appartenir à un ou plusieurs groupes.
++
+Par exemple, vous pouvez utiliser cette fonction pour suspendre temporairement la connexion d'un utilisateur.
+
+
+
+. Sélectionnez *Continuer*.
+. Sélectionnez un ou plusieurs groupes locaux.
++
+Les utilisateurs qui n'appartiennent à aucun groupe ne disposent d'aucune autorisation de gestion. Les autorisations sont cumulatives. Les utilisateurs disposent de toutes les autorisations pour tous les groupes auxquels ils appartiennent.
+
+. Sélectionnez *Créer utilisateur*.
++
+L'application des modifications peut prendre jusqu'à 15 minutes à cause de la mise en cache.
+
+
+
+
+
+== Supprimer des utilisateurs locaux
+
+Vous pouvez supprimer définitivement les utilisateurs locaux qui n'ont plus besoin d'accéder au compte de locataire StorageGRID.
+
+À l'aide du Gestionnaire de locataires, vous pouvez supprimer des utilisateurs locaux, mais pas des utilisateurs fédérés. Vous devez utiliser le référentiel d'identité fédéré pour supprimer des utilisateurs fédérés.
+
+.Étapes
+. Dans la liste utilisateurs, cochez la case de l'utilisateur local que vous souhaitez supprimer.
+. Sélectionnez *actions* *Supprimer l'utilisateur*.
+. Dans la boîte de dialogue de confirmation, sélectionnez *Supprimer l'utilisateur* pour confirmer que vous souhaitez supprimer l'utilisateur du système.
++
+L'application des modifications peut prendre jusqu'à 15 minutes à cause de la mise en cache.
+
+

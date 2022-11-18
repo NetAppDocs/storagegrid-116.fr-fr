@@ -1,0 +1,33 @@
+---
+permalink: admin/configuring-stored-object-hashing.html 
+sidebar: sidebar 
+keywords: stored object hashing, hashing algorithm, sha-1, sha-256 
+summary: 'L"option de hachage d"objet stocké spécifie l"algorithme de hachage utilisé pour vérifier l"intégrité des objets.' 
+---
+= Configurez le hachage de l'objet stocké
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'option de hachage d'objet stocké spécifie l'algorithme de hachage utilisé pour vérifier l'intégrité des objets.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous disposez d'autorisations d'accès spécifiques.
+
+
+Par défaut, les données d'objet sont hachées à l'aide de l'algorithme SHA-1. L'algorithme SHA-256 nécessite des ressources CPU supplémentaires et n'est généralement pas recommandé pour la vérification de l'intégrité.
+
+
+NOTE: Si vous modifiez ce paramètre, il faudra environ une minute pour appliquer le nouveau paramètre. La valeur configurée est mise en cache pour les performances et l'évolutivité.
+
+.Étapes
+. Sélectionnez *CONFIGURATION* *système* *Options de grille*.
+. Dans la section Options des objets stockés, définissez hachage de l'objet stocké sur *SHA-1* (par défaut) ou *SHA-256*.
++
+image::../media/stored_object_hashing.png[Hachage de l'objet stocké]
+
+. Sélectionnez *Enregistrer*.
+

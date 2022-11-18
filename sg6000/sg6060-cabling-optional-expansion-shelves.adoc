@@ -1,0 +1,103 @@
+---
+permalink: sg6000/sg6060-cabling-optional-expansion-shelves.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, cabling, cable, wiring, wire, expansion shelf, sg6060 
+summary: 'Si vous utilisez des tiroirs d"extension, vous devez les connecter au tiroir contrôleur E2860. Vous pouvez disposer d"un maximum de deux tiroirs d"extension pour chaque appliance SG6060.' 
+---
+= SG6060 et SG6060X : câblage des tiroirs d'extension en option
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous utilisez des tiroirs d'extension, vous devez les connecter au tiroir contrôleur E2860. Vous pouvez disposer au maximum de deux tiroirs d'extension pour chaque appliance SG6060 ou SG6060X.
+
+.Ce dont vous avez besoin, 8217;ll
+* Les deux câbles SAS sont fournis avec chaque tiroir d'extension.
+* Vous avez installé les tiroirs d'extension dans l'armoire ou le rack qui contient le tiroir contrôleur E2860.
++
+xref:sg6060-installing-60-drive-shelves-into-cabinet-or-rack.adoc[SG6060 et SG6060X : installez les tiroirs de 60 disques dans l'armoire ou le rack]
+
+
+
+Connectez chaque tiroir d'extension au tiroir contrôleur E2860, comme indiqué sur le schéma.
+
+Ce schéma présente le câblage de deux tiroirs d'extension dans un SG6060 (le câblage d'extension du SG6060X est identique). Si vous ne disposez que d'un seul tiroir d'extension, connectez l'E/S A au contrôleur A et connectez le module d'E/S B au contrôleur B.
+
+image::../media/expansion_shelves_connections_sg6060.png[SG6060 et SG6060X connexions des tiroirs d'extension]
+
+[cols="1a,2a"]
+|===
+| Légende | Description 
+
+
+ a| 
+1
+ a| 
+SG6000-CN
+
+
+
+ a| 
+2
+ a| 
+Tiroir contrôleur E2860
+
+
+
+ a| 
+3
+ a| 
+Contrôleur A
+
+
+
+ a| 
+4
+ a| 
+Contrôleur B
+
+
+
+ a| 
+5
+ a| 
+Tiroir d'extension 1
+
+
+
+ a| 
+6
+ a| 
+Module d'E/S A pour le tiroir d'extension 1
+
+
+
+ a| 
+7
+ a| 
+Module d'E/S B pour le tiroir d'extension 1
+
+
+
+ a| 
+8
+ a| 
+Tiroir d'extension 2
+
+
+
+ a| 
+9
+ a| 
+Module d'E/S A pour le tiroir d'extension 2
+
+
+
+ a| 
+10
+ a| 
+Module d'E/S B pour le tiroir d'extension 2
+
+|===

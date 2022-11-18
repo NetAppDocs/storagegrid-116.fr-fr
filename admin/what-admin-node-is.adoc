@@ -1,0 +1,53 @@
+---
+permalink: admin/what-admin-node-is.html 
+sidebar: sidebar 
+keywords: admin nodes 
+summary: 'Des nœuds d"administration qui assurent les services de gestion tels que la configuration du système, la surveillance et la journalisation. Chaque grid doit être connecté à un nœud d"administration principal et doit comporter un nombre quelconque de nœuds d"administration non primaires pour assurer la redondance.' 
+---
+= Qu'est-ce qu'un nœud d'administration
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Des nœuds d'administration qui assurent les services de gestion tels que la configuration du système, la surveillance et la journalisation. Chaque grid doit être connecté à un nœud d'administration principal et doit comporter un nombre quelconque de nœuds d'administration non primaires pour assurer la redondance.
+
+Lorsque vous vous connectez à Grid Manager ou au Gestionnaire de locataires, vous vous connectez à un noeud d'administration. Vous pouvez vous connecter à n'importe quel nœud d'administration et chaque nœud d'administration affiche une vue similaire du système StorageGRID. Cependant, les procédures de maintenance doivent être effectuées à l'aide du nœud d'administration principal.
+
+Les nœuds d'administration peuvent également être utilisés pour équilibrer la charge du trafic des clients S3 et Swift.
+
+Les nœuds d'administration hébergent les services suivants :
+
+* Service AMS
+* Service CMN
+* Service NMS
+* Service Prometheus
+* Services d'équilibrage de la charge et haute disponibilité (pour prendre en charge le trafic des clients S3 et Swift)
+
+
+Les nœuds d'administration prennent également en charge l'API de gestion (Management application Program interface) pour traiter les requêtes depuis l'API de gestion du grid et l'API de gestion des locataires. Voir xref:using-grid-management-api.adoc[Utilisez l'API de gestion du grid].
+
+
+
+== Qu'est-ce que le service AMS
+
+Le service du système de gestion de la vérification (AMS) suit l'activité et les événements du système.
+
+
+
+== Qu'est-ce que le service CMN
+
+Le service de nœud de gestion de la configuration (CMN) gère les configurations de connectivité et de protocoles à l'échelle du système nécessaires à tous les services. De plus, le service CMN est utilisé pour exécuter et surveiller les tâches de la grille. Il n'y a qu'un seul service CMN par déploiement StorageGRID. Le nœud d'administration qui héberge le service CMN est appelé nœud d'administration principal.
+
+
+
+== En quoi consiste le service NMS
+
+Le service Network Management System (NMS) alimente les options de surveillance, de rapport et de configuration affichées via le gestionnaire de grille, l'interface navigateur du système StorageGRID.
+
+
+
+== Définition du service Prometheus
+
+Le service Prometheus collecte les metrics de séries chronologiques des services sur tous les nœuds.

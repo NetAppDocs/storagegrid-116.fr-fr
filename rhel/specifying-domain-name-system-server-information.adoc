@@ -1,0 +1,33 @@
+---
+permalink: rhel/specifying-domain-name-system-server-information.html 
+sidebar: sidebar 
+keywords: how to specify domain name system dns 
+summary: 'Vous devez spécifier des informations sur le système de noms de domaine \(DNS\) pour votre système StorageGRID, afin que vous puissiez accéder à des serveurs externes en utilisant des noms d"hôte au lieu d"adresses IP.' 
+---
+= Spécifiez le nom de domaine informations sur le serveur système
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez spécifier des informations DNS (Domain Name System) pour votre système StorageGRID, afin que vous puissiez accéder à des serveurs externes à l'aide de noms d'hôte au lieu d'adresses IP.
+
+La spécification des informations de serveur DNS vous permet d'utiliser des noms d'hôtes de nom de domaine (FQDN) complets plutôt que des adresses IP pour les notifications par e-mail et AutoSupport. Il est recommandé de spécifier au moins deux serveurs DNS.
+
+
+IMPORTANT: Fournir deux à six adresses IPv4 pour les serveurs DNS. Vous devez sélectionner des serveurs DNS auxquels chaque site peut accéder localement en cas d'isatterissage du réseau. Cela permet de s'assurer qu'un site isatterri continue d'avoir accès au service DNS. Après avoir configuré la liste des serveurs DNS au niveau de la grille, vous pouvez personnaliser davantage la liste des serveurs DNS pour chaque nœud. Pour plus de détails, reportez-vous aux informations sur la modification de la configuration DNS dans les instructions de récupération et de maintenance.
+
+Si les informations du serveur DNS sont omises ou mal configurées, une alarme DNST est déclenchée sur le service SSM de chaque nœud de la grille. L'alarme s'efface lorsque le DNS est configuré correctement et que les nouvelles informations sur le serveur ont atteint tous les nœuds de la grille.
+
+.Étapes
+. Spécifiez l'adresse IPv4 pour au moins un serveur DNS dans la zone de texte *Server 1*.
+. Si nécessaire, sélectionnez le signe plus en regard de la dernière entrée pour ajouter des entrées de serveur supplémentaires.
++
+image::../media/9_gmi_installer_dns_page.gif[Cette image est expliquée par le texte qui l'entoure.]
+
++
+La meilleure pratique consiste à spécifier au moins deux serveurs DNS. Vous pouvez indiquer jusqu'à six serveurs DNS.
+
+. Sélectionnez *Suivant*.
+

@@ -1,0 +1,40 @@
+---
+permalink: maintain/checking-systems-condition-before-applying-hotfix.html 
+sidebar: sidebar 
+keywords: storagegrid, hotfix 
+summary: Vous devez vérifier que le système est prêt à prendre en charge le correctif. 
+---
+= Vérifiez l'état du système avant d'appliquer le correctif
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez vérifier que le système est prêt à prendre en charge le correctif.
+
+. Connectez-vous au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+. Si possible, assurez-vous que le système fonctionne normalement et que tous les nœuds de la grille sont connectés à la grille.
++
+Les nœuds connectés ont des coches vertes image:../media/icon_alert_green_checkmark.png["icône d'alerte verte coche"] Sur la page nœuds.
+
+. Recherchez et résolvez les alertes en cours, si possible.
++
+Pour plus d'informations sur les alertes spécifiques, reportez-vous aux instructions de surveillance et de dépannage de StorageGRID.
+
+. Assurez-vous qu'aucune autre procédure de maintenance n'est en cours, telle qu'une procédure de mise à niveau, de récupération, d'extension ou de mise hors service.
++
+Vous devez attendre que toutes les procédures de maintenance actives soient terminées avant d'appliquer un correctif.
+
++
+Vous ne pouvez pas appliquer de correctif StorageGRID lorsqu'une autre procédure de maintenance est en cours d'exécution. Par exemple, vous ne pouvez pas appliquer de correctif lorsqu'une procédure de mise hors service, d'extension ou de récupération est en cours d'exécution.
+
++
+
+NOTE: Si une procédure de mise hors service d'un nœud ou d'un site est interrompue, vous pouvez appliquer un correctif en toute sécurité. De plus, vous pouvez appliquer un correctif lors des dernières étapes d'une procédure de mise à niveau StorageGRID. Pour plus de détails, reportez-vous aux instructions de mise à niveau du logiciel StorageGRID.
+
+
+
+xref:../monitor/index.adoc[Surveiller et résoudre les problèmes]
+
+xref:pausing-and-resuming-decommission-process-for-storage-nodes.adoc[Interrompre et reprendre le processus de mise hors service des nœuds de stockage]

@@ -1,0 +1,14 @@
+---
+permalink: sg100-1000/configuring-storagegrid-connections-sg100-and-sg1000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, storagegrid connections, connections, configure, setup, set up 
+summary: 'Avant de déployer l"appliance de services en tant que nœud d"un système StorageGRID, vous devez configurer les connexions entre l"appliance et les réseaux que vous prévoyez d"utiliser. Vous pouvez configurer le réseau en accédant au programme d"installation de l"appliance StorageGRID, qui est préinstallé sur l"appliance de services.' 
+---
+= Configuration des connexions StorageGRID (SG100 et SG1000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de déployer l'appliance de services en tant que nœud d'un système StorageGRID, vous devez configurer les connexions entre l'appliance et les réseaux que vous prévoyez d'utiliser. Vous pouvez configurer le réseau en accédant au programme d'installation de l'appliance StorageGRID, qui est préinstallé sur l'appliance de services.

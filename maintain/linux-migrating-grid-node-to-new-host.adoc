@@ -1,0 +1,38 @@
+---
+permalink: maintain/linux-migrating-grid-node-to-new-host.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, linux, migrate node, migrating node, new host for node 
+summary: 'Vous pouvez migrer des nœuds StorageGRID d"un hôte Linux vers un autre afin d"effectuer la maintenance de l"hôte \(par exemple, des correctifs et des redémarrages de système d"exploitation\) sans affecter les fonctionnalités ou la disponibilité de votre grille.' 
+---
+= Linux : migration du nœud grid vers le nouvel hôte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez migrer des nœuds StorageGRID d'un hôte Linux vers un autre afin d'effectuer la maintenance de l'hôte (par exemple, la correction du système d'exploitation et le redémarrage) sans affecter les fonctionnalités ou la disponibilité de votre grille.
+
+Vous migrez un ou plusieurs nœuds d'un hôte Linux (l'« hôte source ») vers un autre hôte Linux (l'« hôte cible »). L'hôte cible doit avoir déjà été prêt pour l'utilisation de StorageGRID.
+
+
+IMPORTANT: Cette procédure n'est possible que si vous avez planifié votre déploiement StorageGRID afin d'inclure la prise en charge de la migration.
+
+Pour migrer un nœud de grid vers un nouvel hôte, les deux conditions suivantes doivent être vraies :
+
+* Le stockage partagé est utilisé pour tous les volumes de stockage par nœud
+* Les interfaces réseau ont des noms cohérents entre les hôtes
+
+
+
+NOTE: Dans un déploiement de production, n'exécutez pas plus d'un nœud de stockage sur un hôte unique. L'utilisation d'un hôte dédié pour chaque nœud de stockage fournit un domaine de défaillance isolé.
+
+D'autres types de nœuds, tels que les nœuds d'administration ou les nœuds de passerelle, peuvent être déployés sur le même hôte. Cependant, si vous avez plusieurs nœuds du même type (deux nœuds de passerelle, par exemple), n'installez pas toutes les instances sur le même hôte.
+
+Pour plus d'informations, consultez la section « exigences de migration des nœuds » dans les instructions d'installation de StorageGRID pour votre système d'exploitation Linux.
+
+xref:deploying-new-linux-hosts.adoc[Déploiement de nouveaux hôtes Linux]
+
+xref:../rhel/index.adoc[Installez Red Hat Enterprise Linux ou CentOS]
+
+xref:../ubuntu/index.adoc[Installez Ubuntu ou Debian]

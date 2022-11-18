@@ -1,0 +1,85 @@
+---
+permalink: admin/viewing-network-traffic-metrics.html 
+sidebar: sidebar 
+keywords: network traffic, traffic classification policy, monitor traffic 
+summary: Vous pouvez surveiller le trafic réseau en consultant les graphiques disponibles à partir de la page règles de classification du trafic. 
+---
+= Afficher les données de trafic réseau
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez surveiller le trafic réseau en consultant les graphiques disponibles à partir de la page règles de classification du trafic.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous disposez de l'autorisation d'accès racine ou des droits d'accès aux comptes de tenant.
+
+
+Pour toute règle de classification de trafic existante, vous pouvez afficher les mesures du service Load Balancer afin de déterminer si la stratégie limite le trafic sur le réseau. Les données des graphiques peuvent vous aider à déterminer si vous devez ajuster la stratégie.
+
+Même si aucune limite n'est définie pour une stratégie de classification du trafic, des mesures sont recueillies et les graphiques fournissent des informations utiles pour comprendre les tendances du trafic.
+
+.Étapes
+. Sélectionnez *CONFIGURATION* *réseau* *classification du trafic*.
++
+La page règles de classification du trafic s'affiche et les stratégies existantes sont répertoriées dans le tableau.
+
++
+image::../media/traffic_classification_policies_main_screen_w_examples.png[Politique de trafic pour un exemple de graphique]
+
++
+
+NOTE: Les boutons *Create*, *Edit* et *Remove* sont désactivés si vous disposez de l'autorisation d'accès aux comptes de tenant mais que vous ne disposez pas de l'autorisation d'accès racine.
+
+. Sélectionnez le bouton radio à gauche de la police pour laquelle vous souhaitez afficher les mesures.
+. Sélectionnez *métriques*.
++
+Une nouvelle fenêtre de navigateur s'ouvre et les graphiques de la politique de classification du trafic s'affichent. Les graphiques affichent des mesures uniquement pour le trafic correspondant à la stratégie sélectionnée.
+
++
+Vous pouvez sélectionner d'autres stratégies à afficher à l'aide de la liste déroulante *policy*.
+
++
+image::../media/traffic_classification_policy_graph.png[Graphique de trafic réseau]
+
++
+Les graphiques suivants sont inclus sur la page Web.
+
++
+** Trafic des demandes d'équilibrage de charge : ce graphique fournit une moyenne mobile de 3 minutes du débit des données transmises entre les terminaux d'équilibreur de charge et les clients effectuant les demandes, en bits par seconde.
+** Taux d'exécution de la demande d'équilibrage de charge : ce graphique fournit une moyenne mobile de 3 minutes du nombre de demandes terminées par seconde, ventilées par type de demande (GET, PUT, HEAD et DELETE). Cette valeur est mise à jour lorsque les en-têtes d'une nouvelle demande ont été validés.
+** Taux de réponse d'erreur : ce graphique fournit une moyenne mobile de 3 minutes du nombre de réponses d'erreur renvoyées aux clients par seconde, ventilées par le code de réponse d'erreur.
+** Durée moyenne de la demande (non-erreur) : ce graphique fournit une moyenne mobile de 3 minutes de durée de la demande, ventilées par type de demande (OBTENIR, PLACER, TÊTE et SUPPRIMER). Chaque durée de la demande commence lorsqu'un en-tête de requête est analysé par le service Load Balancer et se termine lorsque le corps de réponse complet est renvoyé au client.
+** Taux de demande d'écriture par taille d'objet : cette configuration fournit une moyenne mobile de 3 minutes du taux de traitement des demandes d'écriture basé sur la taille de l'objet. Dans ce contexte, les demandes d'écriture ne font référence qu'à DES requêtes PUT.
+** Taux de demande de lecture par taille d'objet : cette carte thermique fournit une moyenne mobile de 3 minutes du taux de traitement des demandes de lecture en fonction de la taille de l'objet. Dans ce contexte, les demandes de lecture ne font référence qu'à L'OBTENTION des demandes. Les couleurs de la carte de chaleur indiquent la fréquence relative d'une taille d'objet dans un graphique individuel. Les couleurs plus froides (par exemple, le violet et le bleu) indiquent des taux relatifs plus bas, et les couleurs plus chaudes (par exemple, l'orange et le rouge) indiquent des taux relatifs plus élevés.
+
+
+. Placez le curseur sur un graphique linéaire pour afficher une fenêtre contextuelle de valeurs sur une partie spécifique du graphique.
++
+image::../media/traffic_classification_policy_graph_popup_closeup.png[Valeurs de la fenêtre contextuelle graphique de la ligne de trafic]
+
+. Placez le curseur sur une carte de chaleur pour afficher une fenêtre contextuelle indiquant la date et l'heure de l'échantillon, les tailles d'objet agrégées dans le compte et le nombre de demandes par seconde pendant cette période.
++
+image::../media/traffic_classification_policy_heatmap_closeup.png[Valeurs de la fenêtre contextuelle graphique à barres de trafic]
+
+. Utilisez le menu déroulant *Policy* en haut à gauche pour sélectionner une autre stratégie.
++
+Les graphiques de la stratégie sélectionnée s'affichent.
+
+. Vous pouvez également accéder aux graphiques à partir du menu *SUPPORT*.
++
+.. Sélectionnez *SUPPORT* *Outils* *métriques*.
+.. Dans la section *Grafana* de la page, sélectionnez *politique de classification du trafic*.
+.. Sélectionnez la police dans le menu déroulant situé en haut à gauche de la page.
++
+Les politiques de classification du trafic sont identifiées par leur ID. Les ID de police sont répertoriés sur la page règles de classification de la circulation.
+
+
+
+. Analysez les graphiques pour déterminer à quelle fréquence la stratégie limite le trafic et si vous devez ajuster la stratégie.
+
+
+xref:../monitor/index.adoc[Surveiller et résoudre les problèmes]

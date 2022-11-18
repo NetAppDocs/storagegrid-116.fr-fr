@@ -1,0 +1,36 @@
+---
+permalink: maintain/configuring-dns-servers.html 
+sidebar: sidebar 
+keywords: storagegrid, dns, configuring dns, configure dns, domain name system 
+summary: 'Vous pouvez ajouter, supprimer et mettre à jour des serveurs de noms de domaine \(DNS\), afin que vous puissiez utiliser des noms d"hôtes de domaine complets \(FQDN\) plutôt que des adresses IP.' 
+---
+= Configuration des serveurs DNS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez ajouter, supprimer et mettre à jour des serveurs DNS (Domain Name System), de sorte que vous puissiez utiliser des noms d'hôte de domaine complets plutôt que des adresses IP.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous devez disposer de l'autorisation Maintenance ou accès racine.
+* Vous devez disposer des adresses IP des serveurs DNS à configurer.
+
+
+La spécification des informations de serveur DNS vous permet d'utiliser des noms d'hôtes de nom de domaine complet (FQDN) plutôt que des adresses IP pour les notifications par e-mail ou SNMP et AutoSupport. Il est recommandé de spécifier au moins deux serveurs DNS.
+
+
+IMPORTANT: Fournir entre deux et six adresses IP pour les serveurs DNS. En général, sélectionnez les serveurs DNS auxquels chaque site peut accéder localement en cas d'atterrissage du réseau. Cela permet de s'assurer qu'un site isatterri continue d'avoir accès au service DNS. Après avoir configuré la liste des serveurs DNS au niveau de la grille, vous pouvez xref:modifying-dns-configuration-for-single-grid-node.adoc[Personnalisez en outre la liste des serveurs DNS pour chaque nœud].
+
+Si les informations du serveur DNS sont omises ou mal configurées, une alarme DNST est déclenchée sur le service SSM de chaque nœud de la grille. L'alarme s'efface lorsque le DNS est configuré correctement et que les nouvelles informations sur le serveur ont atteint tous les nœuds de la grille.
+
+.Étapes
+. Sélectionnez *MAINTENANCE* > *réseau* > *serveurs DNS*.
+. Dans la section serveurs, ajoutez des mises à jour ou supprimez des entrées de serveur DNS, si nécessaire.
++
+La meilleure pratique consiste à spécifier au moins deux serveurs DNS par site. Vous pouvez indiquer jusqu'à six serveurs DNS.
+
+. Cliquez sur *Enregistrer*.
+

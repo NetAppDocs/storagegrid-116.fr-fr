@@ -1,0 +1,22 @@
+---
+permalink: ilm/what-storage-pool-is.html 
+sidebar: sidebar 
+keywords: what is a storage pool 
+summary: 'Un pool de stockage est un groupe logique de nœuds de stockage ou de nœuds d"archivage. Vous configurez des pools de stockage afin de déterminer l"emplacement où le système StorageGRID stocke les données d"objet et le type de stockage utilisé.' 
+---
+= Qu'est-ce qu'un pool de stockage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un pool de stockage est un groupe logique de nœuds de stockage ou de nœuds d'archivage. Vous configurez des pools de stockage afin de déterminer l'emplacement où le système StorageGRID stocke les données d'objet et le type de stockage utilisé.
+
+Les pools de stockage ont deux attributs :
+
+* *Stockage* : pour les nœuds de stockage, les performances relatives du stockage de support.
+* *Site* : le centre de données où les objets seront stockés.
+
+
+Les pools de stockage sont utilisés dans les règles ILM pour déterminer l'emplacement de stockage des données d'objet. Lorsque vous configurez des règles ILM pour la réplication, vous sélectionnez un ou plusieurs pools de stockage incluant des nœuds de stockage ou des nœuds d'archivage. Lorsque vous créez des profils de code d'effacement, vous sélectionnez un pool de stockage incluant des nœuds de stockage.

@@ -1,0 +1,138 @@
+---
+permalink: maintain/decommissioning-connected-grid-nodes.html 
+sidebar: sidebar 
+keywords: storagegrid, decommission, connected nodes, decommission node 
+summary: Vous pouvez mettre hors service et supprimer définitivement les nœuds connectés à la grille. 
+---
+= Désaffectation des nœuds connectés
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez mettre hors service et supprimer définitivement les nœuds connectés à la grille.
+
+* Vous devez comprendre les exigences et xref:considerations-for-decommissioning-grid-nodes.adoc[facteurs à prendre en compte lors de la mise hors service des nœuds].
+* Vous devez avoir rassemblé tous les documents requis.
+* Vous devez vous assurer qu'aucun travail de réparation de données n'est actif.
+* Vous devez avoir confirmé que la restauration du nœud de stockage n'est en cours dans la grille. Si c'est le cas, vous devez attendre que la reconstruction Cassandra soit terminée. Vous pouvez ensuite procéder au déclassement.
+* Vous devez avoir vérifié que d'autres procédures de maintenance ne seront pas exécutées alors que la procédure de mise hors service du nœud est en cours d'exécution, à moins que la procédure de mise hors service du nœud soit interrompue.
+* Vous devez disposer de la phrase secrète pour le provisionnement.
+* Les nœuds de la grille sont connectés.
+* La colonne *Decommission possible* pour le ou les nœuds que vous souhaitez désaffecter doit inclure une coche verte.
+* Tous les nœuds de la grille doivent avoir une état normal (vert) image:../media/icon_alert_green_checkmark.png["icône de coche verte"]. Si l'une de ces icônes apparaît dans la colonne *Santé*, vous devez essayer de résoudre le problème :
++
+|===
+
+
+| Icône | Couleur | Gravité 
+
+
+ a| 
+image:../media/icon_alarm_yellow_notice.gif["icône carrée jaune"]
+ a| 
+Jaune
+ a| 
+Avertissement
+
+
+
+ a| 
+image:../media/icon_alert_yellow_minor.png["icône orange clair en forme de losange"]
+ a| 
+Orange clair
+ a| 
+Mineur
+
+
+
+ a| 
+image:../media/icon_alert_orange_major.png["icône losange orange foncé"]
+ a| 
+Orange foncé
+ a| 
+Majeur
+
+
+
+ a| 
+image:../media/icon_alert_red_critical.png["icône x rouge"]
+ a| 
+Rouge
+ a| 
+Primordial
+
+|===
+* Si vous avez précédemment mis hors service un nœud de stockage déconnecté, les tâches de réparation des données ont toutes été effectuées avec succès. Voir xref:checking-data-repair-jobs.adoc[Vérifier les travaux de réparation des données].
+
+
+
+IMPORTANT: Ne supprimez pas la machine virtuelle d'un nœud de la grille ou d'autres ressources avant d'y avoir été invité.
+
+. Dans la page nœuds de décomposition, cochez la case correspondant à chaque nœud de grille que vous souhaitez désaffecter.
+. Saisissez la phrase secrète pour le provisionnement.
++
+Le bouton *Start Decommission* est activé.
+
+. Cliquez sur *Start Decommission*.
++
+Une boîte de dialogue de confirmation s'affiche.
+
++
+image::../media/decommission_confirmation.gif[capture d'écran de la boîte de dialogue de confirmation de mise hors service]
+
+. Consultez la liste des nœuds sélectionnés et cliquez sur *OK*.
++
+La procédure de mise hors service du nœud démarre et la progression est affichée pour chaque nœud. Au cours de la procédure, un nouveau progiciel de récupération est généré pour afficher le changement de configuration de la grille.
+
++
+image::../media/decommission_nodes_procedure_in_progress.png[capture d'écran du déclassement du nœud en cours]
+
++
+
+IMPORTANT: Ne mettez pas un nœud de stockage hors ligne une fois la procédure de mise hors service démarrée. La modification de l'état peut entraîner l'absence de copie de contenu vers d'autres emplacements.
+
+. Dès que le nouveau progiciel de récupération est disponible, cliquez sur le lien ou sélectionnez *MAINTENANCE* *système* *progiciel de récupération* pour accéder à la page progiciel de récupération. Ensuite, téléchargez le `.zip` fichier.
++
+Reportez-vous aux instructions pour xref:downloading-recovery-package.adoc[Téléchargement du progiciel de restauration].
+
++
+
+NOTE: Téléchargez le progiciel de récupération dès que possible pour vous assurer que vous pouvez récupérer votre grille si un problème survient pendant la procédure de mise hors service.
+
+. Surveillez régulièrement la page nœuds de mise hors service pour vous assurer que tous les nœuds sélectionnés sont correctement mis hors service.
++
+La désaffectation des nœuds de stockage peut prendre plusieurs jours ou semaines. Lorsque toutes les tâches sont terminées, la liste de sélection de nœud apparaît à nouveau avec un message de réussite.
+
++
+image::../media/decommission_nodes_procedure_complete.png[capture d'écran indiquant que la mise hors service est terminée]
+
+. Suivez l'étape appropriée pour votre plate-forme. Par exemple :
++
+** *Linux* : vous pouvez détacher les volumes et supprimer les fichiers de configuration de nœud que vous avez créés lors de l'installation.
+** *VMware*: Vous pouvez utiliser l'option vCenter "Supprimer du disque" pour supprimer la machine virtuelle. Il se peut également que vous deviez supprimer tous les disques de données qui sont indépendants de la machine virtuelle.
+** *Appliance StorageGRID* : le nœud de l'appliance revient automatiquement à un état non déployé où vous pouvez accéder au programme d'installation de l'appliance StorageGRID. Vous pouvez mettre l'appareil hors tension ou l'ajouter à un autre système StorageGRID.
+
+
+
+
+Suivez cette procédure une fois la procédure de mise hors service du nœud terminée :
+
+* Assurez-vous que les disques du nœud de la grille mis hors service sont nettoyés. Utilisez un outil ou un service d'effacement de données disponible dans le commerce pour supprimer définitivement et de manière sécurisée les données des lecteurs.
+* Si vous désaffecté un nœud d'appliance et que les données de l'appliance étaient protégées à l'aide du chiffrement des nœuds, utilisez le programme d'installation de l'appliance StorageGRID pour effacer la configuration du serveur de gestion des clés (KMS transparent). Vous devez effacer la configuration KMS si vous souhaitez utiliser l'appliance dans une autre grille.
++
+xref:../sg100-1000/index.adoc[Appareils de services SG100 et SG1000]
+
++
+xref:../sg5600/index.adoc[Appliances de stockage SG5600]
+
++
+xref:../sg5700/index.adoc[Appliances de stockage SG5700]
+
++
+xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
+
+
+
+xref:../rhel/index.adoc[Installez Red Hat Enterprise Linux ou CentOS]

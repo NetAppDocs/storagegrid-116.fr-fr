@@ -1,0 +1,225 @@
+---
+permalink: sg6000/upgrading-drive-firmware-using-santricity-system-manager.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, upgrade, upgrading, firmware, drive, disk, SANtricity System Manager, SANtricity 
+summary: Vous mettez à niveau le micrologiciel de votre lecteur pour vous assurer que vous disposez de toutes les dernières fonctionnalités et correctifs. 
+---
+= Mise à niveau du firmware des disques à l'aide de SANtricity System Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous mettez à niveau le micrologiciel de votre lecteur pour vous assurer que vous disposez de toutes les dernières fonctionnalités et correctifs.
+
+.Ce dont vous avez besoin, 8217;ll
+* Le dispositif de stockage est à l'état optimal.
+* Tous les disques ont un état optimal.
+* La dernière version de SANtricity System Manager est installée et est compatible avec votre version de StorageGRID.
+* Vous avez xref:placing-appliance-into-maintenance-mode.adoc[Placez l'appliance StorageGRID en mode de maintenance].
++
+
+NOTE: Le mode maintenance interrompt la connexion au contrôleur de stockage, en arrêtant toutes les activités d'E/S et en plaçant tous les disques hors ligne.
+
++
+
+IMPORTANT: Ne mettez pas à niveau le micrologiciel du lecteur sur plusieurs appareils StorageGRID à la fois. Cela peut entraîner l'indisponibilité des données, en fonction de votre modèle de déploiement et de vos règles ILM.
+
+
+
+.Étapes
+. Vérifiez que l'appareil est dans xref:placing-appliance-into-maintenance-mode.adoc[mode maintenance].
+. Pour accéder à SANtricity System Manager, utilisez l'une des méthodes suivantes :
++
+** Utilisez le programme d'installation de l'appliance StorageGRID et sélectionnez *Avancé* *Gestionnaire système SANtricity*
+** Utilisez SANtricity System Manager en naviguant sur l'IP du contrôleur de stockage : +
+`*https://_Storage_Controller_IP_*`
+
+
+. Entrez le nom d'utilisateur et le mot de passe de l'administrateur SANtricity System Manager si nécessaire.
+. Vérifiez la version du micrologiciel du lecteur actuellement installé sur l'appliance de stockage :
++
+.. Dans SANtricity System Manager, sélectionnez *SUPPORT* *Upgrade Center*.
+.. Sous mise à niveau du micrologiciel du lecteur, sélectionnez *commencer la mise à niveau*.
++
+Le micrologiciel du lecteur de mise à niveau affiche les fichiers du micrologiciel du lecteur actuellement installés.
+
+.. Notez les révisions actuelles du micrologiciel du lecteur et les identificateurs de lecteur dans la colonne micrologiciel du lecteur en cours.
++
+image::../media/storagegrid_update_drive_firmware.png[Mettre à niveau le micrologiciel du lecteur]
+
++
+Dans cet exemple :
+
++
+*** La version du micrologiciel du lecteur est *MS02*.
+*** L'identifiant du lecteur est *KPM51VUG800G*.
+
+
++
+Sélectionnez *Afficher les lecteurs* dans la colonne lecteurs associés pour afficher l'emplacement d'installation de ces lecteurs dans votre appliance de stockage.
+
+.. Fermez la fenêtre mise à niveau du micrologiciel du lecteur.
+
+
+. Téléchargez et préparez la mise à niveau disponible du firmware des disques :
++
+.. Sous mise à niveau du micrologiciel des disques, sélectionnez *NetApp support*.
+.. Sur le site Web de support de NetApp, sélectionnez l'onglet *Downloads*, puis sélectionnez *E-Series Disk drive Firmware*.
++
+La page firmware des disques E-Series s'affiche.
+
+.. Recherchez chaque *Drive identifier* installé dans votre appliance de stockage et vérifiez que chaque identificateur de lecteur dispose de la dernière révision du micrologiciel.
++
+*** Si la révision du micrologiciel n'est pas un lien, cet identificateur de lecteur a la dernière révision du micrologiciel.
+*** Si un ou plusieurs numéros de référence de lecteur sont répertoriés pour un identificateur de lecteur, une mise à niveau du micrologiciel est disponible pour ces lecteurs. Vous pouvez sélectionner n'importe quel lien pour télécharger le fichier de micrologiciel.
++
+image::../media/storagegrid_drive_firmware_download.png[Firmware des disques E-Series]
+
+
+
+.. Si une version ultérieure du micrologiciel est répertoriée, sélectionnez le lien dans la révision du micrologiciel (Télécharger) pour télécharger un `.zip` archive contenant le fichier du micrologiciel.
+.. Extrayez (décompressez le fichier d'archive du micrologiciel du lecteur que vous avez téléchargé sur le site de support.
+
+
+. Installez la mise à niveau du micrologiciel du lecteur :
++
+.. Dans le Gestionnaire système SANtricity, sous mise à niveau du micrologiciel du lecteur, sélectionnez *commencer la mise à niveau*.
+.. Sélectionnez *Browse*, puis sélectionnez les nouveaux fichiers de micrologiciel de lecteur que vous avez téléchargés à partir du site de support.
++
+Les fichiers du micrologiciel du lecteur ont un nom de fichier similaire à +
+`D_HUC101212CSS600_30602291_MS01_2800_0002.dlp`.
+
++
+Vous pouvez sélectionner jusqu'à quatre fichiers de micrologiciel de lecteur, un par un. Si plusieurs fichiers de micrologiciel de lecteur sont compatibles avec le même lecteur, vous obtenez une erreur de conflit de fichier. Choisissez le fichier de micrologiciel de lecteur que vous souhaitez utiliser pour la mise à niveau et supprimez l'autre.
+
+.. Sélectionnez *Suivant*.
++
+*Sélectionner les lecteurs* répertorie les lecteurs que vous pouvez mettre à niveau avec les fichiers de micrologiciel sélectionnés.
+
++
+Seuls les lecteurs compatibles apparaissent.
+
++
+Le micrologiciel sélectionné pour le lecteur apparaît dans *micrologiciel proposé*. Si vous devez modifier ce micrologiciel, sélectionnez *Retour*.
+
+.. Sélectionnez mise à niveau * hors ligne (parallèle)*.
++
+Vous pouvez utiliser la méthode de mise à niveau hors ligne car l'appliance est en mode de maintenance, où les opérations d'E/S sont arrêtées pour tous les disques et tous les volumes.
+
++
+
+CAUTION: Ne pas continuer, sauf si vous êtes certain que l'appareil est en mode de maintenance. Si vous ne placez pas l'appliance en mode de maintenance avant de lancer une mise à jour hors ligne du firmware du disque, vous risquez d'entraîner une perte de données.
+
+.. Dans la première colonne du tableau, sélectionnez le ou les lecteurs que vous souhaitez mettre à niveau.
++
+La meilleure pratique consiste à mettre à niveau tous les lecteurs du même modèle vers la même révision du micrologiciel.
+
+.. Sélectionnez *Démarrer* et confirmez que vous souhaitez effectuer la mise à niveau.
++
+Si vous devez arrêter la mise à niveau, sélectionnez *Stop*. Tous les téléchargements de micrologiciel en cours sont terminés. Tous les téléchargements de micrologiciel qui n'ont pas démarré sont annulés.
+
++
+
+IMPORTANT: L'arrêt de la mise à niveau du micrologiciel du lecteur peut entraîner une perte de données ou l'indisponibilité des disques.
+
+.. (Facultatif) pour afficher la liste des mises à niveau, sélectionnez *Enregistrer le journal*.
++
+Le fichier journal est enregistré dans le dossier des téléchargements de votre navigateur portant le nom `latest-upgrade-log-timestamp.txt`.
+
++
+Si l'une des erreurs suivantes se produit pendant la procédure de mise à niveau, effectuez l'action recommandée appropriée.
+
++
+*** *Disques affectés en échec*
++
+L'une des raisons de la défaillance est que le lecteur ne possède pas la signature appropriée. Assurez-vous que le disque concerné est un disque autorisé. Contactez le support technique pour plus d'informations.
+
++
+Lorsque vous remplacez un lecteur, assurez-vous que sa capacité est supérieure ou égale à celle du lecteur défectueux que vous remplacez.
+
++
+Vous pouvez remplacer le disque défectueux alors que la matrice de stockage reçoit des E/S.
+
+*** *Vérifier la matrice de stockage*
++
+**** Assurez-vous qu'une adresse IP a été attribuée à chaque contrôleur.
+**** Assurez-vous que tous les câbles connectés au contrôleur ne sont pas endommagés.
+**** Assurez-vous que tous les câbles sont bien connectés.
+
+
+*** *Disques de secours intégrés*
++
+Ce problème d'erreur doit être corrigé avant de pouvoir mettre à niveau le micrologiciel.
+
+*** *Groupes de volumes incomplets*
++
+Si un ou plusieurs groupes de volumes ou pools de disques sont incomplets, vous devez corriger cette condition d'erreur avant de pouvoir mettre à niveau le micrologiciel.
+
+*** *Opérations exclusives (autres que l'analyse des supports/parité en arrière-plan) actuellement en cours d'exécution sur n'importe quel groupe de volumes*
++
+Si une ou plusieurs opérations exclusives sont en cours, les opérations doivent être effectuées avant la mise à niveau du micrologiciel. Utilisez System Manager pour surveiller la progression des opérations.
+
+*** *Volumes manquants*
++
+Vous devez corriger la condition de volume manquant avant de pouvoir mettre à niveau le micrologiciel.
+
+*** *L'un ou l'autre des contrôleurs dans un état autre que optimal*
++
+L'un des contrôleurs de la baie de stockage doit faire attention. Ce problème doit être résolu avant la mise à niveau du firmware.
+
+*** *Discordance des informations de partition de stockage entre les graphiques d'objet du contrôleur*
++
+Une erreur s'est produite lors de la validation des données sur les contrôleurs. Contactez le support technique pour résoudre ce problème.
+
+*** *Échec de la vérification du contrôleur de base de données SPM*
++
+Une erreur de mappage de la base de données de mappage des partitions de stockage s'est produite sur un contrôleur. Contactez le support technique pour résoudre ce problème.
+
+*** *Validation de la base de données de configuration (si prise en charge par la version du contrôleur de la matrice de stockage)*
++
+Une erreur de base de données de configuration s'est produite sur un contrôleur. Contactez le support technique pour résoudre ce problème.
+
+*** *Vérifications liées au MEL*
++
+Contactez le support technique pour résoudre ce problème.
+
+*** *Plus de 10 événements MEL informationnels ou critiques de la DDE ont été rapportés au cours des 7 derniers jours*
++
+Contactez le support technique pour résoudre ce problème.
+
+*** *Plus de 2 pages 2C des événements MEL critiques ont été rapportés au cours des 7 derniers jours*
++
+Contactez le support technique pour résoudre ce problème.
+
+*** *Plus de 2 événements MEL critiques de canal d'entraînement dégradés ont été signalés au cours des 7 derniers jours*
++
+Contactez le support technique pour résoudre ce problème.
+
+*** *Plus de 4 entrées MEL critiques au cours des 7 derniers jours*
++
+Contactez le support technique pour résoudre ce problème.
+
+
+
+
+
+. Si cette procédure s'est terminée avec succès et que vous disposez de procédures supplémentaires pour effectuer cette opération pendant que le nœud est en mode de maintenance, effectuez-les maintenant. Lorsque vous avez terminé, ou si vous avez rencontré des échecs et souhaitez recommencer, sélectionnez *Advanced* *Reboot Controller*, puis sélectionnez l'une des options suivantes :
++
+** Sélectionnez *redémarrer dans StorageGRID*
+** Sélectionnez *redémarrer en mode maintenance* pour redémarrer le contrôleur avec le nœud restant en mode de maintenance. Sélectionnez cette option si vous avez rencontré des échecs au cours de la procédure et souhaitez recommencer. Une fois le redémarrage du nœud en mode maintenance terminé, redémarrez à partir de l'étape appropriée de la procédure ayant échoué.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Redémarrez le contrôleur en mode de maintenance]
+
++
+L'appliance peut redémarrer et rejoindre la grille en 20 minutes. Pour confirmer que le redémarrage est terminé et que le nœud a rejoint la grille, retournez à la grille Manager. La page nœuds doit afficher un état normal (aucune icône à gauche du nom du nœud) pour le nœud d'appliance, indiquant qu'aucune alerte n'est active et que le nœud est connecté à la grille.
+
+
+
++
+image::../media/node_rejoin_grid_confirmation.png[Le nœud d'appliance a rejoint la grille]
+
+
+
+xref:upgrading-santricity-os-on-storage-controllers.adoc[Mettez à niveau votre système d'exploitation SANtricity sur les contrôleurs de stockage]

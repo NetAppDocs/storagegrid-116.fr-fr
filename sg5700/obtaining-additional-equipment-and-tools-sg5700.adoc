@@ -1,0 +1,72 @@
+---
+permalink: sg5700/obtaining-additional-equipment-and-tools-sg5700.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, additional, equipment, tools 
+summary: 'Avant d"installer l"appliance StorageGRID, vérifiez que vous disposez de tous les équipements et outils supplémentaires dont vous avez besoin.' 
+---
+= Obtention d'équipements et d'outils supplémentaires (SG5700)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'installer l'appliance StorageGRID, vérifiez que vous disposez de tous les équipements et outils supplémentaires dont vous avez besoin.
+
+Vous devez disposer de l'équipement supplémentaire suivant pour installer et configurer le matériel :
+
+* *Tournevis*
++
+image::../media/screwdrivers.gif[Deux tournevis]
+
++
+N° Phillips 2 tournevis
+
++
+Tournevis plat moyen
+
+* * Bracelet antistatique*
++
+image::../media/appliance_wriststrap.gif[Bracelet antistatique]
+
+* *Câbles optiques et émetteurs-récepteurs SFP*
++
+image::../media/fc_cable_and_sfp.gif[Câble optique et émetteur-récepteur SFP+]
+
++
+Câbles optiques pour les ports 10/25 GbE que vous souhaitez utiliser
+
++
+Facultatif : les émetteurs-récepteurs SFP28 si vous souhaitez utiliser la vitesse de liaison 25 GbE
+
+* *Câbles Ethernet*
++
+image::../media/ethernet_cables.png[Câbles Ethernet]
+
+* *Ordinateur portable de service*
++
+image::../media/sam_management_client.gif[L'ordinateur portable de service]
+
++
+xref:../admin/web-browser-requirements.adoc[Navigateur Web pris en charge]
+
++
+Client SSH, tel que PuTTY
+
++
+Port Ethernet 1 Gbit (RJ-45)
+
+* *Outils en option*
++
+image::../media/optional_tools.gif[Perceuse électrique et lampe de poche]
+
++
+Perceuse électrique avec embout Phillips
+
++
+Lampe de poche
+
++
+Levage mécanisé pour SG5760
+
+

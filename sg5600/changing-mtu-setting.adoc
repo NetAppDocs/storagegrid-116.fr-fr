@@ -1,0 +1,67 @@
+---
+permalink: sg5600/changing-mtu-setting.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, mtu, set, setting, change, changing, modify 
+summary: 'Vous pouvez modifier le paramètre MTU que vous avez attribué lorsque vous avez configuré des adresses IP pour le nœud de l"appliance.' 
+---
+= Modifier le paramètre MTU
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez modifier le paramètre MTU que vous avez attribué lorsque vous avez configuré des adresses IP pour le nœud de l'appliance.
+
+.Description de la tâche
+
+IMPORTANT: La valeur MTU du réseau doit correspondre à la valeur configurée sur le port du commutateur auquel le nœud est connecté. Dans le cas contraire, des problèmes de performances réseau ou une perte de paquets peuvent se produire.
+
+
+IMPORTANT: Pour des performances réseau optimales, tous les nœuds doivent être configurés avec des valeurs MTU similaires sur leurs interfaces réseau Grid. L'alerte *Grid Network MTU mismatch* est déclenchée en cas de différence importante dans les paramètres MTU pour le réseau Grid sur les nœuds individuels. Les valeurs MTU ne doivent pas être identiques pour tous les types de réseau.
+
+Pour modifier le paramètre MTU sans redémarrer le nœud d'appliance,  the MTU setting using the Change IP tool,Utilisez l'outil Modifier IP.
+
+Si le réseau client ou administrateur n'a pas été configuré dans le programme d'installation de l'appliance StorageGRID lors de l'installation initiale,  the MTU setting using maintenance mode,Modifiez le paramètre MTU en mode maintenance.
+
+
+
+== Modifiez le paramètre MTU à l'aide de l'outil Modifier l'IP
+
+Vous avez le `Passwords.txt` Fichier pour utiliser l'outil Modifier IP.
+
+Accédez à l'outil Modifier IP et mettez à jour les paramètres MTU comme décrit dans xref:../maintain/changing-nodes-network-configuration.adoc[Modifier la configuration réseau du nœud].
+
+
+
+== Modifiez le paramètre MTU en mode maintenance
+
+Modifiez le paramètre MTU en mode maintenance si vous ne parvenez pas à accéder à ces paramètres à l'aide de l'outil Modifier IP.
+
+L'appareil a été xref:placing-appliance-into-maintenance-mode.adoc[passage en mode maintenance].
+
+.Étapes
+. Dans le programme d'installation de l'appliance StorageGRID, sélectionnez *configurer le réseau* *Configuration IP*.
+. Apportez les modifications souhaitées aux paramètres MTU du réseau Grid, du réseau Admin et du réseau client.
++
+image::../media/grid_network_static.png[IP du réseau Grid]
+
+. Lorsque vous êtes satisfait des paramètres, sélectionnez *Enregistrer*.
+. Redémarrez le nœud. Dans le programme d'installation de l'appliance StorageGRID, sélectionnez *Advanced* *Reboot Controller*, puis sélectionnez l'une des options suivantes :
++
+** Sélectionnez *Reboot dans StorageGRID* pour redémarrer le contrôleur avec le noeud qui rejoint la grille. Sélectionnez cette option si vous avez terminé de travailler en mode maintenance et que vous êtes prêt à rétablir le fonctionnement normal du nœud.
+** Sélectionnez *redémarrer en mode maintenance* pour redémarrer le contrôleur avec le nœud restant en mode de maintenance. (Cette option n'est disponible que lorsque le contrôleur est en mode de maintenance.) Sélectionnez cette option si des opérations de maintenance supplémentaires doivent être effectuées sur le nœud avant de rejoindre la grille.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Redémarrez le contrôleur en mode de maintenance]
+
++
+L'appliance peut redémarrer et rejoindre la grille en 20 minutes. Pour confirmer que le redémarrage est terminé et que le nœud a rejoint la grille, retournez à la grille Manager. La page *NODES* doit afficher un état normal (aucune icône) pour le nœud de l'appliance, indiquant qu'aucune alerte n'est active et que le nœud est connecté à la grille.
+
++
+image::../media/nodes_menu.png[Le nœud d'appliance a rejoint la grille]
+
+
+
+
+
+xref:../admin/index.adoc[Administrer StorageGRID]

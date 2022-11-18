@@ -1,0 +1,169 @@
+---
+permalink: upgrade/obtaining-required-materials-for-software-upgrade.html 
+sidebar: sidebar 
+keywords: upgrade, requirements, rhel, red hat, linux, centOS, ubuntu, debian 
+summary: Avant de commencer la mise à niveau du logiciel, vous devez obtenir tous les supports nécessaires pour que la mise à niveau soit effectuée avec succès. 
+---
+= Procurez-vous les ressources nécessaires à une mise à niveau logicielle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de commencer la mise à niveau du logiciel, vous devez obtenir tous les supports nécessaires pour que la mise à niveau soit effectuée avec succès.
+
+[cols="1a,3a"]
+|===
+| Élément | Remarques 
+
+
+ a| 
+Fichiers de mise à niveau StorageGRID
+ a| 
+ the StorageGRID upgrade files à votre ordinateur portable de service.
+
+
+
+ a| 
+L'ordinateur portable de service
+ a| 
+L'ordinateur portable de service doit posséder :
+
+* Port réseau
+* Client SSH (par exemple, PuTTY)
+
+
+
+
+ a| 
+xref:../admin/web-browser-requirements.adoc[Navigateur Web pris en charge]
+ a| 
+La prise en charge des navigateurs a généralement été modifiée pour chaque version de StorageGRID. Assurez-vous que votre navigateur est compatible avec la nouvelle version de StorageGRID.
+
+
+
+ a| 
+Package de restauration (`.zip`) fichier
+ a| 
+ the Recovery Package avant de procéder à la mise à niveau et enregistrez le fichier dans un emplacement sûr. Le fichier du progiciel de récupération vous permet de restaurer le système en cas de défaillance.
+
+
+
+ a| 
+`Passwords.txt` fichier
+ a| 
+Ce fichier est inclus dans LEDIT package, qui fait partie du progiciel de restauration `.zip` fichier. Vous devez obtenir la dernière version du progiciel de restauration.
+
+
+
+ a| 
+Phrase secrète pour le provisionnement
+ a| 
+La phrase de passe est créée et documentée lors de l'installation initiale du système StorageGRID. La phrase de passe de provisionnement n'est pas répertoriée dans le `Passwords.txt` fichier.
+
+
+
+ a| 
+Documentation associée
+ a| 
+* xref:../release-notes/index.adoc[Notes de mise à jour] Pour StorageGRID 11.6. Lisez-les attentivement avant de commencer la mise à niveau.
+* Instructions pour xref:../admin/index.adoc[Administration d'StorageGRID].
+* Si vous mettez à niveau un déploiement Linux, les instructions d'installation de StorageGRID pour votre plate-forme Linux :
++
+** xref:../rhel/index.adoc[Installez Red Hat Enterprise Linux ou CentOS]
+** xref:../ubuntu/index.adoc[Installez Ubuntu ou Debian]
+
+
+* Autre documentation StorageGRID, si nécessaire.
+
+
+|===
+
+
+== Téléchargez les fichiers de mise à niveau StorageGRID
+
+Vous devez télécharger un ou plusieurs fichiers, selon l'emplacement d'installation de vos nœuds.
+
+* *Toutes les plates-formes*: `.upgrade` fichier
+
+
+Si des nœuds sont déployés sur des hôtes Linux, vous devez également télécharger une archive RPM ou DEB que vous installerez avant de démarrer la mise à niveau :
+
+* *Red Hat Enterprise Linux ou CentOS* : un fichier RPM supplémentaire (`.zip` ou `.tgz`)
+* *Ubuntu ou Debian* : un fichier DEB supplémentaire (`.zip` ou `.tgz`)
+
+
+.Étapes
+. Accédez à https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["Téléchargement NetApp : StorageGRID"^].
+. Sélectionnez le bouton pour télécharger la dernière version ou sélectionnez une autre version dans le menu déroulant et sélectionnez *Go*.
++
+Les versions du logiciel StorageGRID ont le format suivant : 11._x.y_. Les correctifs StorageGRID ont le format suivant : 11._x.y.z_.
+
+. Connectez-vous avec le nom d'utilisateur et le mot de passe de votre compte NetApp.
+. Si une instruction attention/MustRead s'affiche, lisez-la et cochez la case.
++
+Cette instruction s'affiche si un correctif est requis pour la version.
+
+. Lisez le contrat de licence de l'utilisateur final, cochez la case, puis sélectionnez *accepter continuer*.
++
+La page des téléchargements de la version sélectionnée s'affiche. La page contient trois colonnes :
+
++
+** Installez StorageGRID
+** Mettez à niveau StorageGRID
+** Fichiers de prise en charge pour les appliances StorageGRID
+
+
+. Dans la colonne *Upgrade StorageGRID*, sélectionnez et téléchargez le `.upgrade` archivage.
++
+Toutes les plateformes nécessitent le `.upgrade` archivage.
+
+. Si des nœuds sont déployés sur des hôtes Linux, téléchargez également l'archive RPM ou DEB dans l'un ou l'autre `.tgz` ou `.zip` format. Sélectionner `.zip` Fichier si vous exécutez Windows sur l'ordinateur portable de service.
++
+** Red Hat Enterprise Linux ou CentOS +
+`StorageGRID-Webscale-_version_-RPM-_uniqueID_.zip` +
+`StorageGRID-Webscale-_version_-RPM-_uniqueID_.tgz`
+** Ubuntu ou Debian +
+`StorageGRID-Webscale-_version_-DEB-_uniqueID_.zip` +
+`StorageGRID-Webscale-_version_-DEB-_uniqueID_.tgz`
++
+
+NOTE: Aucun fichier supplémentaire n'est requis pour le SG100 ou le SG1000.
+
+
+
+
+
+
+
+== Téléchargez le progiciel de restauration
+
+Le fichier progiciel de récupération vous permet de restaurer le système StorageGRID en cas de défaillance. Téléchargez le fichier du pack de récupération actuel avant de modifier la topologie du grid sur le système StorageGRID ou avant de mettre à niveau le logiciel. Téléchargez ensuite une nouvelle copie du progiciel de récupération après avoir modifié la topologie de la grille ou après la mise à niveau du logiciel.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous devez disposer de la phrase secrète pour le provisionnement.
+* Vous devez disposer d'autorisations d'accès spécifiques.
+
+
+.Étapes
+. Sélectionnez *Maintenance* *système* *progiciel de récupération*.
+. Saisissez le mot de passe de provisionnement et sélectionnez *Démarrer le téléchargement*.
++
+Le téléchargement commence immédiatement.
+
+. Une fois le téléchargement terminé :
++
+.. Ouvrez le `.zip` fichier.
+.. Vérifiez qu'elle inclut un `gpt-backup` et un intérieur `.zip` fichier.
+.. Extraire l'intérieur `.zip` fichier.
+.. Confirmez que vous pouvez ouvrir le `Passwords.txt` fichier.
+
+
+. Copiez le fichier du progiciel de restauration téléchargé (`.zip`) à deux emplacements sûrs, sécurisés et séparés.
++
+
+IMPORTANT: Le fichier du progiciel de récupération doit être sécurisé car il contient des clés de cryptage et des mots de passe qui peuvent être utilisés pour obtenir des données du système StorageGRID.
+
+

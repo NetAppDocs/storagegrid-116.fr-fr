@@ -1,0 +1,24 @@
+---
+permalink: monitor/index.html 
+sidebar: sidebar 
+keywords: monitor StorageGRID 
+summary: Utilisez ces instructions pour contrôler un système StorageGRID et évaluer et résoudre les problèmes potentiels. 
+---
+= Contrôle et dépannage : présentation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilisez ces instructions pour contrôler un système StorageGRID et évaluer et résoudre les problèmes potentiels.
+
+
+
+== À propos de ces instructions
+
+Ces instructions décrivent comment utiliser le Gestionnaire de grille pour surveiller un système StorageGRID. Vous apprendrez quelles informations vous devez surveiller régulièrement, comment gérer les alertes et les alarmes existantes, comment utiliser SNMP pour la surveillance et comment obtenir des données StorageGRID supplémentaires, notamment des mesures et des diagnostics.
+
+Ces instructions expliquent également comment dépanner un système StorageGRID et décrivent toutes les alertes système, les alarmes héritées et les fichiers journaux.
+
+Suivez ces instructions si vous allez surveiller et prendre en charge un système StorageGRID après son installation.

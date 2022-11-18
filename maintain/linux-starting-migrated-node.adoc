@@ -1,0 +1,38 @@
+---
+permalink: maintain/linux-starting-migrated-node.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, linux, start node 
+summary: 'Après avoir validé le nœud migré, vous démarrez le nœud en exécutant une commande sur l"hôte Linux cible.' 
+---
+= Linux : démarrez le nœud migré
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Après avoir validé le nœud migré, vous démarrez le nœud en exécutant une commande sur l'hôte Linux cible.
+
+.Étapes
+. Démarrez le nœud sur le nouvel hôte.
++
+[listing]
+----
+sudo storagegrid node start DC1-S3
+Starting node DC1-S3
+----
+. Dans Grid Manager, vérifiez que l'état du nœud est vert sans qu'aucune alarme ne soit émise.
++
+
+IMPORTANT: La vérification de l'état du nœud est verte garantit que le nœud migré a redémarré et rejoint la grille. Si l'état est non vert, ne migrez pas d'autres nœuds afin que vous n'ayez pas plus d'un nœud hors service.
+
++
+Si vous ne parvenez pas à accéder au Grid Manager, attendez 10 minutes, puis exécutez la commande suivante :
+
++
+`sudo storagegrid node status *_node-name_*`
+
++
+Vérifiez que le nœud migré dispose d'un état d'exécution de `Running`.
+
+

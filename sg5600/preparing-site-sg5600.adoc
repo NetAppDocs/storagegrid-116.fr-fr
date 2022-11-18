@@ -1,0 +1,74 @@
+---
+permalink: sg5600/preparing-site-sg5600.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, install, installation, site prep, site preparating, preparing site, site requirements, requirements, site, dimensions, weight, weights, temperature, humidity, altitude, airflow, heat, wiring, power, grounding, facility 
+summary: 'Avant d"installer l"appliance, assurez-vous que le site et l"armoire ou le rack que vous souhaitez utiliser correspondent aux spécifications d"une appliance StorageGRID.' 
+---
+= Préparation du site (SG5600)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'installer l'appliance, assurez-vous que le site et l'armoire ou le rack que vous souhaitez utiliser correspondent aux spécifications d'une appliance StorageGRID.
+
+.Étapes
+. Vérifier que le site répond aux exigences en matière de température, d'humidité, d'altitude, de débit d'air, de dissipation thermique, câblage, alimentation et mise à la terre. Consultez le document NetApp Hardware Universe pour plus d'informations.
+. Procurez-vous une armoire ou un rack de 19 pouces (48.3 cm) pour installer les étagères de cette taille (sans câbles) :
++
+|===
+| Modèle de type appliance | Hauteur | Largeur | Profondeur | Poids maximum 
+
+
+ a| 
+SG5612
+
+(12 lecteurs)
+ a| 
+3.40 po
+
+(8.64 cm)
+ a| 
+19.0 po
+
+(48.26 cm)
+ a| 
+21.75 po
+
+(55.25 cm)
+ a| 
+59.5 lb
+
+(27 kg)
+
+
+
+ a| 
+SG5660
+
+(60 lecteurs)
+ a| 
+7.00 po
+
+(17.78 cm)
+ a| 
+17.75 po
+
+(45.08 cm)
+ a| 
+32.50 po
+
+(82.55 cm)
+ a| 
+236.2 lb
+
+(107.1 kg)
+
+|===
+. Installez les commutateurs réseau requis. Consultez la matrice d'interopérabilité NetApp pour plus d'informations sur la compatibilité.
+
+
+https://hwu.netapp.com["NetApp Hardware Universe"^]
+
+https://mysupport.netapp.com/NOW/products/interoperability["Interopérabilité NetApp"^]

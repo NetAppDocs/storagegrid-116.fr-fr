@@ -1,0 +1,64 @@
+---
+permalink: audit/audit-messages-and-object-lifecycle.html 
+sidebar: sidebar 
+keywords: storagegrid, audit, message, log, object lifecycle, ingest, retrieve, delete, s3, swift, timing, ILM, Information lifecycle management, archive node, archive nodes 
+summary: 'Des messages d"audit sont générés à chaque ingestion, récupération ou suppression d"un objet. Vous pouvez identifier ces transactions dans le journal d"audit en localisant les messages d"audit \(S3 ou Swift\) spécifiques à l"API.' 
+---
+= Messages d'audit et cycle de vie de l'objet
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Des messages d'audit sont générés à chaque ingestion, récupération ou suppression d'un objet. Vous pouvez identifier ces transactions dans le journal des audits en localisant les messages d'audit spécifiques à l'API (S3 ou Swift).
+
+Les messages d'audit sont liés par des identificateurs spécifiques à chaque protocole.
+
+|===
+| Protocole | Code 
+
+
+ a| 
+Liaison des opérations S3
+ a| 
+S3BK (compartiment S3) et/ou S3KY (clé S3)
+
+
+
+ a| 
+Liaison d'opérations Swift
+ a| 
+WCON (conteneur Swift) et/ou WOBJ (objet Swift)
+
+
+
+ a| 
+Liaison des opérations internes
+ a| 
+CBID (identifiant interne de l'objet)
+
+|===
+
+
+== Calendrier des messages d'audit
+
+En raison de facteurs tels que les différences de synchronisation entre les nœuds de la grille, la taille de l'objet et les retards réseau, l'ordre des messages d'audit générés par les différents services peut varier de celui présenté dans les exemples de cette section.
+
+
+
+== Configuration des règles de gestion du cycle de vie des informations
+
+La règle ILM (2 copie de base) par défaut permet de copier une seule fois les données d'objet, pour un total de deux copies. Si la politique ILM nécessite plus de deux copies, il y aura un jeu supplémentaire de messages CBRE, CBSE et SCMT pour chaque copie supplémentaire. Pour plus d'informations sur les règles ILM, reportez-vous aux informations à propos de la gestion des objets avec la gestion du cycle de vie des informations.
+
+
+
+== Nœuds d'archivage
+
+La série de messages d'audit générés lorsqu'un nœud d'archivage envoie des données d'objet à un système de stockage d'archives externe est similaire à celle des nœuds de stockage, à l'exception du message SCMT (Store Object commit), Et les messages ATCE (Archive Object Store Begin) et ASCE (Archive Object Store End) sont générés pour chaque copie archivée de données d'objet.
+
+La série de messages d'audit générés lorsqu'un nœud d'archivage récupère des données d'objet à partir d'un système de stockage d'archives externe est similaire à celle des nœuds de stockage, sauf que les messages ARCB (début de la récupération de l'objet d'archivage) et ARCE (fin de la récupération de l'objet d'archivage) sont générés pour chaque copie récupérée des données d'objet.
+
+La série de messages d'audit générés lorsqu'un nœud d'archivage supprime des données d'objet d'un système de stockage d'archives externe est similaire à celle des nœuds de stockage, sauf qu'il n'y a pas de message SREM (Object Store Remove) et qu'il y a un message AREM (Archive Object Remove) pour chaque demande de suppression.
+
+xref:../ilm/index.adoc[Gestion des objets avec ILM]

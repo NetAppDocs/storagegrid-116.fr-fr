@@ -1,0 +1,165 @@
+---
+permalink: monitor/viewing-specific-alert.html 
+sidebar: sidebar 
+keywords: how to view a specific alert 
+summary: 'Vous pouvez afficher des informations détaillées sur une alerte qui affecte actuellement votre système StorageGRID ou une alerte qui a été résolue. Ces informations incluent les actions correctives recommandées, l"heure à laquelle l"alerte a été déclenchée et la valeur actuelle des mesures associées à cette alerte.' 
+---
+= Afficher une alerte spécifique
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez afficher des informations détaillées sur une alerte qui affecte actuellement votre système StorageGRID ou une alerte qui a été résolue. Ces informations incluent les actions correctives recommandées, l'heure à laquelle l'alerte a été déclenchée et la valeur actuelle des mesures associées à cette alerte.
+
+Si vous le souhaitez, vous pouvez xref:silencing-alert-notifications.adoc[désactiver une alerte en cours] ou xref:editing-alert-rules.adoc[mettez à jour la règle d'alerte].
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+
+
+.Étapes
+. Effectuez l'une des opérations suivantes, selon que vous souhaitez afficher une alerte en cours ou résolue :
++
+[cols="1a,2a"]
+|===
+| En-tête de colonne | Description 
+
+
+ a| 
+Alerte actuelle
+ a| 
+** Dans le panneau Santé du tableau de bord, cliquez sur le lien *alertes actuelles*. Ce lien n'apparaît que si au moins une alerte est active. Ce lien est masqué s'il n'y a pas d'alerte en cours ou si toutes les alertes en cours ont été désactivées.
+** Sélectionnez *ALERTES* *courant*.
+** Dans la page *NODES*, sélectionnez l'onglet *Overview* pour un noeud doté d'une icône d'alerte. Cliquez ensuite sur le nom de l'alerte dans la section alertes.
+
+
+
+
+ a| 
+Alerte résolue
+ a| 
+** Dans le panneau Santé du tableau de bord, cliquez sur le lien *alertes récemment résolues*. (Ce lien apparaît uniquement si une ou plusieurs alertes ont été déclenchées au cours de la semaine passée et sont maintenant résolues. Ce lien est masqué si aucune alerte n'a été déclenchée et résolue au cours de la semaine dernière.)
+** Sélectionnez *ALERTES* *résolues*.
+
+
+|===
+. Si nécessaire, développez un groupe d'alertes, puis sélectionnez l'alerte que vous souhaitez afficher.
++
+
+NOTE: Sélectionnez l'alerte, et non l'en-tête d'un groupe d'alertes.
+
++
+image::../media/alerts_page_select_alert.png[Page alertes sélectionnez alerte]
+
++
+Une boîte de dialogue s'affiche et fournit des détails sur l'alerte sélectionnée.
+
++
+image::../media/alerts_page_details_modal.png[Détails de la page d'alertes modal]
+
+. Vérifiez les détails de l'alerte.
++
+[cols="1a,2a"]
+|===
+| Informations | Description 
+
+
+ a| 
+_titre_
+ a| 
+Nom de l'alerte.
+
+
+
+ a| 
+_premier paragraphe_
+ a| 
+Description de l'alerte.
+
+
+
+ a| 
+Actions recommandées
+ a| 
+Actions recommandées pour cette alerte.
+
+
+
+ a| 
+Temps déclenché
+ a| 
+Date et heure de déclenchement de l'alerte à l'heure locale et à l'heure UTC.
+
+
+
+ a| 
+Heure de résolution
+ a| 
+Pour les alertes résolues uniquement, la date et l'heure auxquelles l'alerte a été résolue dans votre heure locale et dans UTC.
+
+
+
+ a| 
+État
+ a| 
+État de l'alerte : actif, silencieux ou résolu.
+
+
+
+ a| 
+Site/nœud
+ a| 
+Nom du site et du nœud affectés par l'alerte.
+
+
+
+ a| 
+Gravité
+ a| 
+Gravité de l'alerte.
+
+** *Critique* image:../media/icon_alert_red_critical.png["Icône alerte rouge critique"]: Il existe une condition anormale qui a arrêté les opérations normales d'un nœud ou service StorageGRID. Vous devez immédiatement résoudre le problème sous-jacent. Une interruption du service et une perte de données peuvent se produire si le problème n'est pas résolu.
+** *Majeur* image:../media/icon_alert_orange_major.png["Icône alerte Orange majeur"]: Il existe une condition anormale affectant les opérations en cours ou approchant le seuil d'une alerte critique. Vous devez examiner les alertes majeures et résoudre tous les problèmes sous-jacents pour vérifier que leur condition anormale n'arrête pas le fonctionnement normal d'un nœud ou d'un service StorageGRID.
+** *Mineur* image:../media/icon_alert_yellow_minor.png["Icône alerte jaune mineure"]: Le système fonctionne normalement, mais il existe une condition anormale qui pourrait affecter la capacité du système à fonctionner s'il continue. Vous devez surveiller et résoudre les alertes mineures qui ne sont pas claires par elles-mêmes pour vous assurer qu'elles n'entraînent pas un problème plus grave.
+
+
+
+
+ a| 
+_valeurs de données_
+ a| 
+Valeur actuelle de la mesure pour cette alerte. Pour certaines alertes, des valeurs supplémentaires sont affichées pour vous aider à comprendre et à examiner l'alerte. Par exemple, les valeurs affichées pour une alerte *stockage de métadonnées faible* incluent le pourcentage d'espace disque utilisé, la quantité totale d'espace disque et la quantité d'espace disque utilisée.
+
+|===
+. Vous pouvez également cliquer sur *neutraliser cette alerte* pour désactiver la règle d'alerte qui a déclenché cette alerte.
++
+Vous devez disposer de l'autorisation gérer les alertes ou l'accès racine pour désactiver une règle d'alerte.
+
++
+
+IMPORTANT: Soyez prudent lorsque vous décidez de désactiver une règle d'alerte. Si une règle d'alerte est mise en mode silencieux, il est possible que vous ne détectiez pas un problème sous-jacent tant qu'elle n'empêche pas l'exécution d'une opération critique.
+
+. Pour afficher les conditions actuelles de la règle d'alerte :
++
+.. Dans les détails de l'alerte, cliquez sur *Voir conditions*.
++
+Une fenêtre contextuelle s'affiche, répertoriant l'expression Prometheus pour chaque gravité définie.
+
++
+image::../media/alerts_page_details_modal_view_condition.png[Détails de la page d'alertes condition de vue modale]
+
+.. Pour fermer la fenêtre contextuelle, cliquez n'importe où en dehors de la fenêtre contextuelle.
+
+
+. Si vous le souhaitez, cliquez sur *Modifier la règle* pour modifier la règle d'alerte qui a déclenché cette alerte :
++
+Vous devez disposer de l'autorisation gérer les alertes ou l'accès racine pour modifier une règle d'alerte.
+
++
+
+IMPORTANT: Soyez prudent lorsque vous décidez de modifier une règle d'alerte. Si vous modifiez les valeurs de déclenchement, il est possible que vous ne déteciez pas de problème sous-jacent tant qu'elle n'empêche pas l'exécution d'une opération critique.
+
+. Pour fermer les détails de l'alerte, cliquez sur *Fermer*.
+

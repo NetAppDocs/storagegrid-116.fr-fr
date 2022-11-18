@@ -1,0 +1,63 @@
+---
+permalink: tenant/creating-your-own-s3-access-keys.html 
+sidebar: sidebar 
+keywords: how to create access key 
+summary: 'Si vous utilisez un locataire S3 et que vous disposez de l"autorisation appropriée, vous pouvez créer vos propres clés d"accès S3. Vous devez disposer d"une clé d"accès pour accéder à vos compartiments et objets dans le compte de locataire S3.' 
+---
+= Créez vos propres clés d'accès S3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous utilisez un locataire S3 et que vous disposez de l'autorisation appropriée, vous pouvez créer vos propres clés d'accès S3. Vous devez disposer d'une clé d'accès pour accéder à vos compartiments et objets dans le compte de locataire S3.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous devez être connecté au Gestionnaire de locataires à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
+* Vous devez disposer de l'autorisation gérer vos propres informations d'identification S3. Voir xref:tenant-management-permissions.adoc[Autorisations de gestion des locataires].
+
+
+Vous pouvez créer une ou plusieurs clés d'accès S3 qui vous permettent de créer et de gérer des compartiments pour votre compte de locataire. Après avoir créé une nouvelle clé d'accès, mettez à jour l'application avec votre nouvel ID de clé d'accès et votre clé d'accès secrète. Pour des raisons de sécurité, ne créez pas plus de clés que nécessaire et supprimez les clés que vous n'utilisez pas. Si vous n'avez qu'une seule clé et que vous êtes sur le point d'expirer, créez une nouvelle clé avant l'expiration de l'ancienne, puis supprimez l'ancienne.
+
+Chaque clé peut avoir une heure d'expiration spécifique ou pas d'expiration. Suivez les directives ci-dessous pour l'heure d'expiration :
+
+* Définissez une durée d'expiration pour vos clés afin de limiter votre accès à une certaine période. La définition d'un délai d'expiration court peut vous aider à réduire le risque si votre ID de clé d'accès et votre clé secrète sont exposés accidentellement. Les clés expirées sont supprimées automatiquement.
+* Si le risque de sécurité dans votre environnement est faible et que vous n'avez pas besoin de créer régulièrement de nouvelles clés, vous n'avez pas à définir de délai d'expiration pour vos clés. Si vous décidez plus tard de créer de nouvelles clés, supprimez les anciennes clés manuellement.
+
+
+
+IMPORTANT: Vous pouvez accéder aux compartiments S3 et aux objets appartenant à votre compte à l'aide de l'ID de clé d'accès et de la clé secrète affichée pour votre compte dans le Gestionnaire des locataires. Pour cette raison, protégez les clés d'accès comme vous le feriez avec un mot de passe. Faites pivoter les clés d'accès régulièrement, supprimez les clés inutilisées de votre compte et ne les partagez jamais avec d'autres utilisateurs.
+
+.Étapes
+. Sélectionnez *STOCKAGE (S3)* *Mes clés d'accès*.
++
+La page Mes touches d'accès s'affiche et répertorie toutes les clés d'accès existantes.
+
+. Sélectionnez *Créer clé*.
+. Effectuez l'une des opérations suivantes :
++
+** Sélectionnez *ne définissez pas d'heure d'expiration* pour créer une clé qui n'expire pas. (Valeur par défaut)
+** Sélectionnez *définissez une heure d'expiration* et définissez la date et l'heure d'expiration.
++
+image::../media/tenant_s3_access_key_create_save.png[Capture d'écran de la boîte de dialogue Créer une clé d'accès]
+
+
+
+. Sélectionnez *Créer une clé d'accès*.
++
+La boîte de dialogue Télécharger la clé d'accès s'affiche, avec la liste de votre ID de clé d'accès et de votre clé secrète d'accès.
+
+. Copiez l'ID de la clé d'accès et la clé secrète dans un emplacement sûr, ou sélectionnez *Download .csv* pour enregistrer un fichier de feuille de calcul contenant l'ID de la clé d'accès et la clé secrète d'accès.
++
+
+IMPORTANT: Ne fermez pas cette boîte de dialogue tant que vous n'avez pas copié ou téléchargé ces informations. Vous ne pouvez pas copier ou télécharger des clés après la fermeture de la boîte de dialogue.
+
++
+image::../media/tenant_s3_access_key_save_keys.png[Capture d'écran de la boîte de dialogue Enregistrer les clés]
+
+. Sélectionnez *Terminer*.
++
+La nouvelle clé apparaît sur la page Mes clés d'accès. L'application des modifications peut prendre jusqu'à 15 minutes à cause de la mise en cache.
+
+
