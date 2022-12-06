@@ -17129,7 +17129,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-19 03:20:20 +0000">11/19/2022</time>
+    <time datetime="2022-12-06 18:01:49 +0000">12/06/2022</time>
     
   
 
@@ -17143,7 +17143,7 @@
 <p>Dans certains cas, vous devrez peut-être rééquilibrer les données avec code d&#8217;effacement après l&#8217;ajout de nouveaux nœuds de stockage.</p>
 </div>
 <div class="ulist">
-<div class="title">Ce dont vous avez besoin, 8217;ll</div>
+<div class="title">Ce dont vous avez besoin</div>
 <ul>
 <li>
 <p>Vous avez terminé les étapes d&#8217;extension pour ajouter les nouveaux nœuds de stockage.</p>
@@ -17172,6 +17172,7 @@ N&#8217;effectuez cette procédure que si l&#8217;alerte <strong>stockage d&#821
 </ul>
 </div>
 <div class="paragraph">
+<div class="title">Description de la tâche</div>
 <p>Lors de l&#8217;exécution de la procédure de rééquilibrage EC, les performances des opérations ILM et les opérations des clients S3 et Swift sont susceptibles d&#8217;être affectées. Pour cette raison, vous ne devez effectuer cette procédure que dans des cas limités.</p>
 </div>
 <div class="admonitionblock note">
@@ -17319,10 +17320,10 @@ La procédure de rééquilibrage EC réserve temporairement une grande quantité
 <p>Si l&#8217;état est <code>In progress</code>, L&#8217;opération EC de rééquilibrage est toujours en cours. Vous devez régulièrement surveiller la procédure jusqu&#8217;à ce qu&#8217;elle soit terminée.</p>
 </li>
 <li>
-<p>Si l&#8217;état est <code>Failure</code>, exécutez l' ,étapes de panne.</p>
+<p>Si l&#8217;état est <code>Failure</code>, exécutez l' <a href="#rebalance_fail">étapes de panne</a>.</p>
 </li>
 <li>
-<p>Si l&#8217;état est <code>Success</code>, exécutez l' ,étape de réussite.</p>
+<p>Si l&#8217;état est <code>Success</code>, exécutez l' <a href="#rebalance_succeed">étape de réussite</a>.</p>
 </li>
 </ul>
 </div>
@@ -17375,7 +17376,7 @@ Lorsque vous terminez une procédure de rééquilibrage EC, tout fragment de don
 </div>
 </li>
 <li>
-<p><a id="rééquilibrages_réussi"></a>si le statut de la procédure de rééquilibrage EC est <code>Success</code>, facultatif ,examinez le stockage objet pour afficher les détails mis à jour pour le site.</p>
+<p><a id="rééquilibrages_réussi"></a>si le statut de la procédure de rééquilibrage EC est <code>Success</code>, facultatif <a href="#review_object_storage">examinez le stockage objet</a> pour afficher les détails mis à jour pour le site.</p>
 <div class="paragraph">
 <p>Les données avec code d&#8217;effacement doivent désormais être plus équilibrées entre les nœuds de stockage du site.</p>
 </div>

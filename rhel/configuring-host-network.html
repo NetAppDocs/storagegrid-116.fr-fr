@@ -17129,7 +17129,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-19 03:20:20 +0000">11/19/2022</time>
+    <time datetime="2022-12-06 18:01:49 +0000">12/06/2022</time>
     
   
 
@@ -17145,7 +17145,7 @@
 <p>Une fois l&#8217;installation de Linux terminée sur vos hôtes, vous devrez peut-être procéder à une configuration supplémentaire pour préparer un ensemble d&#8217;interfaces réseau sur chaque hôte, adapté au mappage vers les nœuds StorageGRID que vous pourrez déployer ultérieurement.</p>
 </div>
 <div class="ulist">
-<div class="title">Ce dont vous avez besoin, 8217;ll</div>
+<div class="title">Ce dont vous avez besoin</div>
 <ul>
 <li>
 <p>Vous avez passé en revue le <a href="../network/index.html">Instructions de mise en réseau d&#8217;StorageGRID</a>.</p>
@@ -17154,7 +17154,7 @@
 <p>Vous avez passé en revue les informations sur <a href="node-container-migration-requirements.html">exigences de migration des conteneurs de nœuds</a>.</p>
 </li>
 <li>
-<p>Si vous utilisez des hôtes virtuels, vous avez lu le ,Considérations et recommandations relatives au clonage d&#8217;adresses MAC avant de configurer le réseau hôte.</p>
+<p>Si vous utilisez des hôtes virtuels, vous avez lu le <a href="#mac_address_cloning_rhel">Considérations et recommandations relatives au clonage d&#8217;adresses MAC</a> avant de configurer le réseau hôte.</p>
 </li>
 </ul>
 </div>
@@ -17171,6 +17171,7 @@ Si vous utilisez des machines virtuelles en tant qu&#8217;hôtes, vous devez sé
 </table>
 </div>
 <div class="paragraph">
+<div class="title">Description de la tâche</div>
 <p>Les nœuds du grid doivent être capables d&#8217;accéder au réseau Grid et, éventuellement, aux réseaux client et Admin. Vous fournissez cet accès en créant des mappages qui associent l&#8217;interface physique de l&#8217;hôte aux interfaces virtuelles de chaque nœud de la grille. Lors de la création d&#8217;interfaces hôtes, utilisez des noms conviviaux pour faciliter le déploiement sur tous les hôtes et pour activer la migration.</p>
 </div>
 <div class="paragraph">
@@ -17195,6 +17196,7 @@ N&#8217;utilisez pas de périphériques de liaison ou de pont directement comme 
 </table>
 </div>
 <div class="paragraph">
+<div class="title">Informations associées</div>
 <p><a href="creating-node-configuration-files.html">Création de fichiers de configuration de nœud</a></p>
 </div>
 </div>
@@ -17203,6 +17205,7 @@ N&#8217;utilisez pas de périphériques de liaison ou de pont directement comme 
 <h2 id="considérations-et-recommandations-relatives-au-clonage-dadresses-mac">Considérations et recommandations relatives au clonage d&#8217;adresses MAC</h2>
 <div class="sectionbody">
 <div class="paragraph">
+<div class="title"><a id="adresse_mac_clonage_rhel"></a></div>
 <p>Le clonage d&#8217;adresses MAC fait en sorte que le conteneur utilise l&#8217;adresse MAC de l&#8217;hôte et que l&#8217;hôte utilise l&#8217;adresse MAC d&#8217;une adresse que vous spécifiez ou d&#8217;une adresse générée de manière aléatoire. Vous devez utiliser le clonage d&#8217;adresses MAC pour éviter l&#8217;utilisation de configurations réseau en mode promiscuous.</p>
 </div>
 <div class="sect2">
@@ -17350,6 +17353,7 @@ Si vous ne souhaitez pas utiliser le clonage d&#8217;adresses MAC et que toutes 
 <h2 id="exemple-2-liaison-lacp-avec-les-vlan">Exemple 2 : liaison LACP avec les VLAN</h2>
 <div class="sectionbody">
 <div class="paragraph">
+<div class="title">Description de la tâche</div>
 <p>L&#8217;exemple 2 suppose que vous êtes familier avec les interfaces réseau de liaison et avec la création d&#8217;interfaces VLAN sur la distribution Linux que vous utilisez.</p>
 </div>
 <div class="paragraph">
@@ -17387,6 +17391,7 @@ Si vous ne souhaitez pas utiliser le clonage d&#8217;adresses MAC et que toutes 
 </ol>
 </div>
 <div class="paragraph">
+<div class="title">Informations associées</div>
 <p><a href="example-etc-sysconfig-network-scripts.html">Exemple /etc/sysconfig/network-scripts</a></p>
 </div>
 </div>

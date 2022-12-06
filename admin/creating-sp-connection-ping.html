@@ -17129,7 +17129,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-19 03:20:20 +0000">11/19/2022</time>
+    <time datetime="2022-12-06 18:01:49 +0000">12/06/2022</time>
     
   
 
@@ -17145,7 +17145,7 @@
 <p>Vous utilisez PingFederate pour créer une connexion de fournisseur de services (SP) pour chaque noeud d&#8217;administration de votre système. Pour accélérer le processus, vous importez les métadonnées SAML à partir de StorageGRID.</p>
 </div>
 <div class="ulist">
-<div class="title">Ce dont vous avez besoin, 8217;ll</div>
+<div class="title">Ce dont vous avez besoin</div>
 <ul>
 <li>
 <p>Vous avez configuré l&#8217;authentification unique pour StorageGRID et sélectionné <strong>Ping Federate</strong> comme type SSO.</p>
@@ -17171,6 +17171,7 @@
 </ul>
 </div>
 <div class="paragraph">
+<div class="title">Description de la tâche</div>
 <p>Ces instructions résument comment configurer PingFederate Server version 10.3 en tant que fournisseur SSO pour StorageGRID. Si vous utilisez une autre version de PingFederate, vous devrez peut-être adapter ces instructions. Reportez-vous à la documentation du serveur PingFederate pour obtenir des instructions détaillées sur votre version.</p>
 </div>
 </div>
@@ -17182,7 +17183,7 @@
 <p>Avant de pouvoir créer les connexions SP que vous utiliserez pour StorageGRID, vous devez effectuer les tâches préalables dans PingFederate. Vous utiliserez les informations de ces prérequis lors de la configuration des connexions du processeur de service.</p>
 </div>
 <div class="sect2">
-<h3 id="création-de-magasin-de-données">Création de magasin de données</h3>
+<h3 id="créer-un-magasin-de-données">Créer un magasin de données<a id="data-store"></a></h3>
 <div class="paragraph">
 <p>Si ce n&#8217;est pas déjà fait, créez un magasin de données pour connecter PingFederate au serveur LDAP AD FS. Utilisez les valeurs que vous avez utilisées lorsque <a href="../admin/using-identity-federation.html">configuration de la fédération des identités</a> À StorageGRID.</p>
 </div>
@@ -17201,7 +17202,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="créer-un-validateur-dinformations-didentification-de-mot-de-passe">Créer un validateur d&#8217;informations d&#8217;identification de mot de passe</h3>
+<h3 id="créer-un-validateur-dinformations-didentification-de-mot-de-passe">Créer un validateur d&#8217;informations d&#8217;identification de mot de passe<a id="password-validateur"></a></h3>
 <div class="paragraph">
 <p>Si ce n&#8217;est pas déjà fait, créez un validateur pour les informations d&#8217;identification du mot de passe.</p>
 </div>
@@ -17226,7 +17227,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="créez-une-instance-dadaptateur-idp">Créez une instance d&#8217;adaptateur IDP</h3>
+<h3 id="créer-une-instance-dadaptateur-idp">Créer une instance d&#8217;adaptateur IDP<a id="instance-adaptateur"></a></h3>
 <div class="paragraph">
 <p>Si ce n&#8217;est déjà fait, créez une instance de carte IDP.</p>
 </div>
@@ -17245,7 +17246,7 @@
 <p>Dans l&#8217;onglet carte IDP, sélectionnez <strong>Ajouter une nouvelle ligne à 'Validators Credentials'</strong>.</p>
 </li>
 <li>
-<p>Sélectionner ,validateur des informations d&#8217;identification du mot de passe vous avez créé.</p>
+<p>Sélectionner <a href="#password-validator">validateur des informations d&#8217;identification du mot de passe</a> vous avez créé.</p>
 </li>
 <li>
 <p>Dans l&#8217;onglet attributs de l&#8217;adaptateur, sélectionnez l&#8217;attribut <strong>nom d&#8217;utilisateur</strong> pour <strong>pseudonyme</strong>.</p>
@@ -17257,7 +17258,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="créer-ou-importer-un-certificat-de-signature">Créer ou importer un certificat de signature</h3>
+<h3 id="créer-ou-importer-un-certificat-de-signature">Créer ou importer un certificat de signature<a id="signature-certificat"></a></h3>
 <div class="paragraph">
 <p>Si ce n&#8217;est déjà fait, créez ou importez le certificat de signature.</p>
 </div>
@@ -17287,7 +17288,7 @@
 <img src="/us-en/storagegrid-116/images/important.svg" alt="Important">
 </td>
 <td class="content">
-Vous devez créer une connexion SP pour chaque nœud d&#8217;administration de votre système StorageGRID afin que les utilisateurs puissent se connecter en toute sécurité à n&#8217;importe quel nœud et en dehors. Suivez ces instructions pour créer la première connexion du processeur de service. Ensuite, passez à  additional SP connections pour créer des connexions supplémentaires dont vous avez besoin.
+Vous devez créer une connexion SP pour chaque nœud d&#8217;administration de votre système StorageGRID afin que les utilisateurs puissent se connecter en toute sécurité à n&#8217;importe quel nœud et en dehors. Suivez ces instructions pour créer la première connexion du processeur de service. Ensuite, passez à <a href="#créer-des-connexions-sp-supplémentaires">Créer des connexions SP supplémentaires</a> pour créer des connexions supplémentaires dont vous avez besoin.
 </td>
 </tr>
 </table>
@@ -17376,7 +17377,7 @@ Vous devez créer une connexion SP pour chaque nœud d&#8217;administration de v
 <p>Dans l&#8217;onglet mappage de la source d&#8217;authentification, sélectionnez <strong>mappage d&#8217;une nouvelle instance de carte</strong>.</p>
 </li>
 <li>
-<p>Dans l&#8217;onglet instance de la carte, sélectionnez ,instance d&#8217;adaptateur vous avez créé.</p>
+<p>Dans l&#8217;onglet instance de la carte, sélectionnez <a href="#adapter-instance">instance d&#8217;adaptateur</a> vous avez créé.</p>
 </li>
 <li>
 <p>Dans l&#8217;onglet méthode de mappage, sélectionnez <strong>récupérer des attributs supplémentaires à partir d&#8217;un magasin de données</strong>.</p>
@@ -17385,7 +17386,7 @@ Vous devez créer une connexion SP pour chaque nœud d&#8217;administration de v
 <p>Dans l&#8217;onglet User Lookup Source d&#8217;attribut, sélectionnez <strong>Add Attribute Source</strong>.</p>
 </li>
 <li>
-<p>Dans l&#8217;onglet magasin de données, fournissez une description et sélectionnez ,magasin de données que vous avez ajouté.</p>
+<p>Dans l&#8217;onglet magasin de données, fournissez une description et sélectionnez <a href="#data-store">magasin de données</a> que vous avez ajouté.</p>
 </li>
 <li>
 <p>Dans l&#8217;onglet LDAP Directory Search :</p>
@@ -17469,7 +17470,7 @@ Vous devez créer une connexion SP pour chaque nœud d&#8217;administration de v
 <p>Dans l&#8217;onglet informations d&#8217;identification, sélectionnez <strong>configurer les informations d&#8217;identification</strong>.</p>
 </li>
 <li>
-<p>Sélectionner ,signature du certificat vous avez créé ou importé.</p>
+<p>Sélectionner <a href="#signing-certificate">signature du certificat</a> vous avez créé ou importé.</p>
 </li>
 <li>
 <p>Sélectionnez <strong>Suivant</strong> pour accéder à <strong>gérer les paramètres de vérification de signature</strong>.</p>

@@ -17129,7 +17129,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-19 03:20:20 +0000">11/19/2022</time>
+    <time datetime="2022-12-06 18:01:49 +0000">12/06/2022</time>
     
   
 
@@ -17153,7 +17153,7 @@
 <p>Si l&#8217;alerte <strong>stockage de métadonnées faible</strong> est déclenchée, vous devez ajouter de nouveaux nœuds de stockage.</p>
 </div>
 <div class="ulist">
-<div class="title">Ce dont vous avez besoin, 8217;ll</div>
+<div class="title">Ce dont vous avez besoin</div>
 <ul>
 <li>
 <p>Vous devez être connecté au Grid Manager à l&#8217;aide d&#8217;un <a href="../admin/web-browser-requirements.html">navigateur web pris en charge</a>.</p>
@@ -17161,6 +17161,7 @@
 </ul>
 </div>
 <div class="paragraph">
+<div class="title">Description de la tâche</div>
 <p>StorageGRID réserve un certain espace sur le volume 0 de chaque nœud de stockage pour les métadonnées de l&#8217;objet. Cet espace est appelé espace réservé réel, et il est divisé en l&#8217;espace autorisé pour les métadonnées d&#8217;objet (espace de métadonnées autorisé) et l&#8217;espace requis pour les opérations essentielles de base de données, telles que la compaction et la réparation. L&#8217;espace de métadonnées autorisé régit la capacité globale des objets.</p>
 </div>
 <div class="imageblock">
@@ -17271,7 +17272,7 @@ Dans la mesure où StorageGRID conserve des copies complètes de toutes les mét
 <p>L&#8217;alarme Services : Status - Cassandra (SVST) indique que vous devrez peut-être reconstruire la base de données Cassandra pour un nœud de stockage. Cassandra est utilisée comme magasin de métadonnées pour StorageGRID.</p>
 </div>
 <div class="ulist">
-<div class="title">Ce dont vous avez besoin, 8217;ll</div>
+<div class="title">Ce dont vous avez besoin</div>
 <ul>
 <li>
 <p>Vous devez être connecté au Grid Manager à l&#8217;aide d&#8217;un <a href="../admin/web-browser-requirements.html">navigateur web pris en charge</a>.</p>
@@ -17285,6 +17286,7 @@ Dans la mesure où StorageGRID conserve des copies complètes de toutes les mét
 </ul>
 </div>
 <div class="paragraph">
+<div class="title">Description de la tâche</div>
 <p>Si Cassandra est arrêtée pendant plus de 15 jours (par exemple, le nœud de stockage est mis hors tension), Cassandra ne démarre pas lorsque le nœud est remis en ligne. Vous devez reconstruire la base de données Cassandra pour le service DDS affecté.</p>
 </div>
 <div class="paragraph">
@@ -17455,7 +17457,7 @@ its 15 day grace period - rebuild cassandra</pre>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Assurez-vous que l&#8217;horodatage de ce message correspond à l&#8217;heure à laquelle vous avez tenté de redémarrer Cassandra, comme indiqué à l&#8217;étape ,Redémarrez Cassandra à partir du nœud de stockage.</p>
+<p>Assurez-vous que l&#8217;horodatage de ce message correspond à l&#8217;heure à laquelle vous avez tenté de redémarrer Cassandra, comme indiqué à l&#8217;étape <a href="#restart_Cassandra_from_the_Storage_Node">Redémarrez Cassandra à partir du nœud de stockage</a>.</p>
 <div class="paragraph">
 <p>Il peut y avoir plusieurs entrées pour Cassandra ; vous devez trouver l&#8217;entrée la plus récente.</p>
 </div>
@@ -17483,6 +17485,7 @@ its 15 day grace period - rebuild cassandra</pre>
 <p>Une alarme Total Events (SMTT) est déclenchée lorsque la base de données Cassandra a une erreur de mémoire insuffisante. Si cette erreur se produit, contactez le support technique pour résoudre le problème.</p>
 </div>
 <div class="paragraph">
+<div class="title">Description de la tâche</div>
 <p>Si une erreur de mémoire insuffisante se produit pour la base de données Cassandra, un vidage de mémoire est créé, une alarme Total Events (SMTT) est déclenchée et le nombre d&#8217;erreurs de mémoire de Cassandra est incrémenté d&#8217;un.</p>
 </div>
 <div class="olist arabic">

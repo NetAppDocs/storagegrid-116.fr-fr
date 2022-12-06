@@ -17129,7 +17129,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-19 03:20:20 +0000">11/19/2022</time>
+    <time datetime="2022-12-06 18:01:49 +0000">12/06/2022</time>
     
   
 
@@ -17195,7 +17195,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="recommandations-pour-les-lectures-de-plage">Recommandations pour les « lectures de plage »</h2>
+<h2 id="recommandations-pour-plages-de-lectures">Recommandations pour « plages de lectures »</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Si l&#8217;option <strong>Compress emmagased Objects</strong> est sélectionnée (<strong>CONFIGURATION</strong> <strong>système</strong> <strong>Grid options</strong>), les applications client Swift doivent éviter d&#8217;effectuer des opérations GET object spécifiant une plage d&#8217;octets. Ces opérations de « lecture à plage » sont inefficaces, car StorageGRID doit décompresser efficacement les objets pour accéder aux octets demandés. LES opérations GET Object qui demandent une petite plage d&#8217;octets provenant d&#8217;un objet très volumineux sont particulièrement inefficaces. Par exemple, il est très inefficace de lire une plage de 10 Mo à partir d&#8217;un objet compressé de 50 Go.</p>
@@ -17216,6 +17216,7 @@ Si vous devez compresser des objets et que votre application client doit utilise
 </table>
 </div>
 <div class="paragraph">
+<div class="title">Informations associées</div>
 <p><a href="get-container-consistency-request.html">DEMANDE DE cohérence du conteneur</a></p>
 </div>
 <div class="paragraph">

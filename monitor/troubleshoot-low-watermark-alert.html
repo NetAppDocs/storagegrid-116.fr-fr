@@ -17129,7 +17129,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-19 03:20:20 +0000">11/19/2022</time>
+    <time datetime="2022-12-06 18:01:49 +0000">12/06/2022</time>
     
   
 
@@ -17226,7 +17226,7 @@
 <p>Suivez ces étapes si une ou plusieurs alertes <strong>prioritaire de filigrane en lecture seule basse</strong> ont été déclenchées. Vous pouvez également utiliser ces instructions si vous utilisez actuellement des paramètres de filigrane personnalisés et souhaitez commencer à utiliser des paramètres optimisés, même si aucune alerte n&#8217;a été déclenchée.</p>
 </div>
 <div class="ulist">
-<div class="title">Ce dont vous avez besoin, 8217;ll</div>
+<div class="title">Ce dont vous avez besoin</div>
 <ul>
 <li>
 <p>Vous avez terminé la mise à niveau vers StorageGRID 11.6.</p>
@@ -17240,6 +17240,7 @@
 </ul>
 </div>
 <div class="paragraph">
+<div class="title">Description de la tâche</div>
 <p>Vous pouvez résoudre l&#8217;alerte <strong>dépassement de filigrane en lecture seule</strong> en mettant à jour les paramètres de filigrane personnalisés vers les nouveaux remplacements de filigrane. Toutefois, si un ou plusieurs nœuds de stockage sont proches de leur emplacement complet ou si vous avez des exigences ILM spécifiques, vous devez d&#8217;abord consulter les filigranes de stockage optimisés et déterminer s&#8217;il est sûr de les utiliser.</p>
 </div>
 <div class="sect2">
@@ -17261,7 +17262,7 @@
 </div>
 </li>
 <li>
-<p>Si aucun des nœuds de stockage n&#8217;est presque plein (par exemple, toutes les valeurs <strong>données objet utilisées</strong> sont inférieures à 80 %), vous pouvez commencer à utiliser les paramètres de remplacement. Accédez à  optimized watermarks.</p>
+<p>Si aucun des nœuds de stockage n&#8217;est presque plein (par exemple, toutes les valeurs <strong>données objet utilisées</strong> sont inférieures à 80 %), vous pouvez commencer à utiliser les paramètres de remplacement. Accédez à <a href="#utilisez-des-filigranes-optimisés">Utilisez des filigranes optimisés</a>.</p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -17269,14 +17270,14 @@
 <img src="/us-en/storagegrid-116/images/note.svg" alt="Note">
 </td>
 <td class="content">
-Il y a quelques exceptions à cette règle générale. Par exemple, si les règles ILM utilisent un comportement d&#8217;ingestion strict ou si les pools de stockage spécifiques sont proches de la version complète, vous devez d&#8217;abord effectuer les étapes de la  optimized storage watermarks et  if you can use optimized watermarks.
+Il y a quelques exceptions à cette règle générale. Par exemple, si les règles ILM utilisent un comportement d&#8217;ingestion strict ou si les pools de stockage spécifiques sont proches de la version complète, vous devez d&#8217;abord effectuer les étapes de la <a href="#afficher-des-filigranes-de-stockage-optimisés">Afficher des filigranes de stockage optimisés</a> et <a href="#déterminez-si-vous-pouvez-utiliser-des-filigranes-optimisés">Déterminez si vous pouvez utiliser des filigranes optimisés</a>.
 </td>
 </tr>
 </table>
 </div>
 </li>
 <li>
-<p>Si un autre nœud de stockage est presque complet, effectuez les étapes de la section  optimized storage watermarks et  if you can use optimized watermarks.</p>
+<p>Si un autre nœud de stockage est presque complet, effectuez les étapes de la section <a href="#afficher-des-filigranes-de-stockage-optimisés">Afficher des filigranes de stockage optimisés</a> et <a href="#déterminez-si-vous-pouvez-utiliser-des-filigranes-optimisés">Déterminez si vous pouvez utiliser des filigranes optimisés</a>.</p>
 </li>
 </ol>
 </div>
@@ -17342,9 +17343,9 @@ Il y a quelques exceptions à cette règle générale. Par exemple, si les règl
 </div>
 </li>
 <li>
-<p>Si au moins un volume de chaque nœud de stockage en ligne dispose de plus d&#8217;espace disponible que le seuil maximal optimisé pour ce nœud, accédez à  optimized watermarks pour commencer à utiliser les filigranes optimisés.</p>
+<p>Si au moins un volume de chaque nœud de stockage en ligne dispose de plus d&#8217;espace disponible que le seuil maximal optimisé pour ce nœud, accédez à <a href="#utilisez-des-filigranes-optimisés">Utilisez des filigranes optimisés</a> pour commencer à utiliser les filigranes optimisés.</p>
 <div class="paragraph">
-<p>Sinon, <a href="../expand/index.html">développez votre grille</a> dès que possible. Ajoutez des volumes de stockage à un nœud existant ou ajoutez de nouveaux nœuds de stockage. Ensuite, passez à  optimized watermarks pour mettre à jour les paramètres du filigrane.</p>
+<p>Sinon, <a href="../expand/index.html">développez votre grille</a> dès que possible. Ajoutez des volumes de stockage à un nœud existant ou ajoutez de nouveaux nœuds de stockage. Ensuite, passez à <a href="#utilisez-des-filigranes-optimisés">Utilisez des filigranes optimisés</a> pour mettre à jour les paramètres du filigrane.</p>
 </div>
 </li>
 <li>

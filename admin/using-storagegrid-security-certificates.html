@@ -17129,7 +17129,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-19 03:20:20 +0000">11/19/2022</time>
+    <time datetime="2022-12-06 18:01:49 +0000">12/06/2022</time>
     
   
 
@@ -17256,10 +17256,10 @@ StorageGRID inclut également des certificats CA du système d&#8217;exploitatio
 <div class="ulist">
 <ul>
 <li>
-<p>interface certificate: Sécurise les connexions du navigateur Web client aux interfaces de gestion StorageGRID.</p>
+<p><a href="Certificat de l&.html#8217;interface de gestion">Certificat de l&.html</a>: Sécurise les connexions du navigateur Web client aux interfaces de gestion StorageGRID.</p>
 </li>
 <li>
-<p>and Swift API certificate: Sécurise les connexions API client aux nœuds de stockage, aux nœuds d&#8217;administration et aux nœuds de passerelle, que les applications client S3 et Swift utilisent pour télécharger et télécharger les données d&#8217;objet.</p>
+<p><a href="#certificat-api-s3-et-swift">Certificat API S3 et Swift</a>: Sécurise les connexions API client aux nœuds de stockage, aux nœuds d&#8217;administration et aux nœuds de passerelle, que les applications client S3 et Swift utilisent pour télécharger et télécharger les données d&#8217;objet.</p>
 </li>
 </ul>
 </div>
@@ -17320,7 +17320,7 @@ StorageGRID inclut également des certificats CA du système d&#8217;exploitatio
 <div class="title">CA grille</div>
 <div class="content">
 <div class="paragraph">
-<p>Le ,Certificat CA de la grille, Généré par l&#8217;autorité de certification StorageGRID lors de l&#8217;installation de StorageGRID, sécurise tout le trafic StorageGRID interne.</p>
+<p>Le <a href="#gridca_details">Certificat CA de la grille</a>, Généré par l&#8217;autorité de certification StorageGRID lors de l&#8217;installation de StorageGRID, sécurise tout le trafic StorageGRID interne.</p>
 </div>
 <div class="paragraph">
 <p>Les informations sur le certificat comprennent la date d&#8217;expiration du certificat et son contenu.</p>
@@ -17334,7 +17334,7 @@ StorageGRID inclut également des certificats CA du système d&#8217;exploitatio
 <div class="title">Client</div>
 <div class="content">
 <div class="paragraph">
-<p>,Certificats client, Généré par une autorité de certification externe, sécurisez les connexions entre les outils de contrôle externes et la base de données StorageGRID Prometheus.</p>
+<p><a href="#adminclientcert_details">Certificats client</a>, Généré par une autorité de certification externe, sécurisez les connexions entre les outils de contrôle externes et la base de données StorageGRID Prometheus.</p>
 </div>
 <div class="paragraph">
 <p>La table de certificats possède une ligne pour chaque certificat client configuré et indique si le certificat peut être utilisé pour l&#8217;accès à la base de données Prometheus, ainsi que la date d&#8217;expiration du certificat.</p>
@@ -17379,10 +17379,8 @@ StorageGRID inclut également des certificats CA du système d&#8217;exploitatio
 <div class="openblock">
 <div class="title">Terminaux d&#8217;équilibrage de charge</div>
 <div class="content">
-<div class="literalblock">
-<div class="content">
-<pre>balancer endpoint certificate,Certificats de noeud final de l'équilibreur de charge, Que vous téléchargez ou générez, sécurisez les connexions entre les clients S3 et Swift et le service StorageGRID Load Balancer sur les nœuds de passerelle et les nœuds d'administration.</pre>
-</div>
+<div class="paragraph">
+<p><a href="Certificat de terminal de l&.html#8217;équilibreur de charge">Certificats de noeud final de l&#8217;équilibreur de charge</a>, Que vous téléchargez ou générez, sécurisez les connexions entre les clients S3 et Swift et le service StorageGRID Load Balancer sur les nœuds de passerelle et les nœuds d&#8217;administration.</p>
 </div>
 <div class="paragraph">
 <p>La table des noeuds finaux de l&#8217;équilibreur de charge comporte une ligne pour chaque noeud final de l&#8217;équilibreur de charge configuré et indique si le certificat API S3 et Swift global ou un certificat de point final d&#8217;équilibreur de charge personnalisé est utilisé pour le noeud final. La date d&#8217;expiration de chaque certificat s&#8217;affiche également.</p>
@@ -17421,7 +17419,7 @@ Les modifications apportées à un certificat de point final peuvent prendre jus
 <div class="title">Locataires</div>
 <div class="content">
 <div class="paragraph">
-<p>Les locataires peuvent utiliser  federation certificate,certificats de serveur de fédération des identités ou  services endpoint certificate,certificats de terminal du service de plate-forme Pour sécuriser leurs connexions avec StorageGRID.</p>
+<p>Les locataires peuvent utiliser <a href="#certificat-de-fédération-des-identités">certificats de serveur de fédération des identités</a> ou <a href="#certificat-de-terminal-des-services-de-plate-forme">certificats de terminal du service de plate-forme</a> Pour sécuriser leurs connexions avec StorageGRID.</p>
 </div>
 <div class="paragraph">
 <p>La table de tenant dispose d&#8217;une ligne pour chaque locataire et indique si chaque locataire a l&#8217;autorisation d&#8217;utiliser ses propres services de référentiel d&#8217;identité ou de plate-forme.</p>
@@ -17456,22 +17454,22 @@ Les modifications apportées à un certificat de point final peuvent prendre jus
 <div class="ulist">
 <ul>
 <li>
-<p>federation certificate,Certificats de fédération des identités</p>
+<p><a href="#certificat-de-fédération-des-identités">Certificats de fédération des identités</a></p>
 </li>
 <li>
-<p>Storage Pool endpoint certificate,Certificats de pool de stockage cloud</p>
+<p><a href="#certificat-de-terminal-cloud-storage-pool">Certificats de pool de stockage cloud</a></p>
 </li>
 <li>
-<p>management server (KMS) certificate,Certificats de serveur de gestion des clés (KMS)</p>
+<p><a href="#certificat-de-serveur-de-gestion-des-clés-kms">Certificats de serveur de gestion des clés (KMS)</a></p>
 </li>
 <li>
-<p>sign-on (SSO) certificate,Certificats d&#8217;authentification unique</p>
+<p><a href="#certificat-sso-single-sign-on">Certificats d&#8217;authentification unique</a></p>
 </li>
 <li>
-<p>alert notification certificate,Certificats de notification d&#8217;alerte par e-mail</p>
+<p><a href="Certificat de notification d&.html#8217;alerte par e-mail">Certificats de notification d&#8217;alerte par e-mail</a></p>
 </li>
 <li>
-<p>syslog server certificate,Certificats de serveur syslog externe</p>
+<p><a href="#certificat-de-serveur-syslog-externe">Certificats de serveur syslog externe</a></p>
 </li>
 </ul>
 </div>
@@ -17606,7 +17604,7 @@ Vous ne pouvez afficher et accéder aux informations d&#8217;autres certificats 
 <div class="sect2">
 <h3 id="certificat-ca-de-la-grille">Certificat CA de la grille</h3>
 <div class="paragraph">
-<p>Voir la ,Description du certificat CA de la grille par défaut.</p>
+<p>Voir la <a href="#gridca_details">Description du certificat CA de la grille par défaut</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -17680,7 +17678,7 @@ Vous ne pouvez afficher et accéder aux informations d&#8217;autres certificats 
 <p>Authentifie la connexion entre les clients S3 ou Swift et le service StorageGRID Load Balancer sur les nœuds de passerelle et les nœuds d&#8217;administration. Vous pouvez télécharger ou générer un certificat d&#8217;équilibreur de charge lorsque vous configurez un noeud final d&#8217;équilibreur de charge. Les applications client utilisent le certificat d&#8217;équilibreur de charge lors de la connexion à StorageGRID pour enregistrer et récupérer les données d&#8217;objet.</p>
 </div>
 <div class="paragraph">
-<p>Vous pouvez également utiliser une version personnalisée de Global  and Swift API certificate Certificat permettant d&#8217;authentifier les connexions au service Load Balancer. Si le certificat global est utilisé pour authentifier les connexions de l&#8217;équilibreur de charge, il n&#8217;est pas nécessaire de télécharger ou de générer un certificat distinct pour chaque noeud final de l&#8217;équilibreur de charge.</p>
+<p>Vous pouvez également utiliser une version personnalisée de Global <a href="#certificat-api-s3-et-swift">Certificat API S3 et Swift</a> Certificat permettant d&#8217;authentifier les connexions au service Load Balancer. Si le certificat global est utilisé pour authentifier les connexions de l&#8217;équilibreur de charge, il n&#8217;est pas nécessaire de télécharger ou de générer un certificat distinct pour chaque noeud final de l&#8217;équilibreur de charge.</p>
 </div>
 <div class="paragraph">
 <p><strong>Remarque :</strong> le certificat utilisé pour l&#8217;authentification de l&#8217;équilibreur de charge est le certificat le plus utilisé pendant le fonctionnement normal de l&#8217;StorageGRID.</p>

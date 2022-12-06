@@ -17129,7 +17129,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-19 03:20:20 +0000">11/19/2022</time>
+    <time datetime="2022-12-06 18:01:49 +0000">12/06/2022</time>
     
   
 
@@ -17147,7 +17147,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="dépanner-les-erreurs-422-entité-impossible-à-traiter">Dépanner les erreurs "422: Entité impossible à traiter"</h2>
+<h2 id="dépanner-les-erreurs-422-entité-impossible-à-traiter">Dépanner les erreurs « 422 : entité impossible à traiter »</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>L&#8217;erreur 422 : entité impossible à traiter peut se produire dans un certain nombre de circonstances. Consultez le message d&#8217;erreur pour déterminer la cause de votre problème.</p>
@@ -17224,17 +17224,19 @@ TLS handshake failed
 </tbody>
 </table>
 <div class="paragraph">
+<div class="title">Informations associées</div>
 <p><a href="../admin/index.html">Administrer StorageGRID</a></p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="dépanner-lalerte-de-non-concordance-de-mtu-du-réseau-grid">Dépanner l&#8217;alerte de non-concordance de MTU du réseau Grid</h2>
+<h2 id="dépanner-lalerte-de-non-concordance-de-mtu-du-réseau-grid"><a id="Dépannage_MTU_Alert"></a>dépanner l&#8217;alerte de non-concordance de MTU du réseau Grid</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>L&#8217;alerte <strong>Grid Network MTU mismatch</strong> est déclenchée lorsque le paramètre MTU (maximum transmission Unit) de l&#8217;interface réseau Grid (eth0) diffère considérablement sur les nœuds de la grille.</p>
 </div>
 <div class="paragraph">
+<div class="title">Description de la tâche</div>
 <p>Les différences dans les paramètres MTU peuvent indiquer que certains réseaux eth0, mais pas tous, sont configurés pour les trames jumbo. Une différence de taille de MTU supérieure à 1000 peut entraîner des problèmes de performances du réseau.</p>
 </div>
 <div class="olist arabic">
@@ -17354,6 +17356,7 @@ TLS handshake failed
 </ol>
 </div>
 <div class="paragraph">
+<div class="title">Informations associées</div>
 <p><a href="../sg100-1000/index.html">Appareils de services SG100 et SG1000</a></p>
 </div>
 <div class="paragraph">
@@ -17374,6 +17377,7 @@ TLS handshake failed
 <p>Les alarmes d&#8217;erreur de réception réseau (NRER) peuvent être causées par des problèmes de connectivité entre StorageGRID et votre matériel réseau. Dans certains cas, les erreurs NRER peuvent être résolues sans intervention manuelle. Si les erreurs ne sont pas claires, effectuez les actions recommandées.</p>
 </div>
 <div class="paragraph">
+<div class="title">Description de la tâche</div>
 <p>Les alarmes NRER peuvent être causées par les problèmes suivants avec le matériel réseau connecté à StorageGRID :</p>
 </div>
 <div class="ulist">
@@ -17514,7 +17518,8 @@ Vous remarquerez peut-être des taux d&#8217;erreur élevés dans un environneme
 </ol>
 </div>
 <div class="paragraph">
-<p>,Dépanner l&#8217;alerte de non-concordance de MTU du réseau Grid</p>
+<div class="title">Informations associées</div>
+<p><a href="#troubleshoot_MTU_alert">Dépanner l&#8217;alerte de non-concordance de MTU du réseau Grid</a></p>
 </div>
 <div class="paragraph">
 <p><a href="alarms-reference.html">Référence des alarmes (système hérité)</a></p>
@@ -17555,6 +17560,7 @@ Lorsque vous spécifiez la source NTP externe pour une installation StorageGRID 
 </table>
 </div>
 <div class="paragraph">
+<div class="title">Informations associées</div>
 <p><a href="../maintain/index.html">Récupérer et entretenir</a></p>
 </div>
 </div>
@@ -17592,6 +17598,7 @@ Créez des interfaces réseau virtuelles distinctes pour le système d&#8217;exp
 <p>Si vous ne souhaitez pas utiliser le clonage d&#8217;adresses MAC et que toutes les interfaces puissent recevoir et transmettre des données pour des adresses MAC autres que celles attribuées par l&#8217;hyperviseur, Assurez-vous que les propriétés de sécurité aux niveaux de commutateur virtuel et de groupe de ports sont définies sur <strong>Accept</strong> pour le mode promiscuous, les changements d&#8217;adresse MAC et les transmissions forgées. Les valeurs définies sur le commutateur virtuel peuvent être remplacées par les valeurs au niveau du groupe de ports, de sorte que les paramètres soient les mêmes aux deux endroits.</p>
 </div>
 <div class="paragraph">
+<div class="title">Informations associées</div>
 <p><a href="../rhel/index.html">Installez Red Hat Enterprise Linux ou CentOS</a></p>
 </div>
 <div class="paragraph">
@@ -17607,6 +17614,7 @@ Créez des interfaces réseau virtuelles distinctes pour le système d&#8217;exp
 <p>Un nœud Linux à l&#8217;état orphelin indique généralement que le service StorageGRID ou le démon du nœud StorageGRID contrôlant le conteneur du nœud est décédé de façon inattendue.</p>
 </div>
 <div class="paragraph">
+<div class="title">Description de la tâche</div>
 <p>Si un nœud Linux signale qu&#8217;il est dans un état orphelin, vous devez :</p>
 </div>
 <div class="ulist">
@@ -17680,6 +17688,7 @@ Créez des interfaces réseau virtuelles distinctes pour le système d&#8217;exp
 <p>Vous devrez peut-être activer la prise en charge IPv6 dans le noyau si vous avez installé des nœuds StorageGRID sur des hôtes Linux et que vous remarquez que les adresses IPv6 n&#8217;ont pas été attribuées aux conteneurs de nœuds comme prévu.</p>
 </div>
 <div class="paragraph">
+<div class="title">Description de la tâche</div>
 <p>L&#8217;adresse IPv6 attribuée à un nœud de grille s&#8217;affiche aux emplacements suivants dans Grid Manager :</p>
 </div>
 <div class="ulist">

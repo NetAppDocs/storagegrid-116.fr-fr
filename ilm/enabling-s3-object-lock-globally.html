@@ -17129,7 +17129,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-19 03:20:20 +0000">11/19/2022</time>
+    <time datetime="2022-12-06 18:01:49 +0000">12/06/2022</time>
     
   
 
@@ -17143,7 +17143,7 @@
 <p>Si un compte de locataire S3 doit respecter les exigences réglementaires lors de la sauvegarde des données d&#8217;objet, vous devez activer le verrouillage objet S3 pour l&#8217;intégralité de votre système StorageGRID. L&#8217;activation du paramètre de verrouillage d&#8217;objet S3 global permet aux locataires S3 de créer et de gérer des compartiments et des objets avec le verrouillage d&#8217;objet S3.</p>
 </div>
 <div class="ulist">
-<div class="title">Ce dont vous avez besoin, 8217;ll</div>
+<div class="title">Ce dont vous avez besoin</div>
 <ul>
 <li>
 <p>Vous disposez de l&#8217;autorisation d&#8217;accès racine.</p>
@@ -17170,6 +17170,7 @@
 </ul>
 </div>
 <div class="paragraph">
+<div class="title">Description de la tâche</div>
 <p>Un administrateur de grid doit activer le paramètre global de verrouillage d&#8217;objet S3 pour permettre aux utilisateurs locataires de créer de nouveaux compartiments pour lesquels le verrouillage d&#8217;objet S3 est activé. Une fois ce paramètre activé, il ne peut pas être désactivé.</p>
 </div>
 <div class="admonitionblock note">
@@ -17244,6 +17245,7 @@ Si vous avez activé le paramètre de conformité globale à l&#8217;aide d&#821
 </ol>
 </div>
 <div class="paragraph">
+<div class="title">Une fois que vous avez terminé</div>
 <p>Après avoir activé le paramètre global de verrouillage d&#8217;objet S3, vous devrez peut-être le faire <a href="../ilm/creating-default-ilm-rule.html">créez une règle par défaut</a> les données sont conformes et <a href="creating-ilm-policy-after-s3-object-lock-is-enabled.html">Création d&#8217;une règle ILM</a> c&#8217;est-à-dire conforme. Une fois le paramètre activé, la règle ILM peut éventuellement inclure une règle par défaut conforme et une règle par défaut non compatible. Par exemple, vous pouvez utiliser une règle non conforme qui ne contient pas de filtres pour les objets dans les compartiments où le verrouillage d&#8217;objet S3 n&#8217;est pas activé.</p>
 </div>
 <div class="ulist">
