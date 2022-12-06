@@ -13,8 +13,10 @@ summary: 'Vous pouvez modifier la configuration réseau d"un ou plusieurs nœuds
 [role="lead"]
 Vous pouvez modifier la configuration réseau d'un ou plusieurs nœuds à l'aide de l'outil Modifier IP. Vous pouvez modifier la configuration du réseau Grid ou ajouter, modifier ou supprimer les réseaux d'administration ou de client.
 
+.Ce dont vous avez besoin
 Vous devez avoir le `Passwords.txt` fichier.
 
+.Description de la tâche
 *Linux:* si vous ajoutez un noeud de grille au réseau Admin ou au réseau client pour la première fois, et que vous n'avez pas configuré précédemment ADMIN_NETWORK_TARGET ni CLIENT_NETWORK_TARGET dans le fichier de configuration de noeud, vous devez le faire maintenant.
 
 Reportez-vous aux instructions d'installation de StorageGRID pour votre système d'exploitation Linux.
@@ -201,6 +203,7 @@ Après application ou transfert des modifications, un nouveau progiciel de récu
 
 
 
+.Informations associées
 xref:linux-adding-interfaces-to-existing-node.adoc[Linux : ajoutez des interfaces au nœud existant]
 
 xref:../rhel/index.adoc[Installez Red Hat Enterprise Linux ou CentOS]

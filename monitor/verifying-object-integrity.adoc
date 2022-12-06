@@ -51,11 +51,12 @@ Si la vérification en arrière-plan ne peut pas remplacer un objet corrompu car
 
 Vous pouvez modifier la vitesse à laquelle la vérification en arrière-plan vérifie les données d'objet répliquées sur un nœud de stockage si vous avez des problèmes d'intégrité des données.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer d'autorisations d'accès spécifiques.
 
 
+.Description de la tâche
 Vous pouvez modifier le taux de vérification pour la vérification en arrière-plan sur un nœud de stockage :
 
 * Adaptatif : paramètre par défaut. La tâche est conçue pour vérifier à un maximum de 4 Mo/s ou 10 objets/s (selon la première limite dépassée).
@@ -145,7 +146,7 @@ Le contrôle d'existence des objets lit les métadonnées de chaque objet stock�
 
 Vous créez et exécutez un travail de vérification de l'existence d'un objet à la fois. Lorsque vous créez un travail, vous sélectionnez les nœuds de stockage et les volumes à vérifier. Vous sélectionnez également le contrôle de cohérence du travail.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez de l'autorisation Maintenance ou accès racine.
 * Vous avez vérifié que les nœuds de stockage à vérifier sont en ligne. Sélectionnez *NOEUDS* pour afficher la table des noeuds. Assurez-vous qu'aucune icône d'alerte n'apparaît en regard du nom du nœud pour les nœuds que vous souhaitez vérifier.
@@ -163,6 +164,7 @@ Vous créez et exécutez un travail de vérification de l'existence d'un objet �
 
 Le contrôle d'existence d'objet ne fournit pas d'informations utiles pendant que ces procédures sont en cours.
 
+.Description de la tâche
 L'exécution d'une tâche de vérification de l'existence d'un objet peut prendre plusieurs jours ou plusieurs semaines, selon le nombre d'objets de la grille, les nœuds de stockage et les volumes sélectionnés et le contrôle de cohérence sélectionné. Vous ne pouvez exécuter qu'une seule tâche à la fois, mais vous pouvez sélectionner plusieurs nœuds de stockage et volumes en même temps.
 
 .Étapes
@@ -256,4 +258,5 @@ image::../media/oec_rerun.png[Repassage OEC]
 
 L'onglet travail actif s'affiche. Tous les travaux que vous avez sélectionnés sont réexécutés comme un travail au niveau d'un contrôle de cohérence du site fort. Un champ *travaux connexes* de la section Détails répertorie les ID des travaux d'origine.
 
+.Une fois que vous avez terminé
 Si vous avez toujours des problèmes d'intégrité des données, allez à *SUPPORT* *Outils* *topologie de grille* *_site_* *_Storage Node_* *LDR* *Vérification* *Configuration* *main* et augmentez le taux de vérification d'arrière-plan. La vérification en arrière-plan vérifie l'exactitude de toutes les données d'objet stockées et répare tout problème détecté. Trouver et réparer les problèmes le plus rapidement possible réduit le risque de perte de données.

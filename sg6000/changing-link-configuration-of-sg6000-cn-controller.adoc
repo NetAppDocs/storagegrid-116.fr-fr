@@ -13,8 +13,10 @@ summary: Vous pouvez modifier la configuration de la liaison Ethernet du contrô
 [role="lead"]
 Vous pouvez modifier la configuration de la liaison Ethernet du contrôleur SG6000-CN. Vous pouvez modifier le mode de liaison du port, le mode de liaison réseau et la vitesse de liaison.
 
+.Ce dont vous avez besoin
 L'appareil a été xref:placing-appliance-into-maintenance-mode.adoc[passage en mode maintenance].
 
+.Description de la tâche
 Les options permettant de modifier la configuration de la liaison Ethernet du contrôleur SG6000-CN sont les suivantes :
 
 * Changement du mode *Port bond* de fixe à agrégé, ou d'agrégat à fixe
@@ -45,9 +47,9 @@ Si vous avez modifié les paramètres VLAN, le sous-réseau de l'appliance a peu
 xref:configuring-storagegrid-ip-addresses-sg6000.adoc[Configurez les adresses IP StorageGRID]
 
 . Sélectionnez *configurer réseau* *Test Ping* dans le menu.
-. Utilisez l'outil Test Ping pour vérifier la connectivité aux adresses IP sur tous les réseaux susceptibles d'avoir été affectés par les modifications de configuration de liaison que vous avez effectuées dans ,modification de la configuration des liens étape.
+. Utilisez l'outil Test Ping pour vérifier la connectivité aux adresses IP sur tous les réseaux susceptibles d'avoir été affectés par les modifications de configuration de liaison que vous avez effectuées dans <<link_config_changes,modification de la configuration des liens>> étape.
 +
-En plus des autres tests que vous choisissez d'effectuer, vérifiez que vous pouvez envoyer une requête ping à l'adresse IP du réseau de la grille du nœud d'administration principal et à l'adresse IP du réseau de la grille d'au moins un autre nœud de stockage. Si nécessaire, retourner à l' ,modification de la configuration des liens corrigez tout problème de configuration de lien.
+En plus des autres tests que vous choisissez d'effectuer, vérifiez que vous pouvez envoyer une requête ping à l'adresse IP du réseau de la grille du nœud d'administration principal et à l'adresse IP du réseau de la grille d'au moins un autre nœud de stockage. Si nécessaire, retourner à l' <<link_config_changes,modification de la configuration des liens>> corrigez tout problème de configuration de lien.
 
 . Lorsque vous êtes satisfait du fait que vos modifications de configuration de liaison fonctionnent et que vous disposez de procédures supplémentaires à effectuer lorsque le nœud est en mode maintenance, effectuez-les maintenant. Lorsque vous avez terminé, ou si vous avez rencontré des échecs et souhaitez recommencer, sélectionnez *Advanced* *Reboot Controller*, puis sélectionnez l'une des options suivantes :
 +

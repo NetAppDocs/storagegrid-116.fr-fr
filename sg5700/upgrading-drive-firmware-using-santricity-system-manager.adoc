@@ -13,7 +13,7 @@ summary: Vous mettez à niveau le micrologiciel de votre lecteur pour vous assur
 [role="lead"]
 Vous mettez à niveau le micrologiciel de votre lecteur pour vous assurer que vous disposez de toutes les dernières fonctionnalités et correctifs.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Le dispositif de stockage est à l'état optimal.
 * Tous les disques ont un état optimal.
 * La dernière version de SANtricity System Manager est installée et est compatible avec votre version de StorageGRID.
@@ -221,4 +221,5 @@ image::../media/node_rejoin_grid_confirmation.png[Le nœud d'appliance a rejoint
 
 
 
+.Informations associées
 xref:upgrading-santricity-os-on-storage-controller.adoc[Mettez à niveau le système d'exploitation SANtricity sur le contrôleur de stockage]

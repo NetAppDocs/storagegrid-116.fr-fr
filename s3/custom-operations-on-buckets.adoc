@@ -108,4 +108,5 @@ Obsolète mais pris en charge : permet de modifier les paramètres de conformit�
 xref:deprecated-put-bucket-compliance-request.adoc[Obsolète : PUT Bucket Compliance request]
 
 |===
+.Informations associées
 xref:s3-operations-tracked-in-audit-logs.adoc[Opérations S3 suivies dans les journaux d'audit]

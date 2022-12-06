@@ -205,4 +205,5 @@ Volume lancé par l'utilisateur perdu : le `/proc/CMSI/Volume_Lost` la commande 
 xref:vlst-user-initiated-volume-lost.adoc[VLST : perte du volume généré par l'utilisateur]
 
 |===
+.Informations associées
 xref:lkcu-overwritten-object-cleanup.adoc[LKCU : nettoyage d'objet écrasé]

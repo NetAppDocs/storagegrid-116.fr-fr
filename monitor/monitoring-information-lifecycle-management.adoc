@@ -13,8 +13,10 @@ summary: 'Le système de gestion du cycle de vie des informations \(ILM\) permet
 [role="lead"]
 Le système de gestion du cycle de vie des informations (ILM) assure la gestion des données de tous les objets stockés sur la grille. Vous devez surveiller les opérations ILM pour déterminer si la grille peut traiter la charge actuelle ou si d'autres ressources sont requises.
 
+.Ce dont vous avez besoin
 Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 
+.Description de la tâche
 Le système StorageGRID gère les objets en appliquant la règle ILM active. La politique ILM et les règles ILM associées déterminent le nombre de copies, le type de copies créées, le lieu où les copies sont placées, ainsi que la durée de conservation de chaque copie.
 
 L'ingestion d'objets et d'autres activités liées aux objets peuvent dépasser le taux d'évaluation de la ILM par StorageGRID. Le système file d'attente des objets dont les instructions de placement ILM ne peuvent pas être exécutées en temps quasi réel. Vous pouvez contrôler si StorageGRID maintient les actions du client en transcritant l'attribut attente - client.

@@ -50,7 +50,7 @@ mycontainer/f8e3-image3132.jpg
 
 
 
-== Recommandations pour les « lectures de plage »
+== Recommandations pour « plages de lectures »
 
 Si l'option *Compress emmagased Objects* est sélectionnée (*CONFIGURATION* *système* *Grid options*), les applications client Swift doivent éviter d'effectuer des opérations GET object spécifiant une plage d'octets. Ces opérations de « lecture à plage » sont inefficaces, car StorageGRID doit décompresser efficacement les objets pour accéder aux octets demandés. LES opérations GET Object qui demandent une petite plage d'octets provenant d'un objet très volumineux sont particulièrement inefficaces. Par exemple, il est très inefficace de lire une plage de 10 Mo à partir d'un objet compressé de 50 Go.
 
@@ -59,6 +59,7 @@ Si les plages sont lues à partir d'objets compressés, les demandes client peuv
 
 NOTE: Si vous devez compresser des objets et que votre application client doit utiliser des lectures de plage, augmentez le délai de lecture de l'application.
 
+.Informations associées
 xref:get-container-consistency-request.adoc[DEMANDE DE cohérence du conteneur]
 
 xref:put-container-consistency-request.adoc[REQUÊTE de cohérence du conteneur]

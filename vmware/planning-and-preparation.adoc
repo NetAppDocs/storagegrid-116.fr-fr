@@ -33,6 +33,7 @@ NOTE: Des instructions d'installation et d'intégration spécifiques au matérie
 * Choisissez les outils de déploiement et de configuration que vous souhaitez utiliser.
 
 
+.Informations associées
 xref:../sg100-1000/index.adoc[Appareils de services SG100 et SG1000]
 
 xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]

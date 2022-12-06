@@ -13,7 +13,7 @@ summary: 'Vous pouvez envoyer des messages AutoSupport E-Series SANtricity Syste
 [role="lead"]
 Vous pouvez envoyer des messages AutoSupport E-Series SANtricity System Manager au support technique par l'intermédiaire d'un nœud d'administration StorageGRID plutôt que du port de gestion de l'appliance de stockage.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez de l'autorisation Administrateur de l'appliance de stockage ou de l'autorisation d'accès racine.
 
@@ -21,6 +21,7 @@ Vous pouvez envoyer des messages AutoSupport E-Series SANtricity System Manager 
 
 NOTE: Vous devez disposer du firmware SANtricity 8.70 (11.7) ou version ultérieure pour accéder à SANtricity System Manager via Grid Manager.
 
+.Description de la tâche
 Les messages AutoSupport E-Series contiennent des informations détaillées sur le matériel de stockage. Ils sont plus spécifiques que les autres messages AutoSupport envoyés par le système StorageGRID.
 
 Configurez une adresse de serveur proxy spéciale dans SANtricity System Manager pour que les messages AutoSupport soient transmis par l'intermédiaire d'un nœud d'administration StorageGRID sans utiliser le port de gestion de l'appliance. Les messages AutoSupport transmis de cette façon respectent les paramètres de proxy d'expéditeur et d'administration préférés qui peuvent avoir été configurés dans le Gestionnaire de grille.

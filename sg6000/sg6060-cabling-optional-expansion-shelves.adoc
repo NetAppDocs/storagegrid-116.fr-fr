@@ -13,7 +13,7 @@ summary: 'Si vous utilisez des tiroirs d"extension, vous devez les connecter au 
 [role="lead"]
 Si vous utilisez des tiroirs d'extension, vous devez les connecter au tiroir contrôleur E2860. Vous pouvez disposer au maximum de deux tiroirs d'extension pour chaque appliance SG6060 ou SG6060X.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Les deux câbles SAS sont fournis avec chaque tiroir d'extension.
 * Vous avez installé les tiroirs d'extension dans l'armoire ou le rack qui contient le tiroir contrôleur E2860.
 +
@@ -21,6 +21,7 @@ xref:sg6060-installing-60-drive-shelves-into-cabinet-or-rack.adoc[SG6060 et SG60
 
 
 
+.Étape
 Connectez chaque tiroir d'extension au tiroir contrôleur E2860, comme indiqué sur le schéma.
 
 Ce schéma présente le câblage de deux tiroirs d'extension dans un SG6060 (le câblage d'extension du SG6060X est identique). Si vous ne disposez que d'un seul tiroir d'extension, connectez l'E/S A au contrôleur A et connectez le module d'E/S B au contrôleur B.

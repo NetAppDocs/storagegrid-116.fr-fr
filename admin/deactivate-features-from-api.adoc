@@ -13,6 +13,7 @@ summary: 'Vous pouvez utiliser l"API de gestion de grille pour désactiver compl
 [role="lead"]
 Vous pouvez utiliser l'API de gestion de grille pour désactiver complètement certaines fonctions du système StorageGRID. Lorsqu'une fonction est désactivée, aucune autorisation ne peut être attribuée pour effectuer les tâches associées à cette fonctionnalité.
 
+.Description de la tâche
 Le système de fonctions désactivées vous permet d'empêcher l'accès à certaines fonctions du système StorageGRID. La désactivation d'une fonctionnalité est le seul moyen d'empêcher l'utilisateur racine ou les utilisateurs appartenant à des groupes d'administration disposant de l'autorisation *accès racine* d'utiliser cette fonctionnalité.
 
 Pour comprendre l'utilité de cette fonctionnalité, prenez en compte le scénario suivant :

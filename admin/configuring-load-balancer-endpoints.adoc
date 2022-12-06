@@ -13,7 +13,7 @@ summary: 'Les terminaux d"équilibrage de la charge déterminent les ports et le
 [role="lead"]
 Les terminaux d'équilibrage de la charge déterminent les ports et les protocoles réseau que les clients S3 et Swift peuvent utiliser pour la connexion à l'équilibreur de charge StorageGRID sur les nœuds de passerelle et d'administration.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez de l'autorisation d'accès racine.
 * Si vous avez précédemment mappé à nouveau un port que vous souhaitez utiliser pour le noeud final de l'équilibreur de charge, vous avez xref:../maintain/removing-port-remaps.adoc[retirez le schéma de câblage des ports - effectué].
@@ -153,7 +153,7 @@ image::../media/load_balancer_endpoint_node_interfaces_binding_mode.png[Mode de 
 +
 image::../media/load_balancer_endpoint_ha_group_vips_binding_mode.png[Mode de liaison VIP du groupe HA de terminaux]
 
-. Si vous créez un noeud final *HTTP*, vous n'avez pas besoin d'attacher un certificat. Sélectionnez *Créer* pour ajouter le nouveau noeud final de l'équilibreur de charge. Ensuite, passez à ,Une fois que vous avez terminé. Sinon, sélectionnez *Continuer* pour joindre le certificat.
+. Si vous créez un noeud final *HTTP*, vous n'avez pas besoin d'attacher un certificat. Sélectionnez *Créer* pour ajouter le nouveau noeud final de l'équilibreur de charge. Ensuite, passez à <<After-you-finish,Une fois que vous avez terminé>>. Sinon, sélectionnez *Continuer* pour joindre le certificat.
 
 
 
@@ -243,7 +243,7 @@ Le noeud final de l'équilibreur de charge est créé. Le certificat personnalis
 
 
 
-=== Une fois que vous avez terminé
+=== [[après-vous-terminez]]après que vous avez terminé
 
 . Si vous utilisez un système de noms de domaine (DNS), assurez-vous que le DNS inclut un enregistrement pour associer le nom de domaine complet StorageGRID à chaque adresse IP que les clients utiliseront pour établir des connexions.
 +

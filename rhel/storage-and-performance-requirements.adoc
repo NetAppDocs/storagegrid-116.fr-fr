@@ -96,7 +96,7 @@ Données d'objet
 
 *Remarque :* Un noeud de stockage logiciel peut avoir 1 à 16 volumes de stockage; au moins 3 volumes de stockage sont recommandés.
  a| 
-12 TO (4 TO/LUN) VOIR ,Besoins de stockage des nœuds de stockage pour en savoir plus.
+12 TO (4 TO/LUN) VOIR <<storage_req_SN,Besoins de stockage des nœuds de stockage>> pour en savoir plus.
 
 
 
@@ -298,6 +298,7 @@ NOTE: Si vous n'utilisez qu'un seul volume de stockage pour un nœud de stockage
 
 Pour plus d'informations, rendez-vous sur xref:../admin/managing-object-metadata-storage.adoc[Gérer le stockage des métadonnées d'objet].
 
+.Informations associées
 xref:node-container-migration-requirements.adoc[Exigences de migration des conteneurs de nœuds]
 
 xref:../maintain/index.adoc[Récupérer et entretenir]

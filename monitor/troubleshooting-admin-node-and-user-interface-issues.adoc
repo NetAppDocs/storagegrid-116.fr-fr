@@ -20,11 +20,12 @@ Plusieurs tâches sont à effectuer pour déterminer la source des problèmes li
 
 Si une erreur s'est produite lors de la connexion à un nœud d'administration StorageGRID, la configuration de la fédération des identités, un problème de réseau ou de matériel, un problème avec les services du nœud d'administration ou un problème avec la base de données Cassandra sur les nœuds de stockage connectés.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez avoir le `Passwords.txt` fichier.
 * Vous devez disposer d'autorisations d'accès spécifiques.
 
 
+.Description de la tâche
 Suivez ces instructions de dépannage si vous voyez l'un des messages d'erreur suivants lorsque vous tentez de vous connecter à un noeud d'administration :
 
 * `Your credentials for this account were invalid. Please try again.`
@@ -165,7 +166,7 @@ Lorsque vous êtes connecté en tant que root, l'invite passe de `$` à `#`.
 +
 Assurez-vous que tous les services idnt, acct, nginx et cassandra fonctionnent.
 
-. Répéter les étapes ,Utilisez Lumberjack pour récupérer les journaux et ,Journaux de révision Pour consulter les journaux sur les nœuds de stockage.
+. Répéter les étapes <<use_Lumberjack_to_collect_logs,Utilisez Lumberjack pour récupérer les journaux>> et <<review_logs,Journaux de révision>> Pour consulter les journaux sur les nœuds de stockage.
 . Si vous ne parvenez pas à résoudre le problème, contactez le support technique.
 +
 Fournissez les journaux que vous avez collectés au support technique. Voir aussi xref:logs-files-reference.adoc[Référence des fichiers journaux].
@@ -203,6 +204,7 @@ L'effacement du cache supprime les ressources obsolètes utilisées par la versi
 
 Si le système StorageGRID inclut plusieurs nœuds d'administration, vous pouvez utiliser un autre nœud d'administration pour vérifier l'état d'un nœud d'administration non disponible.
 
+.Ce dont vous avez besoin
 Vous devez disposer d'autorisations d'accès spécifiques.
 
 .Étapes
@@ -217,4 +219,5 @@ image::../media/unavailable_admin_node_troubleshooting.gif[capture d'écran déc
 . Prenez les mesures appropriées pour résoudre le problème.
 
 
+.Informations associées
 xref:../admin/index.adoc[Administrer StorageGRID]

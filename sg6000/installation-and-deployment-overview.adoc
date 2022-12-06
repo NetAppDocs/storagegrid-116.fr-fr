@@ -13,6 +13,7 @@ summary: 'Vous pouvez installer une ou plusieurs appliances de stockage StorageG
 [role="lead"]
 Vous pouvez installer une ou plusieurs appliances de stockage StorageGRID lorsque vous déployez StorageGRID pour la première fois ou ajouter ultérieurement des nœuds de stockage dans le cadre d'une extension. Vous devrez peut-être également installer un nœud de stockage d'appliance dans le cadre d'une opération de restauration.
 
+.Ce dont vous avez besoin
 Votre système StorageGRID utilise la version requise du logiciel StorageGRID.
 
 |===
@@ -104,6 +105,7 @@ Instructions de récupération et de maintenance
 |===
 
 
+.Informations associées
 xref:preparing-for-installation.adoc[Préparation de l'installation (SG6000)]
 
 xref:installing-hardware.adoc[Installation du matériel (SG6000)]

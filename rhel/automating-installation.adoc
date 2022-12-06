@@ -50,7 +50,7 @@ Vous pouvez automatiser toutes les étapes pour préparer les hôtes et déploye
 
 Une fois les nœuds grid déployés, vous pouvez automatiser la configuration du système StorageGRID.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous connaissez l'emplacement des fichiers suivants à partir de l'archive d'installation.
 +
 [cols="1a,1a"]
@@ -75,6 +75,7 @@ Fichier de configuration vierge à utiliser avec le script
 * Vous avez créé un `configure-storagegrid.json` fichier de configuration. Pour créer ce fichier, vous pouvez modifier l'exemple de fichier de configuration (`configure-storagegrid.sample.json`) ou le fichier de configuration vierge (`configure-storagegrid.blank.json`).
 
 
+.Description de la tâche
 Vous pouvez utiliser le `configure-storagegrid.py` Script Python et le `configure-storagegrid.json` Fichier de configuration pour automatiser la configuration de votre système StorageGRID.
 
 
@@ -105,6 +106,7 @@ Par exemple :
 ----
 
 
+.Résultat
 Un progiciel de récupération `.zip` le fichier est généré pendant le processus de configuration et il est téléchargé dans le répertoire où vous exécutez le processus d'installation et de configuration. Vous devez sauvegarder le fichier de package de restauration afin de pouvoir restaurer le système StorageGRID en cas de défaillance d'un ou plusieurs nœuds de la grille. Par exemple, copiez-le dans un emplacement sécurisé, sauvegardé sur le réseau et dans un emplacement de stockage cloud sécurisé.
 
 
@@ -127,4 +129,5 @@ Votre système StorageGRID est installé et configuré lorsqu'un message de conf
 ----
 StorageGRID has been configured and installed.
 ----
+.Informations associées
 xref:overview-of-installation-rest-api.adoc[Présentation de l'API REST d'installation]

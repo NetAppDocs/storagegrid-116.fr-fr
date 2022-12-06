@@ -13,6 +13,7 @@ summary: 'Vous pouvez surveiller les performances de certaines opérations, tell
 [role="lead"]
 Vous pouvez surveiller les performances de certaines opérations, telles que le stockage et la récupération d'objets, afin de faciliter l'identification des modifications qui pourraient nécessiter une investigation plus poussée.
 
+.Description de la tâche
 Pour contrôler LES PUT et GET, vous pouvez exécuter les commandes S3 et Swift directement depuis un poste de travail ou à l'aide de l'application open source S3tester. Ces méthodes vous permettent d'évaluer la performance indépendamment des facteurs externes à StorageGRID, tels que les problèmes liés à une application client ou à un réseau externe.
 
 Lorsque vous effectuez des tests de MISE EN PLACE et D'OBTENTION d'opérations, suivez les instructions suivantes :

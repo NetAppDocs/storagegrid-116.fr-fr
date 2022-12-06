@@ -13,6 +13,7 @@ summary: 'À partir de l"étape 2 \(Afficher les détails\) de l"assistant dédi
 [role="lead"]
 À partir de l'étape 2 (Afficher les détails) de l'assistant Decommission site, vous pouvez vérifier quels nœuds sont inclus sur le site, voir combien d'espace a été utilisé sur chaque noeud de stockage et évaluer la quantité d'espace disponible sur les autres sites de votre grille.
 
+.Ce dont vous avez besoin
 Avant de désaffecter un site, vous devez vérifier la quantité de données d'objet présentes sur le site.
 
 * Si vous effectuez une mise hors service d'un site connecté, vous devez connaître la quantité de données d'objet présentes sur le site avant de mettre à jour le ILM. En fonction des capacités de votre site et de vos besoins en termes de protection des données, vous pouvez créer de nouvelles règles ILM pour déplacer des données vers d'autres sites ou supprimer les données d'objet du site.
@@ -86,4 +87,5 @@ L'étape 3 (réviser la politique ILM) s'affiche.
 
 
 
+.Informations associées
 xref:../ilm/index.adoc[Gestion des objets avec ILM]

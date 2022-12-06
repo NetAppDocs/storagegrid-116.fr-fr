@@ -13,6 +13,7 @@ summary: 'Le programme d"installation de l"appliance StorageGRID permet de confi
 [role="lead"]
 Le programme d'installation de l'appliance StorageGRID permet de configurer les adresses IP et les informations de routage utilisées pour le noeud de stockage de l'appliance sur la grille StorageGRID, l'administrateur et les réseaux clients.
 
+.Description de la tâche
 Vous devez attribuer une adresse IP statique à l'appliance sur chaque réseau connecté ou attribuer un bail permanent à l'adresse sur le serveur DHCP.
 
 Si vous souhaitez modifier la configuration de la liaison, reportez-vous aux instructions pour modifier la configuration de la liaison du contrôleur E5600SG.
@@ -225,4 +226,5 @@ IMPORTANT: La valeur MTU du réseau doit correspondre à la valeur configurée s
 
 
 
+.Informations associées
 xref:changing-link-configuration-of-e5600sg-controller.adoc[Changer la configuration de liaison du contrôleur E5600SG]

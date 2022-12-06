@@ -13,7 +13,7 @@ summary: 'Vous devez installer des rails dans votre armoire ou rack, puis faire 
 [role="lead"]
 Vous devez installer des rails dans votre armoire ou rack, puis faire glisser l'appareil sur les rails. Si vous possédez une appliance SG5660, vous devez également installer les disques après l'installation de cette appliance.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez passé en revue le document consignes de sécurité inclus dans la boîte et compris les précautions à prendre pour déplacer et installer le matériel.
 * Vous disposez des instructions d'installation relatives au matériel E-Series.
 
@@ -30,6 +30,7 @@ CAUTION: L'appliance SG5660 pèse environ 60 kg (132 lb) sans disques installés
 
 CAUTION: Pour éviter d'endommager le matériel, ne déplacez jamais l'appliance SG5660 si des disques sont installés. Vous devez retirer tous les disques avant de déplacer l'appareil.
 
+.Description de la tâche
 Réalisez les tâches suivantes pour installer l'appliance SG5660 dans une armoire ou un rack.
 
 * *Installer les rails de montage*
@@ -75,6 +76,7 @@ image::../media/appliance_drive_insertion.gif[Insertion de disque]
 
 
 
+.Informations associées
 https://library.netapp.com/ecm/ecm_download_file/ECMLP2344477["Guide d'installation du tiroir contrôleur E2700 et des tiroirs disques associés"^]
 
 https://library.netapp.com/ecm/ecm_download_file/ECMP1532527["Guide d'installation du tiroir contrôleur E5600 et des tiroirs disques associés"^]

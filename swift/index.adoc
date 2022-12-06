@@ -34,4 +34,5 @@ HTTP
 *Remarque*: StorageGRID ne prend pas en charge HTTP/1.1 pipeline.
 
 |===
+.Informations associées
 http://docs.openstack.org/developer/swift/api/object_api_v1_overview.html["OpenStack : API de stockage objet"^]

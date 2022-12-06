@@ -13,8 +13,8 @@ summary: 'Avant d"implémenter les pools de stockage cloud, vérifiez le cycle d
 [role="lead"]
 Avant d'implémenter les pools de stockage cloud, vérifiez le cycle de vie des objets stockés dans chaque type de pool de stockage cloud.
 
-*  Lifecycle of a Cloud Storage Pool object
-*  Lifecycle of a Cloud Storage Pool object
+* <<S3 : cycle de vie d'un objet de pool de stockage cloud>>
+* <<Azure : cycle de vie d'un objet de pool de stockage cloud>>
 
 
 
@@ -110,4 +110,5 @@ Une fois qu'un objet a été restauré dans Azure Cloud Storage Pool, l'applicat
 
 
 
+.Informations associées
 xref:../s3/index.adoc[Utilisation de S3]

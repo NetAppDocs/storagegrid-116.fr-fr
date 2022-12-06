@@ -13,7 +13,7 @@ summary: 'Si vous ne parvenez pas à mettre à niveau le logiciel SANtricity OS 
 [role="lead"]
 Si vous ne parvenez pas à mettre à niveau le logiciel SANtricity OS à l'aide du Gestionnaire de grille, utilisez la procédure du mode de maintenance pour appliquer la mise à niveau.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez consulté la matrice d'interopérabilité (IMT) de NetApp afin de vérifier que la version de SANtricity OS que vous utilisez pour la mise à niveau est compatible avec votre appliance.
 * Vous devez placer le contrôleur E5600 dans xref:placing-appliance-into-maintenance-mode.adoc[mode maintenance] Si vous n'utilisez pas Grid Manager. Lorsque vous placez le contrôleur en mode de maintenance, la connexion au contrôleur E2700 est interrompue.
 +
@@ -22,6 +22,7 @@ NOTE: Dans de rares cas, le fait de placer une appliance StorageGRID en mode de 
 
 
 
+.Description de la tâche
 Ne mettez pas à niveau le système d'exploitation SANtricity ou la NVSRAM du contrôleur E-Series sur plusieurs appliances StorageGRID à la fois.
 
 

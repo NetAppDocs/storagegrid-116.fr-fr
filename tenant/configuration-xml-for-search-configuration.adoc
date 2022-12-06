@@ -183,6 +183,7 @@ Dans cet exemple, les métadonnées d'objet pour les objets qui correspondent au
     </Rule>
 </MetadataNotificationConfiguration>
 ----
+.Informations associées
 xref:../s3/index.adoc[Utilisation de S3]
 
 xref:object-metadata-included-in-metadata-notifications.adoc[Métadonnées d'objet incluses dans les notifications de métadonnées]

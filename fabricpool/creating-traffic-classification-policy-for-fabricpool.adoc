@@ -13,11 +13,12 @@ summary: 'Vous pouvez éventuellement concevoir une règle de classification du 
 [role="lead"]
 Vous pouvez éventuellement concevoir une règle de classification du trafic StorageGRID afin d'optimiser la qualité de service pour la charge de travail FabricPool.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez de l'autorisation accès racine.
 
 
+.Description de la tâche
 Les meilleures pratiques de création d'une stratégie de classification du trafic pour FabricPool dépendent de la charge de travail :
 
 * Si vous prévoyez de mettre en Tier les données de la charge de travail principale FabricPool vers StorageGRID, assurez-vous que la charge de travail FabricPool dispose de la majorité de la bande passante. Vous pouvez créer une règle de classification du trafic pour limiter tous les autres workloads.

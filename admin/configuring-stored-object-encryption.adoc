@@ -13,11 +13,12 @@ summary: 'Vous pouvez crypter les objets stockés si vous souhaitez vous assurer
 [role="lead"]
 Vous pouvez crypter les objets stockés si vous souhaitez vous assurer que les données ne peuvent pas être récupérées sous une forme lisible si un magasin d'objets est compromis. Par défaut, les objets ne sont pas chiffrés.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 
 
+.Description de la tâche
 Le chiffrement d'objets stocké permet le chiffrement de toutes les données d'objet à leur entrée via S3 ou Swift. Lorsque vous activez le paramètre, tous les objets récemment acquis sont chiffrés, mais aucun changement n'est apporté aux objets stockés existants. Si vous désactivez le chiffrement, les objets chiffrés restent chiffrés, mais les objets récemment ingérées ne sont pas chiffrés.
 
 

@@ -13,7 +13,7 @@ summary: 'Avant de pouvoir accéder à l"interface BMC, vous devez configurer l"
 [role="lead"]
 Avant de pouvoir accéder à l'interface BMC, vous devez configurer l'adresse IP du port de gestion BMC sur l'appliance de services.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Le client de gestion utilise un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous utilisez n'importe quel client de gestion pouvant se connecter à un réseau StorageGRID.
 * Le port de gestion BMC est connecté au réseau de gestion que vous souhaitez utiliser.

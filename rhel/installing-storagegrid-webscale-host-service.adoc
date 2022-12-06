@@ -13,6 +13,7 @@ summary: Vous utilisez le package RPM StorageGRID pour installer les services h�
 [role="lead"]
 Vous utilisez le package RPM StorageGRID pour installer les services hôte StorageGRID.
 
+.Description de la tâche
 Ces instructions décrivent l'installation des services hôtes à partir des packages RPM. Vous pouvez également utiliser les métadonnées du référentiel Yum incluses dans l'archive d'installation pour installer les packages RPM à distance. Reportez-vous aux instructions du référentiel Yum pour votre système d'exploitation Linux.
 
 .Étapes

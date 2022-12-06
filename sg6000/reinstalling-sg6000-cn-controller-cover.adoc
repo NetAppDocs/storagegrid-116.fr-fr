@@ -13,6 +13,7 @@ summary: Réinstallez le capot du contrôleur une fois la maintenance matériell
 [role="lead"]
 Réinstallez le capot du contrôleur une fois la maintenance matérielle interne terminée.
 
+.Ce dont vous avez besoin
 Vous avez effectué toutes les procédures de maintenance à l'intérieur du contrôleur.
 
 .Étapes
@@ -27,6 +28,7 @@ Si le capot n'est pas bien en place, il se peut que vous ne puissiez pas faire g
 . En option : tournez d'un quart de tour le verrou en plastique bleu dans le sens de verrouillage, comme illustré sur le verrou, pour le verrouiller.
 
 
+.Une fois que vous avez terminé
 Réinstallez le contrôleur dans l'armoire ou le rack.
 
 xref:reinstalling-sg6000-cn-controller-into-cabinet-or-rack.adoc[Réinstallez le contrôleur SG6000-CN dans l'armoire ou le rack]

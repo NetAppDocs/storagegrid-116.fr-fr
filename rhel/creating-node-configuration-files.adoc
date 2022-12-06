@@ -700,4 +700,5 @@ Par exemple :
 `PORT_REMAP_INBOUND = grid/tcp/3022/22`
 
 |===
+.Informations associées
 xref:../network/index.adoc[Instructions de mise en réseau]

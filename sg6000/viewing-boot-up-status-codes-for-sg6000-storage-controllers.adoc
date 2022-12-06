@@ -13,6 +13,7 @@ summary: 'Chaque contrôleur de stockage dispose d"un affichage à sept segments
 [role="lead"]
 Chaque contrôleur de stockage dispose d'un affichage à sept segments qui fournit des codes d'état lors de la mise sous tension du contrôleur. Les codes d'état sont identiques pour le contrôleur E2800 et le contrôleur EF570.
 
+.Description de la tâche
 Pour obtenir une description de ces codes, consultez les informations de surveillance du système E-Series pour votre type de contrôleur de stockage.
 
 .Étapes
@@ -30,6 +31,7 @@ image::../media/seven_segment_display_codes_for_e2800.gif[Codes d'affichage sept
 . Si l'un des contrôleurs ou les deux affichent d'autres valeurs, reportez-vous à la section xref:troubleshooting-hardware-installation.adoc[Dépannage de l'installation du matériel (SG6000)] et confirmez que vous avez correctement effectué les étapes d'installation. Si vous ne parvenez pas à résoudre le problème, contactez le support technique.
 
 
+.Informations associées
 https://library.netapp.com/ecmdocs/ECMLP2588751/html/frameset.html["Guide de surveillance des systèmes E5700 et E2800"^]
 
 https://mysupport.netapp.com/site/global/dashboard["Support NetApp"^]

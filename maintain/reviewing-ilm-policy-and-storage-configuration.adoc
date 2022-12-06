@@ -59,6 +59,7 @@ Type de stockage
 Y aura-t-il suffisamment de stockage pour le type approprié une fois la mise hors service terminée ? Par exemple, les règles ILM régissent le déplacement du contenu d'un type de stockage à un autre, à mesure que son contenu vieillit. Si c'est le cas, vous devez vous assurer qu'un espace de stockage suffisant est disponible dans la configuration finale du système StorageGRID.
 
 |===
+.Informations associées
 xref:../ilm/index.adoc[Gestion des objets avec ILM]
 
 xref:../expand/index.adoc[Développez votre grille]

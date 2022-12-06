@@ -61,4 +61,5 @@ La série de messages d'audit générés lorsqu'un nœud d'archivage récupère 
 
 La série de messages d'audit générés lorsqu'un nœud d'archivage supprime des données d'objet d'un système de stockage d'archives externe est similaire à celle des nœuds de stockage, sauf qu'il n'y a pas de message SREM (Object Store Remove) et qu'il y a un message AREM (Archive Object Remove) pour chaque demande de suppression.
 
+.Informations associées
 xref:../ilm/index.adoc[Gestion des objets avec ILM]

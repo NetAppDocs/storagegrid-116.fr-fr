@@ -13,7 +13,7 @@ summary: 'Vous devez installer des rails dans votre armoire ou rack, puis faire 
 [role="lead"]
 Vous devez installer des rails dans votre armoire ou rack, puis faire glisser l'appareil sur les rails. Si vous disposez d'un SG5760, vous devez également installer les disques après avoir installé l'appliance.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez passé en revue le document consignes de sécurité inclus dans la boîte et compris les précautions à prendre pour déplacer et installer le matériel.
 * Les instructions sont fournies avec le kit de rails.
 * Vous disposez du _instructions d'installation et de configuration_ pour l'appareil.

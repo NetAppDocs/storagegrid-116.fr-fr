@@ -13,7 +13,7 @@ summary: 'Vous pouvez configurer les groupes haute disponibilité \(HA\) pour fo
 [role="lead"]
 Vous pouvez configurer des groupes haute disponibilité pour fournir un accès haute disponibilité aux services sur des nœuds d'administration ou de passerelle.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez de l'autorisation d'accès racine.
 * Si vous prévoyez d'utiliser une interface VLAN dans un groupe haute disponibilité, vous avez créé cette interface. Voir xref:../admin/configure-vlan-interfaces.adoc[Configurez les interfaces VLAN].

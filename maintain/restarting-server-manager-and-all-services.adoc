@@ -13,6 +13,7 @@ summary: 'Vous devrez peut-être redémarrer Server Manager et tous les services
 [role="lead"]
 Vous devrez peut-être redémarrer Server Manager et tous les services s'exécutant sur un nœud de la grille.
 
+.Ce dont vous avez besoin
 Vous devez avoir le `Passwords.txt` fichier.
 
 .Étapes

@@ -13,6 +13,7 @@ summary: 'L"effacement de la configuration \(KMS\) du serveur de gestion des cl�
 [role="lead"]
 L'effacement de la configuration du serveur de gestion des clés (KMS) désactive le cryptage des nœuds sur votre appliance. Une fois la configuration KMS effacée, les données de votre appliance sont définitivement supprimées et ne sont plus accessibles. Ces données ne peuvent pas être récupérées.
 
+.Ce dont vous avez besoin
 Si vous devez conserver les données sur l'appliance, vous devez effectuer une procédure de déclassement d'un nœud ou cloner le nœud avant d'effacer la configuration du KMS.
 
 
@@ -20,6 +21,7 @@ IMPORTANT: Lorsque le KMS est effacé, les données de l'appliance seront défin
 
 xref:../maintain/grid-node-decommissioning.adoc[Mise hors service du nœud] pour déplacer les données qu'il contient vers les autres nœuds de la grille.
 
+.Description de la tâche
 L'effacement de la configuration KMS de l'appliance désactive le cryptage des nœuds, supprimant ainsi l'association entre le nœud de l'appliance et la configuration KMS pour le site StorageGRID. Les données de l'appliance sont ensuite supprimées et l'appliance reste en état préinstallation. Ce processus ne peut pas être inversé.
 
 Vous devez effacer la configuration KMS :
@@ -80,6 +82,8 @@ Le chiffrement des nœuds ne peut pas être activé à nouveau sur l'appliance t
 
 
 
+.Une fois que vous avez terminé
 Après le redémarrage de l'appliance et après avoir vérifié que KMS a été effacé et que l'appliance est dans un état de pré-installation, vous pouvez physiquement retirer l'appliance de votre système StorageGRID. Voir la xref:../maintain/preparing-appliance-for-reinstallation-platform-replacement-only.adoc[instructions de préparation de l'appareil pour la réinstallation].
 
+.Informations associées
 xref:../admin/index.adoc[Administrer StorageGRID]

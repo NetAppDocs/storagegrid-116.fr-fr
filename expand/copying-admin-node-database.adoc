@@ -13,12 +13,13 @@ summary: 'Lorsque vous ajoutez des nœuds d"administration via une procédure d"
 [role="lead"]
 Lorsque vous ajoutez des nœuds d'administration via une procédure d'extension, vous pouvez éventuellement copier la base de données du nœud d'administration principal vers le nouveau nœud d'administration. La copie de la base de données vous permet de conserver des informations historiques sur les attributs, les alertes et les alertes.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez terminé les étapes d'extension requises pour ajouter un nœud d'administration.
 * Vous avez le `Passwords.txt` fichier.
 * Vous avez la phrase secrète pour le provisionnement.
 
 
+.Description de la tâche
 Le processus d'activation du logiciel StorageGRID crée une base de données vide pour le service NMS sur le nœud d'administration d'extension. Lorsque le service NMS démarre sur le nœud d'administration d'extension, il enregistre les informations concernant les serveurs et services qui font actuellement partie du système ou qui sont ajoutés ultérieurement. Cette base de données de nœud d'administration contient les informations suivantes :
 
 * Historique des alertes

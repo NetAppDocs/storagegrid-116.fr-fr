@@ -13,11 +13,12 @@ summary: 'Les niveaux de stockage identifient le type de stockage utilisé par u
 [role="lead"]
 Les niveaux de stockage identifient le type de stockage utilisé par un nœud de stockage. Vous pouvez créer des classes de stockage si vous souhaitez que des règles ILM plagent certains objets sur certains nœuds de stockage plutôt que sur tous les nœuds du site. Vous pouvez, par exemple, stocker certains objets sur les nœuds de stockage les plus rapides, comme les appliances de stockage 100 % Flash StorageGRID.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 
 
+.Description de la tâche
 Si vous utilisez plusieurs types de stockage, vous pouvez éventuellement créer une note de stockage pour identifier chaque type. La création de nuances de stockage vous permet de sélectionner un type spécifique de nœud de stockage lors de la configuration de pools de stockage.
 
 Si la qualité de stockage n'est pas problématique (par exemple, tous les nœuds de stockage sont identiques), vous pouvez ignorer cette procédure et utiliser la qualité de stockage par défaut de tous les nœuds de stockage lors de la configuration des pools de stockage.

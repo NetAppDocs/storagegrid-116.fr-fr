@@ -14,7 +14,7 @@ summary: Si un nœud de stockage comprend moins de 16 volumes de stockage, vous 
 [role="lead"]
 Si un nœud de stockage comprend moins de 16 volumes de stockage, vous pouvez augmenter sa capacité en utilisant VMware vSphere pour ajouter des volumes.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez accès aux instructions d'installation de StorageGRID pour les déploiements.
 +
 ** xref:../vmware/index.adoc[Installez VMware]
@@ -27,6 +27,7 @@ Si un nœud de stockage comprend moins de 16 volumes de stockage, vous pouvez au
 
 IMPORTANT: N'essayez pas d'ajouter des volumes de stockage à un nœud de stockage lorsqu'une mise à niveau logicielle, une procédure de restauration ou une autre procédure d'extension est active.
 
+.Description de la tâche
 Le nœud de stockage n'est pas disponible brièvement lorsque vous ajoutez des volumes de stockage. Cette procédure doit être effectuée sur un seul nœud de stockage à la fois pour éviter d'affecter les services de grid côté client.
 
 .Étapes
@@ -109,4 +110,5 @@ L'état est mis à jour automatiquement.
 
 
 
+.Résultat
 Vous pouvez utiliser la capacité étendue des nœuds de stockage pour sauvegarder les données d'objet.

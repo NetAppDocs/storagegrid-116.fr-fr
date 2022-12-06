@@ -40,6 +40,7 @@ NOTE: StorageGRID considère que chaque profil de code d'effacement est unique e
 * Déplacement des copies d'objets existants vers un emplacement totalement différent (par exemple, déplacement d'un grand nombre d'objets vers ou depuis un pool de stockage cloud, vers ou depuis un site distant).
 
 
+.Informations associées
 xref:creating-ilm-policy.adoc[Création d'une règle ILM]
 
 

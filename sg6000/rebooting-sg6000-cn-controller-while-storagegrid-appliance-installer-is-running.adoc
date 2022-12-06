@@ -13,6 +13,7 @@ summary: 'Vous devrez peut-être redémarrer le contrôleur SG6000-CN pendant qu
 [role="lead"]
 Vous devrez peut-être redémarrer le contrôleur SG6000-CN pendant que le programme d'installation de l'appliance StorageGRID est en cours d'exécution. Par exemple, vous devrez peut-être redémarrer le contrôleur si l'installation échoue.
 
+.Description de la tâche
 Cette procédure s'applique uniquement lorsque le contrôleur SG6000-CN exécute le programme d'installation de l'appliance StorageGRID. Une fois l'installation terminée, cette étape ne fonctionne plus car le programme d'installation de l'appliance StorageGRID n'est plus disponible.
 
 .Étapes

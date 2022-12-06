@@ -13,10 +13,12 @@ summary: 'À partir de l"étape 3 \(réviser la politique ILM\) de l"assistant h
 [role="lead"]
 À partir de l'étape 3 (réviser la politique ILM) de l'assistant site de désaffection, vous pouvez déterminer si le site est référencé par la politique ILM active.
 
+.Ce dont vous avez besoin
 Vous savez parfaitement le fonctionnement des règles ILM et vous connaissez déjà la création de pools de stockage, les profils de codage d'effacement, les règles ILM, la simulation et l'activation d'une règle ILM.
 
 xref:../ilm/index.adoc[Gestion des objets avec ILM]
 
+.Description de la tâche
 StorageGRID ne peut pas désaffecter un site si ce site est référencé à une règle ILM de la politique ILM active.
 
 Si votre politique ILM actuelle renvoie au site que vous souhaitez supprimer, vous devez activer une nouvelle règle ILM qui répond à certaines exigences. Plus précisément, la nouvelle règle ILM :

@@ -179,7 +179,7 @@ Taille du disque de stockage des données
  a| 
 La taille effective d'un lecteur de données.
 
-*Remarque* : pour les nœuds avec des tiroirs d'extension, utilisez le ,Taille de disque des données pour chaque tiroir à la place. La taille effective du disque peut varier en fonction du tiroir.
+*Remarque* : pour les nœuds avec des tiroirs d'extension, utilisez le <<shelf_data_drive_size,Taille de disque des données pour chaque tiroir>> à la place. La taille effective du disque peut varier en fonction du tiroir.
 
 
 
@@ -476,6 +476,7 @@ image::../media/nodes_page_storage_tables.png[Nœuds tables de stockage des page
 
 
 
+.Informations associées
 xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
 
 xref:../sg5700/index.adoc[Appliances de stockage SG5700]
@@ -712,4 +713,5 @@ image::../media/nodes_page_storage_tab_services_appliance.png[Nœuds page stocka
 
 
 
+.Informations associées
 xref:../sg100-1000/index.adoc[Appareils de services SG100 et SG1000]

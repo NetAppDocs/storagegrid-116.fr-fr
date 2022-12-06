@@ -62,12 +62,13 @@ La section opérations affiche un récapitulatif des informations sur le nœud d
 
 Les messages d'audit sont générés par les services StorageGRID et stockés dans des fichiers journaux texte. Des messages d'audit spécifiques aux API dans les journaux d'audit fournissent des données stratégiques de sécurité, d'exploitation et de surveillance des performances qui vous aideront à évaluer l'état de votre système.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez disposer d'autorisations d'accès spécifiques.
 * Vous devez avoir le `Passwords.txt` fichier.
 * Vous devez connaître l'adresse IP d'un nœud d'administration.
 
 
+.Description de la tâche
 Le fichier journal d'audit actif est nommé `audit.log`, Et il est stocké sur des nœuds d'administration.
 
 Une fois par jour, le fichier audit.log actif est enregistré et un nouveau fichier audit.log est lancé. Le nom du fichier enregistré indique quand il a été enregistré, au format `yyyy-mm-dd.txt`.
@@ -93,6 +94,7 @@ audit.log
 . Afficher le fichier journal d'audit actuel ou enregistré, selon les besoins.
 
 
+.Informations associées
 xref:../audit/index.adoc[Examiner les journaux d'audit]
 
 
@@ -131,6 +133,7 @@ Voir _compréhension des messages d'audit_ pour plus de détails sur les informa
 * PLACER l'objet
 
 
+.Informations associées
 xref:../audit/index.adoc[Examiner les journaux d'audit]
 
 xref:account-operations.adoc[Opérations sur le compte]

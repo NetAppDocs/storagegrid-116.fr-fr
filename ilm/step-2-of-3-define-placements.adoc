@@ -13,6 +13,7 @@ summary: 'Étape 2 \(définir les Placements\) de l"assistant de création de r�
 [role="lead"]
 L'étape 2 (définir les Placements) de l'assistant de création de règles ILM permet de définir les instructions de placement qui déterminent la durée de stockage des objets, le type de copies (répliquées ou codées d'effacement), l'emplacement de stockage et le nombre de copies.
 
+.Description de la tâche
 Une règle ILM peut inclure une ou plusieurs instructions de placement. Chaque instruction de placement s'applique à une seule période de temps. Lorsque vous utilisez plusieurs instructions, les périodes doivent être contiguës et au moins une instruction doit commencer le jour 0. Les instructions peuvent se poursuivre indéfiniment ou jusqu'à ce que vous n'ayez plus besoin de copies d'objet.
 
 Chaque instruction de placement peut avoir plusieurs lignes si vous voulez créer différents types de copies ou utiliser différents emplacements au cours de cette période.

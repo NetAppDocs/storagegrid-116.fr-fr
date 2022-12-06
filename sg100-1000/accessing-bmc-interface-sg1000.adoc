@@ -13,7 +13,7 @@ summary: 'Vous pouvez accéder à l"interface BMC sur le dispositif de services 
 [role="lead"]
 Vous pouvez accéder à l'interface BMC sur le dispositif de services à l'aide du protocole DHCP ou de l'adresse IP statique du port de gestion BMC.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Le client de gestion utilise un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Le port de gestion BMC de l'appliance de services est connecté au réseau de gestion que vous souhaitez utiliser.
 +
@@ -65,4 +65,5 @@ NOTE: Lorsque les utilisateurs se connectant pour la première fois, ils peuvent
 
 
 
+.Informations associées
 xref:changing-root-password-for-bmc-interface-sg1000.adoc[Modifiez le mot de passe racine de l'interface BMC]

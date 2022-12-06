@@ -17,7 +17,7 @@ Si vous avez besoin de déployer des nœuds de stockage d'appliance StorageGRID,
 
 Vous pouvez également remapper les ports du nœud ou augmenter les paramètres de processeur ou de mémoire du nœud avant de le mettre sous tension.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez passé en revue la procédure à suivre xref:planning-and-preparation.adoc[planification et préparation de l'installation]Et vous comprenez la configuration requise pour les logiciels, le processeur et la RAM, ainsi que pour le stockage et les performances.
 * Vous connaissez déjà l'hyperviseur VMware vSphere et êtes déjà familiarisé avec le déploiement de serveurs virtuels dans cet environnement.
 +
@@ -81,6 +81,7 @@ IMPORTANT: N'utilisez jamais FabricPool pour transférer automatiquement toutes 
 
 
 
+.Description de la tâche
 Suivez ces instructions pour déployer au départ des nœuds VMware, ajouter un nouveau nœud VMware dans une extension ou remplacer un nœud VMware dans le cadre d'une opération de restauration. Sauf indication contraire dans les étapes, la procédure de déploiement des nœuds est la même pour tous les types de nœuds, y compris les nœuds d'administration, les nœuds de stockage, les nœuds de passerelle et les nœuds d'archivage.
 
 Si vous installez un nouveau système StorageGRID :
@@ -130,7 +131,7 @@ Selon votre version de vCenter, l'ordre des étapes varie en fonction de l'accep
 
 . Sélectionnez le stockage de la machine virtuelle.
 +
-Si vous déployez un nœud dans le cadre de l'opération de restauration, suivez les instructions de la section ,étape de restauration du stockage pour ajouter de nouveaux disques virtuels, reconnectez-les à partir du nœud de grille défaillant, ou les deux.
+Si vous déployez un nœud dans le cadre de l'opération de restauration, suivez les instructions de la section <<step_recovery_storage,étape de restauration du stockage>> pour ajouter de nouveaux disques virtuels, reconnectez-les à partir du nœud de grille défaillant, ou les deux.
 
 +
 Lors du déploiement d'un nœud de stockage, utilisez au moins 3 volumes de stockage, chaque volume de stockage étant de 4 To ou plus. Vous devez affecter au moins 4 To au volume 0.
@@ -293,4 +294,5 @@ Définissez la *réserve de mémoire* sur la même taille que la *mémoire* allo
 . Mise sous tension de la machine virtuelle
 
 
+.Une fois que vous avez terminé
 Si vous avez déployé ce nœud dans le cadre d'une procédure d'extension ou de restauration, revenez à ces instructions pour terminer la procédure.

@@ -17,7 +17,7 @@ Lorsque vous créez un compte de locataire, vous spécifiez un nom, un protocole
 
 Grid Manager fournit un assistant qui vous guide dans les étapes de création d'un compte de tenant. Les étapes varient en fonction du cas ou non xref:using-identity-federation.adoc[fédération des identités] et xref:configuring-sso.adoc[authentification unique] Sont configurés et si le compte Grid Manager que vous utilisez pour créer le compte de tenant appartient à un groupe d'administration disposant de l'autorisation d'accès racine.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 * Si le compte de tenant utilise le référentiel d'identité qui a été configuré pour Grid Manager et que vous souhaitez accorder l'autorisation d'accès racine au compte de tenant à un groupe fédéré, vous avez importé ce groupe fédéré dans Grid Manager. Vous n'avez pas besoin d'attribuer des autorisations Grid Manager à ce groupe d'administration. Voir la xref:managing-admin-groups.adoc[instructions de gestion des groupes d'administration].

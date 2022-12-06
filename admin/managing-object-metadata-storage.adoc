@@ -230,7 +230,7 @@ image::../media/storage_used_object_metadata_allowed.png[Stockage utilisé - mé
 
 
 
-Dans la capture d'écran, la valeur *autorisé* est de 2.64 To, ce qui est la valeur maximale pour un noeud de stockage dont l'espace réservé réel pour les métadonnées est supérieur à 4 To.
+Dans la capture d'écran, la valeur *autorisé* est de 3.96 To, ce qui est la valeur maximale pour un noeud de stockage dont l'espace réservé réel pour les métadonnées est supérieur à 4 To.
 
 La valeur *autorisé* correspond à cette métrique Prometheus :
 
@@ -244,7 +244,7 @@ Supposons que vous installez un système StorageGRID avec la version 11.6. Dans 
 
 * L'espace réservé * métadonnées* pour l'ensemble du système est défini sur 8 To. (Il s'agit de la valeur par défaut pour StorageGRID 11.6 lorsque chaque nœud de stockage dispose de plus de 128 Go de RAM.)
 * L'espace réservé réel pour les métadonnées pour SN1 est de 6 To. (Le volume entier est réservé car le volume 0 est inférieur au paramètre *Metadata Reserved Space*.)
-* L'espace autorisé pour les métadonnées sur SN1 est de 2.64 To. (Il s'agit de la valeur maximale de l'espace réservé réel.)
+* L'espace autorisé pour les métadonnées sur SN1 est de 3 To, d'après le calcul présenté dans la <<actual-reserved-space-for-metadata,tableau de l'espace réservé réel pour les métadonnées>>: (Espace réservé réel pour les métadonnées − 1 To) × 60 %, jusqu'à un maximum de 3.96 To.
 
 
 

@@ -13,7 +13,7 @@ summary: 'Une fois la règle ILM activée, vous devez ingérer des objets test r
 [role="lead"]
 Une fois la règle ILM activée, vous devez ingérer des objets test représentatifs dans le système StorageGRID. Vous devez ensuite effectuer une recherche de métadonnées d'objet pour confirmer que les copies sont effectuées comme prévu et placées aux emplacements appropriés.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous disposez d'un identificateur d'objet, qui peut être l'un des suivants :
 +
 ** *UUID* : identifiant unique universel de l'objet. Saisissez l'UUID en majuscules.

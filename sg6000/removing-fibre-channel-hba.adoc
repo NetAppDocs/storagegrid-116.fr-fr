@@ -13,7 +13,7 @@ summary: 'Vous devrez peut-être remplacer l"adaptateur de bus hôte Fibre Chann
 [role="lead"]
 Vous devrez peut-être remplacer l'adaptateur de bus hôte Fibre Channel (HBA) dans le contrôleur SG6000-CN s'il ne fonctionne pas de manière optimale ou s'il est défectueux.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous disposez de l'adaptateur HBA Fibre Channel de remplacement approprié.
 * Vous avez déterminé quel contrôleur SG6000-CN contient l'adaptateur HBA Fibre Channel à remplacer.
 +
@@ -29,6 +29,7 @@ xref:removing-sg6000-cn-controller-cover.adoc[Déposer le couvercle du contrôle
 
 
 
+.Description de la tâche
 Pour éviter toute interruption de service, vérifiez que tous les autres nœuds de stockage sont connectés à la grille avant de démarrer le remplacement de HBA Fibre Channel ou de remplacer l'adaptateur lors d'une fenêtre de maintenance planifiée en cas d'interruption de service. Reportez-vous aux informations sur la détermination des États de connexion du nœud dans les instructions de gestion des objets avec informations gestion du cycle de vie.
 
 
@@ -52,10 +53,12 @@ L'ensemble carte de montage comprend deux adaptateurs : un adaptateur HBA Fibre 
 . Placez l'adaptateur sur une surface antistatique plane.
 
 
+.Une fois que vous avez terminé
 Installez le HBA Fibre Channel de remplacement.
 
 xref:reinstalling-fibre-channel-hba.adoc[Réinstallez l'adaptateur HBA Fibre Channel]
 
+.Informations associées
 xref:reinstalling-fibre-channel-hba.adoc[Réinstallez l'adaptateur HBA Fibre Channel]
 
 xref:../admin/index.adoc[Administrer StorageGRID]

@@ -293,6 +293,7 @@ EP
 Le code ManageSGA indique que la communication avant le grid avec le contrôleur E2700 a échoué.
 
 |===
+.Informations associées
 xref:troubleshooting-hardware-installation.adoc[Résolution des problèmes liés à l'installation du matériel (SG5600)]
 
 https://mysupport.netapp.com/site/global/dashboard["Support NetApp"^]

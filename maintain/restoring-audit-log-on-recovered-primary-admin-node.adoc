@@ -58,4 +58,5 @@ Lorsque vous y êtes invité, entrez le mot de passe pour l'administrateur.
 
 Vous devez également restaurer tout accès client existant au partage d'audit. Pour plus d'informations, reportez-vous aux instructions d'administration de StorageGRID.
 
+.Informations associées
 xref:../admin/index.adoc[Administrer StorageGRID]

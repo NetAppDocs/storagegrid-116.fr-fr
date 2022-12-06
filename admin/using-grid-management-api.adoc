@@ -32,7 +32,7 @@ L'API Grid Management utilise la plateforme d'API open source swagger. Swagger f
 
 L'interface utilisateur swagger fournit des détails complets et de la documentation pour chaque opération API.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 

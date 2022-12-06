@@ -13,7 +13,7 @@ summary: 'Le processus de clonage peut prendre plusieurs jours pour transférer 
 [role="lead"]
 Le processus de clonage peut prendre plusieurs jours pour transférer les données entre le nœud source (appliance à remplacer) et l'appliance cible (nouvelle).
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez installé l'appareil cible compatible dans une armoire ou un rack, connecté tous les câbles et mis sous tension.
 * Vous avez vérifié que la version du programme d'installation de l'appliance StorageGRID installée sur l'appliance de remplacement correspond à la version logicielle de votre système StorageGRID, en mettant à niveau le micrologiciel du programme d'installation de l'appliance StorageGRID, si nécessaire.
 * L'appliance cible est configurée, y compris la configuration des connexions StorageGRID, SANtricity System Manager (dispositifs de stockage uniquement) et l'interface BMC.

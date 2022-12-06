@@ -13,11 +13,12 @@ summary: 'L"option de hachage d"objet stocké spécifie l"algorithme de hachage 
 [role="lead"]
 L'option de hachage d'objet stocké spécifie l'algorithme de hachage utilisé pour vérifier l'intégrité des objets.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 
 
+.Description de la tâche
 Par défaut, les données d'objet sont hachées à l'aide de l'algorithme SHA-1. L'algorithme SHA-256 nécessite des ressources CPU supplémentaires et n'est généralement pas recommandé pour la vérification de l'intégrité.
 
 

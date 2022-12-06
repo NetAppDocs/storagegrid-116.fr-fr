@@ -13,6 +13,7 @@ summary: 'Vérifiez que le support technique reçoit vos messages AutoSupport. L
 [role="lead"]
 Vérifiez que le support technique reçoit vos messages AutoSupport. L'état de AutoSupport pour vos systèmes est disponible sur le portail Active IQ. La vérification de la réception de ces messages garantit que le support technique dispose de vos informations si vous avez besoin d'aide.
 
+.Description de la tâche
 AutoSupport peut afficher l'un des États suivants :
 
 * *LE*

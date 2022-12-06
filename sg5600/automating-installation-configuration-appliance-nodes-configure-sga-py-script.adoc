@@ -13,7 +13,7 @@ summary: 'Vous pouvez utiliser le script configure-sga.py pour automatiser la pl
 [role="lead"]
 Vous pouvez utiliser le `configure-sga.py` Script permettant d'automatiser la plupart des tâches d'installation et de configuration des nœuds d'appliance StorageGRID, notamment l'installation et la configuration d'un nœud d'administration principal. Ce script peut être utile si vous avez un grand nombre d'appliances à configurer. Vous pouvez également utiliser le script pour générer un fichier JSON qui contient les informations de configuration de l'appliance.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * L'appliance a été installée dans un rack, connectée à vos réseaux et sous tension.
 * Les liens réseau et les adresses IP ont été configurés pour le nœud d'administration principal à l'aide du programme d'installation de l'appliance StorageGRID.
 * Si vous installez le noeud d'administration principal, vous connaissez son adresse IP.

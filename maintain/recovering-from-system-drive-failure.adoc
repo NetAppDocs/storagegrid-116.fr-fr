@@ -13,6 +13,7 @@ summary: 'Si le lecteur système d"un nœud de stockage logiciel est défectueux
 [role="lead"]
 Si le lecteur système d'un nœud de stockage logiciel est défectueux, le nœud de stockage n'est pas disponible pour le système StorageGRID. Vous devez effectuer un ensemble spécifique de tâches pour effectuer une restauration en cas de panne de disque système.
 
+.Description de la tâche
 Utilisez cette procédure pour effectuer une restauration après une panne de lecteur système sur un nœud de stockage logiciel. Cette procédure comprend les étapes à suivre si un volume de stockage également a échoué ou ne peut pas être remonté.
 
 

@@ -13,7 +13,7 @@ summary: 'Les nœuds de la grille doivent pouvoir communiquer les uns avec les a
 [role="lead"]
 Les nœuds de la grille doivent pouvoir communiquer les uns avec les autres pour permettre le fonctionnement de la grille. L'intégrité du réseau entre les nœuds et les sites, et la bande passante réseau entre les sites, sont essentielles à l'efficacité des opérations.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer d'autorisations d'accès spécifiques.
 
@@ -74,6 +74,7 @@ Pour créer, modifier ou supprimer des stratégies de classification de trafic, 
 
 
 
+.Informations associées
 xref:viewing-network-tab.adoc[Afficher l'onglet réseau]
 
 xref:monitoring-node-connection-states.adoc[Surveiller les États de connexion du nœud]

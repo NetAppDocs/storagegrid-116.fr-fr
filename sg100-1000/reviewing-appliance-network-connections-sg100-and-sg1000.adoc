@@ -24,6 +24,7 @@ Si le réseau de gestion BMC facultatif n'est pas connecté, certaines procédur
 
 
 
+.Informations associées
 xref:gathering-installation-information-sg100-and-sg1000.adoc[Collecte des informations d'installation (SG100 et SG1000)]
 
 xref:cabling-appliance-sg100-and-sg1000.adoc[Serre-câbles SG100 et SG1000]

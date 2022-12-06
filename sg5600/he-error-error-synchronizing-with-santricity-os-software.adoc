@@ -13,6 +13,7 @@ summary: 'L"affichage à sept segments sur le contrôleur de calcul affiche un c
 [role="lead"]
 L'affichage à sept segments sur le contrôleur de calcul affiche un code d'erreur HE si le programme d'installation de l'appliance StorageGRID ne peut pas se synchroniser avec le logiciel SANtricity OS.
 
+.Description de la tâche
 Si un code d'erreur HE s'affiche, effectuez cette action corrective.
 
 .Étapes

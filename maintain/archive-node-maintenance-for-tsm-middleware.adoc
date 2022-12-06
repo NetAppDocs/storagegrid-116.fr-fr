@@ -27,6 +27,7 @@ Si vous déterminez qu'il y a une erreur au niveau de l'unité de stockage d'arc
 
 Avant d'entreprendre toute maintenance du serveur middleware TSM pouvant entraîner l'indisponibilité du nœud d'archivage, mettez le composant cible hors ligne pour limiter le nombre d'alarmes déclenchées si le serveur middleware TSM devient indisponible.
 
+.Ce dont vous avez besoin
 Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 
 .Étapes
@@ -54,7 +55,7 @@ Lorsque le nœud d'archivage demande un objet à partir du serveur Tivoli Storag
 
 Lorsque cette situation se produit, une alarme se déclenche et la valeur continue d'augmenter. Pour voir l'alarme, sélectionnez *SUPPORT* *Outils* *topologie de grille*. Sélectionnez ensuite *nœud d'archivage* *ARC* *Retrieve* *échecs de demande*.
 
-Si l'objet est définitivement indisponible, vous devez identifier l'objet et annuler manuellement la demande du nœud d'archivage, comme décrit dans la procédure, ,Déterminer si les objets sont définitivement indisponibles.
+Si l'objet est définitivement indisponible, vous devez identifier l'objet et annuler manuellement la demande du nœud d'archivage, comme décrit dans la procédure, <<determining_objects_permanently_unavailable,Déterminer si les objets sont définitivement indisponibles>>.
 
 Une récupération peut également échouer si l'objet est temporairement indisponible. Dans ce cas, les demandes de récupération suivantes devraient aboutir.
 
@@ -66,12 +67,13 @@ Si le système StorageGRID est configuré pour utiliser une règle ILM permettan
 
 Vous pouvez déterminer si des objets sont définitivement indisponibles en effectuant une demande à l'aide de la console administrative TSM.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez disposer d'autorisations d'accès spécifiques.
 * Vous devez avoir le `Passwords.txt` fichier.
 * Vous devez connaître l'adresse IP d'un nœud d'administration.
 
 
+.Description de la tâche
 Cet exemple est fourni pour vos informations uniquement ; cette procédure ne peut pas vous aider à identifier toutes les conditions de défaillance pouvant entraîner des objets ou des volumes de bande non disponibles. Pour plus d'informations sur l'administration TSM, reportez-vous à la documentation du serveur TSM.
 
 .Étapes
@@ -221,6 +223,7 @@ NOTE: Le `/proc/CMSI/Object_Lost` La commande n'est valide que pour les objets p
 
 
 
+.Informations associées
 xref:../admin/index.adoc[Administrer StorageGRID]
 
 xref:../audit/index.adoc[Examiner les journaux d'audit]

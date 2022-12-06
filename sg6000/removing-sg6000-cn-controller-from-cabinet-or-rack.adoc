@@ -13,7 +13,7 @@ summary: 'Retirez le contrôleur SG6000-CN d"une armoire ou d"un rack pour accé
 [role="lead"]
 Retirez le contrôleur SG6000-CN d'une armoire ou d'un rack pour accéder au capot supérieur ou pour déplacer le contrôleur à un autre emplacement.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous disposez d'étiquettes pour identifier chaque câble connecté au contrôleur SG6000-CN.
 * Vous avez installé physiquement le contrôleur SG6000-CN où vous effectuez des opérations de maintenance dans le centre de données.
 +
@@ -48,4 +48,5 @@ Le capot supérieur du contrôleur est accessible.
 . Facultatif : si vous retirez complètement le contrôleur de l'armoire ou du rack, suivez les instructions du kit de rails pour retirer le contrôleur des rails.
 
 
+.Informations associées
 xref:removing-sg6000-cn-controller-cover.adoc[Déposer le couvercle du contrôleur SG6000-CN]

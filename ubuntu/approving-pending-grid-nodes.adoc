@@ -13,6 +13,7 @@ summary: Vous devez approuver chaque nœud de la grille pour pouvoir rejoindre l
 [role="lead"]
 Vous devez approuver chaque nœud de la grille pour pouvoir rejoindre le système StorageGRID.
 
+.Ce dont vous avez besoin
 Vous avez déployé l'ensemble des nœuds grid virtuels et d'appliance StorageGRID.
 
 

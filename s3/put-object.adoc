@@ -129,7 +129,7 @@ xref:using-s3-object-lock.adoc[Utilisez le verrouillage d'objet S3]
 ** `x-amz-server-side-encryption-customer-key`
 ** `x-amz-server-side-encryption-customer-algorithm`
 +
-Voir  headers for server-side encryption
+Voir <<Demander des en-têtes pour le cryptage côté serveur>>
 
 
 
@@ -213,6 +213,7 @@ Si le contrôle de version est activé pour un compartiment, un contrôle unique
 
 Si la gestion des versions est suspendue, la version de l'objet est stockée avec un null `versionId` si une version nulle existe déjà, elle sera remplacée.
 
+.Informations associées
 xref:../ilm/index.adoc[Gestion des objets avec ILM]
 
 xref:operations-on-buckets.adoc[Opérations sur les compartiments]

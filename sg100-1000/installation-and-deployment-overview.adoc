@@ -13,6 +13,7 @@ summary: 'Vous pouvez installer une ou plusieurs appliances de services StorageG
 [role="lead"]
 Vous pouvez installer une ou plusieurs appliances de services StorageGRID lors du premier déploiement de StorageGRID. Vous pouvez également ajouter des nœuds d'appliance de services ultérieurement dans le cadre d'une extension.
 
+.Ce dont vous avez besoin
 Votre système StorageGRID utilise la version requise du logiciel StorageGRID.
 
 [cols="1a,2a"]
@@ -96,6 +97,7 @@ xref:../maintain/index.adoc[Restaurez et maintenez un système StorageGRID]
 |===
 
 
+.Informations associées
 xref:../expand/index.adoc[Développez votre grille]
 
 xref:../maintain/index.adoc[Récupérez et entretenez votre grille]

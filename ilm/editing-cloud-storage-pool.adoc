@@ -13,7 +13,7 @@ summary: 'Vous pouvez modifier un pool de stockage cloud pour en changer le nom,
 [role="lead"]
 Vous pouvez modifier un pool de stockage cloud pour en changer le nom, le terminal de service ou d'autres détails. Toutefois, vous ne pouvez pas modifier le compartiment S3 ou le conteneur Azure pour un pool de stockage cloud.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 * Vous avez passé en revue le xref:considerations-for-cloud-storage-pools.adoc[Considérations relatives aux pools de stockage cloud].

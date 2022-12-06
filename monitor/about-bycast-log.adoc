@@ -34,6 +34,7 @@ NOTE: Si un fichier journal a été compressé, vous ne devez pas le décompress
 
 Vous pouvez également modifier la destination des journaux d'audit et envoyer des informations d'audit à un serveur syslog externe. Les journaux locaux des enregistrements d'audit continuent à être générés et stockés lorsqu'un serveur syslog externe est configuré. Voir xref:../monitor/configure-audit-messages.adoc[Configurez les messages d'audit et les destinations des journaux].
 
+.Informations associées
 xref:collecting-log-files-and-system-data.adoc[Collecte de fichiers journaux et de données système]
 
 
@@ -112,7 +113,7 @@ Par exemple :
 
 
 
-== Codes d'erreur dans bycast.log
+== Codes d'erreur dans `bycast.log`
 
 La plupart des messages d'erreur dans `bycast.log` contient des codes d'erreur.
 

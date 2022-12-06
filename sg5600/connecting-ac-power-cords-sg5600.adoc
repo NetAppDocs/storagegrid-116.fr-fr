@@ -13,6 +13,7 @@ summary: 'Vous devez connecter les cordons d"alimentation CA à la source d"alim
 [role="lead"]
 Vous devez connecter les cordons d'alimentation CA à la source d'alimentation externe et au connecteur d'alimentation CA de chaque contrôleur. Une fois les cordons d'alimentation connectés, vous pouvez mettre le système sous tension.
 
+.Ce dont vous avez besoin
 Les deux interrupteurs doivent être éteints avant de brancher l'appareil.
 
 

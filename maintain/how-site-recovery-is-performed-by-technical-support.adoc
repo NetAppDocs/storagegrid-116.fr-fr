@@ -66,4 +66,5 @@ Une fois les métadonnées et les données d'objet restaurées, des nœuds de pa
 
 
 
+.Informations associées
 xref:site-decommissioning.adoc[Mise hors service du site]

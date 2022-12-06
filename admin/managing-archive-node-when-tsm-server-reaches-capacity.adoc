@@ -13,11 +13,12 @@ summary: 'Le serveur TSM n"a aucun moyen d"informer le nœud d"archivage lorsque
 [role="lead"]
 Le serveur TSM n'a aucun moyen d'informer le nœud d'archivage lorsque la base de données TSM ou le stockage des supports d'archivage gérés par le serveur TSM atteint sa capacité maximale. Cette situation peut être évitée grâce à la surveillance proactive du serveur TSM.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 
 
+.Description de la tâche
 Le nœud d'archivage continue à accepter les données d'objet pour le transfert vers le serveur TSM une fois que le serveur TSM a arrêté d'accepter le nouveau contenu. Ce contenu ne peut pas être écrit sur un support géré par le serveur TSM. Une alarme est déclenchée si cela se produit.
 
 

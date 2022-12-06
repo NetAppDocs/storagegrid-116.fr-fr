@@ -13,7 +13,7 @@ summary: 'Vous pouvez suivre cette procédure pour ajouter des nœuds de grille 
 [role="lead"]
 Vous pouvez suivre cette procédure pour ajouter des nœuds de grille à des sites existants ou pour ajouter un nouveau site, mais vous ne pouvez pas effectuer les deux types d'extension en même temps.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous disposez de l'autorisation accès racine ou Maintenance.
 * Tous les nœuds existants de la grille sont opérationnels sur tous les sites.
 * Toute procédure d'extension, de mise à niveau, de déclassement ou de restauration est terminée.

@@ -13,6 +13,7 @@ summary: 'Vous devez spécifier les informations de configuration du protocole N
 [role="lead"]
 Vous devez spécifier les informations de configuration du protocole NTP (Network Time Protocol) pour le système StorageGRID, de sorte que les opérations effectuées sur des serveurs distincts puissent rester synchronisées.
 
+.Description de la tâche
 Vous devez indiquer des adresses IPv4 pour les serveurs NTP.
 
 Vous devez indiquer des serveurs NTP externes. Les serveurs NTP spécifiés doivent utiliser le protocole NTP.

@@ -24,4 +24,5 @@ N'appuyez pas de nouveau sur le bouton d'alimentation pendant la mise sous tensi
 . Si vous avez retiré le cadre avant, fixez-le à l'appareil.
 
 
+.Informations associées
 xref:viewing-status-indicators-on-sg100-and-sg1000-appliances.adoc[Afficher les indicateurs d'état sur les appareils SG100 et SG1000]

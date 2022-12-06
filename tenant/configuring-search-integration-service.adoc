@@ -13,13 +13,14 @@ summary: 'Le service d"intégration de recherche envoie des métadonnées d"obje
 [role="lead"]
 Le service d'intégration de recherche envoie des métadonnées d'objet à un index de recherche de destination chaque fois qu'un objet est créé ou supprimé, ou que ses métadonnées ou balises sont mises à jour.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Les services de plateforme doivent être activés pour votre compte de locataire par un administrateur StorageGRID.
 * Vous devez avoir déjà créé un compartiment S3 dont vous souhaitez indexer le contenu.
 * Le terminal que vous prévoyez d'utiliser comme destination pour le service d'intégration de la recherche doit déjà exister et vous devez disposer de son URN.
 * Vous devez appartenir à un groupe d'utilisateurs disposant de l'autorisation gérer toutes les rubriques ou accès racine, ce qui vous permet de gérer les paramètres de tous les compartiments S3 de votre compte locataire. Ces autorisations remplacent les paramètres d'autorisation des stratégies de groupe ou de compartiment lors de la configuration du compartiment à l'aide du Gestionnaire de locataires.
 
 
+.Description de la tâche
 Une fois que vous avez configuré le service d'intégration de recherche pour un compartiment source, la création d'un objet ou la mise à jour des métadonnées ou des balises d'un objet déclenche l'envoi des métadonnées d'objet vers le terminal de destination. Si vous activez le service d'intégration de recherche pour un compartiment qui contient déjà des objets, les notifications de métadonnées ne sont pas automatiquement envoyées pour les objets existants. Vous devez mettre à jour ces objets existants pour vous assurer que leurs métadonnées sont ajoutées à l'index de recherche de destination.
 
 .Étapes
@@ -68,12 +69,14 @@ Dans l'exemple présenté précédemment, tous les objets ajoutés au compartime
 
 
 
+.Une fois que vous avez terminé
 Si nécessaire, vous pouvez désactiver l'intégration de la recherche pour un compartiment à l'aide de l'une des méthodes suivantes :
 
 * Sélectionner *STORAGE (S3)* *seaux* et désélectionner la case à cocher *Activer l'intégration de recherche*.
 * Si vous utilisez directement l'API S3, utilisez une demande de notification DE suppression des métadonnées du compartiment. Pour plus d'informations sur l'implémentation des applications client S3, reportez-vous aux instructions.
 
 
+.Informations associées
 xref:understanding-search-integration-service.adoc[Comprendre le service d'intégration de la recherche]
 
 xref:configuration-xml-for-search-configuration.adoc[XML de configuration pour l'intégration de la recherche]

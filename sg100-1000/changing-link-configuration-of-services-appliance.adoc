@@ -13,13 +13,14 @@ summary: 'Vous pouvez modifier la configuration de la liaison Ethernet de l"appl
 [role="lead"]
 Vous pouvez modifier la configuration de la liaison Ethernet de l'appliance de services. Vous pouvez modifier le mode de liaison du port, le mode de liaison réseau et la vitesse de liaison.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez xref:placing-appliance-into-maintenance-mode.adoc[placez l'appareil en mode maintenance].
 
 
 
 NOTE: Dans de rares cas, le fait de placer une appliance StorageGRID en mode de maintenance peut rendre l'appliance indisponible pour l'accès à distance.
 
+.Description de la tâche
 Les options permettant de modifier la configuration de la liaison Ethernet de l'appliance de services sont les suivantes :
 
 * Changement du mode *Port bond* de fixe à agrégé, ou d'agrégat à fixe

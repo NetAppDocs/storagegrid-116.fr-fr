@@ -93,7 +93,7 @@ La politique de compartiment pour le compartiment S3 externe utilisé pour un po
 
 
 
-== S3 : considérations relatives au cycle de vie du godet externe
+== S3 : considérations sur le cycle de vie du compartiment externe
 
 Le déplacement des objets entre le StorageGRID et le compartiment S3 externe spécifié dans le pool de stockage cloud est contrôlé par les règles ILM et la politique ILM active dans StorageGRID. À l'inverse, la transition des objets à partir du compartiment S3 externe spécifié dans le pool de stockage cloud vers Amazon S3 Glacier ou S3 Glacier Deep Archive (ou vers une solution de stockage implémentant la classe de stockage Glacier) est contrôlée par la configuration du cycle de vie de ce compartiment.
 

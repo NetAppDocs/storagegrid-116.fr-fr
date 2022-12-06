@@ -15,7 +15,7 @@ Vous pouvez afficher des informations détaillées sur une alerte qui affecte ac
 
 Si vous le souhaitez, vous pouvez xref:silencing-alert-notifications.adoc[désactiver une alerte en cours] ou xref:editing-alert-rules.adoc[mettez à jour la règle d'alerte].
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 
 

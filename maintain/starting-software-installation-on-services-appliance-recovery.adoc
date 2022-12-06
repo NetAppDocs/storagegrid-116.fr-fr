@@ -13,7 +13,7 @@ summary: 'Pour installer un nœud de passerelle ou un nœud d"administration sur
 [role="lead"]
 Pour installer un nœud de passerelle ou un nœud d'administration sur une appliance de services SG100 ou SG1000, utilisez le programme d'installation de l'appliance StorageGRID inclus sur l'appliance.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * L'appliance doit être installée dans un rack, connectée à vos réseaux et sous tension.
 * Les liens réseau et les adresses IP doivent être configurés pour l'appliance à l'aide du programme d'installation de l'appliance StorageGRID.
 * Si vous installez un nœud de passerelle ou un nœud d'administration non primaire, vous connaissez l'adresse IP du nœud d'administration principal de la grille StorageGRID.
@@ -31,6 +31,7 @@ NOTE: Une version récente du logiciel StorageGRID est préchargée sur l'applia
 
 
 
+.Description de la tâche
 Pour installer le logiciel StorageGRID sur une appliance de services SG100 ou SG1000 :
 
 * Pour un nœud d'administration principal, vous spécifiez le nom du nœud, puis téléchargez les packs logiciels appropriés (le cas échéant).
@@ -57,7 +58,7 @@ image::../media/services_appliance_installer_gateway_node.png[Page d'accueil du 
 .. Dans le champ *Nom du noeud*, entrez le même nom que celui utilisé pour le noeud que vous êtes en train de récupérer, puis cliquez sur *Enregistrer*.
 .. Dans la section installation, vérifiez la version du logiciel répertoriée sous l'état actuel
 +
-Si la version du logiciel prêt à être installée est correcte, passez à l'étape ,Étape d'installation.
+Si la version du logiciel prêt à être installée est correcte, passez à l'étape <<installation_section_step,Étape d'installation>>.
 
 .. Si vous devez télécharger une autre version du logiciel, dans le menu *Avancé*, sélectionnez *Télécharger le logiciel StorageGRID*.
 +
@@ -125,4 +126,5 @@ NOTE: Si vous devez accéder manuellement à la page installation du moniteur, c
 
 
 
+.Informations associées
 xref:../sg100-1000/index.adoc[Appareils de services SG100 et SG1000]

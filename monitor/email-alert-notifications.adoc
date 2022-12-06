@@ -13,11 +13,12 @@ summary: 'Si vous souhaitez que des notifications par e-mail soient envoyées lo
 [role="lead"]
 Si vous souhaitez que des notifications par e-mail soient envoyées lorsque des alertes se produisent, vous devez fournir des informations sur votre serveur SMTP. Vous devez également saisir des adresses e-mail pour les destinataires des notifications d'alerte.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez de l'autorisation gérer les alertes ou l'accès racine.
 
 
+.Description de la tâche
 Comme les alarmes et les alertes sont des systèmes indépendants, la configuration des e-mails utilisée pour les notifications d'alerte n'est pas utilisée pour les notifications d'alarme et les messages AutoSupport. Cependant, vous pouvez utiliser le même serveur de messagerie pour toutes les notifications.
 
 Si votre déploiement StorageGRID inclut plusieurs nœuds d'administration, vous pouvez sélectionner le nœud d'administration qui doit être l'expéditeur préféré des notifications d'alerte. Le même « expéditeur privilégié » est également utilisé pour les notifications d'alarme et les messages AutoSupport. Par défaut, le nœud d'administration principal est sélectionné. Pour plus d'informations, reportez-vous à la xref:../admin/index.adoc[Instructions d'administration de StorageGRID].
@@ -296,7 +297,7 @@ StorageGRID continue à envoyer des notifications par e-mail tous les 7 jours ju
 
 Si l'alerte *échec de notification par e-mail* est déclenchée ou si vous ne parvenez pas à recevoir la notification par e-mail d'alerte de test, procédez comme suit pour résoudre le problème.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez de l'autorisation gérer les alertes ou l'accès racine.
 

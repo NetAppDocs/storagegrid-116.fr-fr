@@ -76,4 +76,5 @@ Date: _date_
 Authorization: _authorization string_
 Host: _host_
 ----
+.Informations associées
 xref:consistency-controls.adoc[Contrôles de cohérence]

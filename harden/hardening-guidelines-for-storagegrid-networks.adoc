@@ -51,6 +51,7 @@ Si vous utilisez le réseau client, suivez les instructions suivantes :
 * Acceptez le trafic client entrant uniquement sur les terminaux configurés explicitement. Voir xref:../admin/managing-untrusted-client-networks.adoc[Gestion des réseaux clients non fiables].
 
 
+.Informations associées
 xref:../network/index.adoc[Instructions de mise en réseau]
 
 xref:../primer/index.adoc[Primaire de grille]

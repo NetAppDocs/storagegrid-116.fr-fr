@@ -13,8 +13,10 @@ summary: 'Le port de gestion 1 du contrôleur E2700 connecte l"appliance au rés
 [role="lead"]
 Le port de gestion 1 du contrôleur E2700 connecte l'appliance au réseau de gestion pour SANtricity Storage Manager. Vous devez définir une adresse IP statique pour le contrôleur E2700 afin d'éviter toute perte de la connexion de gestion au matériel et au firmware du contrôleur de l'appliance StorageGRID.
 
+.Ce dont vous avez besoin
 Vous utilisez un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 
+.Description de la tâche
 Les adresses attribuées par DHCP peuvent être modifiées à tout moment. Attribuez une adresse IP statique au contrôleur pour garantir une accessibilité cohérente.
 
 .Étapes
@@ -66,4 +68,5 @@ Lorsque vous vous connectez à SANtricity Storage Manager, vous utiliserez la no
 
 
 
+.Informations associées
 http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61197["Documentation NetApp : responsable du stockage SANtricity"^]

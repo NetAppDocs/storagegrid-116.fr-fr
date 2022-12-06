@@ -37,6 +37,7 @@ https://mysupport.netapp.com/site/global/dashboard["Support NetApp"^]
 
 Les fichiers OVF incluent une réservation de ressources conçue pour garantir que chaque nœud de grille dispose de suffisamment de RAM et de CPU pour fonctionner efficacement. Si vous créez des machines virtuelles en déployant ces fichiers OVF sur VMware et que le nombre prédéfini de ressources n'est pas disponible, les machines virtuelles ne démarrent pas.
 
+.Description de la tâche
 Si vous êtes certain que l'hôte VM dispose de ressources suffisantes pour chaque nœud de la grille, ajustez manuellement les ressources allouées à chaque machine virtuelle, puis essayez de démarrer les machines virtuelles.
 
 .Étapes

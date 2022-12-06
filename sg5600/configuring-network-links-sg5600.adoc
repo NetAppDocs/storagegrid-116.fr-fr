@@ -13,6 +13,7 @@ summary: 'Vous pouvez configurer des liaisons réseau pour les ports utilisés p
 [role="lead"]
 Vous pouvez configurer des liaisons réseau pour les ports utilisés pour connecter l'appliance au réseau Grid, au réseau client et au réseau Admin. Vous pouvez définir la vitesse de liaison ainsi que les modes de port et de liaison réseau.
 
+.Ce dont vous avez besoin
 Si vous prévoyez d'utiliser le mode de liaison de port d'agrégat, le mode de liaison réseau LACP ou le balisage VLAN :
 
 * Vous avez connecté les ports 10 GbE de l'appliance à des switchs capables de prendre en charge les VLAN et LACP.
@@ -21,6 +22,7 @@ Si vous prévoyez d'utiliser le mode de liaison de port d'agrégat, le mode de l
 * Vous connaissez la balise VLAN unique à utiliser pour chaque réseau. Cette balise VLAN sera ajoutée à chaque paquet réseau pour s'assurer que le trafic réseau est acheminé vers le réseau approprié.
 
 
+.Description de la tâche
 Cette figure montre comment les quatre ports 10 GbE sont liés en mode de liaison de port fixe (configuration par défaut).
 
 image::../media/e5600sg_fixed_port.gif[Illustration montrant comment les ports 10 GbE du contrôleur E5600SG sont liés en mode fixe]
@@ -182,4 +184,5 @@ NOTE: Vous risquez de perdre votre connexion si vous avez apporté des modificat
 
 
 
+.Informations associées
 xref:port-bond-modes-for-e5600sg-controller-ports.adoc[Modes de liaison des ports pour les ports du contrôleur E5600SG]

@@ -13,13 +13,14 @@ summary: 'Si vous possédez une appliance SG5660 à 60 disques, vous pouvez modi
 [role="lead"]
 Si vous disposez d'une appliance SG5660 à 60 disques, vous pouvez modifier la configuration du volume en la définissant sur sa configuration par défaut et ses paramètres recommandés, à savoir les pools de disques dynamiques (DDP), et jusqu'à RAID6. Vous ne pouvez modifier le mode qu'avant de déployer le nœud de stockage de l'appliance StorageGRID.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez une appliance SG5660. Le SG5612 ne prend pas en charge RAID6. Si le modèle SG5612 est utilisé, vous devez utiliser le mode DDP.
 
 
 
 IMPORTANT: Si un volume a déjà été configuré ou si StorageGRID a été installé précédemment, la modification du mode RAID entraîne le retrait et le remplacement des volumes. Toutes les données présentes sur ces volumes seront perdues.
 
+.Description de la tâche
 Avant de déployer un nœud de stockage d'appliance StorageGRID, deux options de configuration des volumes sont disponibles :
 
 * *Pools de disques dynamiques (DDP)* -- il s'agit du paramètre par défaut et recommandé. Les DDP sont une approche matérielle de protection des données améliorée qui améliore les performances du système, réduit le temps de reconstruction après une panne de disque et facilite la gestion.

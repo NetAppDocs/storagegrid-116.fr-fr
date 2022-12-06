@@ -13,7 +13,7 @@ summary: 'Vous devrez peut-être remplacer le contrôleur E5700SG s"il ne foncti
 [role="lead"]
 Vous devrez peut-être remplacer le contrôleur E5700SG s'il ne fonctionne pas de manière optimale ou s'il est défectueux.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous disposez d'un contrôleur de remplacement avec la même référence que le contrôleur que vous remplacez.
 * Vous avez téléchargé les instructions du système E-Series pour remplacer un contrôleur E5700 défectueux.
 +
@@ -24,6 +24,7 @@ IMPORTANT: Utilisez les instructions E-Series à titre de référence uniquement
 * L'appareil a été xref:placing-appliance-into-maintenance-mode.adoc[passage en mode maintenance].
 
 
+.Description de la tâche
 L'appliance Storage Node ne sera pas accessible lors du remplacement du contrôleur. Si le contrôleur E5700SG fonctionne suffisamment, vous pouvez effectuer un arrêt contrôlé au début de cette procédure.
 
 
@@ -111,4 +112,5 @@ L'état final est `HA`.
 . Vérifiez que le nœud de stockage de l'appliance apparaît dans Grid Manager et qu'aucune alarme ne s'affiche.
 
 
+.Informations associées
 http://mysupport.netapp.com/info/web/ECMP1658252.html["Site de documentation sur les systèmes NetApp E-Series"^]

@@ -13,19 +13,20 @@ summary: 'Vous créez des pools de stockage afin de déterminer où le système 
 [role="lead"]
 Vous créez des pools de stockage afin de déterminer où le système StorageGRID stocke les données d'objet et le type de stockage utilisé. Chaque pool de stockage comprend un ou plusieurs sites et une ou plusieurs catégories de stockage.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 * Vous avez passé en revue les instructions relatives à la création de pools de stockage.
 
 
+.Description de la tâche
 Les pools de stockage déterminent l'emplacement de stockage des données d'objet. Le nombre de pools de stockage dont vous avez besoin dépend du nombre de sites de votre grid et des types de copies que vous souhaitez : répliquées ou avec code d'effacement.
 
 * Pour la réplication et le code d'effacement à un seul site, créez un pool de stockage pour chaque site. Par exemple, si vous souhaitez stocker les copies d'objets répliquées sur trois sites, créez trois pools de stockage.
 * Pour le codage d'effacement sur trois sites ou plus, créez un pool de stockage comprenant une entrée pour chaque site. Par exemple, si vous souhaitez effacement d'objets de code sur trois sites, créez un pool de stockage. Sélectionnez l'icône plus image:../media/icon_plus_sign_black_on_white.gif["insérer l'icône"] pour ajouter une entrée pour chaque site.
 +
 
-IMPORTANT: N'incluez pas le site par défaut tous les sites dans un pool de stockage qui sera utilisé dans un profil de code d'effacement. Ajoutez plutôt une entrée distincte au pool de stockage pour chaque site qui stocke les données codées d'effacement. Voir ,cette étape par exemple.
+IMPORTANT: N'incluez pas le site par défaut tous les sites dans un pool de stockage qui sera utilisé dans un profil de code d'effacement. Ajoutez plutôt une entrée distincte au pool de stockage pour chaque site qui stocke les données codées d'effacement. Voir <<entries,cette étape>> par exemple.
 
 * Si vous disposez de plusieurs niveaux de stockage, ne créez pas de pool de stockage incluant différentes catégories de stockage sur un même site. Voir la xref:guidelines-for-creating-storage-pools.adoc[Instructions pour la création de pools de stockage].
 

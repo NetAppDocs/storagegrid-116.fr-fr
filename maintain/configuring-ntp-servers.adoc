@@ -13,13 +13,14 @@ summary: 'Vous pouvez ajouter, mettre à jour ou supprimer des serveurs NTP (Net
 [role="lead"]
 Vous pouvez ajouter, mettre à jour ou supprimer des serveurs NTP (Network Time Protocol) afin de vous assurer que les données sont synchronisées précisément entre les nœuds grid de votre système StorageGRID.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer de l'autorisation Maintenance ou accès racine.
 * Vous devez disposer de la phrase secrète pour le provisionnement.
 * Les adresses IPv4 des serveurs NTP à configurer doivent être définies.
 
 
+.Description de la tâche
 Le système StorageGRID utilise le protocole NTP (Network Time Protocol) pour synchroniser l'heure entre tous les nœuds de la grille.
 
 Le rôle NTP principal est attribué à chaque site au moins deux nœuds du système StorageGRID. Ils se synchronisent avec un minimum suggéré de quatre et un maximum de six sources de temps externes et entre elles. Chaque nœud du système StorageGRID qui n'est pas un nœud NTP principal agit comme un client NTP et se synchronise avec ces nœuds NTP primaires.

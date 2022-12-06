@@ -13,7 +13,7 @@ summary: 'Lors de la configuration de StorageGRID pour une utilisation avec Fabr
 [role="lead"]
 Lors de la configuration de StorageGRID pour une utilisation avec FabricPool, vous devez configurer un noeud final de l'équilibreur de charge et télécharger le certificat de point final de l'équilibreur de charge, qui est utilisé pour sécuriser la connexion entre ONTAP et StorageGRID.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez de l'autorisation d'accès racine.
 * Vous disposez des fichiers suivants :
@@ -25,6 +25,7 @@ Lors de la configuration de StorageGRID pour une utilisation avec FabricPool, vo
 
 
 
+.Description de la tâche
 Pour plus d'informations sur cette tâche, reportez-vous à la section xref:../admin/configuring-load-balancer-endpoints.adoc[Configurer les terminaux de l'équilibreur de charge].
 
 .Étapes

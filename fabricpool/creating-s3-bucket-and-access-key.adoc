@@ -13,10 +13,11 @@ summary: 'Avant d"utiliser StorageGRID avec un workload FabricPool, vous devez c
 [role="lead"]
 Avant d'utiliser StorageGRID avec un workload FabricPool, vous devez créer un compartiment S3 pour vos données FabricPool. Vous devez également obtenir une clé d'accès et une clé secrète pour le compte de locataire que vous utiliserez pour FabricPool.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez créé un compte de locataire pour l'utilisation de FabricPool.
 
 
+.Description de la tâche
 Ces instructions expliquent comment utiliser le gestionnaire de locataires StorageGRID pour créer un compartiment et obtenir les clés d'accès. Vous pouvez également effectuer ces tâches à l'aide de l'API de gestion des locataires ou de l'API REST StorageGRID S3. Si vous utilisez ONTAP 9.10, vous pouvez également créer le compartiment à l'aide de l'assistant d'installation de FabricPool.
 
 Pour en savoir plus :

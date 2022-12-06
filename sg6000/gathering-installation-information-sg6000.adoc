@@ -13,6 +13,7 @@ summary: 'Lors de l"installation et de la configuration de l"appliance StorageGR
 [role="lead"]
 Lors de l'installation et de la configuration de l'appliance StorageGRID, vous devez prendre des décisions et collecter des informations sur les ports de commutation Ethernet, les adresses IP et les modes de liaison réseau et de port.
 
+.Description de la tâche
 Vous pouvez utiliser les tableaux suivants pour enregistrer les informations requises pour chaque réseau que vous connectez à l'appliance. Ces valeurs sont nécessaires pour installer et configurer le matériel.
 
 
@@ -423,6 +424,7 @@ Adresse IP statique que vous prévoyez d'utiliser pour le port de gestion BMC
 
 
 |===
+.Informations associées
 xref:controllers-in-sg6000-appliances.adoc[Contrôleurs des appareils SG6000]
 
 xref:reviewing-appliance-network-connections-sg6000.adoc[Vérifier les connexions réseau de l'appareil (SG6000)]

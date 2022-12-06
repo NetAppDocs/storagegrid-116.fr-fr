@@ -111,4 +111,5 @@ Schémas API pour StorageGRID.
 *Remarque*: Avant d'effectuer une mise à niveau, vous pouvez utiliser ces schémas pour confirmer que tout code que vous avez écrit pour utiliser les API de gestion StorageGRID sera compatible avec la nouvelle version de StorageGRID si vous ne disposez pas d'environnement StorageGRID non-production pour les tests de compatibilité de mise à niveau.
 
 |===
+.Informations associées
 xref:../maintain/index.adoc[Récupérer et entretenir]

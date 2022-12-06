@@ -45,4 +45,5 @@ En cas d'interruption inattendue de l'entrée ou de la récupération des donné
 
 Si la mise à niveau de la base de données échoue avec une erreur, essayez à nouveau la mise à niveau. En cas d'échec à nouveau, contactez le support technique.
 
+.Informations associées
 xref:checking-systems-condition-before-upgrading-software.adoc[Vérification de l'état du système avant la mise à niveau du logiciel]

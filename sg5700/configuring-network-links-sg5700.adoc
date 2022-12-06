@@ -13,6 +13,7 @@ summary: 'Vous pouvez configurer des liaisons réseau pour les ports utilisés p
 [role="lead"]
 Vous pouvez configurer des liaisons réseau pour les ports utilisés pour connecter l'appliance au réseau Grid, au réseau client et au réseau Admin. Vous pouvez définir la vitesse de liaison ainsi que les modes de port et de liaison réseau.
 
+.Ce dont vous avez besoin
 Si vous prévoyez d'utiliser la vitesse de liaison 25 GbE pour les ports 10/25 GbE :
 
 * Vous avez installé des émetteurs-récepteurs SFP28 dans les ports que vous prévoyez d'utiliser.
@@ -29,6 +30,7 @@ Si vous prévoyez d'utiliser le mode de liaison de port d'agrégat, le mode de l
 * Si vous prévoyez d'utiliser le mode de sauvegarde active pour le réseau d'administration, vous avez connecté des câbles Ethernet aux deux ports de gestion du contrôleur.
 
 
+.Description de la tâche
 Cette figure montre comment les quatre ports 10/25 GbE sont liés en mode de liaison de port fixe (configuration par défaut).
 
 image::../media/e5700sg_fixed_port.gif[Illustration montrant comment les ports 10/25 GbE du contrôleur E5700SG sont liés en mode fixe]
@@ -194,4 +196,5 @@ NOTE: Vous risquez de perdre votre connexion si vous avez apporté des modificat
 
 
 
+.Informations associées
 xref:port-bond-modes-for-e5700sg-controller-ports.adoc[Modes de liaison des ports pour les ports du contrôleur E5700SG]

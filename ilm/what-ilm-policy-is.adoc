@@ -56,4 +56,5 @@ L'activation de la stratégie proposée fait de la stratégie précédemment act
 
 image::../media/ilm_policies_proposed_active_historical.png[Image conceptuelle pour les règles ILM]
 
+.Informations associées
 xref:creating-ilm-policy.adoc[Création d'une règle ILM]

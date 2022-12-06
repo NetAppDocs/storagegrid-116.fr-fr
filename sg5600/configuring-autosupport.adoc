@@ -13,7 +13,7 @@ summary: 'L"outil AutoSupport collecte les données dans un bundle de support cl
 [role="lead"]
 L'outil AutoSupport collecte les données dans un bundle de support client à partir de l'appliance et les envoie automatiquement au support technique. La configuration de AutoSupport aide le support technique à distance pour le dépannage et l'analyse des problèmes.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * La fonctionnalité AutoSupport doit être activée et activée sur l'appliance.
 +
 La fonction AutoSupport est activée et désactivée globalement sur une station de gestion du stockage.
@@ -21,6 +21,7 @@ La fonction AutoSupport est activée et désactivée globalement sur une station
 * Le moniteur d'événements Storage Manager doit être exécuté sur au moins un ordinateur ayant accès à l'appareil et, de préférence, sur un ordinateur ou plus.
 
 
+.Description de la tâche
 Toutes les données sont compressées dans un seul format de fichier d'archive compressé (.7z) à l'emplacement spécifié.
 
 AutoSupport fournit les types de messages suivants :
@@ -61,4 +62,5 @@ Messages hebdomadaires
 . Si nécessaire, utilisez l'aide en ligne de SANtricity Storage Manager pour accomplir la tâche.
 
 
+.Informations associées
 http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61197["Documentation NetApp : responsable du stockage SANtricity"^]

@@ -16,8 +16,10 @@ Si vous souhaitez que des notifications par e-mail soient envoyées lorsque des 
 
 NOTE: Les paramètres BMC définis lors de cette procédure peuvent ne pas être préservés en cas de défaillance de l'appliance et doivent être remplacés. Assurez-vous d'avoir un enregistrement de tous les paramètres que vous avez appliqués afin de pouvoir les réappliquer facilement après un remplacement de matériel si nécessaire.
 
+.Ce dont vous avez besoin
 Vous savez comment accéder au tableau de bord BMC.
 
+.Description de la tâche
 Dans l'interface BMC, vous utilisez les options *Paramètres SMTP*, *gestion des utilisateurs* et *filtres d'événements de la plate-forme* de la page Paramètres pour configurer les notifications par e-mail.
 
 image::../media/bmc_settings_menu.png[Menu Paramètres BMC]

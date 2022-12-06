@@ -21,4 +21,5 @@ Pour les nœuds, le tableau interfaces réseau fournit des informations sur les 
 
 image::../media/nodes_page_network_tab.png[Page noeuds onglet réseau]
 
+.Informations associées
 xref:monitoring-network-connections-and-performance.adoc[Contrôle des connexions réseau et des performances]

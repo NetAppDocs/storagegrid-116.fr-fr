@@ -13,6 +13,7 @@ summary: 'Lorsque vous mettez l"appliance sous tension, les deux contrôleurs d�
 [role="lead"]
 Lorsque vous mettez l'appliance sous tension, les deux contrôleurs démarrent.
 
+.Ce dont vous avez besoin
 Les deux interrupteurs doivent être éteints avant de brancher l'appareil.
 
 

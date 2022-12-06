@@ -30,4 +30,5 @@ IMPORTANT: N'approuvez pas la mise à niveau d'un nœud de la grille sauf si vou
 . Une fois la mise à niveau terminée, confirmer la version du logiciel et appliquer les correctifs.
 
 
+.Informations associées
 xref:estimating-time-to-complete-upgrade.adoc[Estimer le temps nécessaire pour effectuer une mise à niveau]

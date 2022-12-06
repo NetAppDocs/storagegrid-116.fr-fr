@@ -13,11 +13,12 @@ summary: 'Si vous le souhaitez, vous pouvez configurer des silences pour supprim
 [role="lead"]
 Si vous le souhaitez, vous pouvez configurer des silences pour supprimer temporairement les notifications d'alerte.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez de l'autorisation gérer les alertes ou l'accès racine.
 
 
+.Description de la tâche
 Vous pouvez désactiver les règles d'alerte sur toute la grille, sur un seul site ou sur un seul nœud et pour une ou plusieurs niveaux de gravité. Chaque silence supprime toutes les notifications d'une règle d'alerte unique ou de toutes les règles d'alerte.
 
 Si vous avez activé l'agent SNMP, les silences suppriment également les interruptions SNMP et informent.

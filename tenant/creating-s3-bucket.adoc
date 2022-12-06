@@ -13,7 +13,7 @@ summary: 'Vous pouvez utiliser le Gestionnaire des locataires pour créer des co
 [role="lead"]
 Vous pouvez utiliser le Gestionnaire des locataires pour créer des compartiments S3 pour les données d'objet. Lorsque vous créez un compartiment, vous devez spécifier son nom et sa région. Si le paramètre global de verrouillage d'objet S3 est activé pour le système StorageGRID, vous pouvez activer le verrouillage d'objet S3 pour le compartiment.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Gestionnaire de locataires à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous appartenez à un groupe d'utilisateurs possédant l'autorisation gérer toutes les rubriques ou accès racine. Ces autorisations remplacent les paramètres d'autorisations des stratégies de groupes ou de compartiments.
 +
@@ -85,6 +85,7 @@ Le godet est créé et ajouté au tableau sur la page godets.
 
 
 
+.Informations associées
 xref:../ilm/index.adoc[Gestion des objets avec ILM]
 
 xref:understanding-tenant-management-api.adoc[Compréhension de l'API de gestion des locataires]

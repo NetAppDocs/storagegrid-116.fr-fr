@@ -48,6 +48,7 @@ L'exemple suivant montre trois messages d'audit dans un fichier journal d'audit 
 ----
 Dans leur format par défaut, les messages d'audit dans les fichiers journaux d'audit ne sont pas faciles à lire ou à interpréter. Vous pouvez utiliser le `audit-explain` outil pour obtenir des résumés simplifiés des messages d'audit dans le journal d'audit. Vous pouvez utiliser le `audit-sum` outil pour résumer le nombre d'opérations d'écriture, de lecture et de suppression enregistrées, ainsi que la durée nécessaire à ces opérations.
 
+.Informations associées
 xref:using-audit-explain-tool.adoc[Utiliser l'outil d'explication d'audit]
 
 xref:using-audit-sum-tool.adoc[Utiliser l'outil audit-sum]

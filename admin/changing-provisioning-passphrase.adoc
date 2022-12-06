@@ -13,12 +13,13 @@ summary: 'Utilisez cette procédure pour modifier la phrase secrète du provisio
 [role="lead"]
 Utilisez cette procédure pour modifier la phrase secrète du provisionnement StorageGRID. La phrase de passe est requise pour les procédures de restauration, d'extension et de maintenance. La phrase de passe est également requise pour télécharger les sauvegardes du pack de récupération qui incluent les informations de topologie de la grille, les mots de passe de la console des nœuds grid et les clés de chiffrement pour le système StorageGRID.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès à la racine ou à la maintenance.
 * Vous disposez de la phrase secrète pour le provisionnement.
 
 
+.Description de la tâche
 La phrase secrète de provisionnement est requise pour la plupart des procédures d'installation et de maintenance, et pour xref:../maintain/downloading-recovery-package.adoc[Téléchargement du progiciel de restauration]. La phrase de passe de provisionnement n'est pas répertoriée dans le `Passwords.txt` fichier. Veillez à documenter la phrase de passe de provisionnement et à la conserver dans un emplacement sûr et sécurisé.
 
 .Étapes

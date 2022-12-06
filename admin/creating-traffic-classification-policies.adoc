@@ -13,7 +13,7 @@ summary: 'Vous créez des règles de classification du trafic pour surveiller et
 [role="lead"]
 Vous créez des règles de classification du trafic pour surveiller et limiter, éventuellement, le trafic réseau par compartiment, locataire, sous-réseau IP ou point de terminaison d'équilibrage de la charge. Vous pouvez également définir des limites pour une stratégie en fonction de la bande passante, du nombre de demandes simultanées ou du taux de demande.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez de l'autorisation d'accès racine.
 * Vous avez créé tous les noeuds finaux de l'équilibreur de charge que vous souhaitez associer.

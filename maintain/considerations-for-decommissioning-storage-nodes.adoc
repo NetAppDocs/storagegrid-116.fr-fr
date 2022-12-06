@@ -33,4 +33,5 @@ Lors de la mise hors service des nœuds de stockage, les facteurs et restriction
 
 
 
+.Informations associées
 xref:restoring-object-data-to-storage-volume-if-required.adoc[Restaurez les données d'objet sur un volume de stockage, le cas échéant]

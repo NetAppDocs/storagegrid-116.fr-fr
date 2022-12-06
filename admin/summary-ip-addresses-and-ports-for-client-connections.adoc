@@ -13,6 +13,7 @@ summary: 'Les applications client peuvent se connecter à StorageGRID en utilisa
 [role="lead"]
 Les applications client peuvent se connecter à StorageGRID en utilisant l'adresse IP d'un nœud de grid et le numéro de port d'un service sur ce nœud. Si des groupes de haute disponibilité sont configurés, les applications client peuvent se connecter en utilisant l'adresse IP virtuelle du groupe de haute disponibilité.
 
+.Description de la tâche
 Ce tableau récapitule les différentes façons dont les clients peuvent se connecter à StorageGRID ainsi que les adresses IP et les ports utilisés pour chaque type de connexion. Ces instructions décrivent la recherche de ces informations dans le grid Manager si les terminaux d'équilibrage de la charge et les groupes haute disponibilité sont déjà configurés.
 
 [cols="1a,1a,1a,1a"]
@@ -124,6 +125,7 @@ Ports Swift par défaut :
 
 
 |===
+.Exemples
 Pour connecter un client S3 au terminal Load Balancer d'un groupe HA de nœuds de passerelle, utilisez une URL structurée comme illustré ci-dessous :
 
 * `https://_VIP-of-HA-group:LB-endpoint-port_`

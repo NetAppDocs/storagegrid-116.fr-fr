@@ -13,6 +13,7 @@ summary: 'Vous pouvez configurer des liaisons réseau pour les ports utilisés p
 [role="lead"]
 Vous pouvez configurer des liaisons réseau pour les ports utilisés pour connecter l'appliance au réseau Grid, au réseau client et au réseau Admin. Vous pouvez définir la vitesse de liaison ainsi que les modes de port et de liaison réseau.
 
+.Ce dont vous avez besoin
 Si vous procédez au clonage d'un nœud d'appliance, configurez les liens réseau de l'appliance cible pour tous les liens utilisés par le nœud d'appliance source.
 
 Si vous prévoyez d'utiliser la vitesse de liaison 25 GbE :
@@ -30,6 +31,7 @@ Si vous prévoyez d'utiliser le mode de liaison de port d'agrégat, le mode de l
 * Vous connaissez la balise VLAN unique à utiliser pour chaque réseau. Cette balise VLAN sera ajoutée à chaque paquet réseau pour s'assurer que le trafic réseau est acheminé vers le réseau approprié.
 
 
+.Description de la tâche
 Cette figure montre comment les quatre ports réseau sont liés en mode de liaison de port fixe (configuration par défaut).
 
 image::../media/sg6000_cn_fixed_port.gif[Illustration montrant comment les ports réseau du contrôleur SG6000-CN sont liés en mode fixe]

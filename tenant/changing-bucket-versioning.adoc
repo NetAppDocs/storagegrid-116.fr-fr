@@ -13,7 +13,7 @@ summary: 'Si vous utilisez un locataire S3, vous pouvez utiliser le Gestionnaire
 [role="lead"]
 Si vous utilisez un locataire S3, vous pouvez utiliser le Gestionnaire des locataires ou l'API de gestion des locataires pour modifier l'état des versions des compartiments S3.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Gestionnaire de locataires à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous appartenez à un groupe d'utilisateurs possédant l'autorisation gérer toutes les rubriques ou accès racine. Ces autorisations remplacent les paramètres d'autorisations des stratégies de groupes ou de compartiments.
 +
@@ -21,6 +21,7 @@ xref:tenant-management-permissions.adoc[Autorisations de gestion des locataires]
 
 
 
+.Description de la tâche
 Vous pouvez activer ou suspendre la gestion des versions d'objet pour un compartiment. Une fois que vous avez activé la gestion des versions d'un compartiment, celui-ci ne peut plus revenir à un état sans version. Toutefois, vous pouvez suspendre le contrôle de version du compartiment.
 
 * Désactivé : le contrôle de version n'a jamais été activé

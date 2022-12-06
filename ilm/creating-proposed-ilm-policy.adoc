@@ -16,7 +16,7 @@ Vous pouvez créer de zéro une politique ILM proposée ou cloner la règle acti
 
 NOTE: Si le paramètre de verrouillage d'objet S3 global a été activé, utilisez plutôt cette procédure : xref:creating-ilm-policy-after-s3-object-lock-is-enabled.adoc[Créez une règle ILM après l'activation du verrouillage d'objet S3].
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 * Vous avez créé les règles ILM à ajouter à la règle proposée. Si nécessaire, vous pouvez enregistrer une stratégie proposée, créer des règles supplémentaires, puis modifier la stratégie proposée pour ajouter les nouvelles règles.
@@ -28,6 +28,7 @@ image::../media/video-screenshot-ilm-policies.png[Vidéo : règles ILM de Storag
 
 
 
+.Description de la tâche
 Les raisons principales de la création d'une politique ILM sont les suivantes :
 
 * Vous avez ajouté un site et devez utiliser de nouvelles règles ILM pour placer les objets sur ce site.

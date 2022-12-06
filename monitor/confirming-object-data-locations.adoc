@@ -13,7 +13,7 @@ summary: 'En fonction du problème, vous pouvez confirmer l"emplacement de stock
 [role="lead"]
 En fonction du problème, vous pouvez confirmer l'emplacement de stockage des données d'objet. Par exemple, vous pouvez vérifier que la règle ILM fonctionne comme prévu et que les données d'objet sont stockées à l'emplacement prévu.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez disposer d'un identifiant d'objet, qui peut être l'un des suivants :
 +
 ** *UUID* : identifiant unique universel de l'objet. Saisissez l'UUID en majuscules.
@@ -57,6 +57,7 @@ image::../media/object_lookup_results.png[Résultats de la recherche d'objets]
 
 
 
+.Informations associées
 xref:../ilm/index.adoc[Gestion des objets avec ILM]
 
 xref:../s3/index.adoc[Utilisation de S3]

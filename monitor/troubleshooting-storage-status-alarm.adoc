@@ -13,11 +13,12 @@ summary: 'L"alarme Storage Status (SSTS) (État du stockage) est déclenchée si
 [role="lead"]
 L'alarme Storage Status (SSTS) (État du stockage) est déclenchée si un nœud de stockage ne dispose pas d'espace disponible suffisant pour le stockage d'objets.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer d'autorisations d'accès spécifiques.
 
 
+.Description de la tâche
 L'alarme SSTS (État de stockage) est déclenchée au niveau de l'avis lorsque la quantité d'espace libre sur chaque volume d'un nœud de stockage tombe en dessous de la valeur du filigrane du Storage Volume Soft Read Only (*CONFIGURATION* *système* *Options de stockage*).
 
 image::../media/storage_watermarks.png[Présentation des options de stockage]

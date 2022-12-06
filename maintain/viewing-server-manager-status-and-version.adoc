@@ -13,6 +13,7 @@ summary: 'Pour chaque nœud de grille, vous pouvez afficher l"état et la versio
 [role="lead"]
 Pour chaque nœud de grille, vous pouvez afficher l'état et la version actuels de Server Manager exécuté sur ce nœud de grille. Vous pouvez également obtenir l'état actuel de tous les services exécutés sur ce nœud de grille.
 
+.Ce dont vous avez besoin
 Vous devez avoir le `Passwords.txt` fichier.
 
 .Étapes

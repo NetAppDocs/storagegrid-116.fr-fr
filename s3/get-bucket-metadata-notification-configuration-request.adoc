@@ -177,4 +177,5 @@ Content-Type: application/xml
     </Rule>
 </MetadataNotificationConfiguration>
 ----
+.Informations associées
 xref:../tenant/index.adoc[Utilisez le compte du locataire]

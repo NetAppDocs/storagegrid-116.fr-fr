@@ -106,6 +106,7 @@ Consistency-Control: strong-site
 * Si `RetentionPeriodMinutes` Dans la demande est inférieure à la période de conservation actuelle du compartiment, le code d'état HTTP est `400 Bad Request`.
 
 
+.Informations associées
 xref:deprecated-put-bucket-request-modifications-for-compliance.adoc[Obsolète : METTEZ les modifications de la demande de compartiment à des fins de conformité]
 
 xref:../tenant/index.adoc[Utilisez le compte du locataire]

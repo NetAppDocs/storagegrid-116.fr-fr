@@ -15,12 +15,14 @@ Chaque message d'audit du journal d'audit enregistre les données spécifiques �
 
 Après l'ouverture `[AUDT:` conteneur qui identifie le message lui-même, l'ensemble d'attributs suivant fournit des informations sur l'événement ou l'action décrit par le message d'audit. Ces attributs sont mis en évidence dans l'exemple suivant :
 
+[]
 ====
 2018-12-05T08:24 10.224.0 60025621595611246499:45.921845 100 60025621595611246499 [AUDT:*\[RSLT\(FC32\):SUCS\] *\[TIME\(UI64\):11454\]\[SAIP\(IPAD\)\[S3AI(CSTR\\)(CSTR\\\ 60025621595611246499\« STU3S\\ »\« STC\ »\« STC\ »\[STC\ » :\[S6S]\[STC\[STC\[STC\*\« STC\ » :\[STE]\[STC\[STC\[STC\[STE]\[STC\*\[STC\[STC\[STC\[STC\*\[STC\« S]\ » :\[STC\« STE\ » :\[STC\« STE\ » :\[STE\« S\ » :\[STE\ »\ » :\[STE\[S3S\ » :\*\[STC\[STC\[STC\[S37 30720 10 1543998285921845 12281045 15552417629170647261
 
 ====
 Le `ATYP` elément (souligné dans l'exemple) identifie l'événement qui a généré le message. Cet exemple de message inclut le code de message SHEA ([ATYP(FC32):SHEA]), indiquant qu'il a été généré par une demande DE TÊTE S3 réussie.
 
+.Informations associées
 xref:common-elements-in-audit-messages.adoc[Éléments communs dans les messages d'audit]
 
 xref:audit-messages-main.adoc[Messages d'audit]

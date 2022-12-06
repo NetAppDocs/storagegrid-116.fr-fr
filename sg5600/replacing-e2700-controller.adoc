@@ -13,13 +13,14 @@ summary: 'Vous devrez peut-être remplacer le contrôleur E2700 s"il ne fonction
 [role="lead"]
 Vous devrez peut-être remplacer le contrôleur E2700 s'il ne fonctionne pas de manière optimale ou en cas de défaillance.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous disposez d'un contrôleur de remplacement avec la même référence que le contrôleur que vous remplacez.
 * Vous avez des étiquettes pour identifier chaque câble connecté au contrôleur.
 * Vous bénéficiez d'une protection antistatique.
 * Vous devez disposer de l'autorisation Maintenance ou accès racine. Pour plus de détails, reportez-vous aux instructions d'administration de StorageGRID.
 
 
+.Description de la tâche
 Vous pouvez déterminer si le contrôleur est défectueux en vérifiant le voyant orange Service action Requied (action de maintenance requise) sur le contrôleur (1 sur l'illustration). Si cette LED est allumée, le contrôleur doit être remplacé.
 
 image::../media/e2700_controller_sar_led.gif[LED d'action de service requise sur le contrôleur E2700]
@@ -96,6 +97,7 @@ image::../media/node_rejoin_grid_confirmation.png[Le nœud d'appliance a rejoint
 . Depuis SANtricity Storage Manager, vérifiez que le nouveau contrôleur est optimal et collectez les données de support.
 
 
+.Informations associées
 https://mysupport.netapp.com/info/web/ECMP11751516.html["Procédures de remplacement du matériel NetApp E-Series et EF-Series"^]
 
 http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61765["Documentation NetApp : gamme E2700"^]

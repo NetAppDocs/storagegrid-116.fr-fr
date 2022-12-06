@@ -92,7 +92,7 @@ xref:using-s3-object-lock.adoc[Utilisation du verrouillage d'objet S3]
 ** `x-amz-server-side-encryption-customer-key`
 ** `x-amz-server-side-encryption-customer-algorithm`
 +
- headers for server-side encryption
+<<Demander des en-têtes pour le cryptage côté serveur>>
 
 
 
@@ -139,6 +139,7 @@ L'en-tête de demande suivant n'est pas pris en charge et renvoie `XNotImplement
 
 Le téléchargement partitionné est constitué de différentes opérations permettant de lancer le téléchargement, de répertorier les téléchargements, de télécharger des pièces, d'assembler les pièces téléchargées et de terminer le téléchargement. Les objets sont créés (et versionnés le cas échéant) lorsque l'opération de chargement multipièce complète est exécutée.
 
+.Informations associées
 xref:../ilm/index.adoc[Gestion des objets avec ILM]
 
 xref:using-server-side-encryption.adoc[Utilisez le cryptage côté serveur]

@@ -20,4 +20,5 @@ Vérifiez les points suivants avant de désaffecter un nœud d'administration ou
 * Si vous désaffectez un nœud d'administration et que l'authentification unique (SSO) est activée pour votre système StorageGRID, n'oubliez pas de supprimer la confiance de l'interlocuteur du nœud de Active Directory Federation Services (AD FS).
 
 
+.Informations associées
 xref:../admin/index.adoc[Administrer StorageGRID]

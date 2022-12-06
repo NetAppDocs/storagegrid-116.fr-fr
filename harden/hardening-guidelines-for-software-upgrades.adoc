@@ -41,12 +41,13 @@ Utilisez la matrice d'interopérabilité NetApp pour obtenir la liste des versio
 
 
 
-== Passez aux nœuds Linux
+== *Mise à niveau vers des nœuds Linux*
 
 Si vos nœuds StorageGRID utilisent des plates-formes hôtes Linux, vous devez vous assurer que les mises à jour de sécurité et de noyau sont appliquées au système d'exploitation hôte. En outre, vous devez appliquer des mises à jour de micrologiciel au matériel vulnérable lorsque ces mises à jour sont disponibles.
 
 Utilisez la matrice d'interopérabilité NetApp pour obtenir la liste des versions prises en charge.
 
+.Informations associées
 https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["Téléchargement NetApp : StorageGRID"^]
 
 xref:../upgrade/index.adoc[Mise à niveau du logiciel]

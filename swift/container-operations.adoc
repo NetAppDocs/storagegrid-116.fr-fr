@@ -133,4 +133,5 @@ Une exécution réussie renvoie les en-têtes suivants avec une réponse « HTTP
 
 Un nom de conteneur doit être unique dans le namespace StorageGRID. Si le conteneur existe sous un autre compte, l'en-tête suivant est renvoyé : « HTTP/1.1 409 Conflict ».
 
+.Informations associées
 xref:monitoring-and-auditing-operations.adoc[Surveiller et auditer les opérations]

@@ -13,7 +13,7 @@ summary: 'Si vous avez activé le chiffrement de nœud pour l"appliance lors de 
 [role="lead"]
 Si vous avez activé le chiffrement des nœuds pour l'appliance lors de l'installation, vous pouvez surveiller l'état du chiffrement des nœuds de chaque nœud d'appliance, notamment les informations détaillées sur l'état de chiffrement des nœuds et le serveur de gestion des clés (KMS).
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Le chiffrement des nœuds doit avoir été activé pour l'appliance pendant l'installation. Vous ne pouvez pas activer le chiffrement de nœud après l'installation de l'appliance.
 * Vous avez xref:placing-appliance-into-maintenance-mode.adoc[placez l'appareil en mode maintenance].
 
@@ -62,4 +62,5 @@ image::../media/nodes_menu.png[Le nœud d'appliance a rejoint la grille]
 
 
 
+.Informations associées
 xref:../admin/index.adoc[Administrer StorageGRID]

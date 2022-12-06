@@ -13,7 +13,7 @@ summary: 'Vous pouvez créer des groupes d"administration pour gérer les autori
 [role="lead"]
 Vous pouvez créer des groupes d'administration pour gérer les autorisations de sécurité d'un ou plusieurs utilisateurs administrateurs. Les utilisateurs doivent appartenir à un groupe pour pouvoir accéder au système StorageGRID.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 * Si vous envisagez d'importer un groupe fédéré, vous avez configuré la fédération des identités et le groupe fédéré existe déjà dans le référentiel d'identité configuré.
@@ -83,7 +83,7 @@ NOTE: Si un utilisateur appartient à plusieurs groupes et qu'un groupe est déf
 
 
 
-. Sélectionnez une ou plusieurs options  permissions.
+. Sélectionnez une ou plusieurs options <<Autorisations de groupe>>.
 +
 Vous devez attribuer au moins une autorisation à chaque groupe ; sinon, les utilisateurs appartenant au groupe ne pourront pas se connecter à StorageGRID.
 
@@ -149,13 +149,13 @@ Modifier le mode d'accès ou les autorisations
 .. Cochez la case correspondant au groupe.
 .. Sélectionnez *actions* *Afficher les détails du groupe*.
 .. Si vous le souhaitez, modifiez le mode d'accès du groupe.
-.. Sélectionner ou désélectionner les options éventuellement  permissions.
+.. Sélectionner ou désélectionner les options éventuellement <<Autorisations de groupe>>.
 .. Sélectionnez *Enregistrer les modifications*.
 
  a| 
 .. Sélectionnez le nom du groupe pour afficher les détails.
 .. Si vous le souhaitez, modifiez le mode d'accès du groupe.
-.. Sélectionner ou désélectionner les options éventuellement  permissions.
+.. Sélectionner ou désélectionner les options éventuellement <<Autorisations de groupe>>.
 .. Sélectionnez *Enregistrer les modifications*.
 
 

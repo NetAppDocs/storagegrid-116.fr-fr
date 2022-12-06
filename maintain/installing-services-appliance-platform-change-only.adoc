@@ -25,4 +25,5 @@ Effectuez cette procédure uniquement si vous récupérez un noeud défaillant h
 . Lorsqu'un nom de nœud est demandé, utilisez le nom du nœud correspondant à l'échec.
 
 
+.Informations associées
 xref:../sg100-1000/index.adoc[Appareils de services SG100 et SG1000]

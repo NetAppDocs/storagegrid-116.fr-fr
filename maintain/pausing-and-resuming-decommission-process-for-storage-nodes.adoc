@@ -16,7 +16,7 @@ Si vous devez effectuer une deuxième procédure de maintenance, vous pouvez int
 
 NOTE: Le bouton *Pause* n'est activé que lorsque les étapes d'évaluation ILM ou de déclassement des données avec code d'effacement sont atteintes. Cependant, l'évaluation ILM (migration des données) continue à s'exécuter en arrière-plan.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer de l'autorisation Maintenance ou accès racine.
 

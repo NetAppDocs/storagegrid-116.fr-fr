@@ -23,7 +23,7 @@ NOTE: Pour garantir que les opérations ne sont pas interrompues par un certific
 
 NOTE: Si vous utilisez un serveur de gestion des clés (KMS) pour protéger les données sur les nœuds d'appliance spécialement configurés, consultez les informations spécifiques à propos de xref:kms-adding.adoc[Téléchargement d'un certificat client KMS].
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous disposez de l'autorisation d'accès racine.
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Pour configurer un certificat client :
@@ -48,9 +48,9 @@ NOTE: Si vous utilisez un serveur de gestion des clés (KMS) pour protéger les 
 
 Suivez la procédure de votre scénario pour ajouter un certificat client :
 
-*  interface certificate already configured
-*  issued client certificate
-*  certificate from Grid Manager
+* <<Certificat d'interface de gestion déjà configuré>>
+* <<CERTIFICAT client émis>>
+* <<Certificat généré par Grid Manager>>
 
 
 
@@ -220,7 +220,7 @@ Le nouveau certificat apparaît sur l'onglet client.
 . Dans le Gestionnaire de grille, sélectionnez *CONFIGURATION* *sécurité* *certificats*, puis sélectionnez l'onglet *Global*.
 . Sélectionnez *certificat d'interface de gestion*.
 . Sélectionnez *utiliser le certificat personnalisé*.
-. Téléchargez les fichiers Certificate.pem et private_key.pem à partir du ,détails du certificat client étape. Il n'est pas nécessaire de télécharger le pack CA.
+. Téléchargez les fichiers Certificate.pem et private_key.pem à partir du <<client_cert_details,détails du certificat client>> étape. Il n'est pas nécessaire de télécharger le pack CA.
 +
 .. Sélectionnez *Télécharger le certificat*, puis *Continuer*.
 .. Téléchargez chaque fichier de certificat (`.pem`).

@@ -13,6 +13,7 @@ summary: 'Vous pouvez remplacer ou restaurer le certificat de serveur utilisé p
 [role="lead"]
 Vous pouvez remplacer ou restaurer le certificat de serveur utilisé pour les connexions client S3 ou Swift vers les nœuds de stockage, le service CLB (Connection Load Balancer) obsolète sur les nœuds de passerelle ou pour charger les noeuds finaux de l'équilibreur. Le certificat de serveur personnalisé de remplacement est spécifique à votre organisation.
 
+.Description de la tâche
 Par défaut, chaque nœud de stockage est doté d'un certificat de serveur X.509 signé par l'autorité de certification de la grille. Ces certificats signés par l'autorité de certification peuvent être remplacés par un seul certificat de serveur personnalisé commun et une clé privée correspondante.
 
 Un seul certificat de serveur personnalisé est utilisé pour tous les nœuds de stockage. Vous devez donc spécifier le certificat comme un certificat générique ou multidomaine si les clients doivent vérifier le nom d'hôte lors de la connexion au noeud final de stockage. Définissez le certificat personnalisé de sorte qu'il corresponde à tous les nœuds de stockage de la grille.

@@ -70,6 +70,7 @@ Après la création d'un compte de locataire Swift, les utilisateurs disposant d
 
 IMPORTANT: Les utilisateurs Swift doivent disposer de l'autorisation d'accès racine pour accéder au gestionnaire de locataires. Toutefois, l'autorisation accès racine ne permet pas aux utilisateurs de s'authentifier auprès de l'API REST Swift pour créer des conteneurs et ingérer des objets. Les utilisateurs doivent disposer de l'autorisation Administrateur Swift pour s'authentifier dans l'API REST de Swift.
 
+.Informations associées
 xref:../admin/index.adoc[Administrer StorageGRID]
 
 xref:../s3/index.adoc[Utilisation de S3]

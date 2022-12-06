@@ -13,7 +13,7 @@ summary: Vous devez installer un jeu de rails pour le contrôleur SG6000-CN dans
 [role="lead"]
 Vous devez installer un jeu de rails pour le contrôleur SG6000-CN dans votre armoire ou rack, puis faire glisser le contrôleur sur les rails.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez passé en revue le document consignes de sécurité inclus dans la boîte et compris les précautions à prendre pour déplacer et installer le matériel.
 * Les instructions sont fournies avec le kit de rails.
 * Vous avez installé le tiroir contrôleur E2860 et ses disques ou le tiroir contrôleur EF570.

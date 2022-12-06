@@ -13,7 +13,7 @@ summary: 'Arrêtez l"appareil de services pour effectuer la maintenance du maté
 [role="lead"]
 Arrêtez l'appareil de services pour effectuer la maintenance du matériel.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez situé physiquement l'appliance de services qui nécessite une maintenance dans le data Center.
 +
 xref:locating-controller-in-data-center.adoc[Localisation du contrôleur dans un data Center]
@@ -21,6 +21,7 @@ xref:locating-controller-in-data-center.adoc[Localisation du contrôleur dans un
 * L'appareil a été xref:placing-appliance-into-maintenance-mode.adoc[passe en mode maintenance].
 
 
+.Description de la tâche
 Pour éviter toute interruption de service, arrêtez l'appliance de services pendant une fenêtre de maintenance planifiée en cas d'interruption de service.
 
 .Étapes

@@ -93,6 +93,7 @@ Lors de la mise à niveau vers StorageGRID 11.6 (c'est-à-dire, même si le syst
 
 Cette erreur se résout une fois la mise à niveau vers 11.6 terminée.
 
+.Solution de contournement
 Pendant la mise à niveau vers la version 11.6, utilisez les outils suivants pour afficher les détails du compartiment ou gérer les compartiments, au lieu d'utiliser le Gestionnaire de locataires :
 
 * Pour effectuer des opérations S3 standard sur un compartiment, utilisez l'API REST S3 ou l'API de gestion des locataires.

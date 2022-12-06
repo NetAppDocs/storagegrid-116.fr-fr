@@ -13,6 +13,7 @@ summary: Retirer le capot du contrôleur pour accéder aux composants internes e
 [role="lead"]
 Retirer le capot du contrôleur pour accéder aux composants internes en vue de leur maintenance.
 
+.Ce dont vous avez besoin
 Retirez le contrôleur de l'armoire ou du rack pour accéder au capot supérieur.
 
 xref:removing-sg6000-cn-controller-from-cabinet-or-rack.adoc[Retirez le contrôleur SG6000-CN de l'armoire ou du rack]
@@ -29,4 +30,5 @@ IMPORTANT: Enroulez l'extrémité du bracelet antistatique autour de votre poign
 
 
 
+.Informations associées
 xref:removing-fibre-channel-hba.adoc[Retirez l'adaptateur HBA Fibre Channel]

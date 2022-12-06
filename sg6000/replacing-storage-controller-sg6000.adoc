@@ -13,7 +13,7 @@ summary: Vous devrez peut-être remplacer un contrôleur E2800 ou EF570 si ce de
 [role="lead"]
 Vous devrez peut-être remplacer un contrôleur E2800 Series ou un contrôleur EF570 si ce dernier ne fonctionne pas de manière optimale ou en cas de défaillance.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous disposez d'un contrôleur de remplacement avec la même référence que le contrôleur que vous remplacez.
 * Vous avez des étiquettes pour identifier chaque câble connecté au contrôleur.
 * Vous avez un bracelet ESD, ou vous avez pris d'autres précautions antistatiques.
@@ -29,6 +29,7 @@ xref:locating-controller-in-data-center.adoc[Localiser le contrôleur dans le da
 
 
 
+.Description de la tâche
 Vous pouvez déterminer si vous avez un contrôleur défectueux de deux manières :
 
 * Il vous est alors dirigé vers le remplacement du contrôleur dans SANtricity System Manager.
@@ -277,7 +278,7 @@ Une HIC distincte est utilisée uniquement pour le contrôleur E2800B. La carte 
 
 NOTE: Les illustrations de cette procédure montrent une HIC 2 ports. La HIC de votre contrôleur peut avoir un nombre différent de ports.
 
-. Si le contrôleur n'a pas d'HIC (E2800A), remplacer le capot du contrôleur. Si le contrôleur possède une HIC (E2800B), passer à l' ,Déplacer la HIC du contrôleur défectueux vers le contrôleur de remplacement.
+. Si le contrôleur n'a pas d'HIC (E2800A), remplacer le capot du contrôleur. Si le contrôleur possède une HIC (E2800B), passer à l' <<move_the_HIC_to_the_replacement_controller,Déplacer la HIC du contrôleur défectueux vers le contrôleur de remplacement>>.
 +
 .. [[Move_the_HIC_to_the_replace_Controller]]si la carte HIC est équipée, déplacez la carte HIC du contrôleur défectueux vers le contrôleur de remplacement.
 .. Supprimer tout SFP de la HIC.
@@ -395,4 +396,5 @@ NOTE: Si le contrôleur d'origine n'a pas utilisé DHCP pour l'adresse IP, le no
 
 Après le remplacement de la pièce, renvoyez la pièce défectueuse à NetApp, en suivant les instructions RMA (retour de matériel) livrées avec le kit. Voir la https://mysupport.netapp.com/site/info/rma["Amp de renvoi de pièce ; remplacements"^] pour plus d'informations.
 
+.Informations associées
 http://mysupport.netapp.com/info/web/ECMP1658252.html["Site de documentation sur les systèmes NetApp E-Series"^]

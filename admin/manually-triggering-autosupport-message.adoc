@@ -13,7 +13,7 @@ summary: Pour aider le support technique à résoudre les problèmes liés à vo
 [role="lead"]
 Pour aider le support technique à résoudre les problèmes liés à votre système StorageGRID, vous pouvez déclencher manuellement un message AutoSupport à envoyer.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez de l'autorisation d'accès racine ou d'une autre autorisation de configuration de grille.
 

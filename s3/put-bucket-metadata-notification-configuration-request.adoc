@@ -308,4 +308,5 @@ Toutes les balises d'objet définies pour l'objet, en tant que paires clé-valeu
 |===
 *Remarque :* pour les balises et les métadonnées d'utilisateur, StorageGRID transmet les dates et les chiffres à Elasticsearch sous forme de chaînes ou de notifications d'événement S3. Pour configurer Elasticsearch afin d'interpréter ces chaînes comme des dates ou des chiffres, suivez les instructions Elasticsearch pour un mappage dynamique des champs et un mappage des formats de date. Vous devez activer les mappages de champs dynamiques sur l'index avant de configurer le service d'intégration de la recherche. Une fois qu'un document est indexé, vous ne pouvez pas modifier les types de champ du document dans l'index.
 
+.Informations associées
 xref:../tenant/index.adoc[Utilisez le compte du locataire]

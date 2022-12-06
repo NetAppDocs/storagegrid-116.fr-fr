@@ -48,4 +48,5 @@ Date: _date_
 Authorization: _authorization string_
 Host: _host_
 ----
+.Informations associées
 xref:../tenant/index.adoc[Utilisez le compte du locataire]

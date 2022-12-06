@@ -45,4 +45,5 @@ Description de la topologie du système StorageGRID avant la mise hors service
 Le cas échéant, procurez-vous toute documentation décrivant la topologie actuelle du système.
 
 |===
+.Informations associées
 xref:../admin/web-browser-requirements.adoc[Navigateurs Web pris en charge]

@@ -13,12 +13,13 @@ summary: 'Pour créer un profil de code d"effacement, vous associez un pool de s
 [role="lead"]
 Pour créer un profil de code d'effacement, vous associez un pool de stockage contenant des nœuds de stockage à un schéma de code d'effacement. Cette association détermine le nombre de données et de fragments de parité créés et l'endroit où le système distribue ces fragments.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 * Vous avez créé un pool de stockage qui comprend exactement un site ou un pool de stockage comprenant trois sites ou plus. Aucun schéma de code d'effacement n'est disponible pour un pool de stockage possédant que deux sites seulement.
 
 
+.Description de la tâche
 Les pools de stockage utilisés dans les profils de code d'effacement doivent inclure exactement un ou trois sites ou plus. Si vous souhaitez fournir une redondance de site, le pool de stockage doit avoir au moins trois sites.
 
 

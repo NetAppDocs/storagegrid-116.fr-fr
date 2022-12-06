@@ -13,6 +13,7 @@ summary: 'Si vous avez installé des tiroirs d"extension pour le SG6060 ou le SG
 [role="lead"]
 Si vous avez installé des tiroirs d'extension pour le SG6060 ou le SG6060X et qu'ils n'apparaissent pas dans le programme d'installation de l'appliance StorageGRID, vérifiez que les tiroirs ont été entièrement installés et sous tension.
 
+.Description de la tâche
 Vous pouvez vérifier que les tiroirs d'extension sont connectés à l'appliance en consultant les informations suivantes dans le programme d'installation de l'appliance StorageGRID :
 
 * La page *Home* contient un message sur les tiroirs d'extension.

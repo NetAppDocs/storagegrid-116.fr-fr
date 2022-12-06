@@ -16,6 +16,7 @@ Après avoir restaurez un nœud d'archivage qui cible le cloud via l'API S3, vou
 
 NOTE: Si votre nœud d'archivage se connecte au stockage externe via le middleware TSM, le nœud se réinitialise automatiquement et vous n'avez pas besoin de reconfigurer.
 
+.Ce dont vous avez besoin
 Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 
 .Étapes

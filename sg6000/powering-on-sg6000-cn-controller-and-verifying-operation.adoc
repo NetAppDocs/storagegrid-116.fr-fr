@@ -13,7 +13,7 @@ summary: Mettez le contrôleur sous tension après la fin de la maintenance.
 [role="lead"]
 Mettez le contrôleur sous tension après la fin de la maintenance.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez installé le contrôleur dans une armoire ou un rack et connecté les câbles de données et d'alimentation.
 +
 xref:reinstalling-sg6000-cn-controller-into-cabinet-or-rack.adoc[Réinstallez le contrôleur SG6000-CN dans l'armoire ou le rack]
@@ -108,6 +108,7 @@ CAUTION: Ne mettez pas un autre nœud d'appliance hors ligne à moins que cette 
 . Facultatif : installez le cadre avant, si l'un d'eux a été retiré.
 
 
+.Informations associées
 xref:viewing-status-indicators-and-buttons-on-sg6000-cn-controller.adoc[Afficher les indicateurs d'état et les boutons sur le contrôleur SG6000-CN]
 
 xref:viewing-boot-up-status-codes-for-sg6000-storage-controllers.adoc[Afficher les codes d'état de démarrage des contrôleurs de stockage SG6000]

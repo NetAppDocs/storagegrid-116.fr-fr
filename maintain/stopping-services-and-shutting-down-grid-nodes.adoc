@@ -13,6 +13,7 @@ summary: Avant de mettre un système StorageGRID hors tension, vous devez arrêt
 [role="lead"]
 Avant de mettre un système StorageGRID hors tension, vous devez arrêter tous les services exécutés sur chaque nœud de grid, puis arrêter toutes les machines virtuelles VMware, les moteurs de conteneurs et les appliances StorageGRID.
 
+.Description de la tâche
 Arrêtez d'abord les services sur les nœuds d'administration et les nœuds de passerelle d'API, puis arrêtez les services sur les nœuds de stockage.
 
 Cette approche vous permet d'utiliser le nœud d'administration principal pour surveiller l'état des autres nœuds de la grille aussi longtemps que possible.
@@ -50,7 +51,7 @@ Vous pouvez arrêter les services sur ces nœuds dans n'importe quel ordre.
 
 NOTE: Si vous émettez le `service servermanager stop` Commande pour arrêter les services d'un nœud de stockage d'appliance, vous devez mettre l'appliance hors tension puis sous tension afin de redémarrer le nœud.
 
-. Pour le nœud d'administration principal, répétez les étapes à ,connectez-vous au nœud et ,arrêt de tous les services du nœud.
+. Pour le nœud d'administration principal, répétez les étapes à <<log_in_to_gn,connectez-vous au nœud>> et <<stop_all_services,arrêt de tous les services du nœud>>.
 . Pour les nœuds qui s'exécutent sur des hôtes Linux :
 +
 .. Connectez-vous au système d'exploitation hôte.
@@ -99,6 +100,7 @@ La grille StorageGRID est maintenant arrêtée.
 
 
 
+.Informations associées
 xref:../sg100-1000/index.adoc[Appareils de services SG100 et SG1000]
 
 xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]

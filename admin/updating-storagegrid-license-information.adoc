@@ -13,7 +13,7 @@ summary: Vous devez mettre à jour les informations de licence de votre système
 [role="lead"]
 Vous devez mettre à jour les informations de licence de votre système StorageGRID à tout moment que les conditions de votre modification de licence changent. Par exemple, vous devez mettre à jour les informations de licence si vous achetez de la capacité de stockage supplémentaire pour votre grid.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez un nouveau fichier de licence à appliquer à votre système StorageGRID.
 * Vous disposez d'autorisations d'accès spécifiques.
 * Vous avez la phrase secrète pour le provisionnement.

@@ -44,4 +44,5 @@ NOTE: Si nécessaire pour correspondre à la version de la grille, vous pouvez u
 . Vous appliquez ensuite le correctif 11._A.B.y_ au nœud d'administration principal.
 
 
+.Informations associées
 xref:configuring-replacement-primary-admin-node.adoc[Configurez le nœud d'administration principal de remplacement]

@@ -13,12 +13,13 @@ summary: 'Vous devez simuler une stratégie proposée sur les objets de test ava
 [role="lead"]
 Vous devez simuler une stratégie proposée sur les objets de test avant d'activer la stratégie et de l'appliquer à vos données de production. La fenêtre de simulation fournit un environnement autonome qui permet de tester les stratégies avant leur activation et leur application aux données de l'environnement de production.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 * Un compartiment S3, une clé d'objet ou le conteneur Swift, ou un nom d'objet pour chaque objet que vous souhaitez tester, vous avez déjà ingéré ces objets.
 
 
+.Description de la tâche
 Vous devez sélectionner soigneusement les objets que vous souhaitez tester pour la stratégie proposée. Pour simuler une stratégie en profondeur, vous devez tester au moins un objet pour chaque filtre de chaque règle.
 
 Par exemple, si une règle inclut une règle permettant de faire correspondre des objets dans le compartiment A et une autre règle pour faire correspondre des objets dans le compartiment B, vous devez sélectionner au moins un objet du compartiment A et un objet du compartiment B pour tester la règle en profondeur. Vous devez également sélectionner au moins un objet d'un autre compartiment pour tester la règle par défaut.

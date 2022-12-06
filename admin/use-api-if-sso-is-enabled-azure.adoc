@@ -19,11 +19,12 @@ Si vous l'avez xref:../admin/configuring-sso.adoc[Authentification unique (SSO) 
 
 Ces instructions s'appliquent si vous utilisez Azure comme fournisseur d'identité SSO
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous connaissez l'adresse e-mail SSO et le mot de passe d'un utilisateur fédéré appartenant à un groupe d'utilisateurs StorageGRID.
 * Pour accéder à l'API de gestion des locataires, vous connaissez l'ID du compte locataire.
 
 
+.Description de la tâche
 Pour obtenir un jeton d'authentification, vous pouvez utiliser les exemples de scripts suivants :
 
 * Le `storagegrid-ssoauth-azure.py` Script Python

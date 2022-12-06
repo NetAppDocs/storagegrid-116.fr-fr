@@ -49,6 +49,7 @@ N'appuyez pas de nouveau sur le bouton d'alimentation pendant la mise sous tensi
 . Si vous avez déposé le cadre avant, fixez-le au contrôleur SG6000-CN.
 
 
+.Informations associées
 xref:viewing-boot-up-status-codes-for-sg6000-storage-controllers.adoc[Afficher les codes d'état de démarrage des contrôleurs de stockage SG6000]
 
 xref:viewing-status-indicators-and-buttons-on-sg6000-cn-controller.adoc[Afficher les indicateurs d'état et les boutons sur le contrôleur SG6000-CN]

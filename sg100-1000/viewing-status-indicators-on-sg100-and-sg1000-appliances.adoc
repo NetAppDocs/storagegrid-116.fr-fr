@@ -114,6 +114,7 @@ Entraînement actif
 Bleu (clignotant) : accès au lecteur
 
 |===
+.Informations associées
 xref:troubleshooting-hardware-installation-sg100-and-sg1000.adoc[Dépannage de l'installation du matériel (SG100 et SG1000)]
 
 xref:configuring-bmc-interface-sg1000.adoc[Configuration de l'interface BMC (SG100 et SG1000)]

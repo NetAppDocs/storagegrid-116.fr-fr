@@ -43,6 +43,7 @@ Avant d'installer l'appliance, assurez-vous que le site et l'armoire ou le rack 
 . Choisissez où vous allez installer l'appareil.
 
 
+.Informations associées
 https://hwu.netapp.com["NetApp Hardware Universe"^]
 
 https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^]

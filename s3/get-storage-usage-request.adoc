@@ -71,4 +71,5 @@ Content-Type: application/xml
 
 Chaque version d'objet stockée contribuera à la `ObjectCount` et `DataBytes` valeurs dans la réponse. Les marqueurs de suppression ne sont pas ajoutés au `ObjectCount` total.
 
+.Informations associées
 xref:consistency-controls.adoc[Contrôles de cohérence]

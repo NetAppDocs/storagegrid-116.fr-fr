@@ -13,11 +13,12 @@ summary: 'Si vous utilisez un équilibreur de charge pour gérer les connexions 
 [role="lead"]
 Si vous utilisez un équilibreur de charge pour gérer les connexions client à StorageGRID, vous devez surveiller les opérations d'équilibrage de charge après avoir configuré le système initialement et après avoir effectué des modifications de configuration ou effectué une extension.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer d'autorisations d'accès spécifiques.
 
 
+.Description de la tâche
 Vous pouvez utiliser le service Load Balancer sur les nœuds d'administration ou les nœuds de passerelle, un équilibreur de charge tiers externe ou le service CLB sur les nœuds de passerelle pour distribuer les requêtes client sur plusieurs nœuds de stockage.
 
 
@@ -73,6 +74,7 @@ Le nombre de sessions doit être approximativement égal sur tous les nœuds de 
 
 
 
+.Informations associées
 xref:../admin/index.adoc[Administrer StorageGRID]
 
 xref:viewing-load-balancer-tab.adoc[Affichez l'onglet Load Balancer]

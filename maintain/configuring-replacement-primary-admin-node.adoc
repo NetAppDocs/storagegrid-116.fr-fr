@@ -13,7 +13,7 @@ summary: 'Le nœud de remplacement doit être configuré en tant que nœud d"adm
 [role="lead"]
 Le nœud de remplacement doit être configuré en tant que nœud d'administration principal de votre système StorageGRID.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Pour les nœuds d'administration primaires hébergés sur des machines virtuelles, la machine virtuelle doit être déployée, mise sous tension et initialisée.
 * Pour les nœuds d'administration primaires hébergés sur une appliance de services, vous avez remplacé l'appliance et installé le logiciel. Consultez le guide d'installation de votre appareil.
 +
@@ -62,6 +62,7 @@ NOTE: Pour configurer une confiance de fournisseur de confiance, reportez-vous a
 
 
 
+.Informations associées
 xref:../admin/index.adoc[Administrer StorageGRID]
 
 xref:storagegrid-hotfix-procedure.adoc[Procédure de correctif StorageGRID]

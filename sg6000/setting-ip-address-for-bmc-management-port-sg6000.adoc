@@ -13,7 +13,7 @@ summary: 'Avant d"accéder à l"interface BMC, vous devez configurer l"adresse I
 [role="lead"]
 Avant d'accéder à l'interface BMC, vous devez configurer l'adresse IP du port de gestion BMC sur le contrôleur SG6000-CN.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Le client de gestion utilise un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous utilisez n'importe quel client de gestion pouvant se connecter à un réseau StorageGRID.
 * Le port de gestion BMC est connecté au réseau de gestion que vous souhaitez utiliser.
@@ -22,6 +22,7 @@ image::../media/sg6000_cn_bmc_management_port.gif[Port de gestion BMC sur le con
 
 
 
+.Description de la tâche
 Pour des raisons de prise en charge, le port de gestion BMC permet un accès matériel de faible niveau.
 
 

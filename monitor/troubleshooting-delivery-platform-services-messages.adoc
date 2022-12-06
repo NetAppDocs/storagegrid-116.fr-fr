@@ -14,6 +14,7 @@ summary: 'L"alarme Total Events (SMTT) est déclenchée dans Grid Manager si un 
 [role="lead"]
 L'alarme Total Events (SMTT) est déclenchée dans Grid Manager si un message de service de plate-forme est envoyé à une destination qui ne peut pas accepter les données.
 
+.Description de la tâche
 Par exemple, un téléchargement partitionné S3 peut réussir même si le message de réplication ou de notification associé ne peut pas être transmis au noeud final configuré. Ou bien, un message pour la réplication CloudMirror peut ne pas être livré si les métadonnées sont trop longues.
 
 L'alarme SMTT contient un message du dernier événement qui indique : `Failed to publish notifications for _bucket-name object key_` pour le dernier objet dont la notification a échoué.

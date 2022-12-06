@@ -13,12 +13,13 @@ summary: 'Après avoir ajouté un nouveau nœud d"administration, vous pouvez é
 [role="lead"]
 Après avoir ajouté un nouveau nœud d'administration, vous pouvez éventuellement copier les metrics historiques gérés par Prometheus du nœud d'administration principal vers le nouveau nœud d'administration. La copie des metrics garantit la cohérence des mesures historiques entre les nœuds d'administration.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Le nouveau nœud d'administration est installé et en cours d'exécution.
 * Vous avez le `Passwords.txt` fichier.
 * Vous avez la phrase secrète pour le provisionnement.
 
 
+.Description de la tâche
 Lorsque vous ajoutez un nœud d'administration, le processus d'installation logicielle crée une nouvelle base de données Prometheus. Vous pouvez conserver la cohérence des metrics historiques entre les nœuds en copiant la base de données Prometheus du nœud d'administration principal (_source Admin Node_) vers le nouveau nœud d'administration.
 
 

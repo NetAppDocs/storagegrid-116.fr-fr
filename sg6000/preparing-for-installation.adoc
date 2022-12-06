@@ -13,4 +13,5 @@ summary: 'La préparation de l"installation d"une appliance StorageGRID implique
 [role="lead"]
 La préparation de l'installation d'une appliance StorageGRID implique de préparer le site et d'obtenir l'ensemble du matériel, des câbles et des outils requis. Vous devez également collecter les adresses IP et les informations réseau.
 
+.Informations associées
 xref:../admin/web-browser-requirements.adoc[Navigateurs Web pris en charge]

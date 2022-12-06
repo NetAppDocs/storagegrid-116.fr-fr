@@ -35,6 +35,7 @@ Par défaut, StorageGRID fournit une cohérence de lecture après écriture pour
 
 StorageGRID vous permet également de contrôler la cohérence par conteneur. Vous pouvez modifier le contrôle de cohérence pour assurer une reprise entre la disponibilité des objets et la cohérence de ces objets sur plusieurs nœuds et sites de stockage, selon les besoins de votre application.
 
+.Informations associées
 xref:../ilm/index.adoc[Gestion des objets avec ILM]
 
 xref:get-container-consistency-request.adoc[DEMANDE DE cohérence du conteneur]

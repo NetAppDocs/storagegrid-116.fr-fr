@@ -13,11 +13,12 @@ summary: 'Le port de gestion 1 de chaque contrôleur de stockage connecte l"appl
 [role="lead"]
 Le port de gestion 1 de chaque contrôleur de stockage connecte l'appliance au réseau de gestion pour SANtricity System Manager. Si vous ne pouvez pas accéder à SANtricity System Manager à partir du programme d'installation de l'appliance StorageGRID, vous devez définir une adresse IP statique pour chaque contrôleur de stockage afin d'éviter de perdre votre connexion de gestion au matériel et le firmware du contrôleur dans le tiroir contrôleur.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous utilisez n'importe quel client de gestion pouvant vous connecter au réseau d'administration StorageGRID ou vous disposez d'un ordinateur portable de service.
 * L'ordinateur portable client ou de service dispose d'un navigateur Web pris en charge.
 
 
+.Description de la tâche
 Les adresses attribuées par DHCP peuvent être modifiées à tout moment. Attribuez des adresses IP statiques aux contrôleurs pour garantir une accessibilité cohérente.
 
 

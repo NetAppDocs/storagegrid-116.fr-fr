@@ -13,7 +13,7 @@ summary: 'Le contrôleur SG6000-CN dispose de deux blocs d"alimentation pour la 
 [role="lead"]
 Le contrôleur SG6000-CN dispose de deux blocs d'alimentation pour la redondance. En cas de panne de l'un des blocs d'alimentation, vous devez le remplacer dès que possible afin de s'assurer que le contrôleur de calcul est alimenté en redondance. Les deux blocs d'alimentation qui fonctionnent au niveau du contrôleur doivent être du même modèle et de la même puissance.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez déterminé l'emplacement physique dans le data Center du contrôleur avec l'alimentation à remplacer.
 +
 xref:locating-controller-in-data-center.adoc[Localisation du contrôleur dans un data Center]
@@ -31,12 +31,13 @@ xref:locating-controller-in-data-center.adoc[Localisation du contrôleur dans un
 
 
 
+.Description de la tâche
 La figure montre les deux blocs d'alimentation du contrôleur SG6000-CN, accessibles à l'arrière du contrôleur. Utilisez cette procédure pour remplacer l'une des alimentations ou les deux. Si vous remplacez les deux blocs d'alimentation, vous devez d'abord effectuer un arrêt contrôlé de l'appareil.
 
 image::../media/sg6000_cn_power_supplies.gif[Arrière du SG6000-CN avec deux blocs d'alimentation]
 
 .Étapes
-. Si vous ne remplacez qu'une seule alimentation, vous n'avez pas besoin d'éteindre l'appareil. Accédez au ,Débranchez le cordon d'alimentation étape. Si vous remplacez les deux blocs d'alimentation en même temps, procédez comme suit avant de débrancher les cordons d'alimentation :
+. Si vous ne remplacez qu'une seule alimentation, vous n'avez pas besoin d'éteindre l'appareil. Accédez au <<Unplug_the_power_cord,Débranchez le cordon d'alimentation>> étape. Si vous remplacez les deux blocs d'alimentation en même temps, procédez comme suit avant de débrancher les cordons d'alimentation :
 +
 .. xref:placing-appliance-into-maintenance-mode.adoc[Mettez l'appareil en mode de maintenance].
 .. xref:shutting-down-sg6000-cn-controller.adoc[Arrêtez l'appareil].

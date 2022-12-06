@@ -13,10 +13,11 @@ summary: 'Vous devez contrôler l"espace total utilisable pour chaque nœud de s
 [role="lead"]
 Vous devez contrôler l'espace total utilisable pour chaque nœud de stockage pour vous assurer que le nœud dispose d'un espace suffisant pour les nouvelles données d'objet.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 
 
+.Description de la tâche
 L'espace utilisable correspond à la quantité d'espace de stockage disponible pour stocker des objets. L'espace total utilisable d'un nœud de stockage est calculé en ajoutant ensemble l'espace disponible sur tous les magasins d'objets du nœud.
 
 image::../media/calculating_watermarks.gif[Dessin conceptuel de l'espace utilisable total]
@@ -66,6 +67,7 @@ L'alerte *stockage de données d'objet bas* est déclenchée lorsque l'espace re
 
 
 
+.Informations associées
 xref:../admin/index.adoc[Administrer StorageGRID]
 
 xref:troubleshooting-storagegrid-system.adoc[Dépanner l'alerte de stockage de données d'objet faible]

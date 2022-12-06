@@ -26,6 +26,7 @@ Vous devez examiner immédiatement toutes les alertes *objets perdus* pour déte
 
 Dans le cas où les données d'objet sans copie sont perdues, il n'y a pas de solution de récupération. Cependant, vous devez réinitialiser le compteur d'objets perdus pour empêcher les objets perdus connus de masquer les nouveaux objets perdus.
 
+.Informations associées
 xref:investigating-lost-objects.adoc[Rechercher les objets perdus]
 
 xref:resetting-lost-and-missing-object-counts.adoc[Réinitialiser le nombre d'objets perdus et manquants]

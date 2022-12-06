@@ -13,7 +13,7 @@ summary: 'Vous devez créer au moins un noeud final du type correct avant d"acti
 [role="lead"]
 Vous devez créer au moins un noeud final du type correct avant d'activer un service de plate-forme.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Gestionnaire de locataires à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Les services de plateforme doivent être activés pour votre compte de locataire par un administrateur StorageGRID.
 * Vous devez appartenir à un groupe d'utilisateurs possédant l'autorisation gérer les noeuds finaux.
@@ -211,6 +211,7 @@ NOTE: La création de point final échoue si les services de plate-forme ne sont
 
 Après avoir configuré un noeud final, vous pouvez utiliser son URN pour configurer un service de plate-forme.
 
+.Informations associées
 xref:specifying-urn-for-platform-services-endpoint.adoc[Spécifiez l'URN du terminal des services de plateforme]
 
 xref:configuring-cloudmirror-replication.adoc[Configurez la réplication CloudMirror]

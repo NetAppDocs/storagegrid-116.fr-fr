@@ -15,11 +15,12 @@ Les messages d'audit et les journaux enregistrent les activités du système et 
 
 Pour plus d'informations sur les messages d'audit, reportez-vous à la section xref:../audit/index.adoc[Examiner les journaux d'audit].
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès à la racine ou à la maintenance.
 
 
+.Description de la tâche
 Tous les nœuds StorageGRID génèrent des messages d'audit et des journaux pour suivre l'activité et les événements du système. Par défaut, les informations d'audit sont envoyées au journal d'audit des nœuds d'administration. Vous pouvez régler les niveaux d'audit pour augmenter ou diminuer le type et le nombre de messages d'audit enregistrés dans le journal d'audit. Vous pouvez également configurer les informations d'audit à envoyer à un serveur syslog distant ou à stocker temporairement sur les nœuds d'origine pour une collecte manuelle.
 
 
@@ -141,7 +142,7 @@ Une bannière verte indique que votre configuration a été enregistrée avec su
 Vous pouvez configurer un serveur syslog externe si vous souhaitez enregistrer les informations d'audit à distance.
 
 * Pour enregistrer les informations d'audit sur un serveur syslog externe, accédez à xref:../monitor/configuring-syslog-server.adoc[Configurer un serveur syslog externe].
-* Si vous n'utilisez pas de serveur syslog externe, accédez à ,Sélectionnez les destinations des informations d'audit.
+* Si vous n'utilisez pas de serveur syslog externe, accédez à <<Select-audit-information-destinations,Sélectionnez les destinations des informations d'audit>>.
 
 
 
@@ -214,6 +215,7 @@ Les nouveaux journaux sont envoyés aux destinations que vous avez sélectionné
 
 
 
+.Informations associées
 xref:../monitor/considerations-for-external-syslog-server.adoc[Considérations relatives au serveur syslog externe]
 
 xref:../admin/index.adoc[Administrer StorageGRID]

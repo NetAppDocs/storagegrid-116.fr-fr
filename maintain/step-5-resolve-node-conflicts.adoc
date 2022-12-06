@@ -100,6 +100,7 @@ NOTE: Le bouton *Previous* reste désactivé jusqu'à ce que la mise hors servic
 
 
 
+.Informations associées
 xref:../monitor/index.adoc[Surveiller et résoudre les problèmes]
 
 xref:grid-node-procedures.adoc[Procédures des nœuds de la grille]

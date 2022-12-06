@@ -4,6 +4,7 @@
 
 Vous pouvez désactiver temporairement ou définitivement la fédération des identités pour les groupes et les utilisateurs. Lorsque la fédération des identités est désactivée, il n'y a aucune communication entre StorageGRID et le référentiel d'identité. Cependant, tous les paramètres que vous avez configurés sont conservés, ce qui vous permet de réactiver facilement la fédération d'identités à l'avenir.
 
+.Description de la tâche
 Avant de désactiver la fédération des identités, vous devez prendre connaissance des points suivants :
 
 * Les utilisateurs fédérés ne pourront pas se connecter.

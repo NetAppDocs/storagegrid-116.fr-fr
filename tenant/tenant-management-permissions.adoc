@@ -78,6 +78,7 @@ Locataires S3 uniquement. Permet aux utilisateurs d'utiliser le Gestionnaire de 
 Les utilisateurs qui ne disposent pas de cette autorisation ne voient pas l'option de menu *Platform services Endpoints*.
 
 |===
+.Informations associées
 xref:../s3/index.adoc[Utilisation de S3]
 
 xref:../swift/index.adoc[Utiliser Swift]

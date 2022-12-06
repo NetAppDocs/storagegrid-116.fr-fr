@@ -13,6 +13,7 @@ summary: Vous devrez peut-être démarrer un service qui a été arrêté, ou vo
 [role="lead"]
 Vous devrez peut-être démarrer un service qui a été arrêté, ou vous devrez peut-être arrêter et redémarrer un service.
 
+.Ce dont vous avez besoin
 Vous devez avoir le `Passwords.txt` fichier.
 
 .Étapes

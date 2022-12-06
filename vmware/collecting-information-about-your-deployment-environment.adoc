@@ -97,6 +97,7 @@ Vous devez collecter des informations pour configurer votre grille :
 * Adresses IP du serveur DNS (Domain Name System)
 
 
+.Informations associées
 xref:how-grid-nodes-discover-primary-admin-node.adoc[Mode de détection des nœuds du grid sur le nœud d'administration principal]
 
 xref:storage-and-performance-requirements.adoc[Les besoins en matière de stockage et de performances]

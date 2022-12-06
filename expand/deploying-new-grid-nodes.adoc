@@ -35,7 +35,7 @@ Lorsque vous déployez le nœud, vous pouvez remappage les ports de nœud ou aug
 
 Vous pouvez déployer des nœuds grid sur de nouveaux hôtes Linux ou sur des hôtes Linux existants. Si vous avez besoin d'hôtes Linux supplémentaires pour prendre en charge les exigences en matière de processeur, de RAM et de stockage des nœuds StorageGRID que vous souhaitez ajouter à votre grille, vous devez les préparer de la même manière que lorsque vous les avez installés pour la première fois. Vous déployez ensuite les nœuds d'extension de la même manière que vous avez déployé des nœuds grid lors de l'installation.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous disposez des instructions d'installation de StorageGRID pour votre version de Linux, et vous avez examiné la configuration matérielle et la configuration de stockage requise.
 +
 ** xref:../rhel/index.adoc[Installez Red Hat Enterprise Linux ou CentOS]
@@ -59,6 +59,7 @@ IMPORTANT: Dans un déploiement de production, n'exécutez pas plus d'un nœud d
 . Si vous ajoutez des nœuds à un hôte Linux existant, démarrez les nouveaux nœuds à l'aide de l'interface de ligne de commande du service hôte StorageGRID :``sudo storagegrid node start [<node name\>]``
 
 
+.Une fois que vous avez terminé
 Après le déploiement de tous les nouveaux nœuds de la grille, c'est possible xref:performing-expansion.adoc[réalisation de l'extension].
 
 
@@ -67,7 +68,7 @@ Après le déploiement de tous les nouveaux nœuds de la grille, c'est possible 
 
 Pour installer le logiciel StorageGRID sur un nœud d'appliance, utilisez le programme d'installation de l'appliance StorageGRID, qui est inclus sur l'appliance. Dans une extension, chaque appliance de stockage fonctionne comme un seul nœud de stockage, et chaque appliance de services fonctionne comme un seul nœud de passerelle ou un nœud d'administration non primaire. Tout appareil peut se connecter au réseau Grid, au réseau Admin et au réseau client.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * L'appliance a été installée dans un rack ou une armoire, connectée à vos réseaux et sous tension.
 * Vous avez utilisé le programme d'installation de l'appliance StorageGRID pour effectuer toutes les étapes de configuration du matériel dans les instructions d'installation et de maintenance de l'appliance.
 +
@@ -86,6 +87,7 @@ La configuration du matériel de l'appliance comprend les étapes requises pour 
 * Vous connaissez l'une des adresses IP attribuées au contrôleur de calcul de l'appliance. Vous pouvez utiliser l'adresse IP de n'importe quel réseau StorageGRID connecté.
 
 
+.Description de la tâche
 Le processus d'installation de StorageGRID sur un nœud d'appliance comprend les phases suivantes :
 
 * Vous spécifiez ou confirmez l'adresse IP du nœud d'administration principal et le nom du nœud d'appliance.

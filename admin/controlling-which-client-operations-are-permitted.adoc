@@ -13,11 +13,12 @@ summary: 'Vous pouvez sélectionner l"option empêcher la grille de modification
 [role="lead"]
 Vous pouvez sélectionner l'option empêcher la grille de modification du client pour refuser des opérations client HTTP spécifiques.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 
 
+.Description de la tâche
 Empêcher la modification du client est un paramètre à l'échelle du système. Lorsque l'option empêcher la modification du client est sélectionnée, les demandes suivantes sont refusées :
 
 * *API REST S3*

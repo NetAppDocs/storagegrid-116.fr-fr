@@ -38,6 +38,7 @@ Après la création d'un compte de locataire Swift, les utilisateurs disposant d
 
 IMPORTANT: Les utilisateurs Swift doivent disposer de l'autorisation d'accès racine pour accéder au gestionnaire de locataires. Toutefois, l'autorisation accès racine ne permet pas aux utilisateurs de s'authentifier auprès de l'API REST Swift pour créer des conteneurs et ingérer des objets. Les utilisateurs doivent disposer de l'autorisation Administrateur Swift pour s'authentifier dans l'API REST de Swift.
 
+.Informations associées
 xref:../admin/index.adoc[Administrer StorageGRID]
 
 xref:../tenant/index.adoc[Utilisez le compte du locataire]
@@ -213,6 +214,7 @@ NOTE: Le service CLB est obsolète.
 
 Si l'option *Activer connexion HTTP* est sélectionnée, les clients doivent utiliser des ports HTTP différents de ceux qu'ils utilisent pour HTTPS. Voir les instructions d'administration de StorageGRID.
 
+.Informations associées
 xref:../admin/index.adoc[Administrer StorageGRID]
 
 
@@ -221,7 +223,7 @@ xref:../admin/index.adoc[Administrer StorageGRID]
 
 Vous pouvez utiliser l'interface de ligne de commandes Swift pour tester votre connexion au système StorageGRID et vérifier que vous pouvez lire et écrire des objets sur le système.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez avoir téléchargé et installé python-swaftclient, le client de ligne de commande Swift.
 +
 https://platform.swiftstack.com/docs/integration/python-swiftclient.html["SwiftStack: python-swftclient"^]
@@ -229,6 +231,7 @@ https://platform.swiftstack.com/docs/integration/python-swiftclient.html["SwiftS
 * Vous devez disposer d'un compte de locataire Swift dans le système StorageGRID.
 
 
+.Description de la tâche
 Si vous n'avez pas configuré la sécurité, vous devez ajouter le `--insecure` marquer pour chacune de ces commandes.
 
 .Étapes
@@ -289,6 +292,7 @@ delete test_container
 ----
 
 
+.Informations associées
 xref:configuring-tenant-accounts-and-connections.adoc[Créez et configurez des comptes de locataire Swift]
 
 xref:configuring-security-for-rest-api.adoc[Configuration de la sécurité pour l'API REST]

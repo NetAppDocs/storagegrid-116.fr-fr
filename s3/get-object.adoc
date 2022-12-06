@@ -125,6 +125,7 @@ Dans ces cas :
 * Une requête GET Object suivante peut revenir `403 Forbidden`.
 
 
+.Informations associées
 xref:using-server-side-encryption.adoc[Utilisez le cryptage côté serveur]
 
 xref:../ilm/index.adoc[Gestion des objets avec ILM]

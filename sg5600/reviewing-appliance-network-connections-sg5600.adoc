@@ -113,6 +113,7 @@ Quatre ports réseau sur le contrôleur E5600SG
 Connectez-vous au réseau Grid et au réseau client pour StorageGRID. Reportez-vous à la section « connexions de ports 10 GbE pour le contrôleur E5600SG ».
 
 |===
+.Informations associées
 xref:port-bond-modes-for-e5600sg-controller-ports.adoc[Modes de liaison des ports pour les ports du contrôleur E5600SG]
 
 xref:gathering-installation-information-sg5600.adoc[Collecte des informations sur l'installation (SG5600)]

@@ -13,14 +13,16 @@ summary: Vous pouvez afficher les informations relatives aux licences de votre s
 [role="lead"]
 Vous pouvez afficher les informations relatives aux licences de votre système StorageGRID, comme la capacité de stockage maximale de votre réseau, si nécessaire.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 
 
+.Description de la tâche
 En cas de problème avec la licence logicielle de ce système StorageGRID, le panneau intégrité du tableau de bord inclut une icône d'état de la licence et un lien *Licence*. Le numéro indique le nombre de problèmes liés à la licence.
 
 image::../media/dashboard_health_panel_license_status.png[État de la licence du panneau d'intégrité du tableau de bord]
 
+.Étape
 Pour afficher la licence, effectuez l'une des opérations suivantes :
 
 * Dans le panneau Santé du tableau de bord, sélectionnez l'icône d'état de la licence ou le lien *Licence*. Ce lien apparaît uniquement en cas de problème avec la licence.

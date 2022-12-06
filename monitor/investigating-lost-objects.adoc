@@ -14,12 +14,13 @@ summary: 'Lorsque l"alerte *objets perdus* est déclenchée, vous devez examiner
 [role="lead"]
 Lorsque l'alerte *objets perdus* est déclenchée, vous devez examiner immédiatement. Collectez des informations sur les objets affectés et contactez le support technique.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer d'autorisations d'accès spécifiques.
 * Vous devez avoir le `Passwords.txt` fichier.
 
 
+.Description de la tâche
 L'alerte *objets perdus* indique que StorageGRID estime qu'il n'y a pas de copie d'un objet dans la grille. Les données ont peut-être été définitivement perdues.
 
 Recherchez immédiatement les alertes relatives à la perte d'objet. Vous devrez peut-être prendre des mesures pour éviter d'autres pertes de données. Dans certains cas, vous pourrez peut-être restaurer un objet perdu si vous prenez une action d'invite.
@@ -196,4 +197,5 @@ L'assistance technique peut vous demander si une procédure de restauration du s
 
 
 
+.Informations associées
 xref:../audit/index.adoc[Examiner les journaux d'audit]

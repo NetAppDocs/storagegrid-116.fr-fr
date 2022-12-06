@@ -13,6 +13,7 @@ summary: 'Si un correctif ou une nouvelle version du logiciel StorageGRID est di
 [role="lead"]
 Si un correctif ou une nouvelle version du logiciel StorageGRID est disponible, vous devez déterminer si la mise à jour est adaptée à votre système et l'installer si nécessaire.
 
+.Description de la tâche
 Les correctifs StorageGRID contiennent des modifications logicielles qui sont disponibles en dehors d'une version de fonctionnalité ou de correctif. Les mêmes modifications seront incluses dans une prochaine version.
 
 .Étapes

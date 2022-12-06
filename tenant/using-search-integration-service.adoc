@@ -25,6 +25,7 @@ Voir la xref:../s3/index.adoc[Instructions d'implémentation des applications cl
 * PUT Bucket metadata notification configuration
 
 
+.Informations associées
 xref:configuration-xml-for-search-configuration.adoc[XML de configuration pour l'intégration de la recherche]
 
 xref:object-metadata-included-in-metadata-notifications.adoc[Métadonnées d'objet incluses dans les notifications de métadonnées]

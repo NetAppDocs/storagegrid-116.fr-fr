@@ -13,7 +13,7 @@ summary: 'Vous devez installer un jeu de rails pour le tiroir contrôleur E2860 
 [role="lead"]
 Vous devez installer un jeu de rails pour le tiroir contrôleur E2860 dans votre armoire ou rack, puis faire glisser le tiroir contrôleur sur les rails. Si vous installez des tiroirs d'extension de 60 disques, la même procédure s'applique.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez passé en revue le document consignes de sécurité inclus dans la boîte et compris les précautions à prendre pour déplacer et installer le matériel.
 * Les instructions sont fournies avec le kit de rails.
 

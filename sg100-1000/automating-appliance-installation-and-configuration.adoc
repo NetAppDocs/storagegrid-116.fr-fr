@@ -13,6 +13,7 @@ summary: 'Vous pouvez automatiser l"installation et la configuration de vos appl
 [role="lead"]
 Vous pouvez automatiser l'installation et la configuration de vos appliances et de l'ensemble du système StorageGRID.
 
+.Description de la tâche
 L'automatisation de l'installation et de la configuration peut être utile pour déployer plusieurs instances StorageGRID ou une instance StorageGRID complexe et de grande taille.
 
 Pour automatiser l'installation et la configuration, utilisez une ou plusieurs des options suivantes :

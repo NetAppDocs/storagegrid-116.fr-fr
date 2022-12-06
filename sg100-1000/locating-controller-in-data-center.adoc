@@ -13,7 +13,7 @@ summary: Identifiez le contrôleur pour effectuer des opérations de maintenance
 [role="lead"]
 Identifiez le contrôleur pour effectuer des opérations de maintenance ou de mise à niveau du matériel.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez déterminé quel contrôleur doit être entretenu.
 * (Facultatif) pour localiser le contrôleur dans votre data Center, xref:turning-controller-identify-led-on-and-off.adoc[Activez le voyant d'identification bleu].
 

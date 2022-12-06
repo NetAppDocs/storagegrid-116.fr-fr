@@ -13,7 +13,7 @@ summary: 'Vous accédez à la page de connexion de Grid Manager en entrant le no
 [role="lead"]
 Vous accédez à la page de connexion de Grid Manager en entrant le nom de domaine complet (FQDN) ou l'adresse IP d'un noeud d'administration dans la barre d'adresse d'un navigateur Web pris en charge.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous disposez de vos identifiants de connexion.
 * Vous avez l'URL pour Grid Manager.
 * Vous utilisez un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
@@ -21,6 +21,7 @@ Vous accédez à la page de connexion de Grid Manager en entrant le nom de domai
 * Vous disposez d'autorisations d'accès spécifiques.
 
 
+.Description de la tâche
 Chaque système StorageGRID comprend un nœud d'administration principal et un nombre quelconque de nœuds d'administration non primaires. Vous pouvez vous connecter au Gestionnaire de grille sur n'importe quel noeud d'administration pour gérer le système StorageGRID. Cependant, les nœuds d'administration ne sont pas exactement les mêmes :
 
 * Les accusés de réception d'alarme (système hérité) effectués sur un noeud d'administration ne sont pas copiés sur d'autres noeuds d'administration. Pour cette raison, les informations affichées pour les alarmes peuvent ne pas être identiques sur chaque nœud d'administration.

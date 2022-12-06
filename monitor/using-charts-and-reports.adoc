@@ -62,6 +62,7 @@ image::../media/state_graph.gif[Graphique d'état]
 
 
 
+.Informations associées
 xref:viewing-nodes-page.adoc[Afficher la page nœuds]
 
 xref:viewing-grid-topology-tree.adoc[Afficher l'arborescence de la grille topologique]
@@ -126,6 +127,7 @@ Un mélange d'ombrage gris et bleu indique que certaines des valeurs d'attribut 
 
 La page nœuds contient les graphiques et les graphiques auxquels vous devez accéder régulièrement pour surveiller les attributs tels que la capacité de stockage et le débit. Dans certains cas, en particulier lorsque vous travaillez avec le support technique, vous pouvez utiliser la page *SUPPORT* *Outils* *topologie de grille* pour accéder à des graphiques supplémentaires.
 
+.Ce dont vous avez besoin
 Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 
 .Étapes
@@ -181,7 +183,7 @@ L'affichage passe automatiquement à la page *Rapports* *graphiques*. Le graphiq
 
 Les graphiques affichent une représentation graphique des valeurs de données d'attribut. Vous pouvez générer des rapports sur un site de data Center, un nœud grid, un composant ou un service.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer d'autorisations d'accès spécifiques.
 

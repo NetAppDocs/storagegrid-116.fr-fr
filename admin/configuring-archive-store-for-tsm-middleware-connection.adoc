@@ -13,7 +13,7 @@ summary: 'Si votre nœud d’archivage se connecte à un serveur middleware TSM,
 [role="lead"]
 Si votre nœud d'archivage se connecte à un serveur middleware TSM, vous pouvez configurer l'état du magasin d'archives d'un nœud d'archivage sur en ligne ou hors ligne. Vous pouvez également désactiver le magasin d'archives lors du premier démarrage du nœud d'archivage ou réinitialiser le nombre d'échecs en cours de suivi pour l'alarme associée.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 
@@ -40,4 +40,5 @@ image::../media/archive_store_tsm.gif[Configurez le magasin d'archives pour la c
 . Sélectionnez *appliquer les modifications*.
 
 
+.Informations associées
 xref:managing-archive-node-when-tsm-server-reaches-capacity.adoc[Gérer un nœud d'archivage lorsque le serveur TSM atteint sa capacité]

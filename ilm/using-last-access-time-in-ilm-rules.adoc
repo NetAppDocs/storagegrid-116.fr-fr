@@ -13,6 +13,7 @@ summary: 'Vous pouvez utiliser l"heure du dernier accès comme heure de référe
 [role="lead"]
 Vous pouvez utiliser l'heure du dernier accès comme heure de référence dans une règle ILM. Il peut par exemple être nécessaire de conserver les objets qui ont été affichés au cours des trois derniers mois sur les nœuds de stockage locaux tout en déplaçant des objets qui n'ont pas été considérés comme récemment vers un emplacement hors site. Vous pouvez également utiliser l'heure du dernier accès comme filtre avancé si vous souhaitez qu'une règle ILM s'applique uniquement aux objets qui ont été consultés pour la dernière fois à une date donnée.
 
+.Description de la tâche
 Avant d'utiliser l'heure du dernier accès dans une règle ILM, prenez en compte les éléments suivants :
 
 * Lorsque vous utilisez l'heure du dernier accès comme heure de référence, sachez que la modification de l'heure du dernier accès d'un objet ne déclenche pas d'évaluation ILM immédiate. Les placements de l'objet sont alors évalués et l'objet est déplacé selon les besoins lors de l'évaluation de l'objet par la ILM en arrière-plan. L'accès à l'objet peut prendre deux semaines ou plus.

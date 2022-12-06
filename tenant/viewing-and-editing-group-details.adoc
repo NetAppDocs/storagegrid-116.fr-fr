@@ -13,7 +13,7 @@ summary: 'Lorsque vous affichez les détails d"un groupe, vous pouvez modifier l
 [role="lead"]
 Lorsque vous affichez les détails d'un groupe, vous pouvez modifier le nom d'affichage, les autorisations, les règles et les utilisateurs appartenant au groupe.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Gestionnaire de locataires à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez appartenir à un groupe d'utilisateurs qui dispose de l'autorisation accès racine.
 
@@ -59,6 +59,7 @@ L'application des modifications peut prendre jusqu'à 15 minutes à cause de la 
 
 
 
+.Informations associées
 xref:creating-groups-for-s3-tenant.adoc[Créez des groupes pour les locataires S3]
 
 xref:creating-groups-for-swift-tenant.adoc[Créez des groupes pour le locataire Swift]

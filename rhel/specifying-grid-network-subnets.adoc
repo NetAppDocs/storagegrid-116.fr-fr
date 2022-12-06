@@ -13,6 +13,7 @@ summary: Vous devez spécifier les sous-réseaux utilisés sur le réseau grille
 [role="lead"]
 Vous devez spécifier les sous-réseaux utilisés sur le réseau grille.
 
+.Description de la tâche
 Les entrées de sous-réseau incluent les sous-réseaux du réseau Grid pour chaque site du système StorageGRID, ainsi que tous les sous-réseaux devant être accessibles via le réseau Grid.
 
 Si vous avez plusieurs sous-réseaux de grille, la passerelle de réseau de grille est requise. Tous les sous-réseaux de la grille spécifiés doivent être accessibles via cette passerelle.

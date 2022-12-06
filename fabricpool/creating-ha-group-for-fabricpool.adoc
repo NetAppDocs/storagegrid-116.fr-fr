@@ -13,12 +13,13 @@ summary: 'Lorsque vous configurez StorageGRID pour une utilisation avec FabricPo
 [role="lead"]
 Lorsque vous configurez StorageGRID pour une utilisation avec FabricPool, vous pouvez éventuellement créer un ou plusieurs groupes haute disponibilité (HA). Un groupe haute disponibilité comprend une ou plusieurs interfaces réseau sur des nœuds d'administration ou de passerelle, ou les deux.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez de l'autorisation accès racine.
 * Si vous prévoyez d'utiliser un VLAN, vous avez créé l'interface VLAN. Voir xref:../admin/configure-vlan-interfaces.adoc[Configurez les interfaces VLAN].
 
 
+.Description de la tâche
 Chaque groupe haute disponibilité utilise des adresses IP virtuelles (VIP) pour fournir un accès haute disponibilité aux services partagés sur les nœuds associés.
 
 Pour plus d'informations sur cette tâche, reportez-vous à la section xref:../admin/managing-high-availability-groups.adoc[Gérez les groupes haute disponibilité].

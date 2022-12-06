@@ -108,6 +108,7 @@ IMPORTANT: Les clés de chiffrement que vous fournissez ne sont jamais stockées
 * Si la réplication CloudMirror est configurée pour le compartiment, vous ne pouvez pas ingérer d'objets SSE-C. L'opération d'acquisition échoue.
 
 
+.Informations associées
 xref:get-object.adoc[OBTENIR l'objet]
 
 xref:head-object.adoc[Objet TÊTE]

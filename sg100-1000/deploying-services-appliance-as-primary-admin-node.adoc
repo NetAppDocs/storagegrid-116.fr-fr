@@ -13,7 +13,7 @@ summary: 'Lorsque vous déployez une appliance de services en tant que nœud d"a
 [role="lead"]
 Lorsque vous déployez une appliance de services en tant que nœud d'administration principal, utilisez le programme d'installation de l'appliance StorageGRID inclus sur l'appliance pour installer le logiciel StorageGRID ou téléchargez la version du logiciel que vous souhaitez installer. Vous devez installer et configurer le nœud d'administration principal avant d'installer tout autre type de nœud d'appliance. Un nœud d'administration principal peut se connecter au réseau Grid et au réseau d'administration et au réseau client en option, si un ou les deux sont configurés.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * L'appliance a été installée dans un rack ou une armoire, connectée à vos réseaux et sous tension.
 * Les liens réseau, les adresses IP et le remappage des ports (si nécessaire) ont été configurés pour le serveur à l'aide du programme d'installation de l'appliance StorageGRID.
 +
@@ -31,6 +31,7 @@ NOTE: Le service CLB est obsolète.
 * Vous connaissez l'une des adresses IP attribuées à l'appliance. Vous pouvez utiliser l'adresse IP de n'importe quel réseau StorageGRID connecté.
 
 
+.Description de la tâche
 Pour installer StorageGRID sur un nœud d'administration principal de l'appliance :
 
 * Vous utilisez le programme d'installation de l'appliance StorageGRID pour installer le logiciel StorageGRID. Si vous souhaitez installer une autre version du logiciel, vous devez d'abord la télécharger à l'aide du programme d'installation de l'appliance StorageGRID.

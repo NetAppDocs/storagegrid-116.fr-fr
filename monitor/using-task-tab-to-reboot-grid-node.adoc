@@ -13,12 +13,13 @@ summary: 'L"onglet tâche permet de redémarrer le nœud sélectionné. L"onglet
 [role="lead"]
 L'onglet tâche permet de redémarrer le nœud sélectionné. L'onglet tâche s'affiche pour tous les nœuds.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez de l'autorisation Maintenance ou accès racine.
 * Vous avez la phrase secrète pour le provisionnement.
 
 
+.Description de la tâche
 Vous pouvez utiliser l'onglet tâche pour redémarrer un nœud. Pour les nœuds d'appliance, vous pouvez également utiliser l'onglet tâche pour placer l'appliance en mode maintenance.
 
 * Le redémarrage d'un nœud de grille à partir de l'onglet tâche émet la commande de redémarrage sur le nœud cible. Lorsque vous redémarrez un nœud, celui-ci s'arrête et redémarre. Tous les services sont redémarrés automatiquement.
@@ -65,6 +66,7 @@ Lorsque le nœud est en cours de redémarrage, l'icône grise (administrativemen
 
 
 
+.Informations associées
 xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
 
 xref:../sg5700/index.adoc[Appliances de stockage SG5700]

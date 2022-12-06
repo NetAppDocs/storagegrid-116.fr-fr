@@ -13,7 +13,7 @@ summary: 'Vous utilisez Azure AD pour créer une application d"entreprise pour c
 [role="lead"]
 Vous utilisez Azure AD pour créer une application d'entreprise pour chaque nœud d'administration de votre système.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez commencé à configurer la connexion unique pour StorageGRID et vous avez sélectionné *Azure* comme type SSO.
 * *Sandbox mode* est sélectionné sur la page Single Sign-on dans Grid Manager. Voir xref:../admin/using-sandbox-mode.adoc[Utiliser le mode sandbox].
 * Vous disposez du *Nom d'application entreprise* pour chaque noeud d'administration de votre système. Vous pouvez copier ces valeurs à partir du tableau des détails du nœud d'administration sur la page d'authentification unique StorageGRID.

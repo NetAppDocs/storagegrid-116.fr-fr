@@ -17,11 +17,12 @@ Lors du dépannage d'un problème, vous pouvez vous aider avec le support techni
 * xref:commonly-used-prometheus-metrics.adoc[Metrics Prometheus couramment utilisés]
 
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 
 
+.Description de la tâche
 La page Diagnostics effectue un ensemble de contrôles de diagnostic sur l'état actuel de la grille. Chaque vérification de diagnostic peut avoir l'un des trois États suivants :
 
 * image:../media/icon_alert_green_checkmark.png["Icône alerte verte coche"] *Normal* : toutes les valeurs sont comprises dans la plage normale.

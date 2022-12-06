@@ -46,7 +46,7 @@ Vous pouvez maintenant créer des interfaces LAN virtuelles (VLAN) pour les nœu
 * Le nouvel assistant *Create a VLAN interface* vous guide tout au long du processus de saisie d'un ID VLAN et de sélection d'une interface parent sur un ou plusieurs nœuds. Une interface parent peut être le réseau Grid, le réseau client ou une interface de ligne réseau supplémentaire pour la machine virtuelle ou l'hôte sans système d'exploitation. Voir xref:../admin/configure-vlan-interfaces.html[Configurez les interfaces VLAN].
 * Vous pouvez désormais ajouter une jonction ou des interfaces d'accès supplémentaires à un nœud. Si vous ajoutez une interface de jonction, vous devez configurer une interface VLAN. Si vous ajoutez une interface d'accès, vous pouvez l'ajouter directement à un groupe haute disponibilité ; vous n'avez pas besoin de configurer une interface VLAN. Voir les éléments suivants :
 +
-** *Linux (avant d'installer le nœud)* :  enhancements
+** *Linux (avant d'installer le nœud)* : <<Améliorations apportées à l'installation>>
 ** *Linux (après l'installation du nœud)* : xref:../maintain/linux-adding-trunk-or-access-interfaces-to-node.adoc[Linux : ajoutez une jonction ou des interfaces d'accès à un nœud]
 ** *VMware (après l'installation du noeud)* : xref:../vmware/collecting-information-about-your-deployment-environment.adoc[Collecte d'informations sur votre environnement de déploiement]
 

@@ -13,7 +13,7 @@ summary: 'Le correctif est d"abord appliqué automatiquement au nœud d"administ
 [role="lead"]
 Le correctif est d'abord appliqué automatiquement au nœud d'administration principal. Vous devez ensuite approuver l'application du correctif sur d'autres nœuds de la grille jusqu'à ce que tous les nœuds exécutent la même version logicielle. Vous pouvez personnaliser la séquence d'approbation en sélectionnant pour approuver des nœuds de grille individuels, des groupes de nœuds de grille ou tous les nœuds de la grille.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez passé en revue les considérations et terminé les étapes de la section xref:hotfix-planning-and-preparation.adoc[Planifiez et préparez-vous à un correctif].
 * Vous avez la phrase secrète pour le provisionnement.
 * Vous disposez de l'autorisation accès racine ou Maintenance.
@@ -132,6 +132,7 @@ La procédure n'est pas terminée tant que le correctif n'a pas été appliqué 
 
 
 
+.Informations associées
 xref:../admin/index.adoc[Administrer StorageGRID]
 
 xref:../monitor/index.adoc[Surveiller et résoudre les problèmes]

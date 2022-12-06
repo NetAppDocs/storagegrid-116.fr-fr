@@ -26,7 +26,7 @@ Vous pouvez également utiliser la console S3 pour :
 
 NOTE: La console S3 n'a pas été complètement testée et est marquée comme « expérimentale ». Il n'est pas destiné à la gestion en bloc des objets ou à une utilisation dans un environnement de production. Les locataires ne doivent utiliser la console S3 que lors de l'exécution de fonctions sur un petit nombre d'objets, par exemple lors du chargement d'objets pour simuler une nouvelle règle ILM, pour résoudre les problèmes d'ingestion ou via des grilles de validation technique ou non-production.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Gestionnaire de locataires à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez de l'autorisation gérer vos propres informations d'identification S3.
 * Vous avez créé un compartiment.

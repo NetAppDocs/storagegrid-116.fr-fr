@@ -17,6 +17,7 @@ Suivez cette séquence pour démarrer les nœuds de la grille après un arrêt c
 
 CAUTION: Si l'ensemble du grid a été arrêté pendant plus de 15 jours, vous devez contacter le support technique avant de démarrer un nœud de grid. N'essayez pas les procédures de récupération qui reconstruisent les données Cassandra. Cela peut entraîner une perte de données.
 
+.Description de la tâche
 Si possible, mettez les nœuds grid sous tension dans l'ordre suivant :
 
 * Mettez d'abord les nœuds d'administration sous tension.

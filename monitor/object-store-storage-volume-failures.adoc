@@ -27,4 +27,5 @@ image::../media/storage_node_object_stores.png[Magasin d'objets nœud de stockag
 
 Selon la nature de la défaillance, des défaillances liées à un volume de stockage peuvent se refléter dans une alarme indiquant l'état du stockage ou l'état de santé d'un magasin d'objets. En cas de défaillance d'un volume de stockage, réparez le volume de stockage défectueux pour restaurer le nœud de stockage à son plein fonctionnement dès que possible. Si nécessaire, vous pouvez accéder à l'onglet *Configuration* et placer le nœud de stockage en lecture seule de sorte que le système StorageGRID puisse l'utiliser pour récupérer les données tout en préparant la récupération complète du serveur.
 
+.Informations associées
 xref:../maintain/index.adoc[Récupérer et entretenir]

@@ -16,7 +16,7 @@ Les règles ILM permettent de gérer le placement des données d'objet au fil du
 
 NOTE: Si vous créez la règle ILM par défaut d'une règle, utilisez la procédure suivante : xref:creating-default-ilm-rule.adoc[Créez une règle ILM par défaut].
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 * Si vous souhaitez spécifier les comptes de tenant auxquels cette règle s'applique, vous disposez de l'autorisation comptes de tenant ou vous connaissez l'ID de compte de chaque compte.
@@ -32,6 +32,7 @@ image::../media/video-screenshot-ilm-rules.png[Vidéo : règles ILM de StorageGR
 
 
 
+.Description de la tâche
 Lors de la création de règles ILM :
 
 * Comparez la topologie et les configurations de stockage du système StorageGRID.

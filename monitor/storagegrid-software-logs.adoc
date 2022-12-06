@@ -458,6 +458,7 @@ Contient des informations sur les connexions sortantes de l'API de gestion vers 
 Nœuds d'administration
 
 |===
+.Informations associées
 xref:about-bycast-log.adoc[Sur le bycast.log]
 
 xref:../s3/index.adoc[Utilisation de S3]

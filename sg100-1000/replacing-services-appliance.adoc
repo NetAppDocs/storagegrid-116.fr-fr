@@ -13,13 +13,14 @@ summary: 'Vous devrez peut-être remplacer l"appareil s"il ne fonctionne pas de 
 [role="lead"]
 Vous devrez peut-être remplacer l'appareil s'il ne fonctionne pas de manière optimale ou s'il est défectueux.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous disposez d'un appareil de remplacement avec le même numéro de pièce que l'appareil que vous remplacez.
 * Vous disposez d'étiquettes pour identifier chaque câble connecté à l'appareil.
 * Vous avez xref:locating-controller-in-data-center.adoc[l'appareil se trouve physiquement].
 * L'appareil a été xref:placing-appliance-into-maintenance-mode.adoc[passage en mode maintenance].
 
 
+.Description de la tâche
 Le nœud StorageGRID ne sera pas accessible lors du remplacement de l'appliance. Si l'appareil fonctionne correctement, vous pouvez procéder à un arrêt contrôlé au début de cette procédure.
 
 
@@ -93,6 +94,7 @@ Utilisez l'interface BMC pour surveiller l'état de démarrage.
 . Vérifiez que le nœud de l'appliance s'affiche dans Grid Manager et qu'aucune alerte n'apparaît.
 
 
+.Informations associées
 xref:installing-appliance-in-cabinet-or-rack-sg100-and-sg1000.adoc[Installation de l'appareil dans une armoire ou un rack (SG100 et SG1000)]
 
 xref:viewing-status-indicators-on-sg100-and-sg1000-appliances.adoc[Afficher les indicateurs d'état sur les appareils SG100 et SG1000]

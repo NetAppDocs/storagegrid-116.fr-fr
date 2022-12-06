@@ -180,4 +180,5 @@ Les demandes contradictoires des clients, telles que deux clients qui écrivent 
 Si le `versionId` le paramètre de requête n'est pas spécifié dans la requête, l'opération ajoute des balises à la version la plus récente de l'objet dans un compartiment versionné. Si la version actuelle de l'objet est un marqueur de suppression, un état "methodNotAldue" est renvoyé avec l' `x-amz-delete-marker` réponse en-tête réglée sur `true`.
 
 |===
+.Informations associées
 xref:s3-operations-tracked-in-audit-logs.adoc[Opérations S3 suivies dans les journaux d'audit]

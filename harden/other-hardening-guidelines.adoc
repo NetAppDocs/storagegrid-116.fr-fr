@@ -51,6 +51,7 @@ Une solution de renforcement complète doit traiter des mécanismes de sécurit�
 
 Un équilibreur de charge tiers est recommandé pour le trafic client non fiable. L'équilibrage de la charge fourni par des tiers offre un meilleur contrôle et des couches de protection supplémentaires contre les attaques.
 
+.Informations associées
 xref:../monitor/index.adoc[Surveiller et résoudre les problèmes]
 
 xref:../audit/index.adoc[Examiner les journaux d'audit]

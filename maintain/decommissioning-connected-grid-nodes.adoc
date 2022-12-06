@@ -135,4 +135,5 @@ xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
 
 
 
+.Informations associées
 xref:../rhel/index.adoc[Installez Red Hat Enterprise Linux ou CentOS]

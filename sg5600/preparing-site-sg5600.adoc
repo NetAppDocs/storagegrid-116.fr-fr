@@ -69,6 +69,7 @@ SG5660
 . Installez les commutateurs réseau requis. Consultez la matrice d'interopérabilité NetApp pour plus d'informations sur la compatibilité.
 
 
+.Informations associées
 https://hwu.netapp.com["NetApp Hardware Universe"^]
 
 https://mysupport.netapp.com/NOW/products/interoperability["Interopérabilité NetApp"^]

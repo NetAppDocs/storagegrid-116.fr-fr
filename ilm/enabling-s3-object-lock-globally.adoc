@@ -13,7 +13,7 @@ summary: 'Si un compte de locataire S3 doit respecter les exigences réglementai
 [role="lead"]
 Si un compte de locataire S3 doit respecter les exigences réglementaires lors de la sauvegarde des données d'objet, vous devez activer le verrouillage objet S3 pour l'intégralité de votre système StorageGRID. L'activation du paramètre de verrouillage d'objet S3 global permet aux locataires S3 de créer et de gérer des compartiments et des objets avec le verrouillage d'objet S3.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous disposez de l'autorisation d'accès racine.
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous avez passé en revue le workflow de verrouillage d'objet S3 et vous devez comprendre les considérations à prendre en compte.
@@ -25,6 +25,7 @@ Si un compte de locataire S3 doit respecter les exigences réglementaires lors d
 
 
 
+.Description de la tâche
 Un administrateur de grid doit activer le paramètre global de verrouillage d'objet S3 pour permettre aux utilisateurs locataires de créer de nouveaux compartiments pour lesquels le verrouillage d'objet S3 est activé. Une fois ce paramètre activé, il ne peut pas être désactivé.
 
 
@@ -66,6 +67,7 @@ image::../media/s3_object_lock_global_setting_error.gif[Erreur de configuration 
 
 
 
+.Une fois que vous avez terminé
 Après avoir activé le paramètre global de verrouillage d'objet S3, vous devrez peut-être le faire xref:../ilm/creating-default-ilm-rule.adoc[créez une règle par défaut] les données sont conformes et xref:creating-ilm-policy-after-s3-object-lock-is-enabled.adoc[Création d'une règle ILM] c'est-à-dire conforme. Une fois le paramètre activé, la règle ILM peut éventuellement inclure une règle par défaut conforme et une règle par défaut non compatible. Par exemple, vous pouvez utiliser une règle non conforme qui ne contient pas de filtres pour les objets dans les compartiments où le verrouillage d'objet S3 n'est pas activé.
 
 .Informations associées

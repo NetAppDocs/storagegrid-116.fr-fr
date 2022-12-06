@@ -79,6 +79,7 @@ Cette LED s'allume lorsque les données en cache doivent être écrites sur les 
 . Déconnectez-vous du shell de commande : `exit`
 
 
+.Informations associées
 xref:../sg100-1000/index.adoc[Appareils de services SG100 et SG1000]
 
 xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]

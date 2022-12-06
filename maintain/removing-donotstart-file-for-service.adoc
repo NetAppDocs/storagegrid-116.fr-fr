@@ -13,6 +13,7 @@ summary: 'Lorsque vous supprimez un fichier DoNotStart qui empêche le démarrag
 [role="lead"]
 Lorsque vous supprimez un fichier DoNotStart qui empêche le démarrage d'un service, vous devez démarrer ce service.
 
+.Ce dont vous avez besoin
 Vous devez avoir le `Passwords.txt` fichier.
 
 .Étapes

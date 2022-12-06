@@ -13,11 +13,12 @@ summary: 'Vous pouvez utiliser l"option de grille Compress objets stockés pour 
 [role="lead"]
 Vous pouvez utiliser l'option de grille Compress objets stockés pour réduire la taille des objets stockés dans StorageGRID, de sorte que les objets consomment moins de stockage.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 
 
+.Description de la tâche
 Par défaut, l'option de grille de compression des objets stockés est désactivée. Si vous activez cette option, StorageGRID tente de compresser chaque objet lors de son enregistrement, en utilisant la compression sans perte.
 
 

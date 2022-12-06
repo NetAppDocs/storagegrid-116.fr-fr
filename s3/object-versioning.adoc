@@ -35,4 +35,5 @@ NOTE: Lorsque vous téléchargez une nouvelle version d'un objet à l'aide d'une
 
 Pour obtenir des informations sur la gestion du cycle de vie des objets avec la gestion du cycle de vie des informations, consultez les instructions de gestion des objets avec version S3.
 
+.Informations associées
 xref:../ilm/index.adoc[Gestion des objets avec ILM]

@@ -13,7 +13,7 @@ summary: 'Vous devez connecter les deux contrôleurs entre eux avec des câbles 
 [role="lead"]
 Vous devez connecter les deux contrôleurs entre eux avec des câbles d'interconnexion SAS, connecter les ports de gestion au réseau de gestion approprié, et connecter les ports 10 GbE du contrôleur E5600SG au réseau Grid et le réseau client facultatif pour StorageGRID.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez des câbles Ethernet pour connecter les ports de gestion.
 * Vous disposez de câbles optiques pour connecter les quatre ports 10 GbE (ceux-ci ne sont pas fournis avec l'appliance).
 
@@ -21,6 +21,7 @@ Vous devez connecter les deux contrôleurs entre eux avec des câbles d'intercon
 
 CAUTION: *Risque d'exposition au rayonnement laser* -- ne démontez pas et ne retirez aucune partie d'un émetteur-récepteur SFP. Vous pourriez être exposé à un rayonnement laser.
 
+.Description de la tâche
 Lors de la connexion des câbles, reportez-vous au diagramme suivant, qui montre le contrôleur E2700 en haut et le contrôleur E5600SG en bas. Le schéma représente le modèle SG5660. Les contrôleurs du modèle SG5612 sont côte à côte au lieu d'être empilés.
 
 image::../media/cabling_diagram.gif[Schémas de câblage]
@@ -204,6 +205,7 @@ Réseau Grid
 
 
 
+.Informations associées
 xref:port-bond-modes-for-e5600sg-controller-ports.adoc[Modes de liaison des ports pour les ports du contrôleur E5600SG]
 
 xref:accessing-storagegrid-appliance-installer-sg5600.adoc[Accédez au programme d'installation de l'appliance StorageGRID]

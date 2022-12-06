@@ -13,7 +13,7 @@ summary: 'Le partage d"audit contient le fichier audit.log actif et tous les fic
 [role="lead"]
 Le partage d'audit contient le partage actif `audit.log` fichier et tous les fichiers journaux d'audit compressés. Pour accéder facilement aux journaux d'audit, vous pouvez configurer l'accès des clients aux partages d'audit pour NFS et CIFS (le protocole CIFS est obsolète). Vous pouvez également accéder aux fichiers journaux d'audit directement à partir de la ligne de commande du nœud d'administration.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez disposer d'autorisations d'accès spécifiques.
 * Vous devez avoir le `Passwords.txt` fichier.
 * Vous devez connaître l'adresse IP d'un nœud d'administration.
@@ -33,4 +33,5 @@ Le partage d'audit contient le partage actif `audit.log` fichier et tous les fic
 . Afficher le fichier journal d'audit actuel ou enregistré, selon les besoins.
 
 
+.Informations associées
 xref:../admin/index.adoc[Administrer StorageGRID]

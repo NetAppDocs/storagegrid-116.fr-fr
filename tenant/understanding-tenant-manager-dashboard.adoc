@@ -100,6 +100,7 @@ image::../media/tenant_dashboard_endpoint_error.png[Tableau de bord affichant le
 
 Pour afficher des détails sur une erreur de point final, sélectionnez noeuds finaux pour afficher la page noeuds finaux.
 
+.Informations associées
 xref:troubleshooting-platform-services-endpoint-errors.adoc[Dépanner les erreurs de point final des services de plate-forme]
 
 xref:../monitor/index.adoc[Surveiller et résoudre les problèmes]

@@ -13,7 +13,7 @@ summary: 'Il peut être nécessaire de remappage les ports internes du nœud de 
 [role="lead"]
 Il peut être nécessaire de remappage les ports internes du nœud de stockage de l'appliance sur différents ports externes. Par exemple, il peut être nécessaire de remappage les ports en raison d'un problème de pare-feu.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez déjà accédé au programme d'installation de l'appliance StorageGRID.
 * Vous n'avez pas configuré et ne prévoyez pas de configurer les points finaux de l'équilibreur de charge.
 +
@@ -42,4 +42,5 @@ image::../media/remap_ports.gif[Capture d'écran montrant l'option Remap ports d
 . Pour supprimer un mappage de port, sélectionnez le bouton radio de la règle que vous souhaitez supprimer, puis cliquez sur *Supprimer la règle sélectionnée*.
 
 
+.Informations associées
 xref:../maintain/index.adoc[Récupérer et entretenir]

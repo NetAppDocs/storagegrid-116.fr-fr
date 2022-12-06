@@ -13,6 +13,7 @@ summary: 'Avant d"installer le moteur de mise en conteneurs (Docker ou Podman), 
 [role="lead"]
 Avant d'installer le moteur de mise en conteneurs (Docker ou Podman), vous devrez peut-être formater le volume de stockage et le monter.
 
+.Description de la tâche
 Vous pouvez ignorer ces étapes si vous prévoyez d'utiliser du stockage local pour le volume de stockage Docker ou Podman et disposer d'un espace suffisant disponible sur la partition hôte contenant `/var/lib/docker` Pour Docker et `/var/lib/containers` Pour Podman.
 
 
@@ -53,7 +54,7 @@ Cette étape permet de s'assurer que le volume de stockage se réajuste automati
 
 == Installez Docker
 
-Le système StorageGRID s'exécute sur Red Hat Enterprise Linux ou CentOS comme un ensemble de conteneurs. Si vous avez choisi d'utiliser le moteur de mise en conteneurs Docker, procédez comme suit pour installer Docker. Sinon,  Podman,Installez Podman.
+Le système StorageGRID s'exécute sur Red Hat Enterprise Linux ou CentOS comme un ensemble de conteneurs. Si vous avez choisi d'utiliser le moteur de mise en conteneurs Docker, procédez comme suit pour installer Docker. Sinon, <<Installez Podman,Installez Podman>>.
 
 .Étapes
 . Installez Docker en suivant les instructions de votre distribution Linux.
@@ -87,7 +88,7 @@ Les versions client et serveur doivent être 1.11.0 ou supérieures.
 
 == Installez Podman
 
-Le système StorageGRID fonctionne sous Red Hat Enterprise Linux comme un ensemble de conteneurs. Si vous avez choisi d'utiliser le moteur de mise en conteneurs Podman, suivez ces étapes pour installer Podman. Sinon,  Docker,Installez Docker.
+Le système StorageGRID fonctionne sous Red Hat Enterprise Linux comme un ensemble de conteneurs. Si vous avez choisi d'utiliser le moteur de mise en conteneurs Podman, suivez ces étapes pour installer Podman. Sinon, <<Installez Docker,Installez Docker>>.
 
 
 NOTE: Podman est pris en charge uniquement sur Red Hat Enterprise Linux (RHEL).

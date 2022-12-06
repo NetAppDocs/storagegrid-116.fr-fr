@@ -56,6 +56,7 @@ NOTE: Par défaut, les mises à jour de l'heure du dernier accès sont désactiv
 
 Pour plus d'informations sur ILM, reportez-vous aux instructions de gestion des objets avec des informations relatives à la gestion du cycle de vie.
 
+.Informations associées
 xref:../tenant/index.adoc[Utilisez le compte du locataire]
 
 xref:../ilm/index.adoc[Gestion des objets avec ILM]

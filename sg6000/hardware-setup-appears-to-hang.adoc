@@ -22,6 +22,7 @@ Pendant l'initialisation du matériel pendant la mise sous tension, les deux aff
 . Si vous avez besoin d'aide pour résoudre un problème, contactez le support technique.
 
 
+.Informations associées
 xref:viewing-boot-up-status-codes-for-sg6000-storage-controllers.adoc[Afficher les codes d'état de démarrage des contrôleurs de stockage SG6000]
 
 https://library.netapp.com/ecmdocs/ECMLP2588751/html/frameset.html["Guide de surveillance des systèmes E5700 et E2800"^]

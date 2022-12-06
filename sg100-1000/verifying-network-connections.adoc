@@ -39,6 +39,7 @@ image::../media/ping_test_passed.png[Capture d'écran des résultats du test pin
 
 
 
+.Informations associées
 xref:configuring-network-links-sg100-and-sg1000.adoc[Configuration des liaisons réseau (SG100 et SG1000)]
 
 xref:changing-mtu-setting.adoc[Modifier le paramètre MTU]

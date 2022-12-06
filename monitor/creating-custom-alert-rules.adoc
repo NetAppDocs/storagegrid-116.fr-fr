@@ -13,7 +13,7 @@ summary: 'Vous pouvez créer des règles d"alerte personnalisées afin de défin
 [role="lead"]
 Vous pouvez créer des règles d'alerte personnalisées afin de définir vos propres conditions pour déclencher des alertes.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge]
 * Vous disposez de l'autorisation gérer les alertes ou l'accès racine
 * Vous connaissez le xref:commonly-used-prometheus-metrics.adoc[Metrics Prometheus couramment utilisés]
@@ -24,6 +24,7 @@ image::../media/video-screenshot-alert-create-custom.png[lien-"https://netapp.ho
 
 
 
+.Description de la tâche
 StorageGRID ne valide pas les alertes personnalisées. Si vous décidez de créer des règles d'alerte personnalisées, suivez les consignes générales suivantes :
 
 * Consultez les conditions des règles d'alerte par défaut et utilisez-les comme exemples pour vos règles d'alerte personnalisées.

@@ -13,6 +13,7 @@ summary: 'Lorsque vous êtes prêt à effectuer la mise à niveau, sélectionnez
 [role="lead"]
 Lorsque vous êtes prêt à effectuer la mise à niveau, vous sélectionnez le `.upgrade` archivez et entrez la phrase de passe de provisionnement. En tant qu'option, vous pouvez exécuter les contrôles préalables à la mise à niveau avant d'effectuer la véritable mise à niveau.
 
+.Ce dont vous avez besoin
 Vous avez passé en revue toutes les considérations et terminé toutes les étapes de planification et de préparation.
 
 

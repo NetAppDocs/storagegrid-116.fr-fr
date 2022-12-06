@@ -21,7 +21,7 @@ Avant de commencer la mise à niveau du logiciel, vous devez obtenir tous les su
  a| 
 Fichiers de mise à niveau StorageGRID
  a| 
- the StorageGRID upgrade files à votre ordinateur portable de service.
+<<Téléchargez les fichiers de mise à niveau StorageGRID>> à votre ordinateur portable de service.
 
 
 
@@ -46,7 +46,7 @@ La prise en charge des navigateurs a généralement été modifiée pour chaque 
  a| 
 Package de restauration (`.zip`) fichier
  a| 
- the Recovery Package avant de procéder à la mise à niveau et enregistrez le fichier dans un emplacement sûr. Le fichier du progiciel de récupération vous permet de restaurer le système en cas de défaillance.
+<<Téléchargez le progiciel de restauration>> avant de procéder à la mise à niveau et enregistrez le fichier dans un emplacement sûr. Le fichier du progiciel de récupération vous permet de restaurer le système en cas de défaillance.
 
 
 
@@ -141,7 +141,7 @@ NOTE: Aucun fichier supplémentaire n'est requis pour le SG100 ou le SG1000.
 
 Le fichier progiciel de récupération vous permet de restaurer le système StorageGRID en cas de défaillance. Téléchargez le fichier du pack de récupération actuel avant de modifier la topologie du grid sur le système StorageGRID ou avant de mettre à niveau le logiciel. Téléchargez ensuite une nouvelle copie du progiciel de récupération après avoir modifié la topologie de la grille ou après la mise à niveau du logiciel.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer de la phrase secrète pour le provisionnement.
 * Vous devez disposer d'autorisations d'accès spécifiques.

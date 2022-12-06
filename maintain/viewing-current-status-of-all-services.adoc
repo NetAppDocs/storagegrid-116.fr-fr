@@ -13,6 +13,7 @@ summary: 'Vous pouvez afficher à tout moment l"état actuel de tous les service
 [role="lead"]
 Vous pouvez afficher à tout moment l'état actuel de tous les services s'exécutant sur un nœud de la grille.
 
+.Ce dont vous avez besoin
 Vous devez avoir le `Passwords.txt` fichier.
 
 .Étapes

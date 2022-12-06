@@ -13,7 +13,7 @@ summary: 'Après avoir restauré un noeud de stockage d"appliance, vous devez v�
 [role="lead"]
 Après avoir restauré un noeud de stockage d'appliance, vous devez vérifier que l'état souhaité du noeud de stockage de l'appliance est défini sur en ligne et vous assurer que l'état est en ligne par défaut à chaque redémarrage du serveur de noeud de stockage.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Le nœud de stockage a été restauré et la restauration des données est terminée.
 

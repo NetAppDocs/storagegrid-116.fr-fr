@@ -13,8 +13,10 @@ summary: 'Si vous activez le chiffrement de nœud, les disques de votre applianc
 [role="lead"]
 Si vous activez le chiffrement des nœuds, les disques de votre appliance peuvent être protégés par le chiffrement sécurisé des serveurs de gestion des clés (KMS) contre les pertes physiques ou la suppression du site. Vous devez sélectionner et activer le chiffrement de nœud lors de l'installation de l'appliance et ne pouvez pas désélectionner le chiffrement de nœud une fois le processus de cryptage KMS démarré.
 
+.Ce dont vous avez besoin
 Consultez les informations sur KMS dans les instructions d'administration de StorageGRID.
 
+.Description de la tâche
 Une appliance pour laquelle le chiffrement des nœuds est activé se connecte au serveur de gestion externe des clés (KMS) configuré pour le site StorageGRID. Chaque cluster KMS (ou KMS) gère les clés de chiffrement pour tous les nœuds d'appliance du site. Ces clés cryptent et décrypter les données sur chaque disque d'une appliance sur laquelle le cryptage des nœuds est activé.
 
 Un KMS peut être configuré dans Grid Manager avant ou après l'installation de l'appliance dans StorageGRID. Pour plus d'informations, consultez les informations sur la configuration du KMS et de l'appliance dans les instructions d'administration de StorageGRID.
@@ -66,8 +68,10 @@ NOTE: L'appliance est au départ configurée avec une clé de chiffrement aléat
 
 
 
+.Une fois que vous avez terminé
 Vous pouvez afficher l'état du chiffrement de nœud, les détails KMS et les certificats utilisés lorsque le nœud d'appliance est en mode de maintenance.
 
+.Informations associées
 xref:../admin/index.adoc[Administrer StorageGRID]
 
 xref:monitoring-node-encryption-in-maintenance-mode.adoc[Contrôle du chiffrement du nœud en mode maintenance (SG6000)]

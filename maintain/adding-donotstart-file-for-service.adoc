@@ -13,6 +13,7 @@ summary: Vous pouvez empêcher un service individuel de démarrer en ajoutant un
 [role="lead"]
 Vous pouvez empêcher le démarrage d'un service individuel en ajoutant un fichier DoNotStart au répertoire de ce service sur un nœud de grille.
 
+.Ce dont vous avez besoin
 Vous devez avoir le `Passwords.txt` fichier.
 
 .Étapes

@@ -13,6 +13,7 @@ summary: 'À partir de l"étape 6 \(Monitor Decommission\) de l"assistant de pag
 [role="lead"]
 À partir de l'étape 6 (Monitor Decommission) de l'assistant de page site de désaffection, vous pouvez surveiller la progression du site à mesure que celui-ci est supprimé.
 
+.Description de la tâche
 Lorsque StorageGRID supprime un site connecté, il supprime des nœuds dans l'ordre suivant :
 
 . Nœuds de passerelle
@@ -236,6 +237,7 @@ image::../media/decommission_site_success_message.png[Message de réussite du si
 
 
 
+.Une fois que vous avez terminé
 Effectuez les tâches suivantes une fois la procédure de mise hors service du site terminée :
 
 * Assurez-vous que les disques de tous les nœuds de stockage du site mis hors service sont nettoyés. Utilisez un outil ou un service d'effacement de données disponible dans le commerce pour supprimer définitivement et de manière sécurisée les données des lecteurs.

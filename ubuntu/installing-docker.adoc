@@ -41,4 +41,5 @@ Les versions client et serveur doivent être 1.11.0 ou supérieures.
 
 
 
+.Informations associées
 xref:configuring-host-storage.adoc[Configurer le stockage de l'hôte]

@@ -13,11 +13,12 @@ summary: 'Si un seul nœud de stockage a été hors ligne et n"est pas connecté
 [role="lead"]
 Si un seul nœud de stockage a été hors ligne et n'est pas connecté aux autres nœuds de stockage depuis plus de 15 jours, vous devez reconstruire Cassandra sur le nœud.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez vérifié qu'une mise hors service du nœud de stockage n'est pas en cours ou que vous avez interrompu la procédure de mise hors service du nœud. (Dans le Gestionnaire de grille, sélectionnez *MAINTENANCE* *tâches* *mise hors service*.)
 * Vous avez vérifié qu'une extension n'est pas en cours. (Dans le Gestionnaire de grille, sélectionnez *MAINTENANCE* *tâches* *extension*.)
 
 
+.Description de la tâche
 Les nœuds de stockage disposent d'une base de données Cassandra qui inclut les métadonnées d'objet. Si un nœud de stockage n'a pas pu communiquer avec d'autres nœuds de stockage depuis plus de 15 jours, StorageGRID suppose que la base de données Cassandra du nœud est obsolète. Le nœud de stockage ne peut pas rejoindre la grille tant que Cassandra n'a pas été reconstruite en utilisant les informations d'autres nœuds de stockage.
 
 Utilisez cette procédure pour reconstruire Cassandra uniquement si un seul nœud de stockage est défaillant. Contactez le support technique si des nœuds de stockage supplémentaires sont hors ligne ou si Cassandra a été reconstruite sur un autre nœud de stockage au cours des 15 derniers jours. Par exemple, Cassandra a peut-être été reconstruite dans le cadre des procédures de restauration des volumes de stockage défaillants ou de restauration d'un nœud de stockage défaillant.

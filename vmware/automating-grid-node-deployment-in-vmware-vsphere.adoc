@@ -19,7 +19,7 @@ Vous pouvez utiliser VMware vSphere pour automatiser le déploiement des nœuds 
 
 Utilisez VMware vSphere pour automatiser le déploiement des nœuds grid.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez accès à un système Linux/Unix avec Bash 3.2 ou version ultérieure.
 * VMware OVF Tool 4.1 est installé et correctement configuré.
 * Vous connaissez le nom d'utilisateur et le mot de passe requis pour accéder à VMware vSphere à l'aide de l'outil OVF.
@@ -93,7 +93,7 @@ Vous spécifiez les informations nécessaires au déploiement de noeuds de grill
 . La transparence `deploy-vsphere-ovftool.ini`.
 . Entrez toutes les informations requises pour déployer des nœuds VMware Virtual Grid.
 +
-Voir ,Paramètres du fichier de configuration pour plus d'informations.
+Voir <<configuration-file-settings,Paramètres du fichier de configuration>> pour plus d'informations.
 
 . Une fois que vous avez saisi et vérifié toutes les informations nécessaires, enregistrez et fermez le fichier.
 
@@ -308,6 +308,7 @@ NOTE: Le paramètre ADMIN_IP est ignoré pour le nœud d'administration principa
 * Tous les paramètres qui n'ont pas été définis globalement. Par exemple, si un nœud est associé au réseau Admin et que vous n'avez pas spécifié les paramètres ADMIN_NETWORK globalement, vous devez les spécifier pour le nœud.
 
 
+.Nœud d'administration principal
 Les paramètres supplémentaires suivants sont requis pour le nœud d'administration principal :
 
 * *NODE_TYPE* : VM_Admin_Node
@@ -339,6 +340,7 @@ DISK = INSTANCES=2, CAPACITY=300
 
 NOTE: Pour les nœuds Admin, LES INSTANCES doivent toujours être égales à 2.
 
+.Nœud de stockage
 Le paramètre supplémentaire suivant est requis pour les nœuds de stockage :
 
 * *NODE_TYPE* : VM_Storage_Node
@@ -399,6 +401,7 @@ DISK = INSTANCES=16, CAPACITY=4096
 ----
 
 
+.Nœud d'archivage
 Le paramètre supplémentaire suivant est requis pour les nœuds d'archivage :
 
 * *NODE_TYPE* : VM_Archive_Node
@@ -416,6 +419,7 @@ Cet exemple d'entrée concerne un noeud d'archivage qui se trouve sur la grille 
 
   ADMIN_IP = 10.1.0.2
 ----
+.Nœud de passerelle
 Le paramètre supplémentaire suivant est requis pour les nœuds de passerelle :
 
 * *NODE_TYPE* : VM_API_GATEWAY
@@ -439,6 +443,7 @@ Cet exemple d'entrée concerne un exemple de nœud de passerelle sur les trois r
 
   ADMIN_IP = 10.1.0.2
 ----
+.Nœud d'administration non primaire
 Les paramètres supplémentaires suivants sont requis pour les nœuds d'administration non primaires :
 
 * *NODE_TYPE* : VM_Admin_Node
@@ -478,7 +483,7 @@ NOTE: Pour les nœuds Admin, LES INSTANCES doivent toujours être égales à 2.
 
 Vous pouvez utiliser le `deploy-vsphere-ovftool.sh` Le script bash et le fichier de configuration deploy-vsphere-ovftool.ini que vous avez modifié pour automatiser le déploiement des nœuds grid StorageGRID dans VMware vSphere.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez créé un fichier de configuration deploy-vsphere-ovftool.ini pour votre environnement.
 
 
@@ -546,7 +551,7 @@ Deployment Summary
 
 Une fois les nœuds grid déployés, vous pouvez automatiser la configuration du système StorageGRID.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous connaissez l'emplacement des fichiers suivants à partir de l'archive d'installation.
 
 
@@ -602,6 +607,7 @@ Par exemple :
 ----
 
 
+.Résultat
 Un fichier .zip du progiciel de récupération est généré pendant le processus de configuration et il est téléchargé dans le répertoire dans lequel vous exécutez le processus d'installation et de configuration. Vous devez sauvegarder le fichier de package de restauration afin de pouvoir restaurer le système StorageGRID en cas de défaillance d'un ou plusieurs nœuds de la grille. Par exemple, copiez-le dans un emplacement sécurisé, sauvegardé sur le réseau et dans un emplacement de stockage cloud sécurisé.
 
 
@@ -624,6 +630,7 @@ Votre système StorageGRID est installé et configuré lorsqu'un message de conf
 ----
 StorageGRID has been configured and installed.
 ----
+.Informations associées
 xref:navigating-to-grid-manager.adoc[Accédez au Grid Manager]
 
 xref:overview-of-installation-rest-api.adoc[Présentation de l'API REST d'installation]

@@ -45,4 +45,5 @@ Pour Management_Port_IP, entrez l'adresse IP du port de gestion 1 sur le contrô
 
 
 
+.Informations associées
 xref:e5600sg-controller-seven-segment-display-codes.adoc[Codes d'affichage sept segments du contrôleur E5600SG]

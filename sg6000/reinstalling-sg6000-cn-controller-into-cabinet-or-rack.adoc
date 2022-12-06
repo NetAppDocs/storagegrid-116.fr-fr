@@ -13,6 +13,7 @@ summary: Une fois la maintenance matérielle terminée, réinstallez le contrôl
 [role="lead"]
 Une fois la maintenance matérielle terminée, réinstallez le contrôleur dans une armoire ou un rack.
 
+.Ce dont vous avez besoin
 Vous avez réinstallé le capot du contrôleur.
 
 xref:reinstalling-sg6000-cn-controller-cover.adoc[Réinstallez le couvercle du contrôleur SG6000-CN]
@@ -48,6 +49,7 @@ xref:connecting-power-cords-and-applying-power-sg6000.adoc[Branchement des câbl
 
 
 
+.Une fois que vous avez terminé
 Le contrôleur peut être redémarré.
 
 xref:powering-on-sg6000-cn-controller-and-verifying-operation.adoc[Mettez le contrôleur SG6000-CN sous tension et vérifiez son fonctionnement]

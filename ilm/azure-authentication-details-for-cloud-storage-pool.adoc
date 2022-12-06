@@ -13,7 +13,7 @@ summary: Lorsque vous créez un pool de stockage cloud pour le stockage Azure Bl
 [role="lead"]
 Lorsque vous créez un pool de stockage cloud pour le stockage Azure Blob, vous devez spécifier un nom de compte et une clé de compte pour le conteneur externe que StorageGRID utilisera pour stocker des objets.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez saisi les informations de base pour le pool de stockage cloud et spécifié *Azure Blob Storage* comme type de fournisseur. *Clé partagée* apparaît dans le champ *Type d'authentification*.
 +
 image::../media/cloud_storage_pool_create_azure.png[Créer Azure du pool de stockage cloud]

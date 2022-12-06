@@ -13,12 +13,13 @@ summary: 'Vous pouvez utiliser le Gestionnaire de grille pour récupérer les fi
 [role="lead"]
 Vous pouvez utiliser le Gestionnaire de grille pour récupérer les fichiers journaux et les données système (y compris les données de configuration) de votre système StorageGRID.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer d'autorisations d'accès spécifiques.
 * Vous devez disposer de la phrase secrète pour le provisionnement.
 
 
+.Description de la tâche
 Vous pouvez utiliser le gestionnaire de grille pour rassembler xref:logs-files-reference.adoc[fichiers journaux], données système et données de configuration de n'importe quel nœud de grille pour la période sélectionnée. Les données sont collectées et archivées dans un fichier .tar.gz que vous pouvez ensuite télécharger sur votre ordinateur local.
 
 Vous pouvez également modifier la destination des journaux d'audit et envoyer des informations d'audit à un serveur syslog externe. Les journaux locaux des enregistrements d'audit continuent à être générés et stockés lorsqu'un serveur syslog externe est configuré. Voir xref:../monitor/configure-audit-messages.adoc[Configurez les messages d'audit et les destinations des journaux].
@@ -65,6 +66,7 @@ Le fichier _.tar.gz_ contient tous les fichiers journaux de tous les nœuds de l
 
 
 
+.Une fois que vous avez terminé
 Vous pouvez télécharger à nouveau le package d'archivage des fichiers journaux ultérieurement si nécessaire.
 
 Vous pouvez également sélectionner *Supprimer* pour supprimer le paquet d'archive de fichier journal et libérer de l'espace disque. Le progiciel d'archivage du fichier journal actuel est automatiquement supprimé lors de la prochaine collecte de fichiers journaux.

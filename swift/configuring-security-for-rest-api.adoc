@@ -95,6 +95,7 @@ Autorisation du client
 
 
 |===
+.Informations associées
 xref:../admin/index.adoc[Administrer StorageGRID]
 
 
@@ -173,4 +174,5 @@ TLS_RSA_WAS_AES_128_GCM_SHA256
 TLS_RSA_WITH_AES_256_GCM_SHA384
 
 |===
+.Informations associées
 xref:configuring-tenant-accounts-and-connections.adoc[Configurez les comptes et les connexions des locataires]

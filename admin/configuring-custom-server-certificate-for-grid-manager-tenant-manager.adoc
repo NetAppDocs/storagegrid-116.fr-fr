@@ -13,6 +13,7 @@ summary: 'Vous pouvez remplacer le certificat de serveur StorageGRID par défaut
 [role="lead"]
 Vous pouvez remplacer le certificat de l'interface de gestion par défaut par un certificat personnalisé unique qui permet aux utilisateurs d'accéder à Grid Manager et au Gestionnaire de locataires sans rencontrer d'avertissement de sécurité. Vous pouvez également revenir au certificat d'interface de gestion par défaut ou en générer un nouveau.
 
+.Description de la tâche
 Par défaut, chaque nœud d'administration est doté d'un certificat signé par l'autorité de certification de la grille. Ces certificats signés par l'autorité de certification peuvent être remplacés par un seul certificat d'interface de gestion personnalisée commun et une clé privée correspondante.
 
 Étant donné qu'un seul certificat d'interface de gestion personnalisée est utilisé pour tous les nœuds d'administration, vous devez spécifier le certificat en tant que certificat générique ou multidomaine si les clients doivent vérifier le nom d'hôte lors de la connexion à Grid Manager et au tenant Manager. Définissez le certificat personnalisé de sorte qu'il corresponde à tous les nœuds d'administration de la grille.
@@ -27,7 +28,7 @@ NOTE: Pour garantir que les opérations ne sont pas interrompues par un certific
 Si vous accédez à Grid Manager ou au Gestionnaire de locataires à l'aide d'un nom de domaine au lieu d'une adresse IP, le navigateur affiche une erreur de certificat sans option de contournement si l'un des cas suivants se produit :
 
 * Votre certificat d'interface de gestion personnalisée expire.
-* Vous  the default management interface certificate,restaurez le certificat de serveur par défaut à partir d'un certificat d'interface de gestion personnalisée.
+* Vous <<Restaurez le certificat de l'interface de gestion par défaut,restaurez le certificat de serveur par défaut à partir d'un certificat d'interface de gestion personnalisée>>.
 
 
 ====
@@ -141,11 +142,12 @@ Lorsque vous restaurez le certificat d'interface de gestion par défaut, les fic
 
 Si une validation stricte du nom d'hôte est requise, vous pouvez utiliser un script pour générer le certificat de l'interface de gestion.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous disposez d'autorisations d'accès spécifiques.
 * Vous avez le `Passwords.txt` fichier.
 
 
+.Description de la tâche
 La meilleure pratique pour un environnement de production consiste à utiliser un certificat signé par une autorité de certification externe.
 
 .Étapes

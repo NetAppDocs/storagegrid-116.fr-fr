@@ -37,4 +37,5 @@ OPTIONS /
 Les applications client peuvent émettre `OPTIONS /` Requêtes vers le port S3 d'un nœud de stockage, sans identifiants d'authentification S3, pour déterminer si le nœud de stockage est disponible. Vous pouvez utiliser cette requête pour la surveillance ou permettre aux équilibreurs de charge externes d'identifier lorsqu'un nœud de stockage est arrêté.
 
 |===
+.Informations associées
 xref:get-storage-usage-request.adoc[DEMANDE d'utilisation du stockage]

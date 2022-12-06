@@ -13,12 +13,13 @@ summary: 'Une fois la mise à niveau vers StorageGRID 11.6 effectuée, vous pour
 [role="lead"]
 Une fois la mise à niveau vers StorageGRID 11.6 effectuée, vous pourrez augmenter le paramètre du système Metadata Reserved Space si vos nœuds de stockage répondent à des exigences spécifiques en termes de RAM et d'espace disponible.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer de l'autorisation accès racine ou de la configuration de la page de topologie de grille et d'autres autorisations de configuration de grille.
 * Vous avez terminé la mise à niveau vers StorageGRID 11.6.
 
 
+.Description de la tâche
 Vous pourrez peut-être augmenter manuellement l'espace réservé aux métadonnées pour l'ensemble du système, en configurant jusqu'à 8 To après la mise à niveau vers StorageGRID 11.6. Les réservation d'espace de métadonnées supplémentaires après la mise à niveau 11.6 simplifient les futures mises à niveau matérielles et logicielles.
 
 Vous ne pouvez augmenter la valeur du paramètre espace réservé aux métadonnées pour l'ensemble du système que si ces deux instructions sont vraies :

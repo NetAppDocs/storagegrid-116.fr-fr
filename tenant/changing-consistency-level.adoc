@@ -13,11 +13,12 @@ summary: 'Si vous utilisez un locataire S3, vous pouvez utiliser le gestionnaire
 [role="lead"]
 Si vous utilisez un locataire S3, vous pouvez utiliser le gestionnaire des locataires ou l'API de gestion des locataires pour modifier le contrôle de cohérence pour les opérations effectuées sur les objets dans des compartiments S3.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Gestionnaire de locataires à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez appartenir à un groupe d'utilisateurs possédant l'autorisation gérer toutes les rubriques ou accès racine. Ces autorisations remplacent les paramètres d'autorisations des stratégies de groupes ou de compartiments. Voir xref:tenant-management-permissions.adoc[Autorisations de gestion des locataires].
 
 
+.Description de la tâche
 Le niveau de cohérence assure une reprise entre la disponibilité des objets et la cohérence de ces objets sur différents sites et nœuds de stockage. En général, vous devez utiliser le niveau de cohérence *Read-After-New-write* pour vos compartiments. Si le niveau de cohérence *Read-After-New-write* ne répond pas aux exigences de l'application client, vous pouvez modifier le niveau de cohérence en définissant le niveau de cohérence du compartiment ou en utilisant le `Consistency-Control` en-tête. Le `Consistency-Control` le cueilleur remplace le niveau de cohérence du godet.
 
 

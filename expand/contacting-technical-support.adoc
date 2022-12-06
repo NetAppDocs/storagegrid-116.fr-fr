@@ -13,6 +13,7 @@ summary: 'Si vous rencontrez des erreurs lors du processus d"extension de la gri
 [role="lead"]
 Si vous rencontrez des erreurs lors du processus d'extension de la grille que vous ne parvenez pas à résoudre ou si une tâche de grille échoue, contactez le support technique.
 
+.Description de la tâche
 Lorsque vous contactez le support technique, vous devez fournir les fichiers journaux requis pour vous aider à résoudre les erreurs que vous rencontrez.
 
 .Étapes

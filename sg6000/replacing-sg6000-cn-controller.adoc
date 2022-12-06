@@ -13,7 +13,7 @@ summary: 'Vous devrez peut-être remplacer le contrôleur SG6000-CN s"il ne fonc
 [role="lead"]
 Vous devrez peut-être remplacer le contrôleur SG6000-CN s'il ne fonctionne pas de manière optimale ou s'il est défectueux.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous disposez d'un contrôleur de remplacement avec la même référence que le contrôleur que vous remplacez.
 * Vous avez des étiquettes pour identifier chaque câble connecté au contrôleur.
 * Vous avez trouvé le contrôleur à remplacer dans le data Center.
@@ -22,6 +22,7 @@ xref:locating-controller-in-data-center.adoc[Localiser le contrôleur dans le da
 
 
 
+.Description de la tâche
 Le nœud de stockage de l'appliance ne sera pas accessible lors du remplacement du contrôleur SG6000-CN. Si le contrôleur SG6000-CN fonctionne suffisamment, vous pouvez effectuer un arrêt contrôlé au début de cette procédure.
 
 
@@ -83,6 +84,7 @@ xref:../maintain/index.adoc[Récupérer et entretenir]
 
 
 
+.Informations associées
 xref:sg6000-cn-installing-into-cabinet-or-rack.adoc[SG6000-CN : à installer dans l'armoire ou le rack]
 
 xref:viewing-status-indicators-and-buttons-on-sg6000-cn-controller.adoc[Afficher les indicateurs d'état et les boutons sur le contrôleur SG6000-CN]

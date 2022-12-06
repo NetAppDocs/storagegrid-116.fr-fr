@@ -19,6 +19,7 @@ Pour les nœuds de stockage, l'onglet ILM fournit des informations détaillées 
 
 image::../media/nodes_page_ilm_tab.png[Onglet ILM de la page nœuds]
 
+.Informations associées
 xref:monitoring-information-lifecycle-management.adoc[Contrôle la gestion du cycle de vie des informations]
 
 xref:../admin/index.adoc[Administrer StorageGRID]

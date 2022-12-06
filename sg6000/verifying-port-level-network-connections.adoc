@@ -13,6 +13,7 @@ summary: 'Pour vous assurer que l"accès entre le programme d"installation de l"
 [role="lead"]
 Pour vous assurer que l'accès entre le programme d'installation de l'appliance StorageGRID et d'autres nœuds n'est pas obstrué par des pare-feu, vérifiez que le programme d'installation de l'appliance StorageGRID peut se connecter à un port TCP spécifique ou à un ensemble de ports sur l'adresse IP ou la plage d'adresses spécifiée.
 
+.Description de la tâche
 À l'aide de la liste des ports fournis dans le programme d'installation de l'appliance StorageGRID, vous pouvez tester la connectivité entre l'appliance et les autres nœuds de votre réseau Grid.
 
 En outre, vous pouvez tester la connectivité sur les réseaux Admin et client et sur les ports UDP, tels que ceux utilisés pour les serveurs NFS ou DNS externes. Pour obtenir la liste de ces ports, consultez la référence des ports dans les instructions de mise en réseau de StorageGRID.
@@ -71,4 +72,5 @@ image::../media/nmap_test_red_banner.png[Bannière rouge test NMAP]
 
 
 
+.Informations associées
 xref:../network/index.adoc[Instructions de mise en réseau]

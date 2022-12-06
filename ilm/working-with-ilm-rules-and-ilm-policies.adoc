@@ -13,7 +13,7 @@ summary: 'Une fois que vous avez créé des règles ILM et une règle ILM, vous 
 [role="lead"]
 Une fois que vous avez créé des règles ILM et une règle ILM, vous pouvez continuer à travailler avec elles, en modifiant leur configuration au fur et à mesure de l'évolution de vos besoins en stockage.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 

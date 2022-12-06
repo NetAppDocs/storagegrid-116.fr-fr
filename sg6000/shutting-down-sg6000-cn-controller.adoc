@@ -13,7 +13,7 @@ summary: Arrêtez le contrôleur SG6000-CN pour effectuer la maintenance du mat�
 [role="lead"]
 Arrêtez le contrôleur SG6000-CN pour effectuer la maintenance du matériel.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez installé physiquement le contrôleur SG6000-CN nécessitant une maintenance dans le centre de données.
 +
 xref:locating-controller-in-data-center.adoc[Localiser le contrôleur dans le data Center]
@@ -21,6 +21,7 @@ xref:locating-controller-in-data-center.adoc[Localiser le contrôleur dans le da
 * L'appareil a été xref:placing-appliance-into-maintenance-mode.adoc[passe en mode maintenance].
 
 
+.Description de la tâche
 Pour éviter les interruptions de service, vérifiez que tous les autres nœuds de stockage sont connectés à la grille avant d'arrêter le contrôleur ou d'arrêter le contrôleur durant une fenêtre de maintenance planifiée en cas d'interruption de service. Reportez-vous aux informations sur la détermination des États de connexion du nœud dans les instructions de gestion des objets avec informations gestion du cycle de vie.
 
 
@@ -80,4 +81,5 @@ image::../media/bmc_power_control_page_controller_off.png[Page de contrôle de l
 
 
 
+.Informations associées
 xref:removing-sg6000-cn-controller-from-cabinet-or-rack.adoc[Retirez le contrôleur SG6000-CN de l'armoire ou du rack]

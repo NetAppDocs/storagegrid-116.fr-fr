@@ -210,6 +210,7 @@ Une exécution réussie renvoie les en-têtes suivants avec une réponse "HTTP/1
 * `X-Trans-Id`
 
 
+.Informations associées
 xref:../ilm/index.adoc[Gestion des objets avec ILM]
 
 xref:monitoring-and-auditing-operations.adoc[Surveiller et auditer les opérations]

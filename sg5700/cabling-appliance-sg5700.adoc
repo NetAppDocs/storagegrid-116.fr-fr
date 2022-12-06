@@ -13,7 +13,7 @@ summary: Vous devez connecter les deux contrôleurs les uns aux autres, connecte
 [role="lead"]
 Vous devez connecter les deux contrôleurs les uns aux autres, connecter les ports de gestion de chaque contrôleur et connecter les ports 10/25 GbE du contrôleur E5700SG au réseau Grid et au réseau client facultatif pour StorageGRID.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez déballé les éléments suivants, fournis avec l'appareil :
 +
 ** Deux cordons d'alimentation.
@@ -33,6 +33,7 @@ Vous devez connecter les deux contrôleurs les uns aux autres, connecter les por
 
 CAUTION: *Risque d'exposition au rayonnement laser* -- ne démontez pas et ne retirez aucune partie d'un émetteur-récepteur SFP. Vous pourriez être exposé à un rayonnement laser.
 
+.Description de la tâche
 Les chiffres montrent les deux contrôleurs des modèles SG5760 et S260X, avec le contrôleur de stockage de la gamme E2800 en haut et le contrôleur E5700SG en bas. Dans le SG5712 et dans la résolution 12X, le contrôleur de stockage de la gamme E2800 se trouve à gauche du contrôleur E5700SG, lorsqu'il est vue depuis l'arrière.
 
 *Connexions SG5760*
@@ -189,6 +190,7 @@ Réseau Grid
 
 
 
+.Informations associées
 xref:accessing-storagegrid-appliance-installer-sg5700.adoc[Accédez au programme d'installation de l'appliance StorageGRID]
 
 xref:port-bond-modes-for-e5700sg-controller-ports.adoc[Modes de liaison des ports pour les ports du contrôleur E5700SG]

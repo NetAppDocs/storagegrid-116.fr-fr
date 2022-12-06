@@ -74,6 +74,6 @@ Enter command [`add search <domain>|remove search <domain>|add nameserver <ip>`]
 . Suivez les instructions qui vous sont demandées pour d'autres commandes.
 . Enregistrez vos modifications et quittez l'application : `save`
 . [[close_cmd_shell]]Fermez le shell de commande sur le serveur : `exit`
-. Répétez les étapes à partir de pour chaque nœud de la grille ,connectez-vous au nœud à ,fermeture du shell de commande.
+. Répétez les étapes à partir de pour chaque nœud de la grille <<log_in_to_node,connectez-vous au nœud>> à <<close_cmd_shell,fermeture du shell de commande>>.
 . Lorsque vous n'avez plus besoin d'un accès sans mot de passe à d'autres serveurs, supprimez la clé privée de l'agent SSH. Entrez : `ssh-add -D`
 

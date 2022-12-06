@@ -13,13 +13,14 @@ summary: 'Vous devez accéder au programme d"installation de l"appliance Storage
 [role="lead"]
 Vous devez accéder au programme d'installation de l'appliance StorageGRID pour configurer les connexions entre l'appliance et les trois réseaux StorageGRID : le réseau Grid, le réseau d'administration (facultatif) et le réseau client (facultatif).
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous utilisez un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * L'appliance est connectée à tous les réseaux StorageGRID que vous souhaitez utiliser.
 * Sur ces réseaux, vous connaissez l'adresse IP, la passerelle et le sous-réseau du dispositif.
 * Vous avez configuré les commutateurs réseau que vous prévoyez d'utiliser.
 
 
+.Description de la tâche
 Lorsque vous accédez pour la première fois au programme d'installation de l'appliance StorageGRID, vous pouvez utiliser l'adresse IP attribuée par DHCP pour le réseau Admin (en supposant que l'appliance est connectée au réseau Admin) ou l'adresse IP attribuée par DHCP pour le réseau Grid. L'utilisation de l'adresse IP du réseau d'administration est recommandée. Sinon, si vous accédez au programme d'installation de l'appliance StorageGRID à l'aide de l'adresse DHCP pour le réseau Grid, vous risquez de perdre la connexion avec le programme d'installation de l'appliance StorageGRID lorsque vous modifiez les paramètres de liaison et lorsque vous saisissez une adresse IP statique.
 
 .Étapes
@@ -90,4 +91,5 @@ NOTE: Si vous ne pouvez pas accéder à la page d'accueil via une connexion lien
 . Vérifiez les messages affichés sur la page d'accueil et configurez la configuration de liaison et la configuration IP, selon les besoins.
 
 
+.Informations associées
 xref:../admin/web-browser-requirements.adoc[Navigateurs Web pris en charge]

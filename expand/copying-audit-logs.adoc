@@ -13,11 +13,12 @@ summary: 'Lorsque vous ajoutez un nouveau nœud d"administration par le biais d"
 [role="lead"]
 Lorsque vous ajoutez un nouveau nœud d'administration par le biais d'une procédure d'extension, son service AMS consigne uniquement les événements et actions qui se produisent une fois qu'il rejoint le système. Si nécessaire, vous pouvez copier les journaux d'audit à partir d'un nœud d'administration déjà installé vers le nouveau nœud d'administration d'extension afin qu'il soit synchronisé avec le reste du système StorageGRID.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez terminé les étapes d'extension requises pour ajouter un nœud d'administration.
 * Vous avez le `Passwords.txt` fichier.
 
 
+.Description de la tâche
 Pour rendre disponibles les messages d'audit historiques sur un nouveau nœud d'administration, vous devez copier manuellement les fichiers journaux d'audit d'un nœud d'administration existant vers le nœud d'administration d'extension.
 
 [NOTE]

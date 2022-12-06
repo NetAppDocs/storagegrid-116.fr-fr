@@ -13,11 +13,12 @@ summary: 'Les clients d"audit NFS ont accès à un partage d"audit en fonction d
 [role="lead"]
 Les clients d'audit NFS ont accès à un partage d'audit en fonction de leur adresse IP. Vous pouvez supprimer un client d'audit existant en supprimant son adresse IP.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez le `Passwords.txt` Fichier avec le mot de passe du compte root/admin (disponible dans LEDIT paquet).
 * Vous avez le `Configuration.txt` Fichier (disponible dans LEDIT paquet).
 
 
+.Description de la tâche
 Vous ne pouvez pas supprimer la dernière adresse IP autorisée à accéder au partage d'audit.
 
 .Étapes

@@ -13,6 +13,7 @@ summary: 'Vous pouvez modifier le nom d"un utilisateur ou d"un groupe pour un pa
 [role="lead"]
 Vous pouvez modifier le nom d'un utilisateur ou d'un groupe pour un partage d'audit CIFS en ajoutant un nouvel utilisateur ou un nouveau groupe, puis en supprimant l'ancien.
 
+.Description de la tâche
 L'exportation d'audit via CIFS/Samba a été obsolète et sera supprimée dans une future version de StorageGRID.
 
 .Étapes

@@ -13,7 +13,7 @@ summary: 'Vous pouvez utiliser SANtricity System Manager pour surveiller et gér
 [role="lead"]
 Vous pouvez utiliser SANtricity System Manager pour surveiller et gérer chaque composant matériel du tiroir de contrôleur de stockage, et pour examiner les informations de diagnostic et d'environnement sur le matériel, comme la température des composants et les problèmes liés aux disques.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous utilisez un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Pour accéder à SANtricity System Manager via Grid Manager, vous devez disposer de l'autorisation Administrateur de l'appliance de stockage ou de l'autorisation accès racine.
 * Pour accéder à SANtricity System Manager à l'aide du programme d'installation de l'appliance StorageGRID, vous devez disposer du nom d'utilisateur et du mot de passe de l'administrateur SANtricity System Manager.

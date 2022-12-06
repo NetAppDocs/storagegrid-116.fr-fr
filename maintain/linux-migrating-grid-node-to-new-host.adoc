@@ -31,6 +31,7 @@ D'autres types de nœuds, tels que les nœuds d'administration ou les nœuds de 
 
 Pour plus d'informations, consultez la section « exigences de migration des nœuds » dans les instructions d'installation de StorageGRID pour votre système d'exploitation Linux.
 
+.Informations associées
 xref:deploying-new-linux-hosts.adoc[Déploiement de nouveaux hôtes Linux]
 
 xref:../rhel/index.adoc[Installez Red Hat Enterprise Linux ou CentOS]

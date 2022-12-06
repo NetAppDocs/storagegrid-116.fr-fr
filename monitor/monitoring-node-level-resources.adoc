@@ -13,10 +13,11 @@ summary: 'Vous devez surveiller chaque nœud de la grille pour vérifier ses niv
 [role="lead"]
 Vous devez surveiller chaque nœud de la grille pour vérifier ses niveaux d'utilisation des ressources.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 
 
+.Description de la tâche
 Si les nœuds sont constamment surchargés, un nombre plus élevé de nœuds peut être requis pour une efficacité optimale des opérations.
 
 .Étapes
@@ -33,6 +34,7 @@ image::../media/nodes_page_hardware_tab_graphs.png[Onglet matériel de la page n
 
 
 
+.Informations associées
 xref:viewing-hardware-tab.adoc#view-information-about-appliance-storage-nodes[Afficher des informations sur les nœuds de stockage de l'appliance]
 
 xref:viewing-hardware-tab.adoc#view-information-about-appliance-admin-nodes-and-gateway-nodes[Affiche des informations sur les nœuds d'administration de l'appliance et les nœuds de passerelle]

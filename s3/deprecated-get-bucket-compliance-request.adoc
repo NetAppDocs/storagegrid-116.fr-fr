@@ -93,6 +93,7 @@ Suppression automatique
 
 Si le compartiment n'a pas été créé pour être conforme, le code d'état HTTP de la réponse est `404 Not Found`, Avec un code d'erreur S3 de `XNoSuchBucketCompliance`.
 
+.Informations associées
 xref:../ilm/index.adoc[Gestion des objets avec ILM]
 
 xref:../tenant/index.adoc[Utilisez le compte du locataire]

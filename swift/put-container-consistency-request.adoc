@@ -145,4 +145,5 @@ Connection: CLOSE
 X-Trans-Id: 1936575373
 Content-Length: 0
 ----
+.Informations associées
 xref:../tenant/index.adoc[Utilisez le compte du locataire]

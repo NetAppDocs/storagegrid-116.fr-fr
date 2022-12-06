@@ -13,6 +13,7 @@ summary: Vous devez restaurer les fichiers de configuration de la grille de tout
 [role="lead"]
 Vous devez restaurer les fichiers de configuration de la grille de tout nœud de grille ayant échoué, puis valider les fichiers de configuration de la grille et résoudre les erreurs éventuelles.
 
+.Description de la tâche
 Vous pouvez importer tout nœud de grille qui doit être présent sur l'hôte, tant que son `/var/local` le volume n'a pas été perdu suite à la défaillance de l'hôte précédent. Par exemple, le `/var/local` Il se peut que le volume existe toujours si vous utilisez le stockage partagé pour les volumes de données du système StorageGRID, comme décrit dans les instructions d'installation de StorageGRID pour votre système d'exploitation Linux. L'importation du nœud restaure son fichier de configuration de nœud vers l'hôte.
 
 S'il n'est pas possible d'importer des nœuds manquants, vous devez recréer leurs fichiers de configuration de grille.
@@ -83,6 +84,7 @@ Vous devez corriger toute erreur ou avertissement avant de démarrer le service 
 
 
 
+.Informations associées
 xref:../rhel/index.adoc[Installez Red Hat Enterprise Linux ou CentOS]
 
 xref:../ubuntu/index.adoc[Installez Ubuntu ou Debian]

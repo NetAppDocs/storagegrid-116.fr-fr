@@ -20,10 +20,11 @@ Vous pouvez effectuer plusieurs tâches pour déterminer la source des problème
 
 Si l'alerte *stockage de métadonnées faible* est déclenchée, vous devez ajouter de nouveaux nœuds de stockage.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 
 
+.Description de la tâche
 StorageGRID réserve un certain espace sur le volume 0 de chaque nœud de stockage pour les métadonnées de l'objet. Cet espace est appelé espace réservé réel, et il est divisé en l'espace autorisé pour les métadonnées d'objet (espace de métadonnées autorisé) et l'espace requis pour les opérations essentielles de base de données, telles que la compaction et la réparation. L'espace de métadonnées autorisé régit la capacité globale des objets.
 
 image::../media/metadata_allowed_space_volume_0.png[Espace autorisé pour les métadonnées Volume 0]
@@ -76,12 +77,13 @@ Une fois l'extension effectuée, StorageGRID redistribue les métadonnées de l'
 
 L'alarme Services : Status - Cassandra (SVST) indique que vous devrez peut-être reconstruire la base de données Cassandra pour un nœud de stockage. Cassandra est utilisée comme magasin de métadonnées pour StorageGRID.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer d'autorisations d'accès spécifiques.
 * Vous devez avoir le `Passwords.txt` fichier.
 
 
+.Description de la tâche
 Si Cassandra est arrêtée pendant plus de 15 jours (par exemple, le nœud de stockage est mis hors tension), Cassandra ne démarre pas lorsque le nœud est remis en ligne. Vous devez reconstruire la base de données Cassandra pour le service DDS affecté.
 
 C'est possible xref:running-diagnostics.adoc[exécuter les diagnostics] pour obtenir des informations supplémentaires sur l'état actuel de votre grille.
@@ -165,7 +167,7 @@ Si Cassandra a été indisponible pendant plus de 15 jours, le message suivant s
 started because it has been offline for longer than
 its 15 day grace period - rebuild cassandra
 ----
-.. Assurez-vous que l'horodatage de ce message correspond à l'heure à laquelle vous avez tenté de redémarrer Cassandra, comme indiqué à l'étape ,Redémarrez Cassandra à partir du nœud de stockage.
+.. Assurez-vous que l'horodatage de ce message correspond à l'heure à laquelle vous avez tenté de redémarrer Cassandra, comme indiqué à l'étape <<restart_Cassandra_from_the_Storage_Node,Redémarrez Cassandra à partir du nœud de stockage>>.
 +
 Il peut y avoir plusieurs entrées pour Cassandra ; vous devez trouver l'entrée la plus récente.
 
@@ -184,6 +186,7 @@ Pour obtenir des instructions, reportez-vous à la section xref:../maintain/reco
 
 Une alarme Total Events (SMTT) est déclenchée lorsque la base de données Cassandra a une erreur de mémoire insuffisante. Si cette erreur se produit, contactez le support technique pour résoudre le problème.
 
+.Description de la tâche
 Si une erreur de mémoire insuffisante se produit pour la base de données Cassandra, un vidage de mémoire est créé, une alarme Total Events (SMTT) est déclenchée et le nombre d'erreurs de mémoire de Cassandra est incrémenté d'un.
 
 .Étapes

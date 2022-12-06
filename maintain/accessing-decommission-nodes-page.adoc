@@ -13,7 +13,7 @@ summary: 'Lorsque vous accédez à la page Decommission Nodes dans Grid Manager,
 [role="lead"]
 Lorsque vous accédez à la page Decommission Nodes dans Grid Manager, vous pouvez voir en un coup d'œil quels nœuds peuvent être désaffectés.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer de l'autorisation Maintenance ou accès racine.
 
@@ -66,7 +66,7 @@ La colonne *Santé* comprend l'une des icônes suivantes pour les nœuds de gril
 ** image:../media/icon_alarm_blue_unknown.png["icône bleue du point d'interrogation"] (Bleu) : inconnu
 
  a| 
-Accédez au ,étape qui répertorie les choix de procédure de mise hors service.
+Accédez au <<decommission_procedure_choices,étape qui répertorie les choix de procédure de mise hors service>>.
 
 
 
@@ -146,6 +146,7 @@ Nœuds grid connectés uniquement
 xref:decommissioning-connected-grid-nodes.adoc[Désaffectation des nœuds connectés]
 
 |===
+.Informations associées
 xref:checking-data-repair-jobs.adoc[Vérifier les travaux de réparation des données]
 
 xref:understanding-adc-service-quorum.adoc[Comprendre le quorum ADC]

@@ -31,4 +31,5 @@ Lors du renforcement d'un système StorageGRID, vous devez prendre en compte les
 * Les exigences et conventions de sécurité sont respectées par votre entreprise. Vous devrez peut-être vous conformer à des exigences réglementaires ou d'entreprise spécifiques.
 
 
+.Informations associées
 https://security.netapp.com/policy/["Stratégie de gestion des vulnérabilités"^]

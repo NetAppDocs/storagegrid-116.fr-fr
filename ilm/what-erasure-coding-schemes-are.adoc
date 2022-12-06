@@ -23,8 +23,8 @@ Lors de la configuration d'un profil de code d'effacement, utilisez les règles 
 NOTE: Vous ne pouvez pas configurer un profil de code d'effacement si le pool de stockage comprend deux sites.
 
 +
-**  schemes for storage pools containing three or more sites,Schémas de code d'effacement pour les pools de stockage contenant au moins trois sites
-**  schemes for one-site storage pools,Schémas de code d'effacement pour pools de stockage sur un site
+** <<Schémas de code d'effacement pour les pools de stockage contenant au moins trois sites,Schémas de code d'effacement pour les pools de stockage contenant au moins trois sites>>
+** <<Schémas de code d'effacement pour pools de stockage sur un site,Schémas de code d'effacement pour pools de stockage sur un site>>
 
 
 * N'utilisez pas le pool de stockage par défaut, tous les nœuds de stockage ou un pool de stockage incluant le site par défaut, tous les sites.
@@ -316,4 +316,5 @@ Le nombre minimum de nœuds de stockage requis est _k+m_, mais un pool de stocka
 71 %
 
 |===
+.Informations associées
 xref:../expand/index.adoc[Développez votre grille]

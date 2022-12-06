@@ -23,4 +23,5 @@ TIP: Avant d'émettre cette commande, vérifiez que la configuration réseau du 
 
 IMPORTANT: Après avoir émis le `storagegrid node force-recovery _node-name_` vous devez effectuer des étapes de restauration supplémentaires pour _node-name_.
 
+.Informations associées
 xref:whats-next-performing-additional-recovery-steps-if-required.adoc[Qu'est-ce qui suit : effectuez d'autres étapes de restauration, le cas échéant]

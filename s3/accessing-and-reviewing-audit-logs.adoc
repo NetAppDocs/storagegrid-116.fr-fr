@@ -13,12 +13,13 @@ summary: 'Les messages d"audit sont générés par les services StorageGRID et s
 [role="lead"]
 Les messages d'audit sont générés par les services StorageGRID et stockés dans des fichiers journaux texte. Des messages d'audit spécifiques aux API dans les journaux d'audit fournissent des données stratégiques de sécurité, d'exploitation et de surveillance des performances qui vous aideront à évaluer l'état de votre système.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous disposez d'autorisations d'accès spécifiques.
 * Vous avez le `Passwords.txt` fichier.
 * Vous connaissez l'adresse IP d'un nœud d'administration.
 
 
+.Description de la tâche
 Le fichier journal d'audit actif est nommé `audit.log`, Et il est stocké sur des nœuds d'administration.
 
 Une fois par jour, le fichier audit.log actif est enregistré, et un nouveau `audit.log` le fichier est démarré. Le nom du fichier enregistré indique quand il a été enregistré, au format `_yyyy-mm-dd.txt_`.

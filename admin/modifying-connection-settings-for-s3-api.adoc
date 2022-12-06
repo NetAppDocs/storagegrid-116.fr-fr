@@ -13,11 +13,12 @@ summary: 'Une fois que le nœud d"archivage est configuré pour se connecter à 
 [role="lead"]
 Une fois que le nœud d'archivage est configuré pour se connecter à un système de stockage d'archives externe via l'API S3, vous pouvez modifier certains paramètres en cas de modification de la connexion.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 
 
+.Description de la tâche
 Si vous modifiez le compte Cloud Tiering (S3), vous devez vous assurer que les identifiants d'accès utilisateur ont un accès en lecture/écriture au compartiment, y compris tous les objets précédemment ingérées par le nœud d'archivage vers le compartiment.
 
 .Étapes

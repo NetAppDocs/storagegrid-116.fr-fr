@@ -13,7 +13,7 @@ summary: 'Vous pouvez supprimer un pool de stockage qui n"est pas utilisé.'
 [role="lead"]
 Vous pouvez supprimer un pool de stockage qui n'est pas utilisé.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 

@@ -14,11 +14,12 @@ summary: 'Après avoir examiné le système StorageGRID et vérifié que tous le
 [role="lead"]
 Après avoir examiné le système StorageGRID et vérifié que tous les objets perdus enregistrés sont définitivement perdus ou qu'il s'agit d'une fausse alarme, vous pouvez réinitialiser la valeur de l'attribut objets perdus sur zéro.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer d'autorisations d'accès spécifiques.
 
 
+.Description de la tâche
 Vous pouvez réinitialiser le compteur objets perdus à partir de l'une des pages suivantes :
 
 * *SUPPORT* *Outils* *topologie Grid* * *_site_* *_Storage Node_* *LDR* *Data Store* *Présentation* *main*

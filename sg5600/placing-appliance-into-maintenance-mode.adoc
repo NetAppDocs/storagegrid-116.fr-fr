@@ -13,11 +13,12 @@ summary: 'Vous devez mettre l"appareil en mode maintenance avant d"effectuer des
 [role="lead"]
 Vous devez mettre l'appareil en mode maintenance avant d'effectuer des procédures de maintenance spécifiques.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez de l'autorisation Maintenance ou accès racine. Pour plus de détails, reportez-vous aux instructions d'administration de StorageGRID.
 
 
+.Description de la tâche
 Dans de rares cas, le fait de placer une appliance StorageGRID en mode de maintenance peut rendre l'appliance indisponible pour l'accès à distance.
 
 

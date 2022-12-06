@@ -13,7 +13,7 @@ summary: 'Effectuez cette procédure pour chaque nœud d"administration d"un dé
 [role="lead"]
 Effectuez cette procédure pour chaque nœud d'administration d'un déploiement StorageGRID à partir duquel vous souhaitez récupérer des messages d'audit.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez le `Passwords.txt` Fichier avec le mot de passe du compte root/admin (disponible dans LEDIT paquet).
 * Vous disposez du nom d'utilisateur et du mot de passe CIFS Active Directory.
 * Vous avez le `Configuration.txt` Fichier (disponible dans LEDIT paquet).

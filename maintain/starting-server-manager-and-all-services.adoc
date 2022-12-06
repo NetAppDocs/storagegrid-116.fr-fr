@@ -13,8 +13,10 @@ summary: Vous devrez peut-être démarrer Server Manager, qui démarre égalemen
 [role="lead"]
 Vous devrez peut-être démarrer Server Manager, qui démarre également tous les services sur le nœud de la grille.
 
+.Ce dont vous avez besoin
 Vous devez avoir le `Passwords.txt` fichier.
 
+.Description de la tâche
 Le démarrage de Server Manager sur un nœud de la grille sur lequel il est déjà en cours d'exécution entraîne le redémarrage de Server Manager et de tous les services sur le nœud de la grille.
 
 .Étapes

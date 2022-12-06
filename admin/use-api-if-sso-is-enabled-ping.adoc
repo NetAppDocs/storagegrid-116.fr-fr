@@ -19,11 +19,12 @@ Si vous l'avez xref:../admin/configuring-sso.adoc[Authentification unique (SSO) 
 
 Ces instructions s'appliquent si vous utilisez PingFederate comme fournisseur d'identité SSO
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous connaissez le nom d'utilisateur et le mot de passe SSO d'un utilisateur fédéré appartenant à un groupe d'utilisateurs StorageGRID.
 * Pour accéder à l'API de gestion des locataires, vous connaissez l'ID du compte locataire.
 
 
+.Description de la tâche
 Pour obtenir un jeton d'authentification, vous pouvez utiliser l'un des exemples suivants :
 
 * Le `storagegrid-ssoauth.py` Script Python, situé dans le répertoire des fichiers d'installation de StorageGRID (`./rpms` Pour Red Hat Enterprise Linux ou CentOS, `./debs` Pour Ubuntu ou Debian, et `./vsphere` Pour VMware).
@@ -207,6 +208,7 @@ Vous pouvez maintenant utiliser `MYTOKEN` Pour les autres demandes, comme le fer
 
 Si l'authentification unique (SSO) a été activée, vous devez émettre une série de requêtes API pour vous déconnecter de l'API de gestion Grid ou de l'API de gestion des locataires. Ces instructions s'appliquent si vous utilisez PingFederate comme fournisseur d'identité SSO
 
+.Description de la tâche
 Si nécessaire, vous pouvez vous déconnecter de l'API StorageGRID simplement en vous connectant à partir de la page de déconnexion unique de votre organisation. Vous pouvez également déclencher une déconnexion unique (SLO) à partir de StorageGRID, ce qui nécessite un jeton de porteur StorageGRID valide.
 
 .Étapes

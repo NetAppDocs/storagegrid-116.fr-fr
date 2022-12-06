@@ -48,6 +48,7 @@ image::../media/events_report.gif[Page Events]
 
 Les événements personnalisés vous permettent de suivre tous les événements utilisateur du noyau, du démon, de l'erreur et du niveau critique consignés sur le serveur syslog. Un événement personnalisé peut être utile pour surveiller l'occurrence des messages du journal système (et donc les événements de sécurité réseau et les défaillances matérielles).
 
+.Description de la tâche
 Pensez à créer des événements personnalisés pour surveiller les problèmes récurrents. Les considérations suivantes s'appliquent aux événements personnalisés.
 
 * Après la création d'un événement personnalisé, chaque occurrence de celui-ci est surveillée.
@@ -86,6 +87,7 @@ image::../media/custom_events_count.png[Page de présentation des événements S
 
 Si vous souhaitez réinitialiser le compteur uniquement pour les événements personnalisés, vous devez utiliser la page topologie de la grille dans le menu support.
 
+.Description de la tâche
 La réinitialisation d'un compteur entraîne le déclenchement de l'alarme par l'événement suivant. En revanche, lorsque vous reconnaissez une alarme, celle-ci n'est déclenchée que si le niveau de seuil suivant est atteint.
 
 . Sélectionnez *SUPPORT* > *Outils* > *topologie de grille*.

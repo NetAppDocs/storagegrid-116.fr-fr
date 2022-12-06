@@ -13,11 +13,12 @@ summary: 'Vous pouvez modifier l"état activé/désactivé pour une règle d"ale
 [role="lead"]
 Vous pouvez modifier l'état activé/désactivé pour une règle d'alerte par défaut ou personnalisée.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez de l'autorisation gérer les alertes ou l'accès racine.
 
 
+.Description de la tâche
 Lorsqu'une règle d'alerte est désactivée, ses expressions ne sont pas évaluées et aucune alerte n'est déclenchée.
 
 

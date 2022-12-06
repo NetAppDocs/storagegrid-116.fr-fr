@@ -13,10 +13,11 @@ summary: Vous pouvez arrêter un nœud de grille à partir du shell de commande 
 [role="lead"]
 Vous pouvez arrêter un nœud de grille à partir du shell de commande du nœud.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez avoir le `Passwords.txt` fichier.
 
 
+.Description de la tâche
 Avant d'effectuer cette procédure, consultez les considérations suivantes :
 
 * En général, vous ne devez pas arrêter plusieurs nœuds à la fois pour éviter les perturbations.
@@ -91,4 +92,5 @@ Cette LED s'allume lorsque les données en cache doivent être écrites sur les 
 
 
 
+.Informations associées
 xref:../admin/index.adoc[Administrer StorageGRID]

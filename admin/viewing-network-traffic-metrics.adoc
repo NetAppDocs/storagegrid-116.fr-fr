@@ -13,11 +13,12 @@ summary: Vous pouvez surveiller le trafic réseau en consultant les graphiques d
 [role="lead"]
 Vous pouvez surveiller le trafic réseau en consultant les graphiques disponibles à partir de la page règles de classification du trafic.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez de l'autorisation d'accès racine ou des droits d'accès aux comptes de tenant.
 
 
+.Description de la tâche
 Pour toute règle de classification de trafic existante, vous pouvez afficher les mesures du service Load Balancer afin de déterminer si la stratégie limite le trafic sur le réseau. Les données des graphiques peuvent vous aider à déterminer si vous devez ajuster la stratégie.
 
 Même si aucune limite n'est définie pour une stratégie de classification du trafic, des mesures sont recueillies et les graphiques fournissent des informations utiles pour comprendre les tendances du trafic.
@@ -82,4 +83,5 @@ Les politiques de classification du trafic sont identifiées par leur ID. Les ID
 . Analysez les graphiques pour déterminer à quelle fréquence la stratégie limite le trafic et si vous devez ajuster la stratégie.
 
 
+.Informations associées
 xref:../monitor/index.adoc[Surveiller et résoudre les problèmes]

@@ -69,6 +69,7 @@ Déploiement d'un nœud de stockage d'appliance dans le cadre d'une opération d
 Instructions de récupération et de maintenance
 
 |===
+.Informations associées
 xref:preparing-for-installation.adoc[Préparation à l'installation (SG5600)]
 
 xref:installing-hardware.adoc[Installation du matériel (SG5600)]

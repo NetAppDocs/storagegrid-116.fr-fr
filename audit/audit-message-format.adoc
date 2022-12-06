@@ -46,6 +46,7 @@ La liste suivante décrit les éléments d'attribut :
 * `value` est le contenu de l'attribut, généralement une valeur numérique ou de texte. Les valeurs suivent toujours deux-points (`:`). Les valeurs du type de données CSTR sont entourées de guillemets doubles `" "`.
 
 
+.Informations associées
 xref:using-audit-explain-tool.adoc[Utiliser l'outil d'explication d'audit]
 
 xref:using-audit-sum-tool.adoc[Utiliser l'outil audit-sum]

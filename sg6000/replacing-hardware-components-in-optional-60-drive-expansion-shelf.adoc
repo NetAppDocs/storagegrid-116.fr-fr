@@ -13,7 +13,7 @@ summary: 'Vous devrez peut-être remplacer un module d"entrée/sortie, un bloc d
 [role="lead"]
 Vous devrez peut-être remplacer un module d'entrée/sortie, un bloc d'alimentation ou un ventilateur dans le tiroir d'extension.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous disposez de la procédure de remplacement du matériel E-Series.
 * Vous avez trouvé physiquement l'appliance de stockage où vous remplacez les composants matériels des tiroirs d'extension dans le data Center.
 +
@@ -21,6 +21,7 @@ xref:locating-controller-in-data-center.adoc[Localiser le contrôleur dans le da
 
 
 
+.Description de la tâche
 Pour remplacer un module d'entrée/sortie (IOM) dans un tiroir d'extension de 60 disques, reportez-vous aux instructions fournies dans ces instructions pour le remplacement d'un contrôleur de stockage.
 
 Pour remplacer un bloc d'alimentation ou un ventilateur dans un tiroir d'extension de 60 disques, accédez aux procédures E-Series pour entretenir le matériel de 60 disques.

@@ -61,6 +61,7 @@ Avant d'utiliser les services de plateforme, vous devez connaître les recommand
 * La réplication CloudMirror échoue avec une erreur AccessDenied si la conformité héritée du compartiment de destination est activée.
 
 
+.Informations associées
 xref:../tenant/index.adoc[Utilisez le compte du locataire]
 
 xref:../admin/index.adoc[Administrer StorageGRID]

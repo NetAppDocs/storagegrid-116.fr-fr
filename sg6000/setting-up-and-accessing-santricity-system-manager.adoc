@@ -13,7 +13,7 @@ summary: Vous devrez peut-être accéder à SANtricity System Manager sur le con
 [role="lead"]
 Vous devrez peut-être accéder à SANtricity System Manager sur le contrôleur de stockage pour contrôler le matériel du tiroir du contrôleur de stockage ou configurer les baies E-Series AutoSupport.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous utilisez un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Pour accéder à SANtricity System Manager via Grid Manager, vous devez avoir installé StorageGRID, et vous devez disposer de l'autorisation Administrateur de l'appliance de stockage ou de l'autorisation d'accès racine.
 * Pour accéder à SANtricity System Manager à l'aide du programme d'installation de l'appliance StorageGRID, vous devez disposer du nom d'utilisateur et du mot de passe de l'administrateur SANtricity System Manager.
@@ -26,6 +26,7 @@ NOTE: Vous devez disposer du micrologiciel SANtricity 8.70 (11.70) ou supérieur
 
 IMPORTANT: L'accès à SANtricity System Manager à partir de Grid Manager ou du programme d'installation de l'appliance n'est généralement destiné qu'au contrôle de votre matériel et à la configuration des baies E-Series AutoSupport. De nombreuses fonctionnalités et opérations dans SANtricity System Manager, telles que la mise à niveau du firmware, ne s'appliquent pas à la surveillance de votre appliance StorageGRID. Pour éviter tout problème, suivez toujours les instructions d'installation et de maintenance du matériel de votre appareil.
 
+.Description de la tâche
 Il existe trois façons d'accéder à SANtricity System Manager, en fonction de l'étape du processus d'installation et de configuration dans laquelle vous vous trouvez :
 
 * Si l'appliance n'a pas encore été déployée en tant que nœud dans votre système StorageGRID, utilisez l'onglet Avancé du programme d'installation de l'appliance StorageGRID.
@@ -37,7 +38,7 @@ NOTE: Une fois le nœud déployé, vous ne pouvez plus utiliser le programme d'i
 * Si vous ne pouvez pas utiliser StorageGRID Appliance installer ou Grid Manager, vous pouvez accéder directement à SANtricity System Manager à l'aide d'un navigateur Web connecté au port de gestion.
 
 
-Cette procédure comprend les étapes de votre accès initial à SANtricity System Manager. Si vous avez déjà configuré SANtricity System Manager, rendez-vous sur le ,étape de configuration des alertes matérielles.
+Cette procédure comprend les étapes de votre accès initial à SANtricity System Manager. Si vous avez déjà configuré SANtricity System Manager, rendez-vous sur le <<config_hardware_alerts_sg6000,étape de configuration des alertes matérielles>>.
 
 
 NOTE: L'utilisation de Grid Manager ou du programme d'installation de l'appliance StorageGRID vous permet d'accéder à SANtricity System Manager sans avoir à configurer ni à connecter le port de gestion de l'appliance.

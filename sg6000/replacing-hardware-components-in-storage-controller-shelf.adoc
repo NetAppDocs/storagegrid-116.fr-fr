@@ -13,7 +13,7 @@ summary: En cas de problème matériel, vous devrez peut-être remplacer un comp
 [role="lead"]
 En cas de problème matériel, vous devrez peut-être remplacer un composant du tiroir de contrôleur de stockage.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous disposez de la procédure de remplacement du matériel E-Series.
 * Vous avez physiquement situé l'appliance de stockage où vous remplacez des composants matériels de tiroirs de stockage dans le data Center.
 +
@@ -21,6 +21,7 @@ xref:locating-controller-in-data-center.adoc[Localiser le contrôleur dans le da
 
 
 
+.Description de la tâche
 Pour remplacer la batterie du contrôleur de stockage, reportez-vous aux instructions fournies dans ces instructions concernant le remplacement d'un contrôleur de stockage. Ces instructions décrivent le retrait d'un contrôleur de l'appareil, le retrait de la batterie du contrôleur, l'installation de la batterie et le remplacement du contrôleur.
 
 Pour obtenir des instructions sur les autres unités remplaçables sur le terrain (FRU) des tiroirs disques, accédez aux procédures de maintenance du système E-Series.
@@ -71,6 +72,7 @@ Tiroir disque (tiroirs de 60 disques uniquement)
 E-Series : remplacement du tiroir disque (60 disques)
 
 |===
+.Informations associées
 http://mysupport.netapp.com/info/web/ECMP1658252.html["Site de documentation sur les systèmes NetApp E-Series"^]
 
 xref:replacing-storage-controller-sg6000.adoc[Remplacement du contrôleur de stockage]

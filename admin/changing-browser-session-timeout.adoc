@@ -13,11 +13,12 @@ summary: 'Vous pouvez contrôler si les utilisateurs de Grid Manager et de tenan
 [role="lead"]
 Vous pouvez contrôler si les utilisateurs de Grid Manager et de tenant Manager sont déconnectés s'ils sont inactifs pendant plus d'un certain temps.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 
 
+.Description de la tâche
 Le délai d'inactivité de l'interface graphique est défini par défaut sur 900 secondes (15 minutes). Si la session de navigateur d'un utilisateur n'est pas active pendant cette période, la session est expirée.
 
 Si nécessaire, vous pouvez augmenter ou diminuer le délai d'inactivité en définissant l'option d'affichage délai d'inactivité de l'interface graphique.

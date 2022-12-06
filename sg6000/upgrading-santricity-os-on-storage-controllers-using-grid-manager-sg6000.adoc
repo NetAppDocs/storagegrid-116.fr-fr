@@ -13,7 +13,7 @@ summary: 'Pour les contrôleurs de stockage qui utilisent actuellement SANtricit
 [role="lead"]
 Pour les contrôleurs de stockage qui utilisent actuellement SANtricity OS 08.42.20.00 (11.42) ou version ultérieure, vous devez utiliser le gestionnaire grid pour appliquer une mise à niveau.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez consulté la matrice d'interopérabilité (IMT) de NetApp afin de vérifier que la version de SANtricity OS que vous utilisez pour la mise à niveau est compatible avec votre appliance.
 * Vous disposez de l'autorisation Maintenance ou accès racine.
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
@@ -21,6 +21,7 @@ Pour les contrôleurs de stockage qui utilisent actuellement SANtricity OS 08.42
 * Vous avez accès à la page de téléchargements NetApp pour SANtricity OS.
 
 
+.Description de la tâche
 Vous ne pouvez pas effectuer d'autres mises à jour logicielles (mise à niveau du logiciel StorageGRID ou correctif) tant que vous n'avez pas terminé le processus de mise à niveau de SANtricity OS. Si vous tentez de lancer un correctif ou une mise à niveau du logiciel StorageGRID avant la fin du processus de mise à niveau de SANtricity OS, vous êtes redirigé vers la page de mise à niveau de SANtricity OS.
 
 La procédure ne sera terminée qu'une fois la mise à niveau de SANtricity OS appliquée avec succès à tous les nœuds applicables sélectionnés pour la mise à niveau. Cela peut prendre plus de 30 minutes pour charger le système d'exploitation SANtricity sur chaque nœud (de façon séquentielle) et jusqu'à 90 minutes pour redémarrer chaque appliance de stockage StorageGRID.
@@ -167,7 +168,7 @@ IMPORTANT: La mise à niveau de SANtricity OS n'est terminée qu'une fois la mis
 Un message d'avertissement s'affiche vous demandant si vous êtes sûr de vouloir terminer le processus de mise à niveau sans mettre à niveau tous les nœuds.
 
 .. Sélectionnez *OK* pour revenir à la page *SANtricity OS*.
-.. Lorsque vous êtes prêt à continuer l'approbation des nœuds, accédez à ,Téléchargez SANtricity OS pour redémarrer le processus de mise à niveau.
+.. Lorsque vous êtes prêt à continuer l'approbation des nœuds, accédez à <<download_santricity_os,Téléchargez SANtricity OS>> pour redémarrer le processus de mise à niveau.
 
 
 +
@@ -187,6 +188,7 @@ NOTE: Lorsque vous répétez la procédure de mise à niveau, vous devez approuv
 
 
 
+.Informations associées
 https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^]
 
 xref:upgrading-santricity-os-on-storage-controllers-using-maintenance-mode-sg6000.adoc[Mettre à niveau le système d'exploitation SANtricity sur les contrôleurs de stockage à l'aide du mode de maintenance]

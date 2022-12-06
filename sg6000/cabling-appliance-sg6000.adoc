@@ -13,7 +13,7 @@ summary: Vous devez connecter les contrôleurs de stockage au contrôleur SG6000
 [role="lead"]
 Vous devez connecter les contrôleurs de stockage au contrôleur SG6000-CN, connecter les ports de gestion des trois contrôleurs, et connecter les ports réseau du contrôleur SG6000-CN au réseau Grid et au réseau client en option pour StorageGRID.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Les quatre câbles optiques fournis avec l'appareil permettent de connecter les deux contrôleurs de stockage au contrôleur SG6000-CN.
 * Vous disposez de câbles Ethernet RJ-45 (quatre minimum) pour connecter les ports de gestion.
 * Vous avez l'une des options suivantes pour les ports réseau. Ces éléments ne sont pas fournis avec l'appareil.
@@ -28,6 +28,7 @@ CAUTION: *Risque d'exposition au rayonnement laser* -- ne démontez pas et ne re
 
 
 
+.Description de la tâche
 Cette section fournit des instructions de câblage des dispositifs suivants :
 
 * SG6060 et SG6060X
@@ -207,6 +208,7 @@ N'utilisez pas le port de gestion 2 (P2 sur le E2800A et 0b sur le E2800B) sur l
 
 
 
+.Informations associées
 xref:port-bond-modes-for-sg6000-cn-controller.adoc[Modes de liaison des ports pour le contrôleur SG6000-CN]
 
 xref:reinstalling-sg6000-cn-controller-into-cabinet-or-rack.adoc[Réinstallez le contrôleur SG6000-CN dans l'armoire ou le rack]

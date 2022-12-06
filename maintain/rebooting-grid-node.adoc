@@ -13,6 +13,7 @@ summary: Vous pouvez redémarrer un nœud de grille à partir de Grid Manager ou
 [role="lead"]
 Vous pouvez redémarrer un nœud grid à partir de Grid Manager ou depuis le shell de commande du nœud.
 
+.Description de la tâche
 Lorsque vous redémarrez un nœud de la grille, celui-ci s'arrête et redémarre. Tous les services sont redémarrés automatiquement.
 
 Si vous prévoyez de redémarrer les nœuds de stockage, notez les éléments suivants :
@@ -21,4 +22,5 @@ Si vous prévoyez de redémarrer les nœuds de stockage, notez les éléments su
 * Pour vous assurer que vous pouvez accéder à tous les objets lors du redémarrage d'un nœud de stockage, arrêtez de les ingérer sur un site pendant environ une heure avant de redémarrer le nœud.
 
 
+.Informations associées
 xref:../admin/index.adoc[Administrer StorageGRID]

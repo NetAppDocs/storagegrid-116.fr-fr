@@ -13,11 +13,12 @@ summary: 'Vous pouvez désactiver les notifications SNMP, mettre à jour les cha
 [role="lead"]
 Vous pouvez désactiver les notifications SNMP, mettre à jour les chaînes de communauté ou ajouter ou supprimer des adresses d'agent, des utilisateurs USM et des destinations d'interruption.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer de l'autorisation accès racine.
 
 
+.Description de la tâche
 Chaque fois que vous mettez à jour le xref:configuring-snmp-agent.adoc[Configuration de l'agent SNMP], Sachez que vous devez cliquer sur *Enregistrer* en bas de la page agent SNMP pour valider les modifications que vous avez effectuées sur chaque onglet.
 
 .Étapes
@@ -72,12 +73,12 @@ Le nom d'utilisateur d'un utilisateur USM existant ne peut pas être modifié. S
 
 +
 
-NOTE: Si vous ajoutez ou supprimez l'ID moteur faisant autorité d'un utilisateur et que cet utilisateur est actuellement sélectionné pour une destination, vous devez modifier ou supprimer la destination, comme indiqué à l'étape ,Destination du trap SNMP. Sinon, une erreur de validation se produit lorsque vous enregistrez la configuration de l'agent SNMP.
+NOTE: Si vous ajoutez ou supprimez l'ID moteur faisant autorité d'un utilisateur et que cet utilisateur est actuellement sélectionné pour une destination, vous devez modifier ou supprimer la destination, comme indiqué à l'étape <<SNMP_TRAP_DESTINATION,Destination du trap SNMP>>. Sinon, une erreur de validation se produit lorsque vous enregistrez la configuration de l'agent SNMP.
 
 .. Pour supprimer un utilisateur USM, sélectionnez le bouton radio de l'utilisateur et cliquez sur *Supprimer*. Cliquez ensuite sur *OK* pour confirmer que vous souhaitez supprimer cet utilisateur.
 +
 
-NOTE: Si l'utilisateur que vous avez supprimé est actuellement sélectionné pour une destination de recouvrement, vous devez modifier ou supprimer la destination, comme indiqué à l'étape ,Destination du trap SNMP. Sinon, une erreur de validation se produit lorsque vous enregistrez la configuration de l'agent SNMP.
+NOTE: Si l'utilisateur que vous avez supprimé est actuellement sélectionné pour une destination de recouvrement, vous devez modifier ou supprimer la destination, comme indiqué à l'étape <<SNMP_TRAP_DESTINATION,Destination du trap SNMP>>. Sinon, une erreur de validation se produit lorsque vous enregistrez la configuration de l'agent SNMP.
 
 +
 image::../media/snmp_usm_user_remove_error.png[SNMP USM User Remove Error]

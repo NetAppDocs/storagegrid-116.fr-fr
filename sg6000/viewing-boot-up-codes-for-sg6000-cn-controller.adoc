@@ -13,7 +13,7 @@ summary: 'Lorsque vous mettez l"appareil sous tension, le contrôleur BMC consig
 [role="lead"]
 Lorsque vous mettez l'appareil sous tension, le contrôleur BMC consigne une série de codes de démarrage pour le contrôleur SG6000-CN. Vous pouvez afficher ces codes de plusieurs façons.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous savez comment accéder au tableau de bord BMC.
 * Si vous souhaitez utiliser Serial-over-LAN (sol), vous avez de l'expérience avec les applications de console IPMI sol.
 

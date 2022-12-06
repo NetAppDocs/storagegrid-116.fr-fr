@@ -13,6 +13,7 @@ summary: 'Le nœud d"archivage écrit dans un pool de stockage sur disque. Pour 
 [role="lead"]
 Le nœud d'archivage écrit dans un pool de stockage sur disque. Pour archiver du contenu sur bande, vous devez configurer le pool de stockage sur disque afin de déplacer le contenu vers un pool de stockage sur bande.
 
+.Description de la tâche
 Pour un serveur TSM, vous devez définir un pool de stockage sur bandes et un pool de stockage sur disque dans Tivoli Storage Manager. Une fois le pool de disques défini, créez un volume de disque et affectez-le au pool de disques. Un pool de bandes n'est pas nécessaire si votre serveur TSM utilise du stockage sur disque uniquement.
 
 Vous devez effectuer plusieurs étapes sur votre serveur TSM avant de pouvoir créer un pool de stockage sur bandes. (Créez une bibliothèque de bandes et au moins un lecteur dans la bibliothèque de bandes. Définissez un chemin entre le serveur et la bibliothèque et entre le serveur et les lecteurs, puis définissez une classe de périphériques pour les lecteurs.) Les détails de ces étapes peuvent varier en fonction de la configuration matérielle et des besoins de stockage du site. Pour plus d'informations, consultez la documentation TSM.

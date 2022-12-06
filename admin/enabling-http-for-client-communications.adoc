@@ -13,11 +13,12 @@ summary: 'Par défaut, les applications clientes utilisent le protocole réseau 
 [role="lead"]
 Par défaut, les applications clientes utilisent le protocole réseau HTTPS pour toutes les connexions aux nœuds de stockage ou au service CLB obsolète sur les nœuds de passerelle. Vous pouvez éventuellement activer HTTP pour ces connexions, par exemple lors du test d'une grille autre que la production.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 
 
+.Description de la tâche
 Cette tâche doit être effectuée uniquement si les clients S3 et Swift doivent établir des connexions HTTP directement vers les nœuds de stockage ou vers le service CLB obsolète sur les nœuds de passerelle.
 
 Il n'est pas nécessaire d'effectuer cette tâche pour les clients qui utilisent uniquement des connexions HTTPS ou pour les clients qui se connectent au service Load Balancer (parce que vous pouvez configurer chaque noeud final Load Balancer pour utiliser HTTP ou HTTPS). Pour plus d'informations, reportez-vous aux informations sur la configuration des noeuds finaux de l'équilibreur de charge.

@@ -13,6 +13,7 @@ summary: 'Étape 3 \(Define ind Behavior\) de l"assistant de création de règle
 [role="lead"]
 L'étape 3 (définir le comportement d'entrée) de l'assistant de création de règles ILM permet de choisir le mode de protection des objets filtrés par cette règle lors de leur ingestion.
 
+.Description de la tâche
 StorageGRID peut effectuer des copies intermédiaires et mettre en file d'attente les objets pour l'évaluation ILM, ou effectuer des copies pour répondre immédiatement aux instructions de placement de la règle.
 
 image::../media/define_ingest_behavior_for_ilm_rule.png[Créer la règle ILM étape 3 sur 3]

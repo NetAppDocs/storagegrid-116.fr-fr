@@ -45,6 +45,7 @@ Plusieurs opérations de compartiment et les opérations d'objets sont suivies d
 * PLACER l'objet - Copier
 
 
+.Informations associées
 xref:operations-on-buckets.adoc[Opérations sur les compartiments]
 
 xref:operations-on-objects.adoc[Opérations sur les objets]

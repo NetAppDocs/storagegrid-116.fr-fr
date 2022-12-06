@@ -13,6 +13,7 @@ summary: 'Avant d"installer Docker, il se peut que vous deviez formater le volum
 [role="lead"]
 Avant d'installer Docker, il se peut que vous deviez formater le volume de stockage Docker et le monter sur `/var/lib/docker`.
 
+.Description de la tâche
 Vous pouvez ignorer ces étapes si vous prévoyez d'utiliser le stockage local pour le volume de stockage Docker et disposer d'un espace suffisant sur la partition hôte contenant `/var/lib`.
 
 .Étapes

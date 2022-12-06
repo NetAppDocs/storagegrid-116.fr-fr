@@ -92,4 +92,5 @@ Une fois le compte de locataire Swift créé, l'utilisateur root du locataire pe
 
 IMPORTANT: Les utilisateurs Swift doivent disposer de l'autorisation d'accès racine pour accéder au Gestionnaire de locataires. Toutefois, l'autorisation d'accès racine ne permet pas aux utilisateurs de s'authentifier auprès de l'API REST Swift pour créer des conteneurs et ingérer des objets. Les utilisateurs doivent disposer de l'autorisation Administrateur Swift pour s'authentifier dans l'API REST de Swift.
 
+.Informations associées
 xref:../tenant/index.adoc[Utilisez un compte de locataire]

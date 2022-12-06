@@ -13,7 +13,7 @@ summary: Vous pouvez mettre à jour les coûts de liaison entre les sites de dat
 [role="lead"]
 Vous pouvez mettre à jour les coûts de liaison entre les sites de data Center afin de refléter la latence entre les sites.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez de l'autorisation Configuration de la page de topologie de la grille.
 

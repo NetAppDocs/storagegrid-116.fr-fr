@@ -13,7 +13,7 @@ summary: 'Si le nœud d"administration non primaire que vous êtes en cours de r
 [role="lead"]
 Si le nœud d'administration non primaire que vous êtes en cours de restauration est actuellement défini comme l'expéditeur préféré des notifications d'alerte, des notifications d'alarme et des messages AutoSupport, vous devez reconfigurer ce paramètre dans le système StorageGRID.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer d'autorisations d'accès spécifiques.
 * Le nœud d'administration restauré doit être installé et en cours d'exécution.
@@ -25,4 +25,5 @@ Si le nœud d'administration non primaire que vous êtes en cours de restauratio
 . Cliquez sur *appliquer les modifications*.
 
 
+.Informations associées
 xref:../admin/index.adoc[Administrer StorageGRID]

@@ -13,7 +13,7 @@ summary: 'Si vous utilisez un locataire S3 et que vous disposez des autorisation
 [role="lead"]
 Si vous utilisez un locataire S3 et que vous disposez des autorisations appropriées, vous pouvez afficher la liste de vos clés d'accès S3. Vous pouvez trier la liste en fonction de l'heure d'expiration afin de déterminer quelles clés vont bientôt expirer. Si nécessaire, vous pouvez créer de nouvelles clés ou supprimer des clés que vous n'utilisez plus.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Gestionnaire de locataires à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer de l'autorisation gérer vos propres informations d'identification S3.
 
@@ -39,6 +39,7 @@ Les clés expirées sont supprimées automatiquement.
 
 
 
+.Informations associées
 xref:creating-your-own-s3-access-keys.adoc[Créez vos propres clés d'accès S3]
 
 xref:deleting-your-own-s3-access-keys.adoc[Supprimez vos propres clés d'accès S3]

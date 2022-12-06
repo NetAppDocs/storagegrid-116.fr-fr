@@ -13,7 +13,7 @@ summary: Vous pouvez activer la fonctionnalité AutoSupport et les options AutoS
 [role="lead"]
 Vous pouvez activer la fonctionnalité AutoSupport et les options AutoSupport individuelles lors de la première installation de StorageGRID, ou vous pouvez les activer ultérieurement.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez de l'autorisation d'accès racine ou d'une autre autorisation de configuration de grille.
 * Si vous utilisez le protocole HTTPS ou HTTP pour l'envoi de messages AutoSupport, vous avez fourni un accès Internet sortant au nœud d'administration principal, soit directement, soit à l'aide d'un serveur proxy (connexions entrantes non requises).
@@ -135,7 +135,7 @@ Si nécessaire, vous pouvez éventuellement désactiver la vérification des mis
 
 Lorsque vous activez AutoSupport, les messages d'état et d'état sont envoyés au support NetApp. Vous pouvez indiquer une destination supplémentaire pour tous les messages AutoSupport.
 
-Pour vérifier ou modifier le protocole utilisé pour envoyer des messages AutoSupport, reportez-vous aux instructions à  the protocol for AutoSupport messages.
+Pour vérifier ou modifier le protocole utilisé pour envoyer des messages AutoSupport, reportez-vous aux instructions à <<Spécifiez le protocole des messages AutoSupport>>.
 
 
 NOTE: Vous ne pouvez pas utiliser le protocole SMTP pour envoyer des messages AutoSupport à une destination supplémentaire.

@@ -67,7 +67,7 @@ Se comporte de la même manière que le niveau de cohérence « entre les nouvel
 |===
 
 
-== Utiliser les contrôles de cohérence "lecture après nouvelle écriture" et "disponible"
+== Utilisez des contrôles de cohérence « en cas de nouvelle écriture » et « disponibles »
 
 Lorsqu'une OPÉRATION EN TÊTE ou GET utilise le contrôle de cohérence « en cas de nouvelle écriture », StorageGRID effectue la recherche en plusieurs étapes, comme suit :
 
@@ -145,6 +145,7 @@ Si vous utilisez à la place la même règle ILM et le niveau de cohérence "sep
 
 L'interdépendance entre les niveaux de cohérence et les règles ILM peut être complexe. Contactez NetApp si vous avez besoin d'aide.
 
+.Informations associées
 xref:../ilm/index.adoc[Gestion des objets avec ILM]
 
 xref:get-bucket-consistency-request.adoc[DEMANDE de cohérence des compartiments]

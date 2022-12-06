@@ -20,7 +20,7 @@ Le déplacement d'objets d'un nœud d'archivage vers un système de stockage d'a
 Si vous utilisez actuellement un nœud d'archivage avec l'option *Cloud Tiering - simple Storage Service (S3)*, envisagez de migrer vos objets vers un pool de stockage cloud. Voir xref:../ilm/index.adoc[Gestion des objets avec ILM].
 
 ====
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 * Vous avez créé un compartiment sur le système de stockage d'archivage cible :

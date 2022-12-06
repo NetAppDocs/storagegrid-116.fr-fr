@@ -14,6 +14,7 @@ summary: 'Si vous constatez un problème de sécurité ou de certificat lorsque 
 [role="lead"]
 Si vous constatez un problème de sécurité ou de certificat lorsque vous essayez de vous connecter à StorageGRID à l'aide d'un navigateur Web, d'un client S3 ou Swift ou d'un outil de surveillance externe, vérifiez le certificat.
 
+.Description de la tâche
 Les erreurs de certificat peuvent entraîner des problèmes lors de votre tentative de connexion à StorageGRID à l'aide de Grid Manager, de l'API de gestion du grid, du gestionnaire de locataires ou de l'API de gestion des locataires. Des erreurs liées au certificat peuvent également se produire lorsque vous tentez de vous connecter à un client S3 ou Swift ou à un outil de surveillance externe.
 
 Si vous accédez à Grid Manager ou au Gestionnaire de locataires à l'aide d'un nom de domaine au lieu d'une adresse IP, le navigateur affiche une erreur de certificat sans option de contournement si l'un des cas suivants se produit :
@@ -30,6 +31,7 @@ Pour garantir que les opérations ne sont pas interrompues par un certificat de 
 
 Lorsque vous utilisez des certificats client pour l'intégration avec Prometheus externe, les erreurs de certificat peuvent être dues au certificat de l'interface de gestion StorageGRID ou aux certificats client. L'alerte *expiration des certificats client configurés sur la page certificats* est déclenchée lorsqu'un certificat client arrive à expiration.
 
+.Étapes
 Si vous avez reçu une notification d'alerte concernant un certificat expiré, accédez aux détails du certificat : . Sélectionnez *CONFIGURATION* *sécurité* *certificats*, puis xref:../admin/using-storagegrid-security-certificates.adoc#access-security-certificates[sélectionnez l'onglet certificat approprié].
 
 . Vérifiez la période de validité du certificat. + certains navigateurs Web et clients S3 ou Swift n'acceptent pas les certificats ayant une période de validité supérieure à 398 jours.

@@ -13,4 +13,5 @@ summary: 'Lors de la configuration de liaisons réseau pour les ports de contrô
 [role="lead"]
 Lors de la configuration de liaisons réseau pour les ports de contrôleur E5700SG, vous pouvez utiliser la liaison de port pour les ports 10/25-GbE qui se connectent au réseau Grid et au réseau client en option, ainsi que les ports de gestion 1-GbE qui se connectent au réseau Admin en option. La liaison de ports contribue à protéger vos données en fournissant des chemins redondants entre les réseaux StorageGRID et l'appliance.
 
+.Informations associées
 xref:configuring-network-links-sg5700.adoc[Configuration des liaisons réseau (SG5700)]

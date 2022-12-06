@@ -68,4 +68,5 @@ Dans ce cas, une alarme est déclenchée dans le gestionnaire de grille sur Tota
 
 Un locataire peut déclencher la réplication ou la notification d'échec en mettant à jour les métadonnées ou les balises de l'objet. Un locataire peut soumettre à nouveau les valeurs existantes afin d'éviter toute modification non souhaitée.
 
+.Informations associées
 xref:../ilm/index.adoc[Gestion des objets avec ILM]

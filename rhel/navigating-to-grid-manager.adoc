@@ -13,6 +13,7 @@ summary: Le gestionnaire de grille permet de définir toutes les informations n�
 [role="lead"]
 Le gestionnaire de grille permet de définir toutes les informations nécessaires à la configuration du système StorageGRID.
 
+.Ce dont vous avez besoin
 Le nœud d'administration principal doit être déployé et avoir terminé la séquence de démarrage initiale.
 
 .Étapes

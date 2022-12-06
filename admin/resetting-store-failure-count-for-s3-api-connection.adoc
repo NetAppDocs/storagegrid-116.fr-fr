@@ -13,7 +13,7 @@ summary: 'Si votre nœud d"archivage se connecte à un système de stockage d"ar
 [role="lead"]
 Si votre nœud d'archivage se connecte à un système de stockage d'archives via l'API S3, vous pouvez réinitialiser le nombre d'échecs de stockage, qui peut être utilisé pour effacer l'alarme ARVF (échecs de stockage).
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 

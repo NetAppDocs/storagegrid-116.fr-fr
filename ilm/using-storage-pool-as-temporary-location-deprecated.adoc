@@ -18,4 +18,5 @@ Les sites temporaires sont obsolètes et seront supprimés dans une version ult�
 
 NOTE: Si vous sélectionnez le comportement d'entrée strict (étape 3 de l'assistant Créer une règle ILM), l'emplacement temporaire est ignoré.
 
+.Informations associées
 xref:data-protection-options-for-ingest.adoc[Options de protection des données pour l'ingestion]

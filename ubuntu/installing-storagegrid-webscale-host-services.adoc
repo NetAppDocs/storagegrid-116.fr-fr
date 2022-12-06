@@ -13,6 +13,7 @@ summary: Vous utilisez le package StorageGRID DEB pour installer les services h�
 [role="lead"]
 Vous utilisez le package StorageGRID DEB pour installer les services hôte StorageGRID.
 
+.Description de la tâche
 Ces instructions décrivent comment installer les services hôte à partir des packages DEB. Vous pouvez également utiliser les métadonnées du référentiel APT incluses dans l'archive d'installation pour installer les packages DEB à distance. Consultez les instructions du référentiel APT pour votre système d'exploitation Linux.
 
 .Étapes

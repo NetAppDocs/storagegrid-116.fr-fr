@@ -23,7 +23,7 @@ Archive de l'installation de StorageGRID
  a| 
 Si vous ajoutez de nouveaux nœuds de grille ou un nouveau site, vous devez télécharger et extraire l'archive d'installation de StorageGRID. Vous devez utiliser la même version que celle actuellement en cours d'exécution sur la grille.
 
-Pour plus de détails, reportez-vous aux instructions de ,Téléchargement et extraction des fichiers d'installation de StorageGRID.
+Pour plus de détails, reportez-vous aux instructions de <<download-and-extract-install-files,Téléchargement et extraction des fichiers d'installation de StorageGRID>>.
 
 *Remarque :* vous n'avez pas besoin de télécharger de fichiers si vous ajoutez de nouveaux volumes de stockage à des nœuds de stockage existants ou si vous installez une nouvelle appliance StorageGRID.
 
@@ -81,8 +81,10 @@ Pour les versions prises en charge, reportez-vous à la section https://mysuppor
 
 == Téléchargez et extrayez les fichiers d'installation de StorageGRID
 
+.[[download-and-extract-install-files]]
 Avant de pouvoir ajouter de nouveaux nœuds de grille ou un nouveau site, vous devez télécharger l'archive d'installation StorageGRID appropriée et extraire les fichiers.
 
+.Description de la tâche
 Vous devez effectuer des opérations d'extension à l'aide de la version de StorageGRID actuellement exécutée sur la grille.
 
 .Étapes

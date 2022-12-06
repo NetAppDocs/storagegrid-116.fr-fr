@@ -13,7 +13,7 @@ summary: 'Dans certains cas, vous devrez peut-être rééquilibrer les données 
 [role="lead"]
 Dans certains cas, vous devrez peut-être rééquilibrer les données avec code d'effacement après l'ajout de nouveaux nœuds de stockage.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez terminé les étapes d'extension pour ajouter les nouveaux nœuds de stockage.
 * Vous avez passé en revue le xref:considerations-for-rebalancing-erasure-coded-data.adoc[considérations relatives au rééquilibrage des données avec code d'effacement].
 +
@@ -24,6 +24,7 @@ IMPORTANT: N'effectuez cette procédure que si l'alerte *stockage d'objets bas* 
 * Vous avez le `Passwords.txt` fichier.
 
 
+.Description de la tâche
 Lors de l'exécution de la procédure de rééquilibrage EC, les performances des opérations ILM et les opérations des clients S3 et Swift sont susceptibles d'être affectées. Pour cette raison, vous ne devez effectuer cette procédure que dans des cas limités.
 
 
@@ -95,8 +96,8 @@ Pour obtenir de l'aide sur la commande rééquilibrer-données :
 . Effectuer des étapes supplémentaires en fonction de l'état renvoyé :
 +
 ** Si l'état est `In progress`, L'opération EC de rééquilibrage est toujours en cours. Vous devez régulièrement surveiller la procédure jusqu'à ce qu'elle soit terminée.
-** Si l'état est `Failure`, exécutez l' ,étapes de panne.
-** Si l'état est `Success`, exécutez l' ,étape de réussite.
+** Si l'état est `Failure`, exécutez l' <<rebalance_fail,étapes de panne>>.
+** Si l'état est `Success`, exécutez l' <<rebalance_succeed,étape de réussite>>.
 
 
 . Si la procédure de rééquilibrage EC génère une charge trop importante (par exemple, les opérations d'ingestion sont affectées), mettez la procédure en pause.
@@ -123,7 +124,7 @@ Pour plus d'informations sur des alertes spécifiques, reportez-vous aux instruc
 .. Si le statut de la procédure de rééquilibrage de la ce est toujours `Failure`, contactez le support technique.
 
 
-. [[rééquilibrages_réussi]]si le statut de la procédure de rééquilibrage EC est `Success`, facultatif ,examinez le stockage objet pour afficher les détails mis à jour pour le site.
+. [[rééquilibrages_réussi]]si le statut de la procédure de rééquilibrage EC est `Success`, facultatif <<review_object_storage,examinez le stockage objet>> pour afficher les détails mis à jour pour le site.
 +
 Les données avec code d'effacement doivent désormais être plus équilibrées entre les nœuds de stockage du site.
 

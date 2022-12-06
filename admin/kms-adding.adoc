@@ -13,13 +13,14 @@ summary: 'L"assistant de serveur de gestion des clés StorageGRID vous permet d"
 [role="lead"]
 L'assistant de serveur de gestion des clés StorageGRID vous permet d'ajouter chaque cluster KMS ou KMS.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez passé en revue le xref:kms-considerations-and-requirements.adoc[considérations et conditions requises pour l'utilisation d'un serveur de gestion des clés].
 * Vous avez xref:kms-configuring-storagegrid-as-client.adoc[Configuration de StorageGRID en tant que client dans le KMS], Et vous disposez des informations requises pour chaque cluster KMS ou KMS.
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez de l'autorisation d'accès racine.
 
 
+.Description de la tâche
 Si possible, configurez tous les serveurs de gestion de clés spécifiques au site avant de configurer un KMS par défaut qui s'applique à tous les sites non gérés par un autre KMS. Si vous créez d'abord le KMS par défaut, toutes les appliances chiffrées par nœud dans le grid seront chiffrées par le KMS par défaut. Si vous souhaitez créer ultérieurement un KMS spécifique au site, vous devez d'abord copier la version actuelle de la clé de chiffrement à partir du KMS par défaut vers le nouveau KMS. Voir xref:kms-considerations-for-changing-for-site.adoc[Considérations relatives à la modification du KMS pour un site] pour plus d'informations.
 
 

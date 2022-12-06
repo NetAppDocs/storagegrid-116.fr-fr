@@ -13,7 +13,7 @@ summary: 'Vous pouvez configurer des liaisons réseau pour les ports utilisés p
 [role="lead"]
 Vous pouvez configurer des liaisons réseau pour les ports utilisés pour connecter l'appliance au réseau Grid, au réseau client et au réseau Admin. Vous pouvez définir la vitesse de liaison ainsi que les modes de port et de liaison réseau.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez obtenu l'équipement supplémentaire requis pour votre type de câble et la vitesse de liaison.
 * Vous avez connecté les ports réseau à des commutateurs qui prennent en charge la vitesse choisie.
 
@@ -26,6 +26,7 @@ Si vous prévoyez d'utiliser le mode de liaison de port d'agrégat, le mode de l
 * Vous connaissez la balise VLAN unique à utiliser pour chaque réseau. Cette balise VLAN sera ajoutée à chaque paquet réseau pour s'assurer que le trafic réseau est acheminé vers le réseau approprié.
 
 
+.Description de la tâche
 Les figures montrent comment les quatre ports réseau sont liés en mode de liaison de port fixe (configuration par défaut).
 
 *Mode de liaison de port fixe SG100*
@@ -223,4 +224,5 @@ NOTE: Vous risquez de perdre votre connexion si vous avez apporté des modificat
 
 
 
+.Informations associées
 xref:obtaining-additional-equipment-and-tools-sg100-and-sg1000.adoc[Obtenir des équipements et des outils supplémentaires (SG100 et SG1000)]

@@ -13,6 +13,7 @@ summary: 'Les affichages à sept segments de chaque contrôleur affichent les co
 [role="lead"]
 Les affichages à sept segments de chaque contrôleur affichent les codes d'état et d'erreur lors de la mise sous tension de l'appareil.
 
+.Description de la tâche
 Le contrôleur E2800 et le contrôleur E5700SG affichent des États et des codes d'erreur différents.
 
 Pour comprendre la signification de ces codes, consultez les ressources suivantes :
@@ -76,6 +77,7 @@ Dans la séquence, le premier jeu de chiffres est l'adresse IP attribuée par DH
 . Si les affichages à sept segments affichent d'autres valeurs, voir xref:troubleshooting-hardware-installation.adoc[Résolution des problèmes liés à l'installation du matériel (SG5700)] et confirmez que vous avez correctement effectué les étapes d'installation. Si vous ne parvenez pas à résoudre le problème, contactez le support technique.
 
 
+.Informations associées
 xref:status-indicators-on-e5700sg-controller.adoc[Voyants d'état sur le contrôleur E5700SG]
 
 https://library.netapp.com/ecmdocs/ECMLP2588751/html/frameset.html["Guide de surveillance des systèmes E5700 et E2800"^]

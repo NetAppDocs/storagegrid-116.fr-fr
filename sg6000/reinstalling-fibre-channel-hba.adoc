@@ -13,7 +13,7 @@ summary: 'L"adaptateur HBA Fibre Channel de remplacement est installé au même 
 [role="lead"]
 L'adaptateur HBA Fibre Channel de remplacement est installé au même emplacement que celui qui a été retiré.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous disposez de l'adaptateur HBA Fibre Channel de remplacement approprié.
 * Vous avez supprimé l'adaptateur HBA Fibre Channel existant.
 +
@@ -40,6 +40,7 @@ image::../media/sg6060_riser_alignment_hole.jpg[Trou d'alignement sur l'ensemble
 . Retirez les capuchons de protection des ports HBA Fibre Channel sur lesquels vous devez réinstaller les câbles.
 
 
+.Une fois que vous avez terminé
 Si vous ne disposez d'aucune autre procédure de maintenance à effectuer dans le contrôleur, réinstallez le capot du contrôleur.
 
 xref:reinstalling-sg6000-cn-controller-cover.adoc[Réinstallez le couvercle du contrôleur SG6000-CN]

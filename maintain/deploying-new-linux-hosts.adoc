@@ -39,6 +39,7 @@ IMPORTANT: N'utilisez jamais FabricPool pour transférer automatiquement toutes 
 
 
 
+.Informations associées
 xref:../rhel/index.adoc[Installez Red Hat Enterprise Linux ou CentOS]
 
 xref:../ubuntu/index.adoc[Installez Ubuntu ou Debian]

@@ -13,7 +13,7 @@ summary: 'Après la récupération des volumes de stockage, vous devez vérifier
 [role="lead"]
 Après la récupération des volumes de stockage, vous devez vérifier que l'état souhaité du noeud de stockage est défini sur en ligne et vous assurer que l'état sera en ligne par défaut à chaque redémarrage du serveur du noeud de stockage.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Le nœud de stockage a été restauré et la restauration des données est terminée.
 

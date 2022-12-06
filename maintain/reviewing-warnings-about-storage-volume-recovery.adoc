@@ -40,6 +40,7 @@ IMPORTANT: Si les règles ILM sont configurées pour ne stocker qu'une seule cop
 
 NOTE: Si vous rencontrez une alarme Services : Etat - Cassandra (SVST) pendant la récupération, reportez-vous aux instructions de surveillance et de dépannage pour récupérer de l'alarme en reconstruisant Cassandra. Après la reconstruction de Cassandra, les alarmes doivent être désactivées. Si les alarmes ne sont pas claires, contactez le support technique.
 
+.Informations associées
 xref:../monitor/index.adoc[Surveiller et résoudre les problèmes]
 
 xref:warnings-and-considerations-for-grid-node-recovery.adoc[Avertissements et considérations relatives à la restauration des nœuds de la grille]

@@ -45,7 +45,7 @@ image::../media/sign_in_sso.gif[StorageGRID page de connexion si SSO est activé
 
 +
 
-NOTE: La page de connexion StorageGRID n'apparaît pas lorsque vous saisissez l'URL complète d'un compte de locataire (c'est-à-dire un nom de domaine complet ou une adresse IP suivi de `/?accountId=_20-digit-account-id_`). Au lieu de cela, vous êtes immédiatement redirigé vers la page de connexion SSO de votre entreprise, où vous pouvez ,Connectez-vous à l'aide de vos identifiants SSO.
+NOTE: La page de connexion StorageGRID n'apparaît pas lorsque vous saisissez l'URL complète d'un compte de locataire (c'est-à-dire un nom de domaine complet ou une adresse IP suivi de `/?accountId=_20-digit-account-id_`). Au lieu de cela, vous êtes immédiatement redirigé vers la page de connexion SSO de votre entreprise, où vous pouvez <<signin_sso,Connectez-vous à l'aide de vos identifiants SSO>>.
 
 . Indiquez si vous souhaitez accéder au Grid Manager ou au tenant Manager :
 +

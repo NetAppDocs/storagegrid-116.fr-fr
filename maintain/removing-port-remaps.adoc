@@ -48,4 +48,5 @@ Suivez les instructions de la section xref:rebooting-grid-node.adoc[redémarrage
 . Répétez ces étapes sur chaque nœud d'administration et nœud de passerelle disposant de ports en conflit avec des ports remappés.
 
 
+.Informations associées
 xref:../admin/index.adoc[Administrer StorageGRID]

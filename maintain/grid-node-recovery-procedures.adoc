@@ -22,4 +22,5 @@ En général, vous essayez de préserver les données du nœud de grille défail
 
 IMPORTANT: En cas de défaillance de l'ensemble du site StorageGRID, contactez le support technique. Le support technique vous accompagne pour développer et mettre en œuvre un plan de reprise sur site qui optimise la quantité des données récupérées et répond aux objectifs de l'entreprise.
 
+.Informations associées
 xref:how-site-recovery-is-performed-by-technical-support.adoc[Comment la reprise sur site est effectuée par le support technique]

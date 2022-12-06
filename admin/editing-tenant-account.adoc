@@ -13,7 +13,7 @@ summary: 'Vous pouvez modifier un compte de tenant pour modifier le nom d"affich
 [role="lead"]
 Vous pouvez modifier un compte de tenant pour modifier le nom d'affichage, modifier le paramètre du référentiel d'identité, autoriser ou interdire les services de plate-forme, ou entrer un quota de stockage.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 

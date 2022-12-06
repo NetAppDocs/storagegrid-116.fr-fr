@@ -13,6 +13,7 @@ summary: 'Après avoir installé le tiroir de 60 disques dans une armoire ou un 
 [role="lead"]
 Après avoir installé le tiroir de 60 disques dans une armoire ou un rack, vous devez installer les 60 disques dans le shelf. Le numéro d'expédition du tiroir contrôleur E2860 comprend deux disques SSD que vous devez installer dans le tiroir supérieur du tiroir contrôleur. Chaque tiroir d'extension en option comprend 60 disques durs et aucun disque SSD.
 
+.Ce dont vous avez besoin
 Vous avez installé le tiroir contrôleur E2860 ou deux tiroirs d'extension optionnels (un ou deux) dans l'armoire ou le rack.
 
 

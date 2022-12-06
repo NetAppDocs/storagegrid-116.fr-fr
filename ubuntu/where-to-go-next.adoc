@@ -55,6 +55,7 @@ NOTE: Si des nœuds d'archivage utilisent Tivoli Storage Manager comme système 
 
 NOTE: L'exportation d'audit via CIFS/Samba a été obsolète et sera supprimée dans une future version de StorageGRID.
 
+.Informations associées
 xref:../admin/index.adoc[Administrer StorageGRID]
 
 xref:../s3/index.adoc[Utilisation de S3]

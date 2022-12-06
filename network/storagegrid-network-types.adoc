@@ -36,7 +36,7 @@ Trafic administratif
  a| 
 Trafic utilisé pour l'administration et la maintenance du système.
  a| 
-Réseau d'administration (facultatif),  VLAN networks,Réseau VLAN (facultatif)
+Réseau d'administration (facultatif), <<Réseaux VLAN facultatifs,Réseau VLAN (facultatif)>>
 
 
 
@@ -45,7 +45,7 @@ Trafic client
  a| 
 Le trafic qui circule entre les applications client externes et la grille, y compris toutes les demandes de stockage objet des clients S3 et Swift.
  a| 
-Réseau client (facultatif),  VLAN networks,Réseau VLAN (facultatif)
+Réseau client (facultatif), <<Réseaux VLAN facultatifs,Réseau VLAN (facultatif)>>
 
 |===
 Vous pouvez configurer la mise en réseau de l'une des manières suivantes :

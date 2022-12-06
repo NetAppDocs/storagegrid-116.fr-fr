@@ -13,12 +13,13 @@ summary: 'Il se peut que vous ne puissiez pas vous connecter à Grid Manager si 
 [role="lead"]
 Il se peut que vous ne puissiez pas vous connecter à Grid Manager si le système d'authentification unique (SSO) est en panne. Dans ce cas, vous pouvez temporairement désactiver et réactiver SSO pour un noeud d'administration. Pour désactiver puis réactiver SSO, vous devez accéder au shell de commande du nœud.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous disposez d'autorisations d'accès spécifiques.
 * Vous avez le `Passwords.txt` fichier.
 * Vous connaissez le mot de passe de l'utilisateur racine local.
 
 
+.Description de la tâche
 Après avoir désactivé SSO pour un noeud d'administration, vous pouvez vous connecter à Grid Manager en tant qu'utilisateur racine local. Pour sécuriser votre système StorageGRID, vous devez utiliser le shell de commande du nœud pour réactiver SSO sur le nœud d'administration dès que vous vous déconnectez.
 
 

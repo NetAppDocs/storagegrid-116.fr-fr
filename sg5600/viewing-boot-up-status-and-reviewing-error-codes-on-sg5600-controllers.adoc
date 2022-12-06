@@ -13,6 +13,7 @@ summary: 'L"écran à sept segments de chaque contrôleur affiche les codes d"é
 [role="lead"]
 L'écran à sept segments de chaque contrôleur affiche les codes d'état et d'erreur lorsque l'appareil est mis sous tension, pendant l'initialisation du matériel, et lorsque le matériel tombe en panne et doit sortir de l'initialisation. Si vous suivez la progression ou le dépannage, vous devez observer la séquence des codes telle qu'ils apparaissent.
 
+.Description de la tâche
 Les codes d'état et d'erreur du contrôleur E5600SG ne sont pas identiques à ceux du contrôleur E2700.
 
 .Étapes
@@ -21,6 +22,7 @@ Les codes d'état et d'erreur du contrôleur E5600SG ne sont pas identiques à c
 . Pour examiner les codes d'erreur du contrôleur E2700, consultez la documentation du contrôleur E2700 sur le site de support.
 
 
+.Informations associées
 xref:e5600sg-controller-seven-segment-display-codes.adoc[Codes d'affichage sept segments du contrôleur E5600SG]
 
 http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61765["Documentation NetApp : gamme E2700"^]

@@ -13,8 +13,10 @@ summary: 'Vous connectez le contrôleur E2700 de l"appliance à SANtricity Stora
 [role="lead"]
 Vous connectez le contrôleur E2700 de l'appliance à SANtricity Storage Manager, puis ajoutez l'appliance en tant que baie de stockage.
 
+.Ce dont vous avez besoin
 Vous utilisez un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 
+.Description de la tâche
 Pour obtenir des instructions détaillées, consultez la documentation du gestionnaire de stockage SANtricity.
 
 .Étapes
@@ -44,4 +46,5 @@ NOTE: Un seul contrôleur de l'appliance est connecté à SANtricity Storage Man
 . Cliquez sur *Ajouter*.
 
 
+.Informations associées
 http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61197["Documentation NetApp : responsable du stockage SANtricity"^]

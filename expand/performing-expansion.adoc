@@ -13,7 +13,7 @@ summary: 'Lorsque vous effectuez l"extension, des nœuds grid sont ajoutés à v
 [role="lead"]
 Lorsque vous effectuez l'extension, des nœuds grid sont ajoutés à votre déploiement StorageGRID existant.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez de l'autorisation Maintenance ou accès racine.
 * Vous avez la phrase secrète pour le provisionnement.
@@ -22,6 +22,7 @@ Lorsque vous effectuez l'extension, des nœuds grid sont ajoutés à votre dépl
 * Si vous ajoutez un site, vous devez vérifier et mettre à jour les règles ILM avant de lancer la procédure d'extension afin de vous assurer que les copies d'objets ne sont pas stockées sur le nouveau site tant que l'extension n'est pas terminée. Par exemple, si une règle utilise le pool de stockage par défaut (tous les nœuds de stockage), vous devez créer un nouveau pool de stockage contenant uniquement les nœuds de stockage existants et mettre à jour la règle ILM pour utiliser le nouveau pool de stockage. Sinon, les objets seront copiés sur le nouveau site dès que le premier nœud de ce site devient actif. Reportez-vous aux instructions pour xref:../ilm/index.adoc[Gestion des objets avec ILM].
 
 
+.Description de la tâche
 L'extension comprend les phases suivantes :
 
 . Vous configurez l'extension en spécifiant si vous ajoutez de nouveaux nœuds de grille ou un nouveau site et en approuvant les nœuds de grille que vous souhaitez ajouter.
@@ -180,4 +181,5 @@ IMPORTANT: Ne redémarrez aucun nœud de stockage au cours des étapes suivantes
 . Continuez à surveiller l'extension jusqu'à ce que toutes les tâches soient terminées et que le bouton *Configure expansion* réapparaît.
 
 
+.Une fois que vous avez terminé
 En fonction des types de nœuds de la grille que vous avez ajoutés, vous devez effectuer des étapes d'intégration et de configuration supplémentaires. Voir xref:configuring-expanded-storagegrid-system.adoc[Étapes de configuration après l'extension].

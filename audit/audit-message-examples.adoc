@@ -71,6 +71,7 @@ UT][ANID(UI32):12872812][AMID(FC32):S3RQ][ATID(UI64):15792241
 ----
 ATIM enregistre le temps, en microsecondes, depuis le début de l'époque UNIX. Dans l'exemple, la valeur `1405631878959669` Traduit au jeudi 17 juillet 2014 21:17:59 UTC.
 
+.Informations associées
 xref:sput-s3-put.adoc[SPUT : PUT S3]
 
 xref:common-elements-in-audit-messages.adoc[Éléments communs dans les messages d'audit]

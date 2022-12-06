@@ -13,12 +13,13 @@ summary: 'Vous pouvez contrôler la capacité de lecture et d"écriture du nœud
 [role="lead"]
 Vous pouvez contrôler la capacité de lecture et d'écriture du nœud d'archivage sur le système de stockage d'archives externe ciblé qui se connecte via l'API S3 en modifiant l'état du service de Tiering cloud.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer d'autorisations d'accès spécifiques.
 * Le nœud d'archivage doit être configuré.
 
 
+.Description de la tâche
 Vous pouvez mettre le nœud d'archivage hors ligne en changeant l'état du service de Tiering cloud sur *Read-Write Disabled*.
 
 .Étapes

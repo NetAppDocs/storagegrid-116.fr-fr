@@ -80,6 +80,7 @@ Objet entièrement restauré dans le pool de stockage cloud
 *Remarque :* si un objet a été restauré à un état récupérable, vous pouvez le modifier `expiry-date` En réémettant la demande DE restauration POST Object avec une nouvelle valeur pour `Days`. La date de restauration est mise à jour par rapport à l'heure de la demande.
 
 |===
+.Informations associées
 xref:../ilm/index.adoc[Gestion des objets avec ILM]
 
 xref:head-object.adoc[Objet TÊTE]

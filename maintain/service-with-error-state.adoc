@@ -13,8 +13,10 @@ summary: 'Si vous détectez qu"un service a entré un état d"erreur, essayez de
 [role="lead"]
 Si vous détectez qu'un service a entré un état d'erreur, essayez de redémarrer le service.
 
+.Ce dont vous avez besoin
 Vous devez avoir le `Passwords.txt` fichier.
 
+.Description de la tâche
 Server Manager surveille les services et redémarre tout qui s'est arrêté de façon inattendue. En cas d'échec d'un service, Server Manager tente de le redémarrer. Si trois tentatives de démarrage d'un service ont échoué dans les cinq minutes, le service passe en état d'erreur. Server Manager ne tente pas un redémarrage supplémentaire.
 
 .Étapes

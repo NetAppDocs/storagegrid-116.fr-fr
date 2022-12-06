@@ -82,6 +82,7 @@ Pour afficher les codes de démarrage et d'erreur, vous devez accéder à l'inte
 
 
 
+.Informations associées
 xref:troubleshooting-hardware-installation.adoc[Dépannage de l'installation du matériel (SG6000)]
 
 xref:configuring-bmc-interface-sg6000.adoc[Configurer l'interface BMC (SG6000)]

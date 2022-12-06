@@ -13,12 +13,13 @@ summary: 'Vous pouvez utiliser l"outil d"explication d"audit pour traduire les m
 [role="lead"]
 Vous pouvez utiliser le `audit-explain` outil permettant de traduire les messages d'audit du journal d'audit dans un format facile à lire.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez disposer d'autorisations d'accès spécifiques.
 * Vous devez avoir le `Passwords.txt` fichier.
 * Vous devez connaître l'adresse IP du nœud d'administration principal.
 
 
+.Description de la tâche
 Le `audit-explain` Disponible sur le nœud d'administration principal, cet outil fournit des résumés simplifiés des messages d'audit dans un journal d'audit.
 
 
@@ -98,4 +99,5 @@ NOTE: Pour réduire la longueur des lignes et faciliter leur lisibilité, les ho
 
 
 
+.Informations associées
 xref:sput-s3-put.adoc[SPUT : PUT S3]

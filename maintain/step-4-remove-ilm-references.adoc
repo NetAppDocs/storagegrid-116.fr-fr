@@ -13,6 +13,7 @@ summary: 'À partir de l"étape 4 \(Supprimer les références ILM\) de l"assist
 [role="lead"]
 À partir de l'étape 4 (Supprimer les références ILM) de l'assistant site de désaffection, vous pouvez supprimer la stratégie proposée s'il en existe une et supprimer ou modifier toute règle ILM inutilisée qui fait toujours référence au site.
 
+.Description de la tâche
 Dans ces cas, vous ne pouvez pas démarrer la procédure de mise hors service du site :
 
 * Une politique ILM proposée existe. Si vous avez une stratégie proposée, vous devez la supprimer.

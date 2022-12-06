@@ -22,6 +22,7 @@ L'ordinateur portable de service, nécessaire à l'installation du matériel, do
 * Client SSH (par exemple, PuTTY)
 
 
+.Informations associées
 xref:../admin/web-browser-requirements.adoc[Navigateurs Web pris en charge]
 
 http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61197["Documentation NetApp : responsable du stockage SANtricity"^]

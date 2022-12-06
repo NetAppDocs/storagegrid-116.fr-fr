@@ -35,6 +35,7 @@ NOTE: Si une procédure de mise hors service d'un nœud ou d'un site est interro
 
 
 
+.Informations associées
 xref:../monitor/index.adoc[Surveiller et résoudre les problèmes]
 
 xref:pausing-and-resuming-decommission-process-for-storage-nodes.adoc[Interrompre et reprendre le processus de mise hors service des nœuds de stockage]

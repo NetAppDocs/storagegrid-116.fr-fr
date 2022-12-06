@@ -13,4 +13,5 @@ summary: 'Lors de la configuration de liaisons réseau pour le SG6000-CN, vous p
 [role="lead"]
 Lors de la configuration de liaisons réseau pour le SG6000-CN, vous pouvez utiliser la liaison de ports pour les ports 10/25-GbE qui se connectent au réseau Grid et au réseau client en option, ainsi que les ports de gestion 1-GbE qui se connectent au réseau d'administration en option. La liaison de ports contribue à protéger vos données en fournissant des chemins redondants entre les réseaux StorageGRID et l'appliance.
 
+.Informations associées
 xref:configuring-network-links-sg6000.adoc[Configuration des liens réseau (SG6000)]

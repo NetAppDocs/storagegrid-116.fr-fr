@@ -43,4 +43,5 @@ NOTE: Le service CLB est obsolète.
 
 Lorsqu'il est utilisé avec des appliances de stockage StorageGRID, les appliances de services SG100 et SG1000 permettent de déployer des grilles d'appliance uniquement, sans dépendance vis-à-vis des hyperviseurs externes ou du matériel de calcul.
 
+.Informations associées
 xref:../admin/index.adoc[Administrer StorageGRID]

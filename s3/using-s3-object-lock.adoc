@@ -97,6 +97,7 @@ Si la nouvelle valeur de conservation légale est ACTIVÉE, l'objet est placé s
 
 
 
+.Informations associées
 xref:../ilm/index.adoc[Gestion des objets avec ILM]
 
 xref:../tenant/index.adoc[Utilisez le compte du locataire]

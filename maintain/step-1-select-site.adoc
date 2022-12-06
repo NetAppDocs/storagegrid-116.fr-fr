@@ -13,7 +13,7 @@ summary: 'Pour déterminer si un site peut être déclassé, commencez par accé
 [role="lead"]
 Pour déterminer si un site peut être déclassé, commencez par accéder à l'assistant Decommission site.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez avoir obtenu tous les matériaux requis.
 * Vous devez avoir passé en revue les considérations relatives à la suppression d'un site.
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
@@ -59,7 +59,7 @@ Coche verte (image:../media/icon_alert_green_checkmark.png["Icône alerte verte 
  a| 
 Vous pouvez désaffecter ce site.
  a| 
-Accédez à ,l'étape suivante.
+Accédez à <<decommission_possible,l'étape suivante>>.
 
 
 

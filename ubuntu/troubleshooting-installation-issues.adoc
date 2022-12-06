@@ -27,6 +27,7 @@ Les fichiers journaux d'installation suivants sont disponibles auprès de l'hôt
 
 Pour savoir comment accéder aux fichiers journaux, reportez-vous aux instructions de surveillance et de dépannage de StorageGRID. Pour obtenir de l'aide sur le dépannage des problèmes d'installation de l'appareil, consultez les instructions d'installation et de maintenance de vos appareils. Si vous avez besoin d'aide supplémentaire, contactez le support technique.
 
+.Informations associées
 xref:../monitor/index.adoc[Surveiller et résoudre les problèmes]
 
 xref:../sg100-1000/index.adoc[Appareils de services SG100 et SG1000]

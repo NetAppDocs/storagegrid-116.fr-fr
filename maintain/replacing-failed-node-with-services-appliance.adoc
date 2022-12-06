@@ -13,7 +13,7 @@ summary: 'Vous pouvez utiliser une appliance de services SG100 ou SG1000 pour r�
 [role="lead"]
 Vous pouvez utiliser une appliance de services SG100 ou SG1000 pour récupérer un nœud de passerelle défaillant, un nœud d'administration non primaire défaillant ou un nœud d'administration principal défaillant hébergé sur VMware, un hôte Linux ou une appliance de services. Cette procédure constitue une étape de la procédure de restauration des nœuds de la grille.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez avoir déterminé que l'une des situations suivantes est vraie :
 +
 ** Impossible de restaurer la machine virtuelle hébergeant le nœud.
@@ -30,6 +30,7 @@ xref:../sg100-1000/index.adoc[Appareils de services SG100 et SG1000]
 
 IMPORTANT: Ne déployez pas un appareil SG100 et un appareil SG1000 sur le même site. Cela peut entraîner des performances imprévisibles.
 
+.Description de la tâche
 Vous pouvez utiliser une appliance de services SG100 ou SG1000 pour restaurer un nœud de grille défaillant dans les cas suivants :
 
 * Le nœud en panne était hébergé sur VMware ou Linux (changement de plateforme)

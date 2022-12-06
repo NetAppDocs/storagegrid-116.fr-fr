@@ -23,4 +23,5 @@ Supposons par exemple qu'un site de data Center inclut actuellement six nœuds d
 
 Si vous devez désaffecter un nœud de stockage mais que vous ne pouvez pas le faire en raison de l'exigence de quorum ADC, vous devez ajouter un nouveau nœud de stockage dans une extension et spécifier qu'il doit disposer d'un service ADC. Vous pouvez ensuite désaffecter le nœud de stockage existant.
 
+.Informations associées
 xref:../expand/index.adoc[Développez votre grille]

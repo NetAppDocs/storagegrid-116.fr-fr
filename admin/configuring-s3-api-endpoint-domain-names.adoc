@@ -13,7 +13,7 @@ summary: Pour prendre en charge les demandes de type hébergement virtuel S3, vo
 [role="lead"]
 Pour prendre en charge les demandes de type hébergement virtuel S3, vous devez utiliser Grid Manager pour configurer la liste des noms de domaine de points de terminaison auxquels les clients S3 se connectent.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 * Vous avez confirmé qu'une mise à niveau de la grille n'est pas en cours.
@@ -23,6 +23,7 @@ CAUTION: Ne modifiez pas la configuration du nom de domaine lorsqu'une mise à n
 
 
 
+.Description de la tâche
 Pour permettre aux clients d'utiliser les noms de domaine de terminaux S3, vous devez effectuer toutes les opérations suivantes :
 
 * Utilisez le Gestionnaire de grille pour ajouter les noms de domaine de points de terminaison S3 au système StorageGRID.
@@ -65,6 +66,7 @@ Si cette liste est vide, la prise en charge des demandes de type hébergement vi
 . Ajoutez les enregistrements DNS requis pour vous assurer que les demandes de nom de domaine de point final peuvent être résolues.
 
 
+.Résultat
 Maintenant, lorsque les clients utilisent le noeud final `bucket.s3.company.com`, Le serveur DNS résout le noeud final correct et le certificat authentifie le noeud final comme prévu.
 
 .Informations associées

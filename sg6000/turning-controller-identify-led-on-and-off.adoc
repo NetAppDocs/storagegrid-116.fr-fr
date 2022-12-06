@@ -13,6 +13,7 @@ summary: 'Il est possible d"allumer la LED d"identification bleue à l"avant et 
 [role="lead"]
 Il est possible d'allumer la LED d'identification bleue à l'avant et à l'arrière du contrôleur pour localiser l'appliance dans un data Center.
 
+.Ce dont vous avez besoin
 Vous devez disposer de l'adresse IP du contrôleur que vous souhaitez identifier.
 
 .Étapes
@@ -24,6 +25,7 @@ image::../media/sg6060_service_identify_turn_on.jpg[Activez la LED d'identificat
 
 
 
+.Résultat
 Les LED d'identification s'allument en bleu à l'avant (illustration) et à l'arrière du contrôleur.
 
 image::../media/sg6060_front_panel_service_led_on.jpg[Voyant d'identification avant - allumé]
@@ -31,6 +33,7 @@ image::../media/sg6060_front_panel_service_led_on.jpg[Voyant d'identification av
 
 NOTE: Si un panneau est installé sur le contrôleur, il peut être difficile de voir le voyant d'identification avant.
 
+.Une fois que vous avez terminé
 Pour éteindre le voyant d'identification du contrôleur :
 
 * Appuyez sur le commutateur LED identifier sur le panneau avant du contrôleur.
@@ -41,6 +44,7 @@ Les LED bleues d'identification à l'avant et à l'arrière du contrôleur s'ét
 
 image::../media/sg6060_front_panel_service_led_off.jpg[LED d'identification avant - éteinte]
 
+.Informations associées
 xref:verifying-fibre-channel-hba-to-replace.adoc[Vérifiez que la carte HBA Fibre Channel doit être remplacée]
 
 xref:locating-controller-in-data-center.adoc[Localiser le contrôleur dans le data Center]

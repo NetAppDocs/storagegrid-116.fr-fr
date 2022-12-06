@@ -13,6 +13,7 @@ summary: 'La procédure de restauration d"un nœud de stockage de l"appliance St
 [role="lead"]
 La procédure de restauration d'un nœud de stockage de l'appliance StorageGRID défaillant est identique, que vous soyez en train de récupérer à partir de la perte du disque système ou de la perte de volumes de stockage uniquement.
 
+.Description de la tâche
 Vous devez préparer l'appliance et réinstaller le logiciel, configurer le nœud pour qu'il rerejoint la grille, reformater le stockage et restaurer les données de l'objet.
 
 image::../media/overview_sga_recovery.gif[Diagramme de présentation de la restauration de l'appliance StorageGRID]
@@ -37,6 +38,7 @@ NOTE: Si vous rencontrez une alarme Services : Etat - Cassandra (SVST) pendant l
 
 NOTE: Pour les procédures de maintenance du matériel, telles que les instructions pour remplacer un contrôleur ou réinstaller SANtricity OS, consultez les instructions d'installation et de maintenance de votre dispositif de stockage.
 
+.Informations associées
 xref:../monitor/index.adoc[Surveiller et résoudre les problèmes]
 
 xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]

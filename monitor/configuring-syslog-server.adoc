@@ -13,13 +13,14 @@ summary: 'Si vous souhaitez enregistrer les journaux d"audit, les journaux d"app
 [role="lead"]
 Si vous souhaitez enregistrer les journaux d'audit, les journaux d'application et les journaux d'événements de sécurité dans un emplacement en dehors de votre grille, utilisez cette procédure pour configurer un serveur syslog externe.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès à la racine ou à la maintenance.
 * Vous disposez d'un serveur syslog avec la capacité de recevoir et stocker les fichiers journaux. Pour plus d'informations, voir xref:../monitor/considerations-for-external-syslog-server.adoc[Considérations relatives au serveur syslog externe].
 * Vous disposez des certifications serveur et client appropriées si vous prévoyez d'utiliser TLS ou RELP/TLS.
 
 
+.Description de la tâche
 Si vous souhaitez envoyer des informations d'audit à un serveur syslog externe, vous devez d'abord configurer le serveur externe.
 
 L'envoi d'informations d'audit à un serveur syslog externe vous permet de :
@@ -563,6 +564,7 @@ Les nouveaux journaux sont envoyés aux destinations que vous avez sélectionné
 
 
 
+.Informations associées
 xref:../audit/index.adoc[Présentation du message d'audit]
 
 xref:../monitor/configure-audit-messages.adoc[Configurez les messages d'audit et les destinations des journaux]

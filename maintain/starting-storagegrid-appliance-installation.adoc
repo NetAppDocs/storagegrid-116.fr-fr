@@ -13,7 +13,7 @@ summary: 'Pour installer StorageGRID sur un nœud de stockage de l"appliance, ut
 [role="lead"]
 Pour installer StorageGRID sur un nœud de stockage de l'appliance, utilisez le programme d'installation de l'appliance StorageGRID, qui est inclus sur l'appliance.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * L'appliance a été installée dans un rack, connectée à vos réseaux et sous tension.
 * Les liens réseau et les adresses IP ont été configurés pour l'appliance à l'aide du programme d'installation de l'appliance StorageGRID.
 * Vous connaissez l'adresse IP du nœud d'administration principal de la grille de StorageGRID.
@@ -29,6 +29,7 @@ Pour installer StorageGRID sur un nœud de stockage de l'appliance, utilisez le 
 * Vous connaissez l'une des adresses IP attribuées au contrôleur de calcul dans l'appliance. Vous pouvez utiliser l'adresse IP du réseau d'administration (port de gestion 1 sur le contrôleur), du réseau Grid ou du réseau client.
 
 
+.Description de la tâche
 Pour installer StorageGRID sur un nœud de stockage d'appliance :
 
 * Vous spécifiez ou confirmez l'adresse IP du nœud d'administration principal et le nom du nœud.
@@ -95,6 +96,7 @@ NOTE: Si vous devez accéder manuellement à la page installation du moniteur, c
 
 
 
+.Informations associées
 xref:../sg100-1000/index.adoc[Appareils de services SG100 et SG1000]
 
 xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]

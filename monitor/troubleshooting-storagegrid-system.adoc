@@ -138,7 +138,7 @@ Créer le calendrier des modifications récentes
  a| 
 Toute modification de votre système StorageGRID, de sa configuration ou de son environnement peut provoquer un nouveau comportement.
  a| 
-* ,Créer un calendrier des modifications récentes
+* <<create_timeline,Créer un calendrier des modifications récentes>>
 
 
 
@@ -186,7 +186,7 @@ Les tendances peuvent donner des indications précieuses sur le moment où les p
  a| 
 Collectez des informations sur les niveaux normaux de différentes valeurs opérationnelles. Ces valeurs de référence, ainsi que les écarts par rapport à ces lignes de base, peuvent fournir des indices précieux.
  a| 
-* ,Établir les lignes de base
+* <<establish_baselines,Établir les lignes de base>>
 
 
 
@@ -236,7 +236,7 @@ L'assistance technique peut vous demander de collecter des données ou de passer
 |===
 
 
-==== Créer un calendrier des modifications récentes
+==== [[create_timeline]]Créez un calendrier des modifications récentes
 
 En cas de problème, vous devriez considérer ce qui a changé récemment et quand ces changements se sont produits.
 
@@ -305,7 +305,7 @@ Voici quelques exemples de changements potentiellement importants :
 
 
 
-==== Établir les lignes de base
+==== [[établissez_les_lignes de base]]établissez les lignes de base
 
 Vous pouvez établir des lignes de base pour votre système en enregistrant les niveaux normaux de différentes valeurs opérationnelles. À l'avenir, vous pourrez comparer les valeurs actuelles à ces lignes de base afin de détecter et de résoudre les valeurs anormales.
 
@@ -478,14 +478,14 @@ xref:collecting-log-files-and-system-data.adoc[Collecte de fichiers journaux et 
 |  | Informations de base  a| 
 Collectez les informations de base relatives aux opérations d'entrée, aux opérations de récupération et à la consommation du stockage.
 
-,Établir les lignes de base
+<<establish_baselines,Établir les lignes de base>>
 
 
 
 |  | Chronologie des modifications récentes  a| 
 Créez un calendrier qui résume les modifications récentes apportées au système ou à son environnement.
 
-,Créer un calendrier des modifications récentes
+<<create_timeline,Créer un calendrier des modifications récentes>>
 
 
 

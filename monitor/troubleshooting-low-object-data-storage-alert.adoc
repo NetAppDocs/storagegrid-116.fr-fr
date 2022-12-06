@@ -14,11 +14,12 @@ summary: 'L"alerte *mémoire de données d"objet faible* surveille la quantité 
 [role="lead"]
 L'alerte *mémoire de données d'objet faible* surveille la quantité d'espace disponible pour le stockage de données d'objet sur chaque nœud de stockage.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer d'autorisations d'accès spécifiques.
 
 
+.Description de la tâche
 L'alerte *stockage de données d'objet faible* est déclenchée lorsque la quantité totale de données d'objet répliquées et codées d'effacement sur un nœud de stockage correspond à l'une des conditions configurées dans la règle d'alerte.
 
 Par défaut, une alerte majeure est déclenchée lorsque cette condition est évaluée comme vrai :
@@ -83,6 +84,7 @@ NOTE: Pour gérer un nœud de stockage complet, reportez-vous aux instructions d
 
 
 
+.Informations associées
 xref:troubleshooting-storage-status-alarm.adoc[Dépanner l'alarme Storage Status (SSTS)]
 
 xref:../expand/index.adoc[Développez votre grille]

@@ -2,10 +2,11 @@
 :allow-uri-read: 
 
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez avoir confirmé que le noeud de stockage récupéré possède un état de connexion * connecté* image:../media/icon_alert_green_checkmark.png["icône d'alerte verte coche"] Dans l'onglet *NOEUDS* *Présentation* du gestionnaire de grille.
 
 
+.Description de la tâche
 Les données d'objet peuvent être restaurées depuis d'autres nœuds de stockage, un nœud d'archivage ou un pool de stockage cloud, en supposant que les règles ILM de la grille soient configurées de manière à ce que les copies d'objet soient disponibles.
 
 Notez ce qui suit :
@@ -17,7 +18,7 @@ Notez ce qui suit :
 
 
 
-== À propos du script de données de réparation
+== À propos du `repair-data` script
 
 Pour restaurer les données d'objet, exécutez le `repair-data` script. Ce script commence le processus de restauration des données d'objet et fonctionne avec l'analyse ILM pour s'assurer que les règles ILM sont respectées.
 

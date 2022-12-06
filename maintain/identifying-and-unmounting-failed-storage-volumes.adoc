@@ -13,8 +13,10 @@ summary: 'Lors de la restauration d"un nœud de stockage dont les volumes de sto
 [role="lead"]
 Lors de la restauration d'un nœud de stockage dont les volumes de stockage sont en panne, vous devez identifier et démonter les volumes en panne. Vous devez vérifier que seuls les volumes de stockage défaillants sont reformatés dans le cadre de la procédure de restauration.
 
+.Ce dont vous avez besoin
 Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 
+.Description de la tâche
 Vous devriez récupérer les volumes de stockage défaillants dès que possible.
 
 La première étape du processus de restauration consiste à détecter les volumes qui se sont détachés, qui doivent être démontés ou qui présentent des erreurs d'E/S. Si les volumes défaillants sont toujours attachés mais qu'un système de fichiers est corrompu de façon aléatoire, le système risque de ne pas détecter de corruption dans les pièces non utilisées ou non attribuées du disque.

@@ -13,7 +13,7 @@ summary: 'Lorsque vous déployez une appliance de services en tant que nœud de 
 [role="lead"]
 Lorsque vous déployez une appliance de services en tant que nœud de passerelle ou nœud d'administration non primaire, utilisez le programme d'installation de l'appliance StorageGRID inclus sur l'appliance.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * L'appliance a été installée dans un rack ou une armoire, connectée à vos réseaux et sous tension.
 * Les liens réseau, les adresses IP et le remappage des ports (si nécessaire) ont été configurés pour le serveur à l'aide du programme d'installation de l'appliance StorageGRID.
 +
@@ -30,6 +30,7 @@ NOTE: Le service CLB est obsolète.
 * Vous connaissez l'adresse IP attribuée à l'appliance. Vous pouvez utiliser l'adresse IP de n'importe quel réseau StorageGRID connecté.
 
 
+.Description de la tâche
 Pour installer StorageGRID sur un nœud d'appliance de services :
 
 * Vous spécifiez ou confirmez l'adresse IP du nœud d'administration principal et le nom du nœud d'appliance.

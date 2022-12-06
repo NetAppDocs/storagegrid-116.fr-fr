@@ -13,7 +13,7 @@ summary: 'Le redémarrage d"un nœud de grille à partir de Grid Manager émet l
 [role="lead"]
 Le redémarrage d'un nœud de grille à partir de Grid Manager émet le `reboot` commande sur le nœud cible.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez de l'autorisation Maintenance ou accès racine.
 * Vous avez la phrase secrète pour le provisionnement.

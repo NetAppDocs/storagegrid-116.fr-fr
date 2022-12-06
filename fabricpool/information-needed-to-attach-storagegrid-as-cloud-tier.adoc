@@ -13,6 +13,7 @@ summary: Avant de pouvoir associer StorageGRID en tant que Tier cloud pour Fabri
 [role="lead"]
 Avant de pouvoir associer StorageGRID en tant que Tier cloud pour FabricPool, vous devez effectuer certaines étapes de configuration dans StorageGRID et obtenir certaines valeurs.
 
+.Description de la tâche
 Le tableau suivant répertorie les informations que vous devez fournir à ONTAP lorsque vous associez StorageGRID en tant que Tier cloud pour FabricPool. Les rubriques de cette section expliquent comment utiliser StorageGRID Grid Manager et le Gestionnaire de locataires pour obtenir les informations dont vous avez besoin.
 
 
@@ -111,4 +112,5 @@ Le certificat de l'autorité de certification que vous avez téléchargé lorsqu
 xref:creating-load-balancer-endpoint-for-fabricpool.adoc[Créez un noeud final d'équilibrage de charge pour FabricPool]
 
 |===
+.Une fois que vous avez terminé
 Une fois les informations StorageGRID requises obtenues, il est possible d'accéder à ONTAP pour ajouter StorageGRID comme Tier cloud, ajouter le niveau cloud en tant qu'agrégat et définir des règles de Tiering des volumes.

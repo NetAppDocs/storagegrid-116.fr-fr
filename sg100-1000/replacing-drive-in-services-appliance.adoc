@@ -13,7 +13,7 @@ summary: 'Les disques SSD de l"appliance de services contiennent le système d"e
 [role="lead"]
 Les disques SSD de l'appliance de services contiennent le système d'exploitation StorageGRID. En outre, lorsque l'appliance est configurée en tant que nœud d'administration, les disques SSD contiennent également des journaux d'audit, des mesures et des tables de base de données. Les disques sont mis en miroir à l'aide de RAID1 pour la redondance. Si l'un des lecteurs tombe en panne, vous devez le remplacer dès que possible pour assurer la redondance.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez xref:locating-controller-in-data-center.adoc[l'appareil se trouve physiquement].
 * Vous avez vérifié quel lecteur est défectueux en notant que le voyant de gauche est orange clignotant.
 +

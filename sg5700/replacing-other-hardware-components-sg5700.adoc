@@ -13,11 +13,12 @@ summary: 'Vous devrez peut-être remplacer la batterie du contrôleur, le lecteu
 [role="lead"]
 Vous devrez peut-être remplacer la batterie du contrôleur, le lecteur, le ventilateur ou le bloc d'alimentation de l'appliance StorageGRID.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous disposez de la procédure de remplacement du matériel E-Series.
 * L'appareil a été xref:placing-appliance-into-maintenance-mode.adoc[passage en mode maintenance] si la procédure de remplacement des composants requiert l'arrêt de l'appareil.
 
 
+.Description de la tâche
 Pour remplacer la batterie du contrôleur E2800, reportez-vous aux instructions décrites dans ces instructions pour remplacer le contrôleur E2800. Ces instructions décrivent le retrait du contrôleur de l'appareil, le retrait de la batterie du contrôleur, l'installation de la batterie et le remplacement du contrôleur.
 
 Pour remplacer un lecteur, une cartouche de ventilateur, une cartouche de ventilateur, une cartouche d'alimentation ou un tiroir disque dans l'appliance, accédez aux procédures de maintenance du matériel E2800.
@@ -78,6 +79,7 @@ Tiroir d'entraînement
 Remplacement d'un tiroir disque dans les tiroirs E2860
 
 |===
+.Informations associées
 xref:replacing-e2800-controller.adoc[Remplacement du contrôleur E2800]
 
 http://mysupport.netapp.com/info/web/ECMP1658252.html["Site de documentation sur les systèmes NetApp E-Series"^]

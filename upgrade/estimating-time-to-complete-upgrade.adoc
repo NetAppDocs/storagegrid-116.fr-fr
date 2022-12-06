@@ -13,6 +13,7 @@ summary: Lorsque vous envisagez une mise à niveau vers StorageGRID 11.6, vous d
 [role="lead"]
 Lorsque vous envisagez une mise à niveau vers StorageGRID 11.6, vous devez tenir compte du moment auquel la mise à niveau doit avoir lieu, en fonction de la durée de la mise à niveau. Vous devez également savoir quelles opérations vous pouvez et ne pouvez pas effectuer au cours de chaque étape de la mise à niveau.
 
+.Description de la tâche
 Le temps nécessaire à une mise à niveau d'StorageGRID dépend de divers facteurs, tels que la charge client et les performances matérielles.
 
 Le tableau résume les principales tâches de mise à niveau et indique le temps approximatif requis pour chaque tâche. Les étapes qui suivent le tableau fournissent des instructions que vous pouvez utiliser pour estimer le temps de mise à niveau de votre système.

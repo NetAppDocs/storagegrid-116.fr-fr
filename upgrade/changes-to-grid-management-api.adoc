@@ -65,7 +65,7 @@ La méthode DU CORRECTIF est maintenant obsolète et sera supprimée dans une ve
 
 
 
-== Ajout à la grille/journaux/collecte de terminal
+== Ajouts à `grid/logs/collect` point final
 
 Quatre valeurs booléennes ont été ajoutées au `grid/logs/collect` point final :
 
@@ -77,7 +77,7 @@ Quatre valeurs booléennes ont été ajoutées au `grid/logs/collect` point fina
 
 
 
-== Nouveau terminal ​node-details /grid​/Service-id
+== Nouveau `​node-details /grid​/service-ids` point final
 
 La nouvelle `​/grid​/service-ids` Endpoint fournit un mappage des UUID de nœud avec les noms de nœud, les ID de service et les types de service associés.
 

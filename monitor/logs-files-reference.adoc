@@ -173,4 +173,5 @@ Données des sockets pour le débogage réseau.
 Résultat des commandes du conteneur StorageGRID. Contient des informations sur le système, telles que la mise en réseau et l'utilisation du disque.
 
 |===
+.Informations associées
 xref:collecting-log-files-and-system-data.adoc[Collecte de fichiers journaux et de données système]

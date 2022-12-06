@@ -13,8 +13,10 @@ summary: 'Vous pouvez afficher l"adresse IP de chaque nœud grid dans votre syst
 [role="lead"]
 Vous pouvez afficher l'adresse IP de chaque nœud grid dans votre système StorageGRID. Vous pouvez ensuite utiliser cette adresse IP pour vous connecter au nœud grid en ligne de commande et effectuer diverses procédures de maintenance.
 
+.Ce dont vous avez besoin
 Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 
+.Description de la tâche
 Pour plus d'informations sur la modification des adresses IP, reportez-vous à la section xref:../maintain/index.adoc[Récupérer et entretenir].
 
 .Étapes

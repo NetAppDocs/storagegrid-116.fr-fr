@@ -100,6 +100,7 @@ Ces opérations sont personnalisées pour StorageGRID.
 |===
 Pour plus d'informations sur l'implémentation de ces API par StorageGRID, consultez les instructions relatives à l'implémentation des applications client S3.
 
+.Informations associées
 xref:considerations-for-using-platform-services.adoc[Considérations relatives à l'utilisation des services de plate-forme]
 
 xref:../s3/index.adoc[Utilisation de S3]

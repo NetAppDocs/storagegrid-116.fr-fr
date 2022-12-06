@@ -14,11 +14,12 @@ summary: 'Il est possible de trouver et de restaurer des objets qui ont déclenc
 [role="lead"]
 Il est possible de trouver et de restaurer des objets qui ont déclenché une alarme objets perdus (PERDUS) et une alerte *objet perdu* et que vous avez identifié comme potentiellement perdus.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez avoir l'UUID de tout objet perdu, tel qu'il est identifié dans « enquête sur les objets perdus ».
 * Vous devez avoir le `Passwords.txt` fichier.
 
 
+.Description de la tâche
 Vous pouvez suivre cette procédure pour rechercher les copies répliquées de l'objet perdu ailleurs dans la grille. Dans la plupart des cas, l'objet perdu est introuvable. Toutefois, dans certains cas, vous pouvez trouver et restaurer un objet répliqué perdu si vous prenez une action rapide.
 
 
@@ -115,7 +116,7 @@ ls '/var/local/rangedb/1/p/17/11/00rH0%DkRs&LgA%#3tN6'
 *Remarque* : placez toujours le chemin du fichier d'objet entre guillemets dans des commandes pour échapper à tout caractère spécial.
 
 * Si le chemin d'accès à l'objet est introuvable, il est perdu et ne peut pas être restauré à l'aide de cette procédure. Contactez l'assistance technique.
-* Si le chemin d'accès à l'objet est trouvé, passez à l'étape ,Restaurez l'objet sur StorageGRID. Vous pouvez essayer de restaurer à nouveau l'objet trouvé dans StorageGRID.
+* Si le chemin d'accès à l'objet est trouvé, passez à l'étape <<restore_the_object_to_StorageGRID,Restaurez l'objet sur StorageGRID>>. Vous pouvez essayer de restaurer à nouveau l'objet trouvé dans StorageGRID.
 +
 .. [[Restore_the_object_to_StorageGRID, start=3]]si le chemin d'accès à l'objet a été trouvé, essayez de restaurer l'objet dans StorageGRID :
 +
@@ -154,7 +155,7 @@ First packet of file was valid. Extracted key: 38186FE53E3C49A5
 Renamed '/var/local/rangedb/1/p/17/11/00rH0%DkRs&LgA%#3tN6' to '/var/local/rangedb/1/p/17/11/00rH0%DkRt78Ila#3udu'
 ----
 +
-Passez à l'étape ,Vérifiez que de nouveaux emplacements ont été créés
+Passez à l'étape <<verify_that_new_locations_were_created,Vérifiez que de nouveaux emplacements ont été créés>>
 
 +
 ... [[reify_New_locations_WAS_created, start=4]]si l'objet a été restauré avec succès dans StorageGRID, vérifiez que de nouveaux emplacements ont été créés.
@@ -272,6 +273,7 @@ Le cas échéant, la valeur de CLDI dans LES EMPLACEMENTS est l'ID de nœud et l
 
 
 
+.Informations associées
 xref:investigating-lost-objects.adoc[Rechercher les objets perdus]
 
 xref:resetting-lost-and-missing-object-counts.adoc[Réinitialiser le nombre d'objets perdus et manquants]

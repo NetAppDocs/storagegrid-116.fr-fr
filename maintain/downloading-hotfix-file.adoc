@@ -50,4 +50,5 @@ NOTE: Si vous utilisez un périphérique MacOS, le fichier de correctif peut êt
 . Sélectionnez un emplacement pour le téléchargement et sélectionnez *Enregistrer*.
 
 
+.Informations associées
 xref:configuring-replacement-primary-admin-node.adoc[Configurez le nœud d'administration principal de remplacement]

@@ -13,6 +13,7 @@ summary: 'Il est conseillé de surveiller l"état général de votre système St
 [role="lead"]
 Il est conseillé de surveiller l'état général de votre système StorageGRID tous les jours.
 
+.Description de la tâche
 Le système StorageGRID est tolérant aux pannes et peut continuer à fonctionner même lorsque des parties de la grille sont indisponibles. Le premier signe d'un problème potentiel avec votre système StorageGRID est susceptible d'être une alerte ou une alarme (système hérité) et pas nécessairement un problème de fonctionnement du système. Porter une attention particulière à l'état du système peut vous aider à détecter des problèmes mineurs avant qu'ils n'affectent les opérations ou l'efficacité du réseau.
 
 Le volet Santé du tableau de bord de Grid Manager fournit un récapitulatif des problèmes susceptibles d'affecter votre système. Vous devez examiner tous les problèmes qui apparaissent sur le tableau de bord.

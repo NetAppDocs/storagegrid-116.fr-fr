@@ -13,12 +13,14 @@ summary: Vous devez allouer des volumes de stockage de blocs à chaque hôte.
 [role="lead"]
 Vous devez allouer des volumes de stockage de blocs à chaque hôte.
 
+.Ce dont vous avez besoin
 Vous avez passé en revue les sujets suivants, qui fournissent les informations nécessaires pour accomplir cette tâche :
 
 xref:storage-and-performance-requirements.adoc[Les besoins en matière de stockage et de performances]
 
 xref:node-container-migration-requirements.adoc[Exigences de migration des conteneurs de nœuds]
 
+.Description de la tâche
 Lors de l'allocation de volumes de stockage en bloc (LUN) aux hôtes, utilisez les tables de la section « exigences de stockage » pour déterminer les éléments suivants :
 
 * Nombre de volumes requis pour chaque hôte (en fonction du nombre et des types de nœuds à déployer sur cet hôte)
@@ -92,4 +94,5 @@ Les alias apparaîtront alors en tant que périphériques de bloc dans le `/dev/
 
 NOTE: Si vous configurez le stockage partagé pour prendre en charge la migration de nœud StorageGRID et l'utilisation de chemins d'accès multiples de device mapper, vous pouvez créer et installer un stockage commun `/etc/multipath.conf` sur tous les hôtes en colocation. Veillez à utiliser un volume de stockage moteur de mise en conteneurs différent sur chaque hôte, L'utilisation d'alias et l'inclusion du nom d'hôte cible dans l'alias pour chaque LUN de volume de stockage de moteur de conteneur rendent cela facile à mémoriser et est recommandé.
 
+.Informations associées
 xref:configuring-docker-storage-volume.adoc[Configurer le volume de stockage du moteur du conteneur]

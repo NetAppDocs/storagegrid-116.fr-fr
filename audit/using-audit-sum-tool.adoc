@@ -13,12 +13,13 @@ summary: 'Vous pouvez utiliser l"outil audit-sum pour compter les messages d"aud
 [role="lead"]
 Vous pouvez utiliser le `audit-sum` outil permettant de compter les messages d'audit d'écriture, de lecture, d'en-tête et de suppression, ainsi que les temps minimum, maximum et moyen (ou taille) pour chaque type d'opération.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez disposer d'autorisations d'accès spécifiques.
 * Vous devez avoir le `Passwords.txt` fichier.
 * Vous devez connaître l'adresse IP du nœud d'administration principal.
 
 
+.Description de la tâche
 Le `audit-sum` Disponible sur le nœud d'administration principal, cet outil récapitule le nombre d'opérations d'écriture, de lecture et de suppression enregistrées et la durée de ces opérations.
 
 
@@ -394,4 +395,5 @@ grep SPUT audit.log | audit-sum -gb -s
 
 
 
+.Informations associées
 xref:using-audit-explain-tool.adoc[Utiliser l'outil d'explication d'audit]

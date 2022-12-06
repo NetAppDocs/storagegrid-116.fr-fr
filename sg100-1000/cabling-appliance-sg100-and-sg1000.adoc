@@ -13,7 +13,7 @@ summary: 'Vous devez connecter le port de gestion de l"appliance à l"ordinateur
 [role="lead"]
 Vous devez connecter le port de gestion de l'appliance à l'ordinateur portable de service et connecter les ports réseau de l'appliance au réseau Grid et au réseau client optionnel pour StorageGRID.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous disposez d'un câble Ethernet RJ-45 pour connecter le port de gestion.
 * Vous avez l'une des options suivantes pour les ports réseau. Ces éléments ne sont pas fournis avec l'appareil.
 +
@@ -27,6 +27,7 @@ Vous devez connecter le port de gestion de l'appliance à l'ordinateur portable 
 
 CAUTION: *Risque d'exposition au rayonnement laser* -- ne démontez pas et ne retirez aucune partie d'un émetteur-récepteur SFP ou QSFP. Vous pourriez être exposé à un rayonnement laser.
 
+.Description de la tâche
 Les figures suivantes montrent les ports situés à l'arrière de l'appareil.
 
 * Connexions de port SG100*

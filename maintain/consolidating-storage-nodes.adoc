@@ -22,4 +22,5 @@ Par exemple, vous pouvez ajouter deux nouveaux nœuds de stockage de plus grande
 
 Lorsque vous ajoutez de la capacité supplémentaire avant de supprimer les nœuds de stockage, vous assurez une distribution plus équilibrée des données sur le système StorageGRID. Vous réduisez également la possibilité qu'un nœud de stockage existant soit repoussé au-delà du niveau du filigrane.
 
+.Informations associées
 xref:../expand/index.adoc[Développez votre grille]

@@ -13,11 +13,12 @@ summary: 'Vous pouvez passer à un autre mode RAID sur l"appliance pour répondr
 [role="lead"]
 Vous pouvez passer à un autre mode RAID sur l'appliance pour répondre à vos besoins en termes de stockage et de restauration. Vous ne pouvez modifier le mode qu'avant de déployer l'appliance Storage Node.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous utilisez n'importe quel client pouvant vous connecter à StorageGRID.
 * Le client a un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 
 
+.Description de la tâche
 Avant de déployer l'appliance en tant que nœud de stockage, vous pouvez choisir l'une des options de configuration de volume suivantes :
 
 * *DDP* : ce mode utilise deux lecteurs de parité pour chaque huit lecteurs de données. Il s'agit du mode par défaut et recommandé pour tous les appareils. Par rapport à RAID6, les DDP offrent de meilleures performances du système, des temps de reconstruction réduits après une panne de disque et une gestion simplifiée.
@@ -44,4 +45,5 @@ La page d'accueil du programme d'installation de l'appliance StorageGRID s'affic
 . Cliquez sur *Enregistrer*.
 
 
+.Informations associées
 http://mysupport.netapp.com/info/web/ECMP1658252.html["Site de documentation sur les systèmes NetApp E-Series"^]

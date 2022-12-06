@@ -14,7 +14,7 @@ summary: 'Vous pouvez ajouter une jonction ou des interfaces d"accès supplémen
 [role="lead"]
 Vous pouvez ajouter une jonction ou des interfaces d'accès supplémentaires à un nœud Linux après l'avoir installé. Les interfaces que vous ajoutez s'affichent sur la page des interfaces VLAN et sur la page des groupes haute disponibilité.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez accès aux instructions d'installation de StorageGRID sur votre plate-forme Linux.
 +
 ** xref:../rhel/index.adoc[Installez Red Hat Enterprise Linux ou CentOS]
@@ -28,6 +28,7 @@ Vous pouvez ajouter une jonction ou des interfaces d'accès supplémentaires à 
 
 IMPORTANT: N'essayez pas d'ajouter des interfaces à un nœud lorsqu'une procédure de mise à niveau logicielle, de récupération ou d'extension est active.
 
+.Description de la tâche
 Procédez comme suit pour ajouter une ou plusieurs interfaces supplémentaires à un nœud Linux après l'installation du nœud. Par exemple, vous pouvez ajouter une interface de jonction à un noeud d'administration ou de passerelle, de sorte que vous pouvez utiliser des interfaces VLAN pour isoler le trafic appartenant à différentes applications ou locataires. Vous pouvez également ajouter une interface d'accès à utiliser au sein d'un groupe de haute disponibilité (HA).
 
 Si vous ajoutez une interface de jonction, vous devez configurer une interface VLAN dans StorageGRID. Si vous ajoutez une interface d'accès, vous pouvez l'ajouter directement à un groupe haute disponibilité ; vous n'avez pas besoin de configurer une interface VLAN.

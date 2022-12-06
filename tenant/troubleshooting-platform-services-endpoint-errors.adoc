@@ -75,6 +75,7 @@ Pour plus d'informations sur le dépannage des services de plate-forme, reportez
 
 xref:../admin/index.adoc[Administrer StorageGRID]
 
+.Informations associées
 xref:creating-platform-services-endpoint.adoc[Créer un terminal de services de plate-forme]
 
 xref:testing-connection-for-platform-services-endpoint.adoc[Tester la connexion pour le point final des services de plate-forme]

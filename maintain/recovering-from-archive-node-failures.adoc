@@ -15,6 +15,7 @@ Vous devez effectuer une séquence de tâches pour pouvoir effectuer une restaur
 
 image::../media/overview_archive_node_recovery.gif[Organigramme général de la restauration du nœud d'archivage]
 
+.Description de la tâche
 La restauration du nœud d'archivage est affectée par les problèmes suivants :
 
 * Si la règle ILM est configurée pour répliquer une seule copie.

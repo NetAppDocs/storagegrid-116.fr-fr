@@ -13,8 +13,10 @@ summary: Lorsque vous restaurez un nœud StorageGRID défaillant hébergé sur V
 [role="lead"]
 Lorsque vous restaurez un nœud StorageGRID défaillant hébergé sur VMware, vous devez supprimer le nœud défaillant et déployer un nœud de restauration.
 
+.Ce dont vous avez besoin
 Vous devez avoir déterminé que la machine virtuelle ne peut pas être restaurée et doit être remplacée.
 
+.Description de la tâche
 Utilisez le client Web VMware vSphere pour supprimer d'abord la machine virtuelle associée au nœud de grille défaillant. Vous pouvez ensuite déployer une nouvelle machine virtuelle.
 
 Cette procédure ne représente qu'une étape du processus de restauration du nœud grid. La procédure de suppression et de déploiement des nœuds est la même pour tous les nœuds VMware, y compris les nœuds d'administration, les nœuds de stockage, les nœuds de passerelle et les nœuds d'archivage.

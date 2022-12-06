@@ -13,7 +13,7 @@ summary: 'Vous pouvez supprimer une règle d"alerte personnalisée si vous ne so
 [role="lead"]
 Vous pouvez supprimer une règle d'alerte personnalisée si vous ne souhaitez plus l'utiliser.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez de l'autorisation gérer les alertes ou l'accès racine.
 

@@ -13,15 +13,16 @@ summary: 'Une fois l"installation de Linux terminée sur vos hôtes, vous devrez
 [role="lead"]
 Une fois l'installation de Linux terminée sur vos hôtes, vous devrez peut-être procéder à une configuration supplémentaire pour préparer un ensemble d'interfaces réseau sur chaque hôte, adapté au mappage vers les nœuds StorageGRID que vous pourrez déployer ultérieurement.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez passé en revue le xref:../network/index.adoc[Instructions de mise en réseau d'StorageGRID].
 * Vous avez passé en revue les informations sur xref:node-container-migration-requirements.adoc[exigences de migration des conteneurs de nœuds].
-* Si vous utilisez des hôtes virtuels, vous avez lu le ,Considérations et recommandations relatives au clonage d'adresses MAC avant de configurer le réseau hôte.
+* Si vous utilisez des hôtes virtuels, vous avez lu le <<mac_address_cloning_rhel,Considérations et recommandations relatives au clonage d'adresses MAC>> avant de configurer le réseau hôte.
 
 
 
 NOTE: Si vous utilisez des machines virtuelles en tant qu'hôtes, vous devez sélectionner VMXNET 3 comme carte réseau virtuelle. La carte réseau VMware E1000 a provoqué des problèmes de connectivité avec les conteneurs StorageGRID déployés sur certaines distributions de Linux.
 
+.Description de la tâche
 Les nœuds du grid doivent être capables d'accéder au réseau Grid et, éventuellement, aux réseaux client et Admin. Vous fournissez cet accès en créant des mappages qui associent l'interface physique de l'hôte aux interfaces virtuelles de chaque nœud de la grille. Lors de la création d'interfaces hôtes, utilisez des noms conviviaux pour faciliter le déploiement sur tous les hôtes et pour activer la migration.
 
 Une même interface peut être partagée entre l'hôte et un ou plusieurs nœuds. Par exemple, vous pouvez utiliser la même interface pour l'accès aux hôtes et l'accès au réseau d'administration de nœud afin de faciliter la maintenance des hôtes et des nœuds. Même si une même interface peut être partagée entre l'hôte et les nœuds individuels, toutes doivent avoir des adresses IP différentes. Les adresses IP ne peuvent pas être partagées entre les nœuds ou entre l'hôte et un nœud.
@@ -33,12 +34,14 @@ Vous pouvez effectuer cette tâche de plusieurs manières. Par exemple, si vos h
 
 NOTE: N'utilisez pas de périphériques de liaison ou de pont directement comme interface réseau de conteneur. Cela pourrait empêcher le démarrage de nœud causé par un problème de noyau avec l'utilisation de MACVLAN avec des périphériques de liaison et de pont dans l'espace de noms de conteneur. Utilisez plutôt un périphérique sans lien, tel qu'un VLAN ou une paire Ethernet virtuelle (Veth). Spécifiez ce périphérique comme interface réseau dans le fichier de configuration de nœud.
 
+.Informations associées
 xref:creating-node-configuration-files.adoc[Création de fichiers de configuration de nœud]
 
 
 
 == Considérations et recommandations relatives au clonage d'adresses MAC
 
+.[[adresse_mac_clonage_rhel]]
 Le clonage d'adresses MAC fait en sorte que le conteneur utilise l'adresse MAC de l'hôte et que l'hôte utilise l'adresse MAC d'une adresse que vous spécifiez ou d'une adresse générée de manière aléatoire. Vous devez utiliser le clonage d'adresses MAC pour éviter l'utilisation de configurations réseau en mode promiscuous.
 
 
@@ -113,6 +116,7 @@ Si le commutateur 1 est un commutateur physique, vous devez configurer les ports
 
 == Exemple 2 : liaison LACP avec les VLAN
 
+.Description de la tâche
 L'exemple 2 suppose que vous êtes familier avec les interfaces réseau de liaison et avec la création d'interfaces VLAN sur la distribution Linux que vous utilisez.
 
 L'exemple 2 décrit un schéma générique, flexible et basé sur VLAN qui facilite le partage de toute la bande passante réseau disponible sur tous les nœuds d'un même hôte. Cet exemple s'applique tout particulièrement aux hôtes bare Metal.
@@ -137,4 +141,5 @@ Des exemples de fichiers de configuration d'interface pour ce schéma de configu
 
 
 
+.Informations associées
 xref:example-etc-sysconfig-network-scripts.adoc[Exemple /etc/sysconfig/network-scripts]

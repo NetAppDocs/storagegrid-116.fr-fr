@@ -78,4 +78,5 @@ Toutes les combinaisons d'options suivantes vous permettent d'envoyer des messag
 * *Déclenché par l'utilisateur* : envoyez manuellement des messages AutoSupport à tout moment.
 
 
+.Informations associées
 https://mysupport.netapp.com/site/global/dashboard["Support NetApp"^]

@@ -266,4 +266,5 @@ Sélectionnez cette option pour désactiver la réplication sortante (y compris 
 Lorsque la réplication sortante est désactivée, les objets peuvent être copiés vers ce noeud de stockage, mais les objets ne peuvent pas être récupérés depuis le noeud de stockage pour être copiés vers d'autres emplacements du système StorageGRID. Le service LDR est en écriture seule.
 
 |===
+.Informations associées
 xref:../monitor/index.adoc[Surveiller et résoudre les problèmes]

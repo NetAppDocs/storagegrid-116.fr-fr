@@ -13,7 +13,7 @@ summary: 'Vous devez sélectionner Démarrer la restauration dans Grid Manager p
 [role="lead"]
 Vous devez sélectionner Démarrer la restauration dans Grid Manager pour configurer un noeud de stockage d'appliance en remplacement du noeud défaillant.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer de l'autorisation Maintenance ou accès racine.
 * Vous devez disposer de la phrase secrète pour le provisionnement.

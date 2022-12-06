@@ -29,6 +29,7 @@ Vous ne pouvez plus créer de compartiments avec la fonctionnalité conformité 
 The Compliance feature is deprecated.
 Contact your StorageGRID administrator if you need to create new Compliant buckets.
 ----
+.Informations associées
 xref:../ilm/index.adoc[Gestion des objets avec ILM]
 
 xref:../tenant/index.adoc[Utilisez le compte du locataire]

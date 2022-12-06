@@ -13,12 +13,13 @@ summary: 'Vous pouvez désactiver un profil de code d"effacement si vous n"avez 
 [role="lead"]
 Vous pouvez désactiver un profil de code d'effacement si vous n'avez plus l'intention de l'utiliser et si le profil n'est pas actuellement utilisé dans les règles ILM.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 * Vous avez confirmé que aucune opération de réparation avec code d'effacement ou aucune procédure de désaffectation des données n'est en cours. Un message d'erreur s'affiche si vous tentez de désactiver un profil de code d'effacement alors que l'une de ces opérations est en cours.
 
 
+.Description de la tâche
 Lorsque vous désactivez un profil de code d'effacement, le profil apparaît toujours sur la page profils de code d'effacement, mais son état est *désactivé*.
 
 image::../media/deactivated_ec_profile.png[Profil EC désactivé]

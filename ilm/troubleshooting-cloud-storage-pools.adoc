@@ -128,4 +128,5 @@ Essayez une ou plusieurs des étapes suivantes pour corriger le problème :
 * Vérifiez la configuration réseau du serveur proxy de stockage.
 
 
+.Informations associées
 xref:lifecycle-of-cloud-storage-pool-object.adoc[Cycle de vie d'un objet de pool de stockage cloud]

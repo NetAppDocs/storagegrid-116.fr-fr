@@ -13,6 +13,7 @@ summary: 'Une fois l"extension terminée, vous devez effectuer d"autres étapes 
 [role="lead"]
 Une fois l'extension terminée, vous devez effectuer d'autres étapes d'intégration et de configuration.
 
+.Description de la tâche
 Vous devez effectuer les tâches de configuration répertoriées ci-dessous pour les nœuds de la grille que vous ajoutez dans votre extension. Certaines tâches peuvent être facultatives, en fonction des options sélectionnées lors de l'installation et de l'administration de votre système et de la façon dont vous souhaitez configurer les nœuds de grille ajoutés lors de l'extension.
 
 .Étapes

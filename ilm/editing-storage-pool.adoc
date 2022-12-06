@@ -13,13 +13,14 @@ summary: Vous pouvez modifier un pool de stockage pour modifier son nom ou mettr
 [role="lead"]
 Vous pouvez modifier un pool de stockage pour modifier son nom ou mettre à jour des sites et des notes de stockage.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 * Vous avez passé en revue les instructions relatives à la création de pools de stockage.
 * Si vous prévoyez de modifier un pool de stockage utilisé par une règle de la règle ILM active, vous savez comment vos modifications affectent le placement des données d'objet.
 
 
+.Description de la tâche
 Si vous ajoutez une nouvelle qualité de stockage à un pool de stockage utilisé dans la règle ILM active, sachez que les nœuds de stockage de la nouvelle qualité ne sont pas automatiquement utilisés. Pour forcer StorageGRID à utiliser une nouvelle qualité de stockage, vous devez activer une nouvelle règle ILM après avoir enregistré le pool de stockage modifié.
 
 .Étapes
@@ -41,4 +42,5 @@ NOTE: Vous n'avez pas la possibilité de modifier le site ou la qualité de stoc
 . Sélectionnez *Enregistrer*.
 
 
+.Une fois que vous avez terminé
 Si vous avez ajouté une nouvelle classe de stockage à un pool de stockage utilisé dans la règle ILM active, activez une nouvelle règle ILM pour forcer StorageGRID à utiliser la nouvelle version du stockage. Par exemple, clonez votre règle ILM existante, puis activez le clone.

@@ -13,7 +13,7 @@ summary: 'Si une erreur matérielle se produit lors du démarrage du contrôleur
 [role="lead"]
 Si une erreur matérielle se produit lors du démarrage du contrôleur SG6000-CN, le contrôleur BMC consigne un code d'erreur. Si nécessaire, vous pouvez afficher ces codes d'erreur à l'aide de l'interface BMC, puis travailler avec le support technique pour résoudre le problème.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous savez comment accéder au tableau de bord BMC.
 
 

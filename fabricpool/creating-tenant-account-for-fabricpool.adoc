@@ -13,11 +13,12 @@ summary: Vous devez créer un compte de tenant dans le Grid Manager pour utilisa
 [role="lead"]
 Vous devez créer un compte de tenant dans le Grid Manager pour utilisation FabricPool.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 
 
+.Description de la tâche
 Les comptes de locataire permettent aux applications client de stocker et de récupérer des objets sur StorageGRID. Chaque compte locataire possède son propre ID de compte, groupes et utilisateurs autorisés, compartiments et objets.
 
 Vous pouvez utiliser le même compte de locataire pour plusieurs clusters ONTAP. Vous pouvez également créer un compte de locataire dédié pour chaque cluster ONTAP, selon les besoins.

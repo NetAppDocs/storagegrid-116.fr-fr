@@ -58,6 +58,7 @@ La section alertes de l'onglet vue d'ensemble répertorie toutes les alertes qui
 
 image::../media/nodes_page_alerts_table.png[Tableau des alertes de la page nœuds]
 
+.Informations associées
 xref:monitoring-node-connection-states.adoc[Surveiller les États de connexion du nœud]
 
 xref:viewing-current-alerts.adoc[Afficher les alertes en cours]

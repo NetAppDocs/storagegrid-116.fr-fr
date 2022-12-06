@@ -13,12 +13,13 @@ summary: 'Si vous avez SG5760 avec 60 disques, vous pouvez passer à un mode RAI
 [role="lead"]
 Si vous avez SG5760 avec 60 disques, vous pouvez passer à un mode RAID différent en fonction de vos besoins en stockage et en récupération. Vous ne pouvez modifier le mode qu'avant de déployer le nœud de stockage de l'appliance StorageGRID.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez un SG5760. Si vous avez SG5712 un SG5712, vous devez utiliser le mode DDP.
 * Vous utilisez n'importe quel client pouvant vous connecter à StorageGRID.
 * Le client a un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 
 
+.Description de la tâche
 Avant de déployer l'appliance SG5760 en tant que nœud de stockage, vous pouvez choisir l'une des options de configuration de volume suivantes :
 
 * *DDP* : ce mode utilise deux lecteurs de parité pour chaque huit lecteurs de données. Il s'agit du mode par défaut et recommandé pour tous les appareils. Par rapport à RAID6, les DDP offrent de meilleures performances du système, des temps de reconstruction réduits après une panne de disque et une gestion simplifiée. Les pools de disques dynamiques assurent également la protection contre les pertes de tiroirs dans les appliances 60 disques.
@@ -40,4 +41,5 @@ Où `_E5700SG_Controller_IP_` Est l'une des adresses IP du contrôleur E5700SG.
 . Cliquez sur *Enregistrer*.
 
 
+.Informations associées
 http://mysupport.netapp.com/info/web/ECMP1658252.html["Site de documentation sur les systèmes NetApp E-Series"^]

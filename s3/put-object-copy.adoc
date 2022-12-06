@@ -85,7 +85,7 @@ xref:using-s3-object-lock.adoc[Utilisez le verrouillage d'objet S3]
 ** `x-amz-server-side-encryption-customer-key`
 ** `x-amz-server-side-encryption-customer-algorithm`
 +
-Voir  headers for server-side encryption
+Voir <<Demander des en-têtes pour le cryptage côté serveur>>
 
 
 
@@ -179,6 +179,7 @@ Si vous utilisez le chiffrement côté serveur, les en-têtes de requête que vo
 
 Si le compartiment source est multiversion, vous pouvez utiliser le `x-amz-copy-source` en-tête pour copier la dernière version d'un objet. Pour copier une version spécifique d'un objet, vous devez spécifier explicitement la version à copier à l'aide de l' `versionId` sous-ressource. Si le compartiment de destination est multiversion, la version générée est renvoyée dans le `x-amz-version-id` en-tête de réponse. Si le contrôle de version est suspendu pour le compartiment cible, alors `x-amz-version-id` renvoie une valeur « nulle ».
 
+.Informations associées
 xref:../ilm/index.adoc[Gestion des objets avec ILM]
 
 xref:using-server-side-encryption.adoc[Utilisez le cryptage côté serveur]

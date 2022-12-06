@@ -13,11 +13,12 @@ summary: 'Vous devrez peut-être remplacer un lecteur, un ventilateur, un bloc d
 [role="lead"]
 Vous devrez peut-être remplacer un lecteur, un ventilateur, un bloc d'alimentation ou une batterie de l'appareil StorageGRID.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous disposez de la procédure de remplacement du matériel E-Series.
 * L'appareil a été xref:placing-appliance-into-maintenance-mode.adoc[placé en mode maintenance] si la procédure de remplacement des composants requiert l'arrêt de l'appareil.
 
 
+.Description de la tâche
 Pour remplacer un lecteur, une cartouche de ventilateur d'alimentation, une cartouche de ventilateur, une cartouche d'alimentation, une batterie, Ou tiroir disque, consultez les procédures standard des baies de stockage E2700 et E5600. Concentrez-vous sur les instructions détaillées relatives au retrait et au remplacement du matériel lui-même ; de nombreuses procédures du gestionnaire de stockage SANtricity ne s'appliquent pas à une appliance.
 
 
@@ -83,6 +84,7 @@ Batterie du contrôleur E2700 (nécessite le retrait du contrôleur)
 Suivez les étapes de la section xref:replacing-e2700-controller.adoc[Remplacement du contrôleur E2700], mais installer la nouvelle batterie dans le contrôleur existant.
 
 |===
+.Informations associées
 https://mysupport.netapp.com/info/web/ECMP11751516.html["Procédures de remplacement du matériel NetApp E-Series et EF-Series"^]
 
 http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61765["Documentation NetApp : gamme E2700"^]

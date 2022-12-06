@@ -13,8 +13,10 @@ summary: 'Si la procédure de mise hors service du nœud s"arrête à cause d"un
 [role="lead"]
 Si la procédure de mise hors service du nœud s'arrête à cause d'une erreur, vous pouvez prendre des étapes spécifiques pour résoudre le problème.
 
+.Ce dont vous avez besoin
 Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 
+.Description de la tâche
 Si vous arrêtez le nœud de la grille en cours de mise hors service, la tâche s'arrête jusqu'au redémarrage du nœud de la grille. Le nœud grid doit être en ligne.
 
 .Étapes

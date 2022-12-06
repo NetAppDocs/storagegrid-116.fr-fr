@@ -13,7 +13,7 @@ summary: 'Vous devrez peut-être désaffecter un nœud qui n"est pas actuellemen
 [role="lead"]
 Vous devrez peut-être désaffecter un nœud qui n'est pas actuellement connecté à la grille (dont l'état de santé est inconnu ou désactivé d'un point de vue administratif).
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous comprenez les exigences et xref:considerations-for-decommissioning-grid-nodes.adoc[facteurs à prendre en compte lors de la mise hors service des nœuds].
 * Vous avez obtenu tous les éléments prérequis.
 * Vous avez vérifié qu'aucun travail de réparation de données n'est actif. Voir xref:checking-data-repair-jobs.adoc[Vérifier les travaux de réparation des données].
@@ -23,6 +23,7 @@ Vous devrez peut-être désaffecter un nœud qui n'est pas actuellement connect�
 * Vous devez disposer de la phrase secrète pour le provisionnement.
 
 
+.Description de la tâche
 Vous pouvez identifier les nœuds déconnectés en recherchant des icônes inconnues (bleu) ou administrativement déconnectées (gris) dans la colonne *Santé*. Dans l'exemple, le nœud de stockage nommé DC1-S4 est déconnecté ; tous les autres nœuds sont connectés.
 
 image::../media/decommission_nodes_page_one_disconnected.png[Page Désaffectez les nœuds avec un nœud déconnecté]
@@ -197,6 +198,7 @@ Cette commande relance une réparation de volume en échec à l'aide de l'ID de 
 
 --
 ====
+.Une fois que vous avez terminé
 Dès que les nœuds déconnectés ont été désaffectés et que toutes les tâches de réparation de données ont été effectuées, vous pouvez désaffecter tous les nœuds de la grille connectés si nécessaire.
 
 Ensuite, procédez comme suit après avoir effectué la procédure de mise hors service :
@@ -212,4 +214,5 @@ Ensuite, procédez comme suit après avoir effectué la procédure de mise hors 
 
 
 
+.Informations associées
 xref:grid-node-recovery-procedures.adoc[Procédures de restauration des nœuds de la grille]

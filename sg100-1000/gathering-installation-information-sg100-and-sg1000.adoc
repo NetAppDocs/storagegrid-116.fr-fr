@@ -357,6 +357,7 @@ Adresse IP statique que vous prévoyez d'utiliser pour le port de gestion BMC
 
 
 |===
+.Informations associées
 xref:sg100-and-sg1000-appliances-overview.adoc[Présentation des appareils SG100 et SG1000]
 
 xref:cabling-appliance-sg100-and-sg1000.adoc[Serre-câbles SG100 et SG1000]

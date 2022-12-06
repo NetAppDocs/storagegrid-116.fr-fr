@@ -366,6 +366,7 @@ Si la période de conservation par défaut est modifiée, la conservation jusqu'
 Voir xref:../s3/use-s3-object-lock-default-bucket-retention.adoc#put-object-lock-configuration[CONFIGURATION du verrouillage de l'objet] pour des informations détaillées.
 
 |===
+.Informations associées
 xref:consistency-controls.adoc[Contrôles de cohérence]
 
 xref:get-bucket-last-access-time-request.adoc[DEMANDE DE dernier accès au compartiment]

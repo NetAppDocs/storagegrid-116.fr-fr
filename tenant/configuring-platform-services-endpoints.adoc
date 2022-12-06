@@ -47,4 +47,5 @@ StorageGRID prend en charge des terminaux d'intégration de recherche représent
 
 Le point final de l'intégration de la recherche fait référence à un index et à un type Elasticsearch spécifiques. Vous devez créer l'index dans Elasticsearch avant la création du noeud final dans StorageGRID, sinon la création du noeud final échouera. Il n'est pas nécessaire de créer le type avant de créer le noeud final. StorageGRID crée le type si nécessaire lors de l'envoi de métadonnées d'objet au terminal.
 
+.Informations associées
 xref:../admin/index.adoc[Administrer StorageGRID]

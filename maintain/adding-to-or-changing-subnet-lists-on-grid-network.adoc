@@ -13,7 +13,7 @@ summary: 'Vous pouvez utiliser l"outil Modifier IP pour ajouter ou modifier des 
 [role="lead"]
 Vous pouvez utiliser l'outil Modifier IP pour ajouter ou modifier des sous-réseaux sur le réseau de grille.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez avoir le `Passwords.txt` fichier.
 
 
@@ -154,4 +154,5 @@ IMPORTANT: Le fichier du progiciel de récupération doit être sécurisé car i
 
 
 
+.Informations associées
 xref:configuring-ip-addresses.adoc[Configurez les adresses IP]

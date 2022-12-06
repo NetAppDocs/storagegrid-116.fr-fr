@@ -13,7 +13,7 @@ summary: 'Vous devez accéder au programme d"installation de l"appliance Storage
 [role="lead"]
 Vous devez accéder au programme d'installation de l'appliance StorageGRID pour vérifier la version du programme d'installation et configurer les connexions entre l'appliance et les trois réseaux StorageGRID : le réseau Grid, le réseau d'administration (facultatif) et le réseau client (facultatif).
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous utilisez n'importe quel client de gestion pouvant vous connecter au réseau d'administration StorageGRID ou vous disposez d'un ordinateur portable de service.
 * L'ordinateur portable client ou de service dispose d'un navigateur Web pris en charge.
 * Le contrôleur SG6000-CN est connecté à tous les réseaux StorageGRID que vous envisagez d'utiliser.
@@ -21,6 +21,7 @@ Vous devez accéder au programme d'installation de l'appliance StorageGRID pour 
 * Vous avez configuré les commutateurs réseau que vous prévoyez d'utiliser.
 
 
+.Description de la tâche
 Pour accéder initialement au programme d'installation de l'appliance StorageGRID, vous pouvez utiliser l'adresse IP attribuée par DHCP pour le port réseau d'administration du contrôleur SG6000-CN (à condition que le contrôleur soit connecté au réseau d'administration) ou connecter un ordinateur portable de service directement au contrôleur SG6000-CN.
 
 .Étapes
@@ -74,6 +75,7 @@ NOTE: Si vous ne pouvez pas accéder à la page d'accueil via une connexion lien
 
 
 
+.Une fois que vous avez terminé
 Après avoir accédé au programme d'installation de l'appliance StorageGRID :
 
 * Vérifiez que la version du programme d'installation de l'appliance StorageGRID installée sur l'appliance correspond à la version logicielle installée sur votre système StorageGRID. Mettez à niveau le programme d'installation de l'appliance StorageGRID, si nécessaire.
@@ -83,4 +85,5 @@ xref:verifying-and-upgrading-storagegrid-appliance-installer-version.adoc[Vérif
 * Vérifiez tous les messages affichés sur la page d'accueil du programme d'installation de l'appliance StorageGRID et configurez la configuration du lien et la configuration IP, selon les besoins.
 
 
+.Informations associées
 xref:../admin/web-browser-requirements.adoc[Navigateurs Web pris en charge]

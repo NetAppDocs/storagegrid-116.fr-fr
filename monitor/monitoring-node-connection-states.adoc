@@ -13,10 +13,11 @@ summary: 'Si un ou plusieurs nœuds sont déconnectés de la grille, les opérat
 [role="lead"]
 Si un ou plusieurs nœuds sont déconnectés de la grille, les opérations StorageGRID stratégiques peuvent être affectées. Vous devez contrôler l'état de connexion des nœuds et résoudre tout problème dans les plus brefs délais.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 
 
+.Description de la tâche
 Les nœuds peuvent avoir l'un des trois États de connexion suivants :
 
 * *Non connecté - Inconnu* image:../media/icon_alarm_blue_unknown.png["icône bleue du point d'interrogation"]: Le nœud n'est pas connecté à la grille pour une raison inconnue. Par exemple, la connexion réseau entre les nœuds a été perdue ou l'alimentation est coupée. L'alerte *Impossible de communiquer avec le noeud* peut également être déclenchée. D'autres alertes peuvent également être actives. Cette situation exige une attention immédiate.
@@ -60,6 +61,7 @@ Les nœuds gris sont attendus lors des procédures de maintenance et peuvent êt
 
 
 
+.Informations associées
 xref:alerts-reference.adoc[Référence des alertes]
 
 xref:../maintain/index.adoc[Récupérer et entretenir]

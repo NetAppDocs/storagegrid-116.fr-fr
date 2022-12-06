@@ -13,7 +13,7 @@ summary: 'Pour augmenter la capacité de stockage, vous pouvez ajouter un ou deu
 [role="lead"]
 Pour augmenter la capacité de stockage, vous pouvez ajouter un ou deux tiroirs d'extension à un SG6060 ou SG6060X qui est déjà déployé dans un système StorageGRID.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez disposer de la phrase secrète pour le provisionnement.
 * Vous devez exécuter StorageGRID 11.4 ou version ultérieure.
 * Le tiroir d'extension et deux câbles SAS pour chaque tiroir d'extension sont disponibles.
@@ -23,6 +23,7 @@ xref:locating-controller-in-data-center.adoc[Localiser le contrôleur dans le da
 
 
 
+.Description de la tâche
 Pour ajouter un tiroir d'extension, procédez comme suit :
 
 * Installez le matériel dans l'armoire ou le rack.
@@ -192,7 +193,7 @@ Une fois la configuration terminée, l'appliance redémarre automatiquement pour
 
 +
 
-NOTE: Pour relancer la configuration du tiroir d'extension en cas d'échec, accédez au programme d'installation de l'appliance StorageGRID, sélectionnez *Avancé* *redémarrer le contrôleur*, puis sélectionnez *redémarrer en mode de maintenance*. Une fois le nœud redémarré, réessayez dans ,configuration des tiroirs d'extension.
+NOTE: Pour relancer la configuration du tiroir d'extension en cas d'échec, accédez au programme d'installation de l'appliance StorageGRID, sélectionnez *Avancé* *redémarrer le contrôleur*, puis sélectionnez *redémarrer en mode de maintenance*. Une fois le nœud redémarré, réessayez dans <<start_expansion,configuration des tiroirs d'extension>>.
 
 +
 Une fois le redémarrage terminé, l'onglet *tâches* ressemble à la capture d'écran suivante :
@@ -212,6 +213,7 @@ L'icône de coche verte indique qu'aucune alerte n'est active et que le nœud es
 
 
 
+.Informations associées
 xref:unpacking-boxes-sg6000.adoc[Boîtes de déballage (SG6000 et SG6060X)]
 
 xref:sg6060-installing-60-drive-shelves-into-cabinet-or-rack.adoc[SG6060 et SG6060X : installez les tiroirs de 60 disques dans l'armoire ou le rack]

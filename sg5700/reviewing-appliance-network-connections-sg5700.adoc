@@ -113,6 +113,7 @@ Ports 10/25 GbE 1-4 sur le contrôleur E5700SG
 Connectez-vous au réseau Grid et au réseau client pour StorageGRID. Reportez-vous à la section « connexions des ports 10/25 GbE du contrôleur E5700SG ».
 
 |===
+.Informations associées
 xref:gathering-installation-information-sg5700.adoc[Collecte d'informations sur l'installation (SG5700)]
 
 xref:cabling-appliance-sg5700.adoc[Appliance pour câble (SG5700)]

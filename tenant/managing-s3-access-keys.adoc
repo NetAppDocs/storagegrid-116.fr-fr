@@ -13,6 +13,7 @@ summary: 'Chaque utilisateur d"un compte de locataire S3 doit disposer d"une cl�
 [role="lead"]
 Chaque utilisateur d'un compte de locataire S3 doit disposer d'une clé d'accès pour stocker et récupérer des objets dans le système StorageGRID. Une clé d'accès se compose d'un ID de clé d'accès et d'une clé d'accès secrète.
 
+.Description de la tâche
 Les clés d'accès S3 peuvent être gérées de la manière suivante :
 
 * Les utilisateurs disposant de l'autorisation *gérer vos propres informations d'identification S3* peuvent créer ou supprimer leurs propres clés d'accès S3.

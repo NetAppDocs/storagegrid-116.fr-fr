@@ -13,7 +13,7 @@ summary: 'Vous pouvez supprimer un compte de tenant si vous souhaitez supprimer 
 [role="lead"]
 Vous pouvez supprimer un compte de tenant si vous souhaitez supprimer définitivement l'accès du tenant au système.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer d'autorisations d'accès spécifiques.
 * Vous devez avoir supprimé tous les compartiments (S3), les conteneurs (Swift) et les objets associés au compte du locataire.

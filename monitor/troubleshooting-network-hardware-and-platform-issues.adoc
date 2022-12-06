@@ -15,7 +15,7 @@ Vous pouvez effectuer plusieurs tâches pour déterminer la source des problème
 
 
 
-== Dépanner les erreurs "422: Entité impossible à traiter"
+== Dépanner les erreurs « 422 : entité impossible à traiter »
 
 L'erreur 422 : entité impossible à traiter peut se produire dans un certain nombre de circonstances. Consultez le message d'erreur pour déterminer la cause de votre problème.
 
@@ -75,14 +75,16 @@ Ce message s'affiche si vous essayez d'utiliser un chiffrement non pris en charg
 Vérifiez les chiffrements proposés par le système externe. Le système doit utiliser l'un des chiffrements pris en charge par StorageGRID pour les connexions TLS sortantes, comme indiqué dans les instructions d'administration de StorageGRID.
 
 |===
+.Informations associées
 xref:../admin/index.adoc[Administrer StorageGRID]
 
 
 
-== Dépanner l'alerte de non-concordance de MTU du réseau Grid
+== [[Dépannage_MTU_Alert]]dépanner l'alerte de non-concordance de MTU du réseau Grid
 
 L'alerte *Grid Network MTU mismatch* est déclenchée lorsque le paramètre MTU (maximum transmission Unit) de l'interface réseau Grid (eth0) diffère considérablement sur les nœuds de la grille.
 
+.Description de la tâche
 Les différences dans les paramètres MTU peuvent indiquer que certains réseaux eth0, mais pas tous, sont configurés pour les trames jumbo. Une différence de taille de MTU supérieure à 1000 peut entraîner des problèmes de performances du réseau.
 
 .Étapes
@@ -152,6 +154,7 @@ Le nœud. La valeur par défaut est le nœud local.
 
 
 
+.Informations associées
 xref:../sg100-1000/index.adoc[Appareils de services SG100 et SG1000]
 
 xref:../sg6000/index.adoc[Dispositifs de stockage SG6000]
@@ -166,6 +169,7 @@ xref:../sg5600/index.adoc[Appliances de stockage SG5600]
 
 Les alarmes d'erreur de réception réseau (NRER) peuvent être causées par des problèmes de connectivité entre StorageGRID et votre matériel réseau. Dans certains cas, les erreurs NRER peuvent être résolues sans intervention manuelle. Si les erreurs ne sont pas claires, effectuez les actions recommandées.
 
+.Description de la tâche
 Les alarmes NRER peuvent être causées par les problèmes suivants avec le matériel réseau connecté à StorageGRID :
 
 * La correction d'erreur de marche avant (FEC) est requise et n'est pas utilisée
@@ -234,7 +238,8 @@ La mémoire tampon annulaire peut être surchargée lorsque le système StorageG
 
 
 
-,Dépanner l'alerte de non-concordance de MTU du réseau Grid
+.Informations associées
+<<troubleshoot_MTU_alert,Dépanner l'alerte de non-concordance de MTU du réseau Grid>>
 
 xref:alarms-reference.adoc[Référence des alarmes (système hérité)]
 
@@ -257,6 +262,7 @@ Si vous rencontrez des problèmes de synchronisation du temps, vérifiez que vou
 
 NOTE: Lorsque vous spécifiez la source NTP externe pour une installation StorageGRID au niveau de la production, n'utilisez pas le service Windows Time (W32Time) sur une version de Windows antérieure à Windows Server 2016. Le service de temps des versions antérieures de Windows n'est pas suffisamment précis et n'est pas pris en charge par Microsoft pour une utilisation dans des environnements à haute précision, tels que StorageGRID.
 
+.Informations associées
 xref:../maintain/index.adoc[Récupérer et entretenir]
 
 
@@ -282,6 +288,7 @@ Pour plus d'informations sur l'activation du clonage MAC, reportez-vous aux inst
 
 Si vous ne souhaitez pas utiliser le clonage d'adresses MAC et que toutes les interfaces puissent recevoir et transmettre des données pour des adresses MAC autres que celles attribuées par l'hyperviseur, Assurez-vous que les propriétés de sécurité aux niveaux de commutateur virtuel et de groupe de ports sont définies sur *Accept* pour le mode promiscuous, les changements d'adresse MAC et les transmissions forgées. Les valeurs définies sur le commutateur virtuel peuvent être remplacées par les valeurs au niveau du groupe de ports, de sorte que les paramètres soient les mêmes aux deux endroits.
 
+.Informations associées
 xref:../rhel/index.adoc[Installez Red Hat Enterprise Linux ou CentOS]
 
 xref:../ubuntu/index.adoc[Installez Ubuntu ou Debian]
@@ -292,6 +299,7 @@ xref:../ubuntu/index.adoc[Installez Ubuntu ou Debian]
 
 Un nœud Linux à l'état orphelin indique généralement que le service StorageGRID ou le démon du nœud StorageGRID contrôlant le conteneur du nœud est décédé de façon inattendue.
 
+.Description de la tâche
 Si un nœud Linux signale qu'il est dans un état orphelin, vous devez :
 
 * Vérifiez les journaux à la recherche d'erreurs et de messages.
@@ -337,6 +345,7 @@ storagegrid node start DC1-S1-172-16-1-172
 
 Vous devrez peut-être activer la prise en charge IPv6 dans le noyau si vous avez installé des nœuds StorageGRID sur des hôtes Linux et que vous remarquez que les adresses IPv6 n'ont pas été attribuées aux conteneurs de nœuds comme prévu.
 
+.Description de la tâche
 L'adresse IPv6 attribuée à un nœud de grille s'affiche aux emplacements suivants dans Grid Manager :
 
 * Sélectionnez *NOEUDS* et sélectionnez le noeud. Sélectionnez ensuite *Afficher plus* en regard de *adresses IP* dans l'onglet vue d'ensemble.

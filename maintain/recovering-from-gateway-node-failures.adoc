@@ -15,4 +15,5 @@ Vous devez effectuer une séquence de tâches afin de pouvoir effectuer une rest
 
 image::../media/overview_api_gateway_node_recovery.png[Organigramme général de la restauration du nœud passerelle]
 
+.Informations associées
 xref:../sg100-1000/index.adoc[Appareils de services SG100 et SG1000]

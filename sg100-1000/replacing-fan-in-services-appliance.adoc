@@ -13,13 +13,14 @@ summary: 'L"appareil de service dispose de huit ventilateurs. Si l"un des ventil
 [role="lead"]
 L'appareil de service dispose de huit ventilateurs. Si l'un des ventilateurs tombe en panne, vous devez le remplacer dès que possible pour vous assurer que l'appareil est bien refroidi.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez déballé le ventilateur de remplacement.
 * Vous avez xref:locating-controller-in-data-center.adoc[l'appareil se trouve physiquement].
 * Vous avez confirmé que les autres ventilateurs sont installés et en cours d'exécution.
 * Vous avez xref:placing-appliance-into-maintenance-mode.adoc[placez l'appareil en mode maintenance].
 
 
+.Description de la tâche
 Le nœud d'appliance ne sera pas accessible pendant le remplacement du ventilateur.
 
 La photo montre un ventilateur pour l'appareil de services. Les ventilateurs de refroidissement sont accessibles après avoir pris le capot supérieur de l'appareil.

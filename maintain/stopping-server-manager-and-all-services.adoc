@@ -13,6 +13,7 @@ summary: 'Server Manager est conçu pour fonctionner en permanence, mais il peut
 [role="lead"]
 Server Manager est conçu pour fonctionner en permanence, mais il peut être nécessaire d'arrêter Server Manager et tous les services exécutés sur un nœud de grille.
 
+.Ce dont vous avez besoin
 Vous devez avoir le `Passwords.txt` fichier.
 
 .Étapes

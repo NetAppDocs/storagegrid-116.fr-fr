@@ -16,7 +16,7 @@ Les alarmes (système hérité) sont déclenchées lorsque les attributs systèm
 
 NOTE: Bien que le système d'alarme existant continue d'être pris en charge, le système d'alerte offre des avantages significatifs et est plus facile à utiliser.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 
 
@@ -93,6 +93,7 @@ image::../media/alarms_acknowledging.png[Acquittement des alarmes]
 
 
 
+.Informations associées
 xref:alarms-reference.adoc[Référence des alarmes (système hérité)]
 
 xref:managing-alarms.adoc[Acquitter les alarmes actuelles (système hérité)]

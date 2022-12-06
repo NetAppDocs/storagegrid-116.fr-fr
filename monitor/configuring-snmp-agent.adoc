@@ -13,11 +13,12 @@ summary: 'Vous pouvez configurer l"agent SNMP StorageGRID si vous souhaitez util
 [role="lead"]
 Vous pouvez configurer l'agent SNMP StorageGRID si vous souhaitez utiliser un système de gestion SNMP tiers pour l'accès MIB en lecture seule et les notifications.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez de l'autorisation accès racine.
 
 
+.Description de la tâche
 L'agent SNMP StorageGRID prend en charge les trois versions du protocole SNMP. Vous pouvez configurer l'agent pour une ou plusieurs versions.
 
 .Étapes
@@ -55,7 +56,7 @@ Les champs de cette section sont utilisés pour l'authentification communautaire
 +
 .. Dans le champ *Default Trap Community*, vous pouvez également saisir la chaîne de communauté par défaut que vous souhaitez utiliser pour les destinations de déroutement.
 +
-Selon les besoins, vous pouvez fournir une autre chaîne de communauté (« personnalisée ») lorsque vous ,définir une destination de recouvrement spécifique.
+Selon les besoins, vous pouvez fournir une autre chaîne de communauté (« personnalisée ») lorsque vous <<select_trap_destination,définir une destination de recouvrement spécifique>>.
 
 +
 *Valeur par défaut Trap Community* peut comporter un maximum de 32 caractères et ne peut pas contenir d'espaces.
@@ -268,4 +269,5 @@ La nouvelle configuration de l'agent SNMP devient active.
 
 
 
+.Informations associées
 xref:silencing-alert-notifications.adoc[Notifications d'alerte de silence]

@@ -13,7 +13,7 @@ summary: 'Le nœud d"administration principal héberge le service CMN. Certaines
 [role="lead"]
 Le nœud d'administration principal héberge le service CMN. Certaines procédures de maintenance peuvent uniquement être effectuées à l'aide du nœud d'administration principal.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 

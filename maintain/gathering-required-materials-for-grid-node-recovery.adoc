@@ -21,7 +21,7 @@ Avant d'effectuer des procédures de maintenance, vous devez vous assurer que vo
  a| 
 Archive de l'installation de StorageGRID
  a| 
-Si vous devez restaurer un nœud grid, vous devez ,Téléchargez les fichiers d'installation de StorageGRID pour votre plate-forme.
+Si vous devez restaurer un nœud grid, vous devez <<download-and-extract-install-files-recover,Téléchargez les fichiers d'installation de StorageGRID>> pour votre plate-forme.
 
 *Remarque :* vous n'avez pas besoin de télécharger de fichiers si vous récupérez des volumes de stockage défectueux sur un noeud de stockage.
 

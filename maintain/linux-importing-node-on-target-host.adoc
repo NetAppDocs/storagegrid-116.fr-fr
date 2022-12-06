@@ -48,6 +48,7 @@ Pour plus d'informations sur le dépannage, reportez-vous aux instructions d'ins
 
 
 
+.Informations associées
 xref:../rhel/index.adoc[Installez Red Hat Enterprise Linux ou CentOS]
 
 xref:../ubuntu/index.adoc[Installez Ubuntu ou Debian]

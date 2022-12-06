@@ -97,6 +97,7 @@ Les en-têtes de réponse suivants pour les opérations de compte et de conteneu
 * `X-Container-Object-Count`
 
 
+.Informations associées
 xref:configuring-tenant-accounts-and-connections.adoc[Configurez les comptes et les connexions des locataires]
 
 xref:account-operations.adoc[Opérations sur le compte]

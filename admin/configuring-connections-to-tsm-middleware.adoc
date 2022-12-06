@@ -13,11 +13,12 @@ summary: 'Avant que le nœud d"archivage puisse communiquer avec le middleware \
 [role="lead"]
 Avant que le nœud d'archivage puisse communiquer avec le middleware Tivoli Storage Manager (TSM), vous devez configurer un certain nombre de paramètres.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 
 
+.Description de la tâche
 Tant que ces paramètres ne sont pas configurés, le service ARC reste dans un état d'alarme majeur car il ne peut pas communiquer avec Tivoli Storage Manager.
 
 .Étapes

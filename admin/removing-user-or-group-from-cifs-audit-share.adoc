@@ -13,11 +13,12 @@ summary: 'Vous ne pouvez pas supprimer le dernier utilisateur ou groupe autoris�
 [role="lead"]
 Vous ne pouvez pas supprimer le dernier utilisateur ou groupe autorisé à accéder au partage d'audit.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez le `Passwords.txt` Fichier avec les mots de passe du compte racine (disponible dans LEDIT package).
 * Vous avez le `Configuration.txt` Fichier (disponible dans LEDIT paquet).
 
 
+.Description de la tâche
 L'exportation d'audit via CIFS/Samba a été obsolète et sera supprimée dans une future version de StorageGRID.
 
 .Étapes

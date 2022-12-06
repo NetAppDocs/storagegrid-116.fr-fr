@@ -15,7 +15,7 @@ Une HIC distincte est utilisée uniquement pour le contrôleur E2800B. La carte 
 
 NOTE: Les illustrations de cette procédure montrent une HIC 2 ports. La HIC de votre contrôleur peut avoir un nombre différent de ports.
 
-. Si le contrôleur n'a pas d'HIC (E2800A), remplacer le capot du contrôleur. Si le contrôleur possède une HIC (E2800B), passer à l' ,Déplacer la HIC du contrôleur défectueux vers le contrôleur de remplacement.
+. Si le contrôleur n'a pas d'HIC (E2800A), remplacer le capot du contrôleur. Si le contrôleur possède une HIC (E2800B), passer à l' <<move_the_HIC_to_the_replacement_controller,Déplacer la HIC du contrôleur défectueux vers le contrôleur de remplacement>>.
 +
 .. [[Move_the_HIC_to_the_replace_Controller]]si la carte HIC est équipée, déplacez la carte HIC du contrôleur défectueux vers le contrôleur de remplacement.
 .. Supprimer tout SFP de la HIC.

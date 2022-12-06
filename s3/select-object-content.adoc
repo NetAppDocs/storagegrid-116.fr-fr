@@ -15,7 +15,7 @@ Vous pouvez utiliser la requête S3 SelectObjectContent pour filtrer le contenu 
 
 Pour plus d'informations, reportez-vous au https://docs.aws.amazon.com/AmazonS3/latest/API/API_SelectObjectContent.html["Documentation AWS pour SelectObjectContent"^].
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Le compte de tenant dispose de l'autorisation S3 Select.
 * Vous avez `s3:GetObject` autorisation pour l'objet à interroger.
 * L'objet que vous souhaitez interroger est au format CSV ou est un fichier compressé GZIP ou BZIP2 contenant un fichier au format CSV.

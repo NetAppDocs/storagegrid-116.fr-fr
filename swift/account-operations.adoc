@@ -80,4 +80,5 @@ Une exécution réussie renvoie les en-têtes suivants avec une réponse « HTTP
 * `X-Trans-Id`
 
 
+.Informations associées
 xref:monitoring-and-auditing-operations.adoc[Surveiller et auditer les opérations]

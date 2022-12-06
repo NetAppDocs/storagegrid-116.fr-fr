@@ -13,6 +13,7 @@ summary: 'Étape 1 \(Define Basics\) de l’assistant Create ILM Rule (Créer un
 [role="lead"]
 L'étape 1 (Define Basics) de l'assistant Create ILM Rule (Créer une règle ILM) vous permet de définir les filtres de base et avancés de la règle.
 
+.Description de la tâche
 Lors de l'évaluation d'un objet par rapport à une règle ILM, StorageGRID compare les métadonnées d'objet aux filtres de la règle. Si les métadonnées correspondent à tous les filtres, StorageGRID utilise la règle pour placer l'objet. Vous pouvez concevoir une règle à appliquer à tous les objets, ou spécifier des filtres de base, tels qu'un ou plusieurs comptes de locataire, noms de compartiment ou filtres avancés, tels que la taille de l'objet ou les métadonnées utilisateur.
 
 image::../media/ilm_create_ilm_rule_wizard_1.png[Créer une règle ILM étape 1 sur 3]

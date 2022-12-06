@@ -15,13 +15,14 @@ Lorsque vous ajoutez des nœuds de grille ou un nouveau site dans une extension,
 
 StorageGRID conserve une liste des sous-réseaux réseau utilisés pour communiquer entre les nœuds de la grille sur le réseau Grid (eth0). Ces entrées incluent les sous-réseaux utilisés pour le réseau Grid par chaque site du système StorageGRID, ainsi que tous les sous-réseaux utilisés pour les serveurs NTP, DNS, LDAP ou autres serveurs externes accessibles via la passerelle réseau Grid.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez de l'autorisation Maintenance ou accès racine.
 * Vous avez la phrase secrète pour le provisionnement.
 * Les adresses réseau des sous-réseaux que vous souhaitez configurer sont définies, en notation CIDR.
 
 
+.Description de la tâche
 Si l'un des nouveaux nœuds possède une adresse IP de réseau Grid sur un sous-réseau non utilisé auparavant, vous devez ajouter le nouveau sous-réseau à la liste de sous-réseaux du réseau Grid avant de démarrer l'extension. Sinon, vous devrez annuler l'extension, ajouter le nouveau sous-réseau et recommencer la procédure.
 
 .Étapes

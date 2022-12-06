@@ -46,6 +46,7 @@ Ce graphique fournit une moyenne mobile de 3 minutes des durées de requête, ve
 
 Ce graphique fournit une moyenne mobile de 3 minutes du nombre de réponses d'erreur renvoyées aux clients par seconde, ventilées par le code de réponse d'erreur.
 
+.Informations associées
 xref:monitoring-load-balancing-operations.adoc[Surveiller les opérations d'équilibrage de charge]
 
 xref:../admin/index.adoc[Administrer StorageGRID]

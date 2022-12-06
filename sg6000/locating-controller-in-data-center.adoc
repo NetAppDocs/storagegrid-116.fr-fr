@@ -13,7 +13,7 @@ summary: Identifiez le contrôleur pour effectuer des opérations de maintenance
 [role="lead"]
 Identifiez le contrôleur pour effectuer des opérations de maintenance ou de mise à niveau du matériel.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez déterminé quel contrôleur doit être entretenu.
 +
 (Facultatif) pour localiser le contrôleur dans votre centre de données, activez le voyant d'identification bleu.
@@ -48,6 +48,7 @@ xref:turning-controller-identify-led-on-and-off.adoc[Allumer et éteindre la LED
 
 
 
+.Informations associées
 xref:removing-fibre-channel-hba.adoc[Retirez l'adaptateur HBA Fibre Channel]
 
 xref:removing-sg6000-cn-controller-from-cabinet-or-rack.adoc[Retirez le contrôleur SG6000-CN de l'armoire ou du rack]

@@ -13,7 +13,7 @@ summary: 'Pour accéder au Gestionnaire de locataires, entrez l"URL du locataire
 [role="lead"]
 Pour accéder au Gestionnaire de locataires, entrez l'URL du locataire dans la barre d'adresse d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez disposer de vos identifiants de connexion.
 * Vous devez disposer d'une URL pour accéder au Gestionnaire de locataires, telle que fournie par votre administrateur de grid. L'URL se présente comme l'un de ces exemples :
 +

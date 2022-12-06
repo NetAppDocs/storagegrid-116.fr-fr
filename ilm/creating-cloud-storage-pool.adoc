@@ -13,7 +13,7 @@ summary: 'Lorsque vous créez un pool de stockage cloud, vous indiquez le nom et
 [role="lead"]
 Lorsque vous créez un pool de stockage cloud, vous indiquez le nom et l'emplacement du compartiment ou du conteneur externe utilisé par StorageGRID pour stocker des objets, le type de fournisseur cloud (Amazon S3 ou Azure Blob Storage) et le StorageGRID service d'information doit accéder au compartiment ou au conteneur externe.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 * Vous avez lu les instructions de configuration des pools de stockage cloud.
@@ -21,6 +21,7 @@ Lorsque vous créez un pool de stockage cloud, vous indiquez le nom et l'emplace
 * Vous disposez de toutes les informations d'authentification requises pour accéder au compartiment ou au conteneur.
 
 
+.Description de la tâche
 Un pool de stockage cloud spécifie un compartiment S3 externe unique ou un conteneur de stockage Azure Blob. StorageGRID valide le pool de stockage cloud dès que vous le sauvegardez. Vous devez donc vous assurer que le compartiment ou le conteneur spécifié dans le pool de stockage cloud est accessible et qu'il existe.
 
 .Étapes

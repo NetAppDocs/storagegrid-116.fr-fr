@@ -186,11 +186,12 @@ image::../media/disabling_alarms.gif[Page volumes affichant les alarmes critique
 
 Les alarmes héritées sont déclenchées lorsque les attributs système atteignent les valeurs de seuil d'alarme. Si vous souhaitez réduire ou effacer la liste des alarmes existantes, vous pouvez également accuser réception des alarmes.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer de l'autorisation accuser réception d'alarmes.
 
 
+.Description de la tâche
 Comme le système d'alarme existant continue d'être pris en charge, la liste des alarmes existantes sur la page alarmes en cours est augmentée chaque fois qu'une nouvelle alarme se déclenche. Vous pouvez généralement ignorer les alarmes (puisque les alertes offrent une meilleure vue du système), ou bien accuser réception des alarmes.
 
 
@@ -241,7 +242,7 @@ image::../media/current_alarms_page_show_acknowledged.png[Page alarmes actuelles
 
 Vous pouvez afficher la liste de toutes les alarmes héritées par défaut.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer d'autorisations d'accès spécifiques.
 
@@ -268,7 +269,7 @@ image::../media/global_alarms.gif[Page alarmes globales]
 
 Lors du dépannage d'un problème, vous pouvez vérifier la fréquence à laquelle une alarme héritée a été déclenchée par le passé.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer d'autorisations d'accès spécifiques.
 
@@ -313,7 +314,7 @@ Les alarmes sont répertoriées dans l'ordre chronologique inverse.
 
 Vous avez peut-être utilisé des alarmes personnalisées globales pour l'ancien système pour répondre à des exigences de surveillance spécifiques. Les alarmes personnalisées globales peuvent avoir des niveaux d'alarme qui remplacent les alarmes par défaut, ou elles peuvent surveiller des attributs qui n'ont pas d'alarme par défaut.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer d'autorisations d'accès spécifiques.
 
@@ -448,11 +449,12 @@ NOTE: Bien que le système d'alarme existant continue d'être pris en charge, le
 
 Vous pouvez désactiver l'une des alarmes par défaut héritées pour l'ensemble du système.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer d'autorisations d'accès spécifiques.
 
 
+.Description de la tâche
 La désactivation d'une alarme pour un attribut qui a actuellement une alarme déclenchée n'efface pas l'alarme en cours. L'alarme sera désactivée lors du prochain dépassement du seuil d'alarme par l'attribut, ou vous pouvez effacer l'alarme déclenchée.
 
 
@@ -494,11 +496,12 @@ L'alarme par défaut est désactivée.
 
 Vous pouvez désactiver une alarme personnalisée globale héritée pour l'ensemble du système.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer d'autorisations d'accès spécifiques.
 
 
+.Description de la tâche
 La désactivation d'une alarme pour un attribut qui a actuellement une alarme déclenchée n'efface pas l'alarme en cours. L'alarme sera désactivée lors du prochain dépassement du seuil d'alarme par l'attribut, ou vous pouvez effacer l'alarme déclenchée.
 
 .Étapes
@@ -520,7 +523,7 @@ L'alarme personnalisée globale est désactivée.
 
 Si une alarme héritée est déclenchée, vous pouvez l'effacer au lieu de la reconnaître.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez avoir le ``Passwords.txt`` fichier.
 
 
@@ -591,11 +594,12 @@ Une liste de diffusion reçoit toutes les notifications associées aux modificat
 
 Si vous souhaitez que StorageGRID envoie des notifications par e-mail lorsqu'une alarme héritée est déclenchée, vous devez spécifier les paramètres du serveur de messagerie SMTP. Le système StorageGRID envoie uniquement des e-mails. Il ne peut pas recevoir d'e-mails.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer d'autorisations d'accès spécifiques.
 
 
+.Description de la tâche
 Utilisez ces paramètres pour définir le serveur SMTP utilisé pour les notifications par e-mail d'alarme et les e-mails AutoSupport hérités. Ces paramètres ne sont pas utilisés pour les notifications d'alerte.
 
 
@@ -668,11 +672,12 @@ Les paramètres du serveur de messagerie SMTP sont enregistrés. Si vous avez sa
 
 Les modèles de courrier électronique vous permettent de personnaliser l'en-tête, le pied de page et l'objet d'une notification d'alarme existante. Vous pouvez utiliser des modèles d'e-mails pour envoyer des notifications uniques contenant le même corps de texte à différentes listes de diffusion.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer d'autorisations d'accès spécifiques.
 
 
+.Description de la tâche
 Utilisez ces paramètres pour définir les modèles d'e-mails utilisés pour les notifications d'alarme héritées. Ces paramètres ne sont pas utilisés pour les notifications d'alerte.
 
 Différentes listes de diffusion peuvent nécessiter des informations de contact différentes. Les modèles n'incluent pas le corps du message électronique.
@@ -730,12 +735,13 @@ Un nouveau modèle pour les notifications est ajouté.
 
 Les listes de diffusion vous permettent d'avertir les destinataires lorsqu'une alarme héritée est déclenchée ou lorsqu'un état de service change. Vous devez créer au moins une liste de diffusion pour pouvoir envoyer des notifications par e-mail d'alarme. Pour envoyer une notification à un seul destinataire, créez une liste de diffusion avec une adresse e-mail.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer d'autorisations d'accès spécifiques.
 * Si vous souhaitez spécifier un modèle de courrier électronique pour la liste de diffusion (en-tête personnalisé, pied de page et ligne d'objet), vous devez avoir déjà créé le modèle.
 
 
+.Description de la tâche
 Utilisez ces paramètres pour définir les listes de diffusion utilisées pour les notifications par e-mail d'alarme héritées. Ces paramètres ne sont pas utilisés pour les notifications d'alerte.
 
 .Étapes
@@ -788,12 +794,13 @@ Une nouvelle liste de diffusion est créée.
 
 Pour recevoir des notifications par e-mail pour le système d'alarme existant, les destinataires doivent être membres d'une liste de diffusion et cette liste doit être ajoutée à la page Notifications. Les notifications sont configurées pour envoyer des e-mails aux destinataires uniquement lorsqu'une alarme avec un niveau de gravité spécifié est déclenchée ou lorsqu'un état de service change. Ainsi, les destinataires ne reçoivent que les notifications dont ils ont besoin.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer d'autorisations d'accès spécifiques.
 * Vous devez avoir configuré une liste d'e-mails.
 
 
+.Description de la tâche
 Utilisez ces paramètres pour configurer les notifications pour les alarmes héritées. Ces paramètres ne sont pas utilisés pour les notifications d'alerte.
 
 Si une adresse e-mail (ou une liste) appartient à plusieurs listes de diffusion, une seule notification par e-mail est envoyée lorsqu'un événement de déclenchement de notification se produit. Par exemple, un groupe d'administrateurs au sein de votre organisation peut être configuré pour recevoir des notifications pour toutes les alarmes, quelle que soit leur gravité. Un autre groupe peut uniquement exiger des notifications pour les alarmes dont la gravité est critique. Vous pouvez appartenir aux deux listes. Si une alarme critique est déclenchée, vous ne recevez qu'une seule notification.
@@ -816,7 +823,7 @@ Des notifications sont envoyées à la liste de diffusion lorsque des alarmes av
 
 Vous pouvez supprimer les notifications d'alarme pour une liste de diffusion lorsque vous ne souhaitez plus que la liste de diffusion reçoive des notifications relatives aux alarmes. Par exemple, vous pouvez supprimer les notifications relatives aux alarmes existantes après avoir été passé à l'aide des notifications par e-mail d'alerte.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer d'autorisations d'accès spécifiques.
 
@@ -843,11 +850,12 @@ Les notifications d'alarme héritées sont supprimées pour les listes d'envoi s
 
 Vous pouvez bloquer la capacité du système StorageGRID à envoyer des notifications par e-mail pour les alarmes héritées et les messages AutoSupport déclenchés par des événements.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez être connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous devez disposer d'autorisations d'accès spécifiques.
 
 
+.Description de la tâche
 Utilisez cette option pour supprimer les notifications par e-mail pour les alarmes héritées et les messages AutoSupport déclenchés par des événements.
 
 

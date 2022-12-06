@@ -29,6 +29,7 @@ Vous pouvez également modifier la destination des journaux d'audit et envoyer d
 
 Pour plus de détails sur le fichier journal d'audit, le format des messages d'audit, les types de messages d'audit et les outils disponibles pour analyser les messages d'audit, reportez-vous aux instructions pour les messages d'audit. Pour savoir comment configurer l'accès client d'audit, reportez-vous aux instructions d'administration de StorageGRID.
 
+.Informations associées
 xref:../audit/index.adoc[Examiner les journaux d'audit]
 
 xref:../admin/index.adoc[Administrer StorageGRID]

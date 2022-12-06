@@ -50,7 +50,7 @@ mybucket/f8e3-image3132.jpg
 
 
 
-== Recommandations pour les « lectures de plage »
+== Recommandations pour « plages de lectures »
 
 Si l'option *Compress Stored Objects* est sélectionnée (*CONFIGURATION* *système* *Grid options*), les applications client S3 doivent éviter d'effectuer des opérations GET Object qui indiquent une plage d'octets. Ces opérations de « lecture à plage » sont inefficaces, car StorageGRID doit décompresser efficacement les objets pour accéder aux octets demandés. LES opérations GET Object qui demandent une petite plage d'octets provenant d'un objet très volumineux sont particulièrement inefficaces. Par exemple, il est très inefficace de lire une plage de 10 Mo à partir d'un objet compressé de 50 Go.
 

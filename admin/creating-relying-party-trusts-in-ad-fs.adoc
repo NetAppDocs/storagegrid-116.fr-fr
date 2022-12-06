@@ -13,7 +13,7 @@ summary: 'Vous devez utiliser Active Directory Federation Services (AD FS) pour 
 [role="lead"]
 Vous devez utiliser Active Directory Federation Services (AD FS) pour créer une confiance de partie de confiance pour chaque nœud d'administration de votre système. Vous pouvez créer des approbations tierces via les commandes PowerShell, en important les métadonnées SAML depuis StorageGRID ou en saisissant manuellement les données.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez configuré l'authentification unique pour StorageGRID et sélectionné *AD FS* comme type SSO.
 * *Sandbox mode* est sélectionné sur la page Single Sign-on dans Grid Manager. Voir xref:../admin/using-sandbox-mode.adoc[Utiliser le mode sandbox].
 * Vous connaissez le nom de domaine complet (ou l'adresse IP) et l'identifiant de partie comptant pour chaque nœud d'administration de votre système. Ces valeurs sont disponibles dans le tableau des détails des nœuds d'administration de la page d'ouverture de session unique StorageGRID.
@@ -26,6 +26,7 @@ NOTE: Vous devez créer une confiance en tiers pour chaque nœud d'administratio
 * Si vous créez manuellement la confiance de la partie utilisatrices, vous disposez du certificat personnalisé chargé pour l'interface de gestion StorageGRID, ou vous savez comment vous connecter à un nœud d'administration à partir du shell de commande.
 
 
+.Description de la tâche
 Ces instructions s'appliquent à Windows Server 2016 AD FS. Si vous utilisez une version différente d'AD FS, vous remarquerez de légères différences dans la procédure. Pour toute question, consultez la documentation Microsoft AD FS.
 
 

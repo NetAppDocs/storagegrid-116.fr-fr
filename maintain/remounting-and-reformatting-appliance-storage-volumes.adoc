@@ -13,7 +13,7 @@ summary: Vous devez exécuter manuellement deux scripts pour remonter les volume
 [role="lead"]
 Vous devez exécuter manuellement deux scripts pour remonter les volumes de stockage conservés et reformater les volumes de stockage défaillants. Le premier script monte les volumes au format approprié en tant que volumes de stockage StorageGRID. Le deuxième script reformate tous les volumes démontés, reconstruit la base de données Cassandra si nécessaire et démarre les services.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez déjà remplacé le matériel de tous les volumes de stockage défectueux que vous savez avoir besoin d'être remplacé.
 +
 Exécution du `sn-remount-volumes` un script peut vous aider à identifier d'autres volumes de stockage ayant échoué.
@@ -25,6 +25,7 @@ Exécution du `sn-remount-volumes` un script peut vous aider à identifier d'aut
 
 CAUTION: Si plus d'un nœud de stockage est hors ligne ou si un nœud de stockage de cette grille a été reconstruit au cours des 15 derniers jours, contactez le support technique. N'exécutez pas le `sn-recovery-postinstall.sh` script. Reconstruire Cassandra sur deux nœuds de stockage ou plus dans les 15 jours suivant l'arrêt du service peut entraîner une perte de données.
 
+.Description de la tâche
 Pour effectuer cette procédure, vous devez effectuer les tâches de haut niveau suivantes :
 
 * Connectez-vous au nœud de stockage récupéré.
@@ -224,6 +225,7 @@ La page Monitor Install indique la progression de l'installation pendant l'exéc
 
 Après le `sn-recovery-postinstall.sh` script a démarré les services sur le nœud. vous pouvez restaurer les données d'objet sur tous les volumes de stockage formatés par le script, comme décrit dans la procédure suivante.
 
+.Informations associées
 xref:reviewing-warnings-for-system-drive-recovery.adoc[Consultez les avertissements relatifs à la restauration du lecteur système du nœud de stockage]
 
 xref:restoring-object-data-to-storage-volume-for-appliance.adoc[Restaurez les données d'objet vers un volume de stockage pour l'appliance]

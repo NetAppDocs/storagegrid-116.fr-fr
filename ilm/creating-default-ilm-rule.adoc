@@ -13,11 +13,12 @@ summary: 'Avant de créer une règle ILM, vous devez créer une règle par défa
 [role="lead"]
 Avant de créer une règle ILM, vous devez créer une règle par défaut afin de placer tous les objets qui ne correspondent pas à une autre règle de la politique. La règle par défaut ne peut pas utiliser de filtres. Elle doit s'appliquer à tous les locataires, à tous les compartiments et à toutes les versions d'objet.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez d'autorisations d'accès spécifiques.
 
 
+.Description de la tâche
 La règle par défaut est la dernière règle à évaluer dans une stratégie ILM. Elle ne peut donc pas utiliser de filtres ou l'heure de référence non actuelle. Les instructions de positionnement de la règle par défaut sont appliquées à tous les objets qui ne sont pas mis en correspondance par une autre règle de la stratégie.
 
 Dans cet exemple de politique, la première règle s'applique uniquement aux objets appartenant au locataire A. La règle par défaut, qui est la dernière, s'applique aux objets appartenant à tous les autres comptes de tenant.

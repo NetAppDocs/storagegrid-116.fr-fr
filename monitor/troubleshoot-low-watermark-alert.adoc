@@ -70,12 +70,13 @@ L'alerte *dépassement de seuil en lecture seule faible* est déclenchée pour l
 
 Suivez ces étapes si une ou plusieurs alertes *prioritaire de filigrane en lecture seule basse* ont été déclenchées. Vous pouvez également utiliser ces instructions si vous utilisez actuellement des paramètres de filigrane personnalisés et souhaitez commencer à utiliser des paramètres optimisés, même si aucune alerte n'a été déclenchée.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez terminé la mise à niveau vers StorageGRID 11.6.
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].
 * Vous disposez de l'autorisation d'accès racine.
 
 
+.Description de la tâche
 Vous pouvez résoudre l'alerte *dépassement de filigrane en lecture seule* en mettant à jour les paramètres de filigrane personnalisés vers les nouveaux remplacements de filigrane. Toutefois, si un ou plusieurs nœuds de stockage sont proches de leur emplacement complet ou si vous avez des exigences ILM spécifiques, vous devez d'abord consulter les filigranes de stockage optimisés et déterminer s'il est sûr de les utiliser.
 
 
@@ -88,12 +89,12 @@ Vous pouvez résoudre l'alerte *dépassement de filigrane en lecture seule* en m
 +
 image::../media/nodes_page_object_data_used_with_alert.png[Page nœuds affichant les données d'objet utilisées pour 3 SNS]
 
-. Si aucun des nœuds de stockage n'est presque plein (par exemple, toutes les valeurs *données objet utilisées* sont inférieures à 80 %), vous pouvez commencer à utiliser les paramètres de remplacement. Accédez à  optimized watermarks.
+. Si aucun des nœuds de stockage n'est presque plein (par exemple, toutes les valeurs *données objet utilisées* sont inférieures à 80 %), vous pouvez commencer à utiliser les paramètres de remplacement. Accédez à <<Utilisez des filigranes optimisés>>.
 +
 
-NOTE: Il y a quelques exceptions à cette règle générale. Par exemple, si les règles ILM utilisent un comportement d'ingestion strict ou si les pools de stockage spécifiques sont proches de la version complète, vous devez d'abord effectuer les étapes de la  optimized storage watermarks et  if you can use optimized watermarks.
+NOTE: Il y a quelques exceptions à cette règle générale. Par exemple, si les règles ILM utilisent un comportement d'ingestion strict ou si les pools de stockage spécifiques sont proches de la version complète, vous devez d'abord effectuer les étapes de la <<Afficher des filigranes de stockage optimisés>> et <<Déterminez si vous pouvez utiliser des filigranes optimisés>>.
 
-. Si un autre nœud de stockage est presque complet, effectuez les étapes de la section  optimized storage watermarks et  if you can use optimized watermarks.
+. Si un autre nœud de stockage est presque complet, effectuez les étapes de la section <<Afficher des filigranes de stockage optimisés>> et <<Déterminez si vous pouvez utiliser des filigranes optimisés>>.
 
 
 
@@ -133,9 +134,9 @@ La dernière colonne affiche la valeur maximale optimisée du filigrane en lectu
 .. Comparez la valeur *disponible* pour chaque magasin d'objets (volume) au filigrane optimisé maximum que vous avez indiqué pour ce noeud de stockage.
 
 
-. Si au moins un volume de chaque nœud de stockage en ligne dispose de plus d'espace disponible que le seuil maximal optimisé pour ce nœud, accédez à  optimized watermarks pour commencer à utiliser les filigranes optimisés.
+. Si au moins un volume de chaque nœud de stockage en ligne dispose de plus d'espace disponible que le seuil maximal optimisé pour ce nœud, accédez à <<Utilisez des filigranes optimisés>> pour commencer à utiliser les filigranes optimisés.
 +
-Sinon, xref:../expand/index.adoc[développez votre grille] dès que possible. Ajoutez des volumes de stockage à un nœud existant ou ajoutez de nouveaux nœuds de stockage. Ensuite, passez à  optimized watermarks pour mettre à jour les paramètres du filigrane.
+Sinon, xref:../expand/index.adoc[développez votre grille] dès que possible. Ajoutez des volumes de stockage à un nœud existant ou ajoutez de nouveaux nœuds de stockage. Ensuite, passez à <<Utilisez des filigranes optimisés>> pour mettre à jour les paramètres du filigrane.
 
 . Si vous devez continuer à utiliser des valeurs personnalisées pour les filigranes de volume de stockage, xref:../monitor/silencing-alert-notifications.adoc[silence] ou xref:../monitor/disabling-alert-rules.adoc[désactiver] L'alerte *dépassement de filigrane en lecture seule* faible.
 +

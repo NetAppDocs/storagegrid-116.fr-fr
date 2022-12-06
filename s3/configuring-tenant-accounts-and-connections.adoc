@@ -40,6 +40,7 @@ Une fois le compte de locataire S3 créé, les utilisateurs peuvent accéder au 
 
 IMPORTANT: Les locataires S3 peuvent créer et gérer des compartiments S3 avec le Gestionnaire des locataires. Toutefois, ils doivent disposer de clés d'accès S3 et utiliser l'API REST S3 pour ingérer et gérer les objets.
 
+.Informations associées
 xref:../admin/index.adoc[Administrer StorageGRID]
 
 xref:../tenant/index.adoc[Utilisez le compte du locataire]
@@ -79,6 +80,7 @@ Si l'administrateur crée un groupe haute disponibilité, les interfaces réseau
 
 Pour plus d'informations sur chaque option, reportez-vous aux instructions d'administration de StorageGRID.
 
+.Informations associées
 xref:../admin/index.adoc[Administrer StorageGRID]
 
 
@@ -199,6 +201,7 @@ Par exemple, si l'adresse IP virtuelle du groupe HA est 192.0.2.5 et le numéro 
 
 Il est possible de configurer un nom DNS pour l'adresse IP que les clients utilisent pour se connecter à StorageGRID. Contactez votre administrateur réseau local.
 
+.Informations associées
 xref:../admin/index.adoc[Administrer StorageGRID]
 
 
@@ -217,6 +220,7 @@ NOTE: Le service CLB est obsolète.
 
 Si l'option *Activer connexion HTTP* est sélectionnée, les clients doivent utiliser des ports HTTP différents de ceux qu'ils utilisent pour HTTPS. Voir les instructions d'administration de StorageGRID.
 
+.Informations associées
 xref:../admin/index.adoc[Administrer StorageGRID]
 
 xref:benefits-of-active-idle-and-concurrent-http-connections.adoc[Avantages des connexions HTTP actives, inactives et simultanées]
@@ -227,6 +231,7 @@ xref:benefits-of-active-idle-and-concurrent-http-connections.adoc[Avantages des 
 
 Avant d'utiliser des noms de domaine S3 pour les demandes des clients, un administrateur StorageGRID doit configurer le système pour qu'il accepte les connexions qui utilisent les noms de domaine S3 dans les demandes de style d'accès S3 et de type hébergement virtuel S3.
 
+.Description de la tâche
 Pour pouvoir utiliser des demandes de style hébergement virtuel S3, un administrateur grid doit effectuer les tâches suivantes :
 
 * Utilisez le Gestionnaire de grille pour ajouter les noms de domaine de points de terminaison S3 au système StorageGRID.
@@ -251,6 +256,7 @@ Pour plus d'informations, reportez-vous aux instructions d'administration de Sto
 
 Une fois ces étapes terminées, vous pouvez utiliser des demandes de type hébergement virtuel (par exemple, `bucket.s3.company.com`).
 
+.Informations associées
 xref:../admin/index.adoc[Administrer StorageGRID]
 
 xref:configuring-security-for-rest-api.adoc[Configuration de la sécurité pour l'API REST]
@@ -261,7 +267,7 @@ xref:configuring-security-for-rest-api.adoc[Configuration de la sécurité pour 
 
 Vous pouvez utiliser l'interface de ligne de commande d'Amazon Web Services (AWS CLI) pour tester votre connexion au système et vérifier que vous pouvez lire et écrire des objets sur le système.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez téléchargé et installé l'interface de ligne de commandes AWS depuis https://aws.amazon.com/cli["aws.amazon.com/cli"^].
 * Vous avez créé un compte de locataire S3 dans le système StorageGRID.
 

@@ -13,7 +13,7 @@ summary: 'L"appareil de services dispose de deux blocs d"alimentation pour assur
 [role="lead"]
 L'appareil de services dispose de deux blocs d'alimentation pour assurer la redondance. En cas de panne de l'un des blocs d'alimentation, vous devez le remplacer dès que possible afin de s'assurer que le contrôleur de calcul est alimenté en redondance. Les deux blocs d'alimentation qui fonctionnent au niveau du contrôleur doivent être du même modèle et de la même puissance.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez xref:locating-controller-in-data-center.adoc[situé physiquement le contrôleur] avec l'alimentation à remplacer.
 * Si vous remplacez une seule alimentation :
 +
@@ -28,6 +28,7 @@ L'appareil de services dispose de deux blocs d'alimentation pour assurer la redo
 
 
 
+.Description de la tâche
 La figure montre les deux blocs d'alimentation du SG100, accessibles à l'arrière de l'appareil.
 
 image::../media/sg1000_power_supplies.png[Arrière du SG100 avec deux blocs d'alimentation]
@@ -36,7 +37,7 @@ image::../media/sg1000_power_supplies.png[Arrière du SG100 avec deux blocs d'al
 NOTE: Les alimentations du SG1000 sont identiques.
 
 .Étapes
-. Si vous ne remplacez qu'une seule alimentation, vous n'avez pas besoin d'éteindre l'appareil. Accédez au ,Débranchez le cordon d'alimentation étape. Si vous remplacez les deux blocs d'alimentation en même temps, procédez comme suit avant de débrancher les cordons d'alimentation :
+. Si vous ne remplacez qu'une seule alimentation, vous n'avez pas besoin d'éteindre l'appareil. Accédez au <<Unplug_the_power_cord,Débranchez le cordon d'alimentation>> étape. Si vous remplacez les deux blocs d'alimentation en même temps, procédez comme suit avant de débrancher les cordons d'alimentation :
 +
 .. xref:placing-appliance-into-maintenance-mode.adoc[Mettez l'appareil en mode de maintenance].
 .. xref:shut-down-sg100-and-sg1000.adoc[Arrêtez l'appareil].

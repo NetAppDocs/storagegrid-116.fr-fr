@@ -13,7 +13,7 @@ summary: 'Vous devrez peut-être modifier la configuration d"un serveur de gesti
 [role="lead"]
 Vous devrez peut-être modifier la configuration d'un serveur de gestion des clés, par exemple si un certificat est sur le point d'expirer.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez passé en revue le xref:kms-considerations-and-requirements.adoc[considérations et conditions requises pour l'utilisation d'un serveur de gestion des clés].
 * Si vous prévoyez de mettre à jour le site sélectionné pour un KMS, vous avez examiné le xref:kms-considerations-for-changing-for-site.adoc[Considérations relatives à la modification du KMS pour un site].
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge].

@@ -13,6 +13,7 @@ summary: 'La version du programme d"installation de l"appliance StorageGRID sur 
 [role="lead"]
 La version du programme d'installation de l'appliance StorageGRID sur l'appliance doit correspondre à la version logicielle installée sur votre système StorageGRID pour s'assurer que toutes les fonctionnalités StorageGRID sont prises en charge.
 
+.Ce dont vous avez besoin
 Vous avez accédé au programme d'installation de l'appliance StorageGRID.
 
 Les appliances StorageGRID sont préinstallées en usine avec le programme d'installation de l'appliance StorageGRID. Si vous ajoutez une appliance à un système StorageGRID récemment mis à niveau, vous devrez peut-être mettre à niveau manuellement le programme d'installation de l'appliance StorageGRID avant d'installer l'appliance en tant que nouveau nœud.
@@ -46,4 +47,5 @@ Après avoir téléchargé le fichier support pour les appliances StorageGRID, e
 
 
 
+.Informations associées
 xref:accessing-storagegrid-appliance-installer-sg5600.adoc[Accédez au programme d'installation de l'appliance StorageGRID]
