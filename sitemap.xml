@@ -181,14 +181,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/adding-sites.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/adding-sites.html</loc>
       
       <lastmod>2022-11-19T03:20:20+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/adding-sites.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/adding-sites.html</loc>
       
       <lastmod>2022-11-19T03:20:20+00:00</lastmod>
       
@@ -363,14 +363,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/approving-pending-grid-nodes.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/approving-pending-grid-nodes.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/approving-pending-grid-nodes.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/approving-pending-grid-nodes.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -538,14 +538,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/automating-appliance-configuration-using-storagegrid-appliance-installer.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/automating-appliance-configuration-using-storagegrid-appliance-installer.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/automating-appliance-configuration-using-storagegrid-appliance-installer.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/automating-appliance-configuration-using-storagegrid-appliance-installer.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -566,14 +566,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/automating-appliance-installation-and-configuration.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/automating-appliance-installation-and-configuration.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/automating-appliance-installation-and-configuration.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/automating-appliance-installation-and-configuration.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -594,14 +594,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/automating-configuration-of-storagegrid.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/automating-configuration-of-storagegrid.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/automating-configuration-of-storagegrid.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/automating-configuration-of-storagegrid.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -629,14 +629,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/automating-installation-configuration-appliance-nodes-configure-sga-py-script.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/automating-installation-configuration-appliance-nodes-configure-sga-py-script.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/automating-installation-configuration-appliance-nodes-configure-sga-py-script.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/automating-installation-configuration-appliance-nodes-configure-sga-py-script.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -895,14 +895,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/changing-mtu-setting.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/changing-mtu-setting.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/changing-mtu-setting.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/changing-mtu-setting.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -979,14 +979,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/checking-dns-server-configuration.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/checking-dns-server-configuration.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/checking-dns-server-configuration.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/checking-dns-server-configuration.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -1042,14 +1042,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/clearing-key-management-server-configuration.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/clearing-key-management-server-configuration.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/clearing-key-management-server-configuration.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/clearing-key-management-server-configuration.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -1931,14 +1931,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/cpu-and-ram-requirements.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/cpu-and-ram-requirements.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/cpu-and-ram-requirements.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/cpu-and-ram-requirements.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -2449,6 +2449,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/downloading-and-extracting-storagegrid-installation-files.html</loc>
+      
+      <lastmod>2022-11-19T03:20:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/downloading-and-extracting-storagegrid-installation-files.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
@@ -2457,13 +2464,6 @@
   
     <url>
       <loc>https://docs.netapp.com/fr-fr/storagegrid-116/maintain/downloading-and-extracting-storagegrid-installation-files.html</loc>
-      
-      <lastmod>2022-11-19T03:20:20+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/downloading-and-extracting-storagegrid-installation-files.html</loc>
       
       <lastmod>2022-11-19T03:20:20+00:00</lastmod>
       
@@ -2484,16 +2484,16 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/primer/downloading-recovery-package.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/maintain/downloading-recovery-package.html</loc>
       
-      <lastmod>2022-11-19T03:20:20+00:00</lastmod>
+      <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/maintain/downloading-recovery-package.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/primer/downloading-recovery-package.html</loc>
       
-      <lastmod>2022-12-06T18:01:49+00:00</lastmod>
+      <lastmod>2022-11-19T03:20:20+00:00</lastmod>
       
     </url>
   
@@ -3149,14 +3149,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/how-grid-nodes-discover-primary-admin-node.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/how-grid-nodes-discover-primary-admin-node.html</loc>
       
       <lastmod>2022-11-19T03:20:20+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/how-grid-nodes-discover-primary-admin-node.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/how-grid-nodes-discover-primary-admin-node.html</loc>
       
       <lastmod>2022-11-19T03:20:20+00:00</lastmod>
       
@@ -3310,7 +3310,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/audit/</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/swift/</loc>
+      
+      <lastmod>2022-12-06T18:01:49+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/</loc>
       
       <lastmod>2022-11-19T03:20:20+00:00</lastmod>
       
@@ -3324,42 +3331,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg5600/</loc>
-      
-      <lastmod>2022-11-19T03:20:20+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/upgrade/</loc>
-      
-      <lastmod>2022-11-19T03:20:20+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/</loc>
-      
-      <lastmod>2022-11-19T03:20:20+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/</loc>
-      
-      <lastmod>2022-11-19T03:20:20+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/primer/</loc>
-      
-      <lastmod>2022-11-19T03:20:20+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/fabricpool/</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/ilm/</loc>
       
       <lastmod>2022-11-19T03:20:20+00:00</lastmod>
       
@@ -3373,28 +3345,42 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/swift/</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg5600/</loc>
+      
+      <lastmod>2022-11-19T03:20:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/harden/</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/s3/</loc>
-      
-      <lastmod>2022-11-19T03:20:20+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/expand/</loc>
-      
-      <lastmod>2022-11-19T03:20:20+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/fr-fr/storagegrid-116/maintain/</loc>
+      
+      <lastmod>2022-11-19T03:20:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/primer/</loc>
+      
+      <lastmod>2022-11-19T03:20:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/ubuntu/</loc>
+      
+      <lastmod>2022-11-19T03:20:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/upgrade/</loc>
       
       <lastmod>2022-11-19T03:20:20+00:00</lastmod>
       
@@ -3415,9 +3401,16 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg5700/</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/tenant/</loc>
       
-      <lastmod>2022-12-06T18:01:49+00:00</lastmod>
+      <lastmod>2022-11-19T03:20:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/expand/</loc>
+      
+      <lastmod>2022-11-19T03:20:20+00:00</lastmod>
       
     </url>
   
@@ -3429,35 +3422,42 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/ilm/</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/</loc>
       
       <lastmod>2022-11-19T03:20:20+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/fabricpool/</loc>
       
       <lastmod>2022-11-19T03:20:20+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/harden/</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/</loc>
+      
+      <lastmod>2022-11-19T03:20:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg5700/</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/ubuntu/</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/audit/</loc>
       
       <lastmod>2022-11-19T03:20:20+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/tenant/</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/s3/</loc>
       
       <lastmod>2022-11-19T03:20:20+00:00</lastmod>
       
@@ -3506,14 +3506,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/installation-and-deployment-overview.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/installation-and-deployment-overview.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/installation-and-deployment-overview.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/installation-and-deployment-overview.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -3814,14 +3814,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/locating-controller-in-data-center.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/locating-controller-in-data-center.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/locating-controller-in-data-center.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/locating-controller-in-data-center.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -4157,14 +4157,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/monitoring-node-encryption-in-maintenance-mode.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/monitoring-node-encryption-in-maintenance-mode.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/monitoring-node-encryption-in-maintenance-mode.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/monitoring-node-encryption-in-maintenance-mode.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -4206,14 +4206,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/monitoring-services-appliance-installation.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/maintain/monitoring-services-appliance-installation.html</loc>
       
       <lastmod>2022-11-19T03:20:20+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/maintain/monitoring-services-appliance-installation.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/monitoring-services-appliance-installation.html</loc>
       
       <lastmod>2022-11-19T03:20:20+00:00</lastmod>
       
@@ -4276,14 +4276,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/navigating-to-grid-manager.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/navigating-to-grid-manager.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/navigating-to-grid-manager.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/navigating-to-grid-manager.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -4584,14 +4584,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/optional-enabling-node-encryption.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/optional-enabling-node-encryption.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/optional-enabling-node-encryption.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/optional-enabling-node-encryption.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -4654,14 +4654,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/overview-of-installation-rest-api.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/overview-of-installation-rest-api.html</loc>
       
       <lastmod>2022-11-19T03:20:20+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/overview-of-installation-rest-api.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/overview-of-installation-rest-api.html</loc>
       
       <lastmod>2022-11-19T03:20:20+00:00</lastmod>
       
@@ -4682,14 +4682,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/overview-of-installation-rest-apis.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/overview-of-installation-rest-apis.html</loc>
       
       <lastmod>2022-11-19T03:20:20+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/overview-of-installation-rest-apis.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/overview-of-installation-rest-apis.html</loc>
       
       <lastmod>2022-11-19T03:20:20+00:00</lastmod>
       
@@ -4752,7 +4752,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/placing-appliance-into-maintenance-mode.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/maintain/placing-appliance-into-maintenance-mode.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -4766,7 +4766,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/maintain/placing-appliance-into-maintenance-mode.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/placing-appliance-into-maintenance-mode.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -4780,14 +4780,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/planning-and-preparation.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/planning-and-preparation.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/planning-and-preparation.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/planning-and-preparation.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -4829,20 +4829,6 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/post-installation-guidelines.html</loc>
-      
-      <lastmod>2022-11-19T03:20:20+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/network/post-installation-guidelines.html</loc>
-      
-      <lastmod>2022-11-19T03:20:20+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/post-installation-guidelines.html</loc>
       
       <lastmod>2022-11-19T03:20:20+00:00</lastmod>
@@ -4850,7 +4836,21 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/post-installation-guidelines.html</loc>
+      
+      <lastmod>2022-11-19T03:20:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/fr-fr/storagegrid-116/ubuntu/post-installation-guidelines.html</loc>
+      
+      <lastmod>2022-11-19T03:20:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/network/post-installation-guidelines.html</loc>
       
       <lastmod>2022-11-19T03:20:20+00:00</lastmod>
       
@@ -4969,14 +4969,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/admin/protecting-against-cross-site-request-forgery-csrf.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/tenant/protecting-against-cross-site-request-forgery-csrf.html</loc>
       
       <lastmod>2022-11-19T03:20:20+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/tenant/protecting-against-cross-site-request-forgery-csrf.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/admin/protecting-against-cross-site-request-forgery-csrf.html</loc>
       
       <lastmod>2022-11-19T03:20:20+00:00</lastmod>
       
@@ -5487,14 +5487,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/required-materials.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/required-materials.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/required-materials.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/required-materials.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -5753,14 +5753,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/reviewing-your-configuration-and-completing-installation.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/reviewing-your-configuration-and-completing-installation.html</loc>
       
       <lastmod>2022-11-19T03:20:20+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/reviewing-your-configuration-and-completing-installation.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/reviewing-your-configuration-and-completing-installation.html</loc>
       
       <lastmod>2022-11-19T03:20:20+00:00</lastmod>
       
@@ -5839,7 +5839,7 @@
     <url>
       <loc>https://docs.netapp.com/fr-fr/storagegrid-116//search.html</loc>
       
-      <lastmod>2022-12-06T18:02:04+00:00</lastmod>
+      <lastmod>2022-12-15T12:26:31+00:00</lastmod>
       
     </url>
   
@@ -6012,14 +6012,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/setting-up-email-notifications-for-alerts.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/setting-up-email-notifications-for-alerts.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/setting-up-email-notifications-for-alerts.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/setting-up-email-notifications-for-alerts.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -6201,14 +6201,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/specifying-domain-name-system-server-information.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/specifying-domain-name-system-server-information.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/specifying-domain-name-system-server-information.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/specifying-domain-name-system-server-information.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -6222,14 +6222,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/specifying-grid-network-subnets.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/specifying-grid-network-subnets.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/specifying-grid-network-subnets.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/specifying-grid-network-subnets.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -6243,14 +6243,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/specifying-network-time-protocol-server-information.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/specifying-network-time-protocol-server-information.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/specifying-network-time-protocol-server-information.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/specifying-network-time-protocol-server-information.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -6271,14 +6271,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/specifying-storagegrid-license-information.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/specifying-storagegrid-license-information.html</loc>
       
       <lastmod>2022-11-19T03:20:20+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/specifying-storagegrid-license-information.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/specifying-storagegrid-license-information.html</loc>
       
       <lastmod>2022-11-19T03:20:20+00:00</lastmod>
       
@@ -6292,14 +6292,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/specifying-storagegrid-system-passwords.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/specifying-storagegrid-system-passwords.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/specifying-storagegrid-system-passwords.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/specifying-storagegrid-system-passwords.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -6369,14 +6369,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/maintain/starting-storagegrid-host-service.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/starting-storagegrid-host-service.html</loc>
       
       <lastmod>2022-11-19T03:20:20+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/starting-storagegrid-host-service.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/maintain/starting-storagegrid-host-service.html</loc>
       
       <lastmod>2022-11-19T03:20:20+00:00</lastmod>
       
@@ -6481,14 +6481,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/storage-and-performance-requirements.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/storage-and-performance-requirements.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/storage-and-performance-requirements.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/storage-and-performance-requirements.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -6803,14 +6803,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/troubleshooting-installation-issues.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/troubleshooting-installation-issues.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/troubleshooting-installation-issues.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/troubleshooting-installation-issues.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -6908,14 +6908,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/turning-controller-identify-led-on-and-off.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/turning-controller-identify-led-on-and-off.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/turning-controller-identify-led-on-and-off.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/turning-controller-identify-led-on-and-off.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -7041,14 +7041,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/expand/updating-subnets-for-grid-network.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/maintain/updating-subnets-for-grid-network.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/maintain/updating-subnets-for-grid-network.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/expand/updating-subnets-for-grid-network.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -7237,14 +7237,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/admin/using-identity-federation.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/tenant/using-identity-federation.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/tenant/using-identity-federation.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/admin/using-identity-federation.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -7279,16 +7279,16 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/s3/using-s3-object-lock.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/tenant/using-s3-object-lock.html</loc>
       
-      <lastmod>2022-12-06T18:01:49+00:00</lastmod>
+      <lastmod>2022-11-19T03:20:20+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/tenant/using-s3-object-lock.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/s3/using-s3-object-lock.html</loc>
       
-      <lastmod>2022-11-19T03:20:20+00:00</lastmod>
+      <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
@@ -7391,14 +7391,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/verifying-and-upgrading-storagegrid-appliance-installer-version.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/verifying-and-upgrading-storagegrid-appliance-installer-version.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/verifying-and-upgrading-storagegrid-appliance-installer-version.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/verifying-and-upgrading-storagegrid-appliance-installer-version.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -7447,14 +7447,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/verifying-network-connections.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/verifying-network-connections.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/verifying-network-connections.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/verifying-network-connections.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -7489,14 +7489,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/verifying-port-level-network-connections.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/verifying-port-level-network-connections.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg6000/verifying-port-level-network-connections.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/sg100-1000/verifying-port-level-network-connections.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
@@ -7986,14 +7986,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/where-to-go-next.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/where-to-go-next.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/rhel/where-to-go-next.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/storagegrid-116/vmware/where-to-go-next.html</loc>
       
       <lastmod>2022-12-06T18:01:49+00:00</lastmod>
       
