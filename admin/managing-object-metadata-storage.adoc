@@ -244,7 +244,7 @@ Supposons que vous installez un système StorageGRID avec la version 11.6. Dans 
 
 * L'espace réservé * métadonnées* pour l'ensemble du système est défini sur 8 To. (Il s'agit de la valeur par défaut pour StorageGRID 11.6 lorsque chaque nœud de stockage dispose de plus de 128 Go de RAM.)
 * L'espace réservé réel pour les métadonnées pour SN1 est de 6 To. (Le volume entier est réservé car le volume 0 est inférieur au paramètre *Metadata Reserved Space*.)
-* L'espace autorisé pour les métadonnées sur SN1 est de 3 To, d'après le calcul présenté dans la <<actual-reserved-space-for-metadata,tableau de l'espace réservé réel pour les métadonnées>>: (Espace réservé réel pour les métadonnées − 1 To) × 60 %, jusqu'à un maximum de 3.96 To.
+* L'espace autorisé pour les métadonnées sur SN1 est de 3 To, d'après le calcul présenté dans la <<table-allowed-space-for-metadata,tableau pour l'espace autorisé pour les métadonnées>>: (Espace réservé réel pour les métadonnées − 1 To) × 60 %, jusqu'à un maximum de 3.96 To.
 
 
 
