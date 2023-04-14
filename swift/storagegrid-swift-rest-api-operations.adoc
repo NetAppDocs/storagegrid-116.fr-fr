@@ -17,7 +17,7 @@ Des opérations sont ajoutées à l'API REST Swift qui sont spécifiques au syst
 
 == DEMANDE DE cohérence du conteneur
 
-Le niveau de cohérence assure une reprise entre la disponibilité des objets et la cohérence de ces objets sur différents sites et nœuds de stockage. La demande DE cohérence DU conteneur GET vous permet de déterminer le niveau de cohérence appliqué à un conteneur particulier.
+Le niveau de cohérence assure un équilibre entre la disponibilité des objets et la cohérence de ces objets entre plusieurs nœuds de stockage et sites. La demande DE cohérence DU conteneur GET vous permet de déterminer le niveau de cohérence appliqué à un conteneur particulier.
 
 
 

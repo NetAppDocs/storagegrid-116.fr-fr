@@ -89,7 +89,7 @@ Dans cet exemple, `s3.example.com` Représente l'entrée DNS pour l'adresse IP v
 
 +
 
-NOTE: Lorsque cela est possible, vous devez vous connecter à un groupe haute disponibilité de nœuds d'équilibrage de la charge afin d'éviter un point de défaillance unique.
+NOTE: Si possible, vous devez vous connecter à un groupe haute disponibilité de nœuds d'équilibrage de la charge pour éviter un point de défaillance unique.
 
 +
 De la même manière, l'URI d'un compartiment hébergé sur AWS peut être :

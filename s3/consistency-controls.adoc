@@ -2,7 +2,7 @@
 permalink: s3/consistency-controls.html 
 sidebar: sidebar 
 keywords: consistency controls 
-summary: Les contrôles de cohérence assurent la reprise entre la disponibilité des objets et la cohérence de ces objets sur différents nœuds et sites de stockage, selon les besoins de votre application. 
+summary: Les contrôles de cohérence assurent un équilibre entre la disponibilité des objets et la cohérence de ces objets entre plusieurs nœuds et sites de stockage, selon les exigences de votre application. 
 ---
 = Contrôles de cohérence
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Les contrôles de cohérence assurent la reprise entre la disponibilit�
 
 
 [role="lead"]
-Les contrôles de cohérence assurent la reprise entre la disponibilité des objets et la cohérence de ces objets sur différents nœuds et sites de stockage, selon les besoins de votre application.
+Les contrôles de cohérence assurent un équilibre entre la disponibilité des objets et la cohérence de ces objets entre plusieurs nœuds et sites de stockage, selon les exigences de votre application.
 
 Par défaut, StorageGRID garantit la cohérence de lecture après écriture pour les nouveaux objets. Tout GET suivant un PUT réussi sera en mesure de lire les données nouvellement écrites. Les écrasements d'objets existants, les mises à jour de métadonnées et les suppressions sont cohérents. La propagation des écrasements ne prend généralement que quelques secondes ou minutes, mais peut prendre jusqu'à 15 jours.
 
@@ -25,46 +25,13 @@ Le contrôle de cohérence affecte la façon dont les métadonnées utilisées p
 
 Vous pouvez définir le contrôle de cohérence pour une opération de compartiment ou API sur l'une des valeurs suivantes :
 
-|===
-| Contrôle de cohérence | Description 
+* *All* : tous les nœuds reçoivent immédiatement les données, sinon la demande échouera.
+* *Forte-global*: Garantit la cohérence lecture-après-écriture pour toutes les demandes client sur tous les sites.
+* *Site fort* : garantit la cohérence de lecture après écriture pour toutes les demandes de clients au sein d'un site.
+* *Read-after-New-write*: (Par défaut) fournit la cohérence lecture-après-écriture pour les nouveaux objets et éventuellement la cohérence pour les mises à jour d'objets. Offre une haute disponibilité et une protection des données garanties. Recommandé dans la plupart des cas.
+* *Disponible* : assure la cohérence finale pour les nouveaux objets et les mises à jour d'objets. Pour les compartiments S3, utilisez uniquement si nécessaire (par exemple, pour un compartiment qui contient des valeurs de journal rarement lues ou pour les opérations HEAD ou GET sur des clés qui n'existent pas). Non pris en charge pour les compartiments FabricPool S3.
 
 
- a| 
-tous
- a| 
-Tous les nœuds reçoivent les données immédiatement, sinon la requête échoue.
-
-
-
- a| 
-forte croissance mondiale
- a| 
-Garantit une cohérence de lecture après écriture pour toutes les demandes client sur tous les sites.
-
-
-
- a| 
-site fort
- a| 
-Garantit la cohérence de lecture après écriture pour toutes les demandes client dans un site.
-
-
-
- a| 
-lecture-après-nouvelle-écriture
- a| 
-(Valeur par défaut) assure la cohérence en lecture après écriture des nouveaux objets et la cohérence des mises à jour des objets. Offre une haute disponibilité et une protection des données garanties. Le correspondance le plus étroite avec les garanties de cohérence Amazon S3.
-
-*Remarque :* si votre application utilise LES demandes HEAD ou GET sur des objets qui n'existent pas, il est possible que vous receviez un nombre élevé de 500 erreurs de serveur interne si un ou plusieurs nœuds de stockage ne sont pas disponibles. Pour éviter ces erreurs, définissez le contrôle de cohérence sur « disponible », sauf si vous avez besoin de garanties de cohérence similaires à Amazon S3.
-
-
-
- a| 
-Disponible (cohérence possible pour LA TÊTE ou LES opérations)
- a| 
-Se comporte de la même manière que le niveau de cohérence « entre les nouvelles écritures », mais assure la cohérence des OPÉRATIONS HEAD et GET. Niveaux de disponibilité supérieurs pour LA TÊTE et LES opérations GET par rapport à la « nouvelle écriture » en cas d'indisponibilité des nœuds de stockage. Elle diffère des garanties de cohérence Amazon S3 pour LA TÊTE et LES opérations GET.
-
-|===
 
 
 == Utilisez des contrôles de cohérence « en cas de nouvelle écriture » et « disponibles »
@@ -72,12 +39,12 @@ Se comporte de la même manière que le niveau de cohérence « entre les nouvel
 Lorsqu'une OPÉRATION EN TÊTE ou GET utilise le contrôle de cohérence « en cas de nouvelle écriture », StorageGRID effectue la recherche en plusieurs étapes, comme suit :
 
 * Il recherche tout d'abord l'objet à partir d'une faible cohérence.
-* Si cette recherche échoue, elle répète la recherche au niveau de cohérence suivant jusqu'à ce qu'elle atteigne le niveau de cohérence le plus élevé, « tous », qui nécessite la disponibilité de toutes les copies des métadonnées de l'objet.
+* Si cette recherche échoue, elle répète la recherche au niveau de cohérence suivant jusqu'à ce qu'elle atteigne un niveau de cohérence équivalent au comportement de Strong-global.
 
 
-Si une OPÉRATION HEAD ou GET utilise le contrôle de cohérence « read-after-New-write » mais que l'objet n'existe pas, la recherche d'objet atteint toujours le niveau de cohérence « All ». Comme ce niveau de cohérence requiert la disponibilité de toutes les copies des métadonnées de l'objet, vous pouvez recevoir un nombre élevé de 500 erreurs de serveur interne si un ou plusieurs nœuds de stockage sont indisponibles.
+Si une opération HEAD ou GET utilise le contrôle de cohérence « read-after-New-write », mais que l'objet n'existe pas, la recherche d'objets atteindra toujours un niveau de cohérence équivalent au comportement pour les groupes globaux forts. Ce niveau de cohérence exigeant la disponibilité de plusieurs copies des métadonnées d'objet sur chaque site, vous pouvez recevoir un nombre élevé d'erreurs de serveur interne 500 si deux nœuds de stockage ou plus sur le même site sont indisponibles.
 
-À moins que vous n'ayez besoin de garanties de cohérence similaires à Amazon S3, vous pouvez empêcher ces erreurs de TÊTE et D'OBTENIR des opérations en définissant le contrôle de cohérence sur « disponible ». Lorsqu'une OPÉRATION DE TÊTE OU D'OBTENTION utilise le contrôle de cohérence « disponible », StorageGRID n'offre qu'une cohérence éventuelle. Il ne réessaie pas l'échec d'une opération tant qu'elle n'atteint pas le niveau de cohérence « tous ». Il n'est donc pas nécessaire que toutes les copies des métadonnées de l'objet soient disponibles.
+À moins que vous n'ayez besoin de garanties de cohérence similaires à Amazon S3, vous pouvez empêcher ces erreurs de TÊTE et D'OBTENIR des opérations en définissant le contrôle de cohérence sur « disponible ». Lorsqu'une OPÉRATION DE TÊTE OU D'OBTENTION utilise le contrôle de cohérence « disponible », StorageGRID n'offre qu'une cohérence éventuelle. Elle n'essaie pas d'effectuer une opération ayant échoué à des niveaux de cohérence toujours plus élevés. Il n'est donc pas nécessaire que plusieurs copies des métadonnées de l'objet soient disponibles.
 
 
 
@@ -125,7 +92,7 @@ Les comportements d'ingestion suivants sont disponibles pour les règles ILM :
 
 
 
-NOTE: Avant de sélectionner le comportement d'entrée d'une règle ILM, lisez la description complète de ces paramètres dans les instructions de gestion des objets avec la gestion du cycle de vie des informations.
+NOTE: Avant de sélectionner le comportement d'ingestion d'une règle ILM, lisez la description complète de ces paramètres dans le xref:../ilm/index.adoc[Gestion des objets avec ILM].
 
 
 
@@ -146,8 +113,6 @@ Si vous utilisez à la place la même règle ILM et le niveau de cohérence "sep
 L'interdépendance entre les niveaux de cohérence et les règles ILM peut être complexe. Contactez NetApp si vous avez besoin d'aide.
 
 .Informations associées
-xref:../ilm/index.adoc[Gestion des objets avec ILM]
-
 xref:get-bucket-consistency-request.adoc[DEMANDE de cohérence des compartiments]
 
 xref:put-bucket-consistency-request.adoc[PUT Bucket Consistency demandée]

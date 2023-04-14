@@ -37,7 +37,7 @@ Vous ne pouvez pas modifier le pool de stockage tous les nœuds de stockage.
 . Selon les besoins, sélectionnez d'autres sites et niveaux de stockage.
 +
 
-NOTE: Vous n'avez pas la possibilité de modifier le site ou la qualité de stockage si le pool de stockage est utilisé dans un profil de code d'effacement, ce qui entraînerait la non-validité du schéma de code d'effacement. Par exemple, si un pool de stockage utilisé dans un profil de code d'effacement comprend actuellement une classe de stockage avec un seul site, il est impossible d'utiliser une classe de stockage avec deux sites, car cette modification invalid le schéma de code d'effacement.
+NOTE: Vous n'avez pas la possibilité de modifier le site ou la qualité de stockage si le pool de stockage est utilisé dans un profil de code d'effacement, ce qui entraînerait la non-validité du schéma de code d'effacement. Par exemple, si un pool de stockage utilisé dans un profil Erasure Coding inclut actuellement une classe de stockage avec un seul site, vous ne pouvez pas utiliser une classe de stockage avec deux sites, car la modification rendrait le schéma de code d'effacement non valide.
 
 . Sélectionnez *Enregistrer*.
 

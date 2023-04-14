@@ -75,7 +75,7 @@ Chaque appliance SG6060 et SG6060X peut disposer d'un ou deux tiroirs d'extensio
 
 == SG6060 et 6060X
 
-Les fronts du SG6060 et du SG6060X sont identiques. Cette figure présente la façade du SG6060, qui inclut un contrôleur de calcul 1U et un tiroir 4U contenant deux contrôleurs de stockage et 60 disques dans cinq tiroirs disques.
+Les faces avant des SG6060 et SG6060X sont identiques. La figure suivante montre l'avant du SG6060, qui inclut un contrôleur de calcul 1U et un tiroir 4U contenant deux contrôleurs de stockage et 60 disques dans cinq tiroirs disques.
 
 *SG6060 vue avant*
 
@@ -113,7 +113,7 @@ Contrôleur de calcul SG6000-CN avec cadre avant retiré
 Tiroir contrôleur E2860 avec panneau avant retiré (le tiroir d'extension en option apparaît identique)
 
 |===
-Cette figure illustre la arrière du SG6060, y compris des contrôleurs de calcul et de stockage, des ventilateurs et des blocs d'alimentation.
+Les figures suivantes illustrent l'arrière du SG6060 et du SG6060X, y compris les contrôleurs de calcul et de stockage, les ventilateurs et les alimentations.
 
 *SG6060 vue arrière*
 
@@ -203,7 +203,7 @@ Alimentation (1 sur 2) pour le tiroir contrôleur E2860
 |===
 *SG6060 et SG6060X étagère d'extension*
 
-Cette figure illustre l'arrière du tiroir d'extension en option pour les SG6060 et SG6060X, notamment des modules d'entrée/sortie (IOM), des ventilateurs et des blocs d'alimentation. Chaque SG6060 peut être installé avec un ou deux tiroirs d'extension, qui peuvent être inclus dans l'installation initiale ou ajoutés ultérieurement.
+Cette figure illustre l'arrière du tiroir d'extension en option pour les SG6060 et SG6060X, notamment des modules d'entrée/sortie (IOM), des ventilateurs et des blocs d'alimentation. Chaque SG6060 et SG6060X peut être installé avec un ou deux tiroirs d'extension, qui peuvent être inclus dans l'installation initiale ou ajoutés ultérieurement.
 
 image::../media/de460c_expansion_shelf_rear_view.gif[Tablette d'extension arrière]
 

@@ -29,7 +29,7 @@ Lors de la configuration de StorageGRID, n'activez pas le paramètre global *Com
 
 == Niveau de cohérence
 
-Pour les compartiments FabricPool, le niveau de cohérence recommandé est « réAD-après-New-write ». Le niveau de cohérence « disponible » n'est pas recommandé. Voir xref:../tenant/changing-consistency-level.adoc[Modifiez le niveau de cohérence].
+Pour les compartiments FabricPool, le niveau de cohérence de compartiment recommandé est *Read-After-New-write*, qui est le paramètre par défaut d'un nouveau compartiment. Ne modifiez pas les compartiments FabricPool pour utiliser *disponible* ou tout autre niveau de cohérence.
 
 
 

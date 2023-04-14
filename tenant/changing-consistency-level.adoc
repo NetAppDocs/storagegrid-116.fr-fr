@@ -19,7 +19,9 @@ Si vous utilisez un locataire S3, vous pouvez utiliser le gestionnaire des locat
 
 
 .Description de la tâche
-Le niveau de cohérence assure une reprise entre la disponibilité des objets et la cohérence de ces objets sur différents sites et nœuds de stockage. En général, vous devez utiliser le niveau de cohérence *Read-After-New-write* pour vos compartiments. Si le niveau de cohérence *Read-After-New-write* ne répond pas aux exigences de l'application client, vous pouvez modifier le niveau de cohérence en définissant le niveau de cohérence du compartiment ou en utilisant le `Consistency-Control` en-tête. Le `Consistency-Control` le cueilleur remplace le niveau de cohérence du godet.
+Le niveau de cohérence assure un équilibre entre la disponibilité des objets et la cohérence de ces objets entre plusieurs nœuds de stockage et sites. En général, vous devez utiliser le niveau de cohérence *Read-After-New-write* pour vos compartiments.
+
+Si le niveau de cohérence *Read-After-New-write* ne répond pas aux exigences de l'application client, vous pouvez modifier le niveau de cohérence en définissant le niveau de cohérence du compartiment ou en utilisant le `Consistency-Control` en-tête. Le `Consistency-Control` le cueilleur remplace le niveau de cohérence du godet.
 
 
 NOTE: Lorsque vous modifiez le niveau de cohérence d'un compartiment, seuls les objets ingérées après la modification sont garantis pour satisfaire le niveau révisé.
@@ -33,46 +35,12 @@ La page des détails du compartiment s'affiche.
 . Sélectionnez *Options de rubrique* *niveau de cohérence*.
 . Sélectionnez un niveau de cohérence pour les opérations effectuées sur les objets de ce compartiment.
 +
-[cols="1a,3a"]
-|===
-| Niveau de cohérence | Description 
+** *Tous* : fournit le plus haut niveau de cohérence. Tous les nœuds reçoivent les données immédiatement, sinon la requête échoue.
+** *Strong-global* : garantit la cohérence lecture après écriture pour toutes les demandes client sur tous les sites.
+** *Strong-site* : garantit la cohérence lecture après écriture pour toutes les demandes client au sein d'un site.
+** *Read-After-New-write* (par défaut) : fournit une cohérence lecture-après-écriture pour les nouveaux objets et une cohérence éventuelle pour les mises à jour d'objets. Offre une haute disponibilité et une protection des données garanties. Recommandé dans la plupart des cas.
+** *Disponible* : assure la cohérence finale pour les nouveaux objets et les mises à jour d'objets. Pour les compartiments S3, utilisez uniquement si nécessaire (par exemple, pour un compartiment qui contient des valeurs de journal rarement lues ou pour les opérations HEAD ou GET sur des clés qui n'existent pas). Non pris en charge pour les compartiments FabricPool S3.
 
 
- a| 
-Tout
- a| 
-Tous les nœuds reçoivent les données immédiatement, sinon la requête échoue.
-
-
-
- a| 
-Forte croissance mondiale
- a| 
-Garantit une cohérence de lecture après écriture pour toutes les demandes client sur tous les sites.
-
-
-
- a| 
-Site fort
- a| 
-Garantit la cohérence de lecture après écriture pour toutes les demandes client dans un site.
-
-
-
- a| 
-Lecture après nouvelle écriture (par défaut)
- a| 
-Assure la cohérence de lecture après écriture pour les nouveaux objets et la cohérence des mises à jour d'objets. Offre une haute disponibilité et une protection des données garanties. Le correspondance le plus étroite avec les garanties de cohérence Amazon S3.
-
-*Remarque :* si votre application tente D'EFFECTUER DES opérations SUR des clés qui n'existent pas, définissez le niveau de cohérence sur *disponible*, à moins que vous n'ayez besoin des garanties de cohérence Amazon S3. Sinon, un nombre élevé de 500 erreurs de serveur interne peuvent se produire si un ou plusieurs nœuds de stockage ne sont pas disponibles.
-
-
-
- a| 
-Disponible (cohérence possible pour LA TÊTE ou LES opérations)
- a| 
-Se comporte de la même manière que le niveau de cohérence *Read-After-New-write*, mais fournit une cohérence éventuelle pour les opérations HEAD et GET. Offre une disponibilité supérieure pour LA TÊTE et DES opérations SUPÉRIEURES à *lecture-après-nouvelle-écriture* si les nœuds de stockage ne sont pas disponibles. Elle diffère des garanties de cohérence Amazon S3 pour LA TÊTE et LES opérations GET.
-
-|===
 . Sélectionnez *Enregistrer les modifications*.
 

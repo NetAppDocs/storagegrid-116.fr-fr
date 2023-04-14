@@ -16,7 +16,7 @@ Après avoir configuré des groupes de haute disponibilité et des noeuds finaux
 L'adresse IP que vous entrez dans l'enregistrement DNS dépend de l'utilisation ou non d'un groupe HA de nœuds d'équilibrage de la charge :
 
 * Si vous avez configuré un groupe haute disponibilité, FabricPool se connecte aux adresses IP virtuelles de ce groupe haute disponibilité.
-* Si vous n'utilisez pas de groupe haute disponibilité, FabricPool peut vous connecter au service StorageGRID Load Balancer à l'aide de l'adresse IP d'un nœud de passerelle ou d'un nœud d'administration.
+* Si vous n'utilisez pas de groupe haute disponibilité, FabricPool peut se connecter au service StorageGRID Load Balancer à l'aide de l'adresse IP d'un nœud de passerelle ou d'un nœud d'administration.
 
 
 Vous devez également vous assurer que l'enregistrement DNS référence tous les noms de domaine de point final requis, y compris les noms de caractères génériques.

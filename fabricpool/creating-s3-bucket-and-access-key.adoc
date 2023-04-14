@@ -72,7 +72,7 @@ image::../media/create_bucket_for_fabricpool.png[Créer un compartiment pour Fab
 
 +
 
-NOTE: Pour les compartiments FabricPool, le niveau de cohérence recommandé est « réAD-après-New-write ». Le niveau de cohérence « disponible » n'est pas recommandé. Voir xref:../tenant/changing-consistency-level.adoc[Modifiez le niveau de cohérence].
+NOTE: Pour les compartiments FabricPool, le niveau de cohérence de compartiment recommandé est *Read-After-New-write*, qui est le paramètre par défaut d'un nouveau compartiment. Ne modifiez pas les compartiments FabricPool pour utiliser *disponible* ou tout autre niveau de cohérence.
 
 . Créez une clé d'accès et une clé d'accès secrète.
 +

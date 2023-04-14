@@ -279,6 +279,9 @@ Trafic interne pour les procédures de maintenance et les rapports d'erreurs.
 
 
 
+| 8443 | TCP | Nœud d'administration principal | Nœuds d'appliance | Trafic interne lié à la procédure de mode de maintenance. 
+
+
  a| 
 9042
  a| 

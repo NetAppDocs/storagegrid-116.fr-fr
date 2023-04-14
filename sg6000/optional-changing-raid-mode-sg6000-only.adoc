@@ -22,6 +22,10 @@ Vous pouvez passer à un autre mode RAID sur l'appliance pour répondre à vos b
 Avant de déployer l'appliance en tant que nœud de stockage, vous pouvez choisir l'une des options de configuration de volume suivantes :
 
 * *DDP* : ce mode utilise deux lecteurs de parité pour chaque huit lecteurs de données. Il s'agit du mode par défaut et recommandé pour tous les appareils. Par rapport à RAID6, les DDP offrent de meilleures performances du système, des temps de reconstruction réduits après une panne de disque et une gestion simplifiée.
++
+
+IMPORTANT: Les DDP ne protègent pas la perte de tiroirs dans les appliances SG6060 en raison des deux disques SSD. La protection contre la perte des tiroirs est effective dans toutes les étagères d'extension ajoutées à une SG6060.
+
 * *DDP16* : ce mode utilise deux disques de parité pour chaque 16 disques de données, ce qui améliore l'efficacité du stockage par rapport au pool DDP. Par rapport à RAID6 mais, le DDP16 améliore les performances du système et réduit les délais de reconstruction après une panne de disque, la facilité de gestion et l'efficacité du stockage équivalente. Pour utiliser le mode DDP16, votre configuration doit contenir au moins 20 lecteurs. Le DDP16 n'offre pas de protection contre les pertes de tiroirs.
 * *RAID6* : ce mode utilise deux lecteurs de parité pour chaque disque de données de 16 ou plus. Pour utiliser le mode RAID 6, votre configuration doit contenir au moins 20 lecteurs. RAID 6 peut augmenter l'efficacité du stockage de l'appliance par rapport aux pools de disques dynamiques. Cependant, il n'est pas recommandé d'utiliser la plupart des environnements StorageGRID.
 

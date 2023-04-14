@@ -88,7 +88,7 @@ NOTE: L'alerte *ILM placement inaccessible* est déclenchée pour indiquer que l
 +
 *** Le nombre de copies ne peut pas être supérieur au nombre de pools de stockage.
 *** Si le nombre de copies équivaut au nombre de pools de stockage, une copie de l'objet est stockée dans chaque pool de stockage.
-*** Si le nombre de copies est inférieur au nombre de pools de stockage, le système distribue les copies pour maintenir l'utilisation du disque entre les pools équilibrés, tout en assurant qu'aucun site ne reçoit plus une copie d'un objet.
+*** Si le nombre de copies est inférieur au nombre de pools de stockage, une copie est stockée sur le site d'ingestion, puis le système distribue les copies restantes afin de maintenir un équilibre entre l'utilisation du disque dans les pools, tout en veillant à ce qu'aucun site ne reçoive plus d'une copie d'un objet.
 *** Si les pools de stockage se chevauchent (contiennent les mêmes nœuds de stockage), toutes les copies de l'objet peuvent être enregistrées sur un seul site. Pour cette raison, ne spécifiez pas le pool de stockage tous les nœuds de stockage par défaut et un autre pool de stockage.
 +
 image::../media/ilm_rule_with_multiple_storage_pools.png[Instructions de placement pour plusieurs pools de stockage]

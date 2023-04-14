@@ -42,7 +42,7 @@ Lorsque la panne est résolue et qu'une interface de priorité supérieure est �
 
 Les bonnes pratiques de création d'un groupe StorageGRID HA pour FabricPool reposent sur le workload, comme suit :
 
-* Si vous envisagez d'utiliser FabricPool avec les données de charge de travail principale, vous devez créer un groupe haute disponibilité qui inclut au moins deux nœuds d'équilibrage de la charge afin d'éviter toute interruption de la récupération des données.
+* Si vous prévoyez d'utiliser FabricPool avec les données des principaux workloads, vous devez créer un groupe haute disponibilité incluant au moins deux nœuds d'équilibrage de la charge pour éviter toute interruption de la récupération des données.
 * Si vous prévoyez d'utiliser la règle de Tiering de volume FabricPool snapshot uniquement ou des tiers de performance locaux non principaux (par exemple, emplacements de reprise après incident ou destinations NetApp SnapMirror®), vous pouvez configurer un groupe haute disponibilité avec un seul nœud.
 
 

@@ -168,7 +168,7 @@ NOTE: Si vos règles et règles ILM ont été conçues pour protéger contre la 
 
 == Considérations relatives aux contrôles de cohérence lorsque vous supprimez un site
 
-Le niveau de cohérence d'un compartiment S3 ou d'un conteneur Swift détermine si StorageGRID réplique entièrement les métadonnées d'objet vers tous les nœuds et sites avant de transmettre le bon déroulement de l'ingestion de l'objet à un client. Le niveau de cohérence assure une reprise entre la disponibilité des objets et la cohérence de ces objets sur différents sites et nœuds de stockage.
+Le niveau de cohérence d'un compartiment S3 ou d'un conteneur Swift détermine si StorageGRID réplique entièrement les métadonnées d'objet vers tous les nœuds et sites avant de transmettre le bon déroulement de l'ingestion de l'objet à un client. Les contrôles de cohérence assurent un équilibre entre la disponibilité des objets et la cohérence de ces objets entre plusieurs nœuds de stockage et sites.
 
 Lorsque StorageGRID supprime un site, il doit s'assurer qu'aucune donnée n'est écrite sur le site supprimé. Par conséquent, il remplace temporairement le niveau de cohérence pour chaque compartiment ou conteneur. Une fois le processus de mise hors service du site démarré, StorageGRID utilise temporairement une cohérence forte entre les sites pour empêcher l'écriture des métadonnées d'objet sur le site.
 
