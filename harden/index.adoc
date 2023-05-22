@@ -32,4 +32,4 @@ Lors du renforcement d'un système StorageGRID, vous devez prendre en compte les
 
 
 .Informations associées
-https://security.netapp.com/policy/["Stratégie de gestion des vulnérabilités"^]
+https://["Stratégie de gestion des vulnérabilités"^]

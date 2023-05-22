@@ -73,6 +73,6 @@ E-Series : remplacement du tiroir disque (60 disques)
 
 |===
 .Informations associées
-http://mysupport.netapp.com/info/web/ECMP1658252.html["Site de documentation sur les systèmes NetApp E-Series"^]
+http://["Site de documentation sur les systèmes NetApp E-Series"^]
 
 xref:replacing-storage-controller-sg6000.adoc[Remplacement du contrôleur de stockage]

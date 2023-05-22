@@ -30,5 +30,5 @@ Messages dans xref:../audit/index.adoc[journal d'audit] indiquez le temps total 
 
 Lors de l'analyse des résultats, examinez le temps moyen requis pour répondre à une demande, ainsi que le débit global que vous pouvez atteindre. Répétez les mêmes tests régulièrement et notez les résultats afin de pouvoir identifier les tendances qui peuvent nécessiter une enquête.
 
-* C'est possible https://github.com/s3tester["Téléchargez S3Tester sur github"^].
+* C'est possible https://["Téléchargez S3Tester sur github"^].
 

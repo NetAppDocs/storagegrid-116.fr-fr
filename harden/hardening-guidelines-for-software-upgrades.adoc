@@ -48,10 +48,10 @@ Si vos nœuds StorageGRID utilisent des plates-formes hôtes Linux, vous devez v
 Utilisez la matrice d'interopérabilité NetApp pour obtenir la liste des versions prises en charge.
 
 .Informations associées
-https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["Téléchargement NetApp : StorageGRID"^]
+https://["Téléchargement NetApp : StorageGRID"^]
 
 xref:../upgrade/index.adoc[Mise à niveau du logiciel]
 
 xref:../maintain/index.adoc[Récupérer et entretenir]
 
-https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^]
+https://["Matrice d'interopérabilité NetApp"^]

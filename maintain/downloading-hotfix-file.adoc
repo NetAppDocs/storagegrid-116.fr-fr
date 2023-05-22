@@ -16,7 +16,7 @@ Vous devez télécharger le fichier de correctif avant de pouvoir appliquer le c
 .Étapes
 . Accédez à la page de téléchargements NetApp pour StorageGRID.
 +
-https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["Téléchargement NetApp : StorageGRID"]
+https://["Téléchargement NetApp : StorageGRID"]
 
 . Sélectionnez la flèche vers le bas sous *logiciel disponible* pour afficher la liste des correctifs disponibles au téléchargement.
 +

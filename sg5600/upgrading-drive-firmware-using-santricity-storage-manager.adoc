@@ -71,7 +71,7 @@ Sélectionnez *Afficher les lecteurs associés* pour afficher l'emplacement d'in
 +
 .. Ouvrez votre navigateur Web, accédez au site Web de support de NetApp et connectez-vous en utilisant votre ID et votre mot de passe.
 +
-https://mysupport.netapp.com/site/["Support NetApp"^]
+https://["Support NetApp"^]
 
 .. Sur le site Web de support de NetApp, sélectionnez l'onglet *Downloads*, puis sélectionnez *E-Series Disk drive Firmware*.
 +

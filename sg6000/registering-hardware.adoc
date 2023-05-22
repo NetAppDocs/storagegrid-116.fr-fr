@@ -25,7 +25,7 @@ image::../media/appliance_label.gif[Étiquette incluant le numéro de série]
 
 NOTE: L'appliance de stockage comporte plusieurs numéros de série. Le numéro de série du tiroir de contrôleur de stockage est celui qui doit être enregistré et utilisé si vous appelez pour un service ou un support sur l'appliance.
 
-. Accédez au site de support NetApp à l'adresse http://mysupport.netapp.com/["mysupport.netapp.com"^].
+. Accédez au site de support NetApp à l'adresse http://["mysupport.netapp.com"^].
 . Déterminez si vous devez enregistrer le matériel :
 +
 |===

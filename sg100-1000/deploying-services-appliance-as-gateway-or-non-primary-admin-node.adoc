@@ -92,7 +92,7 @@ Le nom de nœud est attribué à ce nœud d'appliance dans le système StorageGR
 
 . Si vous souhaitez installer une autre version du logiciel StorageGRID, procédez comme suit :
 +
-.. Téléchargez l'archive d'installation :https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Téléchargement NetApp : appliance StorageGRID"^].
+.. Téléchargez l'archive d'installation :https://["Téléchargement NetApp : appliance StorageGRID"^].
 .. Extrayez l'archive.
 .. Dans le programme d'installation de l'appliance StorageGRID, sélectionnez *Avancé* *Télécharger le logiciel StorageGRID*.
 .. Cliquez sur *Supprimer* pour supprimer le progiciel actuel.

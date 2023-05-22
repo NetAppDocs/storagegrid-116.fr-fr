@@ -36,13 +36,13 @@ Le système d'alerte offre une interface facile à utiliser pour détecter, éva
 
 Pour en savoir plus, consultez ces vidéos :
 
-* https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2680a74f-070c-41c2-bcd3-acc5013c9cdd["Vidéo : présentation des alertes"^]
+* https://["Vidéo : présentation des alertes"^]
 +
 [link=https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2680a74f-070c-41c2-bcd3-acc5013c9cdd]
 image::../media/video-screenshot-alert-overview.png[Vidéo : présentation des alertes]
 
-* https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b35ac3f2-957b-4e79-b82b-acc5013c98d0["Vidéo : utilisation des mesures pour créer des alertes personnalisées"^]
+* https://["Vidéo : utilisation des mesures pour créer des alertes personnalisées"^]
 +
-image::../media/video-screenshot-alert-create-custom.png[lien-"https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b35ac3f2-957b-4e79-b82b-acc5013c98d0"[] alt=« vidéo : utilisation des mesures pour créer des alertes personnalisées »]
+image::../media/video-screenshot-alert-create-custom.png[lien-"https://[] alt=« vidéo : utilisation des mesures pour créer des alertes personnalisées »]
 
 

@@ -50,4 +50,4 @@ La page d'accueil du programme d'installation de l'appliance StorageGRID s'affic
 
 
 .Informations associées
-http://mysupport.netapp.com/info/web/ECMP1658252.html["Site de documentation sur les systèmes NetApp E-Series"^]
+http://["Site de documentation sur les systèmes NetApp E-Series"^]

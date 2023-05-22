@@ -25,4 +25,4 @@ Les codes d'état et d'erreur du contrôleur E5600SG ne sont pas identiques à c
 .Informations associées
 xref:e5600sg-controller-seven-segment-display-codes.adoc[Codes d'affichage sept segments du contrôleur E5600SG]
 
-http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61765["Documentation NetApp : gamme E2700"^]
+http://["Documentation NetApp : gamme E2700"^]

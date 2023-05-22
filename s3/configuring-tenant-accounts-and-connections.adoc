@@ -268,7 +268,7 @@ xref:configuring-security-for-rest-api.adoc[Configuration de la sécurité pour 
 Vous pouvez utiliser l'interface de ligne de commande d'Amazon Web Services (AWS CLI) pour tester votre connexion au système et vérifier que vous pouvez lire et écrire des objets sur le système.
 
 .Ce dont vous avez besoin
-* Vous avez téléchargé et installé l'interface de ligne de commandes AWS depuis https://aws.amazon.com/cli["aws.amazon.com/cli"^].
+* Vous avez téléchargé et installé l'interface de ligne de commandes AWS depuis https://["aws.amazon.com/cli"^].
 * Vous avez créé un compte de locataire S3 dans le système StorageGRID.
 
 

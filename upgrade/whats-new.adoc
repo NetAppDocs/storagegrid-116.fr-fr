@@ -125,7 +125,7 @@ IMPORTANT: La console expérimentale S3 n'a pas été entièrement testée et n'
 * Une nouvelle case à cocher *Rechercher les mises à jour logicielles* sur la page AutoSupport (*SUPPORT* *Outils* *AutoSupport*) vous permet de contrôler cette fonctionnalité. Vous pouvez désactiver la vérification des mises à jour logicielles disponibles si votre système ne dispose pas d'un accès WAN. Voir xref:../admin/configure-autosupport-grid-manager.adoc#disable-checks-for-software-updates[Configurer AutoSupport gt ; Désactiver recherche les mises à jour logicielles].
 +
 
-NOTE: Pour la mise à niveau vers StorageGRID 11.6, vous pouvez éventuellement utiliser un script pour mettre à niveau et appliquer un correctif en même temps. Voir https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/StorageGRID/How_to_run_combined_major_upgrade_and_hotfix_script_for_StorageGRID["Base de connaissances NetApp : comment exécuter conjointement des mises à niveau majeures et un script de hot fix pour StorageGRID"^].
+NOTE: Pour la mise à niveau vers StorageGRID 11.6, vous pouvez éventuellement utiliser un script pour mettre à niveau et appliquer un correctif en même temps. Voir https://["Base de connaissances NetApp : comment exécuter conjointement des mises à niveau majeures et un script de hot fix pour StorageGRID"^].
 
 * Vous pouvez interrompre la mise à niveau d'un système d'exploitation SANtricity et ignorer la mise à niveau de certains nœuds si vous souhaitez terminer la mise à niveau plus tard. Reportez-vous aux instructions relatives à votre dispositif de stockage :
 +

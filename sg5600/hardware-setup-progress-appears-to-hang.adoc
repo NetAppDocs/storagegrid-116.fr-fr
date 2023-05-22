@@ -57,6 +57,6 @@ xref:e5600sg-controller-seven-segment-display-codes.adoc[Codes d'affichage sept 
 
 xref:he-error-error-synchronizing-with-santricity-os-software.adoc[Erreur : erreur de synchronisation avec le logiciel SANtricity OS]
 
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2344477["Guide d'installation du tiroir contrôleur E2700 et des tiroirs disques associés"^]
+https://["Guide d'installation du tiroir contrôleur E2700 et des tiroirs disques associés"^]
 
-http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61765["Documentation NetApp : gamme E2700"^]
+http://["Documentation NetApp : gamme E2700"^]

@@ -69,4 +69,4 @@ Lorsque vous vous connectez à SANtricity Storage Manager, vous utiliserez la no
 
 
 .Informations associées
-http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61197["Documentation NetApp : responsable du stockage SANtricity"^]
+http://["Documentation NetApp : responsable du stockage SANtricity"^]

@@ -29,7 +29,7 @@ Configurez une adresse de serveur proxy spéciale dans SANtricity System Manager
 Si vous souhaitez configurer le serveur proxy d'administration dans Grid Manager, reportez-vous à la section xref:configuring-admin-proxy-settings.adoc[Configurez les paramètres du proxy d'administration].
 
 
-NOTE: Cette procédure permet uniquement de configurer un serveur proxy StorageGRID pour les messages AutoSupport E-Series. Pour en savoir plus sur la configuration des baies E-Series AutoSupport, consultez le https://mysupport.netapp.com/info/web/ECMP1658252.html["Documentation NetApp E-Series et SANtricity"^].
+NOTE: Cette procédure permet uniquement de configurer un serveur proxy StorageGRID pour les messages AutoSupport E-Series. Pour en savoir plus sur la configuration des baies E-Series AutoSupport, consultez le https://["Documentation NetApp E-Series et SANtricity"^].
 
 .Étapes
 . Dans le Gestionnaire de grille, sélectionnez *NOEUDS*.

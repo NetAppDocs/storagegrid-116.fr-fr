@@ -29,8 +29,8 @@ xref:upgrading-santricity-os-on-storage-controllers-using-maintenance-mode-sg600
 IMPORTANT: Lorsque vous mettez à niveau SANtricity OS pour votre appliance de stockage, vous devez suivre les instructions de la documentation StorageGRID. Si vous utilisez d'autres instructions, votre appareil risque de ne plus fonctionner.
 
 .Informations associées
-https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^]
+https://["Matrice d'interopérabilité NetApp"^]
 
-https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Téléchargement NetApp : appliance StorageGRID"^]
+https://["Téléchargement NetApp : appliance StorageGRID"^]
 
 xref:../monitor/index.adoc[Surveiller et résoudre les problèmes]

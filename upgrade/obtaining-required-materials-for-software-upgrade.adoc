@@ -95,7 +95,7 @@ Si des nœuds sont déployés sur des hôtes Linux, vous devez également télé
 
 
 .Étapes
-. Accédez à https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["Téléchargement NetApp : StorageGRID"^].
+. Accédez à https://["Téléchargement NetApp : StorageGRID"^].
 . Sélectionnez le bouton pour télécharger la dernière version ou sélectionnez une autre version dans le menu déroulant et sélectionnez *Go*.
 +
 Les versions du logiciel StorageGRID ont le format suivant : 11._x.y_. Les correctifs StorageGRID ont le format suivant : 11._x.y.z_.

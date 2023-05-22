@@ -45,4 +45,4 @@ Pour connaître les versions prises en charge de l'hyperviseur VMware vSphere et
 Pour connaître les étapes d'installation de ces produits VMware, reportez-vous à la documentation VMware.
 
 .Informations associées
-https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^]
+https://["Matrice d'interopérabilité NetApp"^]

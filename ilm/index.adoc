@@ -33,12 +33,12 @@ Suivez ces instructions pour :
 
 Pour en savoir plus, consultez ces vidéos :
 
-* https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=beffbe9b-e95e-4a90-9560-acc5013c93d8["Vidéo : règles ILM de StorageGRID : mise en route"^]
+* https://["Vidéo : règles ILM de StorageGRID : mise en route"^]
 +
 [link=https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=beffbe9b-e95e-4a90-9560-acc5013c93d8]
 image::../media/video-screenshot-ilm-rules.png[Vidéo : règles ILM de StorageGRID : mise en route]
 
-* https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c929e94e-353a-4375-b112-acc5013c81c7["Vidéo : règles ILM de StorageGRID"^]
+* https://["Vidéo : règles ILM de StorageGRID"^]
 +
 [link=https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c929e94e-353a-4375-b112-acc5013c81c7]
 image::../media/video-screenshot-ilm-policies.png[Vidéo : règles ILM de StorageGRID]

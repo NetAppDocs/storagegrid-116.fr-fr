@@ -2,7 +2,7 @@
 settings:
   name: StorageGRID
   internal:
-    pdf_enabled: true
+    pdf_enabled: false
   prod:
     pdf_enabled: true
     harmony_enabled: false
@@ -48,7 +48,7 @@ sidebar:
     - section: audit
   - title: Activez StorageGRID
     url: "/storagegrid-enable.html"
-  - title: Versions antérieures
+  - title: Autres versions
     url: "/earlier-versions.html"
   - title: Mentions légales
     url: "/legal-notices.html"
@@ -132,10 +132,12 @@ homepage:
       url: https://netapp.com/blog/
     - title: Communauté NetApp
       url: https://community.netapp.com/
-  - title: Versions antérieures
+  - title: Autres versions
     links:
+    - title: Documentation StorageGRID 11.7
+      url: https://docs.netapp.com/us-en/storagegrid-117/index.html
     - title: Documentation sur StorageGRID 11.5
-      url: https://docs.netapp.com/sgws-115/index.jsp
+      url: https://docs.netapp.com/us-en/storagegrid-115/index.html
     - title: Documentation sur StorageGRID 11.4
       url: https://docs.netapp.com/sgws-114/index.jsp
     - title: Documentation sur StorageGRID 11.3

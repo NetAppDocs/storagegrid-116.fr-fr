@@ -77,6 +77,6 @@ image::../media/appliance_drive_insertion.gif[Insertion de disque]
 
 
 .Informations associées
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2344477["Guide d'installation du tiroir contrôleur E2700 et des tiroirs disques associés"^]
+https://["Guide d'installation du tiroir contrôleur E2700 et des tiroirs disques associés"^]
 
-https://library.netapp.com/ecm/ecm_download_file/ECMP1532527["Guide d'installation du tiroir contrôleur E5600 et des tiroirs disques associés"^]
+https://["Guide d'installation du tiroir contrôleur E5600 et des tiroirs disques associés"^]

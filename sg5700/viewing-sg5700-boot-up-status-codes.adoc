@@ -80,4 +80,4 @@ Dans la séquence, le premier jeu de chiffres est l'adresse IP attribuée par DH
 .Informations associées
 xref:status-indicators-on-e5700sg-controller.adoc[Voyants d'état sur le contrôleur E5700SG]
 
-https://library.netapp.com/ecmdocs/ECMLP2588751/html/frameset.html["Guide de surveillance des systèmes E5700 et E2800"^]
+https://["Guide de surveillance des systèmes E5700 et E2800"^]

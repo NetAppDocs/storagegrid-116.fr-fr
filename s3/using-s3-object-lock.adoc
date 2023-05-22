@@ -110,4 +110,4 @@ xref:initiate-multipart-upload.adoc[Lancer le téléchargement de pièces multip
 
 xref:object-versioning.adoc[Gestion des versions d'objet]
 
-https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html["Guide de l'utilisateur Amazon simple Storage Service : utilisation du verrouillage d'objets S3"^]
+https://["Guide de l'utilisateur Amazon simple Storage Service : utilisation du verrouillage d'objets S3"^]

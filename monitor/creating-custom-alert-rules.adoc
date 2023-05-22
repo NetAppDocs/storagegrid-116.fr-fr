@@ -17,10 +17,10 @@ Vous pouvez créer des règles d'alerte personnalisées afin de définir vos pro
 * Vous êtes connecté au Grid Manager à l'aide d'un xref:../admin/web-browser-requirements.adoc[navigateur web pris en charge]
 * Vous disposez de l'autorisation gérer les alertes ou l'accès racine
 * Vous connaissez le xref:commonly-used-prometheus-metrics.adoc[Metrics Prometheus couramment utilisés]
-* Vous comprenez le https://prometheus.io/docs/querying/basics/["Syntaxe des requêtes Prometheus"^]
-* Vous pouvez également regarder la vidéo : https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b35ac3f2-957b-4e79-b82b-acc5013c98d0["Vidéo : utilisation des mesures pour créer des alertes personnalisées"^]
+* Vous comprenez le https://["Syntaxe des requêtes Prometheus"^]
+* Vous pouvez également regarder la vidéo : https://["Vidéo : utilisation des mesures pour créer des alertes personnalisées"^]
 +
-image::../media/video-screenshot-alert-create-custom.png[lien-"https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b35ac3f2-957b-4e79-b82b-acc5013c98d0"[] alt=« vidéo : utilisation des mesures pour créer des alertes personnalisées »]
+image::../media/video-screenshot-alert-create-custom.png[lien-"https://[] alt=« vidéo : utilisation des mesures pour créer des alertes personnalisées »]
 
 
 

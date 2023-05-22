@@ -35,7 +35,7 @@ Dans le cas de déploiements en production, vous ne devez pas exécuter plusieur
 Voir aussi les informations sur les exigences de stockage.
 
 .Informations associées
-https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^]
+https://["Matrice d'interopérabilité NetApp"^]
 
 xref:storage-and-performance-requirements.adoc[Les besoins en matière de stockage et de performances]
 

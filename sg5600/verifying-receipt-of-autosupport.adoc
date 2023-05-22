@@ -33,7 +33,7 @@ Un statut DE REFUS signifie que vous avez informé le support technique que vous
 Dès que le support technique reçoit un journal hebdomadaire du système, le statut AutoSupport passe à ACTIVÉ.
 
 .Étapes
-. Accédez au site de support NetApp à l'adresse http://mysupport.netapp.com/["mysupport.netapp.com"^], Et connectez-vous au portail Active IQ.
+. Accédez au site de support NetApp à l'adresse http://["mysupport.netapp.com"^], Et connectez-vous au portail Active IQ.
 . Si le statut AutoSupport est désactivé et que vous pensez qu'il est incorrect, procédez comme suit :
 +
 .. Vérifiez la configuration de votre système pour vous assurer que vous avez activé AutoSupport.
