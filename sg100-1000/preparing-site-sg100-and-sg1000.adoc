@@ -44,6 +44,6 @@ Avant d'installer l'appliance, assurez-vous que le site et l'armoire ou le rack 
 
 
 .Informations associées
-https://["NetApp Hardware Universe"^]
+https://hwu.netapp.com["NetApp Hardware Universe"^]
 
-https://["Matrice d'interopérabilité NetApp"^]
+https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^]

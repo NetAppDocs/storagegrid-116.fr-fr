@@ -27,7 +27,7 @@ NOTE: Cette procédure met automatiquement à niveau la NVSRAM vers la version l
 Veillez à choisir la version de système d'exploitation SANtricity pour vos contrôleurs de stockage.
 
 +
-https://["Téléchargement NetApp : appliance StorageGRID"^]
+https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Téléchargement NetApp : appliance StorageGRID"^]
 
 . Sélectionnez *MAINTENANCE* *système* *mise à jour du logiciel*.
 +

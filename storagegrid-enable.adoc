@@ -16,7 +16,7 @@ summary: Découvrez comment tester et intégrer des applications dans votre envi
 [role="lead"]
 Découvrez comment tester et intégrer des applications dans votre environnement StorageGRID.
 
-Accédez au https://["activer storagegrid"^] site doc pour trouver des exemples et des livres de cuisine qui s'étendent sur la documentation du produit sur ce site. Le site *storagegrid-enable* décrit également les prochaines étapes de l'évaluation et de l'intégration avec StorageGRID.
+Accédez au https://docs.netapp.com/us-en/storagegrid-enable/index.html["activer storagegrid"^] site doc pour trouver des exemples et des livres de cuisine qui s'étendent sur la documentation du produit sur ce site. Le site *storagegrid-enable* décrit également les prochaines étapes de l'évaluation et de l'intégration avec StorageGRID.
 
 Les informations suivantes sont incluses :
 

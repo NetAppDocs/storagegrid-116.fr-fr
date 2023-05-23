@@ -58,7 +58,7 @@ Vous pouvez utiliser SANtricity System Manager pour configurer les paramètres s
 Pour en savoir plus sur les systèmes E-Series AutoSupport, consultez le centre de documentation E-Series.
 
 +
-http://["Site de documentation sur les systèmes NetApp E-Series"^]
+http://mysupport.netapp.com/info/web/ECMP1658252.html["Site de documentation sur les systèmes NetApp E-Series"^]
 
 * Clés de sécurité du lecteur, qui sont nécessaires pour déverrouiller des lecteurs sécurisés (cette étape est requise si la fonction de sécurité du lecteur est activée)
 * Mot de passe d'administrateur pour accéder à SANtricity System Manager

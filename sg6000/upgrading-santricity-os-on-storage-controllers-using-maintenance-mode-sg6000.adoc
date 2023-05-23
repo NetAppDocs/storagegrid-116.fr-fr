@@ -59,6 +59,6 @@ image::../media/node_rejoin_grid_confirmation.png[Le nœud d'appliance a rejoint
 
 
 .Informations associées
-https://["Matrice d'interopérabilité NetApp"^]
+https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^]
 
 xref:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6000.adoc[Mettez à niveau le système d'exploitation SANtricity sur les contrôleurs de stockage à l'aide de Grid Manager]

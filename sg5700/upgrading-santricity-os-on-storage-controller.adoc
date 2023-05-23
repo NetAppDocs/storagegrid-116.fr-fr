@@ -24,8 +24,8 @@ xref:upgrading-santricity-os-on-e2800-controller-using-maintenance-mode.adoc[Met
 
 
 .Informations associées
-https://["Matrice d'interopérabilité NetApp"^]
+https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^]
 
-https://["Téléchargement NetApp : appliance StorageGRID"^]
+https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Téléchargement NetApp : appliance StorageGRID"^]
 
 xref:../monitor/index.adoc[Surveiller et résoudre les problèmes]

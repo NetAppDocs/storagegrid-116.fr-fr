@@ -50,7 +50,7 @@ Les noms de compartiment doivent être conformes aux règles suivantes :
 
 +
 
-NOTE: Pour plus d'informations, reportez-vous à la section https://["Documentation Amazon Web Services (AWS) sur les règles d'attribution de nom de compartiment"^].
+NOTE: Pour plus d'informations, reportez-vous à la section https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html["Documentation Amazon Web Services (AWS) sur les règles d'attribution de nom de compartiment"^].
 
 . Sélectionnez la région de ce compartiment.
 +

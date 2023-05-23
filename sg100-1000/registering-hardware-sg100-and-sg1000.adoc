@@ -21,7 +21,7 @@ Vous trouverez le numéro sur le bordereau d'expédition, dans votre e-mail de c
 +
 image::../media/appliance_label.gif[Étiquette incluant le numéro de série]
 
-. Accédez au site de support NetApp à l'adresse http://["mysupport.netapp.com"^].
+. Accédez au site de support NetApp à l'adresse http://mysupport.netapp.com/["mysupport.netapp.com"^].
 . Déterminez si vous devez enregistrer le matériel :
 +
 |===

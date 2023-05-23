@@ -16,7 +16,7 @@ StorageGRID prend en charge les clauses, types de données et opérateurs AWS S3
 
 NOTE: Les éléments non répertoriés ne sont pas pris en charge.
 
-Pour la syntaxe, voir xref:select-object-content.adoc[SelectObjectContent]. Pour plus d'informations sur S3 Select, consultez le https://["Documentation AWS pour S3 Select"^].
+Pour la syntaxe, voir xref:select-object-content.adoc[SelectObjectContent]. Pour plus d'informations sur S3 Select, consultez le https://docs.aws.amazon.com/AmazonS3/latest/userguide/selecting-content-from-objects.html["Documentation AWS pour S3 Select"^].
 
 Seuls les comptes de tenant dont S3 Select est activé peuvent émettre des requêtes SelectObjectContent. Voir la xref:../admin/manage-s3-select-for-tenant-accounts.adoc[Considérations et configuration requise pour l'utilisation de S3 Select].
 

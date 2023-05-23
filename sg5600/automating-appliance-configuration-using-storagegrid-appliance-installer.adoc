@@ -42,7 +42,7 @@ NOTE: Les utilisateurs expérimentés qui souhaitent automatiser à la fois l'in
 +
 ** L'application ConfigBuilder
 +
-https://["ConfigBuilder.netapp.com"^]
+https://configbuilder.netapp.com/["ConfigBuilder.netapp.com"^]
 
 ** Le `configure-sga.py` script de configuration de l'appliance. Vous pouvez télécharger le script depuis le programme d'installation de l'appliance StorageGRID (*aide* *script de configuration de l'appliance*). Reportez-vous aux instructions sur l'automatisation de la configuration à l'aide du script configure-sga.py.
 +

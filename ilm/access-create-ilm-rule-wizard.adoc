@@ -25,7 +25,7 @@ NOTE: Si vous créez la règle ILM par défaut d'une règle, utilisez la procéd
 * Si vous créez des copies avec code d'effacement, vous avez configuré un profil de code d'effacement. Voir xref:creating-erasure-coding-profile.adoc[Créez un profil de code d'effacement].
 * Vous connaissez le xref:data-protection-options-for-ingest.adoc[options de protection des données pour l'ingestion].
 * Si vous devez créer une règle compatible pour une utilisation avec le verrouillage d'objet S3, vous connaissez le xref:requirements-for-s3-object-lock.adoc[Conditions requises pour le verrouillage d'objet S3].
-* Vous pouvez également regarder la vidéo : https://["Vidéo : règles ILM de StorageGRID : mise en route"^].
+* Vous pouvez également regarder la vidéo : https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=beffbe9b-e95e-4a90-9560-acc5013c93d8["Vidéo : règles ILM de StorageGRID : mise en route"^].
 +
 [link=https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=beffbe9b-e95e-4a90-9560-acc5013c93d8]
 image::../media/video-screenshot-ilm-rules.png[Vidéo : règles ILM de StorageGRID : mise en route]

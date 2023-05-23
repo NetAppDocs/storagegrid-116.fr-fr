@@ -39,8 +39,8 @@ image::../media/fabricpool_storagegrid_workflow.png[Flux de travail FabricPool S
 * Familiarisez-vous avec le logiciel système StorageGRID, y compris le gestionnaire de grid et le gestionnaire de locataires.
 * Consultez les ressources supplémentaires suivantes, qui fournissent des informations détaillées sur l'utilisation et la configuration de FabricPool :
 +
-** https://["Tr-4598 : meilleures pratiques de FabricPool dans ONTAP 9.9.1"^]
-** https://["Documentation ONTAP 9"^]
+** https://www.netapp.com/pdf.html?item=/media/17239-tr4598pdf.pdf["Tr-4598 : meilleures pratiques de FabricPool dans ONTAP 9.9.1"^]
+** https://docs.netapp.com/us-en/ontap/index.html["Documentation ONTAP 9"^]
 
 
 

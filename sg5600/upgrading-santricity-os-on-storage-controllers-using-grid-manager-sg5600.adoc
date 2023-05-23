@@ -38,7 +38,7 @@ NOTE: Cette procédure met automatiquement à niveau la NVSRAM vers la version l
 Veillez à choisir la version de système d'exploitation SANtricity pour vos contrôleurs de stockage.
 
 +
-https://["Téléchargement NetApp : appliance StorageGRID"^]
+https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Téléchargement NetApp : appliance StorageGRID"^]
 
 . Sélectionnez *MAINTENANCE* *système* *mise à jour du logiciel*.
 +
@@ -189,6 +189,6 @@ NOTE: Lorsque vous répétez la procédure de mise à niveau, vous devez approuv
 
 
 .Informations associées
-https://["Matrice d'interopérabilité NetApp"^]
+https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^]
 
 xref:upgrading-santricity-os-on-e2700-controller-using-maintenance-mode.adoc[Mettre à niveau le système d'exploitation SANtricity sur le contrôleur E2700 à l'aide du mode de maintenance]

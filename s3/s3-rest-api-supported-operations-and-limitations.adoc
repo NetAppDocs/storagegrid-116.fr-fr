@@ -27,7 +27,7 @@ Le système StorageGRID prend uniquement en charge les formats de date HTTP vali
 
 == En-têtes de demande commune
 
-Le système StorageGRID prend en charge les en-têtes de demande courants définis par le http://["Documentation Amazon Web Services (AWS) : référence de l'API Amazon simple Storage Service"^], à une exception près.
+Le système StorageGRID prend en charge les en-têtes de demande courants définis par le http://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html["Documentation Amazon Web Services (AWS) : référence de l'API Amazon simple Storage Service"^], à une exception près.
 
 |===
 | En-tête de demande | Mise en place 

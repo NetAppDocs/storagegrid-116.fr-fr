@@ -74,7 +74,7 @@ Documentation StorageGRID
  a| 
 Documentation actuelle pour votre plate-forme
  a| 
-Pour les versions prises en charge, reportez-vous à la section https://["Matrice d'interopérabilité"^].
+Pour les versions prises en charge, reportez-vous à la section https://mysupport.netapp.com/matrix["Matrice d'interopérabilité"^].
 
 |===
 
@@ -90,7 +90,7 @@ Vous devez effectuer des opérations d'extension à l'aide de la version de Stor
 .Étapes
 . Accédez à la page de téléchargements NetApp pour StorageGRID.
 +
-https://["Téléchargement NetApp : StorageGRID"^]
+https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["Téléchargement NetApp : StorageGRID"^]
 
 . Sélectionnez la version de StorageGRID en cours d'exécution sur la grille.
 . Connectez-vous avec le nom d'utilisateur et le mot de passe de votre compte NetApp.

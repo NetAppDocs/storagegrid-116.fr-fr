@@ -29,7 +29,7 @@ Si un compte de locataire S3 doit respecter les exigences réglementaires lors d
 Un administrateur de grid doit activer le paramètre global de verrouillage d'objet S3 pour permettre aux utilisateurs locataires de créer de nouveaux compartiments pour lesquels le verrouillage d'objet S3 est activé. Une fois ce paramètre activé, il ne peut pas être désactivé.
 
 
-NOTE: Si vous avez activé le paramètre de conformité globale à l'aide d'une version précédente de StorageGRID, le paramètre verrouillage objet S3 est activé dans StorageGRID 11.6. Vous pouvez continuer à utiliser StorageGRID pour gérer les paramètres des compartiments conformes existants. Cependant, vous ne pouvez pas créer de compartiments conformes. Voir https://["Base de connaissances NetApp : comment gérer des compartiments conformes aux ancienne génération dans StorageGRID 11.5"^].
+NOTE: Si vous avez activé le paramètre de conformité globale à l'aide d'une version précédente de StorageGRID, le paramètre verrouillage objet S3 est activé dans StorageGRID 11.6. Vous pouvez continuer à utiliser StorageGRID pour gérer les paramètres des compartiments conformes existants. Cependant, vous ne pouvez pas créer de compartiments conformes. Voir https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/StorageGRID/How_to_manage_legacy_Compliant_buckets_in_StorageGRID_11.5["Base de connaissances NetApp : comment gérer des compartiments conformes aux ancienne génération dans StorageGRID 11.5"^].
 
 .Étapes
 . Sélectionnez *CONFIGURATION* *système* *verrouillage objet S3*.

@@ -40,7 +40,7 @@ NOTE: Les utilisateurs expérimentés qui souhaitent automatiser à la fois l'in
 .Étapes
 . Générez le fichier JSON à l'aide de l'un des éléments suivants :
 +
-** Le https://["Application ConfigBuilder"^].
+** Le https://configbuilder.netapp.com/["Application ConfigBuilder"^].
 ** Le xref:automating-installation-configuration-appliance-nodes-configure-sga-py-script.adoc[configure-sga.py script de configuration de l'appliance]. Vous pouvez télécharger le script depuis le programme d'installation de l'appliance StorageGRID (*aide* *script de configuration de l'appliance*).
 +
 Les noms de nœud dans le fichier JSON doivent respecter les exigences suivantes :

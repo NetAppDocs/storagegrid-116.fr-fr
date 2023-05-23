@@ -21,7 +21,7 @@ NOTE: Si le paramètre de verrouillage d'objet S3 global a été activé, utilis
 * Vous disposez d'autorisations d'accès spécifiques.
 * Vous avez créé les règles ILM à ajouter à la règle proposée. Si nécessaire, vous pouvez enregistrer une stratégie proposée, créer des règles supplémentaires, puis modifier la stratégie proposée pour ajouter les nouvelles règles.
 * Vous avez xref:creating-default-ilm-rule.adoc[Une règle ILM par défaut a été créée] pour la stratégie qui ne contient aucun filtre.
-* Vous pouvez également regarder la vidéo : https://["Vidéo : règles ILM de StorageGRID"^]
+* Vous pouvez également regarder la vidéo : https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c929e94e-353a-4375-b112-acc5013c81c7["Vidéo : règles ILM de StorageGRID"^]
 +
 [link=https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c929e94e-353a-4375-b112-acc5013c81c7]
 image::../media/video-screenshot-ilm-policies.png[Vidéo : règles ILM de StorageGRID]

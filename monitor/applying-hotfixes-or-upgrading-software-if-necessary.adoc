@@ -19,7 +19,7 @@ Les correctifs StorageGRID contiennent des modifications logicielles qui sont di
 .Étapes
 . Accédez à la page de téléchargements NetApp pour StorageGRID.
 +
-https://["Téléchargement NetApp : StorageGRID"^]
+https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["Téléchargement NetApp : StorageGRID"^]
 
 . Sélectionnez la flèche vers le bas du champ *Type/Sélectionner version* pour afficher la liste des mises à jour disponibles au téléchargement :
 +

@@ -40,7 +40,7 @@ Pour Management_Port_IP, entrez l'adresse IP du port de gestion 1 sur le contrô
 .. Si vous recevez une réponse de la commande ping, vérifiez que le port 8443 est ouvert dans les pare-feu.
 .. Redémarrez l'appareil.
 .. Actualisez la page Web d'installation.
-.. Si ce n'est pas le cas, contactez le support technique du site de support NetApp à l'adresse http://["mysupport.netapp.com"^].
+.. Si ce n'est pas le cas, contactez le support technique du site de support NetApp à l'adresse http://mysupport.netapp.com/["mysupport.netapp.com"^].
 
 
 

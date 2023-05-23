@@ -15,7 +15,7 @@ Le système StorageGRID prend en charge un maximum de 1,000 compartiments pour c
 
 Les restrictions de noms de compartiment sont respectées dans les restrictions de région standard AWS, mais vous devez les restreindre davantage aux conventions de nommage DNS afin de prendre en charge les demandes de type hébergement virtuel S3.
 
-https://["Documentation Amazon Web Services (AWS) : restrictions et limites des compartiments"^]
+https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html["Documentation Amazon Web Services (AWS) : restrictions et limites des compartiments"^]
 
 xref:../admin/configuring-s3-api-endpoint-domain-names.adoc[Configurez les noms de domaine de terminaux API S3]
 
@@ -313,7 +313,7 @@ RÉPLICATION des compartiments
  a| 
 Cette opération configure la réplication StorageGRID CloudMirror pour le compartiment à l'aide du XML de configuration de réplication fourni dans le corps de la demande. Pour la réplication CloudMirror, vous devez connaître les détails d'implémentation suivants :
 
-* StorageGRID ne prend en charge que le V1 de la configuration de la réplication. Cela signifie que StorageGRID ne prend pas en charge l'utilisation de `Filter` Elément pour les règles, et suit les conventions V1 pour la suppression des versions d'objet. Pour plus d'informations, reportez-vous à la https://["Documentation Amazon S3 sur la configuration de la réplication"^].
+* StorageGRID ne prend en charge que le V1 de la configuration de la réplication. Cela signifie que StorageGRID ne prend pas en charge l'utilisation de `Filter` Elément pour les règles, et suit les conventions V1 pour la suppression des versions d'objet. Pour plus d'informations, reportez-vous à la https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication-add-config.html["Documentation Amazon S3 sur la configuration de la réplication"^].
 * La réplication des compartiments peut être configurée sur les compartiments avec ou sans version.
 * Vous pouvez spécifier un compartiment de destination différent dans chaque règle du XML de configuration de réplication. Un compartiment source peut être répliqué sur plusieurs compartiments de destination.
 * Les compartiments de destination doivent être spécifiés en tant que URN des terminaux StorageGRID, tel que spécifié dans le Gestionnaire de locataires ou l'API de gestion des locataires.

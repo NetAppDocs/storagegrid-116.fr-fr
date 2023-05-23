@@ -287,4 +287,4 @@ L'installation ou la communication avec le contrôleur E2800 est défectueuse.
 .Informations associées
 xref:troubleshooting-hardware-installation.adoc[Résolution des problèmes liés à l'installation du matériel (SG5700)]
 
-https://["Support NetApp"^]
+https://mysupport.netapp.com/site/global/dashboard["Support NetApp"^]
