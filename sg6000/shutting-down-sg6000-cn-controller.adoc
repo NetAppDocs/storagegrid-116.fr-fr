@@ -25,9 +25,7 @@ xref:locating-controller-in-data-center.adoc[Localiser le contrôleur dans le da
 Pour éviter les interruptions de service, vérifiez que tous les autres nœuds de stockage sont connectés à la grille avant d'arrêter le contrôleur ou d'arrêter le contrôleur durant une fenêtre de maintenance planifiée en cas d'interruption de service. Reportez-vous aux informations sur la détermination des États de connexion du nœud dans les instructions de gestion des objets avec informations gestion du cycle de vie.
 
 
-IMPORTANT: Si vous avez déjà utilisé une règle ILM pour créer une seule copie d'un objet, vous devez arrêter le contrôleur durant la fenêtre de maintenance planifiée. Sinon, vous risquez de perdre temporairement l'accès à ces objets au cours de cette procédure.
-
-+ Voir les informations sur la gestion des objets avec la gestion du cycle de vie des informations.
+IMPORTANT: Si vous avez déjà utilisé une règle ILM pour créer une seule copie d'un objet, vous devez arrêter le contrôleur durant la fenêtre de maintenance planifiée. Sinon, vous risquez de perdre temporairement l'accès à ces objets au cours de cette procédure. Voir link:../ilm/index.html["Gestion du cycle de vie des informations pour les objets"].
 
 .Étapes
 . Lorsque l'appareil a été mis en mode maintenance, arrêtez le contrôleur SG6000-CN :

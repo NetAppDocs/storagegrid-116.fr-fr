@@ -22,7 +22,7 @@ Avant d'ajouter des volumes de stockage à des nœuds de stockage existants, con
 * Vous devez examiner vos règles ILM actuelles pour déterminer où et quand ajouter des volumes de stockage afin d'augmenter la capacité de stockage disponible pour les objets répliqués ou soumis au code d'effacement. Reportez-vous aux instructions pour xref:../ilm/index.adoc[gestion des objets avec gestion du cycle de vie des informations].
 * Vous ne pouvez pas augmenter la capacité des métadonnées de votre système en ajoutant des volumes de stockage, car les métadonnées de l'objet sont stockées uniquement sur le volume 0.
 * Chaque nœud de stockage logiciel peut prendre en charge un maximum de 16 volumes de stockage. Si vous avez besoin d'ajouter de la capacité, vous devez ajouter des nœuds de stockage.
-* Vous pouvez ajouter un ou deux tiroirs d'extension à chaque appliance SG6060 ou SG6060X. Chaque tiroir d'extension ajoute 16 volumes de stockage. Avec les deux tiroirs d'extension installés, les SG6060 et SG6060X peuvent prendre en charge un total de 48 volumes de stockage.
+* Vous pouvez ajouter un ou deux tiroirs d'extension à chaque appliance SG6060 ou SG6060X. Chaque tiroir d'extension ajoute 16 volumes de stockage. Une fois les deux tiroirs d'extension installés, les SGSG6060 et SG6060X peuvent chacun prendre en charge un total de 48 volumes de stockage.
 * Vous ne pouvez pas ajouter de volumes de stockage à une autre appliance de stockage.
 * Vous ne pouvez pas augmenter la taille d'un volume de stockage existant.
 * Vous ne pouvez pas ajouter de volumes de stockage à un nœud de stockage en même temps que vous effectuez une mise à niveau du système, une opération de restauration ou une autre extension.

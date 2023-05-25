@@ -27,7 +27,7 @@ IMPORTANT: Un arrêt contrôlé est nécessaire avant de retirer le contrôleur 
 
 
 .Description de la tâche
-Pour éviter toute interruption de service, vérifiez que tous les autres nœuds de stockage sont connectés à la grille avant de démarrer le remplacement de HBA Fibre Channel ou de remplacer l'adaptateur lors d'une fenêtre de maintenance planifiée en cas d'interruption de service. Voir les informations sur link:../monitor/monitor-node-connection-states.html["contrôle de l'état de connexion du nœud"].
+Pour éviter toute interruption de service, vérifiez que tous les autres nœuds de stockage sont connectés à la grille avant de démarrer le remplacement de HBA Fibre Channel ou de remplacer l'adaptateur lors d'une fenêtre de maintenance planifiée en cas d'interruption de service. Voir les informations sur link:../monitor/monitoring-node-connection-states.html["contrôle de l'état de connexion du nœud"].
 
 
 IMPORTANT: Si vous avez déjà utilisé une règle ILM pour créer une seule copie d'un objet, vous devez remplacer l'adaptateur HBA Fibre Channel lors d'une fenêtre de maintenance planifiée. Sinon, vous risquez de perdre temporairement l'accès à ces objets au cours de cette procédure. Voir informations sur link:../ilm/why-you-should-not-use-single-copy-replication.html["pourquoi ne pas utiliser la réplication à copie unique"].

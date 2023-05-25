@@ -29,6 +29,22 @@ Le nœud de stockage de l'appliance ne sera pas accessible lors du remplacement 
 NOTE: Si vous remplacez le contrôleur avant d'installer le logiciel StorageGRID, il se peut que vous ne puissiez pas accéder au programme d'installation de l'appliance StorageGRID immédiatement après avoir terminé cette procédure. Même si vous pouvez accéder au programme d'installation de l'appliance StorageGRID à partir d'autres hôtes du même sous-réseau que l'appliance, vous ne pouvez pas y accéder à partir d'hôtes situés sur d'autres sous-réseaux. Cette condition doit se résoudre dans les 15 minutes (lorsque les entrées du cache ARP pour le contrôleur d'origine sont écoulées), ou vous pouvez effacer immédiatement la condition en éliminant manuellement les anciennes entrées du cache ARP à partir du routeur ou de la passerelle local.
 
 .Étapes
+. Affichez les configurations actuelles de l'appareil et enregistrez-les.
++
+.. Connectez-vous à l'appliance à remplacer :
++
+... Saisissez la commande suivante : `ssh admin@_grid_node_IP_`
+... Entrez le mot de passe indiqué dans le `Passwords.txt` fichier.
+... Entrez la commande suivante pour passer à la racine : `su -`
+... Entrez le mot de passe indiqué dans le `Passwords.txt` fichier.
++
+Lorsque vous êtes connecté en tant que root, l'invite passe de `$` à `#`.
+
+
+
+.. Entrez : `*run-host-command ipmitool lan print*` Pour afficher les configurations BMC actuelles de l'appliance.
+
+
 . Si le contrôleur SG6000-CN fonctionne suffisamment pour permettre un arrêt contrôlé, arrêtez le contrôleur SG6000-CN.
 +
 xref:shutting-down-sg6000-cn-controller.adoc[Arrêtez le contrôleur SG6000-CN]
@@ -39,13 +55,17 @@ xref:shutting-down-sg6000-cn-controller.adoc[Arrêtez le contrôleur SG6000-CN]
 ** La page Power Control de l'interface BMC indique que le contrôleur est éteint.
 
 
-. Si les réseaux StorageGRID connectés au contrôleur utilisent des serveurs DHCP, mettez à jour les paramètres DNS/réseau et d'adresse IP.
+. Si l'une des interfaces réseau de cette appliance StorageGRID est configurée pour DHCP, vous devrez peut-être mettre à jour les attributions de bail DHCP permanentes sur les serveurs DHCP pour référencer les adresses MAC de l'appliance de remplacement. Cette mise à jour garantit que l'appliance se voit attribuer les adresses IP attendues.
 +
 .. Repérez l'étiquette d'adresse MAC située à l'avant du contrôleur SG6000-CN et déterminez l'adresse MAC du port réseau Admin.
 +
+[NOTE]
+====
+L'étiquette d'adresse MAC répertorie l'adresse MAC du port de gestion BMC.
 
-NOTE: L'étiquette d'adresse MAC répertorie l'adresse MAC du port de gestion BMC. + pour déterminer l'adresse MAC du port réseau Admin, vous devez ajouter *2* au numéro hexadécimal sur l'étiquette. Par exemple, si l'adresse MAC de l'étiquette se termine par *09*, l'adresse MAC du port d'administration se terminera par *0B*. Si l'adresse MAC de l'étiquette se termine dans *(_y_)FF*, l'adresse MAC du port d'administration se terminera dans *(_y_+1)01*. Vous pouvez facilement effectuer ce calcul en ouvrant Calculator sous Windows, en le définissant en mode programmateur, en sélectionnant Hex, en saisissant l'adresse MAC, puis en tapant *+ 2 =*.
+Pour déterminer l'adresse MAC du port réseau Admin, vous devez ajouter *2* au numéro hexadécimal sur l'étiquette. Par exemple, si l'adresse MAC de l'étiquette se termine par *09*, l'adresse MAC du port d'administration se terminera par *0B*. Si l'adresse MAC de l'étiquette se termine dans *(_y_)FF*, l'adresse MAC du port d'administration se terminera dans *(_y_+1)01*. Vous pouvez facilement effectuer ce calcul en ouvrant Calculator sous Windows, en le définissant en mode programmateur, en sélectionnant Hex, en saisissant l'adresse MAC, puis en tapant *+ 2 =*.
 
+====
 .. Demandez à votre administrateur réseau d'associer le DNS/réseau et l'adresse IP du contrôleur que vous avez supprimé à l'adresse MAC du contrôleur de remplacement.
 +
 
@@ -70,18 +90,45 @@ IMPORTANT: Pour éviter de dégrader les performances, ne pas tordre, plier, pin
 .. Mettez le contrôleur sous tension et surveillez les LED du contrôleur et les codes de démarrage.
 
 
-. Vérifiez que le nœud de stockage de l'appliance apparaît dans Grid Manager et qu'aucune alarme ne s'affiche.
-. Dans Grid Manager, sélectionnez *NODES* et vérifiez que l'adresse IP du contrôleur de nœud est correcte.
+. Si l'appliance sur laquelle vous avez remplacé le contrôleur a utilisé un serveur de gestion des clés (KMS) pour chiffrer les données, il est possible que vous ayez besoin d'une configuration supplémentaire avant que le nœud puisse rejoindre la grille. Si le nœud ne rejoint pas automatiquement la grille, assurez-vous que ces paramètres de configuration ont été transférés vers le nouveau contrôleur et configurez manuellement les paramètres qui ne possèdent pas la configuration attendue :
 +
-Si l'adresse IP du contrôleur de nœud n'est pas valide ou ne se trouve pas dans la plage prévue, reconfigurez l'adresse IP comme indiqué dans les instructions de reprise et de maintenance.
+** link:../sg6000/configuring-storagegrid-connections.html["Configurer les connexions StorageGRID"]
+** link:../admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Configurez le chiffrement des nœuds pour l'appliance"]
+
+
+. Connectez-vous à l'appliance avec le contrôleur remplacé :
++
+.. Saisissez la commande suivante : `ssh admin@_grid_node_IP_`
+.. Entrez le mot de passe indiqué dans le `Passwords.txt` fichier.
+.. Entrez la commande suivante pour passer à la racine : `su -`
+.. Entrez le mot de passe indiqué dans le `Passwords.txt` fichier.
+
+
+. Restaurez la connectivité réseau du contrôleur BMC pour l'appliance. Deux options sont disponibles :
++
+** Utilisez une adresse IP statique, un masque de réseau et une passerelle
+** Utilisez DHCP pour obtenir une adresse IP, un masque de réseau et une passerelle
++
+... Pour restaurer la configuration du contrôleur BMC afin d'utiliser une adresse IP statique, un masque de réseau et une passerelle, entrez les commandes suivantes :
++
+`*run-host-command ipmitool lan set 1 ipaddr _Appliance_IP_*`
 
 +
-
-NOTE: Si vous avez appliqué une personnalisation supplémentaire au cours de l'installation d'origine, telle que la définition de destinations de déroutement SNMP ou de notifications par e-mail, vous devez enregistrer et valider la configuration et la réappliquer si nécessaire.
+`*run-host-command ipmitool lan set 1 netmask _Netmask_IP_*`
 
 +
-xref:../maintain/index.adoc[Récupérer et entretenir]
+`*run-host-command ipmitool lan set 1 defgw ipaddr _Default_gateway_*`
 
+... Pour restaurer la configuration du contrôleur BMC afin d'utiliser DHCP pour obtenir une adresse IP, un masque de réseau et une passerelle, entrez la commande suivante :
++
+`*run-host-command ipmitool lan set 1 ipsrc dhcp*`
+
+
+
+
+
+. Après avoir restauré la connectivité réseau du contrôleur BMC, connectez-vous à l'interface du contrôleur BMC pour vérifier et restaurer toute configuration BMC personnalisée supplémentaire que vous avez éventuellement appliquée. Par exemple, vous devez confirmer les paramètres des destinations d'interruption SNMP et des notifications par e-mail. Voir link:configuring-bmc-interface-sg6000.html["Configurer l'interface BMC"].
+. Vérifiez que le nœud de l'appliance s'affiche dans Grid Manager et qu'aucune alerte n'apparaît.
 
 
 .Informations associées
