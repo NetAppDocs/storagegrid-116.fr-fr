@@ -14,27 +14,22 @@ summary: Arrêtez le contrôleur SG6000-CN pour effectuer la maintenance du mat�
 Arrêtez le contrôleur SG6000-CN pour effectuer la maintenance du matériel.
 
 .Ce dont vous avez besoin
-* Vous avez installé physiquement le contrôleur SG6000-CN nécessitant une maintenance dans le centre de données.
-+
-xref:locating-controller-in-data-center.adoc[Localiser le contrôleur dans le data Center]
-
-* L'appareil a été xref:placing-appliance-into-maintenance-mode.adoc[passe en mode maintenance].
-
+Vous avez installé physiquement le contrôleur SG6000-CN nécessitant une maintenance dans le centre de données. Voir xref:locating-controller-in-data-center.adoc[Localiser le contrôleur dans le data Center].
 
 .Description de la tâche
-Pour éviter les interruptions de service, vérifiez que tous les autres nœuds de stockage sont connectés à la grille avant d'arrêter le contrôleur ou d'arrêter le contrôleur durant une fenêtre de maintenance planifiée en cas d'interruption de service. Reportez-vous aux informations sur la détermination des États de connexion du nœud dans les instructions de gestion des objets avec informations gestion du cycle de vie.
+Pour éviter les interruptions de service, vérifiez que tous les autres nœuds de stockage sont connectés à la grille avant d'arrêter le contrôleur ou d'arrêter le contrôleur durant une fenêtre de maintenance planifiée en cas d'interruption de service. Voir les informations sur xref:monitoring-node-connection-states.adoc[contrôle de l'état de connexion du nœud].
 
 
 IMPORTANT: Si vous avez déjà utilisé une règle ILM pour créer une seule copie d'un objet, vous devez arrêter le contrôleur durant la fenêtre de maintenance planifiée. Sinon, vous risquez de perdre temporairement l'accès à ces objets au cours de cette procédure. Voir link:../ilm/index.html["Gestion du cycle de vie des informations pour les objets"].
 
 .Étapes
-. Lorsque l'appareil a été mis en mode maintenance, arrêtez le contrôleur SG6000-CN :
+. Arrêtez le contrôleur SG6000-CN :
 +
 
-CAUTION: Vous devez effectuer un arrêt contrôlé du contrôleur en entrant les commandes spécifiées ci-dessous. L'arrêt du contrôleur à l'aide du bouton de mise sous tension entraînera une perte de données.
+CAUTION: Vous devez effectuer un arrêt contrôlé du contrôleur en entrant les commandes spécifiées ci-dessous. Il est recommandé d'effectuer un arrêt contrôlé lorsque cela est possible pour éviter les alertes inutiles, vérifier que les journaux complets sont disponibles et éviter toute interruption de service.
 
 +
-.. Connectez-vous au nœud de la grille à l'aide de PuTTY ou d'un autre client ssh :
+.. Si vous n'avez pas encore ouvert de session sur le nœud grid, connectez-vous à l'aide de PuTTY ou d'un autre client ssh :
 +
 ... Saisissez la commande suivante : `ssh admin@_grid_node_IP_`
 ... Entrez le mot de passe indiqué dans le `Passwords.txt` fichier.
@@ -45,8 +40,10 @@ Lorsque vous êtes connecté en tant que root, l'invite passe de `$` à `#`.
 
 
 
-.. Arrêtez le contrôleur SG6000-CN : +
+.. Arrêtez le contrôleur SG6000-CN :
++
 `*shutdown -h now*`
+
 +
 Cette commande peut prendre jusqu'à 10 minutes.
 

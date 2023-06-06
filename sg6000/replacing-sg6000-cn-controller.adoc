@@ -49,12 +49,6 @@ Lorsque vous êtes connecté en tant que root, l'invite passe de `$` à `#`.
 +
 xref:shutting-down-sg6000-cn-controller.adoc[Arrêtez le contrôleur SG6000-CN]
 
-. Utilisez l'une des deux méthodes pour vérifier que l'alimentation du contrôleur SG6000-CN est éteinte :
-+
-** Le voyant d'alimentation situé à l'avant du contrôleur est éteint.
-** La page Power Control de l'interface BMC indique que le contrôleur est éteint.
-
-
 . Si l'une des interfaces réseau de cette appliance StorageGRID est configurée pour DHCP, vous devrez peut-être mettre à jour les attributions de bail DHCP permanentes sur les serveurs DHCP pour référencer les adresses MAC de l'appliance de remplacement. Cette mise à jour garantit que l'appliance se voit attribuer les adresses IP attendues.
 +
 .. Repérez l'étiquette d'adresse MAC située à l'avant du contrôleur SG6000-CN et déterminez l'adresse MAC du port réseau Admin.
