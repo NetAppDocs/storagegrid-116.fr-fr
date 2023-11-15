@@ -53,7 +53,7 @@ Par exemple, si une appliance de nœud source SG1000 est utilisée en tant que n
 
 * Une appliance de stockage de remplacement doit avoir une capacité égale ou supérieure à celle du nœud de stockage qu'elle remplace.
 +
-** Si l'appliance de stockage cible comporte le même nombre de disques que le nœud source, les disques de l'appliance cible doivent avoir la même capacité (en To) ou plus.
+** Si l'appliance de stockage cible dispose du même nombre de disques que le nœud source, les disques de l'appliance cible doivent avoir une capacité supérieure (en To).
 ** Si vous prévoyez d'utiliser le même mode RAID sur le nœud cible que celui utilisé sur le nœud source, Ou en mode RAID moins efficace en termes de stockage (par exemple, pour passer de RAID6 à DDP), les disques de l'appliance cible doivent être plus grands (en To) que les disques de l'appliance source.
 ** Si le nombre de disques standard installés sur une appliance de stockage cible est inférieur au nombre de disques du nœud source en raison de l'installation de disques SSD, la capacité de stockage globale des disques standard de l'appliance cible (en To) Doit atteindre ou dépasser la capacité totale de disque fonctionnel de tous les lecteurs du nœud de stockage source.
 +
