@@ -2,7 +2,7 @@
 permalink: sg5600/verifying-receipt-of-autosupport.html 
 sidebar: sidebar 
 keywords: storagegrid, sg5600, storage node, storage appliance, verify, verification, verifying, confirm, confirmation, confirming, autosupport, auto-support, status 
-summary: 'Vérifiez que le support technique reçoit vos messages AutoSupport. L"état de AutoSupport pour vos systèmes est disponible sur le portail Active IQ. La vérification de la réception de ces messages garantit que le support technique dispose de vos informations si vous avez besoin d"aide.' 
+summary: 'Vérifiez que le support technique reçoit vos messages AutoSupport. Vous trouverez l"état de AutoSupport pour vos systèmes sur le portail Digital Advisor. La vérification de la réception de ces messages garantit que le support technique dispose de vos informations si vous avez besoin d"aide.' 
 ---
 = Vérifier la réception de AutoSupport
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Vérifiez que le support technique reçoit vos messages AutoSupport. L
 
 
 [role="lead"]
-Vérifiez que le support technique reçoit vos messages AutoSupport. L'état de AutoSupport pour vos systèmes est disponible sur le portail Active IQ. La vérification de la réception de ces messages garantit que le support technique dispose de vos informations si vous avez besoin d'aide.
+Vérifiez que le support technique reçoit vos messages AutoSupport. Vous trouverez l'état de AutoSupport pour vos systèmes sur le portail Digital Advisor. La vérification de la réception de ces messages garantit que le support technique dispose de vos informations si vous avez besoin d'aide.
 
 .Description de la tâche
 AutoSupport peut afficher l'un des États suivants :
@@ -33,7 +33,7 @@ Un statut DE REFUS signifie que vous avez informé le support technique que vous
 Dès que le support technique reçoit un journal hebdomadaire du système, le statut AutoSupport passe à ACTIVÉ.
 
 .Étapes
-. Accédez au site de support NetApp à l'adresse http://mysupport.netapp.com/["mysupport.netapp.com"^], Et connectez-vous au portail Active IQ.
+. Accédez au site du support NetApp à l'adresse http://mysupport.netapp.com/["mysupport.netapp.com"^] et connectez-vous au portail Digital Advisor.
 . Si le statut AutoSupport est désactivé et que vous pensez qu'il est incorrect, procédez comme suit :
 +
 .. Vérifiez la configuration de votre système pour vous assurer que vous avez activé AutoSupport.
